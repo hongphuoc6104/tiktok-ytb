@@ -1,0 +1,18 @@
+{
+  "name": "video-pilot",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "render": "node renderer/render.mjs"
+  },
+  "dependencies": {
+    "@swissmarley/gflow-cli": "1.1.1",
+    "@remotion/bundler": "4.0.507",
+    "@remotion/renderer": "4.0.507",
+    "remotion": "4.0.507",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "playwright": "1.58.2"
+  }
+}

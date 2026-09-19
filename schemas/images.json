@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "const": "google-flow"
+          }
+        },
+        "required": [
+          "scene_id",
+          "path",
+          "prompt",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "contact_sheet": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "items",
+    "contact_sheet"
+  ],
+  "additionalProperties": false
+}

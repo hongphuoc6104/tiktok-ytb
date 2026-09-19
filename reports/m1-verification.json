@@ -1,0 +1,45 @@
+{
+  "goal": "M1",
+  "implementation": "ready_for_live_acceptance",
+  "automated_tests": {
+    "passed": 35,
+    "failed": 0,
+    "required_cases": "T01–T14",
+    "log": "m1-tests.txt"
+  },
+  "skill_validation": "passed",
+  "real_antigravity_run": "not_verified",
+  "antigravity_new_conversation": "not_verified",
+  "user_content_approval": "pending",
+  "real_flow_generation": "not_run",
+  "media_adapter_contract_test": "passed; stopped before external generation",
+  "job": "m1-acceptance-001",
+  "next": "Review control revision 1 in Antigravity, then generate content using vp-content",
+  "legacy_job_state": [
+    {
+      "module": "audio",
+      "state": "pending",
+      "revision": 0
+    },
+    {
+      "module": "content",
+      "state": "awaiting_review",
+      "revision": 1
+    },
+    {
+      "module": "control",
+      "state": "approved",
+      "revision": 1
+    },
+    {
+      "module": "images",
+      "state": "pending",
+      "revision": 0
+    },
+    {
+      "module": "render",
+      "state": "pending",
+      "revision": 0
+    }
+  ]
+}

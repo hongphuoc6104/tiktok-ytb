@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "job_id": "integration-test-only",
+  "module": "control",
+  "revision": 1,
+  "input_versions": {},
+  "files": [],
+  "payload": {
+    "schema_version": "1.0",
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "min_seconds": 45,
+    "max_seconds": 60,
+    "scene_count": 6,
+    "video_generation": false,
+    "credit_budget": 0,
+    "flow_model": "Nano Banana 2",
+    "flow_profile": "video-pilot",
+    "flow_project": "Video Pilot",
+    "tts_package": "vieneu==3.8.1",
+    "tts_backend": "onnx",
+    "tts_precision": "fp32",
+    "renderer": "remotion",
+    "concurrency": 2,
+    "review": "every_module"
+  },
+  "checks": {
+    "passed": true,
+    "errors": []
+  }
+}

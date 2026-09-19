@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "video_generation",
+    "credit_budget",
+    "review"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "video_generation": {
+      "const": false
+    },
+    "credit_budget": {
+      "const": 0
+    },
+    "review": {
+      "const": "every_module"
+    }
+  }
+}

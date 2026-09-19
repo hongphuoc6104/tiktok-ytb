@@ -1,0 +1,38 @@
+{
+  "unit_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "skills_validated": 5,
+  "local_tts": {
+    "synthesized": true,
+    "voice": "Minh Quân Pro",
+    "backend": "onnx",
+    "sample": "local-tts-sample.wav"
+  },
+  "render_smoke": {
+    "real_render": true,
+    "assets": "SYNTHETIC TEST FIXTURES, not Google Flow",
+    "streams": [
+      {
+        "codec_type": "video",
+        "codec_name": "h264",
+        "width": 720,
+        "height": 1280,
+        "avg_frame_rate": "30/1",
+        "duration": "48.000000"
+      },
+      {
+        "codec_type": "audio",
+        "codec_name": "aac",
+        "width": null,
+        "height": null,
+        "avg_frame_rate": "0/0",
+        "duration": "48.042667"
+      }
+    ]
+  },
+  "live_flow": "NOT TESTED — module approvals and login pending",
+  "antigravity_rule_loading": "NOT VERIFIED in a fresh Antigravity session",
+  "production_job": "pilot-001/control/revision-1 awaiting user review"
+}

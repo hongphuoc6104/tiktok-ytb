@@ -1,0 +1,70 @@
+{
+  "type": "object",
+  "properties": {
+    "voice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "backend": {
+      "const": "onnx"
+    },
+    "wav": {
+      "type": "string",
+      "minLength": 1
+    },
+    "srt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "duration": {
+      "type": "number",
+      "minimum": 0
+    },
+    "segments": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start": {
+            "type": "number",
+            "minimum": 0
+          },
+          "end": {
+            "type": "number",
+            "minimum": 0
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "scene_id",
+          "text",
+          "start",
+          "end",
+          "path"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "voice",
+    "backend",
+    "wav",
+    "srt",
+    "duration",
+    "segments"
+  ],
+  "additionalProperties": false
+}
