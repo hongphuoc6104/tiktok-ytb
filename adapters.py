@@ -9,11 +9,16 @@ def config(p):return read(p.root/'config.json')
 def gflow(p,*args,timeout=960):
  exe=p.root/'node_modules/.bin/gflow'
  if not exe.exists():raise Blocked('Install npm dependencies first')
+ if args and (args[0]=='image' or args[:2]==('character','create')):
+  return subprocess.run(['node',str(p.root/'scripts/gflow_guard.mjs'),*args],cwd=p.root,capture_output=True,text=True,timeout=timeout)
  return subprocess.run([str(exe),*args],cwd=p.root,capture_output=True,text=True,timeout=timeout)
 def request_video(*a,**k):raise Blocked('Video AI disabled; credit budget is zero')
 
 def flow_action(p,a):
  j=a.job;p.gate(j,'images');cfg=config(p)
+ if p.brief(j) and a.command in ['flow-reconcile','flow-confirm-registration']:
+  import image_pipeline
+  return image_pipeline.flow_action(p,a)
  if a.command=='flow-login':
   r=gflow(p,'auth','login','--profile',cfg['flow_profile'])
   if r.returncode:raise Blocked(r.stderr[-1500:])
@@ -77,6 +82,9 @@ def generate_image(p,j,scene):
   s.update(state='ambiguous',error=str(ex));write(attempt,s);raise Blocked('Flow outcome ambiguous; no automatic resubmission: '+str(ex))
 
 def images(p,j,out):
+ if p.brief(j):
+  import image_pipeline
+  return image_pipeline.produce(p,j,out)
  items=[];thumbs=[]
  for s in p.payload(j,'content')['scenes']:
   source=generate_image(p,j,s);dest=out/(s['id']+source.suffix);shutil.copy(source,dest)
@@ -122,7 +130,9 @@ def render(p,j,out):
  content=p.payload(j,'content');imgs=p.payload(j,'images');snd=p.payload(j,'audio')
  public=out/'public';public.mkdir();shutil.copy(p.path(j,snd['wav']),public/'narration.wav')
  scenes=[]
- for scene,img in zip(content['scenes'],imgs['items']):
+ image_by_id={x['scene_id']:x for x in imgs['items']}
+ for scene in content['scenes']:
+  img=image_by_id[scene['id']]
   dst=public/(scene['id']+Path(img['path']).suffix);shutil.copy(p.path(j,img['path']),dst)
   segs=[x for x in snd['segments'] if x['scene_id']==scene['id']]
   scenes.append({'id':scene['id'],'title':scene['title'],'image':dst.name,'start':segs[0]['start'],'end':segs[-1]['end']})

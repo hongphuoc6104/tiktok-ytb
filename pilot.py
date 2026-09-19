@@ -18,11 +18,13 @@ class Pilot:
  def __init__(self,root=ROOT):
   self.root=Path(root);(self.root/'.state').mkdir(exist_ok=True)
   self.db=sqlite3.connect(self.root/'.state/jobs.sqlite');self.db.row_factory=sqlite3.Row
+  import image_pipeline
+  image_pipeline.setup(self)
   self.db.executescript('CREATE TABLE IF NOT EXISTS modules(job TEXT,module TEXT,state TEXT,revision INTEGER,envelope TEXT,hash TEXT,PRIMARY KEY(job,module)); CREATE TABLE IF NOT EXISTS events(id INTEGER PRIMARY KEY,at REAL,job TEXT,module TEXT,event TEXT,detail TEXT);')
  def event(self,j,m,e,d=''):
   self.db.execute('INSERT INTO events(at,job,module,event,detail) VALUES(?,?,?,?,?)',(time.time(),j,m,e,d));self.db.commit()
  def protected(self):
-  paths=[self.root/x for x in ['pilot.py','content_contract.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock']]
+  paths=[self.root/x for x in ['pilot.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock']]
   for folder in ['schemas','.agents','renderer','tests','examples','scripts']:
    paths+=list((self.root/folder).rglob('*'))
   return {str(p.relative_to(self.root)):digest(p) for p in sorted(paths) if p.is_file() and '__pycache__' not in str(p)}
@@ -118,6 +120,9 @@ class Pilot:
   if m=='content' and self.brief(j):
    from content_contract import validate_content
    b,rev,h=self.brief(j);validate_content(self.root,b,rev,h,p);return []
+  if m=='images' and self.brief(j):
+   import image_pipeline
+   return image_pipeline.check(self,j,p)
   jsonschema.validate(p,read(self.root/f'schemas/{m}.json'))
   files=[]
   if m=='control':
@@ -174,6 +179,7 @@ class Pilot:
  def run(self,j,m):
   self.gate(j,m);r=self.rows(j)[m]
   if r['state']=='approved':raise Blocked('Approved module: reject explicitly before replacing')
+  if m=='images' and self.brief(j) and r['state']=='awaiting_review':raise Blocked('M2_REVIEW: approve or reject current checkpoint first')
   rev=r['revision']+1;out=self.job(j)/'revisions'/m/str(rev);out.mkdir(parents=True,exist_ok=False)
   self.db.execute('UPDATE modules SET state=?,revision=? WHERE job=? AND module=?',('running',rev,j,m));self.db.commit();self.event(j,m,'started',str(rev))
   try:
@@ -181,7 +187,10 @@ class Pilot:
    elif m=='content':p=read(self.job(j)/'draft/content.json')
    else:
     import adapters
-    p=getattr(adapters,m)(self,j,out)
+    if m=='images' and self.brief(j):
+     import image_pipeline
+     p=image_pipeline.produce(self,j,out)
+    else:p=getattr(adapters,m)(self,j,out)
    files=self.checks(j,m,p)
    versions=self.input_versions(j,m)
    if m=='content' and self.brief(j):
@@ -190,6 +199,13 @@ class Pilot:
     (out/'review.md').write_text(review_markdown(j,rev,self.brief(j)[0],p))
     write(out/'checks.json',{'passed':True,'errors':[],'semantic_review':'pending','timing':'estimated'})
     files += [str((out/n).relative_to(self.job(j))) for n in ['content.json','review.md','checks.json']]
+   if m=='images' and self.brief(j):
+    write(out/'images.json',p)
+    write(out/'checks.json',{'passed':True,'errors':[],'visual_review':'pending','checkpoint':p['checkpoint']})
+    lines=[f"# {j} — images revision {rev} — {p['checkpoint']}",'','Kỹ thuật đạt; chờ người dùng duyệt ngoại hình, trang phục, hành động và bối cảnh.','',f"![Bảng ảnh]({self.path(j,p['contact_sheet'])})"]
+    for x in p['references']+p['items']+p['proofs']:lines += ['',f"## {x['scene_id']}",f"![{x['scene_id']}]({self.path(j,x['path'])})",x['actual_prompt']]
+    (out/'review.md').write_text('\n'.join(lines))
+    files += [str((out/n).relative_to(self.job(j))) for n in ['images.json','checks.json','review.md']]
    e={'schema_version':'1.0','job_id':j,'module':m,'revision':rev,'input_versions':versions,'files':files,'payload':p,'checks':{'passed':True,'errors':[]}}
    jsonschema.validate(e,read(self.root/'schemas/envelope.json'))
    ep=out/'output.json';write(ep,e);h=self.snapshot_hash(j,e)
@@ -202,11 +218,17 @@ class Pilot:
   e=read(self.path(j,r['envelope']));self.checks(j,m,e['payload'])
   if e['input_versions']!=self.input_versions(j,m):raise Blocked('Input version mismatch')
   return {'passed':True,'revision':r['revision']}
- def approve(self,j,m,rev,note):
+ def approve(self,j,m,rev,note,checkpoint=None):
+  if m=='images' and self.brief(j):
+   import image_pipeline
+   return image_pipeline.approve(self,j,rev,note,checkpoint)
   self.validate(j,m);r=self.rows(j)[m]
   if r['state']!='awaiting_review' or r['revision']!=rev or not note.strip():raise Blocked('Explicit approval of current awaiting revision required')
   self.db.execute('UPDATE modules SET state=? WHERE job=? AND module=?',('approved',j,m));self.db.commit();self.event(j,m,'approved',json.dumps({'revision':rev,'user_response':note},ensure_ascii=False))
- def reject(self,j,m,note):
+ def reject(self,j,m,note,rev=None,checkpoint=None,scene=None,character=None):
+  if m=='images' and self.brief(j):
+   import image_pipeline
+   return image_pipeline.reject(self,j,rev,note,checkpoint,scene,character)
   self.refresh(j);self.db.execute('UPDATE modules SET state=? WHERE job=? AND module=?',('needs_changes',j,m))
   affected={m}
   for n in ORDER:
@@ -219,11 +241,20 @@ class Pilot:
    if r['state']=='running':
     self.db.execute("UPDATE modules SET state='blocked' WHERE job=? AND module=?",(j,m));self.event(j,m,'interrupted','Inspect partial output before retry')
   self.db.commit();rows=self.rows(j)
-  return {'job':j,'complete':all(r['state']=='approved' for r in rows.values()),'modules':[{k:r[k] for k in ['module','state','revision','envelope']} for r in rows.values()]}
+  extra={}
+  if self.brief(j) and rows['content']['envelope']:
+   import image_pipeline
+   extra['images']=image_pipeline.describe(self,j)
+  return {**extra,'job':j,'complete':all(r['state']=='approved' for r in rows.values()),'modules':[{k:r[k] for k in ['module','state','revision','envelope']} for r in rows.values()]}
  def next(self,j):
   self.status(j);rows=self.rows(j)
   for m in ORDER:
-   if rows[m]['state']!='approved':return {'module':m,'state':rows[m]['state'],'action':'review' if rows[m]['state']=='awaiting_review' else 'run_or_repair'}
+   if rows[m]['state']!='approved':
+    result={'module':m,'state':rows[m]['state'],'action':'review' if rows[m]['state']=='awaiting_review' else 'run_or_repair'}
+    if m=='images' and self.brief(j):
+     import image_pipeline
+     result.update(image_pipeline.describe(self,j))
+    return result
   return {'action':'complete'}
 @contextlib.contextmanager
 def locked(root):
@@ -234,7 +265,8 @@ def locked(root):
   yield
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('command',choices=['doctor','new','status','next','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','check-draft','revise-brief']);ap.add_argument('job',nargs='?');ap.add_argument('module',nargs='?',choices=ORDER);ap.add_argument('--revision',type=int);ap.add_argument('--note',default='');ap.add_argument('--evidence');ap.add_argument('--scene');ap.add_argument('--asset')
+ ap=argparse.ArgumentParser();ap.add_argument('command',choices=['doctor','new','status','next','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','flow-confirm-registration','check-draft','revise-brief']);ap.add_argument('job',nargs='?');ap.add_argument('module',nargs='?',choices=ORDER);ap.add_argument('--revision',type=int);ap.add_argument('--note',default='');ap.add_argument('--evidence');ap.add_argument('--scene');ap.add_argument('--asset')
+ ap.add_argument('--checkpoint',choices=['references','first-three','final']);ap.add_argument('--character');ap.add_argument('--request')
  ap.add_argument('--brief');a=ap.parse_args()
  with locked(ROOT):
   p=Pilot()
@@ -257,8 +289,8 @@ def main():
     if not a.module:raise Blocked('Module required')
     if c=='run':p.run(a.job,a.module)
     elif c=='validate':result=p.validate(a.job,a.module)
-    elif c=='approve':p.approve(a.job,a.module,a.revision,a.note)
-    elif c=='reject':p.reject(a.job,a.module,a.note)
+    elif c=='approve':p.approve(a.job,a.module,a.revision,a.note,a.checkpoint)
+    elif c=='reject':p.reject(a.job,a.module,a.note,a.revision,a.checkpoint,a.scene,a.character)
     result=p.status(a.job)
   print(json.dumps(result,ensure_ascii=False,indent=2))
   if result.get('passed') is False:sys.exit(2)

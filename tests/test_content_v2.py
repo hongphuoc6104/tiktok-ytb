@@ -11,7 +11,7 @@ class ContentV2Tests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
   for n in ['schemas','.agents','renderer','tests','examples']:shutil.copytree(ROOT/n,self.root/n)
-  for n in ['pilot.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:shutil.copy(ROOT/n,self.root/n)
+  for n in ['pilot.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:shutil.copy(ROOT/n,self.root/n)
   self.p=Pilot(self.root);self.b=read(ROOT/'examples/m1/brief.json');self.p.new('m1',self.b)
   self.p.approve('m1','control',1,'TEST ONLY control approval')
   self.d=self.draft('m1')
@@ -97,9 +97,9 @@ class ContentV2Tests(unittest.TestCase):
   self.approved();self.p.gate('m1','images')
   import adapters
   # The real adapter consumes the approved payload before requesting images.
-  with patch('adapters.generate_image',side_effect=RuntimeError('STOP_BEFORE_EXTERNAL')) as call:
+  with patch('image_pipeline.request',side_effect=RuntimeError('STOP_BEFORE_EXTERNAL')) as call:
    with self.assertRaisesRegex(RuntimeError,'STOP_BEFORE_EXTERNAL'):adapters.images(self.p,'m1',self.p.job('m1')/'handoff-test')
-   self.assertEqual(call.call_args.args[2]['id'],'SC01')
+   self.assertEqual(call.call_args.args[2],'ref:'+self.d['characters'][0]['id'])
  def test_estimate_outside_range(self):
   d=copy.deepcopy(self.d);d['scenes'][0]['estimated_seconds']=100;self.invalid(d,'ESTIMATE')
  def test_draft_check_no_revision(self):

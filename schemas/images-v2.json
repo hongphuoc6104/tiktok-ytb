@@ -1,0 +1,310 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "checkpoint": {
+      "enum": [
+        "references",
+        "first-three",
+        "final"
+      ]
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "items": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "const": "google-flow"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "character_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "registration_hash": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "registration_journal": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "confirmation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "name",
+                "character_id",
+                "sha256",
+                "registration_hash",
+                "registration_journal",
+                "confirmation"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "request": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actual_prompt": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "scene_id",
+          "path",
+          "prompt",
+          "source",
+          "sha256",
+          "references",
+          "request",
+          "actual_prompt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "const": "google-flow"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "character_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "registration_hash": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "registration_journal": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "confirmation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "name",
+                "character_id",
+                "sha256",
+                "registration_hash",
+                "registration_journal",
+                "confirmation"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "request": {
+            "type": "string",
+            "minLength": 1
+          },
+          "character_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actual_prompt": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "scene_id",
+          "path",
+          "prompt",
+          "source",
+          "sha256",
+          "references",
+          "request",
+          "character_id",
+          "name",
+          "actual_prompt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "proofs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "const": "google-flow"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "character_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "registration_hash": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "registration_journal": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "confirmation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "name",
+                "character_id",
+                "sha256",
+                "registration_hash",
+                "registration_journal",
+                "confirmation"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "request": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actual_prompt": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "scene_id",
+          "path",
+          "prompt",
+          "source",
+          "sha256",
+          "references",
+          "request",
+          "actual_prompt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "contact_sheet": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "checkpoint",
+    "content_hash",
+    "signature",
+    "items",
+    "references",
+    "proofs",
+    "contact_sheet"
+  ],
+  "additionalProperties": false
+}

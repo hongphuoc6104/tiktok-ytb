@@ -11,7 +11,7 @@ class PipelineTests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
   for name in ['schemas','.agents','renderer','tests']:shutil.copytree(ROOT/name,self.root/name)
-  for name in ['config.json','AGENTS.md','GEMINI.md','pilot.py','adapters.py','tts_worker.py','package.json','package-lock.json','requirements.txt']:
+  for name in ['config.json','AGENTS.md','GEMINI.md','pilot.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','package.json','package-lock.json','requirements.txt']:
    if (ROOT/name).exists():shutil.copy(ROOT/name,self.root/name)
   shutil.copytree(ROOT/'examples',self.root/'examples');self.p=Pilot(self.root);self.p.new('test')
  def tearDown(self):self.p.db.close();self.tmp.cleanup()

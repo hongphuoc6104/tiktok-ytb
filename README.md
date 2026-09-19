@@ -121,3 +121,7 @@ Tốc độ 10–30 video/ngày chưa nằm trong nghiệm thu bản thử.
 ## Kết nối Antigravity CLI
 
 Đã có adapter M1 qua agy. Xem [cài đặt và sử dụng](docs/AGY-SETUP.md), [kết nối thật](reports/agy-connection.json) và [kiểm thử](reports/agy-tests.txt). Adapter chỉ sinh nội dung, kiểm tra rồi dừng chờ duyệt.
+
+## Module ② — hình ảnh v2
+
+[Hướng dẫn M2](docs/M2-FLOW.md): ảnh chuẩn → ba cảnh → sáu cảnh, tham chiếu nhân vật, sửa từng cảnh và khôi phục timeout. [Báo cáo triển khai](reports/M2-RESULT.md). Mẫu prompt của người dùng hỗ trợ 9:16/16:9; lượt thử hiện tại dùng 9:16, không tạo video AI.
