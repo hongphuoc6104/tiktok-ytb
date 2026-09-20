@@ -30,12 +30,9 @@ try {
   let failures = [];
 
   for (const seg of props.segments) {
-    const scene = props.scenes.find(s => s.id === seg.scene_id) || {title: ''};
     await page.setContent(`
-      <div id="title" style="position:absolute;top:48px;left:48px;width:${checkWidth * 0.7}px;font:800 36px/1.25 Arial"></div>
       <div id="subtitle" style="position:absolute;bottom:100px;left:50%;transform:translateX(-50%);width:${checkWidth - 120}px;font:600 32px/46px Arial;padding:14px 24px;box-sizing:border-box;text-align:center"></div>
     `);
-    await page.locator('#title').evaluate((e, t) => e.textContent = t, scene.title);
     await page.locator('#subtitle').evaluate((e, t) => e.textContent = t, seg.text);
     const bad = await page.evaluate(([w, h]) => [...document.querySelectorAll('div')].flatMap(e => {
       const r = e.getBoundingClientRect();
@@ -75,17 +72,17 @@ try {
 
   // Render video
   if (isDual) {
-    // 1. Render 9:16 Full HD
+    // 1. Render 9:16 Full HD (TikTok/Shorts with subtitles)
     const comp916 = await selectComposition({
       serveUrl: url,
       id: 'Pilot',
-      inputProps: {...props, width: 1080, height: 1920},
+      inputProps: {...props, width: 1080, height: 1920, hideSubtitles: false, audioSrc: 'narration.wav'},
       puppeteerInstance: browser
     });
     await renderMedia({
       serveUrl: url,
       composition: comp916,
-      inputProps: {...props, width: 1080, height: 1920},
+      inputProps: {...props, width: 1080, height: 1920, hideSubtitles: false, audioSrc: 'narration.wav'},
       puppeteerInstance: browser,
       codec: 'h264',
       hardwareAcceleration: 'if-possible',
@@ -94,17 +91,18 @@ try {
       outputLocation: path.join(dir, 'video_9x16.mp4')
     });
 
-    // 2. Render 16:9 Full HD
+    // 2. Render 16:9 Full HD (YouTube: Clean screen, NO subtitles, English audio if available)
+    const enAudio = fs.existsSync(path.join(dir, 'public/narration_en.wav')) ? 'narration_en.wav' : 'narration.wav';
     const comp169 = await selectComposition({
       serveUrl: url,
       id: 'Pilot',
-      inputProps: {...props, width: 1920, height: 1080},
+      inputProps: {...props, width: 1920, height: 1080, hideSubtitles: true, audioSrc: enAudio},
       puppeteerInstance: browser
     });
     await renderMedia({
       serveUrl: url,
       composition: comp169,
-      inputProps: {...props, width: 1920, height: 1080},
+      inputProps: {...props, width: 1920, height: 1080, hideSubtitles: true, audioSrc: enAudio},
       puppeteerInstance: browser,
       codec: 'h264',
       hardwareAcceleration: 'if-possible',
