@@ -32,10 +32,39 @@ if (args.includes('--character')) {
   }
 }
 
-// 1. Ensure Chrome is running with Profile 10 (or active profile from pool)
+// Load config.json if exists
+let appConfig = {};
+try {
+  appConfig = JSON.parse(readFileSync(join(root, 'config.json'), 'utf8'));
+} catch {}
+
+// Determine profile directory & user-data-dir
+let targetProfile = 'Profile 1';
+if (args.includes('--profile')) {
+  targetProfile = args[args.indexOf('--profile') + 1];
+} else if (appConfig.flow_profile) {
+  targetProfile = appConfig.flow_profile;
+}
+
+const userDataDir = appConfig.flow_user_data_dir ? resolve(appConfig.flow_user_data_dir) : resolve(root, '.gflow/profiles/video-pilot');
+
+function getChromeBinary() {
+  const candidates = [
+    '/opt/google/chrome/chrome',
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/chromium-browser',
+    '/usr/bin/chromium'
+  ];
+  for (const c of candidates) {
+    if (existsSync(c)) return c;
+  }
+  return 'google-chrome';
+}
+
+// 1. Ensure Chrome is running with target profile
 async function ensureChromeRunning() {
-  const profileDir = resolve(root, '.gflow/profiles/video-pilot');
-  const portFile = join(profileDir, 'DevToolsActivePort');
+  const portFile = join(userDataDir, 'DevToolsActivePort');
   let isAlive = false;
 
   if (existsSync(portFile)) {
@@ -47,12 +76,13 @@ async function ensureChromeRunning() {
   }
 
   if (!isAlive) {
-    console.error('gflow-guard: starting Chrome with Profile 10 on video-pilot profile...');
-    await fsPromises.mkdir(profileDir, { recursive: true });
+    console.error(`gflow-guard: starting Chrome with ${targetProfile} on ${userDataDir}...`);
+    await fsPromises.mkdir(userDataDir, { recursive: true });
     await fsPromises.rm(portFile, { force: true });
-    const child = spawn('/opt/google/chrome/chrome', [
-      `--user-data-dir=${profileDir}`,
-      '--profile-directory=Profile 10',
+    const chromeBin = getChromeBinary();
+    const child = spawn(chromeBin, [
+      `--user-data-dir=${userDataDir}`,
+      `--profile-directory=${targetProfile}`,
       '--remote-debugging-port=0',
       '--remote-allow-origins=*',
       '--no-first-run',
