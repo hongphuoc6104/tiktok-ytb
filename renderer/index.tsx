@@ -2,6 +2,64 @@ import React, {useLayoutEffect} from 'react';
 import {AbsoluteFill, Audio, Composition, Img, registerRoot, staticFile, useCurrentFrame, interpolate} from 'remotion';
 
 
+function splitIntoPhrases(text: string, maxLen = 32): string[] {
+  if (!text || text.length <= maxLen) return [text || ''];
+  const rawParts = text.split(/([,?!;:\.—])/).filter(Boolean);
+  const clauses: string[] = [];
+  let curr = '';
+  for (const p of rawParts) {
+    if (['.', ',', '?', '!', ';', ':', '—'].includes(p)) {
+      curr += p;
+    } else {
+      if (curr.trim()) clauses.push(curr.trim());
+      curr = p;
+    }
+  }
+  if (curr.trim()) clauses.push(curr.trim());
+
+  const result: string[] = [];
+  for (const clause of clauses) {
+    if (clause.length <= maxLen) {
+      result.push(clause);
+    } else {
+      const words = clause.split(/\s+/);
+      let buf = '';
+      for (const w of words) {
+        if ((buf ? buf + ' ' + w : w).length <= maxLen) {
+          buf = buf ? buf + ' ' + w : w;
+        } else {
+          if (buf) result.push(buf);
+          buf = w;
+        }
+      }
+      if (buf) result.push(buf);
+    }
+  }
+  return result.length > 0 ? result : [text];
+}
+
+function getActiveSubtitle(sub: {text: string, start: number, end: number}, t: number): string {
+  if (!sub || !sub.text) return '';
+  if (sub.text.length <= 32) return sub.text;
+  const chunks = splitIntoPhrases(sub.text, 32);
+  if (chunks.length <= 1) return chunks[0] || sub.text;
+
+  const duration = Math.max(0.1, sub.end - sub.start);
+  const relTime = Math.max(0, Math.min(duration, t - sub.start));
+  const progress = relTime / duration;
+
+  const totalChars = chunks.reduce((sum, c) => sum + Math.max(c.length, 6), 0);
+  let accumulated = 0;
+  const targetChar = progress * totalChars;
+  for (const c of chunks) {
+    accumulated += Math.max(c.length, 6);
+    if (targetChar <= accumulated) {
+      return c;
+    }
+  }
+  return chunks[chunks.length - 1];
+}
+
 const Video: React.FC<any> = (p) => {
   const frame = useCurrentFrame();
   const fps = p.fps || 30;
@@ -49,28 +107,34 @@ const Video: React.FC<any> = (p) => {
         />
       )}
 
-      {/* Phụ đề: chỉ hiển thị nếu không bật hideSubtitles */}
-      {!p.hideSubtitles && sub && (
-        <div data-check="subtitle" style={{
-          position: 'absolute',
-          bottom: isVertical ? 150 : 70,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: isVertical ? width - 88 : Math.min(width - 160, 1400),
-          fontSize: isVertical ? 34 : 32,
-          fontWeight: 600,
-          lineHeight: '46px',
-          textAlign: 'center',
-          padding: '14px 24px',
-          boxSizing: 'border-box',
-          borderRadius: 18,
-          background: 'rgba(15, 23, 42, 0.88)',
-          border: '1px solid rgba(255, 255, 255, 0.15)',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
-        }}>
-          {sub.text}
-        </div>
-      )}
+      {/* Phụ đề: chỉ hiển thị nếu không bật hideSubtitles - luôn nằm gọn trên 1 dòng duy nhất */}
+      {!p.hideSubtitles && sub && (() => {
+        const lineText = getActiveSubtitle(sub, t);
+        return (
+          <div data-check="subtitle" style={{
+            position: 'absolute',
+            bottom: isVertical ? 180 : 70,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            maxWidth: isVertical ? width - 80 : Math.min(width - 160, 1400),
+            width: 'auto',
+            whiteSpace: 'nowrap',
+            fontSize: isVertical ? 32 : 28,
+            fontWeight: 800,
+            lineHeight: '44px',
+            textAlign: 'center',
+            padding: '10px 24px',
+            boxSizing: 'border-box',
+            borderRadius: 18,
+            background: 'rgba(15, 23, 42, 0.88)',
+            border: '1.5px solid rgba(255, 255, 255, 0.25)',
+            boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+            letterSpacing: '0.2px'
+          }}>
+            {lineText}
+          </div>
+        );
+      })()}
 
       <Audio src={staticFile(p.audioSrc || 'narration.wav')} />
     </AbsoluteFill>

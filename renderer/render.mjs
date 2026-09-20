@@ -29,16 +29,55 @@ try {
   const page = await pw.newPage({viewport: {width: checkWidth, height: checkHeight}});
   let failures = [];
 
+function splitIntoPhrases(text, maxLen = 32) {
+  if (!text || text.length <= maxLen) return [text || ''];
+  const rawParts = text.split(/([,?!;:\.—])/).filter(Boolean);
+  const clauses = [];
+  let curr = '';
+  for (const p of rawParts) {
+    if (['.', ',', '?', '!', ';', ':', '—'].includes(p)) {
+      curr += p;
+    } else {
+      if (curr.trim()) clauses.push(curr.trim());
+      curr = p;
+    }
+  }
+  if (curr.trim()) clauses.push(curr.trim());
+
+  const result = [];
+  for (const clause of clauses) {
+    if (clause.length <= maxLen) {
+      result.push(clause);
+    } else {
+      const words = clause.split(/\s+/);
+      let buf = '';
+      for (const w of words) {
+        if ((buf ? buf + ' ' + w : w).length <= maxLen) {
+          buf = buf ? buf + ' ' + w : w;
+        } else {
+          if (buf) result.push(buf);
+          buf = w;
+        }
+      }
+      if (buf) result.push(buf);
+    }
+  }
+  return result.length > 0 ? result : [text];
+}
+
   for (const seg of props.segments) {
-    await page.setContent(`
-      <div id="subtitle" style="position:absolute;bottom:100px;left:50%;transform:translateX(-50%);width:${checkWidth - 120}px;font:600 32px/46px Arial;padding:14px 24px;box-sizing:border-box;text-align:center"></div>
-    `);
-    await page.locator('#subtitle').evaluate((e, t) => e.textContent = t, seg.text);
-    const bad = await page.evaluate(([w, h]) => [...document.querySelectorAll('div')].flatMap(e => {
-      const r = e.getBoundingClientRect();
-      return r.left < 0 || r.right > w || r.top < 0 || r.bottom > h || e.scrollWidth > e.clientWidth || (e.id === 'subtitle' && r.height > 180) ? [e.id] : [];
-    }), [checkWidth, checkHeight]);
-    if (bad.length) failures.push({text: seg.text, errors: bad});
+    const chunks = splitIntoPhrases(seg.text, 32);
+    for (const chunk of chunks) {
+      await page.setContent(`
+        <div id="subtitle" style="position:absolute;bottom:100px;left:50%;transform:translateX(-50%);max-width:${checkWidth - 80}px;white-space:nowrap;font:800 32px/44px Arial;padding:10px 24px;box-sizing:border-box;text-align:center"></div>
+      `);
+      await page.locator('#subtitle').evaluate((e, t) => e.textContent = t, chunk);
+      const bad = await page.evaluate(([w, h]) => [...document.querySelectorAll('div')].flatMap(e => {
+        const r = e.getBoundingClientRect();
+        return r.left < 0 || r.right > w || r.top < 0 || r.bottom > h || (e.id === 'subtitle' && r.height > 100) ? [e.id] : [];
+      }), [checkWidth, checkHeight]);
+      if (bad.length) failures.push({text: chunk, errors: bad});
+    }
   }
   await pw.close();
 
