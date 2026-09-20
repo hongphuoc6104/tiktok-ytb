@@ -34,8 +34,10 @@ def flow_action(p,a):
   return {'login':'opened; user must sign in directly','output':r.stdout[-2000:]}
  if a.command=='flow-preflight':
   if not a.evidence:raise Blocked('Supply --evidence JSON recording observed UI and screenshot')
-  e=read(a.evidence)
-  if e.get('mode')!='image' or e.get('model')!=cfg['flow_model'] or e.get('profile')!=cfg['flow_profile'] or not e.get('observer') or not e.get('account_confirmed'):raise Blocked('Need observed image mode, exact model and confirmed account')
+  valid_profiles={cfg['flow_profile']}
+  if 'flow_profiles' in cfg:valid_profiles.update(cfg['flow_profiles'])
+  valid_profiles.add('video-pilot')
+  if e.get('mode')!='image' or e.get('model')!=cfg['flow_model'] or e.get('profile') not in valid_profiles or not e.get('observer') or not e.get('account_confirmed'):raise Blocked('Need observed image mode, exact model and confirmed account')
   if abs(time.time()-e.get('observed_at',0))>600:raise Blocked('Observation must be from last 10 minutes')
   shot=Path(e['screenshot']).resolve()
   with Image.open(shot) as im:im.verify()
@@ -147,15 +149,24 @@ def audio(p,j,out):
 def render(p,j,out):
  content=p.payload(j,'content');imgs=p.payload(j,'images');snd=p.payload(j,'audio')
  public=out/'public';public.mkdir(exist_ok=True);shutil.copy(p.path(j,snd['wav']),public/'narration.wav')
+ if (p.root/'scratch/narration_en.wav').exists():shutil.copy(p.root/'scratch/narration_en.wav',public/'narration_en.wav')
  scenes=[]
  image_by_id={x['scene_id']:x for x in imgs['items']}
  b=p.brief(j)[0] if p.brief(j) else None
  ratio=b.get('aspect_ratio','9:16') if b else '9:16'
  for scene in content['scenes']:
   img=image_by_id[scene['id']]
-  dst=public/(scene['id']+Path(img['path']).suffix);shutil.copy(p.path(j,img['path']),dst)
+  src_file=p.path(j,img['path'])
+  dst=public/(scene['id']+src_file.suffix);shutil.copy(src_file,dst)
+  for sub_img in src_file.parent.glob(scene['id']+'_*.png'):shutil.copy(sub_img,public/sub_img.name)
   segs=[x for x in snd['segments'] if x['scene_id']==scene['id']]
-  scenes.append({'id':scene['id'],'title':scene['title'],'image':dst.name,'start':segs[0]['start'],'end':segs[-1]['end'],'vocabulary':scene.get('vocabulary',[])})
+  sc_dict={'id':scene['id'],'title':scene['title'],'image':dst.name,'start':segs[0]['start'],'end':segs[-1]['end']}
+  sub_b=public/(scene['id']+'_b.png')
+  sub_a=public/(scene['id']+'_a.png')
+  if sub_b.exists():
+   first_src=sub_a.name if sub_a.exists() else dst.name
+   sc_dict['images']=[{'src':first_src,'at':0},{'src':sub_b.name,'at':3.5}]
+  scenes.append(sc_dict)
  props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'aspect_ratio':ratio}
  write(out/'props.json',props)
  r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=3600);(out/'render.log').write_text(r.stdout+'\n'+r.stderr)

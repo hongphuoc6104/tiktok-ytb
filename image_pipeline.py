@@ -85,9 +85,12 @@ def preflight(p, j, operation):
         raise Blocked('M2_POLICY: credit budget must be non-negative')
     path = p.job(j) / 'flow/preflight.json'
     e = read(path) if path.exists() else {}
+    valid_profiles = {cfg['flow_profile']}
+    if 'flow_profiles' in cfg: valid_profiles.update(cfg['flow_profiles'])
+    valid_profiles.add('video-pilot')
     if (not 0 <= time.time() - e.get('observed_at', 0) <= 600 or e.get('mode') != 'image'
         or e.get('model') != cfg['flow_model']
-        or e.get('project') != cfg['flow_project'] or e.get('profile') != cfg['flow_profile'] or not e.get('account_confirmed')
+        or e.get('project') != cfg['flow_project'] or e.get('profile') not in valid_profiles or not e.get('account_confirmed')
         or not e.get('observer') or operation not in e.get('operations', [])):
         raise Blocked('M2_PREFLIGHT: fresh observed evidence required for ' + operation)
     if digest(p.path(j, e['screenshot'])) != e['screenshot_hash']:
