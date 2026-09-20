@@ -1,14 +1,11 @@
 ---
 name: vp-control
-description: Xử lý module Điều phối trong dự án Video Pilot dùng pilot.py; áp dụng khi chạy hoặc sửa module này.
+description: Điều phối cho Video Pilot v3; dùng khi chạy hoặc sửa phần này.
 ---
 # Điều phối
-Đọc AGENTS.md. Chạy `python3 pilot.py next <job>`.
-Đọc `schemas/control.json` và `docs/contracts.md` trước khi tạo đầu ra.
-Chạy `python3 pilot.py run <job> control` rồi `validate <job> control`.
-Riêng control: dùng new để tạo hồ sơ; run control không cấp quyền duyệt.
-Riêng content: sửa runs/<job>/draft/content.json rồi run; không sửa revisions.
-Riêng images: cần bằng chứng giao diện 0 credit bằng flow-preflight; nếu lỗi ambiguous dùng flow-reconcile, không retry tạo.
-Đọc artifact và báo revision cho người dùng. Dừng ở awaiting_review.
-Sau phản hồi rõ ràng, gọi approve kèm --revision và --note nguyên văn.
-Reject ghi lý do. Resume đọc trạng thái đã lưu, không khởi tạo lại công việc.
+
+Đọc AGENTS.md và docs/workflow.md. Trước sản xuất chạy status JOB và next JOB. Hai chế độ review/auto; chỉ ba phần content/media/video. Không áp dụng hướng dẫn duyệt từng module cũ.
+
+Dùng new --brief FILE --mode review|auto; run/resume chạy đến mốc tiếp theo. Control chỉ là cấu hình nội bộ, không xin duyệt. Chỉ ba tên phần CLI: content, media, video.
+
+Quyết định người dùng cần đúng phần/revision và phản hồi nguyên văn. Quyết định máy chỉ qua báo cáo kiểm tra thật. Không tự tạo bằng chứng, không sửa file đã lưu hoặc ghi SQLite trực tiếp.

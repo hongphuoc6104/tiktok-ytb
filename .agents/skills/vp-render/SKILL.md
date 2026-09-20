@@ -1,14 +1,11 @@
 ---
 name: vp-render
-description: Xử lý module Dựng và xuất trong dự án Video Pilot dùng pilot.py; áp dụng khi chạy hoặc sửa module này.
+description: Video hoàn chỉnh cho Video Pilot v3; dùng khi chạy hoặc sửa phần này.
 ---
-# Dựng và xuất
-Đọc AGENTS.md. Chạy `python3 pilot.py next <job>`.
-Đọc `schemas/render.json` và `docs/contracts.md` trước khi tạo đầu ra.
-Chạy `python3 pilot.py run <job> render` rồi `validate <job> render`.
-Riêng control: dùng new để tạo hồ sơ; run control không cấp quyền duyệt.
-Riêng content: sửa runs/<job>/draft/content.json rồi run; không sửa revisions.
-Riêng images: cần bằng chứng giao diện 0 credit bằng flow-preflight; nếu lỗi ambiguous dùng flow-reconcile, không retry tạo.
-Đọc artifact và báo revision cho người dùng. Dừng ở awaiting_review.
-Sau phản hồi rõ ràng, gọi approve kèm --revision và --note nguyên văn.
-Reject ghi lý do. Resume đọc trạng thái đã lưu, không khởi tạo lại công việc.
+# Video hoàn chỉnh
+
+Đọc AGENTS.md và docs/workflow.md. Trước sản xuất chạy status JOB và next JOB. Hai chế độ review/auto; chỉ ba phần content/media/video. Không áp dụng hướng dẫn duyệt từng module cũ.
+
+Chỉ run JOB video sau media được duyệt hợp lệ. 9:16 Việt có phụ đề; 16:9 Anh timeline riêng, ẩn phụ đề. Review: đưa tất cả MP4 và revision để người dùng xem. Auto: máy xem/nghe bản dựng thật; không hỗ trợ thì blocked. Chỉ quyết định video hợp lệ mới là hoàn tất.
+
+Quyết định người dùng cần đúng phần/revision và phản hồi nguyên văn. Quyết định máy chỉ qua báo cáo kiểm tra thật. Không tự tạo bằng chứng, không sửa file đã lưu hoặc ghi SQLite trực tiếp.

@@ -1,15 +1,11 @@
 ---
 name: vp-audio
-description: Xử lý module Âm thanh trong dự án Video Pilot dùng pilot.py; áp dụng khi chạy hoặc sửa module này.
+description: Âm thanh trong media cho Video Pilot v3; dùng khi chạy hoặc sửa phần này.
 ---
-# Âm thanh
-Đọc AGENTS.md. Chạy `python3 pilot.py next <job>`.
-Đọc `schemas/audio.json` và `docs/contracts.md` trước khi tạo đầu ra.
-Chạy `python3 pilot.py run <job> audio` rồi `validate <job> audio`.
-Brief dual hoặc 16:9 cần `.venv-en` và narration_en ở mọi cảnh; thiếu một trong hai thì audio bị chặn.
-Riêng control: dùng new để tạo hồ sơ; run control không cấp quyền duyệt.
-Riêng content: sửa runs/<job>/draft/content.json rồi run; không sửa revisions.
-Riêng images: cần bằng chứng giao diện 0 credit bằng flow-preflight; nếu lỗi ambiguous dùng flow-reconcile, không retry tạo.
-Đọc artifact và báo revision cho người dùng. Dừng ở awaiting_review.
-Sau phản hồi rõ ràng, gọi approve kèm --revision và --note nguyên văn.
-Reject ghi lý do. Resume đọc trạng thái đã lưu, không khởi tạo lại công việc.
+# Âm thanh trong media
+
+Đọc AGENTS.md và docs/workflow.md. Trước sản xuất chạy status JOB và next JOB. Hai chế độ review/auto; chỉ ba phần content/media/video. Không áp dụng hướng dẫn duyệt từng module cũ.
+
+Dùng run JOB media. Việt Minh Quân Pro / VieNeu ONNX; Anh Alba / Pocket TTS CPU INT8 tốc độ gốc. Dual/16:9 bắt buộc narration_en và .venv-en. Bàn giao WAV Việt/Anh, SRT, thời lượng thật cùng ảnh tại media; không xin duyệt audio riêng. Sửa giọng bằng reject media --part audio; sửa lời dẫn bằng reject content.
+
+Quyết định người dùng cần đúng phần/revision và phản hồi nguyên văn. Quyết định máy chỉ qua báo cáo kiểm tra thật. Không tự tạo bằng chứng, không sửa file đã lưu hoặc ghi SQLite trực tiếp.

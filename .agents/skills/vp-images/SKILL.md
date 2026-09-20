@@ -1,17 +1,11 @@
 ---
 name: vp-images
-description: Tạo và duyệt ảnh Google Flow cho Video Pilot qua pilot.py, gồm ảnh chuẩn nhân vật, ba cảnh đầu và toàn bộ sáu cảnh. Dùng riêng module M2; không tạo video AI.
+description: Hình ảnh trong media cho Video Pilot v3; dùng khi chạy hoặc sửa phần này.
 ---
-# Module hình ảnh
+# Hình ảnh trong media
 
-Đọc AGENTS.md, chạy `status JOB` và `next JOB` trước mọi lượt. Đọc `docs/M2-FLOW.md` khi cần cú pháp kết nối, bằng chứng hoặc khôi phục; hợp đồng ở `schemas/images-v2.json`.
+Đọc AGENTS.md và docs/workflow.md. Trước sản xuất chạy status JOB và next JOB. Hai chế độ review/auto; chỉ ba phần content/media/video. Không áp dụng hướng dẫn duyệt từng module cũ.
 
-- Chỉ dùng nội dung v2 đã duyệt. `run JOB images` tự chọn nhóm được phép: `references` → `first-three` → `final`.
-- Khi chờ duyệt, đưa mã công việc, revision, checkpoint và link `review.md`; dừng. Phản hồi duyệt rõ của người dùng được ghi nguyên văn bằng `approve JOB images --checkpoint ... --revision ... --note ...`. Chỉ `final` duyệt xong mới bàn giao.
-- Ảnh chuẩn tạo trên Flow. Đăng ký nhân vật có thể sinh ngoại hình khác: cần bằng chứng người dùng đã đối chiếu qua `flow-confirm-registration`; không tự khai khớp.
-- Trước mỗi thao tác tạo, cần bằng chứng mới về 0 credit đúng loại `image` hoặc `character-register`. Không suy từ số dư tài khoản hay từ việc tài khoản từng được miễn phí.
-- Timeout sau gửi: đọc mã request, dùng `flow-reconcile` với kết quả được xác minh hoặc báo blocked; không gọi CLI trực tiếp để thử lại.
-- Sửa ảnh bằng `reject` với checkpoint/revision, đúng `--scene` hoặc `--character` và lý do người dùng. Không sửa file trong revisions, không tự sinh biến thể cho đẹp hơn.
-- Bảng ảnh có cả ảnh kiểm chứng nhân vật riêng khi cần; chỉ sáu `items` là ảnh cảnh bàn giao.
-- Prompt chuẩn do người dùng cung cấp nằm trong `prompt_templates.py`. Bản thử dùng biến thể 9:16 từng ảnh; không gửi cả batch vượt điểm duyệt. Mẫu video chỉ lưu tham khảo, bị khóa thực thi.
-- Kiểm tra kỹ thuật không chứng minh nét mặt, trang phục hoặc diễn biến đúng. Luôn cần người dùng duyệt thẩm mỹ.
+Đọc docs/M2-FLOW.md. Dùng run JOB media; ảnh chuẩn và đăng ký là nội bộ, không xin duyệt riêng. Không còn checkpoint ba cảnh đầu. Bàn giao mọi cảnh và ảnh đăng ký cùng WAV ở media. Flow cần bằng chứng giao diện thật 0 credit; timeout dùng flow-reconcile, không gửi trùng. Sửa từng cảnh/nhân vật bằng reject media --scene/--character. Không gọi CLI trực tiếp.
+
+Quyết định người dùng cần đúng phần/revision và phản hồi nguyên văn. Quyết định máy chỉ qua báo cáo kiểm tra thật. Không tự tạo bằng chứng, không sửa file đã lưu hoặc ghi SQLite trực tiếp.

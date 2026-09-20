@@ -85,7 +85,7 @@ class AudioStageTests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
   for name in ['schemas','.agents','renderer','tests','examples']:shutil.copytree(ROOT/name,self.root/name)
-  for name in ['config.json','AGENTS.md','GEMINI.md','pilot.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','package.json','package-lock.json','requirements.txt']:
+  for name in ['config.json','AGENTS.md','GEMINI.md','pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','package.json','package-lock.json','requirements.txt']:
    if (ROOT/name).exists():shutil.copy(ROOT/name,self.root/name)
   self.p=Pilot(self.root);self.p.new('test')
   (self.root/'.venv-tts/bin').mkdir(parents=True);(self.root/'.venv-tts/bin/python').write_text('#fake')
@@ -141,7 +141,7 @@ class EnglishTrackTests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
   for n in ['schemas','.agents','renderer','tests','examples']:shutil.copytree(ROOT/n,self.root/n)
-  for n in ['pilot.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt']:
+  for n in ['pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt']:
    if (ROOT/n).exists():shutil.copy(ROOT/n,self.root/n)
   (self.root/'scripts').mkdir(exist_ok=True);shutil.copy(ROOT/'scripts/en_worker.py',self.root/'scripts/en_worker.py')
   for v in ['.venv-tts','.venv-en']:

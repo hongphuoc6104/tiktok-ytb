@@ -17,13 +17,12 @@ const { runCli } = await import(join(base, 'dist/src/cli.js'));
 
 const args = process.argv.slice(2);
 const image = args[0] === 'image';
-const video = args[0] === 'video';
 const character = args[0] === 'character' && args[1] === 'create';
-if (!image && !character && !video) throw Error('M2_POLICY: only image, character create or video allowed');
+if (!image && !character) throw Error('M2_POLICY: only image or character create allowed');
 const out = args[args.indexOf('--out') + 1];
 if (!out || !args.includes('--out')) throw Error('Output directory required');
 const evidenceDir = dirname(out);
-const proof = { mode: image ? 'image' : (video ? 'video' : 'character-register'), characters: [], passed: false };
+const proof = { mode: image ? 'image' : 'character-register', characters: [], passed: false };
 if (args.includes('--character')) {
   const charIdx = args.indexOf('--character');
   for (let i = charIdx + 1; i < args.length; i++) {
@@ -110,7 +109,7 @@ await ensureChromeRunning();
 
 // 2. Override methods for modern Google Flow layout
 FlowPage.prototype.applySettings = async function(job) {
-  if ((job.type !== 'image' && job.type !== 'video') || (job.ratio !== '9:16' && job.ratio !== '16:9') || job.outputs !== 1) {
+  if (job.type !== 'image' || (job.ratio !== '9:16' && job.ratio !== '16:9') || job.outputs !== 1) {
     throw Error('Pilot settings required');
   }
 
@@ -130,11 +129,18 @@ FlowPage.prototype.applySettings = async function(job) {
   }
 
   // 1. Select Aspect Ratio: 9:16 or 16:9
-  const is169 = job.ratio === '16:9';
-  const cropBtn = page.locator('button').filter({ hasText: is169 ? /crop_16_9/i : /crop_9_16/i }).first();
-  if (await cropBtn.count()) {
-    await cropBtn.click({ force: true }).catch(() => undefined);
-  }
+  const targetRatio = job.ratio === '16:9' ? '16:9' : '9:16';
+  await page.evaluate((r) => {
+    const group = document.querySelector('mat-button-toggle-group');
+    if (group) {
+      const toggle = [...group.querySelectorAll('mat-button-toggle')].find(t => t.innerText.includes(r));
+      if (toggle) {
+        const btn = toggle.querySelector('button');
+        if (btn) btn.click();
+      }
+    }
+  }, targetRatio);
+  await page.waitForTimeout(300);
 
   // 2. Select Output Count: x1
   const x1Btn = page.locator('button').filter({ hasText: /^x1$/ }).first();
@@ -157,17 +163,25 @@ FlowPage.prototype.applySettings = async function(job) {
     }
   }
 
-  // 4. Click Save
-  await page.evaluate(() => {
-    const saveBtn = [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'Save');
-    if (saveBtn) saveBtn.click();
-  });
-  await page.waitForTimeout(1000);
+  // Record observed selections, never reconstruct proof from requested arguments.
+  const observed = await page.evaluate(() => ({
+    selected: [...document.querySelectorAll('[aria-selected="true"], [aria-pressed="true"], .mat-button-toggle-checked')]
+      .map(e => (e.textContent || '').trim()),
+    labels: [...document.querySelectorAll('button')].map(e => (e.textContent || '').trim())
+  }));
+  const selection = observed.selected.join(' ');
+  const labels = observed.labels.join(' ');
+  const normalized = labels.toLowerCase().replace(/[-_]/g, ' ');
+  const model = job.model.toLowerCase().replace(/[-_]/g, ' ');
+  const ratioIcon = job.ratio === '16:9' ? 'crop_16_9' : 'crop_9_16';
+  if (!/\bImage\b/i.test(selection) || !normalized.includes(model) ||
+      !(selection.includes(job.ratio) || labels.includes(ratioIcon)) || !/\bx1\b/.test(labels)) {
+    throw Error('M2_PREFLIGHT: cannot verify image/model/ratio/output count from the live UI');
+  }
+  proof.settings = observed;
+  const save = page.getByRole('button', {name: 'Save', exact: true});
+  if (await save.count()) await save.first().click();
 
-  proof.settings = {
-    label: `${job.model} crop_9_16`,
-    selected: [job.type === 'video' ? 'Video' : 'Image']
-  };
 };
 
 FlowPage.prototype.fillPrompt = async function(prompt) {
@@ -198,9 +212,6 @@ FlowPage.prototype.submit = async function() {
 };
 
 FlowPage.prototype.resultSrcs = async function(type) {
-  if (type === 'video') {
-    return this.page.$$eval('video', vids => vids.map(v => v.currentSrc || v.src).filter(Boolean));
-  }
   return this.page.$$eval('img', imgs => imgs.map(i => i.currentSrc || i.src).filter(src =>
     src && (
       src.includes('flow-content.google') ||
@@ -220,8 +231,8 @@ FlowPage.prototype.runJob = async function(input) {
 
   try {
     // 1. Navigate to project
-    const projectUrl = 'https://flow.google.com/project/7fd0b89e-b0b0-41d2-af59-3b9b8e97f1cb';
-    await page.goto(projectUrl, { waitUntil: 'domcontentloaded' });
+    const {navigateToProject} = await import(join(base, 'dist/src/flow/ui.js'));
+    await navigateToProject(page, job.project);
     await page.waitForTimeout(2500);
 
     // 2. Apply Settings
@@ -232,12 +243,17 @@ FlowPage.prototype.runJob = async function(input) {
 
     // 4. Fill Prompt
     await this.fillPrompt(job.prompt);
+    for (const name of job.character || []) {
+      await this.referenceCharacter(name);
+      const attached = await page.locator('.prompt-input, form, [data-prompt-container]').filter({hasText: name}).count();
+      if (!attached) throw Error('Character attachment cannot be verified: ' + name);
+    }
 
     // 5. Submit & record evidence
     await this.submit();
 
     // 6. Wait for new image result
-    const timeoutMs = (job.timeout ?? (job.type === 'video' ? 1800 : 900)) * 1000;
+    const timeoutMs = (job.timeout ?? 900) * 1000;
     const deadline = Date.now() + timeoutMs;
     let newSrcs = [];
 
@@ -256,19 +272,29 @@ FlowPage.prototype.runJob = async function(input) {
     }
 
     // 7. Download image asset and write companion metadata JSON
-    await fsPromises.mkdir(outDir, { recursive: true });
+    const resolvedOutDir = resolve(outDir);
+    await fsPromises.mkdir(resolvedOutDir, { recursive: true });
     const artifacts = [];
 
     for (let i = 0; i < newSrcs.length; i++) {
       const basename = `${job.id}-${i + 1}`;
-      const assetPath = join(outDir, `${basename}.png`);
-      const metadataPath = join(outDir, `${basename}.json`);
+      const assetPath = join(resolvedOutDir, `${basename}.png`);
+      const metadataPath = join(resolvedOutDir, `${basename}.json`);
 
-      // Fetch image data using authenticated page.request
-      const resp = await page.request.get(newSrcs[i]);
-      if (!resp.ok) throw Error(`Failed to download result image from ${newSrcs[i]}: ${resp.status()}`);
-      const buf = await resp.body();
-      await fsPromises.writeFile(assetPath, buf);
+      // Download authentic full-resolution asset using downloadResult
+      const { downloadResult } = await import(join(base, 'dist/src/flow/download.js'));
+      const dl = await downloadResult({
+        page,
+        context,
+        src: newSrcs[i],
+        type: job.type,
+        quality: 'original',
+        outDir: resolvedOutDir,
+        basename
+      });
+      if (dl?.assetPath && dl.assetPath !== assetPath) {
+        await fsPromises.copyFile(dl.assetPath, assetPath);
+      }
 
       // Write metadata matching image_pipeline.py requirements
       const metadata = {
@@ -297,53 +323,7 @@ FlowPage.prototype.runJob = async function(input) {
   }
 };
 
-CharacterPage.prototype.createCharacter = async function(input) {
-  const page = this.page;
-  await page.goto('https://flow.google.com/project/7fd0b89e-b0b0-41d2-af59-3b9b8e97f1cb/character', { waitUntil: 'domcontentloaded' });
-  await page.waitForTimeout(2000);
-  
-  if (input.images && input.images.length > 0) {
-    const uploadBtn = page.locator('button:has-text("Upload")').first();
-    if (await uploadBtn.count()) {
-      const fileChooserPromise = page.waitForEvent('filechooser', { timeout: 10000 });
-      await uploadBtn.click();
-      const fileChooser = await fileChooserPromise;
-      await fileChooser.setFiles(input.images[0]);
-      await page.waitForTimeout(3000);
-    }
-  }
-  
-  if (input.name) {
-    const editBtn = page.locator('button:has-text("edit"), button[aria-label*="edit" i], button:has(mat-icon:has-text("edit")), mat-icon:has-text("edit")').first();
-    if (await editBtn.count()) await editBtn.click();
-    else {
-      const title = page.locator('h1, h2, [role=heading]').filter({ hasText: /Untitled character/i }).first();
-      if (await title.count()) await title.click();
-    }
-    await page.waitForTimeout(500);
-    const nameInput = page.locator('input[type=text], input:not([type])').first();
-    if (await nameInput.count()) {
-      await nameInput.fill(input.name);
-      await page.keyboard.press('Enter');
-    }
-  }
-  
-  await this.assertNotBlocked();
-  
-  const doneBtn = page.locator('button:has-text("Done")').first();
-  if (await doneBtn.count()) {
-    await doneBtn.click();
-    await page.waitForTimeout(2000);
-  }
-  
-  let thumbnailPath = join(input.outDir, `${input.name}.png`);
-  if (input.images && input.images.length > 0) {
-    await fsPromises.mkdir(input.outDir, { recursive: true });
-    await fsPromises.copyFile(input.images[0], thumbnailPath);
-  }
-  return { name: input.name, thumbnailPath, flowUrl: page.url() };
-};
-
+// Keep the pinned provider implementation: it downloads the actual registration result.
 const originalCharacterCheck = CharacterPage.prototype.assertNotBlocked;
 CharacterPage.prototype.assertNotBlocked = async function() {
   await originalCharacterCheck.call(this);

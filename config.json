@@ -6,8 +6,8 @@
   "min_seconds": 180,
   "max_seconds": 450,
   "scene_count": 6,
-  "video_generation": true,
-  "credit_budget": 100,
+  "video_generation": false,
+  "credit_budget": 0,
   "flow_model": "Nano Banana Pro",
   "flow_profile": "video-pilot",
   "flow_project": "Video Pilot",
@@ -30,11 +30,12 @@
   "audio_lufs": -14.0,
   "audio_peak_db": -1.5,
   "renderer": "remotion",
-  "concurrency": 3,
-  "auto": true,
-  "review": "every_module",
+  "concurrency": 1,
+  "review": "three_stages",
   "en_voice": "alba",
   "en_quantize": true,
   "en_threads": 4,
-  "en_seed": 42
+  "en_seed": 42,
+  "workflow_mode": "review",
+  "render_concurrency": 2
 }

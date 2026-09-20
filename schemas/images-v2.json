@@ -7,7 +7,6 @@
     "checkpoint": {
       "enum": [
         "references",
-        "first-three",
         "final"
       ]
     },
@@ -288,7 +287,8 @@
           "actual_prompt"
         ],
         "additionalProperties": false
-      }
+      },
+      "maxItems": 0
     },
     "contact_sheet": {
       "type": "string",

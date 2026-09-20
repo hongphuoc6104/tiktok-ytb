@@ -4,9 +4,46 @@ import {chromium} from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {outputPlans} from './outputs.mjs';
 
 const dir = process.argv[2];
 const props = JSON.parse(fs.readFileSync(path.join(dir, 'props.json')));
+const publicDir = path.join(dir, 'public');
+
+// Auto-enrich scenes with dedicated 9:16 and 16:9 images and multi-beat illustrations
+for (const scene of props.scenes) {
+  const p916 = `${scene.id}_9x16.png`;
+  const p169 = `${scene.id}_16x9.png`;
+  if (fs.existsSync(path.join(publicDir, p916))) scene.image_9x16 = p916;
+  if (fs.existsSync(path.join(publicDir, p169))) scene.image_16x9 = p169;
+
+  const beats916 = [];
+  if (fs.existsSync(path.join(publicDir, `${scene.id}_a_9x16.png`))) {
+    beats916.push({src: `${scene.id}_a_9x16.png`, at: 0});
+  } else if (scene.image_9x16) {
+    beats916.push({src: scene.image_9x16, at: 0});
+  }
+  if (fs.existsSync(path.join(publicDir, `${scene.id}_b_9x16.png`))) {
+    beats916.push({src: `${scene.id}_b_9x16.png`, at: 4.5});
+  }
+  if (beats916.length > 1) scene.images_9x16 = beats916;
+
+  const beats169 = [];
+  if (fs.existsSync(path.join(publicDir, `${scene.id}_a_16x9.png`))) {
+    beats169.push({src: `${scene.id}_a_16x9.png`, at: 0});
+  } else if (scene.image_16x9) {
+    beats169.push({src: scene.image_16x9, at: 0});
+  }
+  if (fs.existsSync(path.join(publicDir, `${scene.id}_b_16x9.png`))) {
+    beats169.push({src: `${scene.id}_b_16x9.png`, at: 4.5});
+  }
+  if (beats169.length > 1) scene.images_16x9 = beats169;
+}
+if (props.en_scenes) {
+  const spans = new Map(props.en_scenes.map(s => [s.id, s]));
+  props.en_scenes = props.scenes.map(s => ({...s, start: spans.get(s.id).start, end: spans.get(s.id).end}));
+}
+const plans = outputPlans(props, fs.existsSync(path.join(publicDir, 'narration_en.wav')));
 const url = await bundle({
   entryPoint: fileURLToPath(new URL('./index.tsx', import.meta.url)),
   publicDir: path.join(dir, 'public')
@@ -94,89 +131,29 @@ function splitIntoPhrases(text, maxLen = 32) {
   const compStills = await selectComposition({
     serveUrl: url,
     id: 'Pilot',
-    inputProps: {...props, width: checkWidth, height: checkHeight},
+    inputProps: plans[0].props,
     puppeteerInstance: browser
   });
 
-  for (const scene of props.scenes) {
+  for (const scene of plans[0].props.scenes) {
     await renderStill({
       serveUrl: url,
       composition: compStills,
-      inputProps: {...props, width: checkWidth, height: checkHeight},
+      inputProps: plans[0].props,
       puppeteerInstance: browser,
       frame: Math.min(compStills.durationInFrames - 1, Math.round((scene.start + scene.end) / 2 * 30)),
       output: path.join(dir, scene.id + '.png')
     });
   }
 
-  // Render video
-  if (isDual) {
-    // 1. Render 9:16 Full HD (TikTok/Shorts with subtitles)
-    const comp916 = await selectComposition({
-      serveUrl: url,
-      id: 'Pilot',
-      inputProps: {...props, width: 1080, height: 1920, hideSubtitles: false, audioSrc: 'narration.wav'},
-      puppeteerInstance: browser
-    });
-    await renderMedia({
-      serveUrl: url,
-      composition: comp916,
-      inputProps: {...props, width: 1080, height: 1920, hideSubtitles: false, audioSrc: 'narration.wav'},
-      puppeteerInstance: browser,
-      codec: 'h264',
-      hardwareAcceleration: 'if-possible',
-      audioCodec: 'aac',
-      concurrency: 4,
-      outputLocation: path.join(dir, 'video_9x16.mp4')
-    });
-
-    // 2. Render 16:9 Full HD (YouTube: Clean screen, NO subtitles, English audio if available).
-    // The English track has its own timeline: use it, or the tail runs silent and
-    // every image cut drifts against the narration.
-    const hasEn = fs.existsSync(path.join(dir, 'public/narration_en.wav'));
-    const props169 = hasEn
-      ? {...props, scenes: props.en_scenes || props.scenes, duration: props.en_duration || props.duration,
-         width: 1920, height: 1080, hideSubtitles: true, audioSrc: 'narration_en.wav'}
-      : {...props, width: 1920, height: 1080, hideSubtitles: true, audioSrc: 'narration.wav'};
-    const comp169 = await selectComposition({
-      serveUrl: url,
-      id: 'Pilot',
-      inputProps: props169,
-      puppeteerInstance: browser
-    });
-    await renderMedia({
-      serveUrl: url,
-      composition: comp169,
-      inputProps: props169,
-      puppeteerInstance: browser,
-      codec: 'h264',
-      hardwareAcceleration: 'if-possible',
-      audioCodec: 'aac',
-      concurrency: 4,
-      outputLocation: path.join(dir, 'video_16x9.mp4')
-    });
-
-    // Default video is 9:16
-    fs.copyFileSync(path.join(dir, 'video_9x16.mp4'), path.join(dir, 'video.mp4'));
-  } else {
-    const compSingle = await selectComposition({
-      serveUrl: url,
-      id: 'Pilot',
-      inputProps: {...props, width: checkWidth, height: checkHeight},
-      puppeteerInstance: browser
-    });
-    await renderMedia({
-      serveUrl: url,
-      composition: compSingle,
-      inputProps: {...props, width: checkWidth, height: checkHeight},
-      puppeteerInstance: browser,
-      codec: 'h264',
-      hardwareAcceleration: 'if-possible',
-      audioCodec: 'aac',
-      concurrency: 4,
-      outputLocation: path.join(dir, 'video.mp4')
-    });
+  for (const plan of plans) {
+    const composition = await selectComposition({serveUrl: url, id: 'Pilot', inputProps: plan.props, puppeteerInstance: browser});
+    await renderMedia({serveUrl: url, composition, inputProps: plan.props, puppeteerInstance: browser,
+      codec: 'h264', hardwareAcceleration: 'if-possible', audioCodec: 'aac',
+      concurrency: props.render_concurrency || 2, outputLocation: path.join(dir, plan.file)});
   }
+  if (plans[0].file !== 'video.mp4') fs.copyFileSync(path.join(dir, plans[0].file), path.join(dir, 'video.mp4'));
+
 } finally {
   await browser.close({silent: true});
 }

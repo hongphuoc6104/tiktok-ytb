@@ -11,7 +11,7 @@ class ContentV2Tests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
   for n in ['schemas','.agents','renderer','tests','examples']:shutil.copytree(ROOT/n,self.root/n)
-  for n in ['pilot.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:shutil.copy(ROOT/n,self.root/n)
+  for n in ['pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:shutil.copy(ROOT/n,self.root/n)
   self.p=Pilot(self.root);self.b=read(ROOT/'examples/m1/brief.json');self.p.new('m1',self.b)
   self.p.approve('m1','control',1,'TEST ONLY control approval')
   self.d=self.draft('m1')
@@ -64,8 +64,14 @@ class ContentV2Tests(unittest.TestCase):
   self.p.refresh('m1');self.assertEqual(self.p.rows('m1')['content']['state'],'stale')
  def test_T11_fresh_process_resume(self):
   self.submit()
+  import workflow
+  write(self.p.job('m1')/'workflow.json',{'version':3,'mode':'review','created_at':0})
+  from pilot import hashobj
+  self.p.event('m1','control','workflow_created',hashobj(read(self.p.job('m1')/'workflow.json')))
+  workflow.prepare(self.p,'m1','content')
   out=subprocess.check_output([str(ROOT/'.venv/bin/python'),str(self.root/'pilot.py'),'resume','m1'],text=True)
-  self.assertEqual(json.loads(out),{'module':'content','state':'awaiting_review','action':'review'})
+  self.assertEqual(json.loads(out)['stage'],'content')
+  self.assertEqual(json.loads(out)['action'],'review')
  def test_T12_images_before_approval(self):
   self.submit()
   with patch('adapters.images') as call:

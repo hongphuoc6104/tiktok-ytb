@@ -8,7 +8,7 @@ import jsonschema
 from PIL import Image, ImageDraw
 from pilot import Blocked, digest, hashobj, read, write
 
-STAGES = ('references', 'first-three', 'final')
+STAGES = ('references', 'final')
 
 
 def setup(p):
@@ -41,7 +41,7 @@ def signature(p, j, stage):
     c = content(p, j)
     targets = ['ref:' + x['id'] for x in c['characters']]
     if stage != 'references':
-        targets += [x['id'] for x in c['scenes'][:3 if stage == 'first-three' else len(c['scenes'])]]
+        targets += [x['id'] for x in c['scenes']]
         targets += ['proof:' + x['id'] for x in c['characters']]
     return hashobj({'content': p.rows(j)['content']['hash'],
                     'edits': {t: edits(p, j, t) for t in targets}})
@@ -74,21 +74,20 @@ def describe(p, j):
     c = content(p, j)
     return {'checkpoint': s, 'approved_checkpoints': [x for x in STAGES if approved(p, j, x)],
             'next_step': {'references': 'Create/review character references',
-                          'first-three': 'Register references, verify registration, create/review SC01–SC03',
                           'final': f"Create/review remaining scenes and all {len(c['scenes'])} images",
                           'complete': 'Images approved; audio may proceed'}[s]}
 
 
 def preflight(p, j, operation):
     cfg = read(p.root / 'config.json')
-    if cfg.get('credit_budget', 0) < 0:
+    if cfg.get('video_generation') or cfg.get('credit_budget', 0) != 0:
         raise Blocked('M2_POLICY: credit budget must be non-negative')
     path = p.job(j) / 'flow/preflight.json'
     e = read(path) if path.exists() else {}
     valid_profiles = {cfg['flow_profile']}
     if 'flow_profiles' in cfg: valid_profiles.update(cfg['flow_profiles'])
     valid_profiles.add('video-pilot')
-    if (not 0 <= time.time() - e.get('observed_at', 0) <= 600 or e.get('mode') != 'image'
+    if (e.get('credits_per_generation') != 0 or not 0 <= time.time() - e.get('observed_at', 0) <= 600 or e.get('mode') != 'image'
         or e.get('model') != cfg['flow_model']
         or e.get('project') != cfg['flow_project'] or e.get('profile') not in valid_profiles or not e.get('account_confirmed')
         or not e.get('observer') or operation not in e.get('operations', [])):
@@ -128,8 +127,6 @@ def request(p, j, target, prompt, refs=(), registration=None):
     c = content(p, j)
     if not target.startswith('ref:') and not approved(p, j, 'references'):
         raise Blocked('M2_REFERENCES: approve references first')
-    if target in [x['id'] for x in c['scenes'][3:]] and not approved(p, j, 'first-three'):
-        raise Blocked('M2_CHECKPOINT: approve first-three first')
     scene = next((x for x in c['scenes'] if x['id'] == target), None)
     if scene:
         approved_refs = approved(p, j, 'references')['payload']['references']
@@ -140,9 +137,10 @@ def request(p, j, target, prompt, refs=(), registration=None):
     from prompt_templates import image_prompt
     corrections = '\n'.join(x['note'] for x in edits(p, j, target))
     revised_prompt = prompt + ('\nRequested corrections: ' + corrections if corrections else '')
-    actual_prompt = revised_prompt if registration else image_prompt(revised_prompt)
+    ratio = '16:9' if p.brief(j)[0]['aspect_ratio']=='16:9' else '9:16'
+    actual_prompt = revised_prompt if registration else image_prompt(revised_prompt, ratio)
     identity = {'content_hash': p.rows(j)['content']['hash'], 'target': target,
-                'prompt': prompt, 'actual_prompt': actual_prompt, 'model': cfg['flow_model'], 'ratio': '9:16',
+                'prompt': prompt, 'actual_prompt': actual_prompt, 'model': cfg['flow_model'], 'ratio': ratio,
                 'references': list(refs), 'edits': edits(p, j, target),
                 'registration': registration, 'config_hash': digest(p.root / 'config.json')}
     key = hashobj(identity)
@@ -178,7 +176,7 @@ def request(p, j, target, prompt, refs=(), registration=None):
                 '--image', str(p.path(j, registration['path']))] + common
     else:
         args = ['image', '--id', key[:16], '--prompt', actual_prompt, '--model', model_arg,
-                '--ratio', '9:16', '--outputs', '1'] + common
+                '--ratio', ratio, '--outputs', '1'] + common
         if refs:
             args += ['--character'] + [x['name'] for x in refs]
     result = {'key': key, 'identity': identity, 'state': 'submitted', 'submitted_at': time.time(),
@@ -211,7 +209,7 @@ def request(p, j, target, prompt, refs=(), registration=None):
         if not registration:
             metadata = read(f.with_suffix('.json'))
             if (metadata.get('jobId') != key[:16] or metadata.get('type') != 'image'
-                or metadata.get('prompt') != actual_prompt or metadata.get('ratio') != '9:16'
+                or metadata.get('prompt') != actual_prompt or metadata.get('ratio') != ratio
                 or metadata.get('characters', []) != [x['name'] for x in refs]
                 or metadata.get('source') != 'google-flow-browser' or metadata.get('status') != 'downloaded'):
                 raise Blocked('Downloaded metadata does not match request')
@@ -236,17 +234,43 @@ def register(p, j, ref):
     r = request(p, j, 'register:' + ref['character_id'] + ':' + ref['sha256'], ref['prompt'],
                 registration={'name': ref['name'], 'path': ref['path'], 'sha256': ref['sha256']})
     confirmation = p.path(j, r['journal']).parent / 'confirmation.json'
+    if not confirmation.exists() and (p.job(j) / 'workflow.json').exists():
+        import workflow
+        mode = workflow.settings(p, j)['mode']
+        report = None
+        if mode == 'auto':
+            from machine_review import review
+            report = review(p, j, 'registration', [ref['path'], r['path']],
+                            {'reference_hash': ref['sha256'], 'result_hash': r['sha256']})
+        # In review mode the user compares these images at the combined media gate.
+        # A pending comparison must never be described as a verified identity match.
+        shot = p.path(j, r['journal']).parent / 'before-submit.png'
+        write(confirmation, {'reference_hash': ref['sha256'], 'result_hash': r['sha256'],
+                            'name': ref['name'], 'matches_approved_reference': mode == 'auto',
+                            'pending_media_review': mode == 'review', 'observer': 'machine' if report else 'technical',
+                            'note': 'Machine identity review' if report else 'Compare at media gate',
+                            'report': report, 'screenshot': str(shot.relative_to(p.job(j))),
+                            'screenshot_hash': digest(shot)})
     if not confirmation.exists():
         raise Blocked('M2_REGISTRATION_REVIEW: character create can generate a new appearance. Compare ' + r['path'] +
                       ' with approved reference; record flow-confirm-registration --request ' + r['key'] + ' --evidence FILE')
     e = read(confirmation)
     if (e.get('reference_hash') != ref['sha256'] or e.get('result_hash') != r['sha256']
-        or e.get('matches_approved_reference') is not True or not e.get('observer') or not e.get('note')
+        or not registration_accepted(p, j, e) or not e.get('observer') or not e.get('note')
         or e.get('name') != ref['name'] or digest(p.path(j, e['screenshot'])) != e['screenshot_hash']):
         raise Blocked('M2_REGISTRATION_REVIEW: confirmation invalid')
     return {'name': ref['name'], 'character_id': ref['character_id'], 'sha256': ref['sha256'],
             'registration_hash': r['sha256'], 'registration_journal': r['journal'],
             'confirmation': str(confirmation.relative_to(p.job(j)))}
+
+
+def registration_accepted(p, j, evidence):
+    if evidence.get('matches_approved_reference') is True:
+        return True
+    if evidence.get('pending_media_review') and (p.job(j) / 'workflow.json').exists():
+        import workflow
+        return workflow.settings(p, j)['mode'] == 'review'
+    return False
 
 
 def attach(p, j, result, target, prompt, refs, out):
@@ -276,7 +300,7 @@ def produce(p, j, out):
     else:
         refs = approved(p, j, 'references')['payload']['references']
         registrations = {r['character_id']: register(p, j, r) for r in refs}
-        scenes = c['scenes'][:3 if s == 'first-three' else len(c['scenes'])]
+        scenes = c['scenes']
         import concurrent.futures
         cfg = read(p.root / 'config.json')
         concurrency = cfg.get('concurrency', 3)
@@ -290,25 +314,6 @@ def produce(p, j, out):
             for scene_id, prompt, linked, r in executor.map(process_scene, scenes):
                 items.append(attach(p, j, r, scene_id, prompt, linked, out))
 
-        # Each character needs three visual examples, independent of story casting.
-        proof_tasks = []
-        for char in c['characters']:
-            count = sum(char['id'] in x['character_ids'] for x in c['scenes'][:3])
-            for n in range(count, 3):
-                target = 'PROOF-' + char['id'] + '-' + str(n + 1)
-                prompt = reference_prompt(c, char) + f' Kiểm chứng nhất quán {n+1}: ' + ['góc chính diện', 'góc nghiêng ba phần tư', 'đứng trong văn phòng'][n]
-                linked = [registrations[char['id']]]
-                proof_tasks.append((char['id'], n, target, prompt, linked))
-
-        def process_proof(task):
-            cid, n, target, prompt, linked = task
-            r = request(p, j, 'proof:' + cid + ':' + str(n + 1), prompt, linked)
-            return (target, prompt, linked, r)
-
-        if proof_tasks:
-            with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
-                for target, prompt, linked, r in executor.map(process_proof, proof_tasks):
-                    proofs.append(attach(p, j, r, target, prompt, linked, out))
     entries = refs + items + proofs
     sheet = Image.new('RGB', (540, max(1, (len(entries) + 2) // 3) * 350), '#eeeeee')
     draw = ImageDraw.Draw(sheet)
@@ -334,25 +339,18 @@ def check(p, j, data):
             raise Blocked('M2_REFERENCES: reference differs from approved character profile')
     if [x['character_id'] for x in data['references']] != list(chars):
         raise Blocked('M2_REFERENCES: missing/duplicate character')
-    expected = [] if s == 'references' else c['scenes'][:3 if s == 'first-three' else len(c['scenes'])]
+    expected = [] if s == 'references' else c['scenes']
     if [x['scene_id'] for x in data['items']] != [x['id'] for x in expected]:
         raise Blocked('M2_SCENES: missing/duplicate/reordered scenes')
     if s != 'references':
         a = approved(p, j, 'references')
         if not a or data['references'] != a['payload']['references']:
             raise Blocked('M2_REFERENCES: references not approved')
-    if s == 'final' and not approved(p, j, 'first-three'):
-        raise Blocked('M2_CHECKPOINT: first-three must be approved')
     for item, scene in zip(data['items'], expected):
         if item['prompt'] != scene['prompt'] or [x['character_id'] for x in item['references']] != scene['character_ids']:
             raise Blocked('M2_PROMPT: approved prompt or character links changed')
-    expected_proofs = []
-    if s != 'references':
-        for char in chars:
-            count = sum(char in x['character_ids'] for x in c['scenes'][:3])
-            expected_proofs += ['PROOF-' + char + '-' + str(n + 1) for n in range(count, 3)]
-    if [x['scene_id'] for x in data['proofs']] != expected_proofs:
-        raise Blocked('M2_PROOFS: missing consistency examples')
+    if data['proofs']:
+        raise Blocked('Separate proof images removed; review actual scene images')
     files = [data['contact_sheet']]
     image_check(p, j, data['contact_sheet'], full=False)
     for item in data['references'] + data['items'] + data['proofs']:
@@ -360,7 +358,7 @@ def check(p, j, data):
         req = read(p.path(j, item['request']))
         from prompt_templates import image_prompt
         changes = '\n'.join(x['note'] for x in req['identity']['edits'])
-        expected_prompt = image_prompt(item['prompt'] + ('\nRequested corrections: ' + changes if changes else ''))
+        expected_prompt = image_prompt(item['prompt'] + ('\nRequested corrections: ' + changes if changes else ''), req['identity']['ratio'])
         if item['actual_prompt'] != expected_prompt:
             raise Blocked('M2_PROMPT: actual prompt differs from configured template')
         if (req['state'] != 'downloaded' or req['identity']['content_hash'] != data['content_hash']
@@ -402,7 +400,7 @@ def register_existing(p, j, original):
             if not conf.exists():
                 continue
             e = read(conf)
-            if (e.get('matches_approved_reference') is True and e.get('reference_hash') == original['sha256']
+            if (registration_accepted(p, j, e) and e.get('reference_hash') == original['sha256']
                 and e.get('result_hash') == r['sha256'] and e.get('name') == original['name']
                 and e.get('observer') and e.get('note')
                 and digest(p.path(j, e['screenshot'])) == e['screenshot_hash']):
@@ -418,7 +416,7 @@ def register_existing(p, j, original):
     raise Blocked('M2_REGISTRATION: verified registration missing')
 
 
-def approve(p, j, rev, note, checkpoint):
+def approve(p, j, rev, note, checkpoint, actor='user'):
     p.validate(j, 'images');row = p.rows(j)['images'];e = read(p.path(j, row['envelope']))
     s = e['payload']['checkpoint']
     if checkpoint != s or row['revision'] != rev or row['state'] != 'awaiting_review' or not note.strip():
@@ -427,7 +425,7 @@ def approve(p, j, rev, note, checkpoint):
                  (j, s, rev, row['envelope'], row['hash'], signature(p, j, s), note, time.time()))
     p.db.execute('UPDATE modules SET state=? WHERE job=? AND module=?',
                  ('approved' if s == 'final' else 'pending', j, 'images'))
-    p.db.commit();p.event(j, 'images', 'checkpoint_approved', json.dumps({'checkpoint': s, 'revision': rev, 'user_response': note}, ensure_ascii=False))
+    p.db.commit();p.event(j, 'images', 'technical_accepted' if actor=='technical' else 'checkpoint_approved', json.dumps({'checkpoint': s, 'revision': rev, 'actor': actor, 'note': note}, ensure_ascii=False))
 
 
 def reject(p, j, rev, note, checkpoint, scene=None, character=None):
@@ -440,7 +438,7 @@ def reject(p, j, rev, note, checkpoint, scene=None, character=None):
     c = content(p, j)
     if bool(scene) == bool(character):
         raise Blocked('M2_REJECT: select exactly one --scene or --character')
-    if scene and scene not in [x['id'] for x in c['scenes'][:0 if checkpoint=='references' else 3 if checkpoint=='first-three' else len(c['scenes'])]]:
+    if scene and scene not in [x['id'] for x in c['scenes'][:0 if checkpoint=='references' else len(c['scenes'])]]:
         raise Blocked('M2_REJECT: scene is not in this checkpoint')
     if character and character not in [x['id'] for x in c['characters']]:
         raise Blocked('M2_REJECT: unknown character')

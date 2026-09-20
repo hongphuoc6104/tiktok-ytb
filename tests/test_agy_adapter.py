@@ -9,7 +9,7 @@ class AgyAdapterTests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
   for n in ['schemas','.agents','renderer','tests','examples','scripts']:shutil.copytree(ROOT/n,self.root/n)
-  for n in ['pilot.py','image_pipeline.py','prompt_templates.py','content_contract.py','config.json','AGENTS.md','GEMINI.md']:shutil.copy(ROOT/n,self.root/n)
+  for n in ['pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','content_contract.py','config.json','AGENTS.md','GEMINI.md']:shutil.copy(ROOT/n,self.root/n)
   self.p=Pilot(self.root);self.p.new('agy',read(ROOT/'examples/m1/brief.json'))
  def tearDown(self):self.p.db.close();self.tmp.cleanup()
  def approve_control(self):self.p.approve('agy','control',1,'TEST ONLY')

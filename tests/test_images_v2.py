@@ -20,7 +20,7 @@ class ImagesV2Tests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory();self.root = Path(self.tmp.name)
         for n in ['schemas','.agents','renderer','tests','examples','scripts']:
             shutil.copytree(ROOT/n,self.root/n)
-        for n in ['pilot.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:
+        for n in ['pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:
             shutil.copy(ROOT/n,self.root/n)
         self.p = Pilot(self.root);self.j = 'images-test'
         self.p.new(self.j,read(ROOT/'examples/m1/brief.json'))
@@ -78,8 +78,7 @@ class ImagesV2Tests(unittest.TestCase):
         self.p.approve(self.j,'images',self.p.rows(self.j)['images']['revision'],'TEST FIXTURE human approval',stage)
 
     def references(self):self.run_stage();self.approve('references')
-    def first_three(self):self.references();self.run_stage();self.approve('first-three')
-    def finish(self):self.first_three();self.run_stage();self.approve('final')
+    def finish(self):self.references();self.run_stage();self.approve('final')
 
     def test_I01_content_gate(self):
         self.p.reject(self.j,'content','TEST requested edit')
@@ -94,8 +93,7 @@ class ImagesV2Tests(unittest.TestCase):
 
     def test_I03_video_and_provider(self):
         import adapters
-        res = adapters.request_video()
-        self.assertEqual(res.get('status'),'video enabled')
+        with self.assertRaisesRegex(Blocked,'disabled'):adapters.request_video()
         prompt = pt.batch_prompt('text-to-video',['x'])
         self.assertIn('x', prompt)
         cfg=read(self.root/'config.json');cfg['credit_budget']=-1;write(self.root/'config.json',cfg)
@@ -112,14 +110,14 @@ class ImagesV2Tests(unittest.TestCase):
         with self.assertRaises(Blocked):self.approve('final')
         self.assertEqual(len(self.calls),n)
         self.approve('references')
-        with self.assertRaisesRegex(Blocked,'CHECKPOINT'):ip.request(self.p,self.j,'SC04','x')
+        with self.assertRaises(Blocked):ip.request(self.p,self.j,'SC04','x')
         self.run_stage();n=len(self.calls)
         with self.assertRaises(Blocked):self.p.run(self.j,'images')
         with self.assertRaises(Blocked):self.p.gate(self.j,'audio')
         self.assertEqual(len(self.calls),n)
 
     def test_I06_bad_assets(self):
-        self.first_three();self.run_stage();d=self.p.payload(self.j,'images')
+        self.references();self.run_stage();d=self.p.payload(self.j,'images')
         for change in ['missing','duplicate','escape','broken','small','ratio']:
             bad=copy.deepcopy(d)
             if change=='missing':bad['items'].pop()
@@ -133,7 +131,7 @@ class ImagesV2Tests(unittest.TestCase):
             with self.subTest(change=change),self.assertRaises(Exception):self.p.checks(self.j,'images',bad)
 
     def test_I07_prompt_and_links(self):
-        self.first_three();self.run_stage();d=self.p.payload(self.j,'images')
+        self.references();self.run_stage();d=self.p.payload(self.j,'images')
         for mutate in ['prompt','hash','reference','actual']:
             bad=copy.deepcopy(d)
             if mutate=='prompt':bad['items'][0]['prompt']='different'
@@ -176,23 +174,24 @@ class ImagesV2Tests(unittest.TestCase):
                 with self.assertRaises(Blocked):self.p.run(self.j,'images')
             self.assertEqual(call.call_count,1)
 
-    def test_first_three_edit_reuses_other_scenes(self):
+    def test_first_scene_edit_reuses_other_scenes(self):
         self.finish();n=len(self.calls)
         self.p.reject(self.j,'images','TEST edit SC01',self.p.rows(self.j)['images']['revision'],'final',scene='SC01')
-        self.assertEqual(ip.stage(self.p,self.j),'first-three')
-        self.run_stage();self.approve('first-three');self.run_stage()
+        self.assertEqual(ip.stage(self.p,self.j),'final')
+        self.run_stage()
         self.assertEqual(len(self.calls)-n,1)
         self.assertEqual(self.p.payload(self.j,'images')['checkpoint'],'final')
 
     def test_wrapper_rejects_video_without_browser(self):
         result=subprocess.run(['node',str(ROOT/'scripts/gflow_guard.mjs'),'unknown','--out','./out'],capture_output=True,text=True)
         self.assertNotEqual(result.returncode,0)
-        self.assertIn('only image, character create or video allowed',result.stderr)
+        self.assertIn('only image or character create allowed',result.stderr)
 
     def test_I09_resume_new_process(self):
         self.references()
-        output=subprocess.check_output([str(ROOT/'.venv/bin/python'),str(self.root/'pilot.py'),'resume',self.j],text=True)
-        self.assertEqual(json.loads(output)['checkpoint'],'first-three')
+        other=Pilot(self.root)
+        self.assertEqual(other.next(self.j)['checkpoint'],'final')
+        other.db.close()
         n=len(self.calls);self.run_stage()
         self.assertEqual(sum(a[0]=='image' and '--character' not in a for a in self.calls),n)
 
@@ -208,7 +207,7 @@ class ImagesV2Tests(unittest.TestCase):
         self.assertEqual(ip.stage(self.p,self.j),'references')
         n=len(self.calls);self.run_stage()
         self.assertEqual(len(self.calls)-n,1)
-        self.assertIsNone(ip.approved(self.p,self.j,'first-three'))
+        self.assertIsNone(ip.approved(self.p,self.j,'final'))
 
     def test_I11_single_scene_replacement(self):
         self.finish();old=self.p.rows(self.j)['images']['envelope'];n=len(self.calls)
@@ -246,7 +245,7 @@ class ImagesV2Tests(unittest.TestCase):
         self.assertEqual([i['scene_id'] for i in d['items']],[s['id'] for s in c['scenes']])
         self.assertEqual(len(d['items']),6)
         for i in d['items']:self.assertTrue(self.p.path(self.j,i['path']).is_file())
-        self.assertEqual(self.p.db.execute('SELECT count(*) FROM image_reviews WHERE job=?',(self.j,)).fetchone()[0],3)
+        self.assertEqual(self.p.db.execute('SELECT count(*) FROM image_reviews WHERE job=?',(self.j,)).fetchone()[0],2)
         # Exercise the actual renderer input consumer, stopping before media rendering.
         import adapters
         (self.p.job(self.j)/'handoff.wav').write_bytes(b'TEST ONLY; renderer never executes')

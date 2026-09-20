@@ -49,6 +49,9 @@ def generate(p,job):
   write(draft,payload);p.run(job,'content')
   write(out/'attempt.json',{'state':'awaiting_review','conversation_id':result.get('conversation_id'),'brief_hash':bhash})
   p.event(job,'content','agent_generated',json.dumps({'provider':'antigravity-cli','conversation_id':result.get('conversation_id')}))
+  if (p.job(job)/'workflow.json').exists():
+   import workflow
+   return workflow.next_step(p,job)
   return p.next(job)
  except Exception as ex:
   write(out/'attempt.json',{'state':'blocked','brief_hash':bhash,'error':str(ex),'errors':getattr(ex,'errors',[])})

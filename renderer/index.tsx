@@ -81,11 +81,18 @@ const Video: React.FC<any> = (p) => {
   const sub = p.segments.find((s: any) => t >= s.start && t < s.end);
   const scale = interpolate(t, [scene.start, scene.end], [1, 1.04], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 
-  // Progressive reveal image selection based on relative time in scene
-  let currentImageSrc = scene.image;
-  if (scene.images && Array.isArray(scene.images) && scene.images.length > 0) {
+  // Progressive reveal and dual aspect-ratio image selection (9:16 vertical vs 16:9 widescreen)
+  const imageList = isVertical
+    ? (scene.images_9x16 || scene.images)
+    : (scene.images_16x9 || scene.images);
+
+  let currentImageSrc = isVertical
+    ? (scene.image_9x16 || scene.image)
+    : (scene.image_16x9 || scene.image);
+
+  if (imageList && Array.isArray(imageList) && imageList.length > 0) {
     const relTime = t - scene.start;
-    for (const item of scene.images) {
+    for (const item of imageList) {
       if (relTime >= (item.at || 0)) {
         currentImageSrc = item.src;
       }

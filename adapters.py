@@ -9,19 +9,12 @@ def config(p):return read(p.root/'config.json')
 def gflow(p,*args,timeout=960):
  exe=p.root/'node_modules/.bin/gflow'
  if not exe.exists():raise Blocked('Install npm dependencies first')
- if args and (args[0]=='image' or args[0]=='video' or args[:2]==('character','create')):
+ if args and args[0]=='video':raise Blocked('Video AI disabled')
+ if args and (args[0]=='image' or args[:2]==('character','create')):
   return subprocess.run(['node',str(p.root/'scripts/gflow_guard.mjs'),*args],cwd=p.root,capture_output=True,text=True,timeout=timeout)
  return subprocess.run([str(exe),*args],cwd=p.root,capture_output=True,text=True,timeout=timeout)
 def request_video(*a,**k):
- cfg=config(a[0]) if a and hasattr(a[0],'root') else read(Path(__file__).resolve().parent/'config.json')
- if not cfg.get('video_generation') or cfg.get('credit_budget',0)<=0:
-  raise Blocked('Video AI disabled or credit budget is zero')
- if len(a)>=3:
-  p,j,scene=a[0],a[1],a[2]
-  out=p.job(j)/'flow/videos';out.mkdir(parents=True,exist_ok=True)
-  args=['video','--prompt',scene['prompt'],'--ratio','9:16','--out',str(out),'--profile',cfg['flow_profile']]
-  return gflow(p,*args)
- return {'status':'video enabled'}
+ raise Blocked('Video AI disabled; image-only production')
 
 def flow_action(p,a):
  j=a.job;p.gate(j,'images');cfg=config(p)
@@ -34,6 +27,8 @@ def flow_action(p,a):
   return {'login':'opened; user must sign in directly','output':r.stdout[-2000:]}
  if a.command=='flow-preflight':
   if not a.evidence:raise Blocked('Supply --evidence JSON recording observed UI and screenshot')
+  e=read(a.evidence)
+  if e.get('credits_per_generation')!=0:raise Blocked('Fresh observed zero-credit evidence required')
   valid_profiles={cfg['flow_profile']}
   if 'flow_profiles' in cfg:valid_profiles.update(cfg['flow_profiles'])
   valid_profiles.add('video-pilot')
@@ -241,7 +236,7 @@ def render(p,j,out):
    first_src=sub_a.name if sub_a.exists() else dst.name
    sc_dict['images']=[{'src':first_src,'at':0},{'src':sub_b.name,'at':3.5}]
   scenes.append(sc_dict)
- props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'aspect_ratio':ratio}
+ props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'aspect_ratio':ratio,'render_concurrency':config(p).get('render_concurrency',2)}
  if en:
   # 16:9 follows the English timeline; reusing the Vietnamese one leaves the
   # tail silent and drifts every image cut against the narration.
@@ -251,7 +246,7 @@ def render(p,j,out):
  write(out/'props.json',props)
  r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=3600);(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
  if r.returncode:raise Blocked('Render or layout check failed; see render.log: '+r.stderr[-500:])
- result={'video':rel(p,j,out/'video.mp4'),'stills':[rel(p,j,out/(s['id']+'.png')) for s in scenes],'layout_report':rel(p,j,out/'layout.json'),'duration':snd['duration']}
+ result={'video':rel(p,j,out/'video.mp4'),'stills':[rel(p,j,out/(s['id']+'.png')) for s in scenes],'layout_report':rel(p,j,out/'layout.json'),'duration':en['duration'] if ratio=='16:9' else snd['duration']}
  if (out/'video_16x9.mp4').exists():result['video_16x9']=rel(p,j,out/'video_16x9.mp4')
  if (out/'video_9x16.mp4').exists():result['video_9x16']=rel(p,j,out/'video_9x16.mp4')
  return result
