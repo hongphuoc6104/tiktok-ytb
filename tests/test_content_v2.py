@@ -84,8 +84,7 @@ class ContentV2Tests(unittest.TestCase):
    d['scenes']=[dict(copy.deepcopy(self.d['scenes'][0]),id=f'SC{i:02}',requirements=['R01'],estimated_seconds=(lo+hi)/2/n) for i in range(1,n+1)]
    d['coverage']=[{'requirement_id':'R01','scene_id':'SC01','quote':d['scenes'][0]['narration']}]
    write(self.p.job(job)/'draft/content.json',d);self.p.run(job,'content');self.p.approve(job,'content',1,'TEST')
-   if n!=6:
-    with self.assertRaisesRegex(Blocked,'DOWNSTREAM_UNSUPPORTED'):self.p.gate(job,'images')
+   self.p.gate(job,'images')
   self.assertEqual(self.p.payload('product','content')['topic'],'product')
  def test_sources_required(self):
   b=copy.deepcopy(self.b);b['facts_required']=True

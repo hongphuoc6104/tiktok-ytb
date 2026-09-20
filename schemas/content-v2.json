@@ -142,6 +142,30 @@
               "minLength": 1
             },
             "minItems": 0
+          },
+          "vocabulary": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "word": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "phonetic": {
+                  "type": "string"
+                },
+                "meaning": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "word",
+                "meaning"
+              ],
+              "additionalProperties": false
+            }
           }
         },
         "required": [

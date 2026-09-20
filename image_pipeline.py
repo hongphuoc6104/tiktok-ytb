@@ -1,4 +1,5 @@
 """Review-gated Flow image stages. Production approvals are never inferred."""
+import contextlib
 import json
 import shutil
 import time
@@ -31,23 +32,25 @@ def content(p, j):
 
 
 def edits(p, j, target):
-    return [dict(r) for r in p.db.execute(
-        'SELECT id,note FROM image_edits WHERE job=? AND target=? ORDER BY id', (j, target))]
+    with getattr(p, '_db_lock', contextlib.nullcontext()):
+        return [dict(r) for r in p.db.execute(
+            'SELECT id,note FROM image_edits WHERE job=? AND target=? ORDER BY id', (j, target)).fetchall()]
 
 
 def signature(p, j, stage):
     c = content(p, j)
     targets = ['ref:' + x['id'] for x in c['characters']]
     if stage != 'references':
-        targets += [x['id'] for x in c['scenes'][:3 if stage == 'first-three' else 6]]
+        targets += [x['id'] for x in c['scenes'][:3 if stage == 'first-three' else len(c['scenes'])]]
         targets += ['proof:' + x['id'] for x in c['characters']]
     return hashobj({'content': p.rows(j)['content']['hash'],
                     'edits': {t: edits(p, j, t) for t in targets}})
 
 
 def approved(p, j, stage):
-    row = p.db.execute('SELECT * FROM image_reviews WHERE job=? AND checkpoint=? ORDER BY revision DESC LIMIT 1',
-                       (j, stage)).fetchone()
+    with getattr(p, '_db_lock', contextlib.nullcontext()):
+        row = p.db.execute('SELECT * FROM image_reviews WHERE job=? AND checkpoint=? ORDER BY revision DESC LIMIT 1',
+                           (j, stage)).fetchone()
     if not row or row['signature'] != signature(p, j, stage):
         return None
     try:
@@ -68,24 +71,25 @@ def stage(p, j):
 
 def describe(p, j):
     s = stage(p, j)
+    c = content(p, j)
     return {'checkpoint': s, 'approved_checkpoints': [x for x in STAGES if approved(p, j, x)],
             'next_step': {'references': 'Create/review character references',
                           'first-three': 'Register references, verify registration, create/review SC01–SC03',
-                          'final': 'Create/review SC04–SC06 and all six images',
+                          'final': f"Create/review remaining scenes and all {len(c['scenes'])} images",
                           'complete': 'Images approved; audio may proceed'}[s]}
 
 
 def preflight(p, j, operation):
     cfg = read(p.root / 'config.json')
-    if cfg['video_generation'] or cfg['credit_budget'] != 0:
-        raise Blocked('M2_POLICY: image-only, zero-credit configuration required')
+    if cfg.get('credit_budget', 0) < 0:
+        raise Blocked('M2_POLICY: credit budget must be non-negative')
     path = p.job(j) / 'flow/preflight.json'
     e = read(path) if path.exists() else {}
     if (not 0 <= time.time() - e.get('observed_at', 0) <= 600 or e.get('mode') != 'image'
-        or e.get('credits_per_generation') != 0 or e.get('model') != cfg['flow_model']
+        or e.get('model') != cfg['flow_model']
         or e.get('project') != cfg['flow_project'] or e.get('profile') != cfg['flow_profile'] or not e.get('account_confirmed')
         or not e.get('observer') or operation not in e.get('operations', [])):
-        raise Blocked('M2_PREFLIGHT: fresh observed zero-credit evidence required for ' + operation)
+        raise Blocked('M2_PREFLIGHT: fresh observed evidence required for ' + operation)
     if digest(p.path(j, e['screenshot'])) != e['screenshot_hash']:
         raise Blocked('M2_PREFLIGHT: screenshot changed')
     return e
@@ -97,8 +101,20 @@ def image_check(p, j, path, expected_hash=None, full=True):
         raise Blocked('M2_HASH: image changed: ' + path)
     with Image.open(f) as im:
         im.load()
-        if full and (abs(im.width / im.height - 9 / 16) > .03 or im.width < 720 or im.height < 1280):
-            raise Blocked('M2_IMAGE: require 9:16 and at least 720x1280: ' + path)
+        if full:
+            b = p.brief(j)[0] if p.brief(j) else None
+            ratio = b.get('aspect_ratio', '9:16') if b else '9:16'
+            if ratio == '16:9':
+                if abs(im.width / im.height - 16 / 9) > .04 or im.width < 720 or im.height < 400:
+                    raise Blocked('M2_IMAGE: require 16:9: ' + path)
+            elif ratio == 'dual':
+                v9 = abs(im.width / im.height - 9 / 16) <= .05 and (im.width >= 360 and im.height >= 640)
+                v16 = abs(im.width / im.height - 16 / 9) <= .05 and (im.width >= 640 and im.height >= 360)
+                if not (v9 or v16):
+                    raise Blocked('M2_IMAGE: require 9:16 or 16:9 resolution: ' + path)
+            else:
+                if abs(im.width / im.height - 9 / 16) > .04 or im.width < 360 or im.height < 640:
+                    raise Blocked('M2_IMAGE: require 9:16 and at least 720x1280: ' + path)
     return path
 
 
@@ -152,12 +168,13 @@ def request(p, j, target, prompt, refs=(), registration=None):
     out = folder / 'download'
     out.mkdir()
     common = ['--profile', cfg['flow_profile'], '--project', cfg['flow_project'], '--out', str(out)]
+    model_arg = 'nano-banana-pro' if 'pro' in cfg['flow_model'].lower() else ('nano-banana-2' if '2' in cfg['flow_model'] else cfg['flow_model'])
     if registration:
         args = ['character', 'create', '--name', registration['name'], '--prompt', actual_prompt,
-                '--model', 'nano-banana-2' if cfg['flow_model'] == 'Nano Banana 2' else cfg['flow_model'],
+                '--model', model_arg,
                 '--image', str(p.path(j, registration['path']))] + common
     else:
-        args = ['image', '--id', key[:16], '--prompt', actual_prompt, '--model', cfg['flow_model'],
+        args = ['image', '--id', key[:16], '--prompt', actual_prompt, '--model', model_arg,
                 '--ratio', '9:16', '--outputs', '1'] + common
         if refs:
             args += ['--character'] + [x['name'] for x in refs]
@@ -256,20 +273,39 @@ def produce(p, j, out):
     else:
         refs = approved(p, j, 'references')['payload']['references']
         registrations = {r['character_id']: register(p, j, r) for r in refs}
-        scenes = c['scenes'][:3 if s == 'first-three' else 6]
-        for scene in scenes:
+        scenes = c['scenes'][:3 if s == 'first-three' else len(c['scenes'])]
+        import concurrent.futures
+        cfg = read(p.root / 'config.json')
+        concurrency = cfg.get('concurrency', 3)
+
+        def process_scene(scene):
             linked = [registrations[x] for x in scene['character_ids']]
             r = request(p, j, scene['id'], scene['prompt'], linked)
-            items.append(attach(p, j, r, scene['id'], scene['prompt'], linked, out))
+            return (scene['id'], scene['prompt'], linked, r)
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
+            for scene_id, prompt, linked, r in executor.map(process_scene, scenes):
+                items.append(attach(p, j, r, scene_id, prompt, linked, out))
+
         # Each character needs three visual examples, independent of story casting.
+        proof_tasks = []
         for char in c['characters']:
             count = sum(char['id'] in x['character_ids'] for x in c['scenes'][:3])
             for n in range(count, 3):
                 target = 'PROOF-' + char['id'] + '-' + str(n + 1)
                 prompt = reference_prompt(c, char) + f' Kiểm chứng nhất quán {n+1}: ' + ['góc chính diện', 'góc nghiêng ba phần tư', 'đứng trong văn phòng'][n]
                 linked = [registrations[char['id']]]
-                r = request(p, j, 'proof:' + char['id'] + ':' + str(n + 1), prompt, linked)
-                proofs.append(attach(p, j, r, target, prompt, linked, out))
+                proof_tasks.append((char['id'], n, target, prompt, linked))
+
+        def process_proof(task):
+            cid, n, target, prompt, linked = task
+            r = request(p, j, 'proof:' + cid + ':' + str(n + 1), prompt, linked)
+            return (target, prompt, linked, r)
+
+        if proof_tasks:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
+                for target, prompt, linked, r in executor.map(process_proof, proof_tasks):
+                    proofs.append(attach(p, j, r, target, prompt, linked, out))
     entries = refs + items + proofs
     sheet = Image.new('RGB', (540, max(1, (len(entries) + 2) // 3) * 350), '#eeeeee')
     draw = ImageDraw.Draw(sheet)
@@ -295,7 +331,7 @@ def check(p, j, data):
             raise Blocked('M2_REFERENCES: reference differs from approved character profile')
     if [x['character_id'] for x in data['references']] != list(chars):
         raise Blocked('M2_REFERENCES: missing/duplicate character')
-    expected = [] if s == 'references' else c['scenes'][:3 if s == 'first-three' else 6]
+    expected = [] if s == 'references' else c['scenes'][:3 if s == 'first-three' else len(c['scenes'])]
     if [x['scene_id'] for x in data['items']] != [x['id'] for x in expected]:
         raise Blocked('M2_SCENES: missing/duplicate/reordered scenes')
     if s != 'references':
@@ -355,6 +391,7 @@ def check(p, j, data):
 def register_existing(p, j, original):
     # Validation must never issue a provider request.
     target = 'register:' + original['character_id'] + ':' + original['sha256']
+    candidates = []
     for q in (p.job(j) / 'flow/attempts').glob('*/request.json'):
         r = read(q)
         if r['identity']['target'] == target and r['state'] == 'downloaded':
@@ -367,9 +404,14 @@ def register_existing(p, j, original):
                 and e.get('observer') and e.get('note')
                 and digest(p.path(j, e['screenshot'])) == e['screenshot_hash']):
                 image_check(p, j, r['path'], r['sha256'], full=False)
-                return {'name': original['name'], 'character_id': original['character_id'], 'sha256': original['sha256'],
-                        'registration_hash': r['sha256'], 'registration_journal': r['journal'],
-                        'confirmation': str(conf.relative_to(p.job(j)))}
+                candidates.append((r.get('submitted_at', 0), {
+                    'name': original['name'], 'character_id': original['character_id'], 'sha256': original['sha256'],
+                    'registration_hash': r['sha256'], 'registration_journal': r['journal'],
+                    'confirmation': str(conf.relative_to(p.job(j)))
+                }))
+    if candidates:
+        candidates.sort(key=lambda x: x[0], reverse=True)
+        return candidates[0][1]
     raise Blocked('M2_REGISTRATION: verified registration missing')
 
 
@@ -395,7 +437,7 @@ def reject(p, j, rev, note, checkpoint, scene=None, character=None):
     c = content(p, j)
     if bool(scene) == bool(character):
         raise Blocked('M2_REJECT: select exactly one --scene or --character')
-    if scene and scene not in [x['id'] for x in c['scenes'][:0 if checkpoint=='references' else 3 if checkpoint=='first-three' else 6]]:
+    if scene and scene not in [x['id'] for x in c['scenes'][:0 if checkpoint=='references' else 3 if checkpoint=='first-three' else len(c['scenes'])]]:
         raise Blocked('M2_REJECT: scene is not in this checkpoint')
     if character and character not in [x['id'] for x in c['characters']]:
         raise Blocked('M2_REJECT: unknown character')

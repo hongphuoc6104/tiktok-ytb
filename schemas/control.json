@@ -11,10 +11,11 @@
       "const": "1.0"
     },
     "video_generation": {
-      "const": false
+      "type": "boolean"
     },
     "credit_budget": {
-      "const": 0
+      "type": "integer",
+      "minimum": 0
     },
     "review": {
       "const": "every_module"

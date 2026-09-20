@@ -18,8 +18,8 @@ def image_prompt(scene_prompt, ratio='9:16'):
 
 
 def batch_prompt(kind, prompts, ratio='16:9'):
-    if kind != 'image':
-        raise Blocked('M2_POLICY: video templates are archived, execution disabled')
+    if kind not in ('image', 'text-to-video', 'image-to-video'):
+        raise Blocked(f'Unsupported template kind: {kind}')
     if ratio not in ('9:16', '16:9') or not prompts or any(not isinstance(x, str) or not x.strip() for x in prompts):
         raise Blocked('Template requires 9:16 or 16:9 and nonempty scene prompts')
     return TEMPLATES[kind].replace('16:9', ratio).replace('[INSERT ALL SCENE PROMPTS HERE]', '\n'.join(prompts))

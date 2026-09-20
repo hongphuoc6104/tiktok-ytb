@@ -7,8 +7,7 @@
     },
     "stills": {
       "type": "array",
-      "minItems": 6,
-      "maxItems": 6,
+      "minItems": 1,
       "items": {
         "type": "string",
         "minLength": 1
@@ -21,6 +20,17 @@
     "duration": {
       "type": "number",
       "minimum": 0
+    },
+    "video_16x9": {
+      "type": "string",
+      "minLength": 1
+    },
+    "video_9x16": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aspect_ratio": {
+      "type": "string"
     }
   },
   "required": [

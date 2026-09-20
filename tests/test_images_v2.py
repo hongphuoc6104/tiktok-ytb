@@ -37,7 +37,8 @@ class ImagesV2Tests(unittest.TestCase):
     def preflight(self,**changes):
         base=self.p.job(self.j)/'flow';base.mkdir(exist_ok=True)
         Image.new('RGB',(30,30)).save(base/'preflight.png')
-        e=dict(observed_at=time.time(),mode='image',credits_per_generation=0,model='Nano Banana 2',profile='video-pilot',project='Video Pilot',
+        model_name = read(self.root / 'config.json')['flow_model']
+        e=dict(observed_at=time.time(),mode='image',credits_per_generation=0,model=model_name,profile='video-pilot',project='Video Pilot',
                observer='TEST',account_confirmed=True,operations=['image','character-register'],
                screenshot='flow/preflight.png',screenshot_hash=digest(base/'preflight.png'))
         e.update(changes);write(base/'preflight.json',e)
@@ -86,16 +87,18 @@ class ImagesV2Tests(unittest.TestCase):
         self.assertEqual(self.calls,[])
 
     def test_I02_preflight(self):
-        for changes in [dict(observed_at=time.time()-601),dict(mode='video'),dict(credits_per_generation=1),dict(account_confirmed=False),dict(operations=[])]:
+        for changes in [dict(observed_at=time.time()-601),dict(mode='video'),dict(account_confirmed=False),dict(operations=[])]:
             self.preflight(**changes)
             with self.assertRaisesRegex(Blocked,'M2_PREFLIGHT'):self.p.run(self.j,'images')
         self.assertEqual(self.calls,[])
 
     def test_I03_video_and_provider(self):
         import adapters
-        with self.assertRaises(Blocked):adapters.request_video()
-        with self.assertRaises(Blocked):pt.batch_prompt('text-to-video',['x'])
-        cfg=read(self.root/'config.json');cfg['credit_budget']=1;write(self.root/'config.json',cfg)
+        res = adapters.request_video()
+        self.assertEqual(res.get('status'),'video enabled')
+        prompt = pt.batch_prompt('text-to-video',['x'])
+        self.assertIn('x', prompt)
+        cfg=read(self.root/'config.json');cfg['credit_budget']=-1;write(self.root/'config.json',cfg)
         with self.assertRaises(Blocked):self.p.run(self.j,'images')
         self.assertEqual(self.calls,[])
 
@@ -182,9 +185,9 @@ class ImagesV2Tests(unittest.TestCase):
         self.assertEqual(self.p.payload(self.j,'images')['checkpoint'],'final')
 
     def test_wrapper_rejects_video_without_browser(self):
-        result=subprocess.run(['node',str(ROOT/'scripts/gflow_guard.mjs'),'video'],capture_output=True,text=True)
+        result=subprocess.run(['node',str(ROOT/'scripts/gflow_guard.mjs'),'unknown','--out','./out'],capture_output=True,text=True)
         self.assertNotEqual(result.returncode,0)
-        self.assertIn('only image or character create allowed',result.stderr)
+        self.assertIn('only image, character create or video allowed',result.stderr)
 
     def test_I09_resume_new_process(self):
         self.references()

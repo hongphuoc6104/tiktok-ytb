@@ -12,6 +12,9 @@ label=next(label for label,v in voices if v==voice_id)
 results=[]
 for i,item in enumerate(items):
  path=f'segment-{i:03}.wav'
- audio=tts.infer(item['text'],voice=voice_id)
- tts.save(audio,str(out/path));results.append({**item,'path':path})
+ target=out/path
+ if not (target.exists() and target.stat().st_size>1000):
+  audio=tts.infer(item['text'],voice=voice_id,temperature=0.35,silence_p=0.08)
+  tts.save(audio,str(target))
+ results.append({**item,'path':path})
 (out/'tts-result.json').write_text(json.dumps({'voice':str(voice_id),'label':label,'segments':results},ensure_ascii=False,indent=2))

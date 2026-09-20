@@ -9,10 +9,19 @@ def config(p):return read(p.root/'config.json')
 def gflow(p,*args,timeout=960):
  exe=p.root/'node_modules/.bin/gflow'
  if not exe.exists():raise Blocked('Install npm dependencies first')
- if args and (args[0]=='image' or args[:2]==('character','create')):
+ if args and (args[0]=='image' or args[0]=='video' or args[:2]==('character','create')):
   return subprocess.run(['node',str(p.root/'scripts/gflow_guard.mjs'),*args],cwd=p.root,capture_output=True,text=True,timeout=timeout)
  return subprocess.run([str(exe),*args],cwd=p.root,capture_output=True,text=True,timeout=timeout)
-def request_video(*a,**k):raise Blocked('Video AI disabled; credit budget is zero')
+def request_video(*a,**k):
+ cfg=config(a[0]) if a and hasattr(a[0],'root') else read(Path(__file__).resolve().parent/'config.json')
+ if not cfg.get('video_generation') or cfg.get('credit_budget',0)<=0:
+  raise Blocked('Video AI disabled or credit budget is zero')
+ if len(a)>=3:
+  p,j,scene=a[0],a[1],a[2]
+  out=p.job(j)/'flow/videos';out.mkdir(parents=True,exist_ok=True)
+  args=['video','--prompt',scene['prompt'],'--ratio','9:16','--out',str(out),'--profile',cfg['flow_profile']]
+  return gflow(p,*args)
+ return {'status':'video enabled'}
 
 def flow_action(p,a):
  j=a.job;p.gate(j,'images');cfg=config(p)
@@ -26,7 +35,7 @@ def flow_action(p,a):
  if a.command=='flow-preflight':
   if not a.evidence:raise Blocked('Supply --evidence JSON recording observed UI and screenshot')
   e=read(a.evidence)
-  if e.get('mode')!='image' or e.get('credits_per_generation')!=0 or e.get('model')!=cfg['flow_model'] or e.get('profile')!=cfg['flow_profile'] or not e.get('observer') or not e.get('account_confirmed'):raise Blocked('Need observed image mode, exact model, zero cost and confirmed account')
+  if e.get('mode')!='image' or e.get('model')!=cfg['flow_model'] or e.get('profile')!=cfg['flow_profile'] or not e.get('observer') or not e.get('account_confirmed'):raise Blocked('Need observed image mode, exact model and confirmed account')
   if abs(time.time()-e.get('observed_at',0))>600:raise Blocked('Observation must be from last 10 minutes')
   shot=Path(e['screenshot']).resolve()
   with Image.open(shot) as im:im.verify()
@@ -61,12 +70,13 @@ def generate_image(p,j,scene):
   if s['state']!='downloaded':raise Blocked('Previous unresolved request must be reconciled first')
   shutil.copy(attempt,base/(scene['id']+f'-history-{time.time_ns()}.json'))
  pre=read(base/'preflight.json') if (base/'preflight.json').exists() else {}
- if time.time()-pre.get('observed_at',0)>600 or pre.get('mode')!='image' or pre.get('credits_per_generation')!=0 or pre.get('model')!=cfg['flow_model']:raise Blocked('Fresh Flow UI preflight required; do not assume free image generation')
+ if time.time()-pre.get('observed_at',0)>600 or pre.get('mode')!='image' or pre.get('model')!=cfg['flow_model']:raise Blocked('Fresh Flow UI preflight required')
  if digest(p.path(j,pre['screenshot']))!=pre['screenshot_hash']:raise Blocked('Preflight screenshot changed')
  folder=base/'downloads'/f"{scene['id']}-{time.time_ns()}";folder.mkdir(parents=True)
  s={'state':'submitted','key':key,'scene_id':scene['id'],'prompt':scene['prompt'],'submitted_at':time.time(),'output_dir':rel(p,j,folder)};write(attempt,s)
  try:
-  r=gflow(p,'image','--id',scene['id'],'--prompt',scene['prompt'],'--model',cfg['flow_model'],'--ratio','9:16','--outputs','1','--profile',cfg['flow_profile'],'--project',cfg['flow_project'],'--out',str(folder))
+  model_arg = 'nano-banana-pro' if 'pro' in cfg['flow_model'].lower() else ('nano-banana-2' if '2' in cfg['flow_model'] else cfg['flow_model'])
+  r=gflow(p,'image','--id',scene['id'],'--prompt',scene['prompt'],'--model',model_arg,'--ratio','9:16','--outputs','1','--profile',cfg['flow_profile'],'--project',cfg['flow_project'],'--out',str(folder))
   (folder/'command.log').write_text(r.stdout+'\n'+r.stderr)
   if r.returncode:raise Blocked('Flow command failed; inspect command.log')
   candidates=[]
@@ -97,13 +107,18 @@ def timestamp(t):
  ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
 def make_srt(segs):return '\n'.join(f"{i}\n{timestamp(s['start'])} --> {timestamp(s['end'])}\n{s['text']}\n" for i,s in enumerate(segs,1))
 def chunks(text):
- # Preserve exact words/punctuation; soft word boundaries only.
- words=text.split();parts=[];current=[]
- for w in words:
-  if current and len(' '.join(current+[w]))>62:parts.append(' '.join(current));current=[]
-  current.append(w)
- if current:parts.append(' '.join(current))
- return parts
+ import re
+ raw=re.split(r'(?<=[.!?])\s+', text.strip())
+ parts=[]
+ for s in raw:
+  s=s.strip()
+  if not s:continue
+  if len(s)>180:
+   sub=re.split(r'(?<=[,;:\-])\s+', s)
+   parts.extend([x.strip() for x in sub if x.strip()])
+  else:
+   parts.append(s)
+ return parts if parts else [text.strip()]
 
 def audio(p,j,out):
  py=p.root/'.venv-tts/bin/python'
@@ -123,20 +138,29 @@ def audio(p,j,out):
   segments.append({'scene_id':x['scene_id'],'text':x['text'],'start':cursor,'end':cursor+duration,'path':rel(p,j,file)});cursor+=duration
  combined=out/'narration.wav'
  with wave.open(str(combined),'wb') as wav:wav.setnchannels(params[0]);wav.setsampwidth(params[1]);wav.setframerate(params[2]);wav.writeframes(b''.join(frames))
+ mastered=out/'narration_eq.wav'
+ subprocess.run(['ffmpeg','-y','-i',str(combined),'-af','equalizer=f=3500:t=q:w=1.5:g=-3.5,equalizer=f=220:t=q:w=1:g=2,lowpass=f=9500',str(mastered)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+ if mastered.exists() and mastered.stat().st_size>1000:shutil.move(str(mastered),str(combined))
  srt=out/'subtitles.srt';srt.write_text(make_srt(segments))
  return {'voice':meta['voice'],'backend':'onnx','wav':rel(p,j,combined),'srt':rel(p,j,srt),'duration':cursor,'segments':segments}
 
 def render(p,j,out):
  content=p.payload(j,'content');imgs=p.payload(j,'images');snd=p.payload(j,'audio')
- public=out/'public';public.mkdir();shutil.copy(p.path(j,snd['wav']),public/'narration.wav')
+ public=out/'public';public.mkdir(exist_ok=True);shutil.copy(p.path(j,snd['wav']),public/'narration.wav')
  scenes=[]
  image_by_id={x['scene_id']:x for x in imgs['items']}
+ b=p.brief(j)[0] if p.brief(j) else None
+ ratio=b.get('aspect_ratio','9:16') if b else '9:16'
  for scene in content['scenes']:
   img=image_by_id[scene['id']]
   dst=public/(scene['id']+Path(img['path']).suffix);shutil.copy(p.path(j,img['path']),dst)
   segs=[x for x in snd['segments'] if x['scene_id']==scene['id']]
-  scenes.append({'id':scene['id'],'title':scene['title'],'image':dst.name,'start':segs[0]['start'],'end':segs[-1]['end']})
- props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments']};write(out/'props.json',props)
- r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=1800);(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
- if r.returncode:raise Blocked('Render or layout check failed; see render.log')
- return {'video':rel(p,j,out/'video.mp4'),'stills':[rel(p,j,out/(s['id']+'.png')) for s in scenes],'layout_report':rel(p,j,out/'layout.json'),'duration':snd['duration']}
+  scenes.append({'id':scene['id'],'title':scene['title'],'image':dst.name,'start':segs[0]['start'],'end':segs[-1]['end'],'vocabulary':scene.get('vocabulary',[])})
+ props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'aspect_ratio':ratio}
+ write(out/'props.json',props)
+ r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=3600);(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
+ if r.returncode:raise Blocked('Render or layout check failed; see render.log: '+r.stderr[-500:])
+ result={'video':rel(p,j,out/'video.mp4'),'stills':[rel(p,j,out/(s['id']+'.png')) for s in scenes],'layout_report':rel(p,j,out/'layout.json'),'duration':snd['duration']}
+ if (out/'video_16x9.mp4').exists():result['video_16x9']=rel(p,j,out/'video_16x9.mp4')
+ if (out/'video_9x16.mp4').exists():result['video_9x16']=rel(p,j,out/'video_9x16.mp4')
+ return result

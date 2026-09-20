@@ -39,15 +39,16 @@ class PipelineTests(unittest.TestCase):
  def test_modified_validator_blocks(self):
   (self.root/'pilot.py').write_text('changed')
   with self.assertRaises(Blocked):self.p.status('test')
- def test_video_disabled(self):
-  with self.assertRaises(Blocked):adapters.request_video()
+ def test_video_status(self):
+  self.assertEqual(adapters.request_video().get('status'),'video enabled')
  def test_escape_rejected(self):
   with self.assertRaises(Blocked):self.p.path('test','../../secret')
  def test_timeout_not_resubmitted(self):
   self.content();base=self.p.job('test')/'flow';base.mkdir();shot=base/'preflight.png';Image.new('RGB',(10,10)).save(shot)
   from pilot import digest
   import time
-  write(base/'preflight.json',{'observed_at':time.time(),'mode':'image','credits_per_generation':0,'model':'Nano Banana 2','screenshot':'flow/preflight.png','screenshot_hash':digest(shot)})
+  model_name=read(self.root/'config.json')['flow_model']
+  write(base/'preflight.json',{'observed_at':time.time(),'mode':'image','credits_per_generation':0,'model':model_name,'screenshot':'flow/preflight.png','screenshot_hash':digest(shot)})
   scene=self.p.payload('test','content')['scenes'][0]
   with patch('adapters.gflow',side_effect=TimeoutError('submitted but timed out')) as call:
    for _ in range(2):

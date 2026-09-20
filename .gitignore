@@ -1,11 +1,106 @@
-node_modules/
-.venv*/
-__pycache__/
-.state/
+# ==============================================================================
+# Video Pilot & Explainer Pipeline - Production .gitignore
+# ==============================================================================
+
+# --- 1. Large Pipeline Artifacts & Media Runs ---
 runs/
+exports/
+scratch/
+out/
+bundle/
+
+# --- 2. Browser Automation & Google Flow Profiles ---
 .gflow/
+test-results/
+playwright-report/
+blob-report/
+chrome_debug.log
+Crashpad/
+
+# --- 3. Local Runtime State & SQLite Databases ---
+.state/
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# --- 4. Python Environment & Build Artifacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv*/
+venv/
+env/
+ENV/
+.env/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# --- 5. Node.js & Remotion Build Outputs ---
+node_modules/
+.remotion/
+.parcel-cache/
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- 6. AI Tooling & Assistant Workspaces ---
+.claude/
+.gemini/
+.antigravity/
+.cursor/
+
+# --- 7. Secrets, Environment & Credentials ---
 .env
 .env.*
 !.env.example
 *.pem
 *.key
+*.token
+token.json
+tokens.json
+credentials.json
+*credentials*.json
+*service_account*.json
+client_secret*.json
+cookies*.json
+
+# --- 8. OS & Editor Artifacts ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/settings.json
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+
+# --- 9. Runtime Logs & Loose Media in Root ---
+*.log
+logs/
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+/*.mp4
+/*.wav
+/*.mp3
