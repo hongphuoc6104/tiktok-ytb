@@ -172,7 +172,7 @@ def english(p,j,out,cfg,scenes):
  items=[{'scene_id':s['id'],'narration_en':s['narration_en'],
          'tail':g.get('tail',DEFAULT_PAUSE['tail']) if k==len(scenes)-1 else g.get('para',DEFAULT_PAUSE['para'])}
         for k,s in enumerate(scenes)]
- keys=('en_exaggeration','en_cfg_weight','en_temperature','en_max_chars','en_sentence_pause','en_device')
+ keys=('en_voice','en_device','en_quantize','en_temperature','en_threads','en_seed')
  request=out/'request-en.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'scenes':items})
  r=subprocess.run([str(py),str(p.root/'scripts/en_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
  (out/'tts-en.log').write_text(r.stdout+'\n'+r.stderr)

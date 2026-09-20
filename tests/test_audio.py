@@ -180,7 +180,7 @@ class EnglishTrackTests(unittest.TestCase):
     for sc in req['scenes']:
      path=f"en-{sc['scene_id']}.wav";tone(out/path,en)
      scs.append({'scene_id':sc['scene_id'],'path':path})
-    write(out/'en-result.json',{'engine':'chatterbox','voice':'default','settings':req['settings'],'scenes':scs})
+    write(out/'en-result.json',{'engine':'pocket-tts','voice':'alba','settings':req['settings'],'scenes':scs})
    else:return real(cmd,**kw)
    return subprocess.CompletedProcess(cmd,0,'','')
   return run
@@ -191,7 +191,7 @@ class EnglishTrackTests(unittest.TestCase):
   self.p.validate('m1','audio')
   pay=read(self.p.path('m1',self.p.rows('m1')['audio']['envelope']))['payload']
   en=pay['en']
-  self.assertEqual(en['engine'],'chatterbox');self.assertEqual(en['voice'],'default')
+  self.assertEqual(en['engine'],'pocket-tts');self.assertEqual(en['voice'],'alba')
   self.assertEqual([s['scene_id'] for s in en['scenes']],[s['id'] for s in content['scenes']])
   last=0
   for s in en['scenes']:
@@ -199,6 +199,23 @@ class EnglishTrackTests(unittest.TestCase):
   self.assertAlmostEqual(en['duration'],last,places=3)
   # The whole point: English runs on its own clock, not the Vietnamese one.
   self.assertNotAlmostEqual(en['duration'],pay['duration'],places=1)
+
+ def test_english_request_uses_selected_alba_settings(self):
+  self.start('dual');seen={};inner=self.fake()
+  def spy(cmd,**kw):
+   if 'en_worker.py' in str(cmd[1]):seen.update(read(cmd[2]))
+   return inner(cmd,**kw)
+  with patch.object(adapters.subprocess,'run',side_effect=spy):self.p.run('m1','audio')
+  self.assertEqual(seen['settings'],dict(en_voice='alba',en_device='cpu',en_quantize=True,
+                                        en_temperature=0.3,en_threads=4,en_seed=42))
+
+ def test_english_worker_failure_blocks_audio(self):
+  self.start('dual');inner=self.fake()
+  def fail(cmd,**kw):
+   if 'en_worker.py' in str(cmd[1]):return subprocess.CompletedProcess(cmd,1,'','INT8 failed')
+   return inner(cmd,**kw)
+  with patch.object(adapters.subprocess,'run',side_effect=fail):
+   with self.assertRaisesRegex(Blocked,'English TTS failed'):self.p.run('m1','audio')
 
  def test_vertical_job_has_no_english_track(self):
   self.start('9:16')

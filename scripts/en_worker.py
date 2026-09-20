@@ -1,57 +1,107 @@
-"""English narration worker. Runs in .venv-en; Chatterbox base, built-in voice.
+"""English narration: Pocket TTS Alba, natural speed, dynamic INT8 on CPU.
 
-One render per scene so the 16:9 cut points follow the English delivery rather
-than the Vietnamese timeline. No per-sentence split: the 16:9 export hides
-subtitles, so scene granularity is all the renderer needs.
+One WAV per scene preserves the renderer's independent English timeline.
+The model handles long text internally; no speech-rate postprocessing is used.
 """
-import json,re,sys,warnings
+import hashlib
+import json
+import os
+import sys
+from importlib.metadata import version
 from pathlib import Path
-warnings.filterwarnings('ignore')
-import numpy as np,soundfile as sf,torch,torchaudio
-from chatterbox.tts import ChatterboxTTS
 
-SR=48000
+# This worker never loads CUDA, including on machines with a larger GPU.
+os.environ['CUDA_VISIBLE_DEVICES'] = ''
+import numpy as np
+import soundfile as sf
+import torch
+from pocket_tts import TTSModel
+from scipy.signal import resample_poly
 
-def sentences(text,limit):
- """Whole scene in one pass when it fits; else split on sentence ends."""
- text=text.strip()
- if len(text)<=limit:return [text]
- out=[]
- for s in re.split(r'(?<=[.!?])\s+',text):
-  s=s.strip()
-  if s:out.append(s)
- return out or [text]
+SR = 48000
+ENGINE = 'pocket-tts'
 
-def tail_silence(w,sr,thresh_db=-40.,win_s=0.01):
- win=max(1,int(win_s*sr));n=w.size//win
- if n==0:return 0
- env=np.abs(w[:n*win]).reshape(n,win).mean(1)
- loud=np.flatnonzero(env>10**(thresh_db/20))
- return w.size if not loud.size else w.size-(int(loud[-1])+1)*win
 
-source,out=Path(sys.argv[1]),Path(sys.argv[2]);req=json.loads(source.read_text())
-cfg=req['settings']
-model=ChatterboxTTS.from_pretrained(device=cfg.get('en_device','cpu'))
-resample=torchaudio.transforms.Resample(model.sr,SR) if model.sr!=SR else None
-gen=dict(exaggeration=cfg.get('en_exaggeration',.5),cfg_weight=cfg.get('en_cfg_weight',.5),temperature=cfg.get('en_temperature',.8))
-limit=cfg.get('en_max_chars',300);gap=float(cfg.get('en_sentence_pause',.35))
-raw=out/'raw-en';raw.mkdir(exist_ok=True);scenes=[]
-for sc in req['scenes']:
- f=raw/(sc['scene_id']+'.wav')
- if not (f.exists() and f.stat().st_size>1000):
-  parts=[]
-  for k,piece in enumerate(sentences(sc['narration_en'],limit)):
-   w=model.generate(piece,**gen)
-   if resample is not None:w=resample(w)
-   parts.append(w.squeeze(0).numpy().astype(np.float32))
-   if k:parts.insert(-1,np.zeros(int(gap*SR),dtype=np.float32))
-  sf.write(str(f),np.concatenate(parts),SR,subtype='PCM_16')
- scenes.append({'scene_id':sc['scene_id'],'wav':sf.read(str(f),dtype='float32')[0],'tail':float(sc['tail'])})
-# Pause baked into the scene file so the timeline stays contiguous, as on the VN path.
-results=[]
-for i,sc in enumerate(scenes):
- w=sc['wav'];pad=max(0,int(sc['tail']*SR)-tail_silence(w,SR))
- path=f"en-{sc['scene_id']}.wav"
- sf.write(str(out/path),np.concatenate([w,np.zeros(pad,dtype=np.float32)]),SR,subtype='PCM_16')
- results.append({'scene_id':sc['scene_id'],'path':path})
-(out/'en-result.json').write_text(json.dumps({'engine':'chatterbox','voice':'default','settings':cfg,'scenes':results},ensure_ascii=False,indent=2))
+def tail_silence(w, sr, thresh_db=-40., win_s=0.01):
+    win = max(1, int(win_s * sr))
+    n = w.size // win
+    if n == 0:
+        return 0
+    env = np.abs(w[:n * win]).reshape(n, win).mean(1)
+    loud = np.flatnonzero(env > 10 ** (thresh_db / 20))
+    return w.size if not loud.size else w.size - (int(loud[-1]) + 1) * win
+
+
+def settings(cfg):
+    result = dict(en_voice='alba', en_device='cpu', en_quantize=True,
+                  en_temperature=0.3, en_threads=4, en_seed=42)
+    result.update({k: cfg[k] for k in result if k in cfg})
+    if result['en_voice'] != 'alba' or result['en_device'] != 'cpu' or result['en_quantize'] is not True:
+        raise ValueError('English narration requires Alba with INT8 on CPU')
+    if not isinstance(result['en_threads'], int) or result['en_threads'] < 1:
+        raise ValueError('en_threads must be a positive integer')
+    return result
+
+
+def cache_key(text, cfg):
+    # Legacy Chatterbox WAVs and changed text/settings must never be reused.
+    data = dict(engine=ENGINE, package=version('pocket-tts'), language='english',
+                sample_rate=SR, text=text, settings=cfg, cache_version=1)
+    return hashlib.sha256(json.dumps(data, sort_keys=True).encode()).hexdigest()
+
+
+def run(source, out):
+    req = json.loads(source.read_text())
+    cfg = settings(req['settings'])
+    torch.set_num_threads(cfg['en_threads'])
+    torch.set_num_interop_threads(1)
+    torch.manual_seed(cfg['en_seed'])
+    model = TTSModel.load_model(language='english', quantize=True, temp=cfg['en_temperature'])
+    quantized = sum('quantized' in type(m).__module__ for m in model.modules())
+    if not quantized:
+        raise RuntimeError('INT8 modules were not loaded; refusing full-precision fallback')
+    voice = model.get_state_for_audio_prompt('alba')
+    out.mkdir(parents=True, exist_ok=True)
+    raw = out / 'raw-en'
+    raw.mkdir(exist_ok=True)
+    results = []
+    for sc in req['scenes']:
+        name = sc['scene_id']
+        if not name or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_' for c in name):
+            raise ValueError('Invalid scene ID')
+        text = sc['narration_en'].strip()
+        if not text:
+            raise ValueError('Empty English narration')
+        f = raw / (name + '.wav')
+        stamp = raw / (name + '.sha256')
+        key = cache_key(text, cfg)
+        cached = f.exists() and stamp.exists() and stamp.read_text() == key
+        if not cached:
+            # Reset per scene: retries/skipped cached scenes cannot change later voices.
+            torch.manual_seed(cfg['en_seed'])
+            # Pocket TTS manages its own inference contexts across decoder threads.
+            w = model.generate_audio(voice, text).detach().cpu().numpy().reshape(-1)
+            if not w.size or not np.isfinite(w).all() or np.max(np.abs(w)) < 1e-5:
+                raise RuntimeError('Invalid or silent English audio')
+            if model.sample_rate != SR:
+                from math import gcd
+                divisor = gcd(SR, model.sample_rate)
+                w = resample_poly(w, SR // divisor, model.sample_rate // divisor)
+            temp = f.with_suffix('.tmp.wav')
+            sf.write(temp, w, SR, subtype='PCM_16')
+            temp.replace(f)
+            stamp.write_text(key)
+        w, sr = sf.read(f, dtype='float32')
+        if sr != SR or w.ndim != 1 or not w.size or not np.isfinite(w).all():
+            raise RuntimeError('Invalid cached English WAV')
+        pad = max(0, int(float(sc['tail']) * SR) - tail_silence(w, SR))
+        path = f'en-{name}.wav'
+        sf.write(out / path, np.concatenate([w, np.zeros(pad, dtype=np.float32)]), SR, subtype='PCM_16')
+        results.append(dict(scene_id=name, path=path))
+    (out / 'en-result.json').write_text(json.dumps(dict(
+        engine=ENGINE, voice='alba', settings=cfg, quantized_modules=quantized,
+        scenes=results), ensure_ascii=False, indent=2))
+
+
+if __name__ == '__main__':
+    run(Path(sys.argv[1]), Path(sys.argv[2]))

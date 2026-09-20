@@ -14,7 +14,7 @@ python3 pilot.py next pilot-001
 Dự án đã có môi trường Python, TTS riêng và dependencies Node khóa bằng package-lock.json.
 Nếu chuyển sang máy khác: `uv venv --python 3.12 .venv`, cài requirements.txt vào .venv;
 `npm ci`; tạo .venv-tts với Python 3.10 rồi cài tts-requirements.lock vào đó;
-tạo .venv-en với Python 3.12 rồi cài en-requirements.lock vào đó (giọng tiếng Anh).
+tạo .venv-en với Python 3.11 rồi cài en-requirements.lock vào đó (Alba tiếng Anh).
 Mô hình TTS tải về lần đầu qua Hugging Face; không cần API trả phí.
 
 ## Giao việc cho Antigravity
@@ -88,11 +88,20 @@ Rules cấm gọi trực tiếp công cụ bên ngoài để đi vòng qua gate.
 
 Sau duyệt images: `python3 pilot.py run pilot-001 audio`.
 Bản 9:16 đọc tiếng Việt kèm phụ đề (VieNeu-TTS, giọng preset trong `config.json`).
-Bản 16:9 đọc tiếng Anh, ẩn phụ đề (Chatterbox, giọng mặc định) và chạy theo timeline
+Bản 16:9 đọc tiếng Anh, ẩn phụ đề (Pocket TTS, giọng Alba ở tốc độ gốc) và chạy theo timeline
 tiếng Anh riêng, nên điểm cắt ảnh bám lời tiếng Anh chứ không bám tiếng Việt.
 Brief có `aspect_ratio` là `dual` hoặc `16:9` thì mỗi cảnh phải có `narration_en`.
 Môi trường tiếng Anh nằm riêng ở `.venv-en`; tạo lại bằng
-`uv venv --python 3.12 .venv-en` rồi cài `en-requirements.lock` vào đó.
+`uv venv --python 3.11 .venv-en` rồi
+`uv pip sync --python .venv-en/bin/python --index-strategy unsafe-best-match en-requirements.lock`.
+Runtime dùng PyTorch CPU-only và lượng tử hóa dynamic INT8 cho attention/FFN;
+bộ giải mã âm thanh vẫn FP32. Không cần GPU hoặc tài khoản Hugging Face cho giọng có sẵn.
+`en_threads=4`, `en_temperature=0.3`, `en_seed=42`; không giảm tốc hoặc đổi cao độ.
+Model và embedding Alba tải lần đầu, các lần sau dùng cache (có thể đặt `HF_HUB_OFFLINE=1`).
+Giọng Alba MacKenna (casual), CC BY 4.0; xem [ghi công giọng](docs/voice-attribution.md).
+Đo mẫu ngắn trên Ryzen 5 6600H: RAM đỉnh khoảng 1,1 GiB, RTF 0,26–0,28;
+chưa xác nhận hiệu năng trên Xeon E3-1241 v3. Mô hình nạp FP32 trước khi lượng tử hóa.
+Các revision âm thanh cũ giữ nguyên; muốn thay âm thanh của job cũ cần revision mới và duyệt lại.
 Nghe WAV, xem SRT và thời lượng rồi duyệt revision audio.
 Sau đó: `python3 pilot.py run pilot-001 render`.
 Nếu TTS ngoài 45–60 giây, reject content và sửa draft rồi duyệt lại; không cắt tự động.

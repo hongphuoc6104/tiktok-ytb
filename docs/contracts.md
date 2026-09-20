@@ -12,6 +12,9 @@ timeline vẫn liền mạch. Giọng, temperature, độ dài nghỉ và độ 
 Brief aspect_ratio dual hoặc 16:9 bắt buộc mỗi cảnh có narration_en; stage audio dựng thêm
 track tiếng Anh với timeline riêng theo cảnh, và bản 16:9 chạy theo timeline đó chứ không
 theo tiếng Việt. Bản 9:16 luôn dùng tiếng Việt kèm phụ đề; bản 16:9 dùng tiếng Anh, ẩn phụ đề.
+Tiếng Anh dùng Pocket TTS Alba trên CPU, dynamic INT8 attention/FFN, tốc độ gốc.
+WAV từng cảnh vẫn mono PCM16 48 kHz; độ dài lấy từ âm thanh thực tế. Cache tiếng Anh
+được định danh bằng nội dung, phiên bản mô hình và cấu hình, không dùng lại WAV của engine cũ.
 Các module chỉ giao tiếp qua payload; adapter không được cấp quyền approve.
 Nếu content thay đổi, downstream bị stale. Chỉ ảnh thay đổi thì audio giữ hiệu lực, render stale.
 Giới hạn: ánh xạ đủ ý là kiểm tra cấu trúc, không chứng minh lời dẫn đúng ý; người dùng duyệt nội dung.
