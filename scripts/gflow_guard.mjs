@@ -110,7 +110,7 @@ await ensureChromeRunning();
 
 // 2. Override methods for modern Google Flow layout
 FlowPage.prototype.applySettings = async function(job) {
-  if ((job.type !== 'image' && job.type !== 'video') || job.ratio !== '9:16' || job.outputs !== 1) {
+  if ((job.type !== 'image' && job.type !== 'video') || (job.ratio !== '9:16' && job.ratio !== '16:9') || job.outputs !== 1) {
     throw Error('Pilot settings required');
   }
 
@@ -129,10 +129,11 @@ FlowPage.prototype.applySettings = async function(job) {
     }
   }
 
-  // 1. Select Aspect Ratio: 9:16
-  const crop916 = page.locator('button').filter({ hasText: /crop_9_16/i }).first();
-  if (await crop916.count()) {
-    await crop916.click({ force: true }).catch(() => undefined);
+  // 1. Select Aspect Ratio: 9:16 or 16:9
+  const is169 = job.ratio === '16:9';
+  const cropBtn = page.locator('button').filter({ hasText: is169 ? /crop_16_9/i : /crop_9_16/i }).first();
+  if (await cropBtn.count()) {
+    await cropBtn.click({ force: true }).catch(() => undefined);
   }
 
   // 2. Select Output Count: x1
