@@ -63,6 +63,9 @@ def validate_content(root,b,revision,bhash,p):
   if c['requirement_id'] not in s['requirements']: fail('COVERAGE_REF','coverage','Cảnh chưa liên kết ý')
   covered.add(c['requirement_id'])
  if covered!=set(req): fail('COVERAGE','coverage','Chưa ánh xạ đủ ý bắt buộc')
+ if b.get('aspect_ratio') in ('dual','16:9'):
+  for s in p['scenes']:
+   if not s.get('narration_en'): fail('NARRATION_EN',s['id'],'Thiếu lời dẫn tiếng Anh','Bổ sung narration_en; bản 16:9 đọc tiếng Anh.')
  total=sum(s['estimated_seconds'] for s in p['scenes'])
  if not b['duration']['min_seconds']<=total<=b['duration']['max_seconds']: fail('ESTIMATE','scenes','Tổng thời lượng dự kiến ngoài khoảng')
  if errors: raise ContractError(errors)
@@ -70,7 +73,9 @@ def validate_content(root,b,revision,bhash,p):
 def review_markdown(job,revision,b,p):
  lines=[f'# Nội dung {job} — phiên bản {revision}',f"Đề tài: {p['topic']}",f"Người xem: {b['audience']}",f"Mục tiêu: {b['goal']}",'Thời lượng dự kiến; chưa được xác nhận bằng WAV.', '## Kịch bản']
  for s in p['scenes']:
-  lines += [f"### {s['id']} — {s['title']}",s['narration'],f"Cảnh: {s['action']} | {s['setting']} | {s['camera']}",f"Nhân vật: {', '.join(s['character_ids'])}",f"Prompt: {s['prompt']}"]
+  lines += [f"### {s['id']} — {s['title']}",s['narration']]
+  if s.get('narration_en'): lines += [f"EN: {s['narration_en']}"]
+  lines += [f"Cảnh: {s['action']} | {s['setting']} | {s['camera']}",f"Nhân vật: {', '.join(s['character_ids'])}",f"Prompt: {s['prompt']}"]
  lines += ['## Nhân vật']+[f"- {c['id']}: {c['name']}; {c['appearance']}; {c['outfit']}" for c in p['characters']]
  lines += ['## Ánh xạ ý bắt buộc']+[f"- {c['requirement_id']} → {c['scene_id']}: {c['quote']}" for c in p['coverage']]
  lines += ['## Cần người dùng duyệt','Đủ ý về nghĩa · Lời đọc tự nhiên · Diễn biến hợp lý · Có thể minh họa','Kiểm tra kỹ thuật đạt không thay thế duyệt nội dung.']

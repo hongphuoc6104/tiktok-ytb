@@ -130,18 +130,24 @@ function splitIntoPhrases(text, maxLen = 32) {
       outputLocation: path.join(dir, 'video_9x16.mp4')
     });
 
-    // 2. Render 16:9 Full HD (YouTube: Clean screen, NO subtitles, English audio if available)
-    const enAudio = fs.existsSync(path.join(dir, 'public/narration_en.wav')) ? 'narration_en.wav' : 'narration.wav';
+    // 2. Render 16:9 Full HD (YouTube: Clean screen, NO subtitles, English audio if available).
+    // The English track has its own timeline: use it, or the tail runs silent and
+    // every image cut drifts against the narration.
+    const hasEn = fs.existsSync(path.join(dir, 'public/narration_en.wav'));
+    const props169 = hasEn
+      ? {...props, scenes: props.en_scenes || props.scenes, duration: props.en_duration || props.duration,
+         width: 1920, height: 1080, hideSubtitles: true, audioSrc: 'narration_en.wav'}
+      : {...props, width: 1920, height: 1080, hideSubtitles: true, audioSrc: 'narration.wav'};
     const comp169 = await selectComposition({
       serveUrl: url,
       id: 'Pilot',
-      inputProps: {...props, width: 1920, height: 1080, hideSubtitles: true, audioSrc: enAudio},
+      inputProps: props169,
       puppeteerInstance: browser
     });
     await renderMedia({
       serveUrl: url,
       composition: comp169,
-      inputProps: {...props, width: 1920, height: 1080, hideSubtitles: true, audioSrc: enAudio},
+      inputProps: props169,
       puppeteerInstance: browser,
       codec: 'h264',
       hardwareAcceleration: 'if-possible',

@@ -122,11 +122,84 @@ def chunks(text):
    parts.append(s)
  return parts if parts else [text.strip()]
 
+DEFAULT_PAUSE={'para':.70,'sentence':.50,'minor':.30,'tail':.35}
+
+def gap_after(text,g):
+ """Pause following a chunk inside a scene; mirrors vieneu's own gap table.
+
+ Only used on the per-sentence fallback path -- scene-level synthesis gets
+ these gaps from the model itself.
+ """
+ return g.get('sentence',DEFAULT_PAUSE['sentence']) if text.rstrip()[-1:] in '.!?…' else g.get('minor',DEFAULT_PAUSE['minor'])
+
+def frames_of(path):
+ with wave.open(str(path)) as wav:return wav.getnframes()
+
+def master(src,dst,cfg):
+ """EQ, then a static gain to target loudness with a true-peak limiter.
+
+ loudnorm is used for ANALYSIS only: its dynamic mode pads and resamples to
+ 192 kHz, which would break the +/-30 ms duration gates in pilot.checks.
+ No compressor: a limiter only touches the few samples above the ceiling, so
+ it reaches the loudness target without flattening the prosody we just gained.
+ alimiter needs level=disabled or it auto-normalises straight back to 0 dBFS.
+ Every filter here is sample-preserving; the frame count is asserted anyway.
+ """
+ eq='equalizer=f=200:t=q:w=1:g=1.5,equalizer=f=7000:t=q:w=2:g=-2.5'
+ subprocess.run(['ffmpeg','-y','-i',str(src),'-af',eq,'-ar','48000','-c:a','pcm_s16le',str(dst)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+ if not (dst.exists() and dst.stat().st_size>1000):return
+ r=subprocess.run(['ffmpeg','-v','info','-i',str(dst),'-af','loudnorm=print_format=json','-f','null','-'],capture_output=True,text=True)
+ try:m=json.loads(r.stderr[r.stderr.rindex('{'):r.stderr.rindex('}')+1])
+ except ValueError:dst.unlink(missing_ok=True);return
+ peak=float(cfg.get('audio_peak_db',-1.5));gain=float(cfg.get('audio_lufs',-14.))-float(m['input_i'])
+ final=dst.with_name('narration_lv.wav')
+ subprocess.run(['ffmpeg','-y','-i',str(dst),'-af',f'volume={gain:.2f}dB,alimiter=limit={10**(peak/20):.4f}:level=disabled','-ar','48000','-c:a','pcm_s16le',str(final)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+ dst.unlink(missing_ok=True)
+ if final.exists() and final.stat().st_size>1000 and frames_of(final)==frames_of(src):shutil.move(str(final),str(src))
+ else:final.unlink(missing_ok=True)
+
+def needs_en(p,j):
+ """16:9 exports carry the English track; 9:16 carries Vietnamese."""
+ b=p.brief(j)
+ return bool(b) and b[0].get('aspect_ratio') in ('dual','16:9')
+
+def english(p,j,out,cfg,scenes):
+ py=p.root/'.venv-en/bin/python'
+ if not py.exists():raise Blocked('Install the English TTS environment (.venv-en)')
+ missing=[s['id'] for s in scenes if not s.get('narration_en')]
+ if missing:raise Blocked('Missing narration_en for '+', '.join(missing))
+ g=cfg.get('tts_pause',DEFAULT_PAUSE)
+ items=[{'scene_id':s['id'],'narration_en':s['narration_en'],
+         'tail':g.get('tail',DEFAULT_PAUSE['tail']) if k==len(scenes)-1 else g.get('para',DEFAULT_PAUSE['para'])}
+        for k,s in enumerate(scenes)]
+ keys=('en_exaggeration','en_cfg_weight','en_temperature','en_max_chars','en_sentence_pause','en_device')
+ request=out/'request-en.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'scenes':items})
+ r=subprocess.run([str(py),str(p.root/'scripts/en_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
+ (out/'tts-en.log').write_text(r.stdout+'\n'+r.stderr)
+ if r.returncode:raise Blocked('English TTS failed; see tts-en.log')
+ meta=read(out/'en-result.json');cursor=0.;frames=[];params=None;done=[]
+ for x in meta['scenes']:
+  f=out/x['path']
+  with wave.open(str(f)) as wav:
+   fmt=(wav.getnchannels(),wav.getsampwidth(),wav.getframerate())
+   if params and fmt!=params:raise Blocked('Inconsistent English audio formats')
+   params=fmt;d=wav.getnframes()/wav.getframerate();frames.append(wav.readframes(wav.getnframes()))
+  done.append({'scene_id':x['scene_id'],'start':cursor,'end':cursor+d,'path':rel(p,j,f)});cursor+=d
+ combined=out/'narration_en.wav'
+ with wave.open(str(combined),'wb') as wav:wav.setnchannels(params[0]);wav.setsampwidth(params[1]);wav.setframerate(params[2]);wav.writeframes(b''.join(frames))
+ master(combined,out/'narration_en_eq.wav',cfg)
+ return {'engine':meta['engine'],'voice':meta['voice'],'wav':rel(p,j,combined),'duration':cursor,'scenes':done}
+
 def audio(p,j,out):
  py=p.root/'.venv-tts/bin/python'
  if not py.exists():raise Blocked('Install local TTS environment')
- content=p.payload(j,'content');inputs=[{'scene_id':s['id'],'text':t} for s in content['scenes'] for t in chunks(s['narration'])]
- request=out/'request.json';write(request,inputs)
+ content=p.payload(j,'content');cfg=config(p);g=cfg.get('tts_pause',DEFAULT_PAUSE)
+ scenes=[{'scene_id':s['id'],'narration':s['narration'],'texts':chunks(s['narration'])} for s in content['scenes']]
+ for k,sc in enumerate(scenes):
+  sc['gaps']=[gap_after(t,g) for t in sc['texts'][:-1]]
+  sc['tail']=g.get('tail',DEFAULT_PAUSE['tail']) if k==len(scenes)-1 else g.get('para',DEFAULT_PAUSE['para'])
+ keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision')
+ request=out/'request.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'scenes':scenes})
  result=subprocess.run([str(py),str(p.root/'tts_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=1800)
  (out/'tts.log').write_text(result.stdout+'\n'+result.stderr)
  if result.returncode:raise Blocked('Local TTS failed; see tts.log; no cloud fallback')
@@ -140,16 +213,17 @@ def audio(p,j,out):
   segments.append({'scene_id':x['scene_id'],'text':x['text'],'start':cursor,'end':cursor+duration,'path':rel(p,j,file)});cursor+=duration
  combined=out/'narration.wav'
  with wave.open(str(combined),'wb') as wav:wav.setnchannels(params[0]);wav.setsampwidth(params[1]);wav.setframerate(params[2]);wav.writeframes(b''.join(frames))
- mastered=out/'narration_eq.wav'
- subprocess.run(['ffmpeg','-y','-i',str(combined),'-af','equalizer=f=3500:t=q:w=1.5:g=-3.5,equalizer=f=220:t=q:w=1:g=2,lowpass=f=9500',str(mastered)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
- if mastered.exists() and mastered.stat().st_size>1000:shutil.move(str(mastered),str(combined))
+ master(combined,out/'narration_eq.wav',cfg)
  srt=out/'subtitles.srt';srt.write_text(make_srt(segments))
- return {'voice':meta['voice'],'backend':'onnx','wav':rel(p,j,combined),'srt':rel(p,j,srt),'duration':cursor,'segments':segments}
+ payload={'voice':meta['voice'],'backend':cfg.get('tts_backend','onnx'),'wav':rel(p,j,combined),'srt':rel(p,j,srt),'duration':cursor,'segments':segments}
+ if needs_en(p,j):payload['en']=english(p,j,out,cfg,content['scenes'])
+ return payload
 
 def render(p,j,out):
  content=p.payload(j,'content');imgs=p.payload(j,'images');snd=p.payload(j,'audio')
  public=out/'public';public.mkdir(exist_ok=True);shutil.copy(p.path(j,snd['wav']),public/'narration.wav')
- if (p.root/'scratch/narration_en.wav').exists():shutil.copy(p.root/'scratch/narration_en.wav',public/'narration_en.wav')
+ en=snd.get('en')
+ if en:shutil.copy(p.path(j,en['wav']),public/'narration_en.wav')
  scenes=[]
  image_by_id={x['scene_id']:x for x in imgs['items']}
  b=p.brief(j)[0] if p.brief(j) else None
@@ -168,6 +242,12 @@ def render(p,j,out):
    sc_dict['images']=[{'src':first_src,'at':0},{'src':sub_b.name,'at':3.5}]
   scenes.append(sc_dict)
  props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'aspect_ratio':ratio}
+ if en:
+  # 16:9 follows the English timeline; reusing the Vietnamese one leaves the
+  # tail silent and drifts every image cut against the narration.
+  span={x['scene_id']:x for x in en['scenes']}
+  props['en_duration']=en['duration']
+  props['en_scenes']=[{**sc,'start':span[sc['id']]['start'],'end':span[sc['id']]['end']} for sc in scenes]
  write(out/'props.json',props)
  r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=3600);(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
  if r.returncode:raise Blocked('Render or layout check failed; see render.log: '+r.stderr[-500:])

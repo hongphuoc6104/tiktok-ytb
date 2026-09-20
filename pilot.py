@@ -30,7 +30,7 @@ class Pilot:
   with self._db_lock:
    return {r['module']:dict(r) for r in self.db.execute('SELECT * FROM modules WHERE job=?',(j,))}
  def protected(self):
-  paths=[self.root/x for x in ['pilot.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock']]
+  paths=[self.root/x for x in ['pilot.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','en-requirements.lock']]
   for folder in ['schemas','.agents','renderer','tests','examples','scripts']:
    paths+=list((self.root/folder).rglob('*'))
   return {str(p.relative_to(self.root)):digest(p) for p in sorted(paths) if p.is_file() and '__pycache__' not in str(p)}
@@ -173,6 +173,20 @@ class Pilot:
    if self.path(j,p['srt']).read_text()!=make_srt(segs):raise Blocked('Subtitle mismatch')
    if abs(float(probe(self.path(j,p['wav']))['format']['duration'])-last)>.03:raise Blocked('Combined audio mismatch')
    files += [p['wav'],p['srt']]
+   en=p.get('en')
+   if en:
+    if [x['scene_id'] for x in en['scenes']]!=[s['id'] for s in scenes]:raise Blocked('English scenes missing or reordered')
+    last=0
+    for x in en['scenes']:
+     if abs(x['start']-last)>.001 or x['end']<=x['start']:raise Blocked('Invalid English timeline')
+     with wave.open(str(self.path(j,x['path']))) as wav:
+      duration=wav.getnframes()/wav.getframerate();raw=wav.readframes(wav.getnframes())
+      if audioop.rms(raw,wav.getsampwidth())<5:raise Blocked('Silent English scene')
+      if abs(duration-(x['end']-x['start']))>.03:raise Blocked('English scene duration mismatch')
+     last=x['end'];files.append(x['path'])
+    if abs(last-en['duration'])>.01 or not min_sec<=last<=max_sec:raise Blocked(f'English duration outside {min_sec}–{max_sec}s: revise narration_en')
+    if abs(float(probe(self.path(j,en['wav']))['format']['duration'])-last)>.03:raise Blocked('Combined English audio mismatch')
+    files.append(en['wav'])
   elif m=='render':
    v=probe(self.path(j,p['video']));vs=next(s for s in v['streams'] if s['codec_type']=='video');a=next(s for s in v['streams'] if s['codec_type']=='audio')
    from fractions import Fraction
@@ -187,6 +201,10 @@ class Pilot:
    layout=read(self.path(j,p['layout_report']))
    if not layout.get('passed') or layout.get('checked_frames',0)<1:raise Blocked('Layout check missing/failed')
    files=[p['video'],p['layout_report']]+p['stills']
+   en=self.payload(j,'audio').get('en')
+   if en and p.get('video_16x9'):
+    d16=float(probe(self.path(j,p['video_16x9']))['format']['duration'])
+    if abs(d16-en['duration'])>.1:raise Blocked('16:9 video does not match the English narration length')
    if p.get('video_16x9'):files.append(p['video_16x9'])
    if p.get('video_9x16'):files.append(p['video_9x16'])
   for s in files:
@@ -374,7 +392,7 @@ def main():
  with locked(ROOT):
   p=Pilot()
   if a.command=='doctor':
-   result={'tools':{t:shutil.which(t) for t in ['node','python3','ffmpeg','ffprobe','google-chrome','antigravity','agy']},'flow_installed':(ROOT/'node_modules/.bin/gflow').exists(),'tts_installed':(ROOT/'.venv-tts/bin/python').exists(),'live_flow_verified':False,'antigravity_rules_verified':False}
+   result={'tools':{t:shutil.which(t) for t in ['node','python3','ffmpeg','ffprobe','google-chrome','antigravity','agy']},'flow_installed':(ROOT/'node_modules/.bin/gflow').exists(),'tts_installed':(ROOT/'.venv-tts/bin/python').exists(),'en_tts_installed':(ROOT/'.venv-en/bin/python').exists(),'live_flow_verified':False,'antigravity_rules_verified':False}
   else:
    if not a.job:raise Blocked('Job required')
    c=a.command

@@ -18,6 +18,7 @@ Ghi duy nhất `runs/JOB/draft/content.json` theo hợp đồng v2:
 - Sao chép topic, duration, style và danh sách văn bản required_points từ brief; brief_revision và brief_hash lấy từ brief-current.
 - Chia đúng số cảnh SC01… theo thứ tự. Mỗi cảnh có mục đích, hành động, bối cảnh, góc nhìn, lời dẫn, prompt và estimated_seconds. Tổng dự kiến nằm trong khoảng được yêu cầu; không tuyên bố đã đo bằng âm thanh.
 - Hồ sơ nhân vật dùng mã ổn định, ngoại hình, trang phục; mỗi cảnh liên kết character_ids. Prompt phải diễn tả hành động riêng và giữ mô tả nhân vật, phong cách, tỷ lệ khung nhất quán. Không hứa giữ nhân vật tuyệt đối chỉ nhờ prompt.
+- Nếu aspect_ratio là dual hoặc 16:9: mỗi cảnh cần thêm narration_en, lời dẫn tiếng Anh tự nhiên cho bản 16:9. Truyền đạt đúng ý của cảnh, viết như người bản ngữ nói, không dịch sát từng chữ; độ dài tương đương estimated_seconds. Bản 9:16 vẫn dùng lời dẫn tiếng Việt.
 - requirements trong cảnh chứa mã ý; coverage liên kết từng mã tới cảnh và trích nguyên văn đoạn narration chứng minh ý đó. Đánh giá ý nghĩa thật, không thêm nhãn để qua kiểm tra.
 - Dùng source_ids để truy vết dữ kiện tới nguồn. Không có nhân vật hoặc nguồn thì dùng danh sách rỗng hợp lệ.
 

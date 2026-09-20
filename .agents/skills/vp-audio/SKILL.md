@@ -6,6 +6,7 @@ description: Xử lý module Âm thanh trong dự án Video Pilot dùng pilot.py
 Đọc AGENTS.md. Chạy `python3 pilot.py next <job>`.
 Đọc `schemas/audio.json` và `docs/contracts.md` trước khi tạo đầu ra.
 Chạy `python3 pilot.py run <job> audio` rồi `validate <job> audio`.
+Brief dual hoặc 16:9 cần `.venv-en` và narration_en ở mọi cảnh; thiếu một trong hai thì audio bị chặn.
 Riêng control: dùng new để tạo hồ sơ; run control không cấp quyền duyệt.
 Riêng content: sửa runs/<job>/draft/content.json rồi run; không sửa revisions.
 Riêng images: cần bằng chứng giao diện 0 credit bằng flow-preflight; nếu lỗi ambiguous dùng flow-reconcile, không retry tạo.
