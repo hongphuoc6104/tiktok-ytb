@@ -49,6 +49,13 @@ Nhịp câu dài ngắn xen kẽ nghe tự nhiên khi đọc lên, không chỉ 
 
 Áp dụng đúng các nguyên tắc trên với danh sách dấu hiệu tiếng Anh ở bảng trên. Bản 16:9 phát **hoàn toàn** bằng tiếng Anh, không phụ đề — đây là bản độc lập, không phải bản dịch phụ của tiếng Việt. Cùng giới hạn `tts_max_chars` áp dụng cho `narration_en` khi tổng hợp giọng Anh theo cảnh.
 
+## Từ khoá và câu tiếng Anh trong lời dẫn
+
+Khi kịch bản chứa từ khoá hoặc câu ví dụ tiếng Anh (video học ngoại ngữ):
+- **Không viết hoa toàn bộ từ tiếng Anh** (tránh TTS đánh vần từng ký tự). Dùng chữ thường hoặc viết hoa chữ đầu (`wake`, `get up`).
+- **Tách riêng câu ví dụ tiếng Anh bằng dấu chấm và ngoặc kép**: Không dùng dấu phẩy nối liền câu tiếng Anh với câu dịch tiếng Việt. Viết: `Thứ nhất: "We wake up early every day." Chúng tôi thức giấc sớm mỗi ngày.` để audio có khoảng ngắt nghỉ tự nhiên và phụ đề tách thẻ riêng biệt.
+- **Tốc độ đọc**: Giọng đọc đã được cấu hình chậm hơn ~8% (`tts_speed: 0.92`), phát âm rõ từng âm tiết.
+
 ## Đừng sửa quá tay
 
 Sửa quá tay tạo ra văn bản không giống người mà cũng không giống nội dung kịch bản.

@@ -55,6 +55,34 @@ def cache_key(text,settings,package_version,sample_rate,cache_version=CACHE_VERS
            sample_rate=sample_rate,text=text,settings=settings,cache_version=cache_version)
  return hashlib.sha256(json.dumps(data,sort_keys=True).encode()).hexdigest()
 
+ACRONYM_WHITELIST={'AI','VIP','TP','TP.HCM','UBND','CSGT','VTV','HTV','CEO','IELTS','TOEIC','ID','DNA','RNA','FBI','CIA'}
+
+def normalize_text_for_tts(text):
+ """Sanitize text for VieNeu/sea_g2p TTS:
+ 1. Normalize curly quotes/apostrophes to standard quotes/apostrophes.
+ 2. Lowercase all-caps English words (>= 2 letters) that are not recognized acronyms,
+    preventing sea_g2p normalizer from spelling them out letter-by-letter as Vietnamese acronyms.
+ """
+ if not text:return text
+ import re
+ text=text.replace('“','"').replace('”','"').replace('’',"'").replace('‘',"'")
+ def _repl(m):
+  w=m.group(0)
+  return w if w in ACRONYM_WHITELIST else w.lower()
+ return re.sub(r'\b[A-Z]{2,}\b',_repl,text)
+
+def change_tempo(w,sr,speed):
+ """Adjust audio tempo without changing pitch using ffmpeg atempo filter."""
+ if abs(speed-1.0)<0.01:return w
+ import io,subprocess
+ buf_in=io.BytesIO()
+ sf.write(buf_in,w,sr,format='WAV',subtype='PCM_16')
+ cmd=['ffmpeg','-v','error','-f','wav','-i','pipe:0','-filter:a',f'atempo={speed}','-f','wav','pipe:1']
+ proc=subprocess.run(cmd,input=buf_in.getvalue(),capture_output=True,check=True)
+ buf_out=io.BytesIO(proc.stdout)
+ out_w,_=sf.read(buf_out,dtype='float32')
+ return out_w
+
 def run(source,out):
  from vieneu import Vieneu
  from vieneu_utils.core_utils import pause_pad_samples
@@ -78,8 +106,10 @@ def run(source,out):
  raw=Path(req['cache_dir']) if req.get('cache_dir') else out/'raw'
  raw.mkdir(parents=True,exist_ok=True)
  package_version=version('vieneu')
+ speed=float(cfg.get('tts_speed',1.0))
  key_settings=dict(voice=str(voice_id),temperature=cfg['tts_temperature'],top_p=cfg['tts_top_p'],
-                    backend=cfg.get('tts_backend','onnx'),precision=cfg.get('tts_precision','fp32'),mode='v3turbo')
+                    backend=cfg.get('tts_backend','onnx'),precision=cfg.get('tts_precision','fp32'),mode='v3turbo',
+                    speed=speed)
 
  def synth(text,retake=0):
   """Synthesize once, cached by content hash so a crashed/rerun revision
@@ -90,7 +120,11 @@ def run(source,out):
   "read this one better" would be a no-op."""
   f=raw/(cache_key(text,dict(key_settings,retake=retake),package_version,sr)+'.wav')
   if not (f.exists() and f.stat().st_size>1000):
-   tts.save(tts.infer(text,voice=voice_id,temperature=cfg['tts_temperature'],top_p=cfg['tts_top_p']),str(f))
+   synth_text=normalize_text_for_tts(text)
+   audio=tts.infer(synth_text,voice=voice_id,temperature=cfg['tts_temperature'],top_p=cfg['tts_top_p'])
+   if isinstance(audio,np.ndarray) and abs(speed-1.0)>=0.01:
+    audio=change_tempo(audio,sr,speed)
+   tts.save(audio,str(f))
   return sf.read(str(f),dtype='float32')[0]
 
  # Scene-level synthesis keeps the intonation arc across sentences: vieneu infers

@@ -336,7 +336,7 @@ def make_srt(segs):
  return '\n'.join(f"{i}\n{timestamp(c['start'])} --> {timestamp(c['end'])}\n{c['text']}\n" for i,c in enumerate(cues,1))
 def chunks(text):
  import re
- raw=re.split(r'(?<=[.!?])\s+', text.strip())
+ raw=re.split(r'(?<=[.!?])\s+|(?<=[.!?][\"\'”’])\s+', text.strip())
  parts=[]
  for s in raw:
   s=s.strip()
@@ -469,7 +469,7 @@ def audio(p,j,out):
  for k,sc in enumerate(scenes):
   sc['gaps']=[gap_after(t,g) for t in sc['texts'][:-1]]
   sc['tail']=g.get('tail',DEFAULT_PAUSE['tail']) if k==len(scenes)-1 else g.get('para',DEFAULT_PAUSE['para'])
- keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision')
+ keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision','tts_speed')
  # Job-level cache dir (not per-revision): pilot.run() always mkdirs a fresh
  # revisions/audio/N, so a cache rooted there could never hit across runs.
  # tts_worker.py now keys cache entries by content hash (text+settings+model

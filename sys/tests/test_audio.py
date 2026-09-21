@@ -82,6 +82,23 @@ class PureHelperTests(unittest.TestCase):
   self.assertEqual(adapters.gap_after('Câu.',{'sentence':.9}),.9)
   self.assertEqual(adapters.gap_after('Câu,',{}),adapters.DEFAULT_PAUSE['minor'])
 
+ def test_chunks_splits_quoted_sentences(self):
+  text='Thứ nhất: "We wake up early every day." Chúng tôi thức giấc sớm mỗi ngày.'
+  parts=adapters.chunks(text)
+  self.assertEqual(parts,['Thứ nhất: "We wake up early every day."','Chúng tôi thức giấc sớm mỗi ngày.'])
+
+ def test_normalize_text_for_tts(self):
+  self.assertEqual(tts_worker.normalize_text_for_tts('Từ WAKE và cụm GET UP'),'Từ wake và cụm get up')
+  self.assertEqual(tts_worker.normalize_text_for_tts('Công nghệ AI và khách VIP thi TOEIC hoặc IELTS'),'Công nghệ AI và khách VIP thi TOEIC hoặc IELTS')
+  self.assertEqual(tts_worker.normalize_text_for_tts('“Don’t wake up late”'),'"Don\'t wake up late"')
+
+ def test_change_tempo_slows_audio(self):
+  w=np.full(SR,0.1,dtype=np.float32)
+  w_same=tts_worker.change_tempo(w,SR,1.0)
+  self.assertEqual(len(w),len(w_same))
+  w_slow=tts_worker.change_tempo(w,SR,0.92)
+  self.assertAlmostEqual(len(w_slow)/SR,1.0/0.92,delta=0.03)
+
 @unittest.skipUnless(shutil.which('ffmpeg') and shutil.which('ffprobe'),'ffmpeg required')
 class MasterTests(unittest.TestCase):
  def setUp(self):self.tmp=tempfile.TemporaryDirectory();self.d=Path(self.tmp.name)
@@ -165,6 +182,14 @@ class TTSWorkerCacheTests(unittest.TestCase):
    self.synth(self.req(text,cache,tts_temperature=.9),d/'rev2')
    self.assertEqual(len(list(cache.glob('*.wav'))),2,'changed settings must add a new cache entry')
    self.assertEqual(len(Fake.calls),2,'changed settings must be resynthesized, not served from cache')
+
+ def test_changed_speed_is_not_reused_from_cache(self):
+  with fake_vieneu() as Fake,tempfile.TemporaryDirectory() as d:
+   d=Path(d);cache=d/'cache';text='Xin chào các bạn.'
+   self.synth(self.req(text,cache,tts_speed=1.0),d/'rev1')
+   self.synth(self.req(text,cache,tts_speed=0.92),d/'rev2')
+   self.assertEqual(len(list(cache.glob('*.wav'))),2,'changed speed must add a new cache entry')
+   self.assertEqual(len(Fake.calls),2,'changed speed must be resynthesized, not served from cache')
 
  def test_same_text_and_settings_hits_cache_across_revisions(self):
   """The whole point of moving the cache to job level: two separate revision

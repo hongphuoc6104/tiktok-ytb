@@ -28,8 +28,10 @@ python3 pilot.py run <job_name> content
 **Quy tắc bắt buộc khi viết kịch bản:**
 1. **Văn phong:** Lời dẫn tự nhiên, gần gũi, mở đầu bằng tình huống đồng cảm (SC01), giải nghĩa từ vựng (SC02), 3 ví dụ đời thường (SC03), và mẫu câu hành động (SC04).
 2. **Vieneu TTS & Phiên âm tiếng Anh:**
-   - Tuyệt đối KHÔNG viết hoa toàn bộ từ khóa tiếng Anh trong lời dẫn (narration) để tránh TTS đọc đánh vần từng chữ cái. Luôn viết chữ thường hoặc viết hoa chữ cái đầu (ví dụ: `procrastinate` hoặc `Procrastinate`).
-   - Đại từ nhân xưng tiếng Anh `I` đứng đơn lẻ trong câu ví dụ PHẢI ghi âm dạng ngữ âm `"Ai"` để giọng đọc phát âm chuẩn bản xứ `/aɪ/`.
+   - Tuyệt đối KHÔNG viết hoa toàn bộ từ khóa tiếng Anh trong lời dẫn (`narration`) để tránh TTS đọc đánh vần từng chữ cái. Luôn viết chữ thường hoặc viết hoa chữ cái đầu (ví dụ: `procrastinate` hoặc `wake up`). Hệ thống có bộ lọc `normalize_text_for_tts` tự động bảo vệ, nhưng việc viết chuẩn giúp kịch bản nhất quán.
+   - Các câu ví dụ tiếng Anh trong lời dẫn (đặc biệt tại SC03) PHẢI kết thúc bằng dấu chấm và đặt trong dấu ngoặc kép hoặc câu riêng biệt (ví dụ: `Thứ nhất: "We wake up early every day." Chúng tôi thức giấc sớm mỗi ngày.`). Việc này giúp bộ tách câu tạo phân đoạn phụ đề và audio độc lập, có khoảng nghỉ tự nhiên, tránh bị đọc dồn dập vào câu dịch tiếng Việt.
+   - Giọng đọc toàn kênh được làm chậm ~8% (`tts_speed: 0.92`) để đảm bảo các âm tiết tiếng Anh được phát âm rõ ràng, thong thả, chuẩn cho người học tiếng Anh.
+   - Đại từ nhân xưng tiếng Anh `I` trong câu ví dụ phát âm chuẩn `/aɪ/` khi viết `I` hoặc `"Ai"`.
 3. **Visual Beats (Nhịp thị giác):**
    - $N$ bối cảnh/ví dụ phải có đủ $N$ hình ảnh và $N$ visual beats tương ứng.
    - Điểm neo (anchor quote) của từ khóa/công thức phải đặt thật sớm trong câu để chữ hiển thị trên màn hình tối thiểu từ 2.5 đến 3.5 giây.

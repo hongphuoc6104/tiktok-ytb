@@ -8,7 +8,7 @@ import {AttemptStore} from './attempt-store.mjs';
 
 const here=path.dirname(fileURLToPath(import.meta.url));
 const root=path.resolve(here,'../..');
-export const toolUrl='https://flow.google.com/project/7c815425-4625-4afb-ba84-4290d3fa9ea4/tool/bc72cb6a-c68c-49a3-b089-d94fc27eb8dd';
+export const toolUrl='https://flow.google.com/project/41d3d574-907c-4bb0-90a7-c98f85f5e22b/tool/2791e8ba-9ae0-4ca9-9368-b7efe600c53d';
 export function browserConfig(config) {
   const dataDir=path.resolve(root,config.flow_user_data_dir || `.gflow/profiles/${config.flow_profile || 'video-pilot'}`);
   const profile=config.flow_profile_directory || 'Default';
