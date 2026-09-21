@@ -2,6 +2,9 @@
 name: vp-humanizer
 description: Nguyên tắc văn phong tự nhiên cho lời dẫn (narration/narration_en) khi viết kịch bản Video Pilot; nạp vào lượt viết chi tiết của agy_pipeline.py, không phải bước viết lại riêng.
 ---
+
+Đường dẫn vận hành trong skill tính từ `sys/` của dự án; chạy `cd sys` trước các lệnh. Video cho người dùng nằm ở `../video/<tên-video>/`.
+
 # Lời dẫn tự nhiên
 
 Đây là lời **đọc lên**, không phải văn viết để đọc bằng mắt. Áp dụng khi soạn `narration`/`narration_en` trong content-v3, cùng lượt sinh nội dung — không có bước viết lại sau, vì `coverage.quote`, `coverage.quote_en`, `claims.quote` và `beats[].anchor` neo nguyên văn vào lời dẫn.

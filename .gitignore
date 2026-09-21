@@ -3,6 +3,9 @@
 # ==============================================================================
 
 # --- 1. Large Pipeline Artifacts & Media Runs ---
+/video/
+/sys/maintenance/
+/sys/research/evidence/
 runs/
 exports/
 scratch/
@@ -97,6 +100,14 @@ desktop.ini
 # --- 9. Research bank runtime ---
 .ledger.lock
 research/prepared/
+sys/research/prepared/
+# --- 9. Vocabulary Bank Scratch ---
+# Kho từ (sources/, bank.jsonl, ledger.json, briefs/) được theo dõi trong git;
+# chỉ hàng đợi tạm của pilot batch là không.
+vocab/queue.json
+vocab/.ledger.lock
+sys/vocab/queue.json
+.ledger.lock
 
 # --- 10. Runtime Logs & Loose Media in Root ---
 *.log
@@ -108,3 +119,6 @@ logs/
 /*.mp4
 /*.wav
 /*.mp3
+
+# Runtime bytecode redirected by the root launcher
+/sys/.cache/

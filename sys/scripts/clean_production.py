@@ -289,55 +289,31 @@ def prune_unapproved_revisions(job_id: str, dry_run: bool = False) -> int:
     return freed_bytes
 
 def clean_scratch_whitelist(retention_days: int = 3, dry_run: bool = False) -> int:
+    """Remove only old, empty scratch directories; filenames are not evidence of disposal.
+
+    Media and nonempty directories require a separately reviewed inventory.
+    Never follow symlinks, including a symlink replacing the scratch root.
     """
-    WHITELIST-ONLY SCRATCH CLEANUP:
-    Protects: *evidence*.json, *proof*.json, *brief*.json, all scripts (.mjs, .py, .sh).
-    Only cleans:
-    - Specific scratch temp directories: render_output/, tmp_*
-    - Orphaned test media (.png, .wav, .mp4, .log) older than retention_days.
-    """
-    if not SCRATCH_DIR.exists():
+    if SCRATCH_DIR.is_symlink() or not SCRATCH_DIR.is_dir():
         return 0
-
-    print(f"\n--- [Tầng 2] Dọn dẹp tệp tạm trong scratch/ (Whitelist, hạn > {retention_days} ngày) ---")
-    freed = 0
-    now = time.time()
-    cutoff = now - (retention_days * 86400)
-
-    protected_keywords = ["evidence", "proof", "brief", "README", ".gitkeep"]
-
+    cutoff = time.time() - max(0, retention_days) * 86400
     for item in SCRATCH_DIR.iterdir():
-        # Check protection
-        if any(kw in item.name for kw in protected_keywords):
+        if item.is_symlink() or not item.is_dir():
             continue
-        if item.suffix in [".py", ".mjs", ".js", ".sh", ".json"]:
-            # Protect all code and json by default in scratch
+        if not (item.name.startswith('tmp_') or item.name == 'render_output'):
             continue
-
-        # Target 1: Specific known temp directories
-        if item.is_dir() and (item.name.startswith("tmp") or item.name in ["render_output"]):
-            sz = get_dir_size(item)
-            freed += sz
+        try:
+            if item.stat().st_mtime >= cutoff or any(item.iterdir()):
+                continue
             if dry_run:
-                print(f"  [Scratch - Sẽ xóa thư mục tạm] {item.relative_to(ROOT)} ({format_size(sz)})")
+                print(f"  [Scratch - Thư mục rỗng có thể dọn] {item}")
             else:
-                shutil.rmtree(item, ignore_errors=True)
-                print(f"  [Scratch - Đã xóa thư mục tạm] {item.relative_to(ROOT)} ({format_size(sz)})")
+                # rmdir fails safely if another process has added a file.
+                item.rmdir()
+                print(f"  [Scratch - Đã dọn thư mục rỗng] {item}")
+        except OSError:
             continue
-
-        # Target 2: Media files older than retention days
-        if item.is_file() and item.suffix in [".png", ".jpg", ".wav", ".log"]:
-            mtime = item.stat().st_mtime
-            if mtime < cutoff:
-                sz = item.stat().st_size
-                freed += sz
-                if dry_run:
-                    print(f"  [Scratch - Sẽ dọn file media cũ] {item.relative_to(ROOT)} ({format_size(sz)})")
-                else:
-                    item.unlink(missing_ok=True)
-                    print(f"  [Scratch - Đã dọn file media cũ] {item.relative_to(ROOT)} ({format_size(sz)})")
-
-    return freed
+    return 0
 
 def clean_system_and_browser_cache(dry_run: bool = False) -> int:
     """
