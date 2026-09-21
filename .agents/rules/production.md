@@ -12,3 +12,5 @@ Nhịp thị giác (Visual Beats): N bối cảnh/ví dụ phải có đủ N �
 B-2 Illustrator: Chạy qua persistent session socket. Nếu gặp sự cố timeout (state: ambiguous), phải dùng `python3 pilot.py flow-reconcile` kèm bằng chứng UI thật, tuyệt đối không gửi request trùng lặp.
 Video dạy từ vựng lấy từ kho vocab/: `python3 vocab/bank.py start JOB` sinh brief và giữ chỗ; duyệt xong video mới `mark`. Không tự chọn từ ngoài kho, không viết brief từ vựng bằng tay.
 
+
+Ngôn ngữ: tuân thủ mục “Ngôn ngữ giao tiếp và prompt” trong AGENTS.md. Mọi kế hoạch (plan), tiến độ và kết quả hiển thị cho người dùng dùng tiếng Việt; chỉ dẫn/prompt nội bộ mặc định dùng tiếng Anh. Giữ nguyên ngôn ngữ dữ liệu, câu trích, chữ hiển thị và các trường máy đọc bắt buộc.
