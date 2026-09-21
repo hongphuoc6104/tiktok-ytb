@@ -43,10 +43,12 @@ def settings(cfg):
     return result
 
 
-def cache_key(text, cfg):
+def cache_key(text, cfg, retake=0):
     # Legacy Chatterbox WAVs and changed text/settings must never be reused.
+    # `retake` counts rejections of this scene's delivery: same words and
+    # settings, so without it a retake would resolve to the cached take.
     data = dict(engine=ENGINE, package=version('pocket-tts'), language='english',
-                sample_rate=SR, text=text, settings=cfg, cache_version=1)
+                sample_rate=SR, text=text, settings=cfg, retake=retake, cache_version=1)
     return hashlib.sha256(json.dumps(data, sort_keys=True).encode()).hexdigest()
 
 
@@ -62,8 +64,11 @@ def run(source, out):
         raise RuntimeError('INT8 modules were not loaded; refusing full-precision fallback')
     voice = model.get_state_for_audio_prompt('alba')
     out.mkdir(parents=True, exist_ok=True)
-    raw = out / 'raw-en'
-    raw.mkdir(exist_ok=True)
+    # Job-level cache survives pilot.py's per-revision output dirs; the .sha256
+    # stamp below still gates reuse on text/settings, so a relocated cache can
+    # never serve audio for an edited narration.
+    raw = Path(req['cache_dir']) if req.get('cache_dir') else out / 'raw-en'
+    raw.mkdir(parents=True, exist_ok=True)
     results = []
     for sc in req['scenes']:
         name = sc['scene_id']
@@ -72,13 +77,16 @@ def run(source, out):
         text = sc['narration_en'].strip()
         if not text:
             raise ValueError('Empty English narration')
+        retake = int(sc.get('retake', 0))
         f = raw / (name + '.wav')
         stamp = raw / (name + '.sha256')
-        key = cache_key(text, cfg)
+        key = cache_key(text, cfg, retake)
         cached = f.exists() and stamp.exists() and stamp.read_text() == key
         if not cached:
             # Reset per scene: retries/skipped cached scenes cannot change later voices.
-            torch.manual_seed(cfg['en_seed'])
+            # Offset by retake, or this model's fixed seed would hand back the
+            # identical waveform and a rejected read could never be improved.
+            torch.manual_seed(cfg['en_seed'] + retake)
             # Pocket TTS manages its own inference contexts across decoder threads.
             w = model.generate_audio(voice, text).detach().cpu().numpy().reshape(-1)
             if not w.size or not np.isfinite(w).all() or np.max(np.abs(w)) < 1e-5:

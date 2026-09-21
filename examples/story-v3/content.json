@@ -1,0 +1,420 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "REPLACE_WITH_JOB_BRIEF_HASH",
+  "topic": "Góp ý với đồng nghiệp mà không gây căng thẳng",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 60
+  },
+  "style": "Minh hoạ biên tập 2D ấm áp, văn phòng Việt Nam hiện đại, xanh teal và cam nhạt, nhân vật trưởng thành, không chữ trong ảnh.",
+  "required_points": [
+    "Nhận diện tình huống",
+    "Nói riêng",
+    "Mô tả hành vi",
+    "Tác động và lắng nghe",
+    "Giải pháp cụ thể",
+    "Kết luận"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người góp ý",
+      "appearance": "Nữ Việt Nam khoảng 30 tuổi, tóc đen ngang vai",
+      "outfit": "Áo sơ mi xanh teal"
+    },
+    {
+      "id": "CH02",
+      "name": "Đồng nghiệp",
+      "appearance": "Nam Việt Nam khoảng 30 tuổi, tóc đen ngắn",
+      "outfit": "Áo sơ mi màu kem"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mở đầu",
+      "narration": "Đồng nghiệp vừa làm sai, bạn muốn góp ý nhưng sợ mất lòng? Hãy thử cách nói rõ việc mà vẫn giữ sự tôn trọng.",
+      "requirements": [
+        "R01"
+      ],
+      "purpose": "Nhận diện tình huống",
+      "action": "Nhìn bản báo cáo còn thiếu số liệu và cân nhắc cách trao đổi",
+      "setting": "Văn phòng Việt Nam hiện đại",
+      "camera": "Trung cảnh",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Nhìn bản báo cáo còn thiếu số liệu và cân nhắc cách trao đổi. Văn phòng Việt Nam hiện đại. Trung cảnh",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Thiết lập cảnh",
+          "reason": "Nhận diện tình huống",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Nhận diện tình huống",
+          "anchor": {
+            "vi": {
+              "quote": "Đồng nghiệp vừa làm sai, bạn muốn góp ý nhưng sợ mất lòng? Hãy thử cách nói rõ việc mà vẫn giữ sự tôn trọng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "SC02",
+      "title": "Chọn lúc phù hợp",
+      "narration": "Trước hết, chọn lúc cả hai bình tĩnh và nói riêng. Bạn có thể hỏi: Mình trao đổi nhanh về bản báo cáo được không?",
+      "requirements": [
+        "R02"
+      ],
+      "purpose": "Nói riêng",
+      "action": "Mời đồng nghiệp sang góc trao đổi riêng",
+      "setting": "Văn phòng Việt Nam hiện đại",
+      "camera": "Toàn cảnh góc trao đổi riêng",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mời đồng nghiệp sang góc trao đổi riêng. Văn phòng Việt Nam hiện đại. Toàn cảnh góc trao đổi riêng",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Thiết lập cảnh",
+          "reason": "Nói riêng",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Nói riêng",
+          "anchor": {
+            "vi": {
+              "quote": "Trước hết, chọn lúc cả hai bình tĩnh và nói riêng. Bạn có thể hỏi: Mình trao đổi nhanh về bản báo cáo được không?",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "SC03",
+      "title": "Nói việc cụ thể",
+      "narration": "Tiếp theo, nói điều bạn quan sát được. Ví dụ: Bản gửi sáng nay thiếu số liệu tháng tám. Tránh kết luận: Bạn lúc nào cũng cẩu thả.",
+      "requirements": [
+        "R03"
+      ],
+      "purpose": "Mô tả hành vi",
+      "action": "Chỉ vào phần còn trống trong bản báo cáo",
+      "setting": "Văn phòng Việt Nam hiện đại",
+      "camera": "Cận cảnh tay chỉ báo cáo",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Chỉ vào phần còn trống trong bản báo cáo. Văn phòng Việt Nam hiện đại. Cận cảnh tay chỉ báo cáo",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Thiết lập cảnh",
+          "reason": "Mô tả hành vi",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Mô tả hành vi",
+          "anchor": {
+            "vi": {
+              "quote": "Tiếp theo, nói điều bạn quan sát được. Ví dụ: Bản gửi sáng nay thiếu số liệu tháng tám. Tránh kết luận: Bạn lúc nào cũng cẩu thả.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "SC04",
+      "title": "Giải thích tác động",
+      "narration": "Nói rõ ảnh hưởng: Mình chưa thể gửi khách vì cần đủ dữ liệu. Sau đó hỏi: Có phần nào đang khiến bạn gặp khó không?",
+      "requirements": [
+        "R04"
+      ],
+      "purpose": "Tác động và lắng nghe",
+      "action": "Giải thích ảnh hưởng rồi lắng nghe đồng nghiệp",
+      "setting": "Văn phòng Việt Nam hiện đại",
+      "camera": "Trung cảnh hai người ngang tầm mắt",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Giải thích ảnh hưởng rồi lắng nghe đồng nghiệp. Văn phòng Việt Nam hiện đại. Trung cảnh hai người ngang tầm mắt",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Thiết lập cảnh",
+          "reason": "Tác động và lắng nghe",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Tác động và lắng nghe",
+          "anchor": {
+            "vi": {
+              "quote": "Nói rõ ảnh hưởng: Mình chưa thể gửi khách vì cần đủ dữ liệu. Sau đó hỏi: Có phần nào đang khiến bạn gặp khó không?",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "SC05",
+      "title": "Thống nhất cách sửa",
+      "narration": "Lắng nghe câu trả lời rồi thống nhất cách sửa: Bạn bổ sung trước ba giờ nhé, mình sẽ kiểm tra lại cùng bạn.",
+      "requirements": [
+        "R05"
+      ],
+      "purpose": "Giải pháp cụ thể",
+      "action": "Cùng ghi lại việc cần bổ sung và thời hạn",
+      "setting": "Văn phòng Việt Nam hiện đại",
+      "camera": "Cận cảnh cùng ghi chú",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Cùng ghi lại việc cần bổ sung và thời hạn. Văn phòng Việt Nam hiện đại. Cận cảnh cùng ghi chú",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Thiết lập cảnh",
+          "reason": "Giải pháp cụ thể",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Giải pháp cụ thể",
+          "anchor": {
+            "vi": {
+              "quote": "Lắng nghe câu trả lời rồi thống nhất cách sửa: Bạn bổ sung trước ba giờ nhé, mình sẽ kiểm tra lại cùng bạn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "SC06",
+      "title": "Kết thúc",
+      "narration": "Góp ý hiệu quả không phải thắng một cuộc tranh luận. Đó là giúp công việc tốt hơn, đồng thời để người đối diện có cơ hội sửa.",
+      "requirements": [
+        "R06"
+      ],
+      "purpose": "Kết luận",
+      "action": "Hai người trở lại bàn làm việc với thái độ hợp tác",
+      "setting": "Văn phòng Việt Nam hiện đại",
+      "camera": "Toàn cảnh kết thúc",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Hai người trở lại bàn làm việc với thái độ hợp tác. Văn phòng Việt Nam hiện đại. Toàn cảnh kết thúc",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Thiết lập cảnh",
+          "reason": "Kết luận",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Kết luận",
+          "anchor": {
+            "vi": {
+              "quote": "Góp ý hiệu quả không phải thắng một cuộc tranh luận. Đó là giúp công việc tốt hơn, đồng thời để người đối diện có cơ hội sửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R01",
+      "scene_id": "SC01",
+      "quote": "Đồng nghiệp vừa làm sai, bạn muốn góp ý nhưng sợ mất lòng? Hãy thử cách nói rõ việc mà vẫn giữ sự tôn trọng."
+    },
+    {
+      "requirement_id": "R02",
+      "scene_id": "SC02",
+      "quote": "Trước hết, chọn lúc cả hai bình tĩnh và nói riêng. Bạn có thể hỏi: Mình trao đổi nhanh về bản báo cáo được không?"
+    },
+    {
+      "requirement_id": "R03",
+      "scene_id": "SC03",
+      "quote": "Tiếp theo, nói điều bạn quan sát được. Ví dụ: Bản gửi sáng nay thiếu số liệu tháng tám. Tránh kết luận: Bạn lúc nào cũng cẩu thả."
+    },
+    {
+      "requirement_id": "R04",
+      "scene_id": "SC04",
+      "quote": "Nói rõ ảnh hưởng: Mình chưa thể gửi khách vì cần đủ dữ liệu. Sau đó hỏi: Có phần nào đang khiến bạn gặp khó không?"
+    },
+    {
+      "requirement_id": "R05",
+      "scene_id": "SC05",
+      "quote": "Lắng nghe câu trả lời rồi thống nhất cách sửa: Bạn bổ sung trước ba giờ nhé, mình sẽ kiểm tra lại cùng bạn."
+    },
+    {
+      "requirement_id": "R06",
+      "scene_id": "SC06",
+      "quote": "Góp ý hiệu quả không phải thắng một cuộc tranh luận. Đó là giúp công việc tốt hơn, đồng thời để người đối diện có cơ hội sửa."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Nhận diện tình huống",
+      "requirements": [
+        "R01"
+      ],
+      "transition": "Tiếp tục theo trình tự nội dung"
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Nói riêng",
+      "requirements": [
+        "R02"
+      ],
+      "transition": "Tiếp tục theo trình tự nội dung"
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Mô tả hành vi",
+      "requirements": [
+        "R03"
+      ],
+      "transition": "Tiếp tục theo trình tự nội dung"
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Tác động và lắng nghe",
+      "requirements": [
+        "R04"
+      ],
+      "transition": "Tiếp tục theo trình tự nội dung"
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Giải pháp cụ thể",
+      "requirements": [
+        "R05"
+      ],
+      "transition": "Tiếp tục theo trình tự nội dung"
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Kết luận",
+      "requirements": [
+        "R06"
+      ],
+      "transition": "Tiếp tục theo trình tự nội dung"
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

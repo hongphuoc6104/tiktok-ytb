@@ -1,0 +1,98 @@
+{
+  "schema": "b2-trial-plan-1",
+  "status": "planned-not-generated",
+  "note": "Topics are fixtures only, not production defaults. Exact reference attachments required before dependent generation.",
+  "ratios": [
+    "9:16",
+    "16:9"
+  ],
+  "frames": [
+    {
+      "id": "A1",
+      "based_on": null,
+      "description": "One orange-shirt stick figure at left, empty table at right.",
+      "preserve": [],
+      "visible_text": []
+    },
+    {
+      "id": "A2",
+      "based_on": "A1",
+      "description": "Add two distinct stick figures at right; preserve original person and table.",
+      "preserve": [
+        "original person",
+        "table",
+        "camera",
+        "background"
+      ],
+      "visible_text": []
+    },
+    {
+      "id": "A3",
+      "based_on": "A2",
+      "description": "Add one blue cup on the table; preserve all three people.",
+      "preserve": [
+        "all people",
+        "table",
+        "camera",
+        "background"
+      ],
+      "visible_text": []
+    },
+    {
+      "id": "A4",
+      "based_on": "A3",
+      "description": "Add only the label cup below the blue cup.",
+      "preserve": [
+        "all people",
+        "cup",
+        "table",
+        "camera",
+        "background"
+      ],
+      "visible_text": [
+        "cup"
+      ]
+    },
+    {
+      "id": "B1",
+      "based_on": null,
+      "description": "Use the same orange-shirt character in a garden planting a tree.",
+      "preserve": [],
+      "visible_text": []
+    },
+    {
+      "id": "B2",
+      "based_on": "B1",
+      "description": "Add only the Vietnamese label cây beside the tree.",
+      "preserve": [
+        "person",
+        "tree",
+        "garden",
+        "camera"
+      ],
+      "visible_text": [
+        "cây"
+      ]
+    },
+    {
+      "id": "C1",
+      "based_on": null,
+      "description": "Two stick figures repair a bicycle in a workshop; no writing.",
+      "preserve": [],
+      "visible_text": []
+    },
+    {
+      "id": "C2",
+      "based_on": "C1",
+      "description": "Add a toolbox beside the bicycle; change nothing else.",
+      "preserve": [
+        "people",
+        "bicycle",
+        "workshop",
+        "camera"
+      ],
+      "visible_text": []
+    }
+  ],
+  "acceptance": "acceptance-matrix.md"
+}

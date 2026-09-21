@@ -16,18 +16,41 @@ const { CharacterPage } = await import(join(base, 'dist/src/flow/characters.js')
 const { runCli } = await import(join(base, 'dist/src/cli.js'));
 
 const args = process.argv.slice(2);
+let baseImage;
+if (args.includes('--base-image')) {
+  const index = args.indexOf('--base-image');
+  baseImage = resolve(args[index + 1]);
+  args.splice(index, 2);
+}
 const image = args[0] === 'image';
 const character = args[0] === 'character' && args[1] === 'create';
-if (!image && !character) throw Error('M2_POLICY: only image or character create allowed');
-const out = args[args.indexOf('--out') + 1];
-if (!out || !args.includes('--out')) throw Error('Output directory required');
-const evidenceDir = dirname(out);
-const proof = { mode: image ? 'image' : 'character-register', characters: [], passed: false };
-if (args.includes('--character')) {
+const batchMode = args[0] === 'batch';
+// `auth login` opens the sign-in window. It goes through this guard rather than
+// the bundled CLI because gflow's own login resolves only a --user-data-dir and
+// lets Chrome fall back to the `Default` profile inside it, while every image
+// runs with an explicit --profile-directory. Signing in there would have stored
+// the session in a different profile than the one that generates the images.
+const authMode = args[0] === 'auth' && args[1] === 'login';
+if (!image && !character && !batchMode && !authMode) throw Error('M2_POLICY: only image, character create, batch, or auth login allowed');
+const out = authMode ? null : args[args.indexOf('--out') + 1];
+if (!authMode && (!out || !args.includes('--out'))) throw Error('Output directory required');
+
+// Single-job invocations (image / character create) are today's only
+// production path: one fixed evidence location, exactly as before. `batch`
+// runs many jobs through this same process against one shared --out, so
+// each job needs its own evidence subdirectory instead -- `current` is
+// reassigned per job at the top of runJob() in that case (never null once a
+// job starts). Every place that used to read the old module-level `proof`/
+// `evidenceDir` now reads `current.proof`/`current.evidenceDir`.
+let current = (batchMode || authMode) ? null : {
+  proof: { mode: image ? 'image' : 'character-register', characters: [], passed: false },
+  evidenceDir: dirname(out),
+};
+if (!batchMode && !authMode && args.includes('--character')) {
   const charIdx = args.indexOf('--character');
   for (let i = charIdx + 1; i < args.length; i++) {
     if (args[i].startsWith('--')) break;
-    proof.characters.push(args[i]);
+    current.proof.characters.push(args[i]);
   }
 }
 
@@ -37,15 +60,24 @@ try {
   appConfig = JSON.parse(readFileSync(join(root, 'config.json'), 'utf8'));
 } catch {}
 
-// Determine profile directory & user-data-dir
-let targetProfile = 'Profile 1';
+// `--profile` means what it means in gflow itself: the name of the
+// user-data-dir under .gflow/profiles, NOT a Chrome --profile-directory.
+// This guard used to pass it straight through as --profile-directory, so
+// `gflow auth login --profile video-pilot` signed in to
+// .gflow/profiles/video-pilot/Default while every image ran from
+// .gflow/profiles/video-pilot/video-pilot -- two different profiles, and the
+// generating one was never signed in. Which Chrome profile inside the
+// user-data-dir to use is now its own config key, defaulting to `Default`
+// exactly as Chrome (and therefore gflow's own login) does.
+let flowProfile = 'video-pilot';
 if (args.includes('--profile')) {
-  targetProfile = args[args.indexOf('--profile') + 1];
+  flowProfile = args[args.indexOf('--profile') + 1];
 } else if (appConfig.flow_profile) {
-  targetProfile = appConfig.flow_profile;
+  flowProfile = appConfig.flow_profile;
 }
 
-const userDataDir = appConfig.flow_user_data_dir ? resolve(appConfig.flow_user_data_dir) : resolve(root, '.gflow/profiles/video-pilot');
+const userDataDir = appConfig.flow_user_data_dir ? resolve(appConfig.flow_user_data_dir) : resolve(root, '.gflow/profiles', flowProfile);
+const profileDirectory = appConfig.flow_profile_directory || 'Default';
 
 function getChromeBinary() {
   const candidates = [
@@ -59,6 +91,25 @@ function getChromeBinary() {
     if (existsSync(c)) return c;
   }
   return 'google-chrome';
+}
+
+// `auth login`: a plain sign-in window on the same user-data-dir AND the same
+// profile-directory the image path uses. No debugging port and no automation
+// flag -- Google rejects sign-in from automation-flagged browsers, which is why
+// gflow opens a plain window for this too.
+if (authMode) {
+  await fsPromises.mkdir(userDataDir, { recursive: true });
+  await fsPromises.rm(join(userDataDir, 'DevToolsActivePort'), { force: true });
+  const child = spawn(getChromeBinary(), [
+    `--user-data-dir=${userDataDir}`,
+    `--profile-directory=${profileDirectory}`,
+    '--no-first-run',
+    '--no-default-browser-check',
+    'https://flow.google.com/'
+  ], { detached: true, stdio: 'ignore' });
+  child.unref();
+  console.log(JSON.stringify({ opened: true, user_data_dir: userDataDir, profile_directory: profileDirectory }));
+  process.exit(0);
 }
 
 // 1. Ensure Chrome is running with target profile
@@ -75,13 +126,13 @@ async function ensureChromeRunning() {
   }
 
   if (!isAlive) {
-    console.error(`gflow-guard: starting Chrome with ${targetProfile} on ${userDataDir}...`);
+    console.error(`gflow-guard: starting Chrome with profile-directory ${profileDirectory} on ${userDataDir}...`);
     await fsPromises.mkdir(userDataDir, { recursive: true });
     await fsPromises.rm(portFile, { force: true });
     const chromeBin = getChromeBinary();
     const child = spawn(chromeBin, [
       `--user-data-dir=${userDataDir}`,
-      `--profile-directory=${targetProfile}`,
+      `--profile-directory=${profileDirectory}`,
       '--remote-debugging-port=0',
       '--remote-allow-origins=*',
       '--no-first-run',
@@ -178,7 +229,7 @@ FlowPage.prototype.applySettings = async function(job) {
       !(selection.includes(job.ratio) || labels.includes(ratioIcon)) || !/\bx1\b/.test(labels)) {
     throw Error('M2_PREFLIGHT: cannot verify image/model/ratio/output count from the live UI');
   }
-  proof.settings = observed;
+  current.proof.settings = observed;
   const save = page.getByRole('button', {name: 'Save', exact: true});
   if (await save.count()) await save.first().click();
 
@@ -198,11 +249,11 @@ FlowPage.prototype.fillPrompt = async function(prompt) {
 };
 
 FlowPage.prototype.submit = async function() {
-  if (!proof.settings) throw Error('Settings evidence missing');
-  await this.page.screenshot({ path: join(evidenceDir, 'before-submit.png') });
-  proof.passed = true;
-  proof.flow_url = this.page.url();
-  writeFileSync(join(evidenceDir, 'ui-proof.json'), JSON.stringify(proof, null, 2));
+  if (!current.proof.settings) throw Error('Settings evidence missing');
+  await this.page.screenshot({ path: join(current.evidenceDir, 'before-submit.png') });
+  current.proof.passed = true;
+  current.proof.flow_url = this.page.url();
+  writeFileSync(join(current.evidenceDir, 'ui-proof.json'), JSON.stringify(current.proof, null, 2));
 
   await this.page.evaluate(() => {
     const btn = document.querySelector('button[aria-label="Start generation"], .generate-icon-button') ||
@@ -222,12 +273,29 @@ FlowPage.prototype.resultSrcs = async function(type) {
 };
 
 FlowPage.prototype.runJob = async function(input) {
+  const job = input.job;
+  const outDir = input.outDir;
+
+  // Batch jobs run strictly sequentially (see gflow-cli's runJobs: a plain
+  // for-await loop), so it is safe to give each job its own evidence
+  // directory by simply reassigning this shared, module-level pointer right
+  // before the job starts -- the previous job's submit()/applySettings()
+  // calls have already fully completed and written their files by now.
+  // image_pipeline.py's batch path reads a job's evidence at
+  // <outDir>/.evidence/<job.id>/ (a `--base-image` equivalent for a batched
+  // job is carried in `ingredients[0]`, resolved to an absolute path by
+  // Python before the job is written to the jobs file).
+  if (batchMode) {
+    const jobEvidenceDir = resolve(outDir, '.evidence', job.id);
+    await fsPromises.mkdir(jobEvidenceDir, { recursive: true });
+    current = { proof: { mode: 'image', characters: job.character || [], passed: false }, evidenceDir: jobEvidenceDir };
+  }
+  const jobBaseImage = batchMode ? (job.ingredients && job.ingredients[0] ? resolve(job.ingredients[0]) : null) : baseImage;
+
   const context = this.page.context();
   const workerPage = await context.newPage();
   this.page = workerPage;
   const page = workerPage;
-  const job = input.job;
-  const outDir = input.outDir;
 
   try {
     // 1. Navigate to project
@@ -247,6 +315,20 @@ FlowPage.prototype.runJob = async function(input) {
       await this.referenceCharacter(name);
       const attached = await page.locator('.prompt-input, form, [data-prompt-container]').filter({hasText: name}).count();
       if (!attached) throw Error('Character attachment cannot be verified: ' + name);
+    }
+
+    if (jobBaseImage) {
+      const {uploadMedia} = await import(join(base, 'dist/src/flow/ui.js'));
+      await uploadMedia(page, /upload|add/i, jobBaseImage);
+      // Require an observed attachment; never infer success from the requested path.
+      const fileName = jobBaseImage.split('/').pop();
+      const attached = page.locator('.prompt-input, form, [data-prompt-container]').getByText(fileName, {exact: true});
+      if (!await attached.count()) throw Error('M2_BASE_IMAGE: cannot verify uploaded image in prompt UI');
+      for (const name of job.character || []) {
+        const characterStillAttached = await page.locator('.prompt-input, form, [data-prompt-container]').filter({hasText: name}).count();
+        if (!characterStillAttached) throw Error('Character reference lost after base image upload: ' + name);
+      }
+      current.proof.base_image = jobBaseImage;
     }
 
     // 5. Submit & record evidence
@@ -306,7 +388,7 @@ FlowPage.prototype.runJob = async function(input) {
         ratio: job.ratio,
         requestedOutputs: job.outputs,
         quality: 'original',
-        characters: job.character?.length ? job.character : (proof.characters || []),
+        characters: job.character?.length ? job.character : (current.proof.characters || []),
         downloadedAt: new Date().toISOString(),
         source: 'google-flow-browser',
         flowUrl: page.url(),
@@ -328,10 +410,12 @@ const originalCharacterCheck = CharacterPage.prototype.assertNotBlocked;
 CharacterPage.prototype.assertNotBlocked = async function() {
   await originalCharacterCheck.call(this);
   if (!/\/character(?:s)?(?:[/?#]|$)/.test(this.page.url())) throw Error('Character page not verified');
-  await this.page.screenshot({ path: join(evidenceDir, 'before-submit.png') });
-  proof.passed = true;
-  proof.flow_url = this.page.url();
-  writeFileSync(join(evidenceDir, 'ui-proof.json'), JSON.stringify(proof, null, 2));
+  // Character creation is never part of a batch (imageJobSchema only), so
+  // `current` is always the single-job context here.
+  await this.page.screenshot({ path: join(current.evidenceDir, 'before-submit.png') });
+  current.proof.passed = true;
+  current.proof.flow_url = this.page.url();
+  writeFileSync(join(current.evidenceDir, 'ui-proof.json'), JSON.stringify(current.proof, null, 2));
 };
 
 process.exitCode = await runCli(['node', 'gflow', ...args]);

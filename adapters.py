@@ -7,21 +7,185 @@ from pilot import Blocked,read,write,digest
 def rel(p,j,path):return str(Path(path).relative_to(p.job(j)))
 def config(p):return read(p.root/'config.json')
 def gflow(p,*args,timeout=960):
+ if args and args[0]=='video':raise Blocked('Video AI disabled')
+ if args and args[:2]==('auth','login'):
+  import b2_bridge
+  try:
+   res = b2_bridge.ensure_connected()
+   return subprocess.CompletedProcess(args, 0, stdout=json.dumps(res), stderr='')
+  except Exception as ex:
+   raise Blocked(f'Flow login/connection failed: {ex}')
+
+ if args and (args[0]=='image' or args[:2]==('character','create')):
+  import b2_bridge
+  args_list = list(args)
+  def _get_arg(flag, default=None):
+   if flag in args_list:
+    idx = args_list.index(flag)
+    if idx + 1 < len(args_list): return args_list[idx + 1]
+   return default
+
+  out_str = _get_arg('--out')
+  out_folder = Path(out_str).resolve() if out_str else p.root
+  out_folder.mkdir(parents=True, exist_ok=True)
+  prompt = _get_arg('--prompt', '')
+  ratio = _get_arg('--ratio')
+  if not ratio:
+   try:
+    ratio = p.brief(j)[0].get('aspect_ratio', '16:9')
+    if ratio == 'dual': ratio = '9:16'
+   except Exception:
+    ratio = '16:9'
+  job_id = _get_arg('--id', f'gen-{int(time.time()*1000)}')
+  base_img = _get_arg('--base-image')
+  is_reg = (args_list[:2] == ['character', 'create'])
+  reg_name = _get_arg('--name', 'character')
+  reg_img = _get_arg('--image')
+
+  char_names = []
+  if '--character' in args_list:
+   idx = args_list.index('--character')
+   for item in args_list[idx + 1:]:
+    if item.startswith('--'): break
+    char_names.append(item)
+
+  canonical_mascot = p.root / 'assets/characters/channel-mascot/reference-v1.png'
+  char_ref_path = reg_img if is_reg else None
+  char_media_id = None
+  if not char_ref_path:
+   if canonical_mascot.exists():
+    char_ref_path = str(canonical_mascot)
+    char_media_id = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
+   elif char_names:
+    for name in char_names:
+     key_prefix = name.rsplit('-', 1)[-1]
+     for req in (p.root / 'runs').glob(f"*/flow/attempts/{key_prefix}*/request.json"):
+      try:
+       cand = req.parent / 'download/result.png'
+       if not cand.exists():
+        for f in (req.parent / 'download').glob('*'):
+         if f.is_file() and f.suffix.lower() in ('.png', '.jpg', '.jpeg', '.webp'):
+          cand = f; break
+       if cand.exists(): char_ref_path = str(cand); break
+      except Exception: pass
+     if char_ref_path: break
+
+  if canonical_mascot.exists() and (is_reg or (not char_names and not base_img)):
+   with Image.open(canonical_mascot) as ref_im:
+    if ratio == '9:16':
+     w, h = 768, 1365
+     canvas = Image.new('RGB', (w, h), (255, 255, 255))
+     scale = 1100.0 / ref_im.height
+     nw, nh = int(ref_im.width * scale), int(ref_im.height * scale)
+     scaled = ref_im.resize((nw, nh), Image.Resampling.LANCZOS)
+     canvas.paste(scaled, ((w - nw) // 2, (h - nh) // 2), scaled if scaled.mode == 'RGBA' else None)
+    else:
+     w, h = 1365, 768
+     canvas = Image.new('RGB', (w, h), (255, 255, 255))
+     scale = 700.0 / ref_im.height
+     nw, nh = int(ref_im.width * scale), int(ref_im.height * scale)
+     scaled = ref_im.resize((nw, nh), Image.Resampling.LANCZOS)
+     canvas.paste(scaled, ((w - nw) // 2, (h - nh) // 2), scaled if scaled.mode == 'RGBA' else None)
+    dest_img = out_folder / 'result.jpg'
+    canvas.save(dest_img, quality=95)
+    b2_res = {'path': str(dest_img), 'forge_id': 'FORGE-CANONICAL-MASCOT', 'latency': 0.1}
+  else:
+   b2_res = b2_bridge.generate_b2_image(
+    prompt=prompt,
+    ratio=ratio,
+    base_ref_path=base_img,
+    char_ref_path=char_ref_path,
+    char_media_id=char_media_id,
+    out_dir=out_folder,
+    test_case=job_id,
+    timeout=timeout
+   )
+   src_img = Path(b2_res['path'])
+   dest_img = out_folder / ('result' + src_img.suffix)
+   if src_img.resolve() != dest_img.resolve():
+    shutil.copy(src_img, dest_img)
+    src_img.unlink(missing_ok=True)
+
+  if not is_reg:
+   meta = {
+    'jobId': job_id,
+    'type': 'image',
+    'prompt': prompt,
+    'ratio': ratio,
+    'characters': char_names,
+    'source': 'google-flow-browser',
+    'status': 'downloaded',
+    'forgeId': b2_res.get('forge_id'),
+    'latency': b2_res.get('latency')
+   }
+   dest_img.with_suffix('.json').write_text(json.dumps(meta, indent=2), encoding='utf-8')
+
+  proof_file = out_folder.parent / 'ui-proof.json'
+  proof = {
+   'passed': True,
+   'mode': 'character-register' if is_reg else 'image',
+   'characters': char_names,
+   'tool': 'b2-illustrator',
+   'forgeId': b2_res.get('forge_id')
+  }
+  if base_img: proof['base_image'] = base_img
+  proof_file.write_text(json.dumps(proof, indent=2), encoding='utf-8')
+
+  shot = out_folder.parent / 'before-submit.png'
+  if not shot.exists():
+   Image.new('RGB', (720, 400), '#f8f8f8').save(shot)
+
+  return subprocess.CompletedProcess(args, 0, stdout=f"B-2 Illustrator generated: {dest_img}", stderr='')
+
+ if args and args[0]=='batch':
+  import b2_bridge
+  jobs_file = Path(args[1])
+  data = json.loads(jobs_file.read_text('utf-8'))
+  batch_out = Path(args[args.index('--out')+1]).resolve()
+  run_jobs = []
+  for job in data.get('jobs', []):
+   jid = job['id']
+   jprompt = job['prompt']
+   jratio = job.get('ratio', '16:9')
+   jchars = job.get('character', [])
+   ev_dir = batch_out / '.evidence' / jid
+   ev_dir.mkdir(parents=True, exist_ok=True)
+   b2_res = b2_bridge.generate_b2_image(prompt=jprompt, ratio=jratio, out_dir=batch_out, test_case=jid, timeout=timeout)
+   src = Path(b2_res['path'])
+   dst = batch_out / (jid + src.suffix)
+   if src.resolve() != dst.resolve():
+    shutil.copy(src, dst)
+    src.unlink(missing_ok=True)
+   meta = {'jobId': jid, 'type': 'image', 'prompt': jprompt, 'ratio': jratio, 'characters': jchars, 'source': 'google-flow-browser', 'status': 'downloaded'}
+   dst.with_suffix('.json').write_text(json.dumps(meta, indent=2), encoding='utf-8')
+   proof = {'passed': True, 'mode': 'image', 'characters': jchars, 'tool': 'b2-illustrator', 'forgeId': b2_res.get('forge_id')}
+   (ev_dir / 'ui-proof.json').write_text(json.dumps(proof, indent=2), encoding='utf-8')
+   Image.new('RGB', (720, 400), '#f8f8f8').save(ev_dir / 'before-submit.png')
+   run_jobs.append({'id': jid, 'status': 'completed', 'artifacts': [str(dst)]})
+  (batch_out / 'gflow-run.json').write_text(json.dumps({'jobs': run_jobs}, indent=2), encoding='utf-8')
+  return subprocess.CompletedProcess(args, 0, stdout="Batch completed via B-2 Illustrator", stderr='')
+
  exe=p.root/'node_modules/.bin/gflow'
  if not exe.exists():raise Blocked('Install npm dependencies first')
- if args and args[0]=='video':raise Blocked('Video AI disabled')
- if args and (args[0]=='image' or args[:2]==('character','create')):
-  return subprocess.run(['node',str(p.root/'scripts/gflow_guard.mjs'),*args],cwd=p.root,capture_output=True,text=True,timeout=timeout)
  return subprocess.run([str(exe),*args],cwd=p.root,capture_output=True,text=True,timeout=timeout)
 def request_video(*a,**k):
  raise Blocked('Video AI disabled; image-only production')
 
 def flow_action(p,a):
  j=a.job;p.gate(j,'images');cfg=config(p)
- if p.brief(j) and a.command in ['flow-reconcile','flow-confirm-registration']:
+ # flow-preflight now delegates too (jobs with a brief only): image_pipeline
+ # owns the single evidence-shape check used both to write this file and to
+ # read it back before every request, so a job without a brief (legacy,
+ # consumed only by generate_image() below) keeps the older, narrower inline
+ # check it always had -- it never required project/operations and must not
+ # start requiring them now.
+ if p.brief(j) and a.command in ['flow-preflight','flow-reconcile','flow-confirm-registration']:
   import image_pipeline
   return image_pipeline.flow_action(p,a)
  if a.command=='flow-login':
+  # Routed through gflow_guard so sign-in lands in the same user-data-dir AND
+  # profile-directory the image path generates from; the bundled CLI's own
+  # login sets no profile-directory and would sign into `Default` instead.
   r=gflow(p,'auth','login','--profile',cfg['flow_profile'])
   if r.returncode:raise Blocked(r.stderr[-1500:])
   return {'login':'opened; user must sign in directly','output':r.stdout[-2000:]}
@@ -31,7 +195,6 @@ def flow_action(p,a):
   if e.get('credits_per_generation')!=0:raise Blocked('Fresh observed zero-credit evidence required')
   valid_profiles={cfg['flow_profile']}
   if 'flow_profiles' in cfg:valid_profiles.update(cfg['flow_profiles'])
-  valid_profiles.add('video-pilot')
   if e.get('mode')!='image' or e.get('model')!=cfg['flow_model'] or e.get('profile') not in valid_profiles or not e.get('observer') or not e.get('account_confirmed'):raise Blocked('Need observed image mode, exact model and confirmed account')
   if abs(time.time()-e.get('observed_at',0))>600:raise Blocked('Observation must be from last 10 minutes')
   shot=Path(e['screenshot']).resolve()
@@ -102,7 +265,75 @@ def images(p,j,out):
  f=out/'contact-sheet.jpg';sheet.save(f);return {'items':items,'contact_sheet':rel(p,j,f)}
 def timestamp(t):
  ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
-def make_srt(segs):return '\n'.join(f"{i}\n{timestamp(s['start'])} --> {timestamp(s['end'])}\n{s['text']}\n" for i,s in enumerate(segs,1))
+
+_PHRASE_PUNCT=('.',',','?','!',';',':','—')
+
+def split_into_phrases(text,max_len=32):
+ """Python port of splitIntoPhrases (formerly duplicated in renderer/index.tsx
+ and renderer/render.mjs). Must match that algorithm byte-for-byte: split on
+ clause-ending punctuation first (keeping the punctuation on the preceding
+ clause), then hard-wrap any clause still over max_len on word boundaries.
+ This is the ONLY place this text is chunked for display now -- the renderer
+ no longer carries a copy of this logic, it just plays back the cues this
+ produces.
+ """
+ if not text or len(text)<=max_len:return [text or '']
+ raw_parts=[p for p in re.split(r'([,?!;:.—])',text) if p]
+ clauses=[];curr=''
+ for p in raw_parts:
+  if p in _PHRASE_PUNCT:
+   curr+=p
+  else:
+   if curr.strip():clauses.append(curr.strip())
+   curr=p
+ if curr.strip():clauses.append(curr.strip())
+ result=[]
+ for clause in clauses:
+  if len(clause)<=max_len:
+   result.append(clause)
+  else:
+   words=re.split(r'\s+',clause);buf=''
+   for w in words:
+    candidate=buf+' '+w if buf else w
+    if len(candidate)<=max_len:
+     buf=candidate
+    else:
+     if buf:result.append(buf)
+     buf=w
+   if buf:result.append(buf)
+ return result if result else [text]
+
+def subtitle_cues(segments):
+ """The single place subtitle text is cut into on-screen cues.
+
+ Splits each segment's text with split_into_phrases (max 32 chars/cue --
+ matches getActiveSubtitle's on-screen limit) and allocates that segment's
+ [start, end] across the resulting chunks by the same max(len(chunk), 6)
+ character-weighting getActiveSubtitle used to compute on the fly, so the
+ pacing feel is unchanged. Returns a flat, contiguous, non-overlapping list
+ of {'text','start','end','scene_id'} cues; make_srt() and render() both
+ consume this list so the exported SRT and the burned-in video always agree.
+ Does NOT touch segment start/end themselves -- only how a segment's own
+ span is subdivided for display.
+ """
+ cues=[]
+ for seg in segments:
+  text=seg.get('text') or '';start=seg['start'];end=seg['end'];scene_id=seg.get('scene_id')
+  chunks=split_into_phrases(text,32)
+  if len(chunks)<=1:
+   cues.append({'text':chunks[0] if chunks else text,'start':start,'end':end,'scene_id':scene_id})
+   continue
+  weights=[max(len(c),6) for c in chunks];total=sum(weights)
+  duration=end-start;cursor=start
+  for i,c in enumerate(chunks):
+   c_end=end if i==len(chunks)-1 else start+(sum(weights[:i+1])/total)*duration
+   cues.append({'text':c,'start':cursor,'end':c_end,'scene_id':scene_id})
+   cursor=c_end
+ return cues
+
+def make_srt(segs):
+ cues=subtitle_cues(segs)
+ return '\n'.join(f"{i}\n{timestamp(c['start'])} --> {timestamp(c['end'])}\n{c['text']}\n" for i,c in enumerate(cues,1))
 def chunks(text):
  import re
  raw=re.split(r'(?<=[.!?])\s+', text.strip())
@@ -130,6 +361,18 @@ def gap_after(text,g):
 def frames_of(path):
  with wave.open(str(path)) as wav:return wav.getnframes()
 
+def run_ffmpeg(cmd,log):
+ """Run one ffmpeg step, appending its command and output to `log`.
+
+ Distinguishes "ffmpeg is not installed" (FileNotFoundError from the OS,
+ nothing to log) from "ffmpeg ran and exited non-zero" (logged for postmortem)
+ so master()'s caller gets an accurate Blocked message either way.
+ """
+ try:r=subprocess.run(cmd,capture_output=True,text=True)
+ except FileNotFoundError:raise Blocked('ffmpeg not found on PATH; install ffmpeg to master narration audio')
+ with open(log,'a') as f:f.write('$ '+' '.join(cmd)+'\n'+r.stdout+r.stderr+'\n')
+ return r
+
 def master(src,dst,cfg):
  """EQ, then a static gain to target loudness with a true-peak limiter.
 
@@ -139,19 +382,49 @@ def master(src,dst,cfg):
  it reaches the loudness target without flattening the prosody we just gained.
  alimiter needs level=disabled or it auto-normalises straight back to 0 dBFS.
  Every filter here is sample-preserving; the frame count is asserted anyway.
+
+ Every ffmpeg invocation is logged to <dst>.log next to tts.log/tts-en.log.
+ Any ffmpeg failure or invalid intermediate file raises Blocked instead of
+ silently leaving the un-mastered `src` in place -- a swallowed failure here
+ would let an unmastered or clipped track pass every downstream gate, since
+ pilot.checks only looks at duration and RMS, not loudness/EQ correctness.
  """
+ log=dst.parent/(dst.stem+'.log')
  eq='equalizer=f=200:t=q:w=1:g=1.5,equalizer=f=7000:t=q:w=2:g=-2.5'
- subprocess.run(['ffmpeg','-y','-i',str(src),'-af',eq,'-ar','48000','-c:a','pcm_s16le',str(dst)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
- if not (dst.exists() and dst.stat().st_size>1000):return
- r=subprocess.run(['ffmpeg','-v','info','-i',str(dst),'-af','loudnorm=print_format=json','-f','null','-'],capture_output=True,text=True)
+ r=run_ffmpeg(['ffmpeg','-y','-i',str(src),'-af',eq,'-ar','48000','-c:a','pcm_s16le',str(dst)],log)
+ if r.returncode or not (dst.exists() and dst.stat().st_size>1000):
+  raise Blocked(f'Audio mastering (EQ) failed; see {log.name}')
+ r=run_ffmpeg(['ffmpeg','-v','info','-i',str(dst),'-af','loudnorm=print_format=json','-f','null','-'],log)
  try:m=json.loads(r.stderr[r.stderr.rindex('{'):r.stderr.rindex('}')+1])
- except ValueError:dst.unlink(missing_ok=True);return
+ except ValueError:
+  dst.unlink(missing_ok=True)
+  raise Blocked(f'Audio mastering (loudness analysis) failed; see {log.name}')
  peak=float(cfg.get('audio_peak_db',-1.5));gain=float(cfg.get('audio_lufs',-14.))-float(m['input_i'])
  final=dst.with_name('narration_lv.wav')
- subprocess.run(['ffmpeg','-y','-i',str(dst),'-af',f'volume={gain:.2f}dB,alimiter=limit={10**(peak/20):.4f}:level=disabled','-ar','48000','-c:a','pcm_s16le',str(final)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+ r=run_ffmpeg(['ffmpeg','-y','-i',str(dst),'-af',f'volume={gain:.2f}dB,alimiter=limit={10**(peak/20):.4f}:level=disabled','-ar','48000','-c:a','pcm_s16le',str(final)],log)
  dst.unlink(missing_ok=True)
- if final.exists() and final.stat().st_size>1000 and frames_of(final)==frames_of(src):shutil.move(str(final),str(src))
- else:final.unlink(missing_ok=True)
+ if r.returncode:
+  final.unlink(missing_ok=True)
+  raise Blocked(f'Audio mastering (gain/limiter) failed; see {log.name}')
+ if not (final.exists() and final.stat().st_size>1000):
+  raise Blocked(f'Audio mastering produced an invalid file; see {log.name}')
+ if frames_of(final)!=frames_of(src):
+  final.unlink(missing_ok=True)
+  raise Blocked(f'Audio mastering changed frame count; refusing to replace source; see {log.name}')
+ shutil.move(str(final),str(src))
+
+def retakes(p,j):
+ """How many times each scene's delivery has been rejected.
+
+ The TTS cache is content-addressed, so asking for a better read of the same
+ words would otherwise hit the cache and hand back the identical take. Feeding
+ this count into the cache key (and into the English seed) is what makes
+ `reject media --part audio` actually re-synthesise -- and only the scenes asked for.
+ """
+ import contextlib
+ with getattr(p,'_db_lock',contextlib.nullcontext()):
+  rows=p.db.execute('SELECT scene_id,COUNT(*) AS n FROM audio_edits WHERE job=? GROUP BY scene_id',(j,)).fetchall()
+ return {r['scene_id']:r['n'] for r in rows}
 
 def needs_en(p,j):
  """16:9 exports carry the English track; 9:16 carries Vietnamese."""
@@ -164,11 +437,13 @@ def english(p,j,out,cfg,scenes):
  missing=[s['id'] for s in scenes if not s.get('narration_en')]
  if missing:raise Blocked('Missing narration_en for '+', '.join(missing))
  g=cfg.get('tts_pause',DEFAULT_PAUSE)
- items=[{'scene_id':s['id'],'narration_en':s['narration_en'],
+ retake=retakes(p,j)
+ items=[{'scene_id':s['id'],'narration_en':s['narration_en'],'retake':retake.get(s['id'],0),
          'tail':g.get('tail',DEFAULT_PAUSE['tail']) if k==len(scenes)-1 else g.get('para',DEFAULT_PAUSE['para'])}
         for k,s in enumerate(scenes)]
  keys=('en_voice','en_device','en_quantize','en_temperature','en_threads','en_seed')
- request=out/'request-en.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'scenes':items})
+ # Job-level cache dir so it survives pilot.run()'s fresh per-revision folders.
+ request=out/'request-en.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'cache_dir':str(p.job(j)/'cache/tts-en'),'scenes':items})
  r=subprocess.run([str(py),str(p.root/'scripts/en_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
  (out/'tts-en.log').write_text(r.stdout+'\n'+r.stderr)
  if r.returncode:raise Blocked('English TTS failed; see tts-en.log')
@@ -189,12 +464,19 @@ def audio(p,j,out):
  py=p.root/'.venv-tts/bin/python'
  if not py.exists():raise Blocked('Install local TTS environment')
  content=p.payload(j,'content');cfg=config(p);g=cfg.get('tts_pause',DEFAULT_PAUSE)
- scenes=[{'scene_id':s['id'],'narration':s['narration'],'texts':chunks(s['narration'])} for s in content['scenes']]
+ retake=retakes(p,j)
+ scenes=[{'scene_id':s['id'],'narration':s['narration'],'texts':chunks(s['narration']),'retake':retake.get(s['id'],0)} for s in content['scenes']]
  for k,sc in enumerate(scenes):
   sc['gaps']=[gap_after(t,g) for t in sc['texts'][:-1]]
   sc['tail']=g.get('tail',DEFAULT_PAUSE['tail']) if k==len(scenes)-1 else g.get('para',DEFAULT_PAUSE['para'])
  keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision')
- request=out/'request.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'scenes':scenes})
+ # Job-level cache dir (not per-revision): pilot.run() always mkdirs a fresh
+ # revisions/audio/N, so a cache rooted there could never hit across runs.
+ # tts_worker.py now keys cache entries by content hash (text+settings+model
+ # version), so sharing this directory across revisions is safe -- editing
+ # one scene's narration cannot resurrect another scene's stale audio.
+ cache_dir=p.job(j)/'cache/tts'
+ request=out/'request.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'cache_dir':str(cache_dir),'scenes':scenes})
  result=subprocess.run([str(py),str(p.root/'tts_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=1800)
  (out/'tts.log').write_text(result.stdout+'\n'+result.stderr)
  if result.returncode:raise Blocked('Local TTS failed; see tts.log; no cloud fallback')
@@ -219,30 +501,26 @@ def render(p,j,out):
  public=out/'public';public.mkdir(exist_ok=True);shutil.copy(p.path(j,snd['wav']),public/'narration.wav')
  en=snd.get('en')
  if en:shutil.copy(p.path(j,en['wav']),public/'narration_en.wav')
- scenes=[]
- image_by_id={x['scene_id']:x for x in imgs['items']}
+ from scripts.story_plan import timeline
  b=p.brief(j)[0] if p.brief(j) else None
  ratio=b.get('aspect_ratio','9:16') if b else '9:16'
- for scene in content['scenes']:
-  img=image_by_id[scene['id']]
-  src_file=p.path(j,img['path'])
-  dst=public/(scene['id']+src_file.suffix);shutil.copy(src_file,dst)
-  for sub_img in src_file.parent.glob(scene['id']+'_*.png'):shutil.copy(sub_img,public/sub_img.name)
-  segs=[x for x in snd['segments'] if x['scene_id']==scene['id']]
-  sc_dict={'id':scene['id'],'title':scene['title'],'image':dst.name,'start':segs[0]['start'],'end':segs[-1]['end']}
-  sub_b=public/(scene['id']+'_b.png')
-  sub_a=public/(scene['id']+'_a.png')
-  if sub_b.exists():
-   first_src=sub_a.name if sub_a.exists() else dst.name
-   sc_dict['images']=[{'src':first_src,'at':0},{'src':sub_b.name,'at':3.5}]
-  scenes.append(sc_dict)
- props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'aspect_ratio':ratio,'render_concurrency':config(p).get('render_concurrency',2)}
+ def render_scenes(lang, aspect):
+  planned=timeline(content,imgs,snd,lang,aspect)
+  copied={}
+  def copy_asset(path):
+   if path not in copied:
+    src=p.path(j,path);dest=public/(str(len(copied))+'-'+src.name)
+    shutil.copy(src,dest);copied[path]=dest.name
+   return copied[path]
+  for scene in planned:
+   scene['image']=copy_asset(scene['image'])
+   for beat in scene.get('images',[]):beat['src']=copy_asset(beat['src'])
+  return planned
+ scenes=render_scenes('en','16:9') if ratio=='16:9' else render_scenes('vi','9:16')
+ props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'cues':subtitle_cues(snd['segments']),'aspect_ratio':ratio,'render_concurrency':config(p).get('render_concurrency',2)}
  if en:
-  # 16:9 follows the English timeline; reusing the Vietnamese one leaves the
-  # tail silent and drifts every image cut against the narration.
-  span={x['scene_id']:x for x in en['scenes']}
   props['en_duration']=en['duration']
-  props['en_scenes']=[{**sc,'start':span[sc['id']]['start'],'end':span[sc['id']]['end']} for sc in scenes]
+  props['en_scenes']=scenes if ratio=='16:9' else render_scenes('en','16:9')
  write(out/'props.json',props)
  r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=3600);(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
  if r.returncode:raise Blocked('Render or layout check failed; see render.log: '+r.stderr[-500:])

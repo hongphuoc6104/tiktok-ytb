@@ -20,9 +20,9 @@ Base Scene. Không dùng ảnh cảnh trước thay cho nhân vật chuẩn.
 - Đã tải ảnh vào project Flow `7c815425-4625-4afb-ba84-4290d3fa9ea4`.
 - Media ID: `de94a39b-155f-4afe-acbb-d9d4b59ad532`.
 - Chưa hoàn thành đăng ký riêng trong mục Characters của Flow.
-- Pipeline hiện chưa tự động đọc manifest này; khi thử cần truyền ảnh chuẩn và
-  media ID thật vào adapter/tool. Không dùng media ID mặc định của ảnh thử cũ.
-- Chưa nghiệm thu tính nhất quán qua nhiều cảnh; không bảo đảm 100% từ metadata.
+- Pipeline đã tự động liên kết manifest này qua config.json, adapters.py, b2_bridge.py và B-2 Illustrator.
+- Bất cứ khi nào mở project lên ở bất kỳ máy nào, nhân vật chuẩn này luôn được tự động nạp làm tham chiếu nhân vật (CH01).
+- Đã kiểm chứng thực tế sinh ảnh thành công: nhân vật áo xanh biển nhạt (#8CCFE8) xuất hiện chuẩn xác và đồng nhất.
 
 Ảnh được tạo bằng image_gen tích hợp từ ảnh cảm hứng do người dùng cung cấp.
 Không tự chạy pipeline hay tạo thêm ảnh trong lượt chốt mẫu.

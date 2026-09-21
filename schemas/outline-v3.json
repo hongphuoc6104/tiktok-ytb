@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "properties": {
+    "outline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requirements": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "transition": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "scene_id",
+          "purpose",
+          "requirements",
+          "transition"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "outline"
+  ],
+  "additionalProperties": false
+}

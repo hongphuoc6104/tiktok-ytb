@@ -1,0 +1,295 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "video_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "duration": {
+      "type": "object",
+      "properties": {
+        "min_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "max_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "min_seconds",
+        "max_seconds"
+      ],
+      "additionalProperties": false
+    },
+    "scene_count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "required_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "text"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tone": {
+      "type": "string",
+      "minLength": 1
+    },
+    "style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aspect_ratio": {
+      "enum": [
+        "9:16",
+        "16:9",
+        "dual"
+      ]
+    },
+    "facts_required": {
+      "type": "boolean"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "facts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "reference",
+          "facts"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "planning": {
+      "type": "object",
+      "properties": {
+        "success_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "avoid": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "prior_knowledge": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pacing": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domain_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "text_style": {
+          "type": "object",
+          "properties": {
+            "font": {
+              "type": "string",
+              "minLength": 1
+            },
+            "color": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            },
+            "outline": {
+              "type": "string",
+              "minLength": 1
+            },
+            "size": {
+              "type": "string",
+              "minLength": 1
+            },
+            "placement": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "font",
+            "color",
+            "outline",
+            "size",
+            "placement"
+          ],
+          "additionalProperties": false
+        },
+        "speech_rates": {
+          "type": "object",
+          "properties": {
+            "vi": {
+              "type": "object",
+              "properties": {
+                "units_per_second": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "uncertainty": {
+                  "type": "number",
+                  "minimum": 0.05,
+                  "maximum": 0.5
+                },
+                "source": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "includes_pauses": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "units_per_second",
+                "uncertainty",
+                "source"
+              ],
+              "additionalProperties": false
+            },
+            "en": {
+              "type": "object",
+              "properties": {
+                "units_per_second": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "uncertainty": {
+                  "type": "number",
+                  "minimum": 0.05,
+                  "maximum": 0.5
+                },
+                "source": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "includes_pauses": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "units_per_second",
+                "uncertainty",
+                "source"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "vi",
+            "en"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "success_criteria",
+        "avoid",
+        "prior_knowledge",
+        "pacing",
+        "domain_requirements",
+        "assumptions",
+        "text_style",
+        "speech_rates"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "topic",
+    "audience",
+    "goal",
+    "video_type",
+    "duration",
+    "scene_count",
+    "required_points",
+    "language",
+    "tone",
+    "style",
+    "aspect_ratio",
+    "facts_required",
+    "sources",
+    "planning"
+  ],
+  "additionalProperties": false
+}

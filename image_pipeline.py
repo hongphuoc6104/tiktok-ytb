@@ -23,12 +23,25 @@ def setup(p):
 
 def content(p, j):
     c = p.payload(j, 'content')
-    if c.get('schema_version') != '2.0':
+    if c.get('schema_version') not in ('2.0', '3.0'):
         raise Blocked('M2_CONTENT: create a v2 content job; legacy history is read-only')
     import re
     if any(not re.fullmatch(r'[A-Za-z0-9_-]+', x['id']) for x in c['characters']):
         raise Blocked('M2_CHARACTER_ID: use safe alphanumeric character IDs')
     return c
+
+
+def planned_units(p, j):
+    from scripts.story_plan import image_units, text_prompt
+    c = content(p,j)
+    units = image_units(c)
+    if c.get('schema_version') != '3.0': return units
+    brief = p.brief(j)[0]
+    ratios = ['9:16','16:9'] if brief['aspect_ratio']=='dual' else [brief['aspect_ratio']]
+    return [dict(u, id=u['id']+'_'+ratio.replace(':','x'), image_id=u['id'], ratio=ratio,
+                 based_on=(u['based_on']+'_'+ratio.replace(':','x')) if u['based_on'] else None,
+                 prompt=text_prompt(u['prompt'],u['visible_text'],brief['planning']['text_style']))
+            for u in units for ratio in ratios]
 
 
 def edits(p, j, target):
@@ -78,23 +91,113 @@ def describe(p, j):
                           'complete': 'Images approved; audio may proceed'}[s]}
 
 
+def _preflight_problems(cfg, e, operation=None):
+    """The one definition of a valid Flow image-preflight envelope.
+
+    Shared by adapters.flow_action (which calls this when WRITING
+    flow/preflight.json, for jobs with a brief) and preflight() below (which
+    calls it again when READING that file back before every image/
+    character-register request). Before this was unified, the writer
+    accepted envelopes the reader would later refuse -- an operator could
+    record preflight, see success, then have production die on M2_PREFLIGHT
+    without being told which field was missing. Never relax a condition here
+    without relaxing it in both places at once.
+
+    `operation`, when given, additionally requires that specific operation to
+    already be declared in the envelope's `operations` list; the writer omits
+    it and only requires a non-empty list of recognised operations, since at
+    write time the envelope may cover more than one upcoming operation.
+
+    Returns a list of (code, message) pairs -- empty means valid. `code` is
+    'stale' for the freshness check and 'other' for everything else, so a
+    caller can tell a plain expiry (normal mid-production event) apart from a
+    genuinely malformed envelope.
+    """
+    problems = []
+    # No profile name is hardcoded here: an envelope must name the profile the
+    # config actually points at (or one listed in flow_profiles). 'video-pilot'
+    # used to be accepted unconditionally, which meant evidence could claim a
+    # profile the production run never used.
+    valid_profiles = {cfg['flow_profile']}
+    if 'flow_profiles' in cfg: valid_profiles.update(cfg['flow_profiles'])
+    if e.get('credits_per_generation') != 0:
+        problems.append(('other', 'credits_per_generation must be observed as 0'))
+    window = cfg.get('preflight_window_seconds', 600)
+    observed_at = e.get('observed_at')
+    if not isinstance(observed_at, (int, float)) or not 0 <= time.time() - observed_at <= window:
+        problems.append(('stale', f'observed_at must be a fresh UI observation within the last {window}s'))
+    if e.get('mode') != 'image':
+        problems.append(('other', "mode must be observed as 'image'"))
+    if e.get('model') != cfg['flow_model']:
+        problems.append(('other', 'model must match config flow_model'))
+    if e.get('project') != cfg['flow_project']:
+        problems.append(('other', 'project must match config flow_project'))
+    if e.get('profile') not in valid_profiles:
+        problems.append(('other', 'profile must be an allowed Flow profile'))
+    if not e.get('account_confirmed'):
+        problems.append(('other', 'account_confirmed must be true'))
+    if not e.get('observer'):
+        problems.append(('other', 'observer required'))
+    ops = e.get('operations')
+    if not isinstance(ops, list) or not ops or any(o not in ('image', 'character-register') for o in ops):
+        problems.append(('other', "operations must be a non-empty list drawn from 'image'/'character-register'"))
+    elif operation is not None and operation not in ops:
+        problems.append(('other', f'operations must include {operation!r}'))
+    if not e.get('screenshot'):
+        problems.append(('other', 'screenshot required'))
+    return problems
+
+
+def validate_preflight_evidence(cfg, e, operation=None):
+    """Raise Blocked naming every missing/invalid field, or return silently."""
+    problems = _preflight_problems(cfg, e, operation)
+    if problems:
+        codes = {c for c, _ in problems}
+        tag = 'M2_PREFLIGHT_EXPIRED' if codes == {'stale'} else 'M2_PREFLIGHT'
+        raise Blocked(tag + ': ' + '; '.join(m for _, m in problems))
+
+
 def preflight(p, j, operation):
     cfg = read(p.root / 'config.json')
     if cfg.get('video_generation') or cfg.get('credit_budget', 0) != 0:
         raise Blocked('M2_POLICY: credit budget must be non-negative')
     path = p.job(j) / 'flow/preflight.json'
     e = read(path) if path.exists() else {}
-    valid_profiles = {cfg['flow_profile']}
-    if 'flow_profiles' in cfg: valid_profiles.update(cfg['flow_profiles'])
-    valid_profiles.add('video-pilot')
-    if (e.get('credits_per_generation') != 0 or not 0 <= time.time() - e.get('observed_at', 0) <= 600 or e.get('mode') != 'image'
-        or e.get('model') != cfg['flow_model']
-        or e.get('project') != cfg['flow_project'] or e.get('profile') not in valid_profiles or not e.get('account_confirmed')
-        or not e.get('observer') or operation not in e.get('operations', [])):
-        raise Blocked('M2_PREFLIGHT: fresh observed evidence required for ' + operation)
+    validate_preflight_evidence(cfg, e, operation)
     if digest(p.path(j, e['screenshot'])) != e['screenshot_hash']:
         raise Blocked('M2_PREFLIGHT: screenshot changed')
     return e
+
+
+def _preflight_expiry_message(done, total):
+    """Friendly M2_PREFLIGHT_EXPIRED framing for a mid-run expiry.
+
+    A dual-ratio job with dozens of scene images, each taking tens of seconds
+    through the browser, will routinely outlast a single 10-minute (or
+    config-configured) observation window. That is expected, not a failure:
+    every image finished so far is already downloaded and kept (journals are
+    per-identity and never resubmitted), so re-observing the Flow UI and
+    resuming picks up exactly where this stopped.
+
+    gflow_guard.mjs's applySettings() independently re-verifies the *live*
+    model/ratio/output-count on every single job it submits and throws if it
+    can't -- that is stronger, real-time proof than this stale screenshot, so
+    the only thing actually lost on expiry is the human observation of
+    mode/account/credits, which is what re-observing restores.
+    """
+    return (f'M2_PREFLIGHT_EXPIRED: Flow UI observation window elapsed mid-run '
+            f'({done}/{total} images already downloaded and kept; nothing new was submitted). '
+            f'This is expected for a long production run, not an error. Re-observe the Flow UI '
+            f'(image mode, model, project, account, 0 credits) and record a fresh flow-preflight, '
+            f'then resume the same command -- it will only submit what is left. '
+            f'(gflow_guard.mjs already re-verifies the live model/ratio/output settings on every '
+            f'job it runs; this window only covers what that cannot see.)')
+
+
+def _reraise_if_expired(ex, done, total):
+    if 'M2_PREFLIGHT_EXPIRED' in str(ex):
+        raise Blocked(_preflight_expiry_message(done, total)) from ex
+    raise ex
 
 
 def image_check(p, j, path, expected_hash=None, full=True):
@@ -120,40 +223,86 @@ def image_check(p, j, path, expected_hash=None, full=True):
     return path
 
 
-def request(p, j, target, prompt, refs=(), registration=None):
-    """One durable journal per identity; unknown outcomes are never retried."""
-    import adapters
-    p.gate(j, 'images')
-    c = content(p, j)
+def requested_prompt(p, j, target, prompt, notes, ratio, registration=False):
+    from scripts.story_plan import safe_corrections, text_prompt
+    from prompt_templates import image_prompt
+    c = content(p,j)
+    corrections = safe_corrections(c, notes)
+    revised = prompt + ('\nRequested corrections (keep the approved visible-text list unchanged): '+corrections if corrections else '') if c.get('schema_version')=='3.0' else prompt + ('\nRequested corrections: '+corrections if corrections else '')
+    unit = next((x for x in planned_units(p,j) if x['id']==target),None)
+    if unit and c.get('schema_version')=='3.0':
+        revised = text_prompt(revised,unit['visible_text'],p.brief(j)[0]['planning']['text_style'])
+    return revised if registration else image_prompt(revised,ratio)
+
+
+def _plan_request(p, j, target, prompt, refs, registration, base_image):
+    """Identity/key computation shared by request() and the batch pre-pass.
+
+    Kept side-effect-free (besides the read-only validation content() already
+    does) so the batch path can compute the exact same journal key a normal
+    request() call would, without submitting anything itself.
+    """
+    content(p, j)  # schema/character-id validation; result unused below.
     if not target.startswith('ref:') and not approved(p, j, 'references'):
         raise Blocked('M2_REFERENCES: approve references first')
-    scene = next((x for x in c['scenes'] if x['id'] == target), None)
+    scene = next((x for x in planned_units(p,j) if x['id'] == target), None)
     if scene:
         approved_refs = approved(p, j, 'references')['payload']['references']
         linked = [register_existing(p, j, next(x for x in approved_refs if x['character_id'] == cid)) for cid in scene['character_ids']]
         if list(refs) != linked or prompt != scene['prompt']:
             raise Blocked('M2_REFERENCE_LINK: scene request must use approved prompt and registered characters')
     cfg = read(p.root / 'config.json')
-    from prompt_templates import image_prompt
-    corrections = '\n'.join(x['note'] for x in edits(p, j, target))
-    revised_prompt = prompt + ('\nRequested corrections: ' + corrections if corrections else '')
-    ratio = '16:9' if p.brief(j)[0]['aspect_ratio']=='16:9' else '9:16'
-    actual_prompt = revised_prompt if registration else image_prompt(revised_prompt, ratio)
-    identity = {'content_hash': p.rows(j)['content']['hash'], 'target': target,
+    edit_target = scene.get('scene_id',target) if scene else target
+    corrections = '\n'.join(x['note'] for x in edits(p, j, edit_target))
+    ratio = scene.get('ratio') if scene and scene.get('ratio') else ('16:9' if p.brief(j)[0]['aspect_ratio']=='16:9' else '9:16')
+    if scene and scene.get('based_on'):
+        if not base_image or base_image.get('target') != scene['based_on'] or digest(p.path(j,base_image['path'])) != base_image['sha256']:
+            raise Blocked('M2_BASE_IMAGE: prior image required for variation')
+    elif base_image:
+        raise Blocked('M2_BASE_IMAGE: unexpected reference image')
+    actual_prompt = requested_prompt(p,j,target,prompt,corrections,ratio,bool(registration))
+    # Identity must track content (name/sha256), never the incidental copy path a
+    # revision folder happens to use today: that path churns every produce() run
+    # and must not force a real character re-registration.
+    identity_registration = {'name': registration['name'], 'sha256': registration['sha256']} if registration else None
+    identity = {'target': target,
                 'prompt': prompt, 'actual_prompt': actual_prompt, 'model': cfg['flow_model'], 'ratio': ratio,
-                'references': list(refs), 'edits': edits(p, j, target),
-                'registration': registration, 'config_hash': digest(p.root / 'config.json')}
-    key = hashobj(identity)
+                'references': list(refs), 'edits': edits(p, j, edit_target), 'base_image': base_image,
+                'registration': identity_registration, 'config_hash': digest(p.root / 'config.json')}
+    return cfg, ratio, actual_prompt, identity, hashobj(identity)
+
+
+def _unresolved_conflict(p, j, target):
+    """An existing journal for the same target that is not yet resolved.
+
+    Shared by request() (which must refuse a second submission while one is
+    unresolved) and the batch pre-pass (which must not even offer such a
+    target to gflow batch).
+    """
     base = p.job(j) / 'flow/attempts'
-    base.mkdir(parents=True, exist_ok=True)
-    # Even changed prompts/edits cannot hide an unresolved submission.
+    if not base.exists():
+        return None
     for q in base.glob('*/request.json'):
         old = read(q)
         same_target = old['identity']['target'] == target
         if target.startswith('register:'):
             same_target = old['identity']['target'].rsplit(':', 1)[0] == target.rsplit(':', 1)[0]
         if same_target and old['state'] in ('submitted', 'ambiguous'):
-            raise Blocked('M2_AMBIGUOUS: reconcile request ' + old['key'] + ' before another submission')
+            return old
+    return None
+
+
+def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
+    """One durable journal per identity; unknown outcomes are never retried."""
+    import adapters
+    p.gate(j, 'images')
+    cfg, ratio, actual_prompt, identity, key = _plan_request(p, j, target, prompt, refs, registration, base_image)
+    base = p.job(j) / 'flow/attempts'
+    base.mkdir(parents=True, exist_ok=True)
+    # Even changed prompts/edits cannot hide an unresolved submission.
+    conflict = _unresolved_conflict(p, j, target)
+    if conflict:
+        raise Blocked('M2_AMBIGUOUS: reconcile request ' + conflict['key'] + ' before another submission')
     folder = base / key
     record = folder / 'request.json'
     if record.exists():
@@ -177,6 +326,8 @@ def request(p, j, target, prompt, refs=(), registration=None):
     else:
         args = ['image', '--id', key[:16], '--prompt', actual_prompt, '--model', model_arg,
                 '--ratio', ratio, '--outputs', '1'] + common
+        if base_image:
+            args += ['--base-image', str(p.path(j,base_image['path']))]
         if refs:
             args += ['--character'] + [x['name'] for x in refs]
     result = {'key': key, 'identity': identity, 'state': 'submitted', 'submitted_at': time.time(),
@@ -202,6 +353,8 @@ def request(p, j, target, prompt, refs=(), registration=None):
         proof = read(folder / 'ui-proof.json')
         if proof.get('passed') is not True or proof.get('characters') != [x['name'] for x in refs]:
             raise Blocked('Flow UI attachment/mode evidence missing')
+        if base_image and proof.get('base_image') != str(p.path(j,base_image['path'])):
+            raise Blocked('M2_BASE_IMAGE: UI attachment evidence missing')
         if proof.get('mode') != ('character-register' if registration else 'image'):
             raise Blocked('Flow UI mode evidence differs')
         with Image.open(folder / 'before-submit.png') as im: im.verify()
@@ -224,6 +377,125 @@ def request(p, j, target, prompt, refs=(), registration=None):
             result.update(state='ambiguous', error=str(ex))
             write(record, result)
         raise Blocked('M2_FLOW: ' + str(ex)) from ex
+
+
+def batch_submit(p, j, units, registrations):
+    """Optional bulk path: one `gflow batch` call pre-populates journals for a
+    ratio group's independent images, so the normal request() calls that
+    follow just hit the cache. Gated by config flow_batch (default off, read
+    via cfg.get('flow_batch', False)) -- see produce(). Never called for the
+    references stage.
+
+    Scope is deliberately narrow: only images with based_on absent (no
+    variation chain) are ever offered to the batch. A chained variation
+    needs its predecessor's file physically attached and UI-verified as an
+    upload before submission; the single-image request() path already does
+    that carefully, and this pre-pass does not attempt to reproduce it, so
+    chains always fall through to request() individually.
+
+    Failure handling mirrors the single-image path exactly: a job that
+    completes but fails verification, or that gflow reports failed, becomes
+    an 'ambiguous' journal (never auto-resent; needs flow-reconcile). A job
+    the batch never got to (process crashed, hard-stop mid-run) is left with
+    no journal at all, so it is simply retried through the normal per-image
+    path next time -- nothing already completed is touched or resent.
+    """
+    import adapters
+    cfg = read(p.root / 'config.json')
+    plans = []
+    for unit in units:
+        if unit.get('based_on'):
+            continue  # variation chains always use the single-image path
+        if _unresolved_conflict(p, j, unit['id']):
+            continue  # let request() raise M2_AMBIGUOUS as usual
+        linked = [registrations[x] for x in unit['character_ids']]
+        _, plan_ratio, actual_prompt, identity, key = _plan_request(p, j, unit['id'], unit['prompt'], linked, None, None)
+        if (p.job(j) / 'flow/attempts' / key / 'request.json').exists():
+            continue  # already resolved (e.g. downloaded on a prior run)
+        plans.append({'unit': unit, 'ratio': plan_ratio, 'actual_prompt': actual_prompt,
+                      'identity': identity, 'key': key, 'linked': linked})
+    if not plans:
+        return
+    evidence = preflight(p, j, 'image')  # one preflight for the whole batch
+    model_arg = 'nano-banana-pro' if 'pro' in cfg['flow_model'].lower() else ('nano-banana-2' if '2' in cfg['flow_model'] else cfg['flow_model'])
+    batch_id = hashobj([x['key'] for x in plans])[:16]
+    batch_dir = p.job(j) / 'flow/batches' / batch_id
+    batch_dir.mkdir(parents=True, exist_ok=True)
+    jobs = []
+    for plan in plans:
+        folder = p.job(j) / 'flow/attempts' / plan['key']
+        folder.mkdir(parents=True, exist_ok=True)
+        write(folder / 'preflight.json', evidence)
+        shutil.copy(p.path(j, evidence['screenshot']), folder / 'preflight.png')
+        jobs.append({'id': plan['key'][:16], 'type': 'image', 'project': cfg['flow_project'],
+                     'prompt': plan['actual_prompt'], 'model': model_arg, 'ratio': plan['ratio'],
+                     'outputs': 1, 'character': [x['name'] for x in plan['linked']], 'out': str(batch_dir)})
+        plan['folder'], plan['job_id'] = folder, plan['key'][:16]
+    jobs_by_id = {job['id']: (job, plan) for job, plan in zip(jobs, plans)}
+    jobs_file = batch_dir / 'jobs.json'
+    write(jobs_file, {'jobs': jobs})
+    args = ['batch', str(jobs_file), '--out', str(batch_dir), '--profile', cfg['flow_profile'], '--continue-on-failure']
+    try:
+        r = adapters.gflow(p, *args, timeout=max(960, 300 * len(jobs)))
+        (batch_dir / 'command.log').write_text(r.stdout + '\n' + r.stderr)
+    except Exception as ex:
+        (batch_dir / 'command.log').write_text('EXCEPTION: ' + str(ex))
+    run_state_path = batch_dir / 'gflow-run.json'
+    if not run_state_path.exists():
+        return  # nothing attempted; leave every plan unjournaled for a plain retry
+    run_state = read(run_state_path)
+    for entry in run_state.get('jobs', []):
+        found = jobs_by_id.get(entry.get('id'))
+        if not found or entry.get('status') not in ('completed', 'failed'):
+            continue  # never attempted (batch stopped early) -- retry normally later
+        job, plan = found
+        folder, key, identity = plan['folder'], plan['key'], plan['identity']
+        record = folder / 'request.json'
+        if record.exists():
+            continue
+        result = {'key': key, 'identity': identity, 'state': 'submitted', 'submitted_at': time.time(),
+                  'args': job, 'journal': str(record.relative_to(p.job(j)))}
+        if entry['status'] == 'failed':
+            result.update(state='ambiguous', error=entry.get('error', 'batch job failed'))
+            write(record, result)
+            p.event(j, 'images', 'flow_batch_ambiguous', key)
+            continue
+        try:
+            job_evidence_dir = batch_dir / '.evidence' / plan['job_id']
+            ui_proof_path, before_submit_path = job_evidence_dir / 'ui-proof.json', job_evidence_dir / 'before-submit.png'
+            if not ui_proof_path.is_file() or not before_submit_path.is_file():
+                raise Blocked('Flow UI attachment/mode evidence missing')
+            proof = read(ui_proof_path)
+            expected_names = [x['name'] for x in plan['linked']]
+            if proof.get('passed') is not True or proof.get('characters') != expected_names:
+                raise Blocked('Flow UI attachment/mode evidence missing')
+            if proof.get('mode') != 'image':
+                raise Blocked('Flow UI mode evidence differs')
+            with Image.open(before_submit_path) as im: im.verify()
+            image_files = [Path(a) for a in entry.get('artifacts', []) if Path(a).suffix.lower() in ('.png', '.jpg', '.jpeg')]
+            if len(image_files) != 1:
+                raise Blocked('Cannot identify exactly one downloaded result')
+            f = image_files[0]
+            with Image.open(f) as im: im.verify()
+            metadata = read(f.with_suffix('.json'))
+            if (metadata.get('jobId') != plan['job_id'] or metadata.get('type') != 'image'
+                or metadata.get('prompt') != plan['actual_prompt'] or metadata.get('ratio') != plan['ratio']
+                or metadata.get('characters', []) != expected_names
+                or metadata.get('source') != 'google-flow-browser' or metadata.get('status') != 'downloaded'):
+                raise Blocked('Downloaded metadata does not match request')
+            dest = folder / ('result' + f.suffix)
+            shutil.copy(f, dest)
+            shutil.copy(ui_proof_path, folder / 'ui-proof.json')
+            shutil.copy(before_submit_path, folder / 'before-submit.png')
+            shutil.copy(f.with_suffix('.json'), dest.with_suffix('.json'))
+            result.update(state='downloaded', path=str(dest.relative_to(p.job(j))), sha256=digest(dest))
+            write(record, result)
+            image_check(p, j, result['path'], result['sha256'], full=True)
+            p.event(j, 'images', 'flow_batch_downloaded', key)
+        except Exception as ex:
+            result.update(state='ambiguous', error=str(ex))
+            write(record, result)
+            p.event(j, 'images', 'flow_batch_ambiguous', key)
 
 
 def reference_prompt(c, char):
@@ -291,28 +563,87 @@ def produce(p, j, out):
         raise Blocked('M2_REVIEW: approve or reject current checkpoint first')
     refs, items, proofs = [], [], []
     if s == 'references':
-        for char in c['characters']:
+        chars = c['characters']
+        for i, char in enumerate(chars):
             prompt = reference_prompt(c, char)
-            r = request(p, j, 'ref:' + char['id'], prompt)
+            try:
+                r = request(p, j, 'ref:' + char['id'], prompt)
+            except Blocked as ex:
+                _reraise_if_expired(ex, i, len(chars))
             name = j + '-' + char['id'] + '-' + r['key'][:12]
             asset = attach(p, j, r, 'REF-' + char['id'], prompt, [], out)
             refs.append(dict(asset, character_id=char['id'], name=name))
     else:
         refs = approved(p, j, 'references')['payload']['references']
-        registrations = {r['character_id']: register(p, j, r) for r in refs}
-        scenes = c['scenes']
+        registrations = {}
+        for i, r0 in enumerate(refs):
+            try:
+                registrations[r0['character_id']] = register(p, j, r0)
+            except Blocked as ex:
+                _reraise_if_expired(ex, i, len(refs))
+        scenes = planned_units(p,j)
         import concurrent.futures
         cfg = read(p.root / 'config.json')
         concurrency = cfg.get('concurrency', 3)
 
+        completed = {}
         def process_scene(scene):
             linked = [registrations[x] for x in scene['character_ids']]
-            r = request(p, j, scene['id'], scene['prompt'], linked)
+            base = completed.get(scene.get('based_on'))
+            r = request(p, j, scene['id'], scene['prompt'], linked, **({'base_image':base} if base else {}))
+            completed[scene['id']] = {'target':scene['id'],'path':r['path'],'sha256':r['sha256']}
             return (scene['id'], scene['prompt'], linked, r)
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
-            for scene_id, prompt, linked, r in executor.map(process_scene, scenes):
-                items.append(attach(p, j, r, scene_id, prompt, linked, out))
+        # Flow's aspect-ratio/model/output toggles are one global UI setting;
+        # flipping it per image is wasteful and unsafe under parallel workers.
+        # Finish every image of one ratio before starting the next. Scenes
+        # within a ratio still run in parallel; variations inside one scene
+        # stay sequential because based_on chains to the immediately preceding
+        # image of that same scene, and planned_units keeps the ratio suffix
+        # aligned so a chain never crosses ratios.
+        ratio_order, ratio_groups = [], {}
+        for unit in scenes:
+            rk = unit.get('ratio')
+            if rk not in ratio_groups:
+                ratio_groups[rk] = {}
+                ratio_order.append(rk)
+            ratio_groups[rk].setdefault(unit.get('scene_id',unit['id']), []).append(unit)
+
+        def process_group(group):
+            return [(unit, process_scene(unit)) for unit in group]
+
+        # Optional bulk path (default off; see batch_submit's docstring). Pre-
+        # populates journals for each ratio's independent images with a single
+        # gflow batch call; the per-scene loop below is unchanged either way
+        # and simply hits the cache for anything the batch already resolved.
+        if cfg.get('flow_batch', False):
+            for rk in ratio_order:
+                units_in_ratio = [u for group in ratio_groups[rk].values() for u in group]
+                batch_submit(p, j, units_in_ratio, registrations)
+
+        outcomes = {}
+        try:
+            for rk in ratio_order:
+                with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
+                    for results in executor.map(process_group, ratio_groups[rk].values()):
+                        for unit, outcome in results:
+                            outcomes[unit['id']] = outcome
+        except Blocked as ex:
+            # Any request() already in flight when the window lapsed finishes
+            # to a determinate state (downloaded/ambiguous) before this is
+            # raised -- ThreadPoolExecutor's context manager waits for every
+            # submitted unit, it just never starts a new one. Nothing here
+            # resubmits; only the message is enriched with progress.
+            _reraise_if_expired(ex, len(outcomes), len(scenes))
+
+        # Re-assemble in the original planned order (scene-major, ratio-minor)
+        # regardless of the ratio-major order used to submit requests above.
+        for unit in scenes:
+            scene_id, prompt, linked, r = outcomes[unit['id']]
+            item = attach(p, j, r, scene_id, prompt, linked, out)
+            if c.get('schema_version') == '3.0':
+                item.update(scene_id=unit['scene_id'],image_id=unit['image_id'],ratio=unit['ratio'])
+            items.append(item)
 
     entries = refs + items + proofs
     sheet = Image.new('RGB', (540, max(1, (len(entries) + 2) // 3) * 350), '#eeeeee')
@@ -339,14 +670,27 @@ def check(p, j, data):
             raise Blocked('M2_REFERENCES: reference differs from approved character profile')
     if [x['character_id'] for x in data['references']] != list(chars):
         raise Blocked('M2_REFERENCES: missing/duplicate character')
-    expected = [] if s == 'references' else c['scenes']
-    if [x['scene_id'] for x in data['items']] != [x['id'] for x in expected]:
+    expected = [] if s == 'references' else planned_units(p,j)
+    if [(x.get('image_id')+'_'+x['ratio'].replace(':','x')) if x.get('image_id') else x['scene_id'] for x in data['items']] != [x['id'] for x in expected]:
         raise Blocked('M2_SCENES: missing/duplicate/reordered scenes')
     if s != 'references':
         a = approved(p, j, 'references')
         if not a or data['references'] != a['payload']['references']:
             raise Blocked('M2_REFERENCES: references not approved')
     for item, scene in zip(data['items'], expected):
+        if item['scene_id'] != scene.get('scene_id',scene['id']): raise Blocked('M2_SCENE_LINK: wrong parent scene')
+        if scene.get('ratio'):
+            with Image.open(p.path(j,item['path'])) as im:
+                target_ratio = 16/9 if scene['ratio']=='16:9' else 9/16
+                if abs(im.width/im.height-target_ratio)>.04: raise Blocked('M2_RATIO: image does not match planned output')
+        item_request = read(p.path(j,item['request']))
+        if item_request['identity']['target'] != scene['id']: raise Blocked('M2_SCENE_LINK: wrong image request target')
+        req_base = item_request['identity'].get('base_image')
+        if scene.get('based_on'):
+            prior = next((x for x in data['items'] if x.get('image_id','')+'_'+x.get('ratio','').replace(':','x')==scene['based_on']),None)
+            if not prior or not req_base or req_base['target']!=scene['based_on'] or req_base['sha256']!=prior['sha256']:
+                raise Blocked('M2_BASE_IMAGE: wrong planned predecessor')
+        elif req_base: raise Blocked('M2_BASE_IMAGE: unexpected predecessor')
         if item['prompt'] != scene['prompt'] or [x['character_id'] for x in item['references']] != scene['character_ids']:
             raise Blocked('M2_PROMPT: approved prompt or character links changed')
     if data['proofs']:
@@ -358,10 +702,10 @@ def check(p, j, data):
         req = read(p.path(j, item['request']))
         from prompt_templates import image_prompt
         changes = '\n'.join(x['note'] for x in req['identity']['edits'])
-        expected_prompt = image_prompt(item['prompt'] + ('\nRequested corrections: ' + changes if changes else ''), req['identity']['ratio'])
+        expected_prompt = requested_prompt(p,j,req['identity']['target'],item['prompt'],changes,req['identity']['ratio'])
         if item['actual_prompt'] != expected_prompt:
             raise Blocked('M2_PROMPT: actual prompt differs from configured template')
-        if (req['state'] != 'downloaded' or req['identity']['content_hash'] != data['content_hash']
+        if (req['state'] != 'downloaded'
             or req['identity']['prompt'] != item['prompt'] or req['identity']['actual_prompt'] != item['actual_prompt'] or req['sha256'] != item['sha256']
             or req['identity']['references'] != item['references']):
             raise Blocked('M2_EVIDENCE: request does not match downloaded asset')
@@ -371,6 +715,11 @@ def check(p, j, data):
         base = p.path(j, item['request']).parent
         files.extend(str((base / n).relative_to(p.job(j))) for n in ['preflight.json', 'preflight.png', 'ui-proof.json', 'before-submit.png'])
         ui = read(base / 'ui-proof.json')
+        base_image = req['identity'].get('base_image')
+        if base_image:
+            if digest(p.path(j,base_image['path'])) != base_image['sha256'] or ui.get('base_image') != str(p.path(j,base_image['path'])):
+                raise Blocked('M2_BASE_IMAGE: reference or evidence changed')
+            files.append(base_image['path'])
         if ui.get('passed') is not True or ui.get('mode') != 'image' or ui.get('characters') != [x['name'] for x in item['references']]:
             raise Blocked('M2_UI_EVIDENCE: image mode/reference attachment not verified')
         for ref in item['references']:
@@ -449,8 +798,39 @@ def reject(p, j, rev, note, checkpoint, scene=None, character=None):
     p.db.commit();p.event(j, 'images', 'image_revision_requested', json.dumps({'target': target, 'note': note}, ensure_ascii=False))
 
 
+def record_preflight(p, a):
+    """Write flow/preflight.json for a job with a brief (see flow_action).
+
+    Validates with the exact same validate_preflight_evidence() that
+    preflight() uses to READ this file back before every image/character-
+    register request, so an envelope accepted here can never be rejected
+    later for a field this writer didn't check -- that mismatch (missing
+    `project`/`operations`) was the whole reason this now lives next to the
+    reader instead of duplicated in adapters.flow_action.
+    """
+    j = a.job
+    if not a.evidence:
+        raise Blocked('Supply --evidence JSON recording observed UI and screenshot')
+    cfg = read(p.root / 'config.json')
+    e = read(a.evidence)
+    validate_preflight_evidence(cfg, e)
+    shot = Path(e['screenshot']).resolve()
+    with Image.open(shot) as im: im.verify()
+    dest = p.job(j) / 'flow/preflight.png'
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy(shot, dest)
+    e['screenshot'] = str(dest.relative_to(p.job(j)))
+    e['screenshot_hash'] = digest(dest)
+    write(p.job(j) / 'flow/preflight.json', e)
+    p.event(j, 'images', 'ui_preflight_recorded', json.dumps(e, ensure_ascii=False))
+    window = cfg.get('preflight_window_seconds', 600)
+    return {'preflight': f'recorded, expires in {window} seconds; visual observation is not machine proof'}
+
+
 def flow_action(p, a):
     p.gate(a.job, 'images')
+    if a.command == 'flow-preflight':
+        return record_preflight(p, a)
     if not a.request or len(a.request) != 64 or any(x not in '0123456789abcdef' for x in a.request):
         raise Blocked('M2_REQUEST: --request SHA256 required')
     q = p.job(a.job) / 'flow/attempts' / a.request / 'request.json'
@@ -489,6 +869,9 @@ def flow_action(p, a):
         raise Blocked('M2_RECONCILE: observed request, prompt, mode, references and downloaded result must match')
     with Image.open(observed['screenshot']) as im: im.verify()
     shutil.copy(observed['screenshot'], evidence)
+    base_image = r['identity'].get('base_image')
+    if base_image and observed.get('base_image') != str(p.path(a.job,base_image['path'])):
+        raise Blocked('M2_RECONCILE: base image attachment must be observed')
     observed['passed'] = True
     write(q.parent / 'ui-proof.json', observed)
     shutil.copy(evidence, q.parent / 'before-submit.png')

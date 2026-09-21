@@ -90,6 +90,16 @@
           "actual_prompt": {
             "type": "string",
             "minLength": 1
+          },
+          "image_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ratio": {
+            "enum": [
+              "9:16",
+              "16:9"
+            ]
           }
         },
         "required": [

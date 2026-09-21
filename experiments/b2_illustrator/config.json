@@ -1,0 +1,48 @@
+{
+  "mode": "dry-run",
+  "tool": {
+    "name": "B-2 Illustrator",
+    "source": "google-flow-community",
+    "version": null,
+    "identity_verified": false
+  },
+  "flow_url": "https://flow.google.com/project/7c815425-4625-4afb-ba84-4290d3fa9ea4/tools",
+  "flow": {
+    "model": "Nano Banana Pro",
+    "project": "Video Pilot",
+    "credit_budget": 0,
+    "outputs": 1,
+    "ratios": [
+      "9:16",
+      "16:9"
+    ]
+  },
+  "experiment_budget": {
+    "scope": "B-2 Illustrator only",
+    "max_credits": 1050,
+    "spent_credits": null,
+    "spend_status": "unknown",
+    "tracking_required": true,
+    "allow_generation": false
+  },
+  "chrome": {
+    "executable_path": "/opt/google/chrome/google-chrome",
+    "user_data_dir": "/home/hongphuoc/.config/google-chrome",
+    "profile_directory": "Profile 10",
+    "profile_priority": [
+      "Profile 10",
+      "Profile 102",
+      "Profile 13",
+      "Profile 14"
+    ]
+  },
+  "output_dir": "results",
+  "capabilities_to_verify": [
+    "remix_or_custom_prompt",
+    "character_reference",
+    "base_scene_reference",
+    "batch_outputs",
+    "individual_downloads",
+    "expanded_prompt_provenance"
+  ]
+}

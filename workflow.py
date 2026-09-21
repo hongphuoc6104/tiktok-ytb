@@ -1,11 +1,12 @@
 """Three public review gates; technical modules remain private implementation steps."""
+import itertools
 import json
 import time
 from pathlib import Path
 
 from pilot import Blocked, read, write, hashobj, digest
 
-STAGES = {'content': ('content',), 'media': ('images', 'audio'), 'video': ('render',)}
+STAGES = {'content': ('content',), 'media': ('audio', 'images'), 'video': ('render',)}
 LABELS = {'content': 'Kịch bản', 'media': 'Cảnh, hình ảnh và âm thanh', 'video': 'Video hoàn chỉnh'}
 
 
@@ -26,7 +27,8 @@ def settings(p, job):
 def new(p, job, brief, mode='review'):
     if brief is None or mode not in ('review', 'auto'):
         raise Blocked('New jobs require --brief and mode review/auto')
-    p.new(job, brief)
+    from scripts.story_plan import normalize_brief
+    p.new(job, normalize_brief(brief))
     data = {'version': 3, 'mode': mode, 'created_at': time.time()}
     write(p.job(job) / 'workflow.json', data)
     p.event(job, 'control', 'workflow_created', hashobj(data))
@@ -63,6 +65,10 @@ def current(p, job, stage):
     rows = p.rows(job)
     if any(rows[m]['state'] not in ('awaiting_review', 'approved') for m in data['snapshot']['modules']):
         return None
+    try:
+        if any(digest(p.path(job,name)) != stamp for name,stamp in data.get('asset_hashes',{}).items()): return None
+    except OSError:
+        return None
     return data
 
 
@@ -76,10 +82,20 @@ def approved(p, job, stage):
     result = read(decision)
     if result.get('approved') is not True or result.get('manifest_hash') != hashobj(data):
         return False
-    if result.get('actor') == 'machine':
+    actor = result.get('actor')
+    if actor == 'machine':
         report = p.path(job, result['report'])
-        return report.is_file() and digest(report) == result.get('report_hash')
-    return result.get('actor') == 'user'
+        if not (report.is_file() and digest(report) == result.get('report_hash')):
+            return False
+    elif actor != 'user':
+        return False
+    # decision.json is a plain file anyone can write; only a matching row that
+    # approve() already appended to the events table proves it was not hand-crafted.
+    event = 'machine_approved' if actor == 'machine' else 'user_approved'
+    with p._db_lock:
+        row = p.db.execute("SELECT 1 FROM events WHERE job=? AND module=? AND event=? AND detail=? LIMIT 1",
+                            (job, stage, event, hashobj(result))).fetchone()
+    return row is not None
 
 
 def gate(p, job, module):
@@ -127,6 +143,8 @@ def assets(p, job, stage):
     files.append(content_row['envelope'])
     if stage in ('media', 'video'):
         images = p.payload(job, 'images')
+        files.append(p.rows(job)['audio']['envelope'])
+        files.append(p.rows(job)['images']['envelope'])
         files += [x['path'] for x in images['references'] + images['items']]
         for item in images['items']:
             for ref in item['references']:
@@ -136,9 +154,79 @@ def assets(p, job, stage):
         if audio.get('en'):
             files.append(audio['en']['wav'])
     if stage == 'video':
+        media = current(p,job,'media')
+        if media:
+            files += [x for x in media['assets'] if x.endswith('visual-timing.json')]
         video = p.payload(job, 'render')
         files += [video[k] for k in ('video', 'video_9x16', 'video_16x9') if video.get(k)]
     return list(dict.fromkeys(files))
+
+
+def character_comparisons(p, job, images):
+    """The identity check docs/workflow.md folds into the media gate: the
+    approved character reference next to what Flow actually registered.
+    image_pipeline.register() never marks a review-mode registration as a
+    verified match (it writes pending_media_review=True instead) — this must
+    say the same thing in the same words, never a softer "looks fine"."""
+    lines = ['## Cần so sánh trước khi duyệt', '',
+             'Với mỗi nhân vật: ảnh tham chiếu đã duyệt (trái) và ảnh do Flow đăng ký (phải). '
+             'Mở cả hai và xác nhận đúng là cùng một nhân vật trước khi duyệt phần media.']
+    for ref in images['references']:
+        reg = next((r for item in images['items'] for r in item['references']
+                     if r['character_id'] == ref['character_id']), None)
+        lines += ['', f"### {ref['name']} ({ref['character_id']})"]
+        if not reg:
+            lines.append('Nhân vật này không được dùng trong hình nào đã lên kế hoạch; không có ảnh đăng ký để so sánh.')
+            continue
+        registered_path = read(p.path(job, reg['registration_journal']))['path']
+        confirmation = read(p.path(job, reg['confirmation']))
+        lines += ['| Ảnh tham chiếu đã duyệt | Ảnh do Flow đăng ký |', '|---|---|',
+                  f"| ![{ref['name']} — tham chiếu]({p.path(job, ref['path'])}) "
+                  f"| ![{ref['name']} — đăng ký]({p.path(job, registered_path)}) |"]
+        if confirmation.get('pending_media_review'):
+            lines.append('**CHƯA SO SÁNH — cần bạn đối chiếu ngay bây giờ.** '
+                          'Hệ thống chưa tự nhận hai ảnh là cùng một nhân vật.')
+        if confirmation.get('matches_approved_reference') is True and confirmation.get('observer') == 'machine':
+            report = confirmation.get('report')
+            lines.append('Máy đã đánh giá và cho là khớp với tham chiếu. Báo cáo: '
+                          + (str(p.path(job, report)) if report else 'không có'))
+        if confirmation.get('observer') == 'technical':
+            lines.append('Lưu ý: xác nhận này chỉ là kiểm tra kỹ thuật (đã ghi nhận đúng file), '
+                          'KHÔNG phải xác nhận hai ảnh là cùng một nhân vật.')
+    return lines
+
+
+def scene_image_lines(p, job, items):
+    """Dual jobs render every logical image twice (9:16 and 16:9, see
+    docs/story-planning.md); a reviewer can only confirm the 16:9 crop kept
+    the same characters/action/text by seeing both ratios together, so pair
+    them under one heading. A single-ratio job keeps the prior one-item-per-
+    heading layout unchanged (regression-sensitive)."""
+    image_ids = [it.get('image_id') for it in items if it.get('image_id')]
+    if len(image_ids) == len(set(image_ids)):
+        lines = []
+        for item in items:
+            lines += [f"## {item['scene_id']} — {item.get('image_id','')} {item.get('ratio','')}",
+                      f"![{item['scene_id']}]({p.path(job, item['path'])})", item['prompt']]
+        return lines
+    lines = []
+    for scene_id, scene_items in itertools.groupby(items, key=lambda it: it['scene_id']):
+        scene_items = list(scene_items)
+        lines.append(f'## {scene_id}')
+        for image_id, image_items in itertools.groupby(scene_items, key=lambda it: it.get('image_id')):
+            image_items = list(image_items)
+            lines.append(f'### {image_id}')
+            lines.append('| ' + ' | '.join(it.get('ratio', '') for it in image_items) + ' |')
+            lines.append('|' + '---|' * len(image_items))
+            lines.append('| ' + ' | '.join(
+                f"![{image_id} {it.get('ratio','')}]({p.path(job, it['path'])})" for it in image_items) + ' |')
+            prompts = list(dict.fromkeys(it['prompt'] for it in image_items))
+            if len(prompts) == 1:
+                lines.append(prompts[0])
+            else:
+                for it in image_items:
+                    lines.append(f"Prompt ({it.get('ratio','')}): {it['prompt']}")
+    return lines
 
 
 def prepare(p, job, stage):
@@ -157,7 +245,9 @@ def prepare(p, job, stage):
         while p.rows(job)[module]['state'] != 'approved':
             row = p.rows(job)[module]
             if row['state'] != 'awaiting_review':
-                if module == 'content' and not (p.job(job) / 'draft/content.json').exists():
+                draft_path = p.job(job) / 'draft/content.json'
+                unchanged_rejected = module == 'content' and row['state'] == 'needs_changes' and row['envelope'] and draft_path.exists() and read(draft_path) == read(p.path(job,row['envelope']))['payload']
+                if module == 'content' and (not draft_path.exists() or unchanged_rejected):
                     from scripts.agy_pipeline import generate
                     generate(p, job)
                 else:
@@ -168,36 +258,49 @@ def prepare(p, job, stage):
                 break
     for module in STAGES[stage]:
         p.validate(job, module)
-    old = latest(p, job, stage)
-    revision = old['revision'] + 1 if old else 1
+    revision = 1 + max([int(x.name) for x in (p.job(job) / 'reviews' / stage).glob('*') if x.is_dir() and x.name.isdigit()], default=0)
     folder = p.job(job) / 'reviews' / stage / str(revision)
     folder.mkdir(parents=True, exist_ok=False)
     relative = lambda f: str(f.relative_to(p.job(job)))
     data = {'stage': stage, 'revision': revision, 'snapshot': snapshot(p, job, stage),
             'assets': assets(p, job, stage), 'review': relative(folder / 'review.md'),
             'decision': relative(folder / 'decision.json')}
-    write(folder / 'manifest.json', data)
     lines = [f'# {LABELS[stage]} — {job} — revision {revision}', '',
              f"Chế độ: {settings(p, job)['mode']}. Kiểm tra kỹ thuật đã đạt; chưa duyệt chất lượng.", '']
     for name in data['assets']:
         path = p.path(job, name)
         lines.append(f'[{path.name}]({path})')
     if stage == 'content':
-        for scene in p.payload(job, 'content')['scenes']:
-            lines += ['', f"## {scene['id']} — {scene['title']}", scene['narration']]
-            if scene.get('narration_en'):
-                lines.append(scene['narration_en'])
-            lines.append(scene['prompt'])
+        payload = p.payload(job, 'content')
+        if payload.get('schema_version') == '3.0':
+            from scripts.story_plan import review_plan, feedback
+            previous = sorted((p.job(job) / 'revisions/content').glob('*/content.json'), key=lambda x: int(x.parent.name))
+            lines.append(review_plan(p.brief(job)[0], payload, read(previous[-2]) if len(previous)>1 else None, feedback(p,job)))
+        else:
+            from content_contract import review_markdown
+            lines.append(review_markdown(job, revision, p.brief(job)[0], payload))
     if stage == 'media':
-        lines += ['', f"Số cảnh: {len(p.payload(job, 'images')['items'])}",
-                  f"![Bảng ảnh]({p.path(job, p.payload(job, 'images')['contact_sheet'])})"]
+        images = p.payload(job, 'images')
+        lines += character_comparisons(p, job, images)
+        lines += ['', f"Số cảnh: {len(p.payload(job, 'content')['scenes'])}; số hình: {len(images['items'])}",
+                  f"![Bảng ảnh]({p.path(job, images['contact_sheet'])})"]
         audio = p.payload(job, 'audio')
         lines += [f"Tiếng Việt: {audio['duration']:.2f} giây", f"![Nghe tiếng Việt]({p.path(job, audio['wav'])})"]
         if audio.get('en'):
             lines += [f"Tiếng Anh: {audio['en']['duration']:.2f} giây", f"![Nghe Alba]({p.path(job, audio['en']['wav'])})"]
-        for item in p.payload(job, 'images')['items']:
-            lines += [f"## {item['scene_id']}", f"![{item['scene_id']}]({p.path(job, item['path'])})", item['prompt']]
+        from scripts.story_plan import timeline
+        payload = p.payload(job, 'content')
+        if payload.get('schema_version') == '3.0':
+            ratio = p.brief(job)[0]['aspect_ratio']
+            timing = {lang: timeline(payload, images, audio, lang, r) for lang,r in ([('vi','9:16'),('en','16:9')] if ratio=='dual' else [('en','16:9')] if ratio=='16:9' else [('vi','9:16')])}
+            write(folder / 'visual-timing.json', timing)
+            data['assets'].append(relative(folder / 'visual-timing.json'))
+            lines += ['Nhịp theo âm thanh (nội suy, cần nghe kiểm tra):', json.dumps(timing,ensure_ascii=False,indent=2), 'Kiểm tra từng hình: chữ đúng danh sách, không mã nội bộ/chữ thừa; đúng kiểu chữ, vị trí và tính liên tục.']
+        lines += scene_image_lines(p, job, images['items'])
+    data['asset_hashes'] = {name:digest(p.path(job,name)) for name in data['assets']}
     (folder / 'review.md').write_text('\n\n'.join(lines))
+    data['asset_hashes'][relative(folder / 'review.md')] = digest(folder / 'review.md')
+    write(folder / 'manifest.json', data)
     p.event(job, stage, 'review_ready', json.dumps({'revision': revision}))
     return data
 
@@ -230,8 +333,31 @@ def approve(p, job, stage, revision, note, machine=False):
     if report:
         result['report_hash'] = digest(p.path(job, report))
     write(p.path(job, data['decision']), result)
-    p.event(job, stage, 'machine_approved' if machine else 'user_approved', json.dumps(result, ensure_ascii=False))
+    # Verified against a hash, matching workflow_created; a raw JSON detail would let anyone forge a matching row.
+    p.event(job, stage, 'machine_approved' if machine else 'user_approved', hashobj(result))
+    p.event(job, stage, 'approval_detail', json.dumps(result, ensure_ascii=False))
     return status(p, job)
+
+
+def retake_audio(p, job, note, scene=None):
+    """Ask for a new read of the narration, optionally of one scene only.
+
+    The TTS cache is content-addressed, so rejecting a delivery without bumping
+    this count would re-synthesise the same words with the same settings and
+    hand back the identical take. Without --scene every scene is bumped, which
+    is what rejecting the whole track has always meant.
+    """
+    ids = [s['id'] for s in p.payload(job, 'content')['scenes']]
+    if scene and scene not in ids:
+        raise Blocked('Sửa giọng: cảnh không có trong kịch bản')
+    targets = [scene] if scene else ids
+    with p._db_lock:
+        for scene_id in targets:
+            p.db.execute('INSERT INTO audio_edits(job,scene_id,note,at) VALUES(?,?,?,?)',
+                         (job, scene_id, note, time.time()))
+        p.db.commit()
+    p.event(job, 'audio', 'audio_retake_requested', json.dumps({'scenes': targets, 'note': note}, ensure_ascii=False))
+    p.reject(job, 'audio', note)
 
 
 def reject(p, job, stage, revision, note, part=None, scene=None, character=None):
@@ -240,10 +366,12 @@ def reject(p, job, stage, revision, note, part=None, scene=None, character=None)
     if not data or data['revision'] != revision or not note.strip():
         raise Blocked('Cần đúng phần, revision và lý do sửa')
     if stage == 'media':
-        if scene or character:
+        # --part audio is checked first: with a --scene it means "read this scene
+        # again", not "redraw this scene's image".
+        if part == 'audio':
+            retake_audio(p, job, note, scene)
+        elif scene or character:
             p.reject(job, 'images', note, p.rows(job)['images']['revision'], 'final', scene, character)
-        elif part == 'audio':
-            p.reject(job, 'audio', note)
         else:
             raise Blocked('Sửa media: chọn --scene, --character hoặc --part audio')
     else:

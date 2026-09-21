@@ -1,0 +1,94 @@
+{
+  "schema_version": "3.0",
+  "topic": "Kỹ thuật thở vuông giúp bình tĩnh nhanh",
+  "audience": "Người đi làm cảm thấy căng thẳng trước cuộc họp hoặc deadline gấp",
+  "goal": "Biết thực hiện đúng bốn bước của kỹ thuật thở vuông (hít vào, giữ, thở ra, giữ rỗng) theo nhịp đều để bình tĩnh lại trong vài phút",
+  "video_type": "explainer kỹ năng cá nhân",
+  "duration": {
+    "min_seconds": 180,
+    "max_seconds": 450
+  },
+  "scene_count": 7,
+  "required_points": [
+    {
+      "id": "R01",
+      "text": "Nhận diện lúc cơ thể đang căng thẳng và cần một cách bình tĩnh nhanh"
+    },
+    {
+      "id": "R02",
+      "text": "Thở vuông là gì: bốn bước bằng nhau lặp lại theo chu kỳ"
+    },
+    {
+      "id": "R03",
+      "text": "Bước một: hít vào chậm trong khi đếm đến bốn"
+    },
+    {
+      "id": "R04",
+      "text": "Bước hai: giữ hơi trong phổi trong khi đếm đến bốn"
+    },
+    {
+      "id": "R05",
+      "text": "Bước ba: thở ra chậm trong khi đếm đến bốn"
+    },
+    {
+      "id": "R06",
+      "text": "Bước bốn: giữ phổi rỗng trong khi đếm đến bốn trước khi lặp lại"
+    },
+    {
+      "id": "R07",
+      "text": "Lặp lại chu kỳ vài lần và nhận biết khi nào nên dừng"
+    },
+    {
+      "id": "R08",
+      "text": "Giới hạn của kỹ thuật: không thay thế tư vấn y tế nếu có vấn đề hô hấp hoặc lo âu nghiêm trọng"
+    }
+  ],
+  "language": "vi",
+  "tone": "Nhẹ nhàng, trấn an, hướng dẫn rõ ràng từng bước",
+  "style": "Minh hoạ biên tập 2D phẳng, tông xanh dương và trắng dịu mắt, một nhân vật trưởng thành ngồi thẳng lưng, không chữ trong hình trừ khi cần đếm nhịp trên màn hình",
+  "aspect_ratio": "dual",
+  "facts_required": false,
+  "sources": [],
+  "planning": {
+    "success_criteria": [
+      "Biết đúng thứ tự bốn bước: hít vào, giữ, thở ra, giữ rỗng",
+      "Biết mỗi bước giữ nhịp đếm bằng nhau",
+      "Biết khi nào nên dùng kỹ thuật này và khi nào cần tìm hỗ trợ khác"
+    ],
+    "avoid": [
+      "Không đưa ra số liệu nghiên cứu hoặc trích dẫn tên chuyên gia, tổ chức cụ thể",
+      "Không hứa hẹn chữa khỏi lo âu hoặc bất kỳ bệnh lý nào",
+      "Không dùng thuật ngữ y khoa chuyên sâu"
+    ],
+    "prior_knowledge": "Người xem chưa biết kỹ thuật thở vuông; không cần kiến thức y khoa hay thiền định trước đó",
+    "pacing": "Chậm và đều ở bốn cảnh mô tả từng bước đếm nhịp, đủ thời gian để người xem đếm theo trong đầu; nhanh hơn ở phần mở đầu và kết luận",
+    "domain_requirements": [
+      "Trình bày đúng thứ tự cố định bốn bước: hít vào, giữ, thở ra, giữ rỗng, mỗi bước đếm đến bốn",
+      "Các cảnh mô tả từng bước đếm nhịp nên có nhiều hình và nhiều nhịp hơn cảnh mở đầu/kết luận để thấy rõ diễn biến đếm nhịp",
+      "Không dùng thuật ngữ y khoa chuyên sâu; giữ ngôn ngữ đời thường"
+    ],
+    "assumptions": [
+      "Tiêu chí ban đầu lấy từ mục tiêu; cần kiểm tra khi duyệt kịch bản.",
+      "Tốc độ giọng là ước lượng ban đầu, chưa phải số đo hiệu chỉnh."
+    ],
+    "text_style": {
+      "font": "sans-serif rõ nét, cùng kiểu và độ đậm xuyên suốt",
+      "color": "#13253f",
+      "outline": "nền sáng tương phản",
+      "size": "dễ đọc trên điện thoại",
+      "placement": "cách mép ít nhất 10%; tránh mặt và vùng phụ đề dưới cùng 18%"
+    },
+    "speech_rates": {
+      "vi": {
+        "units_per_second": 3.6,
+        "uncertainty": 0.25,
+        "source": "initial estimate; replace with measured voice rate"
+      },
+      "en": {
+        "units_per_second": 2.5,
+        "uncertainty": 0.25,
+        "source": "initial estimate; replace with measured voice rate"
+      }
+    }
+  }
+}

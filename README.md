@@ -1,6 +1,6 @@
 # Video Pilot
 
-Pipeline chính: **kịch bản → hình ảnh và âm thanh → video hoàn chỉnh**.
+Pipeline chính: **kịch bản → âm thanh và hình ảnh → video hoàn chỉnh**.
 Hai chế độ: **review** (bạn duyệt ba mốc) và **auto** (máy đánh giá rồi chuyển bước).
 Hướng dẫn duy nhất cho quy trình: [docs/workflow.md](docs/workflow.md). Rules: [AGENTS.md](AGENTS.md).
 
@@ -14,6 +14,22 @@ python3 pilot.py run video-001
 
 Không còn duyệt riêng control/images/audio hoặc ba cảnh đầu. run/resume tự tiến đến mốc theo mode. Auto không cần người dùng duyệt từng video, nhưng phải có kiểm tra thật; không đánh giá được thì báo cần xử lý. Hàng đợi dùng `pilot.py batch --queue queue.json`, danh sách job auto đã tạo.
 
+## Kho từ vựng
+
+Kênh học từ vựng lấy từ ra từ `vocab/`: mỗi video là một nghĩa của một từ, từ đã làm được
+đánh dấu để không lặp lại, từ nhiều nghĩa tách thành nhiều mục riêng. Đây là đường bắt
+buộc, không phải quy ước: `config.brief_policies` chặn brief từ vựng không sinh từ kho ngay
+trong `pilot.py new`. Hướng dẫn: [docs/vocabulary.md](docs/vocabulary.md).
+
+```bash
+python3 vocab/bank.py status
+python3 vocab/bank.py next --count 10 --topic food-drink
+python3 vocab/bank.py start vocab-010 --mode review
+python3 vocab/bank.py mark vocab-010 --note 'Đã xuất bản'
+python3 vocab/bank.py queue --count 5 --mode auto   # rồi pilot.py batch --queue vocab/queue.json
+python3 vocab/bank.py audit                        # job nào làm ngoài kho, job nào quên mark
+```
+
 ## Môi trường
 
 Python điều phối: `uv venv --python 3.12 .venv`, cài requirements.txt; Node: `npm ci`.
@@ -26,7 +42,7 @@ uv pip sync --python .venv-en/bin/python --index-strategy unsafe-best-match en-r
 ```
 
 Model tải lần đầu, lần sau dùng cache; không API trả phí. Alba cần ghi công theo [voice-attribution.md](docs/voice-attribution.md).
-Máy đích Xeon E3-1241 v3 / 16 GB / P620 2 GB: chưa nghiệm thu hiệu năng thực tế. Render mặc định hai tác vụ, Flow một tác vụ. Không tạo video AI.
+Máy đích Xeon E3-1241 v3 / 16 GB / P620 2 GB: chưa nghiệm thu hiệu năng thực tế. Render mặc định hai tác vụ, Flow một tác vụ. flow_batch (config.json) mặc định tắt, chưa nghiệm thu với Flow thật. Không tạo video AI.
 
 ## Kiểm chứng
 

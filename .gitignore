@@ -94,7 +94,13 @@ desktop.ini
 *.swo
 *~
 
-# --- 9. Runtime Logs & Loose Media in Root ---
+# --- 9. Vocabulary Bank Scratch ---
+# Kho từ (sources/, bank.jsonl, ledger.json, briefs/) được theo dõi trong git;
+# chỉ hàng đợi tạm của pilot batch là không.
+vocab/queue.json
+vocab/.ledger.lock
+
+# --- 10. Runtime Logs & Loose Media in Root ---
 *.log
 logs/
 /*.png

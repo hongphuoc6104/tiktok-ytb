@@ -24,7 +24,7 @@ def schema_errors(root,name,data):
 
 
 def validate_brief(root,b):
- errors=schema_errors(root,'brief-v2.json',b)
+ errors=schema_errors(root,'brief-v3.json' if b.get('schema_version')=='3.0' else 'brief-v2.json',b)
  if errors: raise ContractError(errors)
  if b['duration']['min_seconds']>b['duration']['max_seconds']:
   errors.append(error('DURATION','duration','Khoảng thời lượng đảo ngược','Sửa min/max.'))
@@ -37,7 +37,7 @@ def validate_brief(root,b):
  if errors: raise ContractError(errors)
 
 def validate_content(root,b,revision,bhash,p):
- errors=schema_errors(root,'content-v2.json',p)
+ errors=schema_errors(root,'content-v3.json' if b.get('schema_version')=='3.0' else 'content-v2.json',p)
  if errors: raise ContractError(errors)
  def fail(code,path,msg,fix='Sửa bản nháp theo yêu cầu hiện tại.'):
   errors.append(error(code,path,msg,fix))
@@ -55,22 +55,37 @@ def validate_content(root,b,revision,bhash,p):
   if set(s['character_ids'])-set(chars): fail('CHARACTER_REF',s['id'],'Nhân vật chưa khai báo')
   if set(s['source_ids'])-source_ids: fail('SOURCE_REF',s['id'],'Nguồn chưa khai báo')
   if set(s['requirements'])-set(req): fail('REQUIREMENT_REF',s['id'],'Mã ý không tồn tại')
+ needs_en=b.get('aspect_ratio') in ('dual','16:9')
+ # quote_en is only defined on the content-v3 coverage schema; content-v2 has no field to satisfy this with.
+ check_coverage_en=needs_en and p.get('schema_version')=='3.0'
  covered=set()
  for c in p['coverage']:
   s=scenes.get(c['scene_id'])
   if c['requirement_id'] not in req or not s: fail('COVERAGE_REF','coverage','Sai mã ý hoặc cảnh');continue
   if c['quote'] not in s['narration']: fail('QUOTE','coverage','Trích dẫn không tồn tại trong lời dẫn')
+  if check_coverage_en:
+   if not c.get('quote_en'):
+    fail('COVERAGE_EN','coverage','Thiếu câu trích tiếng Anh cho ý bắt buộc','Bổ sung quote_en trích nguyên văn từ narration_en của chính cảnh này.')
+   elif c['quote_en'] not in s.get('narration_en',''):
+    fail('QUOTE_EN','coverage','Câu trích tiếng Anh không có trong narration_en của cảnh')
   if c['requirement_id'] not in s['requirements']: fail('COVERAGE_REF','coverage','Cảnh chưa liên kết ý')
   covered.add(c['requirement_id'])
  if covered!=set(req): fail('COVERAGE','coverage','Chưa ánh xạ đủ ý bắt buộc')
- if b.get('aspect_ratio') in ('dual','16:9'):
+ if needs_en:
   for s in p['scenes']:
    if not s.get('narration_en'): fail('NARRATION_EN',s['id'],'Thiếu lời dẫn tiếng Anh','Bổ sung narration_en; bản 16:9 đọc tiếng Anh.')
- total=sum(s['estimated_seconds'] for s in p['scenes'])
- if not b['duration']['min_seconds']<=total<=b['duration']['max_seconds']: fail('ESTIMATE','scenes','Tổng thời lượng dự kiến ngoài khoảng')
+ if p.get('schema_version')!='3.0':
+  total=sum(s['estimated_seconds'] for s in p['scenes'])
+  if not b['duration']['min_seconds']<=total<=b['duration']['max_seconds']: fail('ESTIMATE','scenes','Tổng thời lượng dự kiến ngoài khoảng')
  if errors: raise ContractError(errors)
+ if p.get('schema_version')=='3.0':
+  from scripts.story_plan import validate_plan
+  validate_plan(b,p)
 
 def review_markdown(job,revision,b,p):
+ if p.get('schema_version')=='3.0':
+  from scripts.story_plan import review_plan
+  return f'# Nội dung {job} — phiên bản {revision}\n\n'+review_plan(b,p)
  lines=[f'# Nội dung {job} — phiên bản {revision}',f"Đề tài: {p['topic']}",f"Người xem: {b['audience']}",f"Mục tiêu: {b['goal']}",'Thời lượng dự kiến; chưa được xác nhận bằng WAV.', '## Kịch bản']
  for s in p['scenes']:
   lines += [f"### {s['id']} — {s['title']}",s['narration']]

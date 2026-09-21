@@ -35,7 +35,7 @@ class PipelineTests(unittest.TestCase):
   with self.assertRaises(Blocked):self.p.run('test','images')
  def test_resume_new_process(self):
   self.content();second=Pilot(self.root)
-  self.assertEqual(second.next('test')['module'],'images');second.db.close()
+  self.assertEqual(second.next('test')['module'],'audio');second.db.close()
  def test_modified_validator_blocks(self):
   (self.root/'pilot.py').write_text('changed')
   with self.assertRaises(Blocked):self.p.status('test')

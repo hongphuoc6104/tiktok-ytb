@@ -12,8 +12,15 @@ def image_prompt(scene_prompt, ratio='9:16'):
     """Explicit pilot adaptation, not the original tested 16:9 batch template."""
     if ratio not in ('9:16', '16:9'):
         raise Blocked('Unsupported image ratio')
+    wide_rule = ('The 16:9 frame is wider than the 9:16 version of this same scene: extend the '
+                 'environment on both sides with details consistent with the setting, so the wider '
+                 'canvas is filled rather than cropped. Keep the same characters, action, central '
+                 'composition and text placement as the 9:16 version. Do not add any text, numbers, '
+                 'labels, or logos anywhere in the extended sides. '
+                 ) if ratio == '16:9' else ''
     return (f'Generate one separate {ratio} image for the scene prompt provided below. '
             'Follow the prompt exactly and maintain consistent visual quality with the approved character references. '
+            + wide_rule +
             'Scene prompt: ' + scene_prompt)
 
 

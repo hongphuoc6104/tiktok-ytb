@@ -1,64 +1,6 @@
 import React, {useLayoutEffect} from 'react';
-import {AbsoluteFill, Audio, Composition, Img, registerRoot, staticFile, useCurrentFrame, interpolate} from 'remotion';
+import {AbsoluteFill, Audio, Composition, Img, registerRoot, staticFile, useCurrentFrame} from 'remotion';
 
-
-function splitIntoPhrases(text: string, maxLen = 32): string[] {
-  if (!text || text.length <= maxLen) return [text || ''];
-  const rawParts = text.split(/([,?!;:\.—])/).filter(Boolean);
-  const clauses: string[] = [];
-  let curr = '';
-  for (const p of rawParts) {
-    if (['.', ',', '?', '!', ';', ':', '—'].includes(p)) {
-      curr += p;
-    } else {
-      if (curr.trim()) clauses.push(curr.trim());
-      curr = p;
-    }
-  }
-  if (curr.trim()) clauses.push(curr.trim());
-
-  const result: string[] = [];
-  for (const clause of clauses) {
-    if (clause.length <= maxLen) {
-      result.push(clause);
-    } else {
-      const words = clause.split(/\s+/);
-      let buf = '';
-      for (const w of words) {
-        if ((buf ? buf + ' ' + w : w).length <= maxLen) {
-          buf = buf ? buf + ' ' + w : w;
-        } else {
-          if (buf) result.push(buf);
-          buf = w;
-        }
-      }
-      if (buf) result.push(buf);
-    }
-  }
-  return result.length > 0 ? result : [text];
-}
-
-function getActiveSubtitle(sub: {text: string, start: number, end: number}, t: number): string {
-  if (!sub || !sub.text) return '';
-  if (sub.text.length <= 32) return sub.text;
-  const chunks = splitIntoPhrases(sub.text, 32);
-  if (chunks.length <= 1) return chunks[0] || sub.text;
-
-  const duration = Math.max(0.1, sub.end - sub.start);
-  const relTime = Math.max(0, Math.min(duration, t - sub.start));
-  const progress = relTime / duration;
-
-  const totalChars = chunks.reduce((sum, c) => sum + Math.max(c.length, 6), 0);
-  let accumulated = 0;
-  const targetChar = progress * totalChars;
-  for (const c of chunks) {
-    accumulated += Math.max(c.length, 6);
-    if (targetChar <= accumulated) {
-      return c;
-    }
-  }
-  return chunks[chunks.length - 1];
-}
 
 const Video: React.FC<any> = (p) => {
   const frame = useCurrentFrame();
@@ -78,29 +20,27 @@ const Video: React.FC<any> = (p) => {
   }, [frame]);
 
   const scene = p.scenes.find((s: any) => t >= s.start && t < s.end) || p.scenes[p.scenes.length - 1] || {start: 0, end: 1, image: '', title: ''};
-  const sub = p.segments.find((s: any) => t >= s.start && t < s.end);
-  const scale = interpolate(t, [scene.start, scene.end], [1, 1.04], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-
-  // Progressive reveal and dual aspect-ratio image selection (9:16 vertical vs 16:9 widescreen)
-  const imageList = isVertical
-    ? (scene.images_9x16 || scene.images)
-    : (scene.images_16x9 || scene.images);
-
-  let currentImageSrc = isVertical
-    ? (scene.image_9x16 || scene.image)
-    : (scene.image_16x9 || scene.image);
-
-  if (imageList && Array.isArray(imageList) && imageList.length > 0) {
-    const relTime = t - scene.start;
-    for (const item of imageList) {
-      if (relTime >= (item.at || 0)) {
-        currentImageSrc = item.src;
-      }
-    }
-  }
+  // Cues are pre-cut once in Python (adapters.subtitle_cues); the renderer
+  // only has to find which one is active, never split text itself.
+  const cue = (p.cues || []).find((c: any) => t >= c.start && t < c.end);
+  const imageList = scene.images || [{src: scene.image, at: 0, effect: 'hold'}];
+  const relative = t - scene.start;
+  let active = 0;
+  for (let i = 0; i < imageList.length; i++) if (relative >= imageList[i].at) active = i;
+  const beat = imageList[active];
+  const currentImageSrc = beat?.src || scene.image;
+  const nextAt = imageList[active + 1]?.at ?? (scene.end - scene.start);
+  const progress = Math.max(0, Math.min(1, (relative - beat.at) / Math.max(.001, nextAt - beat.at)));
+  const transition = Math.max(0, Math.min(1, (relative - beat.at) / Math.min(.3, Math.max(.001, (nextAt - beat.at) / 2))));
+  const scale = beat.effect === 'zoom_in' ? 1 + .08 * progress : beat.effect === 'zoom_out' ? 1.08 - .08 * progress : 1;
+  const opacity = beat.effect === 'fade' ? transition : 1;
+  const translate = beat.effect === 'slide_left' ? (1 - transition) * 100 : 0;
 
   return (
     <AbsoluteFill style={{background: '#ffffff', fontFamily: 'Arial, sans-serif', color: 'white', width, height}}>
+      {active > 0 && ['fade', 'slide_left'].includes(beat.effect) && transition < 1 && (
+        <Img src={staticFile(imageList[active - 1].src)} style={{position: 'absolute', width: '100%', height: '100%', objectFit: 'contain'}} />
+      )}
       {currentImageSrc && (
         <Img
           src={staticFile(currentImageSrc)}
@@ -108,15 +48,16 @@ const Video: React.FC<any> = (p) => {
             width: '100%',
             height: '100%',
             objectFit: 'contain',
-            transform: `scale(${scale})`,
-            opacity: interpolate(t, [scene.start, scene.start + 0.2, scene.end - 0.2, scene.end], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
+            transform: `translateX(${translate}%) scale(${scale})`,
+            transformOrigin: `${(beat.focus?.x ?? .5)*100}% ${(beat.focus?.y ?? .5)*100}%`,
+            opacity
           }}
         />
       )}
 
       {/* Phụ đề: chỉ hiển thị nếu không bật hideSubtitles - luôn nằm gọn trên 1 dòng duy nhất */}
-      {!p.hideSubtitles && sub && (() => {
-        const lineText = getActiveSubtitle(sub, t);
+      {!p.hideSubtitles && cue && (() => {
+        const lineText = cue.text;
         return (
           <div data-check="subtitle" style={{
             position: 'absolute',
@@ -156,7 +97,7 @@ registerRoot(() => (
     height={1920}
     fps={30}
     durationInFrames={1800}
-    defaultProps={{scenes: [], segments: []}}
+    defaultProps={{scenes: [], cues: []}}
     calculateMetadata={({props}: any) => {
       const isHorizontal = props.aspect_ratio === '16:9' || props.width === 1920;
       return {

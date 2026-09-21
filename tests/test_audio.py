@@ -1,13 +1,41 @@
 """Audio module coverage. Real TTS is never invoked; the worker is faked."""
-import json,math,shutil,struct,subprocess,tempfile,unittest,wave
+import contextlib,json,math,shutil,struct,subprocess,sys,tempfile,types,unittest,wave
 from pathlib import Path
 from unittest.mock import patch
-import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from pilot import Pilot,Blocked,read,write,ROOT
-import adapters
+import adapters,tts_worker
+import numpy as np
+import soundfile as sf
 
 SR=48000
+
+class FakeVieneu:
+ """Stands in for vieneu.Vieneu: no model weights, deterministic output.
+
+ FakeVieneu.calls records every text actually sent to infer(), so tests can
+ assert a cache hit skipped synthesis entirely rather than just checking file
+ counts (which a buggy overwrite-on-every-call implementation could also pass).
+ """
+ calls=[]
+ def __init__(self,mode,backend,precision):self.sample_rate=SR;self._default_voice='v1'
+ def list_preset_voices(self):return [('Voice One','v1')]
+ def resolve_voice_name(self,name):return 'v1'
+ def infer(self,text,voice,temperature,top_p):FakeVieneu.calls.append(text);return text
+ def save(self,text,path):sf.write(str(path),np.full(int(SR*.2),.05,dtype='float32'),SR,subtype='PCM_16')
+
+@contextlib.contextmanager
+def fake_vieneu():
+ """Injects fake 'vieneu'/'vieneu_utils.core_utils' modules so tts_worker.run()
+ exercises its real cache_key()/synth() logic without the real TTS runtime."""
+ FakeVieneu.calls=[]
+ vieneu_mod=types.ModuleType('vieneu');vieneu_mod.Vieneu=FakeVieneu
+ vu_core=types.ModuleType('vieneu_utils.core_utils')
+ vu_core.pause_pad_samples=lambda a,b,sr,gap:int(gap*sr)
+ vu_mod=types.ModuleType('vieneu_utils');vu_mod.core_utils=vu_core
+ injected={'vieneu':vieneu_mod,'vieneu_utils':vu_mod,'vieneu_utils.core_utils':vu_core}
+ with patch.dict(sys.modules,injected),patch('importlib.metadata.version',return_value='9.9.9-test'):
+  yield FakeVieneu
 
 def worker(emit,voice=None):
  """Fake tts_worker.py. Only intercepts the worker call; ffmpeg still runs for real."""
@@ -78,7 +106,97 @@ class MasterTests(unittest.TestCase):
  def test_master_leaves_no_temp_files(self):
   src=self.d/'n.wav';tone(src,1.0)
   adapters.master(src,self.d/'eq.wav',{})
-  self.assertEqual([p.name for p in self.d.iterdir()],['n.wav'])
+  self.assertEqual(sorted(p.name for p in self.d.iterdir()),['eq.log','n.wav'])
+
+ def test_master_raises_blocked_when_ffmpeg_fails(self):
+  """A corrupt/undecodable source must never silently pass through unmastered."""
+  src=self.d/'n.wav';src.write_bytes(b'not a real wav file')
+  with self.assertRaises(Blocked):adapters.master(src,self.d/'eq.wav',{})
+  self.assertFalse((self.d/'narration_lv.wav').exists())
+  self.assertTrue((self.d/'eq.log').exists())
+
+ def test_master_raises_blocked_when_ffmpeg_missing(self):
+  src=self.d/'n.wav';tone(src,1.0);before=src.read_bytes()
+  def missing(cmd,**kw):
+   if cmd[0]=='ffmpeg':raise FileNotFoundError('ffmpeg')
+   return subprocess.run(cmd,**kw)
+  with patch.object(adapters.subprocess,'run',side_effect=missing):
+   with self.assertRaisesRegex(Blocked,'ffmpeg'):adapters.master(src,self.d/'eq.wav',{})
+  self.assertEqual(src.read_bytes(),before,'src must be left untouched, not silently passed through')
+
+class TTSWorkerCacheTests(unittest.TestCase):
+ """Exercises tts_worker.run() directly (vieneu faked) against the REAL
+ cache_key()/synth() logic. The `worker()` fake used by AudioStageTests below
+ bypasses tts_worker.py entirely and cannot catch a caching regression -- this
+ class is the regression guard the task calls out as most important: an
+ edited scene must never play back stale audio, and an untouched scene must
+ never be re-synthesized just because pilot.py started a new revision dir.
+ """
+ def req(self,text,cache_dir,**settings):
+  cfg=dict(tts_voice='Voice One',tts_temperature=.6,tts_top_p=.9,tts_backend='onnx',
+           tts_precision='fp32',tts_scene_synthesis=False)
+  cfg.update(settings)
+  r={'settings':cfg,'scenes':[{'scene_id':'SC01','narration':text,'texts':[text],'gaps':[],'tail':.3}]}
+  if cache_dir is not None:r['cache_dir']=str(cache_dir)
+  return r
+
+ def synth(self,req,out):
+  out.mkdir(parents=True,exist_ok=True);src=out/'request.json';write(src,req)
+  tts_worker.run(src,out);return read(out/'tts-result.json')
+
+ def test_changed_narration_is_not_reused_from_cache(self):
+  """Regression guard: editing SC01's text must produce a NEW cache entry,
+  never replay the old WAV under a stale/name-based key."""
+  with fake_vieneu() as Fake,tempfile.TemporaryDirectory() as d:
+   d=Path(d);cache=d/'cache'
+   self.synth(self.req('Xin chào các bạn.',cache),d/'rev1')
+   first=set(p.name for p in cache.glob('*.wav'))
+   self.assertEqual(len(first),1);self.assertEqual(len(Fake.calls),1)
+   self.synth(self.req('Chào mừng các bạn quay lại.',cache),d/'rev2')
+   second=set(p.name for p in cache.glob('*.wav'))
+   self.assertEqual(len(second),2,'changed text must add a new cache entry')
+   self.assertTrue(first.issubset(second),'old cache entry must not be overwritten/removed')
+   self.assertEqual(len(Fake.calls),2,'changed text must be resynthesized, not served from cache')
+
+ def test_changed_settings_is_not_reused_from_cache(self):
+  with fake_vieneu() as Fake,tempfile.TemporaryDirectory() as d:
+   d=Path(d);cache=d/'cache';text='Xin chào các bạn.'
+   self.synth(self.req(text,cache),d/'rev1')
+   self.synth(self.req(text,cache,tts_temperature=.9),d/'rev2')
+   self.assertEqual(len(list(cache.glob('*.wav'))),2,'changed settings must add a new cache entry')
+   self.assertEqual(len(Fake.calls),2,'changed settings must be resynthesized, not served from cache')
+
+ def test_same_text_and_settings_hits_cache_across_revisions(self):
+  """The whole point of moving the cache to job level: two separate revision
+  dirs (pilot.py always mkdirs a fresh one) sharing one job-level cache_dir
+  must hit the cache and skip synthesis entirely on the second run."""
+  with fake_vieneu() as Fake,tempfile.TemporaryDirectory() as d:
+   d=Path(d);cache=d/'cache';req=self.req('Xin chào các bạn.',cache)
+   self.synth(req,d/'rev1')
+   self.synth(req,d/'rev2')
+   self.assertEqual(len(list(cache.glob('*.wav'))),1)
+   self.assertEqual(len(Fake.calls),1,'identical text+settings must not be resynthesized')
+
+ def test_defaults_to_revision_local_cache_when_no_cache_dir_given(self):
+  """Backward-compatible fallback if a caller omits cache_dir (step 1's
+  behaviour, before adapters.py started passing a job-level directory)."""
+  with fake_vieneu(),tempfile.TemporaryDirectory() as d:
+   out=Path(d)/'rev1'
+   self.synth(self.req('Xin chào.',None),out)
+   self.assertTrue((out/'raw').is_dir())
+   self.assertEqual(len(list((out/'raw').glob('*.wav'))),1)
+
+ def test_cache_key_is_pure_and_stable(self):
+  """cache_key() itself: same inputs -> same key; any relevant input changed
+  -> different key. Importable without the vieneu runtime (see tts_worker.py's
+  module layout), matching adapters.chunks()/gap_after()'s pure-helper tests."""
+  s=dict(voice='v1',temperature=.6,top_p=.9,backend='onnx',precision='fp32',mode='v3turbo')
+  k=tts_worker.cache_key('Xin chào',s,'1.0.0',24000)
+  self.assertEqual(k,tts_worker.cache_key('Xin chào',s,'1.0.0',24000))
+  self.assertNotEqual(k,tts_worker.cache_key('Xin chào bạn',s,'1.0.0',24000))
+  self.assertNotEqual(k,tts_worker.cache_key('Xin chào',dict(s,temperature=.7),'1.0.0',24000))
+  self.assertNotEqual(k,tts_worker.cache_key('Xin chào',s,'1.0.1',24000))
+  self.assertNotEqual(k,tts_worker.cache_key('Xin chào',s,'1.0.0',24000,cache_version=2))
 
 class AudioStageTests(unittest.TestCase):
  """Drives adapters.audio() with a fake worker and asserts every pilot gate."""
@@ -110,6 +228,23 @@ class AudioStageTests(unittest.TestCase):
   for s in pay['segments']:
    self.assertAlmostEqual(s['start'],last,places=3);self.assertGreater(s['end'],s['start']);last=s['end']
   self.assertAlmostEqual(pay['duration'],last,places=3)
+
+ def test_request_carries_per_scene_retake(self):
+  """A rejected read has to reach the worker as a changed cache key.
+
+  The cache is content-addressed, so asking for a better delivery of the same
+  words would otherwise resolve to the take that was just rejected."""
+  self.p.db.execute("INSERT INTO audio_edits(job,scene_id,note,at) VALUES('test','SC02','TEST retake',0)")
+  self.p.db.commit()
+  sent={};base=self.fake_worker()
+  def spy(cmd,**kw):
+   if 'tts_worker.py' in str(cmd[1]):sent.update(read(cmd[2]))
+   return base(cmd,**kw)
+  with patch.object(adapters.subprocess,'run',side_effect=spy):
+   self.p.run('test','audio')
+  retake={s['scene_id']:s['retake'] for s in sent['scenes']}
+  self.assertEqual(retake['SC02'],1)
+  self.assertEqual({v for k,v in retake.items() if k!='SC02'},{0})
 
  def test_request_carries_pauses_and_voice(self):
   seen={};inner=self.fake_worker()

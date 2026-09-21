@@ -1,1 +1,1 @@
-Đọc AGENTS.md và docs/workflow.md. Đây là quy trình v3 ba phần; không áp dụng quy trình duyệt từng module cũ.
+Đọc AGENTS.md và docs/workflow.md. Đây là quy trình v3 ba phần; không áp dụng quy trình duyệt từng module cũ. Mọi video trong dự án luôn dùng nhân vật đại diện kênh cố định (canonical mascot: Người que áo xanh biển nhạt #8CCFE8 tại assets/characters/channel-mascot/reference-v1.png).

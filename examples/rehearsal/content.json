@@ -1,0 +1,915 @@
+{
+  "brief_hash": "59a91371be1f37c11d9c442a4212a258d2d5e5d47a8ba713b74335dcb6443f68",
+  "brief_revision": 1,
+  "characters": [
+    {
+      "appearance": "Nhân viên văn phòng độ tuổi ba mươi, vóc dáng vừa vặn, gương mặt điềm tĩnh tạo cảm giác tin cậy",
+      "id": "char_nam",
+      "name": "Nam",
+      "outfit": "Áo sơ mi màu xanh lam nhạt tối giản, quần tây phẳng phiu thoải mái"
+    }
+  ],
+  "claims": [],
+  "coverage": [
+    {
+      "quote": "Nhận diện lúc cơ thể đang căng thẳng và cần một cách bình tĩnh nhanh",
+      "quote_en": "Recognizing when your body feels tense and needs a quick way to calm down",
+      "requirement_id": "R01",
+      "scene_id": "SC01"
+    },
+    {
+      "quote": "Thở vuông là gì: bốn bước bằng nhau lặp lại theo chu kỳ",
+      "quote_en": "What is box breathing: four equal steps repeated in a cycle",
+      "requirement_id": "R02",
+      "scene_id": "SC02"
+    },
+    {
+      "quote": "bước một: hít vào chậm trong khi đếm đến bốn",
+      "quote_en": "step one: inhale slowly while counting to four",
+      "requirement_id": "R03",
+      "scene_id": "SC03"
+    },
+    {
+      "quote": "bước hai: giữ hơi trong phổi trong khi đếm đến bốn",
+      "quote_en": "step two: hold the air in your lungs while counting to four",
+      "requirement_id": "R04",
+      "scene_id": "SC04"
+    },
+    {
+      "quote": "bước ba: thở ra chậm trong khi đếm đến bốn",
+      "quote_en": "step three: exhale slowly while counting to four",
+      "requirement_id": "R05",
+      "scene_id": "SC05"
+    },
+    {
+      "quote": "bước bốn: giữ phổi rỗng trong khi đếm đến bốn trước khi lặp lại",
+      "quote_en": "step four: keep your lungs empty while counting to four before repeating",
+      "requirement_id": "R06",
+      "scene_id": "SC06"
+    },
+    {
+      "quote": "lặp lại chu kỳ vài lần và nhận biết khi nào nên dừng",
+      "quote_en": "repeat the cycle a few times and recognize when to stop",
+      "requirement_id": "R07",
+      "scene_id": "SC07"
+    },
+    {
+      "quote": "giới hạn của kỹ thuật: không thay thế tư vấn y tế nếu có vấn đề hô hấp hoặc lo âu nghiêm trọng",
+      "quote_en": "it does not replace medical consultation if you have breathing problems or severe anxiety",
+      "requirement_id": "R08",
+      "scene_id": "SC07"
+    }
+  ],
+  "duration": {
+    "max_seconds": 450,
+    "min_seconds": 180
+  },
+  "open_questions": [],
+  "outline": [
+    {
+      "purpose": "Giúp người xem nhận diện các dấu hiệu căng thẳng tức thì của cơ thể như tim đập nhanh, thở gấp trước áp lực công việc và giới thiệu nhu cầu cần một biện pháp lấy lại bình tĩnh nhanh chóng.",
+      "requirements": [
+        "R01"
+      ],
+      "scene_id": "SC01",
+      "transition": "Dẫn dắt từ nhu cầu hạ nhiệt căng thẳng sang giải pháp đơn giản nhưng hiệu quả: phương pháp thở vuông."
+    },
+    {
+      "purpose": "Định nghĩa kỹ thuật thở vuông qua hình tượng hình vuông gồm bốn cạnh bằng nhau, tương ứng với bốn bước hít vào, giữ, thở ra, giữ rỗng được lặp lại nhịp nhàng theo chu kỳ.",
+      "requirements": [
+        "R02"
+      ],
+      "scene_id": "SC02",
+      "transition": "Mời người xem ngồi thẳng lưng, thả lỏng vai và bắt đầu ngay với bước đầu tiên."
+    },
+    {
+      "purpose": "Hướng dẫn chi tiết bước một: hít vào thật chậm rãi và sâu bằng mũi trong khi đếm thầm đều đặn từ một đến bốn để lấp đầy không khí vào lồng ngực.",
+      "requirements": [
+        "R03"
+      ],
+      "scene_id": "SC03",
+      "transition": "Khi lồng ngực đã căng đầy không khí, nhẹ nhàng chuyển sang bước giữ hơi."
+    },
+    {
+      "purpose": "Hướng dẫn chi tiết bước hai: nín giữ luồng hơi êm dịu trong phổi trong bốn nhịp đếm, giữ cơ thể thư giãn không gồng cứng.",
+      "requirements": [
+        "R04"
+      ],
+      "scene_id": "SC04",
+      "transition": "Hết bốn nhịp giữ hơi, chuẩn bị giải phóng không khí ra ngoài ở bước kế tiếp."
+    },
+    {
+      "purpose": "Hướng dẫn chi tiết bước ba: thở ra từ từ và đều đặn qua miệng hoặc mũi trong bốn nhịp đếm để đẩy hết khí tù đọng và giải tỏa căng thẳng.",
+      "requirements": [
+        "R05"
+      ],
+      "scene_id": "SC05",
+      "transition": "Khi hơi thở đã thoát hết ra ngoài, tiếp tục duy trì trạng thái tĩnh lặng ở bước cuối cùng."
+    },
+    {
+      "purpose": "Hướng dẫn chi tiết bước bốn: giữ phổi ở trạng thái hoàn toàn rỗng trong bốn nhịp đếm tĩnh lặng trước khi bắt đầu một chu kỳ mới.",
+      "requirements": [
+        "R06"
+      ],
+      "scene_id": "SC06",
+      "transition": "Hoàn thành trọn vẹn một vòng hình vuông và chuẩn bị cho việc duy trì nhịp thở này."
+    },
+    {
+      "purpose": "Hướng dẫn lặp lại chu kỳ thở vuông từ ba đến năm lần cho đến khi tâm trí dịu lại, nhận biết thời điểm nên dừng và nhấn mạnh giới hạn kỹ thuật không thay thế can thiệp y tế chuyên sâu nếu gặp vấn đề hô hấp hoặc lo âu nặng.",
+      "requirements": [
+        "R07",
+        "R08"
+      ],
+      "scene_id": "SC07",
+      "transition": "Kết thúc video bằng lời động viên trấn an nhẹ nhàng, giúp người xem tự tin quay trở lại với công việc."
+    }
+  ],
+  "required_points": [
+    "Nhận diện lúc cơ thể đang căng thẳng và cần một cách bình tĩnh nhanh",
+    "Thở vuông là gì: bốn bước bằng nhau lặp lại theo chu kỳ",
+    "Bước một: hít vào chậm trong khi đếm đến bốn",
+    "Bước hai: giữ hơi trong phổi trong khi đếm đến bốn",
+    "Bước ba: thở ra chậm trong khi đếm đến bốn",
+    "Bước bốn: giữ phổi rỗng trong khi đếm đến bốn trước khi lặp lại",
+    "Lặp lại chu kỳ vài lần và nhận biết khi nào nên dừng",
+    "Giới hạn của kỹ thuật: không thay thế tư vấn y tế nếu có vấn đề hô hấp hoặc lo âu nghiêm trọng"
+  ],
+  "revision_response": [],
+  "scenes": [
+    {
+      "action": "Nhân vật ngồi thẳng lưng bên bàn làm việc, tay đặt lên ngực cảm nhận nhịp thở nhanh rồi nhắm mắt chuẩn bị thả lỏng",
+      "beats": [
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Before a big meeting"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Trước một cuộc họp lớn"
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc01_1",
+          "image_id": "im_sc01_a",
+          "purpose": "Nhận biết các biểu hiện căng thẳng thể chất"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "A simple breathing exercise"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Một bài tập điều hòa"
+            }
+          },
+          "effect": "fade",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc01_2",
+          "image_id": "im_sc01_b",
+          "purpose": "Giới thiệu giải pháp điều hòa nhịp thở"
+        }
+      ],
+      "camera": "Trung cảnh ngang tầm mắt, góc nhìn chính diện tạo cảm giác tập trung",
+      "character_ids": [
+        "char_nam"
+      ],
+      "id": "SC01",
+      "images": [
+        {
+          "based_on": null,
+          "change": "Khởi đầu cảnh với nhân vật ngồi thẳng lưng trước bàn làm việc, bộc lộ cảm giác căng thẳng",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D biên tập, một nhân vật trưởng thành ngồi thẳng lưng trước bàn làm việc, một tay đặt nhẹ lên ngực, tông màu xanh dương và trắng dịu mắt",
+          "id": "im_sc01_a",
+          "preserve": "",
+          "reason": "Giúp người xem liên hệ ngay với trải nghiệm căng thẳng công việc thực tế",
+          "visible_text": []
+        },
+        {
+          "based_on": "im_sc01_a",
+          "change": "Nét mặt nhân vật thư thái hơn, hai mắt khép nhẹ, hai vai hạ lỏng tự nhiên",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, nhân vật ngồi thẳng lưng thả lỏng hai vai, nét mặt bình thản, ánh sáng êm dịu lan tỏa xung quanh",
+          "id": "im_sc01_b",
+          "preserve": "Tư thế ngồi thẳng lưng của nhân vật và phông nền xanh dương trắng",
+          "reason": "Chuyển đổi trạng thái từ căng thẳng sang sẵn sàng tiếp nhận phương pháp điều hòa",
+          "visible_text": []
+        }
+      ],
+      "narration": "Trước một cuộc họp lớn hay hạn chót gấp, tim bạn có thể đập nhanh và hơi thở dồn dập. Nhận diện lúc cơ thể đang căng thẳng và cần một cách bình tĩnh nhanh giúp bạn sớm lấy lại sự chủ động. Một bài tập điều hòa nhịp thở đơn giản sẽ hỗ trợ bạn ngay lúc này.",
+      "narration_en": "Before a big meeting or a tight deadline, your heart may beat fast and your breathing turns shallow. Recognizing when your body feels tense and needs a quick way to calm down helps you regain control early. A simple breathing exercise will support you right now.",
+      "purpose": "Giúp người xem nhận diện các dấu hiệu căng thẳng tức thì của cơ thể như tim đập nhanh, thở gấp trước áp lực công việc và giới thiệu nhu cầu cần một biện pháp lấy lại bình tĩnh nhanh chóng.",
+      "requirements": [
+        "R01"
+      ],
+      "setting": "Góc làm việc hiện đại tối giản với tông màu xanh dương và trắng dịu mắt",
+      "source_ids": [],
+      "title": "Nhận biết căng thẳng"
+    },
+    {
+      "action": "Nhân vật ngồi thẳng lưng thả lỏng, một khung hình vuông thanh mảnh xuất hiện bên cạnh với bốn cạnh sáng đều đặn theo chu trình",
+      "beats": [
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "That is box breathing"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Đó là kỹ thuật thở vuông"
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc02_1",
+          "image_id": "im_sc02_a",
+          "purpose": "Giới thiệu định nghĩa thở vuông qua biểu tượng hình vuông"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Each step lasts for"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Mỗi bước diễn ra"
+            }
+          },
+          "effect": "fade",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc02_2",
+          "image_id": "im_sc02_b",
+          "purpose": "Nhấn mạnh chu trình bốn nhịp đếm đều đặn"
+        }
+      ],
+      "camera": "Trung cảnh cân đối, khung hình ổn định hướng sự chú ý vào biểu tượng hình vuông",
+      "character_ids": [
+        "char_nam"
+      ],
+      "id": "SC02",
+      "images": [
+        {
+          "based_on": null,
+          "change": "Xuất hiện biểu tượng khung hình vuông tối giản bên cạnh nhân vật ngồi thẳng lưng",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D biên tập, nhân vật ngồi thẳng lưng tĩnh tại, bên cạnh là một khung hình vuông tối giản màu xanh dương thanh mảnh trên nền trắng sáng",
+          "id": "im_sc02_a",
+          "preserve": "",
+          "reason": "Trực quan hóa khái niệm thở vuông bằng hình học đơn giản",
+          "visible_text": []
+        },
+        {
+          "based_on": "im_sc02_a",
+          "change": "Bốn cạnh của hình vuông cùng phát sáng nhẹ nhàng tạo thành một vòng tuần hoàn đồng điệu",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, khung hình vuông sáng đều cả bốn cạnh với các mũi tên chuyển động mềm mại khép kín, nhân vật giữ tư thế thư thái",
+          "id": "im_sc02_b",
+          "preserve": "Nhân vật ngồi thẳng lưng và vị trí khung hình vuông trên nền xanh dương trắng",
+          "reason": "Làm nổi bật tính chất bốn cạnh bằng nhau và chu kỳ lặp lại đều đặn",
+          "visible_text": []
+        }
+      ],
+      "narration": "Đó là kỹ thuật thở vuông, một phương pháp kiểm soát hơi thở rất quen thuộc. Thở vuông là gì: bốn bước bằng nhau lặp lại theo chu kỳ, tương ứng với bốn cạnh của một hình vuông cân đối. Mỗi bước diễn ra đúng bốn nhịp đếm, mang lại sự cân bằng êm dịu cho tâm trí.",
+      "narration_en": "That is box breathing, a familiar rhythm practice for settling the mind. What is box breathing: four equal steps repeated in a cycle, corresponding to the four equal sides of a balanced square. Each step lasts for four steady counts, bringing calm balance back to your mind.",
+      "purpose": "Định nghĩa kỹ thuật thở vuông qua hình tượng hình vuông gồm bốn cạnh bằng nhau, tương ứng với bốn bước hít vào, giữ, thở ra, giữ rỗng được lặp lại nhịp nhàng theo chu kỳ.",
+      "requirements": [
+        "R02"
+      ],
+      "setting": "Không gian đồ họa trừu tượng thanh lịch, nền màu xanh dương pastel và trắng",
+      "source_ids": [],
+      "title": "Nguyên lý thở vuông"
+    },
+    {
+      "action": "Nhân vật hít vào chậm rãi qua mũi, lồng ngực mở rộng êm ái theo cạnh đứng bên trái của hình vuông phát sáng đi lên",
+      "beats": [
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Let us begin with step one"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Hãy bắt đầu với bước một"
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc03_1",
+          "image_id": "im_sc03_a",
+          "purpose": "Bắt đầu bước một hít vào chậm"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Draw a fresh breath in"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Bạn hít một luồng không khí"
+            }
+          },
+          "effect": "slide_left",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc03_2",
+          "image_id": "im_sc03_b",
+          "purpose": "Lấp đầy không khí theo nhịp đếm"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Your chest and abdomen"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Lồng ngực cùng bụng"
+            }
+          },
+          "effect": "fade",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc03_3",
+          "image_id": "im_sc03_c",
+          "purpose": "Chuyển tiếp nhịp nhàng sang bước tiếp theo"
+        }
+      ],
+      "camera": "Trung cảnh tập trung vào thân trên của nhân vật và cạnh bên trái của hình vuông",
+      "character_ids": [
+        "char_nam"
+      ],
+      "id": "SC03",
+      "images": [
+        {
+          "based_on": null,
+          "change": "Khởi động bước một, cạnh bên trái hình vuông bắt đầu sáng từ đáy lên",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D biên tập, nhân vật ngồi thẳng lưng bắt đầu hít vào êm dịu, cạnh đứng bên trái của hình vuông phát sáng từ chân lên giữa cạnh, nền xanh dương và trắng dịu",
+          "id": "im_sc03_a",
+          "preserve": "",
+          "reason": "Minh họa thời điểm bắt đầu hít vào theo nhịp đếm một và hai",
+          "visible_text": [
+            {
+              "object": "con số hiển thị nhịp đếm mở đầu bước hít vào",
+              "placement": "phía trên bên trái của hình vuông",
+              "text": "1 - 2"
+            }
+          ]
+        },
+        {
+          "based_on": "im_sc03_a",
+          "change": "Cạnh bên trái sáng trọn vẹn lên tới góc trên, lồng ngực nhân vật mở rộng trọn vẹn",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, cạnh bên trái hình vuông sáng hoàn toàn lên đến đỉnh, lồng ngực nhân vật mở rộng khoan thai",
+          "id": "im_sc03_b",
+          "preserve": "Nhân vật ngồi thẳng lưng và nền xanh dương trắng",
+          "reason": "Mô tả không khí đã lấp đầy lồng ngực ở nhịp đếm ba và bốn",
+          "visible_text": [
+            {
+              "object": "con số hiển thị nhịp đếm hoàn tất bước hít vào",
+              "placement": "phía trên bên trái của hình vuông",
+              "text": "3 - 4"
+            }
+          ]
+        },
+        {
+          "based_on": "im_sc03_b",
+          "change": "Điểm sáng dừng lại ở góc trên bên trái, chuẩn bị chuyển sang giữ hơi",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, ánh sáng dừng tĩnh tại góc trên bên trái của hình vuông, nhân vật giữ tư thế trang nhã và thư thái",
+          "id": "im_sc03_c",
+          "preserve": "Nhân vật ngồi thẳng lưng và cạnh bên trái của hình vuông",
+          "reason": "Tạo khoảng ngắt thị giác êm ái trước bước nín giữ hơi",
+          "visible_text": []
+        }
+      ],
+      "narration": "Hãy bắt đầu với bước một: hít vào chậm trong khi đếm đến bốn. Bạn hít một luồng không khí trong lành qua mũi thật sâu và đều. Lồng ngực cùng bụng từ từ mở rộng theo nhịp đếm một, hai, ba, bốn.",
+      "narration_en": "Let us begin with step one: inhale slowly while counting to four. Draw a fresh breath in smoothly and deeply through your nose. Your chest and abdomen gently expand across the steady count of one, two, three, four.",
+      "purpose": "Hướng dẫn chi tiết bước một: hít vào thật chậm rãi và sâu bằng mũi trong khi đếm thầm đều đặn từ một đến bốn để lấp đầy không khí vào lồng ngực.",
+      "requirements": [
+        "R03"
+      ],
+      "setting": "Không gian luyện tập thanh tĩnh với tông xanh dương dịu và trắng",
+      "source_ids": [],
+      "title": "Bước một: Hít vào"
+    },
+    {
+      "action": "Nhân vật giữ hơi êm dịu trong lồng ngực, vai thả lỏng tự nhiên, cạnh trên của hình vuông chạy ngang từ trái sang phải",
+      "beats": [
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Move on to step two"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Tiếp tục sang bước hai"
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc04_1",
+          "image_id": "im_sc04_a",
+          "purpose": "Bắt đầu bước giữ hơi êm dịu"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Keep the breath gently settled"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Bạn giữ luồng khí lại"
+            }
+          },
+          "effect": "slide_left",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc04_2",
+          "image_id": "im_sc04_b",
+          "purpose": "Thả lỏng cơ thể khi nín giữ hơi"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Allow your entire body"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Hãy để cơ thể hoàn toàn"
+            }
+          },
+          "effect": "fade",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc04_3",
+          "image_id": "im_sc04_c",
+          "purpose": "Duy trì sự tĩnh lặng trong bốn nhịp"
+        }
+      ],
+      "camera": "Trung cảnh cận, tập trung vào gương mặt điềm tĩnh và tư thế thả lỏng của nhân vật",
+      "character_ids": [
+        "char_nam"
+      ],
+      "id": "SC04",
+      "images": [
+        {
+          "based_on": null,
+          "change": "Cạnh trên cùng của hình vuông bắt đầu chạy ngang từ trái sang phải, mở đầu bước giữ hơi",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D biên tập, nhân vật ngồi thẳng lưng tĩnh lặng, cạnh trên của hình vuông sáng dần từ trái sang giữa, nền xanh dương và trắng trang nhã",
+          "id": "im_sc04_a",
+          "preserve": "",
+          "reason": "Minh họa trực quan nhịp giữ không khí trong hai đếm đầu",
+          "visible_text": [
+            {
+              "object": "con số hiển thị nhịp đếm khởi đầu bước giữ hơi",
+              "placement": "phía trên cạnh ngang của hình vuông",
+              "text": "1 - 2"
+            }
+          ]
+        },
+        {
+          "based_on": "im_sc04_a",
+          "change": "Cạnh trên cùng sáng trọn vẹn sang góc trên bên phải, duy trì sự tĩnh tại tuyệt đối",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, cạnh trên hình vuông sáng hoàn toàn sang góc phải, hai vai nhân vật thả lỏng mềm mại",
+          "id": "im_sc04_b",
+          "preserve": "Tư thế ngồi của nhân vật và cạnh bên trái của hình vuông",
+          "reason": "Mô tả trạng thái giữ yên hơi thở ở hai nhịp đếm sau",
+          "visible_text": [
+            {
+              "object": "con số hiển thị nhịp đếm kết thúc bước giữ hơi",
+              "placement": "phía trên cạnh ngang của hình vuông",
+              "text": "3 - 4"
+            }
+          ]
+        },
+        {
+          "based_on": "im_sc04_b",
+          "change": "Điểm sáng dừng lại ở góc trên bên phải, báo hiệu chuẩn bị bước thở ra",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, hai cạnh vuông góc sáng rõ ràng, nhân vật duy trì tâm trạng an tĩnh",
+          "id": "im_sc04_c",
+          "preserve": "Hai cạnh đã sáng của hình vuông và không gian xanh dương trắng",
+          "reason": "Tạo sự chuyển giao nhịp nhàng trước khi thở ra",
+          "visible_text": []
+        }
+      ],
+      "narration": "Tiếp tục sang bước hai: giữ hơi trong phổi trong khi đếm đến bốn. Bạn giữ luồng khí lại một cách nhẹ nhàng, không gồng siết cổ họng hay vai. Hãy để cơ thể hoàn toàn thả lỏng trong bốn nhịp đếm tĩnh lặng này.",
+      "narration_en": "Move on to step two: hold the air in your lungs while counting to four. Keep the breath gently settled without straining your throat or tensing your shoulders. Allow your entire body to rest quietly through these four peaceful counts.",
+      "purpose": "Hướng dẫn chi tiết bước hai: nín giữ luồng hơi êm dịu trong phổi trong bốn nhịp đếm, giữ cơ thể thư giãn không gồng cứng.",
+      "requirements": [
+        "R04"
+      ],
+      "setting": "Không gian tĩnh lặng tối giản, ánh sáng xanh dương và trắng trong trẻo",
+      "source_ids": [],
+      "title": "Bước hai: Giữ hơi"
+    },
+    {
+      "action": "Nhân vật thở ra chậm rãi qua miệng hoặc mũi, lồng ngực hạ xuống tự nhiên theo cạnh đứng bên phải của hình vuông chạy từ trên xuống",
+      "beats": [
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Now comes step three"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Giờ là bước ba"
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc05_1",
+          "image_id": "im_sc05_a",
+          "purpose": "Bắt đầu bước ba thở ra chậm"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Steadily release all the air"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Bạn từ từ đẩy hết"
+            }
+          },
+          "effect": "slide_left",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc05_2",
+          "image_id": "im_sc05_b",
+          "purpose": "Đẩy hết không khí ra ngoài êm ái"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Feel any tension and fatigue"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Cảm nhận mọi căng thẳng"
+            }
+          },
+          "effect": "fade",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc05_3",
+          "image_id": "im_sc05_c",
+          "purpose": "Cảm nhận sự nhẹ nhõm và chuẩn bị bước cuối"
+        }
+      ],
+      "camera": "Trung cảnh ngang tầm mắt, quan sát rõ sự giải tỏa căng thẳng trên cơ thể nhân vật",
+      "character_ids": [
+        "char_nam"
+      ],
+      "id": "SC05",
+      "images": [
+        {
+          "based_on": null,
+          "change": "Cạnh bên phải của hình vuông bắt đầu phát sáng chạy dọc từ trên xuống dưới",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D biên tập, nhân vật ngồi thẳng lưng bắt đầu thở ra êm đềm, cạnh đứng bên phải hình vuông sáng dần từ đỉnh xuống, nền xanh dương và trắng sáng",
+          "id": "im_sc05_a",
+          "preserve": "",
+          "reason": "Minh họa hành động thở ra bắt đầu trong hai nhịp đầu",
+          "visible_text": [
+            {
+              "object": "con số hiển thị nhịp đếm mở đầu bước thở ra",
+              "placement": "phía ngoài cạnh bên phải hình vuông",
+              "text": "1 - 2"
+            }
+          ]
+        },
+        {
+          "based_on": "im_sc05_a",
+          "change": "Cạnh bên phải sáng liền mạch xuống tận góc dưới bên phải, toàn thân nhân vật nhẹ nhõm",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, cạnh bên phải hình vuông sáng trọn vẹn xuống góc dưới, nhân vật nở nét mặt nhẹ nhõm",
+          "id": "im_sc05_b",
+          "preserve": "Dáng ngồi của nhân vật và ba cạnh hình vuông",
+          "reason": "Mô tả giải phóng hết không khí ở hai nhịp đếm sau",
+          "visible_text": [
+            {
+              "object": "con số hiển thị nhịp đếm kết thúc bước thở ra",
+              "placement": "phía ngoài cạnh bên phải hình vuông",
+              "text": "3 - 4"
+            }
+          ]
+        },
+        {
+          "based_on": "im_sc05_b",
+          "change": "Điểm sáng dừng lại ở góc dưới bên phải, chuẩn bị bước vào giai đoạn giữ rỗng",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, ba cạnh của hình vuông kết nối rõ nét, nhân vật giữ nét mặt thanh thản",
+          "id": "im_sc05_c",
+          "preserve": "Ba cạnh đã hoàn thành của hình vuông và nhân vật ngồi thẳng lưng",
+          "reason": "Chuyển tiếp nhịp nhàng trước khi chuyển sang bước bốn",
+          "visible_text": []
+        }
+      ],
+      "narration": "Giờ là bước ba: thở ra chậm trong khi đếm đến bốn. Bạn từ từ đẩy hết không khí ra ngoài qua mũi hoặc miệng thật êm. Cảm nhận mọi căng thẳng và mệt mỏi đang tan biến theo từng nhịp thở nhẹ nhõm.",
+      "narration_en": "Now comes step three: exhale slowly while counting to four. Steadily release all the air out through your nose or mouth with ease. Feel any tension and fatigue drifting away with each unhurried exhale.",
+      "purpose": "Hướng dẫn chi tiết bước ba: thở ra từ từ và đều đặn qua miệng hoặc mũi trong bốn nhịp đếm để đẩy hết khí tù đọng và giải tỏa căng thẳng.",
+      "requirements": [
+        "R05"
+      ],
+      "setting": "Không gian thư giãn thanh thoát với tông xanh dương và trắng êm dịu",
+      "source_ids": [],
+      "title": "Bước ba: Thở ra"
+    },
+    {
+      "action": "Nhân vật giữ phổi rỗng tĩnh tại và thoải mái, cạnh đáy của hình vuông chạy ngang từ phải sang trái để khép kín hình vuông hoàn chỉnh",
+      "beats": [
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "The final part is step four"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Bước cuối là bước bốn"
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc06_1",
+          "image_id": "im_sc06_a",
+          "purpose": "Bắt đầu bước bốn giữ phổi rỗng"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "With your lungs fully empty"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Khi phổi đã hoàn toàn"
+            }
+          },
+          "effect": "slide_left",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc06_2",
+          "image_id": "im_sc06_b",
+          "purpose": "Nghỉ ngơi sâu trong khoảng dừng ngắn"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Four quiet counts bring"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Bốn nhịp đếm tĩnh lặng"
+            }
+          },
+          "effect": "fade",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc06_3",
+          "image_id": "im_sc06_c",
+          "purpose": "Hoàn thành một chu kỳ hình vuông"
+        }
+      ],
+      "camera": "Trung cảnh cân xứng tuyệt đối, ánh sáng dịu làm toát lên sự tĩnh lặng bên trong",
+      "character_ids": [
+        "char_nam"
+      ],
+      "id": "SC06",
+      "images": [
+        {
+          "based_on": null,
+          "change": "Cạnh đáy của hình vuông bắt đầu phát sáng chạy ngang từ phải sang trái",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D biên tập, nhân vật ngồi thẳng lưng tĩnh tại, cạnh đáy của hình vuông sáng dần về phía bên trái, nền xanh dương và trắng dịu",
+          "id": "im_sc06_a",
+          "preserve": "",
+          "reason": "Mở đầu bước giữ phổi rỗng trong hai nhịp đếm đầu",
+          "visible_text": [
+            {
+              "object": "con số hiển thị nhịp đếm mở đầu bước giữ rỗng",
+              "placement": "phía dưới cạnh đáy hình vuông",
+              "text": "1 - 2"
+            }
+          ]
+        },
+        {
+          "based_on": "im_sc06_a",
+          "change": "Cạnh đáy nối liền trọn vẹn về điểm xuất phát, hình vuông khép kín hoàn toàn",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, khung hình vuông bốn cạnh khép kín hoàn chỉnh và phát sáng êm dịu, nhân vật giữ trạng thái thư thái sâu",
+          "id": "im_sc06_b",
+          "preserve": "Nhân vật ngồi thẳng lưng và ba cạnh phía trên của hình vuông",
+          "reason": "Mô tả hoàn tất nhịp đếm ba và bốn của bước giữ rỗng",
+          "visible_text": [
+            {
+              "object": "con số hiển thị nhịp đếm kết thúc bước giữ rỗng",
+              "placement": "phía dưới cạnh đáy hình vuông",
+              "text": "3 - 4"
+            }
+          ]
+        },
+        {
+          "based_on": "im_sc06_b",
+          "change": "Toàn bộ hình vuông tỏa ánh sáng xanh dịu nhẹ đồng đều, kết thúc trọn vẹn một chu kỳ",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, toàn bộ hình vuông phát sáng êm đềm tượng trưng cho sự cân bằng trọn vẹn, nhân vật ngồi tĩnh lặng an yên",
+          "id": "im_sc06_c",
+          "preserve": "Hình vuông khép kín hoàn chỉnh và dáng ngồi của nhân vật",
+          "reason": "Khẳng định sự hoàn thành một chu kỳ thở vuông trọn vẹn",
+          "visible_text": []
+        }
+      ],
+      "narration": "Bước cuối là bước bốn: giữ phổi rỗng trong khi đếm đến bốn trước khi lặp lại. Khi phổi đã hoàn toàn trống, cơ thể bạn được nghỉ ngơi sâu trong khoảng dừng ngắn này. Bốn nhịp đếm tĩnh lặng sẽ khép lại trọn vẹn một vòng thở.",
+      "narration_en": "The final part is step four: keep your lungs empty while counting to four before repeating. With your lungs fully empty, your body rests deeply in this brief pause. Four quiet counts bring the whole breathing cycle to a complete close.",
+      "purpose": "Hướng dẫn chi tiết bước bốn: giữ phổi ở trạng thái hoàn toàn rỗng trong bốn nhịp đếm tĩnh lặng trước khi bắt đầu một chu kỳ mới.",
+      "requirements": [
+        "R06"
+      ],
+      "setting": "Không gian thiền định hiện đại với sắc xanh dương pastel và trắng trong trẻo",
+      "source_ids": [],
+      "title": "Bước bốn: Giữ phổi rỗng"
+    },
+    {
+      "action": "Nhân vật mỉm cười nhẹ nhõm, mở mắt nhìn về phía trước với tinh thần tỉnh táo, tự tin quay trở lại với công việc",
+      "beats": [
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "You can repeat the"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Bạn hãy lặp lại"
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc07_1",
+          "image_id": "im_sc07_a",
+          "purpose": "Hướng dẫn số lần lặp lại và cách nhận biết khi nào dừng"
+        },
+        {
+          "anchor": {
+            "en": {
+              "occurrence": 1,
+              "quote": "Keep in mind the limits"
+            },
+            "vi": {
+              "occurrence": 1,
+              "quote": "Cần lưu ý giới hạn"
+            }
+          },
+          "effect": "fade",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "id": "bt_sc07_2",
+          "image_id": "im_sc07_b",
+          "purpose": "Nhắc nhở giới hạn kỹ thuật và gửi lời động viên"
+        }
+      ],
+      "camera": "Trung cảnh chuyển dần sang toàn cảnh nhẹ, tạo cảm giác thư thái và tươi mới",
+      "character_ids": [
+        "char_nam"
+      ],
+      "id": "SC07",
+      "images": [
+        {
+          "based_on": null,
+          "change": "Nhân vật mỉm cười thư thái bên bàn làm việc, ánh sáng ban mai dịu mát",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D biên tập, nhân vật ngồi thẳng lưng thoải mái trước bàn làm việc, gương mặt rạng rỡ nhẹ nhõm, không gian xanh dương và trắng chan hòa ánh sáng",
+          "id": "im_sc07_a",
+          "preserve": "",
+          "reason": "Thể hiện kết quả phục hồi sự bình tĩnh sau vài vòng thở",
+          "visible_text": []
+        },
+        {
+          "based_on": "im_sc07_a",
+          "change": "Khung cảnh thoáng đãng hơn, biểu cảm nhân vật tự tin và tràn đầy năng lượng",
+          "character_ids": [
+            "char_nam"
+          ],
+          "description": "Minh họa phẳng 2D, nhân vật tự tin bắt đầu làm việc, không gian văn phòng tối giản gọn gàng và thoáng đãng",
+          "id": "im_sc07_b",
+          "preserve": "Nhân vật và không gian làm việc tông xanh dương trắng",
+          "reason": "Khép lại video với thông điệp chăm sóc bản thân đúng mực và an toàn",
+          "visible_text": []
+        }
+      ],
+      "narration": "Bạn hãy lặp lại chu kỳ vài lần và nhận biết khi nào nên dừng, thường sau ba đến bốn vòng hoặc khi cảm thấy thoải mái hơn. Cần lưu ý giới hạn của kỹ thuật: không thay thế tư vấn y tế nếu có vấn đề hô hấp hoặc lo âu nghiêm trọng. Chúc bạn luôn giữ vững sự an tĩnh mỗi ngày.",
+      "narration_en": "You can repeat the cycle a few times and recognize when to stop, usually after three to four rounds or once you feel refreshed. Keep in mind the limits of this technique: it does not replace medical consultation if you have breathing problems or severe anxiety. Wishing you clarity and calm in your daily work.",
+      "purpose": "Hướng dẫn lặp lại chu kỳ thở vuông từ ba đến năm lần cho đến khi tâm trí dịu lại, nhận biết thời điểm nên dừng và nhấn mạnh giới hạn kỹ thuật không thay thế can thiệp y tế chuyên sâu nếu gặp vấn đề hô hấp hoặc lo âu nặng.",
+      "requirements": [
+        "R07",
+        "R08"
+      ],
+      "setting": "Góc bàn làm việc sáng sủa ngập tràn ánh sáng tự nhiên ấm áp, tông xanh dương và trắng hài hòa",
+      "source_ids": [],
+      "title": "Duy trì và lưu ý quan trọng"
+    }
+  ],
+  "schema_version": "3.0",
+  "style": "Minh hoạ biên tập 2D phẳng, tông xanh dương và trắng dịu mắt, một nhân vật trưởng thành ngồi thẳng lưng, không chữ trong hình trừ khi cần đếm nhịp trên màn hình",
+  "topic": "Kỹ thuật thở vuông giúp bình tĩnh nhanh"
+}

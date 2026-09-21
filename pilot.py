@@ -5,7 +5,7 @@ from pathlib import Path
 import jsonschema
 from PIL import Image
 ROOT=Path(__file__).resolve().parent
-ORDER=['control','content','images','audio','render']
+ORDER=['control','content','audio','images','render']
 DEPS={'control':[],'content':['control'],'images':['control','content'],'audio':['control','content'],'render':['control','content','images','audio']}
 class Blocked(Exception):pass
 def read(p):return json.loads(Path(p).read_text())
@@ -22,7 +22,7 @@ class Pilot:
   self.db=sqlite3.connect(self.root/'.state/jobs.sqlite', check_same_thread=False);self.db.row_factory=sqlite3.Row
   import image_pipeline
   image_pipeline.setup(self)
-  self.db.executescript('CREATE TABLE IF NOT EXISTS modules(job TEXT,module TEXT,state TEXT,revision INTEGER,envelope TEXT,hash TEXT,PRIMARY KEY(job,module)); CREATE TABLE IF NOT EXISTS events(id INTEGER PRIMARY KEY,at REAL,job TEXT,module TEXT,event TEXT,detail TEXT);')
+  self.db.executescript('CREATE TABLE IF NOT EXISTS modules(job TEXT,module TEXT,state TEXT,revision INTEGER,envelope TEXT,hash TEXT,PRIMARY KEY(job,module)); CREATE TABLE IF NOT EXISTS events(id INTEGER PRIMARY KEY,at REAL,job TEXT,module TEXT,event TEXT,detail TEXT); CREATE TABLE IF NOT EXISTS audio_edits(id INTEGER PRIMARY KEY,job TEXT,scene_id TEXT,note TEXT,at REAL);')
  def event(self,j,m,e,d=''):
   with self._db_lock:
    self.db.execute('INSERT INTO events(at,job,module,event,detail) VALUES(?,?,?,?,?)',(time.time(),j,m,e,d));self.db.commit()
@@ -43,10 +43,16 @@ class Pilot:
   return p
  def integrity(self,j):
   if read(self.job(j)/'integrity.json')!=self.protected():raise Blocked('Protected implementation changed. Production blocked; review changes in development mode and create a new job.')
+ def brief_policies(self,j,brief):
+  # Chính sách riêng của kênh do config chỉ định; bộ điều phối không biết chủ đề nào cả.
+  for ref in read(self.root/'config.json').get('brief_policies',[]):
+   module,_,func=ref.partition(':')
+   import importlib
+   getattr(importlib.import_module(module),func or 'check')(self.root,j,brief)
  def new(self,j,brief=None):
   if brief is not None:
    from content_contract import validate_brief
-   validate_brief(self.root,brief)
+   validate_brief(self.root,brief);self.brief_policies(j,brief)
   p=self.job(j)
   if p.exists():raise Blocked('Job already exists')
   p.mkdir(parents=True);write(p/'integrity.json',self.protected())
@@ -69,9 +75,12 @@ class Pilot:
   self.refresh(j)
   if not note.strip():raise Blocked('Reason required')
   from content_contract import validate_brief
-  validate_brief(self.root,b)
+  validate_brief(self.root,b);self.brief_policies(j,b)
   old=self.brief(j)
-  if old is None:raise Blocked('Legacy job: create a new v2 job')
+  if old is None:raise Blocked('Legacy job: create a new job')
+  if old[0].get('schema_version')=='3.0':
+   from scripts.story_plan import normalize_brief
+   b=normalize_brief(b);validate_brief(self.root,b)
   rev=old[1]+1;path=self.job(j)/f'briefs/{rev}.json'
   if path.exists():raise Blocked('Brief revision already exists')
   write(path,b);write(self.job(j)/'brief-current.json',{'revision':rev,'hash':digest(path)})
@@ -84,8 +93,16 @@ class Pilot:
  def check_draft(self,j):
   self.gate(j,'content')
   try:
-   self.checks(j,'content',read(self.job(j)/'draft/content.json'))
+   draft=read(self.job(j)/'draft/content.json')
+   self.checks(j,'content',draft)
+   from scripts.story_plan import check_revision
+   check_revision(self,j,draft)
    report={'passed':True,'errors':[],'semantic_review':'pending','timing':'estimated'}
+   if draft.get('schema_version')=='3.0':
+    from scripts.story_plan import estimates
+    report['duration_estimate']=estimates(self.brief(j)[0],draft)
+    report['open_questions']=draft['open_questions']
+    report['revision_response']=draft['revision_response']
   except Exception as ex:
    report={'passed':False,'errors':getattr(ex,'errors',[{'code':'CONTENT','path':'draft/content.json','message':str(ex),'fix':'Sửa bản nháp.'}])}
   write(self.job(j)/'draft/checks.json',report)
@@ -117,8 +134,10 @@ class Pilot:
   if m in ['images','audio','render'] and self.brief(j):
    b=self.brief(j)[0]
    if b['scene_count']<1 or b['duration']['min_seconds']>b['duration']['max_seconds'] or b['aspect_ratio'] not in ('9:16','16:9','dual'):raise Blocked('DOWNSTREAM_UNSUPPORTED: invalid brief configuration')
-  # Images finish their technical checks before preparing the combined media gate.
-  if m=='audio' and rows['images']['state']!='approved':raise Blocked('Prepare images before audio')
+  # Audio and images stay independent here so flow-login/flow-preflight remain
+  # usable at any time; workflow.STAGES['media'] is what orders the media stage,
+  # running the free local TTS first so a narration that misses the brief window
+  # fails before any Flow credit is spent on images.
  def payload(self,j,m):
   r=self.rows(j)[m]
   if not r['envelope']:raise Blocked(f'No {m} output')
@@ -200,7 +219,8 @@ class Pilot:
    expected=audio['en']['duration'] if ratio=='16:9' else audio['duration']
    if not min_sec<=dur<=max_sec or abs(dur-float(a['duration']))>.1 or abs(dur-expected)>.1:raise Blocked('Video/audio duration mismatch')
    layout=read(self.path(j,p['layout_report']))
-   if not layout.get('passed') or layout.get('checked_frames',0)<1:raise Blocked('Layout check missing/failed')
+   checked=layout.get('checked_cues',layout.get('checked_frames',0))
+   if not layout.get('passed') or (layout.get('applies') is not False and checked<1):raise Blocked('Layout check missing/failed')
    files=[p['video'],p['layout_report']]+p['stills']
    en=self.payload(j,'audio').get('en')
    if en and p.get('video_16x9'):
@@ -219,7 +239,10 @@ class Pilot:
   self.db.execute('UPDATE modules SET state=?,revision=? WHERE job=? AND module=?',('running',rev,j,m));self.db.commit();self.event(j,m,'started',str(rev))
   try:
    if m=='control':p=read(self.root/'config.json')
-   elif m=='content':p=read(self.job(j)/'draft/content.json')
+   elif m=='content':
+    p=read(self.job(j)/'draft/content.json')
+    from scripts.story_plan import check_revision
+    check_revision(self,j,p)
    else:
     import adapters
     if m=='images' and self.brief(j):

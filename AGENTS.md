@@ -1,8 +1,8 @@
 # Video Pilot — quy trình chính v3
 
 Dự án này dùng đúng ba phần công khai: **content → media → video**.
-- content: kịch bản Việt/Anh, số cảnh, nhân vật, prompt, thời lượng dự kiến.
-- media: toàn bộ ảnh cảnh, ảnh nhân vật/đăng ký nhân vật, âm thanh Việt/Anh, phụ đề và thời lượng thật.
+- content: mục tiêu riêng của job, kịch bản Việt/Anh, cảnh/hình/nhịp, nhân vật, chữ được phép và thời lượng dự kiến riêng từng ngôn ngữ. Không gán cứng chủ đề.
+- media: âm thanh Việt/Anh (chạy trước, đo thời lượng thật), ảnh cảnh/biến thể, ảnh nhân vật/đăng ký nhân vật, phụ đề và kế hoạch nhịp theo âm thanh.
 - video: toàn bộ bản video được yêu cầu.
 
 ## Hai chế độ
@@ -14,11 +14,12 @@ Dự án này dùng đúng ba phần công khai: **content → media → video**
 ## Thực hiện
 Đọc `docs/workflow.md`. Chạy `python3 pilot.py status JOB` và `next JOB` trước lượt sản xuất.
 Dùng `run JOB` hoặc `resume JOB` để tiến đến điểm duyệt tiếp theo; không gọi lớp Pilot trực tiếp để vượt gate.
-Đọc skill vp-* tương ứng. Không dùng explainer-pipeline hoặc template VideoShotCut.
+Đọc skill vp-* tương ứng, gồm vp-humanizer khi viết lời dẫn: viết xong lời dẫn rồi mới đặt neo/coverage/claims, không sửa lời dẫn sau khi đã neo. Không dùng explainer-pipeline hoặc template VideoShotCut.
+Video dạy từ vựng phải rút từ kho `vocab/`: chạy `python3 vocab/bank.py start JOB` để giữ chỗ một nghĩa và sinh brief, không viết brief từ vựng bằng tay và không tự chọn từ ngoài kho. Cổng `brief_policies` trong config chặn brief từ vựng thiếu mã mục hoặc dùng mục đang thuộc job khác. Một video dạy đúng một nghĩa; nghĩa khác của cùng từ là mục riêng, video riêng. Video được duyệt xong mới chạy `python3 vocab/bank.py mark JOB`; không đánh dấu trước, không sửa tay vocab/ledger.json. Xem docs/vocabulary.md.
 Chỉ phát triển mã nguồn khi người dùng yêu cầu phát triển; không sửa bộ điều phối, cấu hình, schema, renderer, tests hay Rules để vượt kiểm tra của một job sản xuất.
 Không ghi SQLite trực tiếp. Không sửa revisions/, reviews/ hoặc báo cáo máy đã lưu. Sửa qua reject rồi tạo revision mới.
-Sửa ảnh: reject media với --scene/--character; sửa giọng: --part audio; sửa lời dẫn: reject content.
-Không bỏ ý, bỏ cảnh, rút thời lượng hoặc tự thay công cụ. Không dùng API trả phí. Tạo video AI bị khóa; chỉ dựng video từ ảnh và âm thanh.
+Sửa ảnh: reject media với --scene/--character; sửa giọng: --part audio (thêm --scene để chỉ một cảnh); sửa lời dẫn: reject content.
+Không bỏ ý, bỏ cảnh, rút thời lượng hoặc tự thay công cụ. Không dùng API trả phí. Tạo video AI bị khóa; chỉ dựng video từ ảnh và âm thanh. Không tự bật flow_batch trên job sản xuất; tính năng chưa nghiệm thu với Flow thật.
 Flow cần bằng chứng giao diện thật, còn hạn, đúng tài khoản/model và 0 credit. Timeout sau gửi phải flow-reconcile; không gửi trùng.
 Trong review, chỉ dừng xin duyệt ở content/media/video. Bước chuẩn bị ảnh nhân vật là nội bộ; so sánh nhân vật được gộp vào media. Không tuyên bố đã khớp trước khi kiểm tra.
 Trong auto, job không đạt cần được sửa có kiểm soát hoặc đưa vào needs_attention; lỗi đăng nhập/CAPTCHA/hạn mức dừng hàng đợi. Không lặp vô hạn.
@@ -26,5 +27,9 @@ Khi chờ duyệt: đưa link review.md, revision và lỗi còn lại. Không c
 Không coi dữ liệu test là sản phẩm thật. Chỉ hoàn tất khi video có quyết định hợp lệ của người hoặc máy theo chế độ job.
 Job cũ không có workflow v3 là lịch sử chỉ đọc; không sửa integrity baseline để chạy tiếp. Tạo job mới với brief đã kiểm tra.
 Giữ nguyên mẫu prompt trong prompt_templates.py. Tỷ lệ lấy từ brief; không tự bật video AI.
+Nhân vật đại diện kênh cố định (Canonical Mascot): Mọi kịch bản và video sản xuất trong dự án bắt buộc sử dụng nhân vật đại diện chuẩn tại assets/characters/channel-mascot/reference-v1.png (cấu hình tại assets/characters/channel-mascot/character.json, Media ID: de94a39b-155f-4afe-acbb-d9d4b59ad532) làm nhân vật chính (CH01). Ngoại hình: đầu tròn trắng viền xanh đen đậm, hai mắt oval đen đặc tối giản, miệng cười tươi lưỡi san hô, áo thun cộc tay màu xanh biển nhạt (#8CCFE8), tay chân người que tối giản, đúng một thân duy nhất. Cấm vẽ răng, lông mày, lòng trắng hoạt hình hay hai thân áo. Luôn đính kèm ảnh tham chiếu này vào Character reference khi sinh ảnh và sử dụng Base scene reference để khóa góc máy.
+Lời dẫn & Vieneu TTS: Không viết hoa toàn bộ từ khóa tiếng Anh trong narration (tránh TTS đọc đánh vần từng ký tự); đại từ tiếng Anh I dùng 'Ai' để phát âm tự nhiên.
+Nhịp thị giác: Đủ bối cảnh phải có đủ ảnh và visual beats; neo từ khóa/công thức sớm để hiển thị tối thiểu 2.5 - 3.5 giây.
+Timeout B-2 Illustrator: dùng flow-reconcile kèm bằng chứng UI thật để giải quyết trạng thái ambiguous, không gửi trùng.
 
 Antigravity handshake: VP-RULES-1. Đọc Rules, chạy doctor và status; chỉ ghi integration-check sau xác nhận thực tế của người dùng. Không khẳng định Rules đã nạp trong phiên khác.

@@ -33,7 +33,7 @@ class WorkflowTests(unittest.TestCase):
 
     def new(self, mode='review'):
         wf.new(self.p, self.job, read(ROOT / 'examples/m1/brief.json'), mode)
-        data = read(ROOT / 'examples/m1/content.json')
+        data = read(ROOT / 'examples/story-v3/content.json')
         _, revision, stamp = self.p.brief(self.job)
         data.update(brief_revision=revision, brief_hash=stamp)
         write(self.p.job(self.job) / 'draft/content.json', data)
@@ -58,22 +58,23 @@ class WorkflowTests(unittest.TestCase):
     def audio(self, p, job, out):
         segments = []
         combined = b''
+        secs = getattr(self, 'scene_seconds', 8)
         for i, scene in enumerate(p.payload(job, 'content')['scenes']):
-            raw = b'\x00\x20' * (48000 * 8)
+            raw = b'\x00\x20' * (48000 * secs)
             name = out / f'{scene["id"]}.wav'
             with wave.open(str(name), 'wb') as f:
                 f.setparams((1, 2, 48000, 0, 'NONE', 'not compressed')); f.writeframes(raw)
             combined += raw
             segments.append({'scene_id': scene['id'], 'text': scene['narration'],
-                'path': str(name.relative_to(p.job(job))), 'start': i * 8, 'end': (i + 1) * 8})
+                'path': str(name.relative_to(p.job(job))), 'start': i * secs, 'end': (i + 1) * secs})
         wav = out / 'narration.wav'
         with wave.open(str(wav), 'wb') as f:
             f.setparams((1, 2, 48000, 0, 'NONE', 'not compressed')); f.writeframes(combined)
         srt = out / 'subtitles.srt'; srt.write_text(adapters.make_srt(segments))
         return {'voice': 'TEST', 'backend': 'onnx', 'wav': str(wav.relative_to(p.job(job))),
-                'srt': str(srt.relative_to(p.job(job))), 'duration': len(segments) * 8, 'segments': segments}
+                'srt': str(srt.relative_to(p.job(job))), 'duration': len(segments) * secs, 'segments': segments}
 
-    def media(self):
+    def media(self, provider=None):
         base = self.p.job(self.job) / 'flow'; base.mkdir(exist_ok=True)
         Image.new('RGB', (40, 40), 'blue').save(base / 'preflight.png')
         cfg = read(self.root / 'config.json')
@@ -82,8 +83,47 @@ class WorkflowTests(unittest.TestCase):
             'account_confirmed': True, 'observer': 'TEST', 'credits_per_generation': 0,
             'operations': ['image', 'character-register'], 'screenshot': 'flow/preflight.png',
             'screenshot_hash': digest(base / 'preflight.png')})
-        with patch('adapters.gflow', side_effect=self.provider), patch('adapters.audio', side_effect=self.audio):
+        with patch('adapters.gflow', side_effect=provider or self.provider), patch('adapters.audio', side_effect=self.audio):
             return wf.advance(self.p, self.job, 'media')
+
+    def test_audio_retake_targets_one_scene_and_leaves_images_alone(self):
+        """`--part audio --scene SC03` means read that scene again, not redraw it."""
+        self.new(); self.approve('content'); self.media()
+        revision = wf.current(self.p, self.job, 'media')['revision']
+        images_revision = self.p.rows(self.job)['images']['revision']
+        wf.reject(self.p, self.job, 'media', revision, 'TEST read SC03 again', part='audio', scene='SC03')
+        rows = self.p.db.execute('SELECT scene_id FROM audio_edits WHERE job=?', (self.job,)).fetchall()
+        self.assertEqual([r['scene_id'] for r in rows], ['SC03'])
+        self.assertEqual(self.p.rows(self.job)['audio']['state'], 'needs_changes')
+        self.assertEqual(self.p.rows(self.job)['images']['revision'], images_revision)
+
+    def test_whole_track_retake_bumps_every_scene(self):
+        self.new(); self.approve('content'); self.media()
+        revision = wf.current(self.p, self.job, 'media')['revision']
+        wf.reject(self.p, self.job, 'media', revision, 'TEST read all of it again', part='audio')
+        rows = self.p.db.execute('SELECT scene_id FROM audio_edits WHERE job=?', (self.job,)).fetchall()
+        self.assertEqual(sorted(r['scene_id'] for r in rows),
+                         sorted(s['id'] for s in self.p.payload(self.job, 'content')['scenes']))
+
+    def test_audio_retake_rejects_an_unknown_scene(self):
+        self.new(); self.approve('content'); self.media()
+        revision = wf.current(self.p, self.job, 'media')['revision']
+        with self.assertRaises(Blocked):
+            wf.reject(self.p, self.job, 'media', revision, 'TEST', part='audio', scene='SC99')
+
+    def test_over_long_narration_stops_before_any_image_is_generated(self):
+        """The reason STAGES['media'] runs audio first: local TTS is free and
+        measures the real duration, so narration that misses the brief window
+        must fail before a single Flow credit is spent."""
+        self.new(); self.approve('content')
+        self.scene_seconds = 20  # 6 scenes -> 120s, outside the brief's 45-60s window
+        calls = []
+        def counting(p, *args, **kwargs):
+            calls.append(args); return self.provider(p, *args, **kwargs)
+        with self.assertRaises(Blocked) as caught:
+            self.media(provider=counting)
+        self.assertIn('Duration outside', str(caught.exception))
+        self.assertEqual(calls, [])
 
     def test_only_three_human_gates_and_no_registration_prompt(self):
         step = self.new()
@@ -111,6 +151,41 @@ class WorkflowTests(unittest.TestCase):
         for revision, note in [(99, 'TEST'), (1, '')]:
             with self.assertRaises(Blocked): wf.approve(self.p, self.job, 'content', revision, note)
         self.assertFalse(wf.approved(self.p, self.job, 'content'))
+
+    def test_writing_a_decision_file_alone_cannot_forge_approval(self):
+        self.new()
+        data = wf.current(self.p, self.job, 'content')
+        decision = self.p.path(self.job, data['decision'])
+        forged = {'approved': True, 'actor': 'user', 'note': 'TEST forged, no event', 'manifest_hash': wf.hashobj(data), 'at': time.time(), 'report': None}
+        write(decision, forged)
+        self.assertFalse(wf.approved(self.p, self.job, 'content'))
+
+    def test_editing_a_saved_decision_after_real_approval_is_rejected(self):
+        self.new(); self.approve('content')
+        self.assertTrue(wf.approved(self.p, self.job, 'content'))
+        data = wf.current(self.p, self.job, 'content')
+        decision = self.p.path(self.job, data['decision'])
+        result = read(decision); result['note'] = 'TAMPERED after approval'; write(decision, result)
+        self.assertFalse(wf.approved(self.p, self.job, 'content'))
+
+    def test_forged_machine_decision_without_event_is_rejected(self):
+        self.new('auto')
+        data = wf.prepare(self.p, self.job, 'content')
+        report = self.p.job(self.job) / 'machine-reviews/forged.json'
+        write(report, {'test_only': True})
+        forged = {'approved': True, 'actor': 'machine', 'note': 'TEST forged machine decision',
+                  'manifest_hash': wf.hashobj(data), 'at': time.time(),
+                  'report': 'machine-reviews/forged.json', 'report_hash': digest(report)}
+        write(self.p.path(self.job, data['decision']), forged)
+        self.assertFalse(wf.approved(self.p, self.job, 'content'))
+
+    def test_reject_then_new_revision_can_be_approved_again(self):
+        self.new(); self.approve('content'); self.media(); self.approve('media')
+        wf.reject(self.p, self.job, 'media', 1, 'TEST fix SC01', scene='SC01')
+        self.assertFalse(wf.approved(self.p, self.job, 'media'))
+        self.media()
+        self.approve('media')
+        self.assertTrue(wf.approved(self.p, self.job, 'media'))
 
     def test_mode_cannot_change_mid_job(self):
         self.new()
@@ -260,6 +335,97 @@ class WorkflowTests(unittest.TestCase):
         self.assertTrue(result['a'][0]['props']['hideSubtitles'])
         self.assertEqual(len(result['b']), 2)
         self.assertTrue(result['blocked'])
+
+    def test_media_review_puts_pending_character_comparison_first_and_never_claims_a_match(self):
+        # AGENTS.md/docs/workflow.md: character comparison is folded into the media
+        # gate and must be shown as pending, never implied to already match.
+        self.new(); self.approve('content')
+        self.media()
+        data = wf.current(self.p, self.job, 'media')
+        text = self.p.path(self.job, data['review']).read_text()
+        self.assertIn('Cần so sánh trước khi duyệt', text)
+        self.assertLess(text.index('Cần so sánh trước khi duyệt'), text.index('Bảng ảnh'))
+        content = read(ROOT / 'examples/story-v3/content.json')
+        for char in content['characters']:
+            self.assertIn(f"({char['id']})", text)
+        self.assertIn('CHƯA SO SÁNH', text)
+        # The single most important assertion: nothing in review.md may assert a
+        # match while image_pipeline.register() recorded it as pending (review
+        # mode always writes matches_approved_reference=False, observer='technical').
+        self.assertNotIn('khớp', text)
+        confirmations = list((self.p.job(self.job) / 'flow/attempts').glob('*/confirmation.json'))
+        self.assertTrue(confirmations)
+        for path in confirmations:
+            e = read(path)
+            self.assertFalse(e['matches_approved_reference'])
+            self.assertTrue(e['pending_media_review'])
+        # Manifest/asset_hashes stay valid and approve() still works after the change.
+        self.approve('media')
+        self.assertTrue(wf.approved(self.p, self.job, 'media'))
+
+    def test_character_comparison_marks_pending_and_never_claims_a_match(self):
+        job = 'char-pending'
+        jobdir = self.p.job(job); (jobdir / 'media').mkdir(parents=True)
+        Image.new('RGB', (10, 10), 'blue').save(jobdir / 'media/ref.png')
+        reg_dir = jobdir / 'flow/attempts/reg1'; reg_dir.mkdir(parents=True)
+        write(reg_dir / 'request.json', {'path': 'media/registered.png'})
+        Image.new('RGB', (10, 10), 'blue').save(jobdir / 'media/registered.png')
+        write(reg_dir / 'confirmation.json', {'matches_approved_reference': False, 'pending_media_review': True,
+                                               'observer': 'technical', 'report': None})
+        images = {'references': [{'character_id': 'C1', 'name': 'char-pending-C1-abc', 'path': 'media/ref.png'}],
+                  'items': [{'references': [{'character_id': 'C1', 'registration_journal': 'flow/attempts/reg1/request.json',
+                                              'confirmation': 'flow/attempts/reg1/confirmation.json'}]}]}
+        text = '\n'.join(wf.character_comparisons(self.p, job, images))
+        self.assertIn('CHƯA SO SÁNH', text)
+        self.assertIn('kiểm tra kỹ thuật', text)
+        self.assertNotIn('khớp', text)
+        self.assertIn('![', text)
+        self.assertIn(str(self.p.path(job, 'media/ref.png')), text)
+        self.assertIn(str(self.p.path(job, 'media/registered.png')), text)
+
+    def test_character_comparison_reports_machine_match_only_in_auto_mode(self):
+        job = 'char-auto'
+        jobdir = self.p.job(job); (jobdir / 'media').mkdir(parents=True)
+        Image.new('RGB', (10, 10), 'red').save(jobdir / 'media/ref.png')
+        reg_dir = jobdir / 'flow/attempts/reg1'; reg_dir.mkdir(parents=True)
+        write(reg_dir / 'request.json', {'path': 'media/registered.png'})
+        Image.new('RGB', (10, 10), 'red').save(jobdir / 'media/registered.png')
+        (jobdir / 'machine-reviews').mkdir()
+        write(jobdir / 'machine-reviews/reg.json', {'test_only': True})
+        write(reg_dir / 'confirmation.json', {'matches_approved_reference': True, 'pending_media_review': False,
+                                               'observer': 'machine', 'report': 'machine-reviews/reg.json'})
+        images = {'references': [{'character_id': 'C1', 'name': 'char-auto-C1-abc', 'path': 'media/ref.png'}],
+                  'items': [{'references': [{'character_id': 'C1', 'registration_journal': 'flow/attempts/reg1/request.json',
+                                              'confirmation': 'flow/attempts/reg1/confirmation.json'}]}]}
+        text = '\n'.join(wf.character_comparisons(self.p, job, images))
+        self.assertIn('khớp', text)
+        self.assertNotIn('CHƯA SO SÁNH', text)
+
+    def test_dual_ratio_images_are_grouped_under_one_heading(self):
+        job = 'dual-fmt'
+        self.p.job(job).mkdir(parents=True)
+        items = [
+            {'scene_id': 'SC01', 'image_id': 'SC01_I1', 'ratio': '9:16', 'path': 'media/SC01_I1_9x16.png', 'prompt': 'P1'},
+            {'scene_id': 'SC01', 'image_id': 'SC01_I1', 'ratio': '16:9', 'path': 'media/SC01_I1_16x9.png', 'prompt': 'P1'},
+            {'scene_id': 'SC02', 'image_id': 'SC02_I1', 'ratio': '9:16', 'path': 'media/SC02_I1_9x16.png', 'prompt': 'P2'},
+            {'scene_id': 'SC02', 'image_id': 'SC02_I1', 'ratio': '16:9', 'path': 'media/SC02_I1_16x9.png', 'prompt': 'P2'},
+        ]
+        text = '\n'.join(wf.scene_image_lines(self.p, job, items))
+        self.assertEqual(text.count('### SC01_I1'), 1)
+        self.assertEqual(text.count('### SC02_I1'), 1)
+        h1, h2 = text.index('### SC01_I1'), text.index('### SC02_I1')
+        i916, i169 = text.index('SC01_I1_9x16.png'), text.index('SC01_I1_16x9.png')
+        self.assertTrue(h1 < i916 < h2 and h1 < i169 < h2)
+
+    def test_single_ratio_image_layout_is_unchanged(self):
+        job = 'single-fmt'
+        self.p.job(job).mkdir(parents=True)
+        items = [{'scene_id': 'SC01', 'image_id': 'SC01_I1', 'ratio': '9:16', 'path': 'media/SC01_I1.png', 'prompt': 'P1'}]
+        self.assertEqual(wf.scene_image_lines(self.p, job, items), [
+            '## SC01 — SC01_I1 9:16', f"![SC01]({self.p.path(job, 'media/SC01_I1.png')})", 'P1'])
+        legacy = [{'scene_id': 'SC01', 'path': 'media/SC01.png', 'prompt': 'P1'}]
+        self.assertEqual(wf.scene_image_lines(self.p, job, legacy), [
+            '## SC01 —  ', f"![SC01]({self.p.path(job, 'media/SC01.png')})", 'P1'])
 
 
 if __name__ == '__main__':
