@@ -2,6 +2,8 @@
 
 Dự án đã chuyển sang cấu trúc `sys/` + `video/` trên ba nhánh `master`, `video-nghien-cuu`, `video-vocabulary` ngày 22/09/2026. Agent quen cấu trúc cũ hãy đọc file này, rồi đọc [AGENTS.md](AGENTS.md) trước khi làm việc.
 
+Quy tắc ngôn ngữ: xem mục “Ngôn ngữ giao tiếp và prompt” trong [AGENTS.md](AGENTS.md). Kế hoạch, tiến độ và kết quả cho người dùng bằng tiếng Việt; prompt nội bộ mặc định bằng tiếng Anh, giữ nguyên dữ liệu nội dung.
+
 ## Bản đồ thư mục
 
 | Vị trí từ gốc dự án | Nội dung |

@@ -11,3 +11,5 @@ Lời dẫn & Vieneu TTS: Không viết in hoa toàn bộ từ khóa tiếng Anh
 Nhịp thị giác (Visual Beats): N bối cảnh/ví dụ phải có đủ N ảnh và N visual beats. Điểm neo (anchor quote) của từ khóa/công thức phải đặt sớm trong câu để thời gian hiển thị tối thiểu đạt 2.5 - 3.5 giây.
 B-2 Illustrator: Chạy qua persistent session socket. Nếu gặp sự cố timeout (state: ambiguous), phải dùng `python3 pilot.py flow-reconcile` kèm bằng chứng UI thật, tuyệt đối không gửi request trùng lặp.
 
+
+Ngôn ngữ: tuân thủ mục “Ngôn ngữ giao tiếp và prompt” trong AGENTS.md. Mọi kế hoạch (plan), tiến độ và kết quả hiển thị cho người dùng dùng tiếng Việt; chỉ dẫn/prompt nội bộ mặc định dùng tiếng Anh. Giữ nguyên ngôn ngữ dữ liệu, câu trích, chữ hiển thị và các trường máy đọc bắt buộc.

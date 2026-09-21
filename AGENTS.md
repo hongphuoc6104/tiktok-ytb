@@ -12,6 +12,15 @@ Dự án này dùng đúng ba phần công khai: **content → media → video**
 - media: âm thanh Việt/Anh (chạy trước, đo thời lượng thật), ảnh cảnh/biến thể, ảnh nhân vật/đăng ký nhân vật, phụ đề và kế hoạch nhịp theo âm thanh.
 - video: toàn bộ bản video được yêu cầu.
 
+## Ngôn ngữ giao tiếp và prompt
+
+- Mọi nội dung trình bày cho người dùng phải bằng tiếng Việt, gồm kế hoạch (plan), danh sách công việc, cập nhật tiến độ, giải thích, câu hỏi, báo cáo duyệt và kết quả cuối cùng. Giữ nguyên tên kỹ thuật, lệnh và định danh khi cần.
+- Chỉ dẫn nội bộ mặc định dùng tiếng Anh: giao việc/bàn giao giữa các agent, prompt tạo hình, phân tích, đánh giá, kiểm tra và sửa lỗi. Quy tắc này không tự cho phép tạo thêm agent hoặc thay đổi công cụ/quy trình.
+- Tách chỉ dẫn khỏi dữ liệu: giữ nguyên ngôn ngữ và nội dung của lời dẫn, phụ đề, chữ cần hiển thị, câu trích, nguồn, tên file, định danh và phản hồi người dùng. Không dịch dữ liệu sang tiếng Anh chỉ vì prompt chỉ dẫn dùng tiếng Anh; đặc biệt giữ nguyên quote/anchor/coverage đã chốt.
+- Nội dung dành cho người Việt dùng tiếng Việt tự nhiên. Nội dung học tiếng Anh hoặc phiên bản tiếng Anh theo brief giữ đúng ngôn ngữ yêu cầu; không đổi narration_en thành tiếng Việt.
+- Prompt đánh giá nội bộ dùng tiếng Anh nhưng phải xét đúng ngôn ngữ, văn hóa và đối tượng của nội dung; phần đánh giá/giải thích hiển thị cho người dùng phải bằng tiếng Việt. Giữ nguyên schema, khóa và giá trị máy đọc bắt buộc.
+- Áp dụng cho chỉ dẫn mới; không sửa mẫu cố định trong prompt_templates.py, revision, bằng chứng hay báo cáo lịch sử chỉ để đổi ngôn ngữ. Nếu người dùng yêu cầu rõ ngôn ngữ khác cho một đầu ra, làm theo yêu cầu đó.
+
 ## Hai chế độ
 - `review` (mặc định): người dùng duyệt đúng ba phần và revision hiện tại. Ghi nguyên văn phản hồi bằng `approve`; không tự suy ra đồng ý.
 - `auto`: bộ đánh giá máy xem/nghe artifact thật, lưu báo cáo rồi quyết định. Không cần người dùng duyệt từng phần. Không dùng lệnh approve của người dùng trong auto.
