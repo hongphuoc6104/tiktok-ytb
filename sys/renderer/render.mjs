@@ -99,7 +99,7 @@ try {
     const composition = await selectComposition({serveUrl: url, id: 'Pilot', inputProps: plan.props, puppeteerInstance: browser});
     await renderMedia({serveUrl: url, composition, inputProps: plan.props, puppeteerInstance: browser,
       codec: 'h264', hardwareAcceleration: 'if-possible', audioCodec: 'aac',
-      concurrency: props.render_concurrency || 2, outputLocation: path.join(dir, plan.file)});
+      concurrency: props.render_concurrency || 4, outputLocation: path.join(dir, plan.file)});
   }
   if (plans[0].file !== 'video.mp4') fs.copyFileSync(path.join(dir, plans[0].file), path.join(dir, 'video.mp4'));
 
