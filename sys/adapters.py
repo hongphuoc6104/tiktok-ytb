@@ -517,7 +517,7 @@ def render(p,j,out):
    for beat in scene.get('images',[]):beat['src']=copy_asset(beat['src'])
   return planned
  scenes=render_scenes('en','16:9') if ratio=='16:9' else render_scenes('vi','9:16')
- props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'cues':subtitle_cues(snd['segments']),'aspect_ratio':ratio,'render_concurrency':config(p).get('render_concurrency',2)}
+ props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'cues':subtitle_cues(snd['segments']),'aspect_ratio':ratio,'render_concurrency':config(p).get('render_concurrency',4)}
  if en:
   props['en_duration']=en['duration']
   props['en_scenes']=scenes if ratio=='16:9' else render_scenes('en','16:9')
