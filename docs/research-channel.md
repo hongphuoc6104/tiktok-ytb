@@ -36,3 +36,7 @@ Giới hạn kế thừa: 9:16 đọc Việt, 16:9 đọc Anh; dual tạo hai b�
 tiếng Việt phải phát triển lựa chọn ngôn ngữ độc lập trước, không chỉ sửa brief.
 Cải tiến pipeline dùng chung tách thành commit riêng để đưa về master; tài liệu
 và avatar của kênh này không merge ngược vào nền chung.
+
+## Kho nội dung và ngân sách hình
+
+Dùng research/bank.py cho job mới; xem ../research/README.md. Kho 1.000 ý tưởng chia 40 nhóm, không phải 1.000 kịch bản đã kiểm chứng. Mặc định 90–180 giây; 18–24 hình và 24–36 nhịp mục tiêu. Chỉ đọc mục đã chọn; không nạp toàn kho vào context.

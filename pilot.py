@@ -31,6 +31,10 @@ class Pilot:
    return {r['module']:dict(r) for r in self.db.execute('SELECT * FROM modules WHERE job=?',(j,))}
  def protected(self):
   paths=[self.root/x for x in ['pilot.py','workflow.py','machine_review.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','en-requirements.lock']]
+  # Research code/settings affect production; the catalog and ledger do not.
+  research=self.root/'research'
+  paths += list(research.glob('*.py'))
+  if (research/'channel.json').exists():paths.append(research/'channel.json')
   for folder in ['schemas','.agents','renderer','tests','examples','scripts']:
    paths+=list((self.root/folder).rglob('*'))
   return {str(p.relative_to(self.root)):digest(p) for p in sorted(paths) if p.is_file() and '__pycache__' not in str(p)}

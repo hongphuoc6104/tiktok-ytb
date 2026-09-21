@@ -81,6 +81,10 @@ def validate_content(root,b,revision,bhash,p):
  if p.get('schema_version')=='3.0':
   from scripts.story_plan import validate_plan
   validate_plan(b,p)
+  if any(x.startswith("research-visuals:") for x in b.get("planning",{}).get("domain_requirements",[])):
+   from research.visuals import validate
+   try:validate(b,p)
+   except ValueError as ex:raise ContractError([error("RESEARCH_VISUALS","scenes",str(ex),"Thêm hình/nhịp có mục đích; không nhân bản để đủ số.")]) from ex
 
 def review_markdown(job,revision,b,p):
  if p.get('schema_version')=='3.0':

@@ -293,6 +293,12 @@ def prepare(p, job, stage):
         if payload.get('schema_version') == '3.0':
             ratio = p.brief(job)[0]['aspect_ratio']
             timing = {lang: timeline(payload, images, audio, lang, r) for lang,r in ([('vi','9:16'),('en','16:9')] if ratio=='dual' else [('en','16:9')] if ratio=='16:9' else [('vi','9:16')])}
+            if any(x.startswith('research-visuals:') for x in p.brief(job)[0].get('planning',{}).get('domain_requirements',[])):
+                from research.visuals import timing_report
+                report = timing_report(p.brief(job)[0], payload, timing)
+                write(folder / 'research-visual-review.json', report)
+                data['assets'].append(relative(folder / 'research-visual-review.json'))
+                lines += ['## Kiểm tra nhịp hình nghiên cứu', json.dumps(report,ensure_ascii=False,indent=2)]
             write(folder / 'visual-timing.json', timing)
             data['assets'].append(relative(folder / 'visual-timing.json'))
             lines += ['Nhịp theo âm thanh (nội suy, cần nghe kiểm tra):', json.dumps(timing,ensure_ascii=False,indent=2), 'Kiểm tra từng hình: chữ đúng danh sách, không mã nội bộ/chữ thừa; đúng kiểu chữ, vị trí và tính liên tục.']

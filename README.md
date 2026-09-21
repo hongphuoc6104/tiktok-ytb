@@ -51,3 +51,7 @@ Máy đích Xeon E3-1241 v3 / 16 GB / P620 2 GB: chưa nghiệm thu hiệu năng
 `python3 -m unittest discover -s tests -v` kiểm tra logic bằng fixture cô lập; không phải nghiệm thu Flow/video thật.
 Auto dùng Antigravity đăng nhập tài khoản; chưa mặc định khẳng định công cụ hỗ trợ nghe/xem mọi loại media. Nếu thiếu hỗ trợ, job không được thông qua.
 Job cũ và báo cáo reports/ giữ làm lịch sử; không sửa integrity baseline để chạy job cũ theo mã mới.
+
+## Kho 1.000 đề tài nghiên cứu
+
+Xem [trang tìm kiếm](research/index.html), [80 đề tài khởi động](research/FIRST-80.md) hoặc [hướng dẫn chọn và giữ chỗ](research/README.md). Kho chia 40 nhóm; agent chỉ đọc đề tài được chọn. Mỗi video 90–180 giây, giữ người que và hai giọng.
