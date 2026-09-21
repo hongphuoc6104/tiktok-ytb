@@ -2,6 +2,8 @@
 trigger: always_on
 ---
 
+Thư mục hệ thống là `sys/`; các đường dẫn bên dưới tính từ thư mục này. Video xuất cho người dùng ở `../video/<tên-video>/`.
+
 Đọc AGENTS.md và docs/workflow.md. Chỉ ba phần content → media → video; review hoặc auto theo job. Không tự tạo bằng chứng hoặc bỏ kiểm tra.
 Mọi video của dự án luôn sử dụng nhân vật đại diện kênh cố định tại assets/characters/channel-mascot/reference-v1.png (CH01, áo xanh biển nhạt #8CCFE8, Media ID: de94a39b-155f-4afe-acbb-d9d4b59ad532).
 Giải phẫu CH01 chuẩn: 1 thân duy nhất, áo thun cộc tay xanh biển nhạt #8CCFE8, 2 tay & 2 chân que navy tối giản, đầu tròn trắng viền navy đậm, 2 mắt oval đen đặc tối giản, miệng cười tươi lưỡi san hô. Tuyệt đối cấm: vẽ răng, lông mày, mắt hoạt hình có lòng trắng/đồng tử hay vẽ 2 thân áo đè lên nhau. Luôn đính kèm ảnh tham chiếu và dùng dual-reference (Base + Character).

@@ -2,6 +2,9 @@
 name: vp-vocab
 description: Tự động sản xuất video học từ vựng tiếng Anh dọc 9:16 trọn gói từ kho vocab/ theo quy trình chuẩn Video Pilot v3 (Content -> Media -> Video); kích hoạt khi người dùng gõ /vp-vocab, "tạo video từ vựng", "tạo video 9:16", hoặc yêu cầu làm video học tiếng Anh.
 ---
+
+Đường dẫn vận hành trong skill tính từ `sys/` của dự án; chạy `cd sys` trước các lệnh. Video cho người dùng nằm ở `../video/<tên-video>/`.
+
 # Video Pilot: Sản Xuất Video Từ Vựng Tiếng Anh 9:16 (vp-vocab)
 
 Skill này tự động hóa 100% quy trình sản xuất video dạy từ vựng tiếng Anh dọc 9:16 chất lượng cao từ kho `vocab/` qua đúng 3 giai đoạn chuẩn của Video Pilot v3: **Content ➔ Media ➔ Video**.

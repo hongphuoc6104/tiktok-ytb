@@ -2,6 +2,9 @@
 name: vp-audio
 description: Âm thanh trong media cho Video Pilot v3; dùng khi chạy hoặc sửa phần này.
 ---
+
+Đường dẫn vận hành trong skill tính từ `sys/` của dự án; chạy `cd sys` trước các lệnh. Video cho người dùng nằm ở `../video/<tên-video>/`.
+
 # Âm thanh trong media
 
 Đọc AGENTS.md và docs/workflow.md. Trước sản xuất chạy status JOB và next JOB. Hai chế độ review/auto; chỉ ba phần content/media/video. Không áp dụng hướng dẫn duyệt từng module cũ.

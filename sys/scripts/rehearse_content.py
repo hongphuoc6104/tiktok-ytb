@@ -55,6 +55,8 @@ def guard_sandbox_root(root: Path) -> Path:
     """Refuse any sandbox root that overlaps the real repository in any way."""
     root = root.resolve()
     repo = REPO_ROOT.resolve()
+    if repo.name == "sys" and (repo.parent / "pilot.py").is_file():
+        repo = repo.parent
     if root == repo:
         raise RehearsalError(f'Refusing to sandbox at the real repo root: {repo}')
     if repo in root.parents:

@@ -210,10 +210,22 @@ class WorkflowTests(unittest.TestCase):
             result = wf.advance(self.p, self.job)
             self.assertEqual((result['stage'], result['action']), ('video', 'review'))
             self.assertFalse(wf.status(self.p, self.job)['complete'])
+            self.assertFalse((self.root / 'video').exists())
+            with self.assertRaises(Blocked):
+                wf.publish_videos(self.p, self.job)
             self.approve('video')
         self.assertTrue(wf.status(self.p, self.job)['complete'])
+        published = self.root / 'video' / self.job / f'{self.job}_r1_final.mp4'
+        self.assertEqual(published.read_bytes(), b'TEST ONLY; probe is mocked')
+        self.assertEqual(wf.publish_videos(self.p, self.job), [str(published)])
+        published.write_bytes(b'USER FILE')
+        with self.assertRaisesRegex(Blocked, 'overwrite'):
+            wf.publish_videos(self.p, self.job)
+        self.assertEqual(published.read_bytes(), b'USER FILE')
         self.p.path(self.job, self.p.payload(self.job, 'render')['video']).write_bytes(b'changed')
         self.assertFalse(wf.status(self.p, self.job)['complete'])
+        with self.assertRaises(Blocked):
+            wf.publish_videos(self.p, self.job)
 
     def test_media_reject_keeps_other_audio_and_requires_new_gate(self):
         self.new(); self.approve('content'); self.media(); self.approve('media')

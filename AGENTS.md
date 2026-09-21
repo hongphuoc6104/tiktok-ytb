@@ -1,5 +1,12 @@
 # Video Pilot — quy trình chính v3
 
+## Vị trí hệ thống
+
+Agent bắt đầu hoặc quay lại dự án: đọc [INDEX.md](INDEX.md) ở gốc để tra bản đồ thư mục, đường dẫn cũ → mới và lệnh chạy.
+
+Mã nguồn và dữ liệu nằm trong `sys/`; video cho người dùng nằm trong `video/<tên-video>/`. Các đường dẫn vận hành bên dưới tương đối với `sys/`: chạy `cd sys` trước khi dùng. Có thể chạy `python3 pilot.py` từ gốc qua launcher, nhưng đường dẫn --brief/--evidence phải là đường dẫn từ thư mục hiện tại. `.agents/`, `.git/`, `.claude/` ở gốc là các ngoại lệ bắt buộc cho công cụ. Không ghi dữ liệu hệ thống mới ở gốc.
+
+
 Dự án này dùng đúng ba phần công khai: **content → media → video**.
 - content: mục tiêu riêng của job, kịch bản Việt/Anh, cảnh/hình/nhịp, nhân vật, chữ được phép và thời lượng dự kiến riêng từng ngôn ngữ. Không gán cứng chủ đề.
 - media: âm thanh Việt/Anh (chạy trước, đo thời lượng thật), ảnh cảnh/biến thể, ảnh nhân vật/đăng ký nhân vật, phụ đề và kế hoạch nhịp theo âm thanh.
