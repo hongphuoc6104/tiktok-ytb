@@ -23,7 +23,7 @@ Ngôn ngữ lời đọc không quyết định chủ đề video.
 
 - `master`: nền dùng chung; chỉ nhận cải tiến pipeline áp dụng cho nhiều kênh.
 - `video-nghien-cuu`: nội dung giải thích và hướng dẫn nghiên cứu.
-- `thu-nghiem-quy-trinh`: bản lưu phát triển kênh học tiếng Anh/từ vựng.
+- `video-vocabulary`: bản lưu phát triển kênh học tiếng Anh/từ vựng.
 
 Không merge ngược toàn bộ nội dung riêng của kênh vào master; chuyển riêng các
 commit cải tiến dùng chung. Xem [docs/channels.md](docs/channels.md).

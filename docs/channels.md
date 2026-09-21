@@ -5,7 +5,7 @@ Giữ content → media → video, review/auto, hai giọng và người que chu
 Không gán cứng chủ đề. Brief v3 chứa mục tiêu, người xem, nguồn, ý bắt buộc và
 planning của từng job. Ví dụ trong examples chỉ là dữ liệu minh họa.
 
-Nội dung kênh học tiếng Anh/từ vựng được lưu trên `thu-nghiem-quy-trinh` tại
+Nội dung kênh học tiếng Anh/từ vựng được lưu trên `video-vocabulary` tại
 commit da10286. Kho từ vựng, ledger và brief cũ vẫn có trong lịch sử Git.
 Không dùng chính sách của kênh đó làm mặc định trên nền chung.
 
