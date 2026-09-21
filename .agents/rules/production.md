@@ -8,5 +8,4 @@ Giải phẫu CH01 chuẩn: 1 thân duy nhất, áo thun cộc tay xanh biển n
 Lời dẫn & Vieneu TTS: Không viết in hoa toàn bộ từ khóa tiếng Anh trong narration (tránh TTS đánh vần từng ký tự). Đại từ I đơn lẻ trong câu ví dụ cần ghi âm 'Ai' để phát âm tự nhiên.
 Nhịp thị giác (Visual Beats): N bối cảnh/ví dụ phải có đủ N ảnh và N visual beats. Điểm neo (anchor quote) của từ khóa/công thức phải đặt sớm trong câu để thời gian hiển thị tối thiểu đạt 2.5 - 3.5 giây.
 B-2 Illustrator: Chạy qua persistent session socket. Nếu gặp sự cố timeout (state: ambiguous), phải dùng `python3 pilot.py flow-reconcile` kèm bằng chứng UI thật, tuyệt đối không gửi request trùng lặp.
-Video dạy từ vựng lấy từ kho vocab/: `python3 vocab/bank.py start JOB` sinh brief và giữ chỗ; duyệt xong video mới `mark`. Không tự chọn từ ngoài kho, không viết brief từ vựng bằng tay.
 

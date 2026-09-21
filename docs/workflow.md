@@ -71,17 +71,11 @@ Mỗi ví dụ là một lựa chọn riêng, không chạy nối tiếp trên c
 
 Mode được giữ cố định trong job. Job trước v3 chỉ đọc lịch sử; không tự đổi baseline hoặc biến duyệt cũ thành duyệt v3. Chưa có công cụ chuyển job cũ tự động.
 
-## Kho từ vựng cho kênh học từ
+## Nội dung theo kênh
 
-Job dạy từ vựng lấy brief từ `vocab/bank.py` thay vì viết tay: mỗi video một nghĩa, ledger
-giữ dấu từ đã làm, từ nhiều nghĩa tách thành nhiều mục. Dữ liệu kho (sources, bank.jsonl,
-ledger) không nằm trong integrity baseline nên thêm từ không chặn job đang chạy.
-
-Đây không còn là quy ước: `config.brief_policies` trỏ tới `vocab.policy:check`, chạy trong
-`Pilot.new` và `revise_brief`. Brief có dấu hiệu dạy từ vựng mà thiếu mã mục kho, mang mã
-không có thật, hoặc mang mục đang giữ chỗ cho job khác đều bị từ chối trước khi job ra đời.
-Brief không dạy từ vựng không bị ảnh hưởng — bộ điều phối vẫn không gán cứng chủ đề nào,
-toàn bộ hiểu biết về từ vựng nằm trong `vocab/policy.py`. Xem [vocabulary.md](vocabulary.md).
+Nền chung không kích hoạt chính sách kho từ vựng. Chủ đề và tiêu chí lấy từ brief
+của từng job; xem [channels.md](channels.md). Hai giọng Việt/Anh phục vụ nội dung
+bất kỳ, không có nghĩa mọi video là bài học tiếng Anh.
 
 ## Kịch bản đa nhịp
 

@@ -15,7 +15,6 @@ Dự án này dùng đúng ba phần công khai: **content → media → video**
 Đọc `docs/workflow.md`. Chạy `python3 pilot.py status JOB` và `next JOB` trước lượt sản xuất.
 Dùng `run JOB` hoặc `resume JOB` để tiến đến điểm duyệt tiếp theo; không gọi lớp Pilot trực tiếp để vượt gate.
 Đọc skill vp-* tương ứng, gồm vp-humanizer khi viết lời dẫn: viết xong lời dẫn rồi mới đặt neo/coverage/claims, không sửa lời dẫn sau khi đã neo. Không dùng explainer-pipeline hoặc template VideoShotCut.
-Video dạy từ vựng phải rút từ kho `vocab/`: chạy `python3 vocab/bank.py start JOB` để giữ chỗ một nghĩa và sinh brief, không viết brief từ vựng bằng tay và không tự chọn từ ngoài kho. Cổng `brief_policies` trong config chặn brief từ vựng thiếu mã mục hoặc dùng mục đang thuộc job khác. Một video dạy đúng một nghĩa; nghĩa khác của cùng từ là mục riêng, video riêng. Video được duyệt xong mới chạy `python3 vocab/bank.py mark JOB`; không đánh dấu trước, không sửa tay vocab/ledger.json. Xem docs/vocabulary.md.
 Chỉ phát triển mã nguồn khi người dùng yêu cầu phát triển; không sửa bộ điều phối, cấu hình, schema, renderer, tests hay Rules để vượt kiểm tra của một job sản xuất.
 Không ghi SQLite trực tiếp. Không sửa revisions/, reviews/ hoặc báo cáo máy đã lưu. Sửa qua reject rồi tạo revision mới.
 Sửa ảnh: reject media với --scene/--character; sửa giọng: --part audio (thêm --scene để chỉ một cảnh); sửa lời dẫn: reject content.

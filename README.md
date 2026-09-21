@@ -6,7 +6,7 @@ Hướng dẫn duy nhất cho quy trình: [docs/workflow.md](docs/workflow.md). 
 
 ```bash
 python3 pilot.py doctor
-python3 pilot.py new video-001 --brief examples/m1/brief.json --mode review
+python3 pilot.py new video-001 --brief examples/story-v3/brief.json --mode review
 python3 pilot.py status video-001
 python3 pilot.py next video-001
 python3 pilot.py run video-001
@@ -14,21 +14,19 @@ python3 pilot.py run video-001
 
 Không còn duyệt riêng control/images/audio hoặc ba cảnh đầu. run/resume tự tiến đến mốc theo mode. Auto không cần người dùng duyệt từng video, nhưng phải có kiểm tra thật; không đánh giá được thì báo cần xử lý. Hàng đợi dùng `pilot.py batch --queue queue.json`, danh sách job auto đã tạo.
 
-## Kho từ vựng
+## Nền dùng chung cho nhiều kênh
 
-Kênh học từ vựng lấy từ ra từ `vocab/`: mỗi video là một nghĩa của một từ, từ đã làm được
-đánh dấu để không lặp lại, từ nhiều nghĩa tách thành nhiều mục riêng. Đây là đường bắt
-buộc, không phải quy ước: `config.brief_policies` chặn brief từ vựng không sinh từ kho ngay
-trong `pilot.py new`. Hướng dẫn: [docs/vocabulary.md](docs/vocabulary.md).
+Nhánh `master` không áp đặt chủ đề hoặc mục tiêu học ngoại ngữ. Mỗi job xác định
+chủ đề, đối tượng, mục tiêu, nguồn và yêu cầu riêng trong brief v3.
+Giữ nhân vật người que áo xanh chuẩn và cả hai giọng Việt/Anh.
+Ngôn ngữ lời đọc không quyết định chủ đề video.
 
-```bash
-python3 vocab/bank.py status
-python3 vocab/bank.py next --count 10 --topic food-drink
-python3 vocab/bank.py start vocab-010 --mode review
-python3 vocab/bank.py mark vocab-010 --note 'Đã xuất bản'
-python3 vocab/bank.py queue --count 5 --mode auto   # rồi pilot.py batch --queue vocab/queue.json
-python3 vocab/bank.py audit                        # job nào làm ngoài kho, job nào quên mark
-```
+- `master`: nền dùng chung; chỉ nhận cải tiến pipeline áp dụng cho nhiều kênh.
+- `video-nghien-cuu`: nội dung giải thích và hướng dẫn nghiên cứu.
+- `thu-nghiem-quy-trinh`: bản lưu phát triển kênh học tiếng Anh/từ vựng.
+
+Không merge ngược toàn bộ nội dung riêng của kênh vào master; chuyển riêng các
+commit cải tiến dùng chung. Xem [docs/channels.md](docs/channels.md).
 
 ## Môi trường
 
