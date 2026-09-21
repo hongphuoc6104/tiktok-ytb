@@ -74,7 +74,7 @@ Lệnh công cụ chuyên biệt: thêm `sys/` trước đường dẫn script, 
 
 Nếu cần hoàn tác, phải dừng các tiến trình đang dùng dự án, lưu thay đổi phát sinh sau đợt chuyển đổi, rồi dùng `migration.json` để đảo việc di chuyển. Với MP4, phục hồi từng tên cũ từ video đích trước khi gỡ liên kết; cập nhật lại đường dẫn môi trường Python. Không chỉ checkout mã cũ rồi chạy vì dữ liệu local vẫn ở `sys/`.
 
-Các nhánh nội dung khác chưa được chuyển cấu trúc. Dùng checkout riêng hoặc chuyển cải tiến nền chung sang từng nhánh có kiểm tra; không đổi nhánh tại workspace này để chạy mã bố cục cũ trên dữ liệu mới.
+Cập nhật: cả ba nhánh đã được chuyển sang cấu trúc mới, giữ nguyên nội dung riêng từng nhánh. Xem branch-sync.md.
 
 
 ## Bổ sung sau rà soát

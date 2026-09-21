@@ -1,6 +1,6 @@
 # Bắt đầu tại đây — Video Pilot
 
-Dự án đã chuyển sang cấu trúc `sys/` + `video/` trên nhánh `master` ngày 22/09/2026. Agent quen cấu trúc cũ hãy đọc file này, rồi đọc [AGENTS.md](AGENTS.md) trước khi làm việc.
+Dự án đã chuyển sang cấu trúc `sys/` + `video/` trên ba nhánh `master`, `video-nghien-cuu`, `video-vocabulary` ngày 22/09/2026. Agent quen cấu trúc cũ hãy đọc file này, rồi đọc [AGENTS.md](AGENTS.md) trước khi làm việc.
 
 ## Bản đồ thư mục
 
@@ -69,7 +69,7 @@ Các đối số `--brief`, `--evidence`, `--queue` được tính từ thư m�
 
 ## Các điểm agent cần nhớ
 
-1. Kiểm tra nhánh và thay đổi chưa commit trước khi làm việc. Các nhánh nội dung khác chưa được chuyển bố cục; không tự checkout nhánh cũ trên dữ liệu local đã chuyển. Dùng checkout riêng khi cần.
+1. Kiểm tra nhánh và thay đổi chưa commit trước khi làm việc. Ba nhánh dùng chung bố cục nhưng giữ mã và dữ liệu riêng. Ưu tiên worktree riêng; không ghi đè kho research/vocab hoặc dữ liệu local khi đổi nhánh.
 2. Đọc [quy trình](sys/docs/workflow.md) và skill phù hợp; trước sản xuất chạy status và next. Không suy ra quyết định duyệt từ file video có sẵn.
 3. Job lịch sử giữ nguyên integrity baseline; không sửa để tiếp tục chạy bằng mã mới. Nếu báo LEGACY_JOB, giữ lịch sử chỉ đọc và tạo job mới theo quy trình.
 4. Video mới được sao chép ra `video/<job>/` sau đủ ba quyết định duyệt hợp lệ; tên gồm revision và tỷ lệ. Nếu xuất bị gián đoạn sau duyệt, resume có thể thử lại việc xuất mà không ghi lại quyết định.
@@ -77,3 +77,11 @@ Các đối số `--brief`, `--evidence`, `--queue` được tính từ thư m�
 6. Kiểm tra chuyển đổi trước đó: 164 tests Python đạt; 3 lỗi kiểm thử kết nối lại B-2 tồn tại từ trước. Không coi kết quả tests hoặc doctor là nghiệm thu Flow/media thật.
 
 Thư mục gốc chỉ dành cho `video/`, `sys/`, các ngoại lệ công cụ và file hướng dẫn/launcher. Lưu báo cáo kỹ thuật mới vào `sys/`, không để dữ liệu phát sinh rải ở gốc.
+
+## Dữ liệu riêng theo nhánh
+
+- `master`: nền hệ thống dùng chung.
+- `video-nghien-cuu`: kho `sys/research/`, cấu hình và kiểm tra nhịp hình nghiên cứu.
+- `video-vocabulary`: kho `sys/vocab/`, brief và cấu hình từ vựng.
+
+Video và môi trường chạy nằm local, không được đưa lên GitHub. Xem `sys/docs/branch-sync.md` để biết cách đồng bộ và khôi phục.
