@@ -11,6 +11,7 @@ exports/
 scratch/
 out/
 bundle/
+/experiments/
 
 # --- 2. Browser Automation & Google Flow Profiles ---
 .gflow/
@@ -34,7 +35,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.venv*/
+.venv*
 venv/
 env/
 ENV/
@@ -49,7 +50,7 @@ dist/
 build/
 
 # --- 5. Node.js & Remotion Build Outputs ---
-node_modules/
+node_modules
 .remotion/
 .parcel-cache/
 .eslintcache
