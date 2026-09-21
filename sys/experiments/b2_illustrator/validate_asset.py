@@ -28,7 +28,13 @@ def validate_asset(file, ratio, declared_mime=None):
     if abs(width / height - numerator / denominator) > .04:
         raise ValueError('Actual aspect ratio differs from request')
     with file.open('rb') as stream:
-        digest = hashlib.file_digest(stream, 'sha256').hexdigest()
+        if hasattr(hashlib, 'file_digest'):
+            digest = hashlib.file_digest(stream, 'sha256').hexdigest()
+        else:
+            h = hashlib.sha256()
+            while chunk := stream.read(65536):
+                h.update(chunk)
+            digest = h.hexdigest()
     return {'path': str(file), 'sha256': digest,
             'mimeType': mime, 'extension': extension, 'width': width, 'height': height,
             'ratio': ratio, 'technicalValidation': 'pass', 'visualReview': 'pending'}

@@ -29,7 +29,7 @@ def check(root, job, brief):
     entry_id = None
     for line in brief.get('planning', {}).get('domain_requirements', []):
         if line.startswith(bank.ENTRY_TAG):
-            entry_id = line[len(bank.ENTRY_TAG):].split(' ')[0]
+            entry_id = line[len(bank.ENTRY_TAG):].split(' (')[0].strip()
             break
     if entry_id is None:
         if teaches_vocabulary(brief):

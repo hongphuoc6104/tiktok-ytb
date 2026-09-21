@@ -461,7 +461,7 @@ def brief_entry(job):
     brief = read_json(REPO / 'runs' / job / 'briefs' / f"{int(meta['revision'])}.json")
     for line in brief.get('planning', {}).get('domain_requirements', []):
         if line.startswith(ENTRY_TAG):
-            return line[len(ENTRY_TAG):].split(' ')[0]
+            return line[len(ENTRY_TAG):].split(' (')[0].strip()
     return None
 
 
