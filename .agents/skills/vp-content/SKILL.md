@@ -2,6 +2,9 @@
 name: vp-content
 description: Viết, kiểm tra và sửa kịch bản đa nhịp cho Video Pilot; dùng trong phần content.
 ---
+
+Đường dẫn vận hành trong skill tính từ `sys/` của dự án; chạy `cd sys` trước các lệnh. Video cho người dùng nằm ở `../video/<tên-video>/`.
+
 # Kịch bản đa nhịp
 
 Đọc AGENTS.md, docs/workflow.md và docs/story-planning.md. Trước sản xuất chạy status JOB và next JOB. Giữ đúng ba điểm duyệt content/media/video, mode review hoặc auto cố định.

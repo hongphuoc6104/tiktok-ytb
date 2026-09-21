@@ -1,6 +1,8 @@
 """Three public review gates; technical modules remain private implementation steps."""
 import itertools
 import json
+import shutil
+import tempfile
 import time
 from pathlib import Path
 
@@ -336,7 +338,59 @@ def approve(p, job, stage, revision, note, machine=False):
     # Verified against a hash, matching workflow_created; a raw JSON detail would let anyone forge a matching row.
     p.event(job, stage, 'machine_approved' if machine else 'user_approved', hashobj(result))
     p.event(job, stage, 'approval_detail', json.dumps(result, ensure_ascii=False))
-    return status(p, job)
+    result = status(p, job)
+    if stage == 'video' and result.get('complete'):
+        result['videos'] = publish_videos(p, job)
+    return result
+
+
+def publish_videos(p, job):
+    """Copy only approved video deliverables into the visible video library.
+
+    Sandboxes always export beneath their own root. The installed sys/ layout
+    exports beside sys/. Historical revisions and decisions remain untouched.
+    """
+    from pilot import ROOT
+    p.refresh(job)
+    settings(p, job)
+    if not all(approved(p, job, stage) for stage in STAGES):
+        raise Blocked('Video publication requires all three current approvals')
+    root = p.root.resolve()
+    library = (root.parent if root == ROOT.resolve() and root.name == 'sys' else root) / 'video'
+    if library.is_symlink():
+        raise Blocked('Video library must not be a symbolic link')
+    folder = library / p.job(job).name
+    if folder.is_symlink():
+        raise Blocked('Video output folder must not be a symbolic link')
+    payload = p.payload(job, 'render')
+    keys = [key for key in ('video_9x16', 'video_16x9') if payload.get(key)] or ['video']
+    revision = current(p, job, 'video')['revision']
+    plans = []
+    for key in keys:
+        source = p.path(job, payload[key])
+        if source.suffix.lower() != '.mp4' or not source.is_file():
+            raise Blocked('Missing approved MP4 deliverable')
+        suffix = key.removeprefix('video_') if key != 'video' else 'final'
+        target = folder / f'{job}_r{revision}_{suffix}.mp4'
+        stamp = digest(source)
+        if target.is_symlink() or (target.exists() and (not target.is_file() or digest(target) != stamp)):
+            raise Blocked(f'Refusing to overwrite a different video: {target}')
+        plans.append((source, target, stamp))
+    folder.mkdir(parents=True, exist_ok=True)
+    for source, target, stamp in plans:
+        if target.exists():
+            continue
+        with tempfile.NamedTemporaryFile(dir=folder, prefix='.publishing-', delete=False) as handle:
+            temporary = Path(handle.name)
+        try:
+            shutil.copyfile(source, temporary)
+            if digest(temporary) != stamp:
+                raise Blocked('Video copy did not match the approved source')
+            # Link atomically without replacing a file created by another writer.
+            target.hardlink_to(temporary)
+        finally:
+            temporary.unlink(missing_ok=True)
+    return [str(target) for _, target, _ in plans]
 
 
 def retake_audio(p, job, note, scene=None):
@@ -388,7 +442,9 @@ def advance(p, job, target=None):
         if 'blocked' in step:
             raise Blocked(step['blocked'])
         if step.get('action') == 'complete':
-            return status(p, job)
+            result = status(p, job)
+            result['videos'] = publish_videos(p, job)
+            return result
         stage = step['stage']
         if target and stage != target:
             raise Blocked(f'Phần được phép hiện tại: {stage}')

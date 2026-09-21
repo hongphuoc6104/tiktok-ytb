@@ -3,6 +3,9 @@
 # ==============================================================================
 
 # --- 1. Large Pipeline Artifacts & Media Runs ---
+/video/
+/sys/maintenance/
+/sys/research/evidence/
 runs/
 exports/
 scratch/
@@ -99,6 +102,8 @@ desktop.ini
 # chỉ hàng đợi tạm của pilot batch là không.
 vocab/queue.json
 vocab/.ledger.lock
+sys/vocab/queue.json
+.ledger.lock
 
 # --- 10. Runtime Logs & Loose Media in Root ---
 *.log
@@ -110,3 +115,6 @@ logs/
 /*.mp4
 /*.wav
 /*.mp3
+
+# Runtime bytecode redirected by the root launcher
+/sys/.cache/
