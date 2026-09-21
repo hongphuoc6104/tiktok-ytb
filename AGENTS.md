@@ -32,3 +32,6 @@ Nhịp thị giác: Đủ bối cảnh phải có đủ ảnh và visual beats; 
 Timeout B-2 Illustrator: dùng flow-reconcile kèm bằng chứng UI thật để giải quyết trạng thái ambiguous, không gửi trùng.
 
 Antigravity handshake: VP-RULES-1. Đọc Rules, chạy doctor và status; chỉ ghi integration-check sau xác nhận thực tế của người dùng. Không khẳng định Rules đã nạp trong phiên khác.
+
+## Định hướng riêng của nhánh nghiên cứu
+Đọc docs/research-channel.md trước khi lập brief hoặc viết kịch bản. Nội dung phục vụ giải thích nghiên cứu và hướng dẫn nghiên cứu; không tự chuyển thành bài học từ vựng. Chủ đề cụ thể vẫn lấy từ yêu cầu từng job. Giữ cả hai giọng và nhân vật chuẩn.

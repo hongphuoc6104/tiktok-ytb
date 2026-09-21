@@ -1,4 +1,8 @@
-# Video Pilot
+# Video Pilot — kênh nghiên cứu
+
+Nhánh này dành cho video giải thích nghiên cứu và hướng dẫn nghiên cứu.
+Đọc [định hướng nội dung nghiên cứu](docs/research-channel.md) trước khi tạo job.
+Nền dùng chung cho nhiều kênh nằm trên `master`.
 
 Pipeline chính: **kịch bản → âm thanh và hình ảnh → video hoàn chỉnh**.
 Hai chế độ: **review** (bạn duyệt ba mốc) và **auto** (máy đánh giá rồi chuyển bước).
