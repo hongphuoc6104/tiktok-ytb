@@ -4,6 +4,10 @@ Dự án đã chuyển sang cấu trúc `sys/` + `video/` trên ba nhánh `maste
 
 Quy tắc ngôn ngữ: xem mục “Ngôn ngữ giao tiếp và prompt” trong [AGENTS.md](AGENTS.md). Kế hoạch, tiến độ và kết quả cho người dùng bằng tiếng Việt; prompt nội bộ mặc định bằng tiếng Anh, giữ nguyên dữ liệu nội dung.
 
+## Lưu ý cập nhật Flow — 22/09/2026
+
+**Bản sửa tương thích PC:** đăng ký mascot không còn lấy `preflight.png` thay cho ảnh trước gửi. Screenshot thiếu không chặn khi `flow_require_ui_evidence=false`. Không khôi phục dòng `before_submit = preflight.png` khi merge. Xem [ghi chú cập nhật](sys/docs/flow-pc-compatibility-fix.md).
+
 ## Bản đồ thư mục
 
 | Vị trí từ gốc dự án | Nội dung |
