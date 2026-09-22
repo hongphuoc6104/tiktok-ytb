@@ -1,7 +1,6 @@
 # Kho từ vựng và vòng làm video theo từ
 
-Kho nằm trong `vocab/`, tách khỏi bộ điều phối. Không file nào của kho nằm trong
-integrity baseline của `pilot.py`, nên thêm hoặc sửa từ vựng không chặn job đang chạy.
+Kho nằm trong `vocab/`, tách khỏi bộ điều phối. Mã Python của kho nằm trong integrity baseline. Dữ liệu bank/ledger và cấu hình channel không nằm trong baseline: channel được chuyển thành brief khi tạo job, thay channel chỉ áp dụng job mới. Thêm hoặc sửa mục kho không thay mã bảo vệ của job đang chạy.
 
 | File | Vai trò |
 |---|---|
@@ -69,7 +68,7 @@ Sau đó chạy đúng quy trình ba phần trong [workflow.md](workflow.md). Kh
 python3 vocab/bank.py mark vocab-010 --note 'Đã xuất bản 9:16'
 ```
 
-`mark` gọi `workflow.approved(..., 'video')` trước khi ghi. Job chưa có quyết định duyệt
+`mark` xác minh đủ ba quyết định hiện tại và bản xuất trong video/ khớp artifact trước khi ghi. Nếu xuất bị gián đoạn, resume trước khi mark. Job chưa có quyết định duyệt
 hợp lệ sẽ bị chặn, nên ledger không thể đánh dấu xong một video chưa làm xong. Video làm
 ngoài pipeline thì đánh dấu thủ công, bắt buộc kèm lý do:
 

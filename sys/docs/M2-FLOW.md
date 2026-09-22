@@ -2,8 +2,8 @@
 
 Dùng pilot.py, không gọi CLI tạo ảnh trực tiếp. Xem workflow.md cho ba điểm duyệt chính.
 Sau content được duyệt, kết nối qua `python3 pilot.py flow-login JOB`.
-Agent kiểm tra giao diện thật: chế độ ảnh, model đúng config.json, đúng tài khoản/profile/project, 0 credit cho image và character-register. Không suy chi phí từ số dư. Không tạo ảnh trắng làm bằng chứng.
-Ghi JSON gồm observed_at (Unix timestamp thực), mode=image, model, profile, project, credits_per_generation=0, account_confirmed=true, observer, operations=["image","character-register"], screenshot (đường dẫn ảnh chụp thật).
+Chỉ khi cấu hình yêu cầu UI evidence (`flow_require_ui_evidence=true`): agent kiểm tra giao diện thật: chế độ ảnh, model đúng config.json, đúng tài khoản/profile/project, 0 credit cho image và character-register. Không suy chi phí từ số dư. Không tạo ảnh trắng làm bằng chứng.
+Trong chế độ yêu cầu UI evidence, ghi JSON gồm observed_at (Unix timestamp thực), mode=image, model, profile, project, credits_per_generation=0, account_confirmed=true, observer, operations=["image","character-register"], screenshot (đường dẫn ảnh chụp thật).
 Gọi `python3 pilot.py flow-preflight JOB --evidence FILE`, sau đó `python3 pilot.py run JOB media`.
 Bằng chứng hết hạn sau 10 phút: kiểm tra giao diện mới. Không tự thay timestamp.
 

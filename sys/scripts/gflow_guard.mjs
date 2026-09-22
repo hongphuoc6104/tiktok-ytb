@@ -1,3 +1,4 @@
+// Legacy CLI guard: retained for compatibility tests; v3 uses b2_bridge and queue-runner.
 /** Fail-closed guards around pinned gflow 1.1.1; never alter node_modules. */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';

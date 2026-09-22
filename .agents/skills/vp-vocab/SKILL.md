@@ -1,75 +1,27 @@
 ---
 name: vp-vocab
-description: Tự động sản xuất video học từ vựng tiếng Anh dọc 9:16 trọn gói từ kho vocab/ theo quy trình chuẩn Video Pilot v3 (Content -> Media -> Video); kích hoạt khi người dùng gõ /vp-vocab, "tạo video từ vựng", "tạo video 9:16", hoặc yêu cầu làm video học tiếng Anh.
+description: Tạo hoặc tiếp tục video dạy một nghĩa từ vựng tiếng Anh từ kho vocab của Video Pilot; dùng cho yêu cầu video từ vựng, không áp dụng chỉ vì video có tỷ lệ 9:16.
 ---
 
-Đường dẫn vận hành trong skill tính từ `sys/` của dự án; chạy `cd sys` trước các lệnh. Video cho người dùng nằm ở `../video/<tên-video>/`.
+# Điều phối video từ vựng
 
-# Video Pilot: Sản Xuất Video Từ Vựng Tiếng Anh 9:16 (vp-vocab)
+Lệnh tính từ `sys/`. Đọc `AGENTS.md`, `docs/workflow.md` và `docs/vocabulary.md`. Một video dạy đúng một nghĩa; giữ chỗ và cập nhật kho qua `vocab/bank.py`, không viết brief hay ledger bằng tay.
 
-Skill này tự động hóa 100% quy trình sản xuất video dạy từ vựng tiếng Anh dọc 9:16 chất lượng cao từ kho `vocab/` qua đúng 3 giai đoạn chuẩn của Video Pilot v3: **Content ➔ Media ➔ Video**.
+## Bắt đầu
 
----
+Dùng `python3 vocab/bank.py start JOB --mode review` cho job mới. Chỉ dùng `--mode auto` khi người dùng yêu cầu tự động; mode của job đã có giữ nguyên. Tỷ lệ lấy từ yêu cầu và cấu hình kênh; dùng `--aspect-ratio 9:16` khi yêu cầu bản dọc. Muốn chọn từ cụ thể, thêm `--word WORD`, đối chiếu nghĩa được rút trước sản xuất; không thay từ ngoài kho.
 
-## 1. Khởi Tạo Job Từ Vựng
-Rút từ vựng kế tiếp từ ngân hàng từ vựng:
-```bash
-python3 vocab/bank.py start <job_name> --mode auto --aspect-ratio 9:16
-```
-*(Nếu muốn chọn đích danh 1 từ vựng cụ thể: `python3 vocab/bank.py draw <job_name> --word <từ_vựng>` rồi `python3 pilot.py new <job_name> --brief vocab/briefs/<job_name>.json --mode auto`)*.
+Khi tiếp tục job, không start/draw lại. Chạy `python3 pilot.py status JOB` và `python3 pilot.py next JOB`.
 
----
+## Thứ tự
 
-## 2. Giai Đoạn 1: Content (Kịch bản & Ngữ âm)
-Lệnh thực thi:
-```bash
-python3 pilot.py run <job_name> content
-```
-**Quy tắc bắt buộc khi viết kịch bản:**
-1. **Văn phong:** Lời dẫn tự nhiên, gần gũi, mở đầu bằng tình huống đồng cảm (SC01), giải nghĩa từ vựng (SC02), 3 ví dụ đời thường (SC03), và mẫu câu hành động (SC04).
-2. **Vieneu TTS & Phiên âm tiếng Anh:**
-   - Tuyệt đối KHÔNG viết hoa toàn bộ từ khóa tiếng Anh trong lời dẫn (`narration`) để tránh TTS đọc đánh vần từng chữ cái. Luôn viết chữ thường hoặc viết hoa chữ cái đầu (ví dụ: `procrastinate` hoặc `wake up`). Hệ thống có bộ lọc `normalize_text_for_tts` tự động bảo vệ, nhưng việc viết chuẩn giúp kịch bản nhất quán.
-   - Các câu ví dụ tiếng Anh trong lời dẫn (đặc biệt tại SC03) PHẢI kết thúc bằng dấu chấm và đặt trong dấu ngoặc kép hoặc câu riêng biệt (ví dụ: `Thứ nhất: "We wake up early every day." Chúng tôi thức giấc sớm mỗi ngày.`). Việc này giúp bộ tách câu tạo phân đoạn phụ đề và audio độc lập, có khoảng nghỉ tự nhiên, tránh bị đọc dồn dập vào câu dịch tiếng Việt.
-   - Giọng đọc toàn kênh được làm chậm ~8% (`tts_speed: 0.92`) để đảm bảo các âm tiết tiếng Anh được phát âm rõ ràng, thong thả, chuẩn cho người học tiếng Anh.
-   - Đại từ nhân xưng tiếng Anh `I` trong câu ví dụ phát âm chuẩn `/aɪ/` khi viết `I` hoặc `"Ai"`.
-3. **Visual Beats (Nhịp thị giác):**
-   - $N$ bối cảnh/ví dụ phải có đủ $N$ hình ảnh và $N$ visual beats tương ứng.
-   - Điểm neo (anchor quote) của từ khóa/công thức phải đặt thật sớm trong câu để chữ hiển thị trên màn hình tối thiểu từ 2.5 đến 3.5 giây.
+1. Đọc `vp-content/SKILL.md` ở thư mục skills bên cạnh; chạy `python3 pilot.py run JOB content`. Bố cục và số cảnh lấy từ brief/channel. Chốt lời dẫn trước coverage/anchor.
+2. Sau quyết định content hợp lệ, đọc `vp-media/SKILL.md`; chạy `python3 pilot.py run JOB media`. Âm thanh trước, đo WAV, sau đó ảnh và nhịp. Giữ tốc độ TTS cấu hình kênh (hiện 0.92), không tự đổi. Câu ví dụ tiếng Anh trong narration Việt cần dấu câu rõ; giữ narration_en là tiếng Anh chuẩn khi brief yêu cầu.
+3. Sau quyết định media hợp lệ, đọc `vp-video/SKILL.md`; chạy `python3 pilot.py run JOB video`.
+4. Khi video đã có quyết định hợp lệ và xuất thành công, chạy `python3 vocab/bank.py mark JOB`. Trả đường dẫn MP4 thật trong `video/<job>/`, không gán revision 1.
 
----
+Review dừng đúng ba điểm content/media/video, đưa review.md và revision. Auto dùng báo cáo xem/nghe artifact thật; unsupported hoặc lỗi đăng nhập/CAPTCHA/hạn mức thì dừng, không tự pass. Skill hướng dẫn agent điều phối CLI, không gọi lớp Pilot để vượt gate.
 
-## 3. Giai Đoạn 2: Media (Giọng Đọc, Mascot Chuẩn & Hình Ảnh 9:16)
-Lệnh thực thi:
-```bash
-python3 pilot.py run <job_name> media
-```
-**Quy tắc bắt buộc:**
-1. **Âm thanh:** Tự động tạo `narration.wav` và phụ đề đồng bộ `subtitles.srt`.
-2. **Nhân vật đại diện kênh cố định (Canonical Mascot CH01):**
-   - File tham chiếu: `assets/characters/channel-mascot/reference-v1.png` (Media ID: `de94a39b-155f-4afe-acbb-d9d4b59ad532`).
-   - Giải phẫu CH01 chuẩn: Đúng 1 thân duy nhất, áo thun cộc tay màu xanh biển nhạt `#8CCFE8`, 2 tay và 2 chân que navy tối giản, đầu tròn trắng viền navy đậm, 2 mắt oval đen đặc, miệng cười tươi lưỡi san hô.
-   - Tuyệt đối cấm: vẽ răng, lông mày, lòng trắng hoạt hình, hoặc vẽ 2 thân áo đè lên nhau.
-3. **Sinh ảnh qua B-2 Persistent Session Socket:**
-   - Kết nối `experiments/b2_illustrator/results/controller/session.sock`.
-   - Sinh đầy đủ ảnh 9:16 cho các phân cảnh và visual beats.
+Lỗi hoặc yêu cầu sửa: dùng reject đúng stage/phạm vi rồi resume; giữ journal ambiguous và đối chiếu trước gửi lại. Không mark chỉ vì render thành công. Không dùng --force để hoàn tất job pipeline bị chặn.
 
----
-
-## 4. Giai Đoạn 3: Video (Dựng Hình Remotion & Thẩm Định Máy)
-Lệnh thực thi:
-```bash
-python3 pilot.py run <job_name> video
-```
-- Tự động dựng video MP4 độ phân giải dọc 1080×1920 (9:16) bằng Remotion.
-- Chạy hệ thống đánh giá máy (Machine Review QA) kiểm tra âm thanh, hình ảnh và tỷ lệ khung hình. Đảm bảo đạt quyết định duyệt hợp lệ.
-
----
-
-## 5. Đánh Dấu Hoàn Tất
-Sau khi render video thành công:
-```bash
-python3 vocab/bank.py mark <job_name>
-```
-Báo cáo lại cho người dùng:
-1. Đường dẫn video MP4 cuối cùng (nằm tại `runs/<job_name>/revisions/render/1/video.mp4`).
-2. Gợi ý Tiêu đề (Title), Caption, Hashtags và Bình luận ghim mẫu để đăng TikTok / YouTube Shorts / Facebook Reels.
+Nhiều video: chỉ dùng queue/batch hữu hạn khi được yêu cầu, mark từng job đạt. Sau hoàn tất có thể dùng `vp-clean` để kiểm kê dữ liệu tạm; dọn dẹp không là điều kiện hoàn tất và không tự xóa media/bằng chứng.

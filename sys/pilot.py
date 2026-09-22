@@ -31,6 +31,11 @@ class Pilot:
    return {r['module']:dict(r) for r in self.db.execute('SELECT * FROM modules WHERE job=?',(j,))}
  def protected(self):
   paths=[self.root/x for x in ['pilot.py','workflow.py','machine_review.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','en-requirements.lock']]
+  paths.append(self.root/'b2_bridge.py')
+  paths += list((self.root/'vocab').glob('*.py'))
+  engine = self.root/'experiments/b2_illustrator'
+  paths += [x for x in engine.glob('*') if x.suffix in ('.py','.mjs') and not x.name.startswith('test')]
+  paths += [engine/x for x in ('config.json','acceptance.json','browser-profiles.json')]
   for folder in ['schemas','.agents','renderer','tests','examples','scripts']:
    paths+=list((self.root/folder).rglob('*'))
   return {str(p.relative_to(self.root)):digest(p) for p in sorted(paths) if p.is_file() and '__pycache__' not in str(p)}

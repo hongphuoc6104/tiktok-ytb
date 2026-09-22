@@ -64,7 +64,7 @@ uv pip sync --python .venv-en/bin/python --index-strategy unsafe-best-match en-r
 ```
 
 Model tải lần đầu, lần sau dùng cache; không API trả phí. Alba cần ghi công theo [voice-attribution.md](sys/docs/voice-attribution.md).
-Máy đích Xeon E3-1241 v3 / 16 GB / P620 2 GB: chưa nghiệm thu hiệu năng thực tế. Render mặc định hai tác vụ, Flow một tác vụ. flow_batch (config.json) mặc định tắt, chưa nghiệm thu với Flow thật. Không tạo video AI.
+Máy đích Xeon E3-1241 v3 / 16 GB / P620 2 GB: chưa nghiệm thu hiệu năng thực tế. Render hiện cấu hình bốn tác vụ. Flow cho phép thử queue tối đa bốn ảnh độc lập qua flow_batch/flow_queue_trial_enabled; acceptance chưa đạt sản xuất. Không tạo video AI.
 
 ## Kiểm chứng
 

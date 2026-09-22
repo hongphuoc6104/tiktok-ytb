@@ -498,7 +498,10 @@ def approved_video(job):
     import workflow
     p = Pilot()
     try:
-        return workflow.approved(p, job, 'video')
+        workflow.published_videos(p, job)
+        return True
+    except Exception:
+        return False
     finally:
         p.db.close()
 

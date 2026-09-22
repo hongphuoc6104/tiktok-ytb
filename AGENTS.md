@@ -30,13 +30,13 @@ Dự án này dùng đúng ba phần công khai: **content → media → video**
 ## Thực hiện
 Đọc `docs/workflow.md`. Chạy `python3 pilot.py status JOB` và `next JOB` trước lượt sản xuất.
 Dùng `run JOB` hoặc `resume JOB` để tiến đến điểm duyệt tiếp theo; không gọi lớp Pilot trực tiếp để vượt gate.
-Đọc skill vp-* tương ứng, gồm vp-humanizer khi viết lời dẫn: viết xong lời dẫn rồi mới đặt neo/coverage/claims, không sửa lời dẫn sau khi đã neo. Không dùng explainer-pipeline hoặc template VideoShotCut.
+Đọc skill vp-* tương ứng, gồm tài liệu vp-content/references/narration-style.md khi viết lời dẫn: viết xong lời dẫn rồi mới đặt neo/coverage/claims, không sửa lời dẫn sau khi đã neo. Không dùng explainer-pipeline hoặc template VideoShotCut.
 Video dạy từ vựng phải rút từ kho `vocab/`: chạy `python3 vocab/bank.py start JOB` để giữ chỗ một nghĩa và sinh brief, không viết brief từ vựng bằng tay và không tự chọn từ ngoài kho. Cổng `brief_policies` trong config chặn brief từ vựng thiếu mã mục hoặc dùng mục đang thuộc job khác. Một video dạy đúng một nghĩa; nghĩa khác của cùng từ là mục riêng, video riêng. Video được duyệt xong mới chạy `python3 vocab/bank.py mark JOB`; không đánh dấu trước, không sửa tay vocab/ledger.json. Xem docs/vocabulary.md.
 Chỉ phát triển mã nguồn khi người dùng yêu cầu phát triển; không sửa bộ điều phối, cấu hình, schema, renderer, tests hay Rules để vượt kiểm tra của một job sản xuất.
 Không ghi SQLite trực tiếp. Không sửa revisions/, reviews/ hoặc báo cáo máy đã lưu. Sửa qua reject rồi tạo revision mới.
 Sửa ảnh: reject media với --scene/--character; sửa giọng: --part audio (thêm --scene để chỉ một cảnh); sửa lời dẫn: reject content.
-Không bỏ ý, bỏ cảnh, rút thời lượng hoặc tự thay công cụ. Không dùng API trả phí. Tạo video AI bị khóa; chỉ dựng video từ ảnh và âm thanh. Không tự bật flow_batch trên job sản xuất; tính năng chưa nghiệm thu với Flow thật.
-Flow cần bằng chứng giao diện thật, còn hạn, đúng tài khoản/model và 0 credit. Timeout sau gửi phải flow-reconcile; không gửi trùng.
+Không bỏ ý, bỏ cảnh, rút thời lượng hoặc tự thay công cụ. Không dùng API trả phí. Tạo video AI bị khóa; chỉ dựng video từ ảnh và âm thanh. Cấu hình hiện bật flow_batch và flow_queue_trial_enabled theo ngoại lệ thử tích hợp đã được yêu cầu; acceptance vẫn chưa đạt sản xuất. Không mở rộng ngoại lệ hoặc tự đổi cấu hình khi chạy job.
+Flow giữ kiểm tra model/tham chiếu và nhật ký. Với flow_require_ui_evidence=false, chi phí là giả định do người dùng chỉ định, không ghi đã xác minh. Timeout sau gửi phải flow-reconcile bằng bằng chứng thật; không gửi trùng.
 Trong review, chỉ dừng xin duyệt ở content/media/video. Bước chuẩn bị ảnh nhân vật là nội bộ; so sánh nhân vật được gộp vào media. Không tuyên bố đã khớp trước khi kiểm tra.
 Trong auto, job không đạt cần được sửa có kiểm soát hoặc đưa vào needs_attention; lỗi đăng nhập/CAPTCHA/hạn mức dừng hàng đợi. Không lặp vô hạn.
 Khi chờ duyệt: đưa link review.md, revision và lỗi còn lại. Không chạy phần phụ thuộc trước duyệt.

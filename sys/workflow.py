@@ -344,6 +344,31 @@ def approve(p, job, stage, revision, note, machine=False):
     return result
 
 
+def published_videos(p, job):
+    """Read-only verification of current approvals and matching published copies."""
+    from pilot import ROOT
+    settings(p, job)
+    if not all(approved(p, job, stage) for stage in STAGES):
+        raise Blocked('Video publication requires all three current approvals')
+    root = p.root.resolve()
+    library = (root.parent if root == ROOT.resolve() and root.name == 'sys' else root) / 'video'
+    folder = library / p.job(job).name
+    if library.is_symlink() or folder.is_symlink():
+        raise Blocked('Video library must not be a symbolic link')
+    payload = p.payload(job, 'render')
+    keys = [k for k in ('video_9x16', 'video_16x9') if payload.get(k)] or ['video']
+    revision = current(p, job, 'video')['revision']
+    paths = []
+    for key in keys:
+        source = p.path(job, payload[key])
+        suffix = key.removeprefix('video_') if key != 'video' else 'final'
+        target = folder / f'{job}_r{revision}_{suffix}.mp4'
+        if target.is_symlink() or not target.is_file() or digest(source) != digest(target):
+            raise Blocked('Published video missing or changed; resume/check publication before mark')
+        paths.append(str(target))
+    return paths
+
+
 def publish_videos(p, job):
     """Copy only approved video deliverables into the visible video library.
 

@@ -95,3 +95,7 @@ Video và môi trường chạy nằm local, không được đưa lên GitHub. 
 ## Tool Flow tạo ảnh đồng thời
 
 Đọc [hướng dẫn hàng đợi Flow](sys/docs/flow-queue-operations.md) trước khi cập nhật tool hoặc chạy ảnh. Tài liệu gồm link share, cấu hình máy riêng, cách khôi phục và trạng thái nghiệm thu; không bật sản xuất chỉ vì đã pull mã mới.
+
+## Skills trên nhánh từ vựng
+
+`vp-vocab` điều phối kho và CLI; `vp-content` viết nội dung; `vp-media` chạy audio trước images; `vp-video` dựng/duyệt/xuất; `vp-clean` kiểm kê và dọn scratch rỗng. Văn phong nằm trong references của vp-content và được adapter nạp vào lượt viết chi tiết. Xem sys/docs/vocab-redesign-plan.md.

@@ -193,6 +193,9 @@ class StoryIntegrationTests(unittest.TestCase):
             return {'structured_output':{'outline':new['outline']} if len(calls)==1 else new}
         with patch('scripts.agy_pipeline.invoke',side_effect=invoke):wf.advance(self.p,self.job,'content')
         self.assertEqual(len(calls),2);self.assertIn('TEST update title',calls[0])
+        style=(self.p.root/'.agents/skills/vp-content/references/narration-style.md').read_text()
+        self.assertNotIn(style,calls[0])
+        self.assertEqual(calls[1].count(style),1)
         self.assertEqual(read(self.p.job(self.job)/'revisions/content/1/content.json'),old)
         manifest=wf.current(self.p,self.job,'content');text=self.p.path(self.job,manifest['review']).read_text()
         self.assertIn('Updated title',text);self.assertIn('Thay đổi so với',text)

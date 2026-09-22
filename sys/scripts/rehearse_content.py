@@ -4,7 +4,7 @@
 This is a diagnostic tool, not part of the production pipeline. It never creates a
 job under this repository's own `runs/` (that directory is production state and must
 not be touched by a rehearsal). Instead it copies the protected implementation files
-(the same set `pilot.Pilot.protected()` hashes for integrity: schemas/, .agents/,
+(the implementation used by `pilot.Pilot.protected()` for integrity, including the B-2 bridge/engine and vocabulary policy: schemas/, .agents/,
 renderer/, tests/, examples/, scripts/, and the top-level pipeline .py/.json/.md
 files) into a fresh sandbox directory, creates a job there from a brief-v3 file, and
 calls the *real* `scripts.agy_pipeline.generate()` against the real `agy` CLI to see:
@@ -41,7 +41,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 PROTECTED_DIRS = ['schemas', '.agents', 'renderer', 'tests', 'examples', 'scripts']
 PROTECTED_FILES = [
     'pilot.py', 'workflow.py', 'machine_review.py', 'content_contract.py',
-    'image_pipeline.py', 'prompt_templates.py', 'adapters.py', 'tts_worker.py',
+    'image_pipeline.py', 'prompt_templates.py', 'adapters.py', 'tts_worker.py', 'b2_bridge.py',
     'config.json', 'AGENTS.md', 'GEMINI.md', 'package.json', 'package-lock.json',
     'requirements.txt', 'tts-requirements.lock', 'en-requirements.lock',
 ]
@@ -82,6 +82,20 @@ def build_sandbox(sandbox_root: Path) -> Path:
         src = REPO_ROOT / name
         if src.exists():
             shutil.copy(src, sandbox_root / name)
+    engine = REPO_ROOT / 'experiments/b2_illustrator'
+    target_engine = sandbox_root / 'experiments/b2_illustrator'
+    target_engine.mkdir(parents=True)
+    for src in engine.glob('*'):
+        if src.is_file() and ((src.suffix in ('.py', '.mjs') and not src.name.startswith('test'))
+                              or src.name in ('config.json', 'acceptance.json', 'browser-profiles.json')):
+            shutil.copy(src, target_engine/src.name)
+    vocab = REPO_ROOT / 'vocab'
+    if vocab.is_dir():
+        target = sandbox_root / 'vocab'
+        target.mkdir()
+        for src in list(vocab.glob('*.py')) + [vocab/'bank.jsonl', vocab/'channel.json']:
+            if src.is_file(): shutil.copy(src, target/src.name)
+        (target/'ledger.json').write_text(json.dumps({'entries': {}}))
     return sandbox_root
 
 
@@ -98,7 +112,7 @@ def load_sandbox_modules(sandbox_root: Path):
     if sandbox_root not in sys.path:
         sys.path.insert(0, sandbox_root)
     for name in list(sys.modules):
-        if name in ('pilot', 'workflow', 'content_contract', 'image_pipeline', 'adapters') or name.split('.')[0] == 'scripts':
+        if name in ('pilot', 'workflow', 'content_contract', 'image_pipeline', 'adapters') or name.split('.')[0] in ('scripts', 'vocab'):
             del sys.modules[name]
     import pilot  # noqa
     import workflow  # noqa
@@ -152,6 +166,15 @@ def run_rehearsal(brief_path: Path, job_id: str, sandbox_root: Path, max_attempt
     sandbox_root = build_sandbox(sandbox_root)
     pilot, workflow, agy_pipeline = load_sandbox_modules(sandbox_root)
 
+    # Reserve only the requested catalog entry in this isolated ledger.
+    from vocab import bank as sandbox_bank
+    entries = [line[len(sandbox_bank.ENTRY_TAG):].split(' (')[0].strip()
+               for line in brief.get('planning', {}).get('domain_requirements', [])
+               if line.startswith(sandbox_bank.ENTRY_TAG)]
+    if entries:
+        if len(entries) != 1 or entries[0] not in {x['id'] for x in sandbox_bank.bank()}:
+            raise RehearsalError('Sandbox requires exactly one existing vocabulary sense')
+        sandbox_bank.save_ledger({'entries': {entries[0]: {'job': job_id, 'status': 'reserved'}}})
     calls_log = []
     instrument_invoke(agy_pipeline, calls_log)
 

@@ -57,3 +57,18 @@ class VideoLibraryTests(unittest.TestCase):
             with self.assertRaises(OSError):
                 workflow.publish_videos(self.p, 'demo')
         self.assertEqual(list((self.root / 'video/demo').iterdir()), [])
+
+    def test_publication_verification_detects_missing_and_modified_copies(self):
+        with self.assertRaises(Blocked):
+            workflow.published_videos(self.p, 'demo')
+        paths=workflow.publish_videos(self.p, 'demo')
+        self.assertEqual(workflow.published_videos(self.p, 'demo'), paths)
+        Path(paths[0]).write_bytes(b'changed')
+        with self.assertRaises(Blocked):
+            workflow.published_videos(self.p, 'demo')
+
+    def test_publication_verification_requires_every_stage(self):
+        workflow.publish_videos(self.p, 'demo')
+        with patch.object(workflow, 'approved', side_effect=lambda p,j,stage: stage != 'media'):
+            with self.assertRaises(Blocked):
+                workflow.published_videos(self.p, 'demo')

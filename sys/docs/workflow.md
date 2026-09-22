@@ -30,7 +30,7 @@ python3 pilot.py run video-001
 
 Thay số revision bằng giá trị hiện tại; văn bản ví dụ không phải bằng chứng đồng ý. Mốc kế tiếp là media, sau đó video; dùng cùng cú pháp approve với đúng tên phần. Không xin thêm duyệt control, ảnh chuẩn hoặc ba cảnh đầu.
 
-Flow vẫn cần đăng nhập và bằng chứng thực tế trước tạo ảnh; xem M2-FLOW.md. Đây là điều kiện vận hành, không phải một mốc duyệt nội dung bổ sung.
+Flow cần phiên đăng nhập và đúng model/tham chiếu. Mặc định flow_require_ui_evidence=false không yêu cầu screenshot trước gửi; chi phí chưa được xác minh. Sau timeout vẫn phải đối chiếu bằng chứng thật; xem M2-FLOW.md. Đây không phải mốc duyệt nội dung bổ sung.
 
 ## Chế độ Tự động
 

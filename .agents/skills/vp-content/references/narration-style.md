@@ -1,8 +1,3 @@
----
-name: vp-humanizer
-description: Nguyên tắc văn phong tự nhiên cho lời dẫn (narration/narration_en) khi viết kịch bản Video Pilot; nạp vào lượt viết chi tiết của agy_pipeline.py, không phải bước viết lại riêng.
----
-
 Đường dẫn vận hành trong skill tính từ `sys/` của dự án; chạy `cd sys` trước các lệnh. Video cho người dùng nằm ở `../video/<tên-video>/`.
 
 # Lời dẫn tự nhiên
@@ -67,4 +62,4 @@ Sửa quá tay tạo ra văn bản không giống người mà cũng không gi�
 
 ## Tra cứu đầy đủ
 
-`references/ai-tells.md` là danh mục đầy đủ (từ vựng theo giai đoạn, cụm quảng cáo, vấn đề trích dẫn, danh sách "không phải dấu hiệu AI"). File này **không** được nạp vào prompt sinh nội dung — quá nặng cho mỗi lượt. Đọc trực tiếp khi làm việc tương tác và cần tra một dấu hiệu cụ thể.
+`ai-tells.md` là danh mục đầy đủ (từ vựng theo giai đoạn, cụm quảng cáo, vấn đề trích dẫn, danh sách "không phải dấu hiệu AI"). File này **không** được nạp vào prompt sinh nội dung — quá nặng cho mỗi lượt. Đọc trực tiếp khi làm việc tương tác và cần tra một dấu hiệu cụ thể.

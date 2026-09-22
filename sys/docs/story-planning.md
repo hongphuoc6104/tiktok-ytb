@@ -12,7 +12,7 @@ Lệnh new tiếp nhận brief 2.0 và chuẩn hóa thành brief 3.0 trước kh
 
 1. Đọc yêu cầu, làm rõ thiếu sót ảnh hưởng mục tiêu.
 2. Lập outline theo cảnh, mục đích, ý bắt buộc và chuyển ý; kiểm tra thứ tự/số cảnh/đủ mã ý.
-3. Viết chi tiết theo outline: lời dẫn trước — áp dụng skill vp-humanizer cho văn phong tự nhiên — rồi mới đặt neo/ánh xạ: nhân vật, images, beats, coverage, claims. Không sửa lời dẫn sau khi đã đặt neo (lệch quote/occurrence, hỏng validate_content/validate_plan); nguyên tắc văn phong không bao giờ là cớ bỏ ý bắt buộc hay rút ngắn nội dung.
+3. Viết chi tiết theo outline: lời dẫn trước — áp dụng tài liệu vp-content/references/narration-style.md cho văn phong tự nhiên — rồi mới đặt neo/ánh xạ: nhân vật, images, beats, coverage, claims. Không sửa lời dẫn sau khi đã đặt neo (lệch quote/occurrence, hỏng validate_content/validate_plan); nguyên tắc văn phong không bao giờ là cớ bỏ ý bắt buộc hay rút ngắn nội dung.
 4. Kiểm tra cấu trúc, nghĩa, nguồn, hai ngôn ngữ, khả năng minh họa và khoảng thời lượng ước tính (tham khảo, không rào duyệt).
 5. Xuất một review.md đầy đủ để người duyệt hoặc máy đánh giá. Không thêm cổng duyệt dàn ý.
 

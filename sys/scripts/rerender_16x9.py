@@ -165,6 +165,7 @@ def synthesize_vieneu(content_scenes, voice_name, work_dir, cfg):
 
 
 def main():
+    raise SystemExit('LEGACY_RENDER_DISABLED: dùng pilot.py reject JOB media --part audio rồi resume JOB; xuất qua workflow v3.')
     parser = argparse.ArgumentParser(description="Re-render 16:9 Explainer Video with a New Voice")
     parser.add_argument('--content', default=str(ROOT / 'exports/stickman-long-001/content.json'), help="Path to content.json")
     parser.add_argument('--images-dir', default=str(ROOT / 'runs/stickman-long-001/revisions/images/18'), help="Path to images directory")

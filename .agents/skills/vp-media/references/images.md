@@ -1,15 +1,10 @@
----
-name: vp-images
-description: Hình ảnh trong media cho Video Pilot v3; dùng khi chạy hoặc sửa phần này.
----
-
 Đường dẫn vận hành trong skill tính từ `sys/` của dự án; chạy `cd sys` trước các lệnh. Video cho người dùng nằm ở `../video/<tên-video>/`.
 
 # Hình ảnh trong media
 
 Đọc AGENTS.md và docs/workflow.md. Trước sản xuất chạy status JOB và next JOB. Hai chế độ review/auto; chỉ ba phần content/media/video. Không áp dụng hướng dẫn duyệt từng module cũ.
 
-Đọc docs/M2-FLOW.md. Dùng run JOB media; ảnh chuẩn và đăng ký là nội bộ, không xin duyệt riêng. Không còn checkpoint ba cảnh đầu. Bàn giao mọi cảnh và ảnh đăng ký cùng WAV ở media. Flow cần bằng chứng giao diện thật 0 credit; timeout dùng flow-reconcile, không gửi trùng. Sửa từng cảnh/nhân vật bằng reject media --scene/--character. Không gọi CLI trực tiếp.
+Đọc docs/M2-FLOW.md. Dùng run JOB media; ảnh chuẩn và đăng ký là nội bộ, không xin duyệt riêng. Không còn checkpoint ba cảnh đầu. Bàn giao mọi cảnh và ảnh đăng ký cùng WAV ở media. Mặc định không yêu cầu screenshot trước gửi; chi phí là giả định của người dùng, không phải đã xác minh. Timeout sau gửi dùng flow-reconcile với bằng chứng thật, không gửi trùng. Sửa từng cảnh/nhân vật bằng reject media --scene/--character. Không gọi CLI trực tiếp.
 
 Quyết định người dùng cần đúng phần/revision và phản hồi nguyên văn. Quyết định máy chỉ qua báo cáo kiểm tra thật. Không tự tạo bằng chứng, không sửa file đã lưu hoặc ghi SQLite trực tiếp.
 

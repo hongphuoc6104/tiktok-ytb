@@ -1,20 +1,4 @@
-"""
-Tests for scripts/clean_production.py — per-module revision pruning.
-
-Bug this guards against: each module (content, audio, images, render, ...) has
-its OWN independent revision counter in SQLite (pilot.py run(): `rev =
-revision + 1` per module). The old prune_unapproved_revisions() took a single
-job-wide `approved_rev` (the render module's revision) and applied it while
-walking every module's revisions/<module>/ folder. When a module's approved
-revision number differs from render's (e.g. render approved@1, images
-approved@3 after two rejections), the old code deleted the media of the
-actually-approved images/3 and kept the stale, rejected images/1.
-
-scripts/clean_production.py computes ROOT/RUNS_DIR/DB_PATH/EXPORTS_DIR at
-import time from Path(__file__). These tests patch those module-level
-constants directly to point at a temporary directory instead of copying the
-whole repository tree.
-"""
+"""Revision retention across approved, rejected and missing module states."""
 import shutil
 import sqlite3
 import sys
@@ -80,9 +64,9 @@ class CleanProductionPruneTests(unittest.TestCase):
         return self.runs_dir / job_id / "revisions"
 
     # --- Case 1: original bug scenario ------------------------------------
-    def test_prunes_only_within_each_modules_own_approved_revision(self):
+    def test_retains_every_revision_even_with_different_approved_numbers(self):
         """render approved@1, images approved@3 (after two rejections).
-        Must keep render/1 and images/3, and clean images/1 + images/2.
+        Must keep render/1 and images/3, and retain images/1 + images/2.
         This reproduces the exact scenario from the bug report."""
         job = "jobA"
         rev_dir = self.revisions_dir(job)
@@ -100,8 +84,8 @@ class CleanProductionPruneTests(unittest.TestCase):
 
         self.assertTrue(images3.exists(), "approved images revision 3 must survive pruning")
         self.assertTrue(render1.exists(), "approved render revision 1 must survive pruning")
-        self.assertFalse(images1.exists(), "rejected images revision 1 must be pruned")
-        self.assertFalse(images2.exists(), "rejected images revision 2 must be pruned")
+        self.assertTrue(images1.exists(), "history must be preserved")
+        self.assertTrue(images2.exists(), "history must be preserved")
 
     # --- Case 2: fail-closed on non-approved module -------------------------
     def test_fail_closed_when_module_not_approved(self):
@@ -139,7 +123,7 @@ class CleanProductionPruneTests(unittest.TestCase):
         self.assertTrue(orphan.exists(), "module absent from DB must not be pruned")
 
     # --- Case 4: dry_run must not delete, but must count correctly ----------
-    def test_dry_run_reports_bytes_without_deleting(self):
+    def test_dry_run_excludes_revision_media_from_candidates(self):
         job = "jobD"
         rev_dir = self.revisions_dir(job)
         render1 = make_rev_file(rev_dir, "render", 1, "out.mp4", content=b"r" * 500)
@@ -153,7 +137,7 @@ class CleanProductionPruneTests(unittest.TestCase):
 
         freed = cp.prune_unapproved_revisions(job, dry_run=True)
 
-        self.assertEqual(freed, 300, "dry_run must still count the bytes that WOULD be freed")
+        self.assertEqual(freed, 0, "revision media are not deletion candidates")
         self.assertTrue(render1.exists())
         self.assertTrue(images_approved.exists())
         self.assertTrue(images_draft.exists(), "dry_run must not actually delete anything")
@@ -176,7 +160,7 @@ class CleanProductionPruneTests(unittest.TestCase):
         cp.prune_unapproved_revisions(job, dry_run=False)
 
         self.assertTrue(draft_json.exists(), "non-media (.json) files must never be deleted by this tool")
-        self.assertFalse(draft_media.exists(), "media (.png) file in the unapproved revision must be pruned")
+        self.assertTrue(draft_media.exists(), "rejected media remain evidence")
 
 
 if __name__ == "__main__":

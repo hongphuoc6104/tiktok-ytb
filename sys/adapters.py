@@ -111,10 +111,10 @@ def gflow(p,*args,timeout=960):
     timeout=timeout
    )
    src_img = Path(b2_res['path'])
-   dest_img = out_folder / ('result' + src_img.suffix)
-   if src_img.resolve() != dest_img.resolve():
-    shutil.move(src_img, dest_img)
-    # Preserve single image file in out_folder for candidate identification
+   # The queue journal owns this stable path; preserve it for replay.
+   if src_img.parent.resolve() != out_folder.resolve():
+    raise Blocked('B-2 output must be in the requested download directory')
+   dest_img = src_img
 
   if not is_reg:
    meta = {
@@ -241,6 +241,7 @@ def flow_action(p,a):
   s.update(state='downloaded',path=rel(p,j,dest),sha256=digest(dest),verification=a.note);write(q,s);p.event(j,'images','reconciled',a.note);return s
 
 def generate_image(p,j,scene):
+ # Legacy no-brief compatibility; v3 production uses image_pipeline.request.
  cfg=config(p);base=p.job(j)/'flow';base.mkdir(exist_ok=True)
  attempt=base/(scene['id']+'.json');key=digest(p.root/'config.json')+scene['prompt']
  if attempt.exists():

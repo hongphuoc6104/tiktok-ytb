@@ -11,8 +11,8 @@ const root=path.resolve(here,'../..');
 const localFile=path.join(here,'machine.local.json');
 export const machineConfig=fs.existsSync(localFile)?JSON.parse(fs.readFileSync(localFile,'utf8')):{};
 export const toolUrl=machineConfig.tool_url || 'https://flow.google.com/project/41d3d574-907c-4bb0-90a7-c98f85f5e22b/tool/2791e8ba-9ae0-4ca9-9368-b7efe600c53d';
-export function browserConfig(config) {
-  config={...config,...machineConfig};
+export function browserConfig(config, local=machineConfig) {
+  config={...config,...local};
   const dataDir=path.resolve(root,config.flow_user_data_dir || `.gflow/profiles/${config.flow_profile || 'video-pilot'}`);
   const profile=config.flow_profile_directory || 'Default';
   if(path.basename(profile)!==profile || profile==='.' || profile==='..') throw Error('Invalid profile directory');
@@ -106,8 +106,9 @@ export function assertCanSubmit(record) {
   // Disabled until real account/cost, iframe uploads and output capture are accepted.
   throw Error('LIVE_SUBMIT_NOT_ACCEPTED: inspect and verify tool input/output contract first');
 }
-export async function verifyBrowser(browser, config, keepPage=false) {
-  const selected=browserConfig(config);
+export async function verifyBrowser(browser, config, keepPage=false, local=machineConfig) {
+  config={...config,...local};
+  const selected=browserConfig(config, {});
   const context=browser.contexts()[0];
   if(!context) throw Error('NO_CHROME_CONTEXT');
   const probe=await context.newPage();
@@ -123,7 +124,8 @@ export async function verifyBrowser(browser, config, keepPage=false) {
   } catch(e) {await probe.close();throw e;} finally {if(!keepPage && !probe.isClosed())await probe.close();}
 }
 export async function inspect(config, sharedBrowser=null, bound=null) {
-  const selected=browserConfig(config);
+  config={...config,...machineConfig};
+  const selected=browserConfig(config, {});
   const file=path.join(selected.dataDir,'DevToolsActivePort');
   if(!fs.existsSync(file)) return {status:'blocked',reason:'PROJECT_CHROME_CDP_UNAVAILABLE',...selected,generationSubmitted:false};
   const endpoint=debugEndpoint(fs.readFileSync(file,'utf8'));

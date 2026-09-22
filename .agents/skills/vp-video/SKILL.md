@@ -1,5 +1,5 @@
 ---
-name: vp-render
+name: vp-video
 description: Video hoàn chỉnh cho Video Pilot v3; dùng khi chạy hoặc sửa phần này.
 ---
 
@@ -14,3 +14,5 @@ Chỉ run JOB video sau media được duyệt hợp lệ. 9:16 Việt có phụ
 Quyết định người dùng cần đúng phần/revision và phản hồi nguyên văn. Quyết định máy chỉ qua báo cáo kiểm tra thật. Không tự tạo bằng chứng, không sửa file đã lưu hoặc ghi SQLite trực tiếp.
 
 Job content 3.0: dựng theo danh sách beats/images đã duyệt và timeline riêng Việt/Anh; không tự phát hiện ảnh phụ theo tên hoặc gán mốc giây cố định. Hỗ trợ hold/cut/fade/slide_left/zoom_in/zoom_out. Chữ minh họa đã nằm trong ảnh; không dựng thêm lớp từ vựng. Giữ phụ đề Việt theo quy trình. Chuyển động phóng gần phải được kiểm tra không cắt mất chữ; không tự thêm hiệu ứng ngoài kế hoạch.
+
+Xuất qua workflow vào `video/<job>/` sau đủ ba quyết định hiện tại. Trả đường dẫn thật từ kết quả điều phối; không đoán revision hoặc dùng script dựng lại độc lập. Nếu xuất lỗi sau duyệt, resume để thử xuất lại, không duyệt giả lần nữa.

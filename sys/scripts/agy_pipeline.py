@@ -55,7 +55,7 @@ def generate(p,job):
    write(out/'outline.json',outline)
    prompt+='\nDàn ý đã kiểm tra cấu trúc (chưa duyệt chất lượng): '+json.dumps(outline,ensure_ascii=False)
    prompt+='\nViết đầy đủ content-v3, giữ nguyên outline. Mỗi cảnh có nhiều images/beats khi có lý do; được tái sử dụng ảnh. based_on chỉ ảnh trước trong cùng cảnh. Mỗi nhịp neo vào nguyên văn lời dẫn và lần xuất hiện; nhịp đầu neo đầu câu đầu; riêng vi/en. visible_text là danh sách chữ duy nhất AI được vẽ; không ghi mã nhân vật/cảnh/ảnh trong mô tả nhìn thấy. Chữ tạo cùng hình. Không bịa đã đo thời lượng. claims trích phát biểu và dữ kiện nguyên văn từ nguồn. Phản hồi sửa phải có revision_response, nêu rõ unresolved; không tự nhận đã được duyệt.'
-  prompt+='\nHướng dẫn văn phong cho narration/narration_en (chỉ sửa cách diễn đạt lời dẫn, không được dùng để bỏ ý, gộp cảnh hay rút ngắn nội dung bắt buộc; viết lời dẫn trước rồi mới đặt coverage/claims/anchor lên trên):\n'+(p.root/'.agents/skills/vp-humanizer/SKILL.md').read_text()
+  prompt+='\nHướng dẫn văn phong cho narration/narration_en (chỉ sửa cách diễn đạt lời dẫn, không được dùng để bỏ ý, gộp cảnh hay rút ngắn nội dung bắt buộc; viết lời dẫn trước rồi mới đặt coverage/claims/anchor lên trên):\n'+(p.root/'.agents/skills/vp-content/references/narration-style.md').read_text()
   result=invoke(prompt,read(p.root/('schemas/content-v3.json' if version else 'schemas/content-v2.json')),out)
   if version and result['structured_output'].get('outline') != outline['outline']:raise Blocked('OUTLINE: detailed script changed outline')
   write(out/'response.json',result)
