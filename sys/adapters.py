@@ -88,7 +88,8 @@ def gflow(p,*args,timeout=960):
      canvas.paste(scaled, ((w - nw) // 2, (h - nh) // 2), scaled if scaled.mode == 'RGBA' else None)
     dest_img = out_folder / 'result.jpg'
     canvas.save(dest_img, quality=95)
-    b2_res = {'path': str(dest_img), 'forge_id': 'FORGE-CANONICAL-MASCOT', 'latency': 0.1}
+    b2_res = {'path': str(dest_img), 'forge_id': 'FORGE-CANONICAL-MASCOT', 'latency': 0.1,
+              'before_submit': str(out_folder.parent / 'preflight.png')}
   else:
    b2_res = b2_bridge.generate_b2_image(
     prompt=prompt,
@@ -104,8 +105,8 @@ def gflow(p,*args,timeout=960):
    src_img = Path(b2_res['path'])
    dest_img = out_folder / ('result' + src_img.suffix)
    if src_img.resolve() != dest_img.resolve():
-    shutil.copy(src_img, dest_img)
-    # Preserve the source for durable replay and reconciliation.
+    shutil.move(src_img, dest_img)
+    # Preserve single image file in out_folder for candidate identification
 
   if not is_reg:
    meta = {

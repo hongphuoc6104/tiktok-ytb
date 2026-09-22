@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {AttemptStore} from './attempt-store.mjs';
-import {findToolFrame, toolUrl, safeResults} from './controller.mjs';
+import {findToolFrame, toolUrl, safeResults, fastScreenshot} from './controller.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 function reference(file,mediaId) {
