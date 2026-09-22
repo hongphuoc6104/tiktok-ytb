@@ -87,6 +87,7 @@ def generate_b2_image(
     timeout: float = 120.0
 ) -> dict:
     """Generate image via B-2 Illustrator applet and harvest committed result."""
+    require_queue_acceptance()
     ensure_connected()
 
     canonical_mascot = (ROOT / "assets/characters/channel-mascot/reference-v1.png").resolve()
@@ -123,31 +124,34 @@ def generate_b2_image(
     spec_file = target_dir / f".spec-{test_case}-{int(time.time() * 1000)}.json"
     spec_file.write_text(json.dumps(spec, indent=2), encoding="utf-8")
 
-    try:
-        cmd = f"tool-snapshot:{spec_file}"
-        res = send_raw_command(cmd, timeout=timeout)
-        if res.get("status") == "blocked":
-            raise Blocked(f"B-2 Illustrator blocked: {res.get('reason', 'Unknown reason')}")
+    return generate_b2_batch([spec], timeout=timeout)[0]
 
-        step2 = res.get("step2Execution") or {}
-        if not step2.get("generationCompleted"):
-            err = step2.get("errorObserved") or "Generation did not complete in frame"
-            raise Blocked(f"B-2 Illustrator generation failed: {err}")
 
-        saved_path = step2.get("savedImagePath")
-        if not saved_path or not os.path.isfile(saved_path):
-            raise Blocked(f"B-2 Illustrator output image not found: {saved_path}")
+def generate_b2_batch(specs: list[dict], timeout: float = 240.0) -> list[dict]:
+    """Submit immutable groups through the persistent queue UI adapter."""
+    require_queue_acceptance()
+    ensure_connected()
+    if not 1 <= len(specs) <= 4:
+        raise Blocked("B-2 queue requires one to four independent requests")
+    folder = ROOT / "experiments/b2_illustrator/results/controller"
+    folder.mkdir(parents=True, exist_ok=True)
+    import uuid
+    manifest = folder / f"queue-{uuid.uuid4().hex}.json"
+    manifest.write_text(json.dumps(specs, ensure_ascii=False, indent=2), encoding="utf-8")
+    result = send_raw_command(f"tool-snapshot:queue:{manifest}", timeout=max(timeout, 240))
+    if result.get("status") == "blocked":
+        raise Blocked(result.get("reason", "B-2 queue blocked"))
+    items = result.get("items", [])
+    if len(items) != len(specs):
+        raise Blocked("B-2 incomplete batch; reconcile before retry")
+    for spec, item in zip(specs, items):
+        if item.get("request_id") != spec["testCase"] or not Path(item["path"]).is_file():
+            raise Blocked("B-2 result mapping failed")
+        item["sha256"] = digest(Path(item["path"]))
+    return items
 
-        image_hash = digest(Path(saved_path))
-        return {
-            "path": saved_path,
-            "sha256": image_hash,
-            "forge_id": step2.get("forgeId"),
-            "latency": step2.get("latencySeconds"),
-            "evidence": res.get("evidence"),
-            "technical_validation": step2.get("technicalValidation")
-        }
-    finally:
-        # Retain the exact request for reconciliation after ambiguous outcomes.
-        # Never remove provenance simply because the client stopped waiting.
-        pass
+
+def require_queue_acceptance():
+    record = json.loads((ROOT / "experiments/b2_illustrator/acceptance.json").read_text())
+    if record.get("production_ready") is not True:
+        raise Blocked("B2_QUEUE_NOT_ACCEPTED: see docs/flow-queue-operations.md; production remains blocked")

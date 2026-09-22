@@ -87,3 +87,7 @@ Thư mục gốc chỉ dành cho `video/`, `sys/`, các ngoại lệ công cụ 
 - `video-vocabulary`: kho `sys/vocab/`, brief và cấu hình từ vựng.
 
 Video và môi trường chạy nằm local, không được đưa lên GitHub. Xem `sys/docs/branch-sync.md` để biết cách đồng bộ và khôi phục.
+
+## Tool Flow tạo ảnh đồng thời
+
+Đọc [hướng dẫn hàng đợi Flow](sys/docs/flow-queue-operations.md) trước khi cập nhật tool hoặc chạy ảnh. Tài liệu gồm link share, cấu hình máy riêng, cách khôi phục và trạng thái nghiệm thu; không bật sản xuất chỉ vì đã pull mã mới.

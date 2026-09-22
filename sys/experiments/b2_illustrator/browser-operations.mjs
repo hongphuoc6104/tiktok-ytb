@@ -11,6 +11,21 @@ const canonicalMascotPath = path.resolve(here, '../../assets/characters/channel-
 const canonicalMascotMediaId = 'de94a39b-155f-4afe-acbb-d9d4b59ad532';
 
 export async function runOperation(command, bound) {
+  if(command==='tool-snapshot:share-copy') {
+    await bound.page.getByRole('button',{name:'Copy link',exact:true}).click();
+    const link=await bound.page.evaluate(()=>navigator.clipboard.readText());
+    await bound.page.getByRole('button',{name:'Close share dialog',exact:true}).click();
+    return {link};
+  }
+  if(command==='tool-snapshot:share-inspect') {
+    await bound.page.getByRole('button',{name:'Share',exact:true}).click();
+    return {snapshot:await bound.page.locator('body').ariaSnapshot()};
+  }
+  if(command.startsWith('tool-snapshot:queue:')) {
+    const specs=JSON.parse(fs.readFileSync(command.slice('tool-snapshot:queue:'.length),'utf8'));
+    const {runQueue}=await import('./queue-runner.mjs');
+    return runQueue(specs,bound);
+  }
   if(command === 'tool-snapshot:acceptance-reload') {
     const page=bound.page;let frame=await findToolFrame(page);
     const before=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
