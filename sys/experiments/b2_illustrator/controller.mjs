@@ -8,8 +8,11 @@ import {AttemptStore} from './attempt-store.mjs';
 
 const here=path.dirname(fileURLToPath(import.meta.url));
 const root=path.resolve(here,'../..');
-export const toolUrl='https://flow.google.com/project/7c815425-4625-4afb-ba84-4290d3fa9ea4/tool/bc72cb6a-c68c-49a3-b089-d94fc27eb8dd';
+const localFile=path.join(here,'machine.local.json');
+export const machineConfig=fs.existsSync(localFile)?JSON.parse(fs.readFileSync(localFile,'utf8')):{};
+export const toolUrl=machineConfig.tool_url || 'https://flow.google.com/project/7c815425-4625-4afb-ba84-4290d3fa9ea4/tool/bc72cb6a-c68c-49a3-b089-d94fc27eb8dd';
 export function browserConfig(config) {
+  config={...config,...machineConfig};
   const dataDir=path.resolve(root,config.flow_user_data_dir || `.gflow/profiles/${config.flow_profile || 'video-pilot'}`);
   const profile=config.flow_profile_directory || 'Default';
   if(path.basename(profile)!==profile || profile==='.' || profile==='..') throw Error('Invalid profile directory');
