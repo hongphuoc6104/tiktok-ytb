@@ -4,6 +4,15 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 from pilot import Blocked,read,write,digest
 
+def copy_optional_flow_screenshot(source, destination, *, required):
+ """Never substitute preflight/account evidence for a real submission screenshot."""
+ destination = Path(destination)
+ if source and Path(source).is_file():
+  if Path(source).resolve() != destination.resolve():
+   shutil.copy(source, destination)
+ elif required:
+  raise Blocked('Real Flow UI evidence required; no synthetic screenshot')
+
 def rel(p,j,path):return str(Path(path).relative_to(p.job(j)))
 def config(p):return read(p.root/'config.json')
 def gflow(p,*args,timeout=960):
@@ -88,8 +97,7 @@ def gflow(p,*args,timeout=960):
      canvas.paste(scaled, ((w - nw) // 2, (h - nh) // 2), scaled if scaled.mode == 'RGBA' else None)
     dest_img = out_folder / 'result.jpg'
     canvas.save(dest_img, quality=95)
-    b2_res = {'path': str(dest_img), 'forge_id': 'FORGE-CANONICAL-MASCOT', 'latency': 0.1,
-              'before_submit': str(out_folder.parent / 'preflight.png')}
+    b2_res = {'path': str(dest_img), 'forge_id': 'FORGE-CANONICAL-MASCOT', 'latency': 0.1}
   else:
    b2_res = b2_bridge.generate_b2_image(
     prompt=prompt,
@@ -134,10 +142,8 @@ def gflow(p,*args,timeout=960):
   proof_file.write_text(json.dumps(proof, indent=2), encoding='utf-8')
 
   shot = out_folder.parent / 'before-submit.png'
-  if b2_res.get('before_submit'):
-   shutil.copy(b2_res['before_submit'], shot)
-  elif config(p).get('flow_require_ui_evidence', True) and not shot.exists():
-   raise Blocked('Real Flow UI evidence required; no synthetic screenshot')
+  copy_optional_flow_screenshot(b2_res.get('before_submit'), shot,
+                               required=config(p).get('flow_require_ui_evidence', True))
 
   return subprocess.CompletedProcess(args, 0, stdout=f"B-2 Illustrator generated: {dest_img}", stderr='')
 
