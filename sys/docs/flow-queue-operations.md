@@ -24,7 +24,7 @@ Giữ dịch vụ Persistent Session đang chạy; kiểm tra `node experiments/
 
 `b2_bridge.generate_b2_batch` và adapter batch đã nối hàng đợi. Chỉ ảnh độc lập được đưa vào batch; based_on vẫn đi theo đường đơn và cần base media ID thật. Metadata forgeId đi theo ảnh để truy lại tham chiếu. Không coi hoàn tất kỹ thuật là đã duyệt ảnh cha.
 
-**Chưa bật sản xuất:** acceptance.json vẫn production_ready=false và bridge kiểm tra cờ này trước gửi. flow_batch vẫn tắt. Không đổi cờ bằng tay chỉ để vượt gate. Còn phải nghiệm thu chuỗi phụ thuộc/đăng ký mascot, chữ hiển thị, lỗi thực tế và so sánh chất lượng ba lượt. Adapter cũ tạo ảnh trắng làm screenshot đã được bỏ; thiếu screenshot thật sẽ dừng. Nhánh đăng ký mascot cũ dùng ảnh local chưa có bằng chứng Flow phù hợp nên sẽ dừng, cần sửa hợp đồng đăng ký trước nghiệm thu toàn pipeline.
+**Mặc định bật thử nghiệm trên PC theo yêu cầu người dùng:** config.json đặt flow_batch=true và flow_queue_trial_enabled=true. Pipeline gom tối đa 4 ảnh độc lập mỗi nhóm. Bridge cho phép chạy theo ngoại lệ thử nghiệm này; acceptance.json vẫn production_ready=false vì chưa nghiệm thu đầy đủ. Không sửa hồ sơ nghiệm thu thành đạt. Còn phải nghiệm thu chuỗi phụ thuộc/đăng ký mascot, chữ hiển thị, lỗi thực tế và so sánh chất lượng ba lượt. Adapter cũ tạo ảnh trắng làm screenshot đã được bỏ; thiếu screenshot thật sẽ dừng. Nhánh đăng ký mascot cũ dùng ảnh local chưa có bằng chứng Flow phù hợp nên sẽ dừng, cần sửa hợp đồng đăng ký trước nghiệm thu toàn pipeline.
 
 Job borrow local hiện bị integrity gate chặn sau thay đổi mã. Giữ lịch sử; tạo job mới qua vocab/bank.py theo đúng chính sách giữ chỗ khi tiếp tục, không sửa baseline để chạy tiếp.
 
@@ -45,3 +45,15 @@ Các ảnh, snapshot và dữ liệu raw chỉ lưu local; không commit. Không
 4 yêu cầu chạy thật qua adapter mới trả 4 JPEG 768×1376, khoảng 29,13 giây đến tải/kiểm tra đủ ảnh. Chạy lại cùng manifest trả cùng 4 media ID từ nhật ký, không gửi thêm. Ảnh đã xem: cảnh ô chưa rõ hành động nhận; nền và bố cục chưa đồng nhất. Không công bố 4/4 chất lượng đạt, không suy chi phí 0.
 
 Bằng chứng local: `sys/maintenance/production-sync-20260922/queue-live/`. Kiểm thử session/AttemptStore/đầu vào queue: 21 đạt; kiểm thử audio sau đồng bộ PC: 29 đạt. Đây chưa phải nghiệm thu reload giữa lúc chạy hoặc đo ba lượt baseline/best.
+
+
+## Bàn giao cho agent PC — mặc định đã bật thử nghiệm
+
+1. Giữ thay đổi chưa commit trên PC trước khi cập nhật nhánh video-vocabulary; không reset --hard. Pull/merge mã mới và giữ cấu hình/profile riêng của PC.
+2. Mở link share ở trên bằng profile PC đã xác minh; dùng bản queue mới hoặc remix vào project PC. Cập nhật tool_url trong machine.local.json theo URL tool thực tế; pull Git không thay bản Flow cũ.
+3. Kiểm tra status dịch vụ. Nếu đang có tác vụ, chờ đối chiếu xong trước khi khởi động phiên mới để nạp queue-runner mới. Không xóa nhật ký hay đổi profile để né lỗi.
+4. Tạo job thử mới qua kho vocab; không sửa integrity baseline của job cũ. Chạy theo content → media → video, giữ các mốc duyệt. Bật batch không tự duyệt content/media/video hay bỏ kiểm tra chi phí.
+5. Ảnh độc lập chạy tối đa 4 cùng lúc; based_on vẫn chạy theo phụ thuộc. Những lỗi chữ/đăng ký mascot/thiếu media ID hoặc bằng chứng thật còn lại phải sửa và báo rõ, không giả bằng chứng để vượt.
+6. Tắt thử nghiệm: đặt flow_batch=false và flow_queue_trial_enabled=false. Giữ toàn bộ nhật ký để đối chiếu.
+
+Đây là cho phép thử tích hợp trên PC, không phải xác nhận đã nghiệm thu hoặc cho phép chi tiêu sản xuất không giới hạn.
