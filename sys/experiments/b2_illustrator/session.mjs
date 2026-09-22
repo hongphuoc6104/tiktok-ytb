@@ -12,6 +12,8 @@ export class Session {
   constructor(connect,verify=async()=>null){this.connect=connect;this.verify=verify;this.identity=null;this.browser=null;this.attempted=false;}
   async start(){
     if(this.browser?.isConnected()) {this.identity=await this.verify(this.browser);return {status:'connected',reused:true,identity:this.identity};}
+    if(this.attempted) throw Error('Session ended: no automatic reconnect; restart the service explicitly');
+    this.attempted=true;
     this.browser=await this.connect();
     try {this.identity=await this.verify(this.browser);} catch(e) {await this.stop();throw e;}
     return {status:'connected',reused:false,identity:this.identity};
@@ -24,7 +26,6 @@ async function serve(){
   if(fs.existsSync(socketPath)) throw Error('Session socket exists: use status; do not start a second session');
   const config={...JSON.parse(fs.readFileSync(path.join(here,'../../config.json'))),...JSON.parse(fs.readFileSync(path.join(here,'browser-profiles.json')))};
   const selected=browserConfig(config);
-  const defaultIdentity={observedProfile:selected.expectedProfilePath, executable:config.executable_path||'/opt/google/chrome/google-chrome', verifiedAt:new Date().toISOString()};
   let bound=null;
   const session=new Session(async()=>{
     const endpoint=debugEndpoint(fs.readFileSync(path.join(selected.dataDir,'DevToolsActivePort'),'utf8'));
@@ -32,9 +33,8 @@ async function serve(){
   }, async browser=>{
     const context=browser.contexts()[0];
     if(!context) throw Error('NO_CHROME_CONTEXT');
-    const existing=context.pages().find(p=>p.url().startsWith(toolUrl)) || context.pages()[0];
-    if(existing && !existing.isClosed()){
-      bound={identity:{...defaultIdentity, verifiedAt:new Date().toISOString()},page:existing};
+    if(bound) {
+      if(bound.page.isClosed()) throw Error('BOUND_TAB_CLOSED');
       return bound.identity;
     }
     bound=await verifyBrowser(browser,config,true);
@@ -43,16 +43,7 @@ async function serve(){
   });
   const ensureBoundPage=async()=>{
     if(bound?.page && !bound.page.isClosed()) return bound;
-    const context=session.browser?.contexts()[0];
-    if(!context) throw Error('NO_BROWSER_CONTEXT');
-    const existing=context.pages().find(p=>p.url().startsWith(toolUrl)) || context.pages()[0];
-    if(existing && !existing.isClosed()){
-      bound={identity:{...defaultIdentity, verifiedAt:new Date().toISOString()}, page:existing};
-      return bound;
-    }
-    const newPage=await context.newPage();
-    bound={identity:{...defaultIdentity, verifiedAt:new Date().toISOString()}, page:newPage};
-    return bound;
+    throw Error('BOUND_TAB_CLOSED: reconnect and verify the configured profile; do not replace the tab silently');
   };
   let queue=Promise.resolve();
   const server=net.createServer(client=>{

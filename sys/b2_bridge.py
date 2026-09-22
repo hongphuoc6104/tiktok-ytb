@@ -66,7 +66,10 @@ def ensure_connected() -> dict:
     status = query_status()
     if status.get("status") == "connected":
         return status
-    return send_raw_command("connect", timeout=15.0)
+    result = send_raw_command("connect", timeout=75.0)
+    if result.get("status") != "connected":
+        raise Blocked(f"B-2 connection blocked: {result.get('reason', 'not connected')}")
+    return result
 
 
 def generate_b2_image(
@@ -145,5 +148,6 @@ def generate_b2_image(
             "technical_validation": step2.get("technicalValidation")
         }
     finally:
-        if spec_file.exists():
-            spec_file.unlink(missing_ok=True)
+        # Retain the exact request for reconciliation after ambiguous outcomes.
+        # Never remove provenance simply because the client stopped waiting.
+        pass

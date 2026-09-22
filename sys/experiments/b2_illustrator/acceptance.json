@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "production_ready": false,
+  "max_production_concurrency": 1,
+  "native_outputs_per_request": 1,
+  "tested_concurrency": [1, 2, 4],
+  "checks": {
+    "parallel_four_live": "pass_smoke_only",
+    "reload_preserves_queue": "fail",
+    "canonical_quality_four": "fail",
+    "matched_baseline_best_three_repeats": "pending",
+    "dependency_parent_acceptance": "pending",
+    "timeout_reconciliation": "pending",
+    "out_of_order_mapping": "pending",
+    "download_retry_existing_media": "pending",
+    "billing_history": "pending",
+    "legacy_adapter_compatibility": "fail"
+  },
+  "reason": "The live queue disappears after page reload. Keep controller-side durable records and reconcile before any retry. The experimental queue is not accepted for production."
+}
