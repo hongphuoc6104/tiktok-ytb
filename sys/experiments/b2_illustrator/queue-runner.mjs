@@ -30,7 +30,7 @@ export async function runQueue(specs,bound) {
  const requests=prepareRequests(specs),store=new AttemptStore(path.join(safeResults(),'production-attempts'));
  const attempts=requests.map(r=>store.prepare(r.identity));
  // Reuse fully downloaded results without interacting with Flow.
- if(attempts.every(a=>a.state==='collected'))return {items:attempts.map(a=>a.events.at(-1).collection)};
+ if(attempts.every(a=>a.state==='collected'&&fs.existsSync(a.events.at(-1).collection.path)))return {items:attempts.map(a=>a.events.at(-1).collection)};
  if(attempts.every(a=>['generated','collected'].includes(a.state)))return collectResults(store,attempts,requests);
  if(attempts.some(a=>a.state!=='prepared'))throw Error('FLOW_RECONCILIATION_REQUIRED: existing attempt; no resubmission');
  const page=bound.page;
@@ -92,7 +92,7 @@ function collectResults(store,attempts,requests,afterShot=null,started=null) {
  const items=[];
  for(let i=0;i<attempts.length;i++) {
   const a=store.read(attempts[i]);
-  if(a.state==='collected'){items.push(a.events.at(-1).collection);continue;}
+  if(a.state==='collected'&&fs.existsSync(a.events.at(-1).collection.path)){items.push(a.events.at(-1).collection);continue;}
   const event=a.events.find(e=>e.event==='generated'),r=event.result;
   const submission=a.events.find(e=>e.event==='submitting');
   const shot=submission.screenshot;
