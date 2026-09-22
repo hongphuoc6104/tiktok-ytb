@@ -11,6 +11,137 @@ const canonicalMascotPath = path.resolve(here, '../../assets/characters/channel-
 const canonicalMascotMediaId = 'de94a39b-155f-4afe-acbb-d9d4b59ad532';
 
 export async function runOperation(command, bound) {
+  if(command === 'tool-snapshot:acceptance-reload') {
+    const page=bound.page;let frame=await findToolFrame(page);
+    const before=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
+    if(before.queue?.length)throw Error('NONEMPTY_QUEUE_DO_NOT_MUTATE');
+    await frame.getByRole('textbox').nth(0).fill('RELOAD ACCEPTANCE PROBE - do not generate');
+    await frame.getByRole('button',{name:'Initialize Generation',exact:true}).click();
+    const queued=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
+    if(queued.queue?.length!==1 || queued.queue[0].status!=='QUEUED')throw Error('PROBE_ENQUEUE_FAILED');
+    const file=path.join(safeResults(),'acceptance-reload-'+Date.now()+'.json');
+    fs.writeFileSync(file,JSON.stringify({queued,generationSubmitted:false},null,2));
+    await page.reload({waitUntil:'domcontentloaded'});frame=await findToolFrame(page);
+    const restored=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
+    const result={queued,restored,pass:restored.queue?.some(i=>i.id===queued.queue[0].id)===true,generationSubmitted:false};
+    fs.writeFileSync(file,JSON.stringify(result,null,2));
+    return {file,...result};
+  }
+
+  if(['tool-snapshot:parallel-smoke-2','tool-snapshot:parallel-smoke-4','tool-snapshot:batch-vocab-4-v2','tool-snapshot:batch-vocab-4-v3'].includes(command)) {
+    const count=command.includes('4')?4:2;
+    const batchName=command.endsWith('-v3')?'vocab-4-v3':command.endsWith('-v2')?'vocab-4-v2':`parallel-smoke-${count}`;
+    const page=bound.page, frame=await findToolFrame(page), folder=safeResults();
+    const intent=path.join(folder,`${batchName}-intent.json`);
+    if(fs.existsSync(intent)) throw Error('ALREADY_ATTEMPTED_RECONCILE_ONLY');
+    const existing=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
+    if(existing.queue?.some(i=>!['COMPLETED','ACCEPTED'].includes(i.status))) throw Error('UNRESOLVED_QUEUE');
+    const logFile=path.join(folder,`${batchName}-events.ndjson`);
+    const record=(event)=>{const fd=fs.openSync(logFile,'a',0o600);try{fs.writeSync(fd,JSON.stringify({at:Date.now(),...event})+'\n');fs.fsyncSync(fd);}finally{fs.closeSync(fd);}};
+    const ref={mediaId:canonicalMascotMediaId,base64:fs.readFileSync(canonicalMascotPath).toString('base64'),mimeType:'image/png',name:'canonical-mascot'};
+    await frame.evaluate(ref=>{
+      const el=document.getElementById('character-selector');
+      let f=el[Object.keys(el).find(k=>k.startsWith('__reactFiber$'))];
+      while(f && !(typeof f.type==='function' && f.type.name==='App'))f=f.return;
+      let h=f?.memoizedState;
+      while(h && !(h.memoizedState?.topic && h.queue?.dispatch))h=h.next;
+      if(!h?.next?.next?.queue?.dispatch)throw Error('REFERENCE_HOOK_NOT_FOUND');
+      h.next.queue.dispatch(null);h.next.next.queue.dispatch(ref);
+    },ref);
+    await frame.getByRole('button',{name:'Clear Character',exact:true}).waitFor();
+    const boxes=frame.getByRole('textbox');
+    await boxes.nth(1).fill('Clean minimalist stickman illustration, navy outlines, off-white background.');
+    await boxes.nth(2).fill('Match canonical blue shirt #8CCFE8, white head, oval black eyes, coral tongue. One torso, no teeth or eyebrows.');
+    await boxes.nth(3).fill('');await boxes.nth(4).fill('');
+    await frame.getByRole('button',{name:'9:16',exact:true}).click();
+    const combos=frame.getByRole('combobox');
+    await combos.nth(2).selectOption({label:'🍌 Nano Banana Pro'});
+    await combos.nth(3).selectOption({label:`${count} Workers`});
+    for(const topic of ['The canonical mascot borrows a red book from a friend in a library. Show book passing toward mascot. No text.','The canonical mascot borrows a yellow umbrella from a friend beside a doorway on a rainy day. Show umbrella passing toward mascot. No text.',...(count===4?['The canonical mascot borrows a blue pen from a friend at a desk. Show pen passing toward mascot. No text.','The canonical mascot borrows a green watering can from a friend in a garden. Show watering can passing toward mascot. No text.']:[])]) {
+      await boxes.nth(0).fill(topic+' STRICT CHARACTER LOCK: CH01 must exactly match the attached reference. Round white head, thick navy outline, two solid black vertical oval eyes, open happy mouth with a visible coral-pink tongue. Exactly one light-blue short-sleeve T-shirt #8CCFE8, two navy stick arms and two navy stick legs. No teeth, eyebrows or white pupils. Preserve the same bold stroke weight and head/body proportions. Wide full-body two-person shot: both heads, hands, torsos and feet entirely inside the image with generous 15 percent margins on every side. Small characters centered in the middle 60 percent of the frame. No close-up, no cropped heads or bodies. For the desk scene show both people standing beside a small desk, not sitting behind it. Do not simplify the mascot face.');
+      await frame.getByRole('button',{name:'Initialize Generation',exact:true}).click();
+    }
+    const prepared=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
+    const pending=prepared.queue.filter(i=>i.status==='QUEUED');
+    if(pending.length!==count || pending.some(i=>i.characterRefMediaId!==ref.mediaId || i.config.aspectRatio!=='9:16'))throw Error('QUEUE_MAPPING_INVALID');
+    fs.writeFileSync(intent,JSON.stringify({at:Date.now(),prepared},null,2),{flag:'wx'});
+    record({state:'submitting',prepared});
+    const start=Date.now();await frame.getByRole('button',{name:'Start Queue',exact:true}).click();
+    let state;const captured=new Set();
+    for(let n=0;n<120;n++) {
+      await page.waitForTimeout(1000);
+      state=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
+      if(!Array.isArray(state.queue) || !pending.every(p=>state.queue.some(i=>i.id===p.id))) {record({state:'unknown',reason:'QUEUE_DISAPPEARED'});throw Error('QUEUE_DISAPPEARED_RECONCILE_NO_RESUBMIT');}
+      for(const item of state.queue.filter(i=>pending.some(p=>p.id===i.id))) {
+        if(item.mediaId && !captured.has(item.id)) {record({state:'generated',item});captured.add(item.id);}
+      }
+      if(state.status==='UNKNOWN'||state.queue.filter(i=>pending.some(p=>p.id===i.id)).every(i=>['COMPLETED','ACCEPTED'].includes(i.status)))break;
+    }
+    record({state:state.status==='IDLE'?'finished':'unknown',snapshot:state});
+    const result={elapsedSeconds:(Date.now()-start)/1000,state};
+    const file=path.join(folder,`${batchName}-result.json`);fs.writeFileSync(file,JSON.stringify(result,null,2));
+    for(const i of state.queue.filter(i=>pending.some(p=>p.id===i.id))) {
+      if(i.result?.base64) fs.writeFileSync(path.join(folder,i.id+(i.result.mimeType==='image/jpeg'?'.jpg':'.png')),Buffer.from(i.result.base64,'base64'));
+    }
+    return {file,elapsedSeconds:result.elapsedSeconds,items:state.queue.map(({id,status,mediaId,timestamps})=>({id,status,mediaId,timestamps}))};
+  }
+
+  if(['tool-snapshot:repair-queue','tool-snapshot:repair-queue-02'].includes(command)) {
+    const page=bound?.page;
+    if(!page || page.isClosed() || !page.url().startsWith(toolUrl)) throw Error('BOUND_TAB_UNAVAILABLE');
+    const audit=path.join(safeResults(),command.endsWith('-02') ? 'queue-repair-02.json' : 'queue-repair-01.json');
+    if(fs.existsSync(audit)) throw Error('REPAIR_ALREADY_SUBMITTED');
+    await page.getByRole('radio',{name:'Edit',exact:true}).click();
+    const prompt=`Fix V2.2.0 source defects only; do not generate images. syncState must save successfully BEFORE publishing stateRef/UI, return boolean, and set an in-memory dispatchBlocked latch on storage failure (retain raw returned results in memory for export). Every caller must honor failure before SDK invocation. updateItem must merge timestamps with the latest stored item, ignoring undefined fields. processItem must use submitTime, never stale item.timestamps.submit. Persist mediaId/result before decoding. On ANY post-submit error set item UNKNOWN and global UNKNOWN, latch dispatchBlocked. checkIdle must never overwrite UNKNOWN/PAUSED/storage failure. Scheduler and Start button must reject dispatch when any item UNKNOWN, even after reload. Each item callback checks the latest latch before invocation so a forEach cannot dispatch after sibling failure. On load handle legacy VP_LAB_STATE_V2 safely: queue may be absent; retain legacy history and pendingRequest, migrate without erasing keys, unresolved legacy must block. Preserve source-backed old outputs. Restore Export Journal JSON with full queue, refs, mediaId, timing, journal and legacy history using UTF8. Add accessible labels Topic / Prompt, Style, Preserve, Change, Literal Text Overlay, Font, Color, Placement, Model, Concurrency, Start Queue. Initialize Generation should enqueue exactly one item; Start Queue explicit only. Keep references, all controls, defaults concurrency1 and 9:16, image-only. No automatic generation or publishing. Apply these exact corrections.`;
+    await page.getByRole('textbox',{name:'Ask applet agent to make changes',exact:true}).fill(prompt);
+    fs.writeFileSync(audit,JSON.stringify({at:new Date().toISOString(),prompt}),{flag:'wx'});
+    await page.getByRole('button',{name:'Send message',exact:true}).click();
+    return {status:'repair_requested',audit,generationSubmitted:false};
+  }
+  if(command === 'tool-snapshot:read-only') {
+    const page=bound?.page;
+    if(!page || page.isClosed() || !page.url().startsWith(toolUrl)) throw Error('BOUND_TAB_UNAVAILABLE');
+    await page.getByRole('radio',{name:'Tool',exact:true}).click();
+    const frames=[];
+    for(const f of page.frames()) {
+      frames.push({url:f.url(),snapshot:await f.locator('body').ariaSnapshot().catch(()=>''),scripts:await f.locator('script').allTextContents().catch(()=>[])});
+    }
+    const file=path.join(safeResults(),`readonly-${Date.now()}.json`);
+    fs.writeFileSync(file,JSON.stringify({frames},null,2));
+    return {file,frames:frames.map(({url,snapshot})=>({url,snapshot})),generationSubmitted:false};
+  }
+  if(command === 'tool-snapshot:upgrade-queue') {
+    const page=bound?.page;
+    if(!page || page.isClosed() || !page.url().startsWith(toolUrl)) throw Error('BOUND_TAB_UNAVAILABLE');
+    const prompt=`Upgrade this existing experimental still-image tool for measurable parallel generation. Preserve every existing control, model, references, journal, single-image button accessible name Initialize Generation, and existing saved results. Do not generate any images automatically. Add separate outputs-per-request and concurrent-requests controls, both default 1. Only expose native output counts supported by the actual Flow SDK; otherwise show output count 1 with an honest unsupported explanation, never fake a batch with multiple SDK calls. Add a queue accepting independent prompt items, each immutable snapshot with sceneId, beatId, ratio, config and actual character/base mediaIds. Concurrency selectable 1,2,3,4 with default 1. Each worker uses its own immutable snapshot, never shared mutable form state. based_on items wait for an explicitly accepted parent and its real mediaId. Persist request ID and submitting status BEFORE SDK call, persist returned mediaId immediately BEFORE image dimension measurement or downloads. Any ambiguous error becomes UNKNOWN and blocks further dispatch; never retry generation automatically or clear unresolved state. On authentication, CAPTCHA, quota, rate-limit or persistence errors pause queue. Downloads may retry only an existing mediaId. Add enqueue-current-input and explicit Start Queue buttons. Track monotonic timestamps for prepare, submit, first result, all results, validation and download separately. Display outputs linked to their request IDs and export all metadata as UTF8 JSON. Keep generation image-only, model Nano Banana Pro selectable, correct references and 9:16. Never claim zero cost without real billing evidence. Do not publish. Implement code only and wait for manual testing.`;
+    const audit=path.join(safeResults(),'queue-upgrade-submitted.json');
+    if(fs.existsSync(audit)) throw Error('UPGRADE_ALREADY_SUBMITTED: inspect instead of resending');
+    await page.getByRole('textbox',{name:'Ask applet agent to make changes',exact:true}).fill(prompt);
+    fs.writeFileSync(audit,JSON.stringify({submittedAt:new Date().toISOString(),prompt}),{flag:'wx'});
+    await page.getByRole('button',{name:'Send message',exact:true}).click();
+    return {status:'upgrade_requested',audit,generationSubmitted:false};
+  }
+  if(command === 'tool-snapshot:cost-inspect') {
+    const page=bound?.page;
+    if(!page || page.isClosed()) throw Error('BOUND_TAB_UNAVAILABLE');
+    const frame=await findToolFrame(page);
+    const state=await frame.locator('body').innerText();
+    if(!/\bIDLE\b/.test(state) || /\bUNKNOWN\b/.test(state)) throw Error('TOOL_NOT_IDLE');
+    const folder=safeResults();
+    const stamp=Date.now();
+    const source=await frame.locator('script').allTextContents();
+    fs.writeFileSync(path.join(folder,`source-before-${stamp}.json`),JSON.stringify({url:page.url(),state,scripts:source},null,2));
+    try {
+      await page.goto(toolUrl.split('/tool/')[0],{waitUntil:'domcontentloaded'});
+      await page.getByRole('button',{name:'Account details',exact:true}).click({timeout:20000});
+      const snapshot=await page.locator('body').ariaSnapshot();
+      const screenshot=path.join(folder,`cost-settings-${stamp}.png`);
+      await page.screenshot({path:screenshot});
+      const result={observedAt:new Date().toISOString(),snapshot,screenshot,generationSubmitted:false,chargedCredits:null};
+      fs.writeFileSync(path.join(folder,`cost-settings-${stamp}.json`),JSON.stringify(result,null,2));
+      return result;
+    } finally {await page.goto(toolUrl,{waitUntil:'domcontentloaded'});}
+  }
   if(command.startsWith('tool-snapshot:mascot-')) {
     const helper=await import('./channel-character-flow.mjs?revision='+Date.now());
     return helper.runCharacterOperation(command,bound);
@@ -39,6 +170,9 @@ export async function runOperation(command, bound) {
   } else throw Error('Unsupported fixed operation');
 
   let frame = await findToolFrame(page).catch(() => null);
+  if(frame && command.startsWith('tool-snapshot:') && await frame.getByRole('button',{name:'Start Queue',exact:true}).isVisible()) {
+    throw Error('B2_QUEUE_ADAPTER_NOT_ACCEPTED: the legacy single-image adapter cannot operate the queue tool; use the isolated acceptance runner');
+  }
   const step2Execution = { executed: false };
 
   if (frame && command === 'reference-inspect') {
@@ -382,16 +516,13 @@ export async function runOperation(command, bound) {
       } catch {}
     }
 
-    // Auto-recovery: If frame is stuck in UNKNOWN or has alert, clear localStorage and reload tab
+    // Preserve ambiguous submissions for reconciliation; clearing state can cause duplicate generation.
     const isStuck = await frame.evaluate(() => {
       return document.body.innerText.includes('STATE: UNKNOWN') || document.body.innerText.includes('STABILITY ALERT');
     }).catch(() => false);
 
     if (isStuck) {
-      await frame.evaluate(() => localStorage.clear()).catch(() => {});
-      await page.reload({ waitUntil: 'domcontentloaded' });
-      await page.waitForTimeout(2500);
-      frame = await findToolFrame(page);
+      throw new Error('FLOW_RECONCILIATION_REQUIRED: Tool state is UNKNOWN or has a stability alert. Preserve the journal and reconcile existing media with real UI evidence before submitting another request.');
     }
 
     // 1. Setup parameters
@@ -404,6 +535,7 @@ export async function runOperation(command, bound) {
     await preserveInput.fill(testConfig.preserve || '');
     await changeInput.fill(testConfig.change || '');
     await textInput.fill(testConfig.literalText || '');
+    await frame.getByRole('combobox',{name:'Model',exact:true}).selectOption({label:'🍌 Nano Banana Pro'});
     step2Execution.steps.push({ step: 'fill_params', ...testConfig });
 
     // Select ratio
@@ -467,6 +599,7 @@ export async function runOperation(command, bound) {
     }).catch(e => ({ success: false, error: e.message }));
 
     step2Execution.steps.push({ step: 'configured_references', refUpdateRes });
+    if(!refUpdateRes.success || (charRefPath && !refUpdateRes.charSet)) throw Error('REFERENCE_SETUP_FAILED');
     await page.waitForTimeout(600);
 
     // 2. Capture existing images and existing Forge ID to ensure we harvest the NEW image
@@ -489,6 +622,8 @@ export async function runOperation(command, bound) {
 
     // 4. Click Initialize Generation and record start time
     const startTime = Date.now();
+    const intentPath=path.join(safeResults(),`submission-${testConfig.testCase}.json`);
+    fs.writeFileSync(intentPath,JSON.stringify({state:'submitting',startedAt:startTime,request:testConfig,model:'🍌 Nano Banana Pro'},null,2),{flag:'wx'});
     await genBtn.click();
     step2Execution.steps.push({ step: 'clicked_initialize_generation', timestamp: new Date(startTime).toISOString() });
 
