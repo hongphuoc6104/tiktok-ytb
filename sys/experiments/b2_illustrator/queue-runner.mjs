@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {AttemptStore} from './attempt-store.mjs';
-import {findToolFrame, toolUrl, safeResults} from './controller.mjs';
+import {findToolFrame, toolUrl, safeResults, fastScreenshot} from './controller.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 function reference(file,mediaId) {
@@ -66,7 +66,7 @@ export async function runQueue(specs,bound) {
  const queued=await state();
  if(queued.queue.filter(i=>i.status==='QUEUED').length!==ids.length)throw Error('UNEXPECTED_QUEUED_REQUEST');
  const shot=path.join(safeResults(),`queue-before-${Date.now()}.png`);
- await page.screenshot({path:shot});
+ await fastScreenshot(page, shot);
  // Mark the entire group before Start. A crash anywhere makes retry conservative.
  for(let i=0;i<attempts.length;i++)store.beginSubmission(attempts[i],{queueId:ids[i],screenshot:shot});
  await frame.getByRole('button',{name:'Start Queue',exact:true}).click();
@@ -85,7 +85,7 @@ export async function runQueue(specs,bound) {
   await new Promise(resolve=>setTimeout(resolve,500));
  }
  if(captured.size!==ids.length)throw Error('FLOW_TIMEOUT_RECONCILE_NO_RESUBMIT');
- const afterShot=path.join(safeResults(),`queue-after-${Date.now()}.png`);await page.screenshot({path:afterShot});
+ const afterShot=path.join(safeResults(),`queue-after-${Date.now()}.png`);await fastScreenshot(page, afterShot);
  return collectResults(store,attempts,requests,afterShot,started);
 }
 function collectResults(store,attempts,requests,afterShot=null,started=null) {

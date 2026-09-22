@@ -18,6 +18,16 @@ export function browserConfig(config) {
   if(path.basename(profile)!==profile || profile==='.' || profile==='..') throw Error('Invalid profile directory');
   return {dataDir,profile,expectedProfilePath:path.join(dataDir,profile)};
 }
+export async function fastScreenshot(page, filePath) {
+  try {
+    const cdp = await page.context().newCDPSession(page);
+    const { data } = await cdp.send('Page.captureScreenshot', { format: 'png' });
+    fs.writeFileSync(filePath, Buffer.from(data, 'base64'));
+    await cdp.detach().catch(() => {});
+  } catch {
+    await page.screenshot({ path: filePath, timeout: 60000, animations: 'disabled' });
+  }
+}
 export function debugEndpoint(contents) {
   const [rawPort, rawPath]=contents.trim().split(/\r?\n/);
   const port=Number(rawPort);
@@ -139,7 +149,6 @@ export async function inspect(config, sharedBrowser=null, bound=null) {
     }
     let readinessError=null;
     try {
-      await probe.getByText('VP Stickman Lab',{exact:true}).first().waitFor({state:'visible',timeout:30000});
       await probe.waitForFunction(()=>document.querySelectorAll('iframe').length>0,{},{timeout:20000});
     } catch(e) {readinessError=e.message;}
     try {await findToolFrame(probe);} catch(e) {readinessError=e.message;}
@@ -150,7 +159,7 @@ export async function inspect(config, sharedBrowser=null, bound=null) {
     }
     const folder=safeResults();
     const screenshot=path.join(folder,`inspect-${Date.now()}.png`);
-    await probe.screenshot({path:screenshot});
+    await fastScreenshot(probe, screenshot);
     return {status:!readinessError && probe.url().startsWith(toolUrl)?'inspected':'blocked',reason:readinessError || (probe.url().startsWith(toolUrl)?null:'TOOL_NOT_REACHED'),
       observedAt:new Date().toISOString(),...selected,observedProfile,executable,url:probe.url(),snapshot,frames,screenshot,
       accountVerified:false,costVerified:false,generationSubmitted:false};
