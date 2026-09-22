@@ -27,6 +27,18 @@ export function prepareRequests(specs) {
  });
 }
 export async function runQueue(specs,bound) {
+ try { return await executeQueue(specs,bound); }
+ catch(error) {
+  // Only report not-submitted when durable records prove no dispatch began.
+  let notSubmitted=false;
+  try {
+   const requests=prepareRequests(specs),store=new AttemptStore(path.join(safeResults(),'production-attempts'));
+   notSubmitted=requests.every(r=>store.prepare(r.identity).state==='prepared');
+  } catch {}
+  return {status:'blocked',reason:error.message,generationSubmitted:!notSubmitted};
+ }
+}
+async function executeQueue(specs,bound) {
  const requests=prepareRequests(specs),store=new AttemptStore(path.join(safeResults(),'production-attempts'));
  const attempts=requests.map(r=>store.prepare(r.identity));
  // Reuse fully downloaded results without interacting with Flow.
@@ -65,8 +77,9 @@ export async function runQueue(specs,bound) {
  await frame.getByRole('combobox').nth(3).selectOption({label:`${requests.length===3?2:requests.length} Workers`});
  const queued=await state();
  if(queued.queue.filter(i=>i.status==='QUEUED').length!==ids.length)throw Error('UNEXPECTED_QUEUED_REQUEST');
- const shot=path.join(safeResults(),`queue-before-${Date.now()}.png`);
- await page.screenshot({path:shot});
+ const shot=null;
+ // Screenshot is not part of submission: web fonts must never block generation.
+
  // Mark the entire group before Start. A crash anywhere makes retry conservative.
  for(let i=0;i<attempts.length;i++)store.beginSubmission(attempts[i],{queueId:ids[i],screenshot:shot});
  await frame.getByRole('button',{name:'Start Queue',exact:true}).click();
@@ -85,7 +98,7 @@ export async function runQueue(specs,bound) {
   await new Promise(resolve=>setTimeout(resolve,500));
  }
  if(captured.size!==ids.length)throw Error('FLOW_TIMEOUT_RECONCILE_NO_RESUBMIT');
- const afterShot=path.join(safeResults(),`queue-after-${Date.now()}.png`);await page.screenshot({path:afterShot});
+ const afterShot=null;
  return collectResults(store,attempts,requests,afterShot,started);
 }
 function collectResults(store,attempts,requests,afterShot=null,started=null) {

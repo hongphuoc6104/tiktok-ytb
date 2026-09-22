@@ -19,3 +19,6 @@ Quy trình B-2 Illustrator mới: Tích hợp trực tiếp qua Persistent Sessi
 
 
 Job nghiên cứu: kiểm tra research-visual-review.json tại mốc media; nghe/xem nhịp chữ thực trước duyệt. Nhiều hình không có nghĩa tăng FPS hay tự bật song song.
+
+
+Cập nhật theo yêu cầu người dùng: mặc định flow_require_ui_evidence=false; không yêu cầu screenshot trước gửi hoặc chứng minh 0 credit cho tạo ảnh. Ghi chi phí là giả định do người dùng chỉ định, không ghi đã xác minh. Giữ kiểm tra model/tham chiếu, nhật ký và đối chiếu timeout sau gửi; không tự mở khóa yêu cầu cũ chưa rõ kết quả.

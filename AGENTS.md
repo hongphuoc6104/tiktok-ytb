@@ -53,3 +53,6 @@ Antigravity handshake: VP-RULES-1. Đọc Rules, chạy doctor và status; chỉ
 Đọc docs/research-channel.md trước khi lập brief hoặc viết kịch bản. Nội dung phục vụ giải thích nghiên cứu và hướng dẫn nghiên cứu; không tự chuyển thành bài học từ vựng. Chủ đề cụ thể vẫn lấy từ yêu cầu từng job. Giữ cả hai giọng và nhân vật chuẩn.
 
 Video mới trên nhánh nghiên cứu lấy đề tài qua research/bank.py (reserve → prepare → start), sau duyệt video dùng mark. Đọc research/README.md khi cần vận hành kho. Không nạp TOPICS.md, index.html, catalog/topics.txt hoặc toàn bộ topics/ vào prompt; chỉ next tối đa 5 mục rồi show một mã.
+
+
+Cập nhật theo yêu cầu người dùng: mặc định flow_require_ui_evidence=false; không yêu cầu screenshot trước gửi hoặc chứng minh 0 credit cho tạo ảnh. Ghi chi phí là giả định do người dùng chỉ định, không ghi đã xác minh. Giữ kiểm tra model/tham chiếu, nhật ký và đối chiếu timeout sau gửi; không tự mở khóa yêu cầu cũ chưa rõ kết quả.

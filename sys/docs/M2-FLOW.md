@@ -11,3 +11,6 @@ Bằng chứng hết hạn sau 10 phút: kiểm tra giao diện mới. Không t�
 
 Timeout sau gửi: không retry. Dùng `flow-reconcile JOB --request SHA256 --asset FILE --evidence FILE --note 'Kết quả đã đối chiếu'`. Evidence gồm request, mode, characters, actual_prompt, matched_download=true, observer, screenshot thật. Chỉ xác nhận sau đối chiếu kết quả với yêu cầu cũ.
 Sửa ảnh bằng `reject JOB media --revision N --scene SCxx --note ...`; thay nhân vật dùng --character. Không sửa revisions hoặc xóa journal để tạo lại.
+
+
+Cập nhật theo yêu cầu người dùng: mặc định flow_require_ui_evidence=false; không yêu cầu screenshot trước gửi hoặc chứng minh 0 credit cho tạo ảnh. Ghi chi phí là giả định do người dùng chỉ định, không ghi đã xác minh. Giữ kiểm tra model/tham chiếu, nhật ký và đối chiếu timeout sau gửi; không tự mở khóa yêu cầu cũ chưa rõ kết quả.
