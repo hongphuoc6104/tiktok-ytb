@@ -13,7 +13,7 @@ const canonicalMascotMediaId = 'de94a39b-155f-4afe-acbb-d9d4b59ad532';
 export async function runOperation(command, bound) {
   if(command==='tool-snapshot:share-copy') {
     await bound.page.getByRole('button',{name:'Copy link',exact:true}).click();
-    const link=await bound.page.evaluate(()=>navigator.clipboard.readText());
+    const link=await Promise.race([bound.page.evaluate(()=>navigator.clipboard.readText()),new Promise((_,reject)=>setTimeout(()=>reject(Error('CLIPBOARD_PERMISSION_PENDING')),3000))]);
     await bound.page.getByRole('button',{name:'Close share dialog',exact:true}).click();
     return {link};
   }
