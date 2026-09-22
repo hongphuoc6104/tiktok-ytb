@@ -140,7 +140,9 @@ def generate_b2_batch(specs: list[dict], timeout: float = 240.0) -> list[dict]:
     manifest.write_text(json.dumps(specs, ensure_ascii=False, indent=2), encoding="utf-8")
     result = send_raw_command(f"tool-snapshot:queue:{manifest}", timeout=max(timeout, 240))
     if result.get("status") == "blocked":
-        raise Blocked(result.get("reason", "B-2 queue blocked"))
+        error = Blocked(result.get("reason", "B-2 queue blocked"))
+        error.generation_submitted = result.get("generationSubmitted", True)
+        raise error
     items = result.get("items", [])
     if len(items) != len(specs):
         raise Blocked("B-2 incomplete batch; reconcile before retry")

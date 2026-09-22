@@ -57,3 +57,11 @@ Bằng chứng local: `sys/maintenance/production-sync-20260922/queue-live/`. Ki
 6. Tắt thử nghiệm: đặt flow_batch=false và flow_queue_trial_enabled=false. Giữ toàn bộ nhật ký để đối chiếu.
 
 Đây là cho phép thử tích hợp trên PC, không phải xác nhận đã nghiệm thu hoặc cho phép chi tiêu sản xuất không giới hạn.
+
+## Cập nhật: bỏ bằng chứng screenshot bắt buộc
+
+Theo yêu cầu trực tiếp của người dùng, `flow_require_ui_evidence=false` là mặc định. Pipeline không yêu cầu ảnh chụp tài khoản/giá hoặc preflight 10 phút; queue không gọi page.screenshot trước/sau Start Queue nên không chờ web fonts. Chi phí được ghi là `user_assumed_zero`, `cost_verified=false`, không giả là giá đã xác minh.
+
+Nhật ký submitting vẫn được ghi trước Start Queue. Lỗi có nhật ký chứng minh chưa bắt đầu gửi được trả về `generationSubmitted=false` và batch ghi `not_submitted`, không tạo M2_AMBIGUOUS. Sau khi bắt đầu gửi, timeout vẫn cần đối chiếu. Hàng đợi UI còn mục chưa gửi phải được kiểm tra trước khi tiếp tục; không tự xóa hoặc gửi trùng.
+
+Không sửa khóa ambiguous của lần chạy cũ bằng suy đoán: phải kiểm tra journal xác nhận chưa Start Queue. Thay đổi này áp dụng cho lần chạy mới, không tự sửa lịch sử.
