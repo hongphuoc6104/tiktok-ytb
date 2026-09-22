@@ -94,6 +94,7 @@ def gflow(p,*args,timeout=960):
     prompt=prompt,
     ratio=ratio,
     base_ref_path=base_img,
+    base_media_id=(read(Path(base_img).with_suffix(".json")).get("forgeId") if base_img and Path(base_img).with_suffix(".json").is_file() else None),
     char_ref_path=char_ref_path,
     char_media_id=char_media_id,
     out_dir=out_folder,
@@ -104,7 +105,7 @@ def gflow(p,*args,timeout=960):
    dest_img = out_folder / ('result' + src_img.suffix)
    if src_img.resolve() != dest_img.resolve():
     shutil.copy(src_img, dest_img)
-    src_img.unlink(missing_ok=True)
+    # Preserve the source for durable replay and reconciliation.
 
   if not is_reg:
    meta = {
@@ -132,38 +133,52 @@ def gflow(p,*args,timeout=960):
   proof_file.write_text(json.dumps(proof, indent=2), encoding='utf-8')
 
   shot = out_folder.parent / 'before-submit.png'
-  if not shot.exists():
-   Image.new('RGB', (720, 400), '#f8f8f8').save(shot)
+  if b2_res.get('before_submit'):
+   shutil.copy(b2_res['before_submit'], shot)
+  elif not shot.exists():
+   raise Blocked('Real Flow UI evidence required; no synthetic screenshot')
 
   return subprocess.CompletedProcess(args, 0, stdout=f"B-2 Illustrator generated: {dest_img}", stderr='')
 
  if args and args[0]=='batch':
   import b2_bridge
-  jobs_file = Path(args[1])
-  data = json.loads(jobs_file.read_text('utf-8'))
+  data = read(Path(args[1]))
   batch_out = Path(args[args.index('--out')+1]).resolve()
+  batch_out.mkdir(parents=True, exist_ok=True)
+  jobs = data.get('jobs', [])
   run_jobs = []
-  for job in data.get('jobs', []):
-   jid = job['id']
-   jprompt = job['prompt']
-   jratio = job.get('ratio', '16:9')
-   jchars = job.get('character', [])
-   ev_dir = batch_out / '.evidence' / jid
-   ev_dir.mkdir(parents=True, exist_ok=True)
-   b2_res = b2_bridge.generate_b2_image(prompt=jprompt, ratio=jratio, out_dir=batch_out, test_case=jid, timeout=timeout)
-   src = Path(b2_res['path'])
-   dst = batch_out / (jid + src.suffix)
-   if src.resolve() != dst.resolve():
-    shutil.copy(src, dst)
-    src.unlink(missing_ok=True)
-   meta = {'jobId': jid, 'type': 'image', 'prompt': jprompt, 'ratio': jratio, 'characters': jchars, 'source': 'google-flow-browser', 'status': 'downloaded'}
-   dst.with_suffix('.json').write_text(json.dumps(meta, indent=2), encoding='utf-8')
-   proof = {'passed': True, 'mode': 'image', 'characters': jchars, 'tool': 'b2-illustrator', 'forgeId': b2_res.get('forge_id')}
-   (ev_dir / 'ui-proof.json').write_text(json.dumps(proof, indent=2), encoding='utf-8')
-   Image.new('RGB', (720, 400), '#f8f8f8').save(ev_dir / 'before-submit.png')
-   run_jobs.append({'id': jid, 'status': 'completed', 'artifacts': [str(dst)]})
-  (batch_out / 'gflow-run.json').write_text(json.dumps({'jobs': run_jobs}, indent=2), encoding='utf-8')
-  return subprocess.CompletedProcess(args, 0, stdout="Batch completed via B-2 Illustrator", stderr='')
+  state_file = batch_out / 'gflow-run.json'
+  mascot = p.root / 'assets/characters/channel-mascot/reference-v1.png'
+  for offset in range(0, len(jobs), 4):
+   group = jobs[offset:offset+4]
+   specs = [{'testCase': job['id'], 'prompt': job['prompt'], 'ratio': job.get('ratio', '9:16'),
+             'outDir': str(batch_out / job['id']), 'characterRefPath': str(mascot),
+             'charMediaId': 'de94a39b-155f-4afe-acbb-d9d4b59ad532'} for job in group]
+   # Persist attempted membership BEFORE the external call. Ambiguous groups cannot fall through to serial retries.
+   entries = [{'id': job['id'], 'status': 'failed', 'error': 'Submission pending; reconcile before retry'} for job in group]
+   run_jobs.extend(entries)
+   write(state_file, {'jobs': run_jobs})
+   try:
+    results = b2_bridge.generate_b2_batch(specs, timeout=timeout)
+    for job, result, entry in zip(group, results, entries):
+     src = Path(result['path'])
+     dst = batch_out / (job['id'] + src.suffix)
+     shutil.copy(src, dst)
+     chars = job.get('character', [])
+     write(dst.with_suffix('.json'), {'jobId':job['id'], 'type':'image', 'prompt':job['prompt'],
+           'ratio':job.get('ratio','9:16'), 'characters':chars, 'source':'google-flow-browser',
+           'status':'downloaded', 'forgeId':result['media_id']})
+     ev = batch_out / '.evidence' / job['id']; ev.mkdir(parents=True, exist_ok=True)
+     shutil.copy(result['before_submit'], ev / 'before-submit.png')
+     write(ev / 'ui-proof.json', {'passed':True, 'mode':'image', 'characters':chars,
+           'tool':'b2-illustrator', 'forgeId':result['media_id'], 'screenshot':result['screenshot']})
+     entry.update(status='completed', artifacts=[str(dst)])
+     entry.pop('error', None)
+     write(state_file, {'jobs':run_jobs})
+   except Exception as ex:
+    write(state_file, {'jobs':run_jobs})
+    raise Blocked(f'B-2 batch stopped; reconcile attempted requests: {ex}')
+  return subprocess.CompletedProcess(args, 0, stdout='Batch completed via B-2 queue', stderr='')
 
  exe=p.root/'node_modules/.bin/gflow'
  if not exe.exists():raise Blocked('Install npm dependencies first')
