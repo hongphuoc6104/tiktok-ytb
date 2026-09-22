@@ -135,7 +135,7 @@ def gflow(p,*args,timeout=960):
   shot = out_folder.parent / 'before-submit.png'
   if b2_res.get('before_submit'):
    shutil.copy(b2_res['before_submit'], shot)
-  elif not shot.exists():
+  elif config(p).get('flow_require_ui_evidence', True) and not shot.exists():
    raise Blocked('Real Flow UI evidence required; no synthetic screenshot')
 
   return subprocess.CompletedProcess(args, 0, stdout=f"B-2 Illustrator generated: {dest_img}", stderr='')
@@ -169,13 +169,15 @@ def gflow(p,*args,timeout=960):
            'ratio':job.get('ratio','9:16'), 'characters':chars, 'source':'google-flow-browser',
            'status':'downloaded', 'forgeId':result['media_id']})
      ev = batch_out / '.evidence' / job['id']; ev.mkdir(parents=True, exist_ok=True)
-     shutil.copy(result['before_submit'], ev / 'before-submit.png')
+     if result.get('before_submit'): shutil.copy(result['before_submit'], ev / 'before-submit.png')
      write(ev / 'ui-proof.json', {'passed':True, 'mode':'image', 'characters':chars,
            'tool':'b2-illustrator', 'forgeId':result['media_id'], 'screenshot':result['screenshot']})
      entry.update(status='completed', artifacts=[str(dst)])
      entry.pop('error', None)
      write(state_file, {'jobs':run_jobs})
    except Exception as ex:
+    if getattr(ex, 'generation_submitted', True) is False:
+     for entry in entries: entry.update(status='not_submitted', error=str(ex))
     write(state_file, {'jobs':run_jobs})
     raise Blocked(f'B-2 batch stopped; reconcile attempted requests: {ex}')
   return subprocess.CompletedProcess(args, 0, stdout='Batch completed via B-2 queue', stderr='')

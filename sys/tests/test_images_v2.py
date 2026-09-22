@@ -22,6 +22,10 @@ class ImagesV2Tests(unittest.TestCase):
             shutil.copytree(ROOT/n,self.root/n)
         for n in ['pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:
             shutil.copy(ROOT/n,self.root/n)
+        cfg = read(self.root / 'config.json')
+        cfg.pop('flow_batch', None)
+        cfg['flow_require_ui_evidence'] = True  # Legacy strict-policy fixture; independent of deployment defaults.
+        write(self.root / 'config.json', cfg)
         self.p = Pilot(self.root);self.j = 'images-test'
         self.p.new(self.j,read(ROOT/'examples/m1/brief.json'))
         self.p.approve(self.j,'control',1,'TEST FIXTURE')
@@ -407,6 +411,17 @@ class ImagesV2Tests(unittest.TestCase):
         # Final payload keeps the original scene-major/ratio-minor plan order
         # even though submission itself was ratio-major.
         self.assertEqual([x['scene_id'] for x in payload['items']], [u['id'] for u in units])
+
+    def test_user_policy_allows_preflight_without_screenshot(self):
+        import image_pipeline
+        from unittest.mock import patch
+        with patch.object(image_pipeline, 'read', return_value={
+            'flow_require_ui_evidence': False, 'video_generation': False, 'credit_budget': 0
+        }):
+            evidence = image_pipeline.preflight(self, 'unused', 'image')
+        self.assertFalse(evidence['cost_verified'])
+        self.assertEqual(evidence['cost_policy'], 'user_assumed_zero')
+        self.assertNotIn('screenshot', evidence)
 
     def test_flow_batch_default_off(self):
         # No flow_batch key in config.json -> cfg.get('flow_batch', False) is

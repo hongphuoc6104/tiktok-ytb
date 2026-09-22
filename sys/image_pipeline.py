@@ -157,10 +157,17 @@ def validate_preflight_evidence(cfg, e, operation=None):
         raise Blocked(tag + ': ' + '; '.join(m for _, m in problems))
 
 
+def requires_ui_evidence(p):
+    return read(p.root / "config.json").get("flow_require_ui_evidence", True)
+
+
 def preflight(p, j, operation):
     cfg = read(p.root / 'config.json')
     if cfg.get('video_generation') or cfg.get('credit_budget', 0) != 0:
         raise Blocked('M2_POLICY: credit budget must be non-negative')
+    if not requires_ui_evidence(p):
+        return {'mode': 'image', 'operation': operation, 'cost_policy': 'user_assumed_zero',
+                'cost_verified': False, 'ui_evidence_required': False}
     path = p.job(j) / 'flow/preflight.json'
     e = read(path) if path.exists() else {}
     validate_preflight_evidence(cfg, e, operation)
@@ -312,9 +319,9 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
             return result
         raise Blocked('M2_ATTEMPT: request needs explicit reconciliation')
     evidence = preflight(p, j, 'character-register' if registration else 'image')
-    folder.mkdir()
+    folder.mkdir(exist_ok=True)
     write(folder / 'preflight.json', evidence)
-    shutil.copy(p.path(j, evidence['screenshot']), folder / 'preflight.png')
+    if requires_ui_evidence(p): shutil.copy(p.path(j, evidence['screenshot']), folder / 'preflight.png')
     out = folder / 'download'
     out.mkdir()
     common = ['--profile', cfg['flow_profile'], '--project', cfg['flow_project'], '--out', str(out)]
@@ -357,7 +364,8 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
             raise Blocked('M2_BASE_IMAGE: UI attachment evidence missing')
         if proof.get('mode') != ('character-register' if registration else 'image'):
             raise Blocked('Flow UI mode evidence differs')
-        with Image.open(folder / 'before-submit.png') as im: im.verify()
+        if requires_ui_evidence(p):
+            with Image.open(folder / 'before-submit.png') as im: im.verify()
         f = candidates[0]
         if not registration:
             metadata = read(f.with_suffix('.json'))
@@ -426,7 +434,7 @@ def batch_submit(p, j, units, registrations):
         folder = p.job(j) / 'flow/attempts' / plan['key']
         folder.mkdir(parents=True, exist_ok=True)
         write(folder / 'preflight.json', evidence)
-        shutil.copy(p.path(j, evidence['screenshot']), folder / 'preflight.png')
+        if requires_ui_evidence(p): shutil.copy(p.path(j, evidence['screenshot']), folder / 'preflight.png')
         jobs.append({'id': plan['key'][:16], 'type': 'image', 'project': cfg['flow_project'],
                      'prompt': plan['actual_prompt'], 'model': model_arg, 'ratio': plan['ratio'],
                      'outputs': 1, 'character': [x['name'] for x in plan['linked']], 'out': str(batch_dir)})
@@ -463,7 +471,7 @@ def batch_submit(p, j, units, registrations):
         try:
             job_evidence_dir = batch_dir / '.evidence' / plan['job_id']
             ui_proof_path, before_submit_path = job_evidence_dir / 'ui-proof.json', job_evidence_dir / 'before-submit.png'
-            if not ui_proof_path.is_file() or not before_submit_path.is_file():
+            if not ui_proof_path.is_file() or (requires_ui_evidence(p) and not before_submit_path.is_file()):
                 raise Blocked('Flow UI attachment/mode evidence missing')
             proof = read(ui_proof_path)
             expected_names = [x['name'] for x in plan['linked']]
@@ -471,7 +479,8 @@ def batch_submit(p, j, units, registrations):
                 raise Blocked('Flow UI attachment/mode evidence missing')
             if proof.get('mode') != 'image':
                 raise Blocked('Flow UI mode evidence differs')
-            with Image.open(before_submit_path) as im: im.verify()
+            if requires_ui_evidence(p):
+                with Image.open(before_submit_path) as im: im.verify()
             image_files = [Path(a) for a in entry.get('artifacts', []) if Path(a).suffix.lower() in ('.png', '.jpg', '.jpeg')]
             if len(image_files) != 1:
                 raise Blocked('Cannot identify exactly one downloaded result')
@@ -486,7 +495,7 @@ def batch_submit(p, j, units, registrations):
             dest = folder / ('result' + f.suffix)
             shutil.copy(f, dest)
             shutil.copy(ui_proof_path, folder / 'ui-proof.json')
-            shutil.copy(before_submit_path, folder / 'before-submit.png')
+            if before_submit_path.exists(): shutil.copy(before_submit_path, folder / 'before-submit.png')
             shutil.copy(f.with_suffix('.json'), dest.with_suffix('.json'))
             result.update(state='downloaded', path=str(dest.relative_to(p.job(j))), sha256=digest(dest))
             write(record, result)
@@ -521,15 +530,15 @@ def register(p, j, ref):
                             'name': ref['name'], 'matches_approved_reference': mode == 'auto',
                             'pending_media_review': mode == 'review', 'observer': 'machine' if report else 'technical',
                             'note': 'Machine identity review' if report else 'Compare at media gate',
-                            'report': report, 'screenshot': str(shot.relative_to(p.job(j))),
-                            'screenshot_hash': digest(shot)})
+                            'report': report, 'screenshot': str(shot.relative_to(p.job(j))) if shot.exists() else None,
+                            'screenshot_hash': digest(shot) if shot.exists() else None})
     if not confirmation.exists():
         raise Blocked('M2_REGISTRATION_REVIEW: character create can generate a new appearance. Compare ' + r['path'] +
                       ' with approved reference; record flow-confirm-registration --request ' + r['key'] + ' --evidence FILE')
     e = read(confirmation)
     if (e.get('reference_hash') != ref['sha256'] or e.get('result_hash') != r['sha256']
         or not registration_accepted(p, j, e) or not e.get('observer') or not e.get('note')
-        or e.get('name') != ref['name'] or digest(p.path(j, e['screenshot'])) != e['screenshot_hash']):
+        or e.get('name') != ref['name'] or (requires_ui_evidence(p) and digest(p.path(j, e['screenshot'])) != e['screenshot_hash'])):
         raise Blocked('M2_REGISTRATION_REVIEW: confirmation invalid')
     return {'name': ref['name'], 'character_id': ref['character_id'], 'sha256': ref['sha256'],
             'registration_hash': r['sha256'], 'registration_journal': r['journal'],
@@ -713,7 +722,7 @@ def check(p, j, data):
         if not req.get('reconciliation_evidence'): files.append(str(p.path(j, req['path']).with_suffix('.json').relative_to(p.job(j))))
         if req.get('reconciliation_evidence'): files.append(req['reconciliation_evidence'])
         base = p.path(j, item['request']).parent
-        files.extend(str((base / n).relative_to(p.job(j))) for n in ['preflight.json', 'preflight.png', 'ui-proof.json', 'before-submit.png'])
+        files.extend(str((base / n).relative_to(p.job(j))) for n in (['preflight.json', 'preflight.png', 'ui-proof.json', 'before-submit.png'] if requires_ui_evidence(p) else ['preflight.json', 'ui-proof.json']))
         ui = read(base / 'ui-proof.json')
         base_image = req['identity'].get('base_image')
         if base_image:
@@ -728,10 +737,11 @@ def check(p, j, data):
                 raise Blocked('M2_REFERENCE_LINK: registration evidence mismatch')
             reg = read(p.path(j, ref['registration_journal']))
             conf = read(p.path(j, ref['confirmation']))
-            files.extend([ref['registration_journal'], reg['path'], ref['confirmation'], conf['screenshot']])
+            files.extend([ref['registration_journal'], reg['path'], ref['confirmation']])
+            if conf.get('screenshot'): files.append(conf['screenshot'])
             if reg.get('reconciliation_evidence'): files.append(reg['reconciliation_evidence'])
             regbase = p.path(j, ref['registration_journal']).parent
-            files.extend(str((regbase / n).relative_to(p.job(j))) for n in ['preflight.json', 'preflight.png', 'ui-proof.json', 'before-submit.png'])
+            files.extend(str((regbase / n).relative_to(p.job(j))) for n in (['preflight.json', 'preflight.png', 'ui-proof.json', 'before-submit.png'] if requires_ui_evidence(p) else ['preflight.json', 'ui-proof.json']))
     for f in files:
         if not p.path(j, f).is_file():
             raise Blocked('M2_FILE: missing ' + f)
@@ -752,7 +762,7 @@ def register_existing(p, j, original):
             if (registration_accepted(p, j, e) and e.get('reference_hash') == original['sha256']
                 and e.get('result_hash') == r['sha256'] and e.get('name') == original['name']
                 and e.get('observer') and e.get('note')
-                and digest(p.path(j, e['screenshot'])) == e['screenshot_hash']):
+                and (not requires_ui_evidence(p) or digest(p.path(j, e['screenshot'])) == e['screenshot_hash'])):
                 image_check(p, j, r['path'], r['sha256'], full=False)
                 candidates.append((r.get('submitted_at', 0), {
                     'name': original['name'], 'character_id': original['character_id'], 'sha256': original['sha256'],
