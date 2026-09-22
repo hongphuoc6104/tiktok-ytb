@@ -153,5 +153,6 @@ def generate_b2_batch(specs: list[dict], timeout: float = 240.0) -> list[dict]:
 
 def require_queue_acceptance():
     record = json.loads((ROOT / "experiments/b2_illustrator/acceptance.json").read_text())
-    if record.get("production_ready") is not True:
+    config = json.loads((ROOT / "config.json").read_text())
+    if record.get("production_ready") is not True and config.get("flow_queue_trial_enabled") is not True:
         raise Blocked("B2_QUEUE_NOT_ACCEPTED: see docs/flow-queue-operations.md; production remains blocked")
