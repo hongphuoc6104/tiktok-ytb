@@ -6,7 +6,7 @@
       "minLength": 1
     },
     "backend": {
-      "const": "onnx"
+      "enum": ["onnx", "pytorch"]
     },
     "wav": {
       "type": "string",

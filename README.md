@@ -56,6 +56,13 @@ Chạy các lệnh cài môi trường sau khi `cd sys`.
 
 Python điều phối: `uv venv --python 3.12 .venv`, cài requirements.txt; Node: `npm ci`.
 Tiếng Việt: `.venv-tts` Python 3.10, tts-requirements.lock; VieNeu v3 Turbo ONNX FP32, Minh Quân Pro.
+Tiếng Việt trên GPU (tùy chọn): `.venv-tts-gpu` Python 3.10, tts-gpu-requirements.lock (torch 2.8.0 cu126, chạy được Pascal như Quadro P620). Có môi trường này thì `tts_device: auto` dùng GPU PyTorch FP32, gom `tts_batch_size` cảnh mỗi lượt; thiếu CUDA hoặc hết VRAM thì tự lùi về ONNX/CPU và ghi vào `fallbacks` của tts-result.json. Đo ngày 23/09/2026 (Phạm Tuyên, 98 giây giọng): P620 21,5 giây gồm nạp model, Xeon E3-1240 v3 ONNX 51 giây. Đặt `tts_device: cpu` để giữ ONNX.
+
+```bash
+uv venv --python 3.10 .venv-tts-gpu
+uv pip sync --python .venv-tts-gpu/bin/python --index-strategy unsafe-best-match tts-gpu-requirements.lock
+```
+
 Tiếng Anh: `.venv-en` Python 3.11; Pocket TTS Alba, CPU INT8 attention/FFN, decoder FP32, tốc độ gốc.
 
 ```bash
