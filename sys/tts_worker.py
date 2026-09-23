@@ -55,19 +55,48 @@ def cache_key(text,settings,package_version,sample_rate,cache_version=CACHE_VERS
            sample_rate=sample_rate,text=text,settings=settings,cache_version=cache_version)
  return hashlib.sha256(json.dumps(data,sort_keys=True).encode()).hexdigest()
 
-def run(source,out):
+def load_engine(cfg):
+ """(Vieneu instance, engine description). tts_device: auto = CUDA when this
+ interpreter has torch with a visible GPU, else ONNX/CPU; cuda = require GPU;
+ cpu = always ONNX. The GPU path is PyTorch and batches chunks from many
+ scenes into one forward (measured 6-7x real time on a Quadro P620 at batch 6,
+ vs ~1x for ONNX/CPU on its Xeon E3-1240 v3). Below compute capability 8
+ (Pascal/Turing) bf16 is emulated and fp16 crawls, so dtype is forced to fp32."""
  from vieneu import Vieneu
+ device=cfg.get('tts_device','auto')
+ if device not in ('auto','cuda','cpu'):raise ValueError('tts_device must be auto, cuda or cpu')
+ if device!='cpu':
+  try:
+   import torch;cuda=torch.cuda.is_available()
+  except ImportError:cuda=False
+  if cuda:
+   dtype=cfg.get('tts_gpu_dtype','float32')
+   if torch.cuda.get_device_capability(0)[0]<8:dtype='float32'
+   batch=max(1,int(cfg.get('tts_batch_size',6)))
+   tts=Vieneu(mode='v3turbo',backend='pytorch',device='cuda',dtype=dtype,max_batch_size=batch)
+   return tts,dict(backend='pytorch',precision=dtype,device=torch.cuda.get_device_name(0),batch_size=batch)
+  if device=='cuda':raise RuntimeError('tts_device=cuda but this environment has no usable CUDA GPU')
+ precision=cfg.get('tts_precision','fp32')
+ return Vieneu(mode='v3turbo',backend='onnx',precision=precision),dict(backend='onnx',precision=precision,device='cpu',batch_size=1)
+
+def is_oom(ex):
+ return 'out of memory' in str(ex).lower()
+
+def run(source,out):
  from vieneu_utils.core_utils import pause_pad_samples
  from importlib.metadata import version
  source,out=Path(source),Path(out)
  req=json.loads(source.read_text())
  cfg=req['settings']
- tts=Vieneu(mode='v3turbo',backend=cfg.get('tts_backend','onnx'),precision=cfg.get('tts_precision','fp32'))
- voices={v:label for label,v in tts.list_preset_voices()}
- if not voices:raise RuntimeError('No local preset voices')
- voice_id=tts.resolve_voice_name(cfg.get('tts_voice')) or tts._default_voice
- if voice_id not in voices:raise RuntimeError('Requested local voice unavailable')
- sr=tts.sample_rate
+ st={}
+ def use(tts,engine):
+  voices={v:label for label,v in tts.list_preset_voices()}
+  if not voices:raise RuntimeError('No local preset voices')
+  voice_id=tts.resolve_voice_name(cfg.get('tts_voice')) or tts._default_voice
+  if voice_id not in voices:raise RuntimeError('Requested local voice unavailable')
+  st.update(tts=tts,engine=engine,voice=voice_id,label=voices[voice_id],sr=tts.sample_rate)
+ use(*load_engine(cfg))
+ fallbacks=[]
 
  # Step 1 (this change): cache filenames are content hashes instead of scene
  # names, so an edited narration or changed voice/settings can never reuse a
@@ -78,8 +107,45 @@ def run(source,out):
  raw=Path(req['cache_dir']) if req.get('cache_dir') else out/'raw'
  raw.mkdir(parents=True,exist_ok=True)
  package_version=version('vieneu')
- key_settings=dict(voice=str(voice_id),temperature=cfg['tts_temperature'],top_p=cfg['tts_top_p'],
-                    backend=cfg.get('tts_backend','onnx'),precision=cfg.get('tts_precision','fp32'),mode='v3turbo')
+
+ def cached(text,retake):
+  """Cache file for text under the ACTIVE engine. backend/precision are part of
+  the key: GPU and CPU takes differ, and a mid-run fallback must not mislabel
+  audio. Batch size is not -- it only groups work, the take stays equivalent."""
+  e=st['engine']
+  key_settings=dict(voice=str(st['voice']),temperature=cfg['tts_temperature'],top_p=cfg['tts_top_p'],
+                    backend=e['backend'],precision=e['precision'],mode='v3turbo',retake=retake)
+  return raw/(cache_key(text,key_settings,package_version,st['sr'])+'.wav')
+
+ def generate(texts):
+  """One waveform per text. GPU: all texts share batched forwards; on CUDA OOM
+  the batch is halved, and at batch 1 the run falls back to ONNX/CPU."""
+  while True:
+   tts,e=st['tts'],st['engine']
+   kw=dict(voice=st['voice'],temperature=cfg['tts_temperature'],top_p=cfg['tts_top_p'])
+   if e['backend']!='pytorch':return [tts.infer(t,**kw) for t in texts]
+   try:return tts.infer_batch(texts,batch_size=e['batch_size'],**kw)
+   except Exception as ex:
+    if not is_oom(ex):raise
+    import gc,torch;gc.collect();torch.cuda.empty_cache()
+    if e['batch_size']>1:
+     fallbacks.append(f"CUDA OOM at batch {e['batch_size']}; retrying at {e['batch_size']//2}")
+     e['batch_size']//=2;continue
+    fallbacks.append('CUDA OOM at batch 1; switching to ONNX/CPU')
+    st['tts']=tts=None;gc.collect();torch.cuda.empty_cache()
+    use(*load_engine(dict(cfg,tts_device='cpu')))
+
+ def prefetch(items):
+  """Synthesize every (text, retake) not yet cached in one batched call, so the
+  GPU sees many scenes at once instead of one scene per forward."""
+  todo=[];seen=set()
+  for text,retake in items:
+   f=cached(text,retake)
+   if (text,retake) in seen or (f.exists() and f.stat().st_size>1000):continue
+   seen.add((text,retake));todo.append((text,retake))
+  if not todo:return
+  wavs=generate([t for t,_ in todo])
+  for (text,retake),w in zip(todo,wavs):st['tts'].save(w,str(cached(text,retake)))
 
  def synth(text,retake=0):
   """Synthesize once, cached by content hash so a crashed/rerun revision
@@ -88,20 +154,27 @@ def run(source,out):
   `retake` is how many times this scene's delivery was rejected. Same words,
   same settings, so without it the cache would return the identical take and
   "read this one better" would be a no-op."""
-  f=raw/(cache_key(text,dict(key_settings,retake=retake),package_version,sr)+'.wav')
-  if not (f.exists() and f.stat().st_size>1000):
-   tts.save(tts.infer(text,voice=voice_id,temperature=cfg['tts_temperature'],top_p=cfg['tts_top_p']),str(f))
-  return sf.read(str(f),dtype='float32')[0]
+  prefetch([(text,retake)])
+  return sf.read(str(cached(text,retake)),dtype='float32')[0]
+
+ def scene_level(sc):
+  return cfg.get('tts_scene_synthesis',True) and len(sc['narration'])<=cfg.get('tts_max_chars',256)
+ first=[]
+ for sc in req['scenes']:
+  r=int(sc.get('retake',0))
+  first+=[(sc['narration'],r)] if scene_level(sc) else [(t,r) for t in sc['texts']]
+ prefetch(first)
 
  # Scene-level synthesis keeps the intonation arc across sentences: vieneu infers
  # each chunk independently, so one call per sentence resets the prosody every
  # time. Split the waveform afterwards to keep one subtitle cue per sentence.
- flat=[];modes=[]
+ sr=st['sr'];flat=[];modes=[]
  for sc in req['scenes']:
   texts=sc['texts'];pieces=None;retake=int(sc.get('retake',0))
-  if cfg.get('tts_scene_synthesis',True) and len(sc['narration'])<=cfg.get('tts_max_chars',256):
+  if scene_level(sc):
    pieces=split_at(synth(sc['narration'],retake),sr,texts)
   if pieces is None:
+   prefetch([(t,retake) for t in texts])
    pieces=[synth(t,retake) for t in texts]
    for i in range(len(pieces)-1):
     pad=pause_pad_samples(pieces[i],pieces[i+1],sr,float(sc['gaps'][i]))
@@ -122,7 +195,7 @@ def run(source,out):
   path=f'segment-{i:03}.wav'
   sf.write(str(out/path),w,sr,subtype='PCM_16')
   results.append({'scene_id':x['scene_id'],'text':x['text'],'path':path})
- (out/'tts-result.json').write_text(json.dumps({'voice':str(voice_id),'label':voices[voice_id],'settings':cfg,'scenes':modes,'segments':results},ensure_ascii=False,indent=2))
+ (out/'tts-result.json').write_text(json.dumps({'voice':str(st['voice']),'label':st['label'],'engine':st['engine'],'fallbacks':fallbacks,'settings':cfg,'scenes':modes,'segments':results},ensure_ascii=False,indent=2))
 
 if __name__=='__main__':
  run(Path(sys.argv[1]),Path(sys.argv[2]))

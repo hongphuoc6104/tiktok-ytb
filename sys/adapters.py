@@ -484,16 +484,22 @@ def english(p,j,out,cfg,scenes):
  master(combined,out/'narration_en_eq.wav',cfg)
  return {'engine':meta['engine'],'voice':meta['voice'],'wav':rel(p,j,combined),'duration':cursor,'scenes':done}
 
+def tts_python(root,cfg):
+ """.venv-tts-gpu (torch cu126 + VieNeu) when installed and tts_device allows a
+ GPU; the worker itself still falls back to ONNX/CPU if CUDA is unusable."""
+ gpu=root/'.venv-tts-gpu/bin/python'
+ return gpu if cfg.get('tts_device','auto')!='cpu' and gpu.exists() else root/'.venv-tts/bin/python'
+
 def audio(p,j,out):
- py=p.root/'.venv-tts/bin/python'
- if not py.exists():raise Blocked('Install local TTS environment')
  content=p.payload(j,'content');cfg=config(p);g=cfg.get('tts_pause',DEFAULT_PAUSE)
+ py=tts_python(p.root,cfg)
+ if not py.exists():raise Blocked('Install local TTS environment')
  retake=retakes(p,j)
  scenes=[{'scene_id':s['id'],'narration':s['narration'],'texts':chunks(s['narration']),'retake':retake.get(s['id'],0)} for s in content['scenes']]
  for k,sc in enumerate(scenes):
   sc['gaps']=[gap_after(t,g) for t in sc['texts'][:-1]]
   sc['tail']=g.get('tail',DEFAULT_PAUSE['tail']) if k==len(scenes)-1 else g.get('para',DEFAULT_PAUSE['para'])
- keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision')
+ keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision','tts_device','tts_gpu_dtype','tts_batch_size')
  # Job-level cache dir (not per-revision): pilot.run() always mkdirs a fresh
  # revisions/audio/N, so a cache rooted there could never hit across runs.
  # tts_worker.py now keys cache entries by content hash (text+settings+model
@@ -501,7 +507,7 @@ def audio(p,j,out):
  # one scene's narration cannot resurrect another scene's stale audio.
  cache_dir=p.job(j)/'cache/tts'
  request=out/'request.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'cache_dir':str(cache_dir),'scenes':scenes})
- result=subprocess.run([str(py),str(p.root/'tts_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=1800)
+ result=subprocess.run([str(py),str(p.root/'tts_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
  (out/'tts.log').write_text(result.stdout+'\n'+result.stderr)
  if result.returncode:raise Blocked('Local TTS failed; see tts.log; no cloud fallback')
  meta=read(out/'tts-result.json');segments=[];cursor=0.;frames=[];params=None
@@ -516,7 +522,7 @@ def audio(p,j,out):
  with wave.open(str(combined),'wb') as wav:wav.setnchannels(params[0]);wav.setsampwidth(params[1]);wav.setframerate(params[2]);wav.writeframes(b''.join(frames))
  master(combined,out/'narration_eq.wav',cfg)
  srt=out/'subtitles.srt';srt.write_text(make_srt(segments))
- payload={'voice':meta['voice'],'backend':cfg.get('tts_backend','onnx'),'wav':rel(p,j,combined),'srt':rel(p,j,srt),'duration':cursor,'segments':segments}
+ payload={'voice':meta['voice'],'backend':meta.get('engine',{}).get('backend','onnx'),'wav':rel(p,j,combined),'srt':rel(p,j,srt),'duration':cursor,'segments':segments}
  if needs_en(p,j):payload['en']=english(p,j,out,cfg,content['scenes'])
  return payload
 

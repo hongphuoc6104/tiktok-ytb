@@ -30,7 +30,7 @@ class Pilot:
   with self._db_lock:
    return {r['module']:dict(r) for r in self.db.execute('SELECT * FROM modules WHERE job=?',(j,))}
  def protected(self):
-  paths=[self.root/x for x in ['pilot.py','workflow.py','machine_review.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','en-requirements.lock']]
+  paths=[self.root/x for x in ['pilot.py','workflow.py','machine_review.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','tts-gpu-requirements.lock','en-requirements.lock']]
   # Research code/settings affect production; the catalog and ledger do not.
   research=self.root/'research'
   paths += list(research.glob('*.py'))
@@ -342,7 +342,7 @@ def main():
   try:
    c=a.command
    if c=='doctor':
-    result={'tools':{t:shutil.which(t) for t in ['node','python3','ffmpeg','ffprobe','google-chrome','agy']},'workflow_version':3,'stages':list(workflow.STAGES),'modes':['review','auto'],'tts_installed':(ROOT/'.venv-tts/bin/python').exists(),'en_tts_installed':(ROOT/'.venv-en/bin/python').exists(),'machine_review_media_verified':False}
+    result={'tools':{t:shutil.which(t) for t in ['node','python3','ffmpeg','ffprobe','google-chrome','agy']},'workflow_version':3,'stages':list(workflow.STAGES),'modes':['review','auto'],'tts_installed':(ROOT/'.venv-tts/bin/python').exists(),'tts_gpu_installed':(ROOT/'.venv-tts-gpu/bin/python').exists(),'en_tts_installed':(ROOT/'.venv-en/bin/python').exists(),'machine_review_media_verified':False}
    elif c=='batch':
     if not a.queue:raise Blocked('batch requires --queue JSON list of existing auto job IDs')
     jobs=read(a.queue)
