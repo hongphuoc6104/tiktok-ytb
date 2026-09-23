@@ -17,18 +17,23 @@ class FakeVieneu:
  assert a cache hit skipped synthesis entirely rather than just checking file
  counts (which a buggy overwrite-on-every-call implementation could also pass).
  """
- calls=[]
- def __init__(self,mode,backend,precision):self.sample_rate=SR;self._default_voice='v1'
+ calls=[];batches=[];inits=[];oom_at=set()
+ def __init__(self,mode,backend,precision=None,**kw):
+  self.sample_rate=SR;self._default_voice='v1';FakeVieneu.inits.append(dict(backend=backend,precision=precision,**kw))
  def list_preset_voices(self):return [('Voice One','v1')]
  def resolve_voice_name(self,name):return 'v1'
  def infer(self,text,voice,temperature,top_p):FakeVieneu.calls.append(text);return text
+ def infer_batch(self,texts,voice,temperature,top_p,batch_size):
+  """GPU path: raises a CUDA-style OOM for any batch size listed in oom_at."""
+  if batch_size in FakeVieneu.oom_at:raise RuntimeError('CUDA out of memory. Tried to allocate 64.00 MiB')
+  FakeVieneu.batches.append((list(texts),batch_size));FakeVieneu.calls.extend(texts);return list(texts)
  def save(self,text,path):sf.write(str(path),np.full(int(SR*.2),.05,dtype='float32'),SR,subtype='PCM_16')
 
 @contextlib.contextmanager
 def fake_vieneu():
  """Injects fake 'vieneu'/'vieneu_utils.core_utils' modules so tts_worker.run()
  exercises its real cache_key()/synth() logic without the real TTS runtime."""
- FakeVieneu.calls=[]
+ FakeVieneu.calls=[];FakeVieneu.batches=[];FakeVieneu.inits=[];FakeVieneu.oom_at=set()
  vieneu_mod=types.ModuleType('vieneu');vieneu_mod.Vieneu=FakeVieneu
  vu_core=types.ModuleType('vieneu_utils.core_utils')
  vu_core.pause_pad_samples=lambda a,b,sr,gap:int(gap*sr)
@@ -134,7 +139,7 @@ class TTSWorkerCacheTests(unittest.TestCase):
  """
  def req(self,text,cache_dir,**settings):
   cfg=dict(tts_voice='Voice One',tts_temperature=.6,tts_top_p=.9,tts_backend='onnx',
-           tts_precision='fp32',tts_scene_synthesis=False)
+           tts_precision='fp32',tts_scene_synthesis=False,tts_device='cpu')
   cfg.update(settings)
   r={'settings':cfg,'scenes':[{'scene_id':'SC01','narration':text,'texts':[text],'gaps':[],'tail':.3}]}
   if cache_dir is not None:r['cache_dir']=str(cache_dir)
@@ -197,6 +202,92 @@ class TTSWorkerCacheTests(unittest.TestCase):
   self.assertNotEqual(k,tts_worker.cache_key('Xin chào',dict(s,temperature=.7),'1.0.0',24000))
   self.assertNotEqual(k,tts_worker.cache_key('Xin chào',s,'1.0.1',24000))
   self.assertNotEqual(k,tts_worker.cache_key('Xin chào',s,'1.0.0',24000,cache_version=2))
+
+@contextlib.contextmanager
+def fake_torch(cuda=True,capability=(6,1)):
+ """Minimal 'torch' so tts_worker's GPU branch runs without a GPU or torch."""
+ t=types.ModuleType('torch');c=types.SimpleNamespace(
+  is_available=lambda:cuda,get_device_capability=lambda i=0:capability,
+  get_device_name=lambda i=0:'Fake P620',empty_cache=lambda:None)
+ t.cuda=c
+ with patch.dict(sys.modules,{'torch':t}):yield t
+
+class TTSWorkerGPUTests(unittest.TestCase):
+ """GPU engine selection, cross-scene batching and CUDA OOM fallback (vieneu and torch faked)."""
+ def req(self,cache,texts=('Câu một.','Câu hai.','Câu ba.'),**settings):
+  cfg=dict(tts_voice='Voice One',tts_temperature=.6,tts_top_p=.9,tts_precision='fp32',
+           tts_scene_synthesis=False,tts_device='auto',tts_batch_size=6)
+  cfg.update(settings)
+  return {'settings':cfg,'cache_dir':str(cache),'scenes':[{'scene_id':f'SC{i:02}','narration':t,'texts':[t],'gaps':[],'tail':.3} for i,t in enumerate(texts,1)]}
+
+ def synth(self,req,out):
+  out.mkdir(parents=True,exist_ok=True);src=out/'request.json';write(src,req)
+  tts_worker.run(src,out);return read(out/'tts-result.json')
+
+ def test_gpu_batches_all_scenes_in_one_call(self):
+  with fake_vieneu() as Fake,fake_torch(),tempfile.TemporaryDirectory() as d:
+   d=Path(d);meta=self.synth(self.req(d/'cache'),d/'rev1')
+   self.assertEqual(Fake.batches,[(['Câu một.','Câu hai.','Câu ba.'],6)],'every scene must share one batched call')
+   self.assertEqual(meta['engine']['backend'],'pytorch');self.assertEqual(len(meta['segments']),3)
+
+ def test_pascal_forces_float32(self):
+  with fake_vieneu() as Fake,fake_torch(capability=(6,1)),tempfile.TemporaryDirectory() as d:
+   meta=self.synth(self.req(Path(d)/'cache',tts_gpu_dtype='bfloat16'),Path(d)/'rev1')
+   self.assertEqual(Fake.inits[0]['dtype'],'float32');self.assertEqual(meta['engine']['precision'],'float32')
+
+ def test_ampere_keeps_requested_dtype(self):
+  with fake_vieneu() as Fake,fake_torch(capability=(8,6)),tempfile.TemporaryDirectory() as d:
+   self.synth(self.req(Path(d)/'cache',tts_gpu_dtype='bfloat16'),Path(d)/'rev1')
+   self.assertEqual(Fake.inits[0]['dtype'],'bfloat16')
+
+ def test_no_cuda_falls_back_to_onnx(self):
+  with fake_vieneu() as Fake,fake_torch(cuda=False),tempfile.TemporaryDirectory() as d:
+   meta=self.synth(self.req(Path(d)/'cache'),Path(d)/'rev1')
+   self.assertEqual(meta['engine']['backend'],'onnx');self.assertEqual(Fake.batches,[])
+
+ def test_cuda_required_but_missing_raises(self):
+  with fake_vieneu(),fake_torch(cuda=False),tempfile.TemporaryDirectory() as d:
+   with self.assertRaises(RuntimeError):self.synth(self.req(Path(d)/'cache',tts_device='cuda'),Path(d)/'rev1')
+
+ def test_oom_halves_batch_then_falls_back_to_cpu(self):
+  with fake_vieneu() as Fake,fake_torch(),tempfile.TemporaryDirectory() as d:
+   Fake.oom_at={6,3,1}
+   meta=self.synth(self.req(Path(d)/'cache'),Path(d)/'rev1')
+   self.assertEqual(meta['engine']['backend'],'onnx','batch 1 OOM must end on ONNX/CPU')
+   self.assertEqual(len(meta['fallbacks']),3)
+   self.assertEqual(Fake.batches,[],'no GPU batch succeeded')
+   self.assertEqual(len(meta['segments']),3)
+
+ def test_oom_recovers_at_smaller_batch(self):
+  with fake_vieneu() as Fake,fake_torch(),tempfile.TemporaryDirectory() as d:
+   Fake.oom_at={6}
+   meta=self.synth(self.req(Path(d)/'cache'),Path(d)/'rev1')
+   self.assertEqual(meta['engine'],dict(backend='pytorch',precision='float32',device='Fake P620',batch_size=3))
+   self.assertEqual(Fake.batches[0][1],3)
+
+ def test_gpu_and_cpu_takes_do_not_share_cache(self):
+  """Switching device must not replay a take made by the other engine."""
+  with fake_vieneu() as Fake,tempfile.TemporaryDirectory() as d:
+   d=Path(d);cache=d/'cache'
+   with fake_torch():self.synth(self.req(cache,texts=('Câu một.',)),d/'rev1')
+   self.synth(self.req(cache,texts=('Câu một.',),tts_device='cpu'),d/'rev2')
+   self.assertEqual(len(list(cache.glob('*.wav'))),2);self.assertEqual(len(Fake.calls),2)
+
+ def test_cpu_cache_key_unchanged_for_existing_jobs(self):
+  """ONNX takes cached before GPU support keep hitting (same key recipe)."""
+  with fake_vieneu(),tempfile.TemporaryDirectory() as d:
+   d=Path(d);cache=d/'cache';text='Xin chào.'
+   self.synth(self.req(cache,texts=(text,),tts_device='cpu'),d/'rev1')
+   old=tts_worker.cache_key(text,dict(voice='v1',temperature=.6,top_p=.9,backend='onnx',precision='fp32',mode='v3turbo',retake=0),'9.9.9-test',SR)
+   self.assertEqual([p.stem for p in cache.glob('*.wav')],[old])
+
+ def test_audio_adapter_prefers_gpu_env_unless_cpu_forced(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d);(root/'.venv-tts/bin').mkdir(parents=True);(root/'.venv-tts/bin/python').touch()
+   self.assertEqual(adapters.tts_python(root,{}),root/'.venv-tts/bin/python')
+   (root/'.venv-tts-gpu/bin').mkdir(parents=True);(root/'.venv-tts-gpu/bin/python').touch()
+   self.assertEqual(adapters.tts_python(root,{'tts_device':'auto'}),root/'.venv-tts-gpu/bin/python')
+   self.assertEqual(adapters.tts_python(root,{'tts_device':'cpu'}),root/'.venv-tts/bin/python')
 
 class AudioStageTests(unittest.TestCase):
  """Drives adapters.audio() with a fake worker and asserts every pilot gate."""
