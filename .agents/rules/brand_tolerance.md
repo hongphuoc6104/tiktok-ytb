@@ -39,6 +39,7 @@ Bộ đánh giá chất lượng (Machine Reviewer) và các đạo diễn **tuy
 2. **Biến thiên nét vẽ tứ chi**:
    - Bàn chân hơi bo tròn hoặc bẹt nhẹ khi tiếp đất bước đi.
    - Bàn tay có nét bo tròn nhỏ khi cầm nắm đồ vật (cầm sách, chỉ tay vào bảng, cầm bút).
+   - Bàn tay dạng găng/bàn tay hoạt hình màu trắng, giơ ngón cái; bàn chân chỉ có viền (rỗng) thay vì tô đặc.
 3. **Chi tiết bối cảnh & Đạo cụ phụ**:
    - Cho phép sai lệch nhẹ về góc kê bàn ghế, kích thước bảng chữ, hoa văn nền so với kịch bản mô tả, miễn là đúng chức năng sư phạm (thể hiện được hành động/nghĩa của từ vựng).
 
@@ -46,4 +47,7 @@ Bộ đánh giá chất lượng (Machine Reviewer) và các đạo diễn **tuy
 
 ## 4. Hướng dẫn Dành cho Bộ Đánh Giá (Review Directives)
 - Khi kiểm tra tiêu chí `character_consistency`: Nếu nhân vật thể hiện rõ 80% đặc trưng nhận diện (áo xanh biển nhạt, người que 1 thân, đầu trắng mắt đen), **phải chấm `PASS`**.
+- Chi tiết thuộc 20% dung sai được phép khác nhau giữa các khung hình; khác biệt đó không phải lỗi `visual_continuity`.
+- Nụ cười lưỡi san hô trong ảnh tham chiếu không bắt buộc; khuôn miệng theo tình huống.
+- Ghi chú sửa ảnh (repair note/reject) không được biến chi tiết thuộc 20% dung sai thành điều cấm (ví dụ "tuyệt đối không lông mày").
 - Không lặp lại vòng lặp sửa ảnh (`image-repair-loops`) vì các nét biểu cảm tình huống thuộc phạm vi 20% dung sai.
