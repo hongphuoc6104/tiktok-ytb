@@ -123,6 +123,12 @@ def status(p, job):
                        'state': 'approved' if approved(p, job, stage) else ('awaiting_review' if item else 'pending'),
                        'revision': item['revision'] if item else None,
                        'review': str(p.path(job, item['review'])) if item else None})
+    from scripts.image_repairs import attention
+    repair_stop = attention(p,job)
+    if repair_stop:
+        for item in stages:
+            if item['stage'] == 'media' and item['state'] != 'approved':
+                item.update(state='needs_attention', repair_report=str(p.path(job,repair_stop)))
     return {'job': job, 'mode': cfg['mode'], 'complete': all(x['state'] == 'approved' for x in stages), 'stages': stages}
 
 
@@ -148,6 +154,9 @@ def assets(p, job, stage):
         files.append(p.rows(job)['audio']['envelope'])
         files.append(p.rows(job)['images']['envelope'])
         files += [x['path'] for x in images['references'] + images['items']]
+        if stage == 'media':
+            from scripts.image_repairs import comparisons
+            files += [pair['before']['path'] for pair in comparisons(p,job)]
         for item in images['items']:
             for ref in item['references']:
                 files.append(read(p.path(job, ref['registration_journal']))['path'])
@@ -160,7 +169,7 @@ def assets(p, job, stage):
         if media:
             files += [x for x in media['assets'] if x.endswith('visual-timing.json')]
         video = p.payload(job, 'render')
-        files += [video[k] for k in ('video', 'video_9x16', 'video_16x9') if video.get(k)]
+        files += [video[k] for k in ('video', 'video_9x16', 'video_16x9', 'editorial_report') if video.get(k)]
     return list(dict.fromkeys(files))
 
 
@@ -269,6 +278,8 @@ def prepare(p, job, stage):
             'decision': relative(folder / 'decision.json')}
     lines = [f'# {LABELS[stage]} — {job} — revision {revision}', '',
              f"Chế độ: {settings(p, job)['mode']}. Kiểm tra kỹ thuật đã đạt; chưa duyệt chất lượng.", '']
+    from scripts.director_context import review_checklist
+    lines.append(review_checklist(stage))
     for name in data['assets']:
         path = p.path(job, name)
         lines.append(f'[{path.name}]({path})')
@@ -284,6 +295,12 @@ def prepare(p, job, stage):
     if stage == 'media':
         images = p.payload(job, 'images')
         lines += character_comparisons(p, job, images)
+        from scripts.image_repairs import comparisons
+        for pair in comparisons(p, job):
+            lines += ['', '### Đối chiếu sửa ảnh — '+pair['target'],
+                      f"[Ảnh trước]({p.path(job,pair['before']['path'])}) · [Ảnh sau]({p.path(job,pair['after']['path'])})",
+                      'Cần xác nhận lỗi nào đã hết, còn tồn tại hoặc mới phát sinh; chưa suy ra đạt từ số lần sửa.']
+            lines += [f"- {i['id']}: {i['evidence']} → {i['instruction']}" for i in pair['issues'] if i['status'] != 'resolved']
         lines += ['', f"Số cảnh: {len(p.payload(job, 'content')['scenes'])}; số hình: {len(images['items'])}",
                   f"![Bảng ảnh]({p.path(job, images['contact_sheet'])})"]
         audio = p.payload(job, 'audio')
@@ -307,7 +324,7 @@ def prepare(p, job, stage):
     return data
 
 
-def approve(p, job, stage, revision, note, machine=False):
+def approve(p, job, stage, revision, note, machine=False, retry_review=False):
     p.refresh(job)
     cfg = settings(p, job)
     if machine != (cfg['mode'] == 'auto'):
@@ -322,7 +339,7 @@ def approve(p, job, stage, revision, note, machine=False):
     report = None
     if machine:
         from machine_review import review
-        report = review(p, job, stage, data['assets'], data['snapshot'])
+        report = review(p, job, stage, data['assets'], data['snapshot'], **({'retry':True} if retry_review else {}))
         p.refresh(job)
         if current(p, job, stage) != data:
             raise Blocked('Artifacts changed during machine review')
@@ -439,20 +456,22 @@ def retake_audio(p, job, note, scene=None):
     p.reject(job, 'audio', note)
 
 
-def reject(p, job, stage, revision, note, part=None, scene=None, character=None):
+def reject(p, job, stage, revision, note, part=None, scene=None, character=None, image=None, ratio=None, repair_plan=None):
     p.refresh(job)
     data = current(p, job, stage)
     if not data or data['revision'] != revision or not note.strip():
         raise Blocked('Cần đúng phần, revision và lý do sửa')
+    if (stage != 'media' or part == 'audio') and (image or ratio or repair_plan is not None or character):
+        raise Blocked('Chỉ dùng lựa chọn sửa ảnh trong media, không kèm --part audio')
     if stage == 'media':
         # --part audio is checked first: with a --scene it means "read this scene
         # again", not "redraw this scene's image".
         if part == 'audio':
             retake_audio(p, job, note, scene)
-        elif scene or character:
-            p.reject(job, 'images', note, p.rows(job)['images']['revision'], 'final', scene, character)
+        elif scene or character or image:
+            p.reject(job, 'images', note, p.rows(job)['images']['revision'], 'final', scene, character, image, ratio, repair_plan)
         else:
-            raise Blocked('Sửa media: chọn --scene, --character hoặc --part audio')
+            raise Blocked('Sửa media: chọn --image, --scene, --character hoặc --part audio')
     else:
         p.reject(job, STAGES[stage][0], note)
     # State changes above invalidate this manifest and every dependent gate.
@@ -460,12 +479,14 @@ def reject(p, job, stage, revision, note, part=None, scene=None, character=None)
     return status(p, job)
 
 
-def advance(p, job, target=None):
+def advance(p, job, target=None, retry_review=False):
     cfg = settings(p, job)
     for _ in range(3):
         step = next_step(p, job)
         if 'blocked' in step:
             raise Blocked(step['blocked'])
+        if step.get('state') == 'needs_attention':
+            raise Blocked('M2_REPAIR_NEEDS_ATTENTION: '+step['repair_report'])
         if step.get('action') == 'complete':
             result = status(p, job)
             result['videos'] = publish_videos(p, job)
@@ -476,7 +497,7 @@ def advance(p, job, target=None):
         data = prepare(p, job, stage)
         if cfg['mode'] == 'review':
             return next_step(p, job)
-        approve(p, job, stage, data['revision'], 'Automated quality review', machine=True)
+        approve(p, job, stage, data['revision'], 'Automated quality review', machine=True, retry_review=retry_review)
         if target:
             return next_step(p, job)
     return status(p, job)

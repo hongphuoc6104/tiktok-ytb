@@ -105,7 +105,7 @@ def run(source, out):
         pad = max(0, int(float(sc['tail']) * SR) - tail_silence(w, SR))
         path = f'en-{name}.wav'
         sf.write(out / path, np.concatenate([w, np.zeros(pad, dtype=np.float32)]), SR, subtype='PCM_16')
-        results.append(dict(scene_id=name, path=path))
+        results.append(dict(scene_id=name, path=path, content_duration=len(w) / SR))
     (out / 'en-result.json').write_text(json.dumps(dict(
         engine=ENGINE, voice='alba', settings=cfg, quantized_modules=quantized,
         scenes=results), ensure_ascii=False, indent=2))

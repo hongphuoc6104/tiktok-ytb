@@ -242,6 +242,9 @@ def sibling_notes(led, items, entry):
 # ---------------------------------------------------------------- brief
 
 def make_brief(entry, led, items, channel):
+    example_count = channel.get('example_count', 2)
+    if type(example_count) is not int or not 1 <= example_count <= 4:
+        raise Stop('example_count phải là số nguyên từ 1 đến 4')
     word = entry['word']
     display = word.upper()
     gloss = entry['gloss_vi']
@@ -259,9 +262,9 @@ def make_brief(entry, led, items, channel):
         'scene_count': channel['scene_count'],
         'required_points': [
             {'id': 'R1', 'text': f'Mở bằng một tình huống đời thường dẫn thẳng tới từ {display}'},
-            {'id': 'R2', 'text': f'Làm rõ nghĩa lõi "{gloss}" ({pos_vi}) và phân biệt với từ người Việt hay nhầm'},
-            {'id': 'R3', 'text': f'Ba câu ví dụ dùng {display} ở ba bối cảnh khác nhau, đọc rõ cả tiếng Anh'},
-            {'id': 'R4', 'text': f'Một mẹo ghi nhớ {display} và lời mời người xem đặt câu của riêng mình'},
+            {'id': 'R2', 'text': f'Làm rõ nghĩa lõi "{gloss}" ({pos_vi}) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần'},
+            {'id': 'R3', 'text': f'{example_count} câu ví dụ dùng {display}, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa'},
+            {'id': 'R4', 'text': f'Một lượt người xem dùng hoặc nhớ lại {display}, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình'},
         ],
         'language': channel['language'],
         'tone': channel['tone'],
@@ -273,7 +276,7 @@ def make_brief(entry, led, items, channel):
             'success_criteria': [
                 f'Người xem nói lại được nghĩa "{gloss}" của {display} mà không cần tra từ điển',
                 f'Người xem nghe và nhại được cách dùng {display} trong ít nhất một câu',
-                'Xem hết video từ đầu đến cuối',
+                'Người xem có lượt trả lời/nhắc lại và kiểm tra đáp án; hiệu quả học và giữ chân cần đo sau khi có người xem thật',
             ],
             'avoid': list(channel['avoid']) + siblings,
             'prior_knowledge': channel['prior_knowledge'],

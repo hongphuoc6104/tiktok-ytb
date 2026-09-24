@@ -128,6 +128,8 @@ def estimates(b, c):
             text = sc['narration_en' if lang=='en' else 'narration']
             units = len(text.split())
             seconds = units/rate['units_per_second'] + (0 if rate.get('includes_pauses') else len(re.findall(r'[.!?;,]',text))*.15 + .3)
+            learner_pause = sc.get('audio_direction', {}).get(lang, {}).get('learner_pause_seconds', 0)
+            seconds += learner_pause
             rows.append({'scene_id':sc['id'], 'units':units, 'seconds':round(seconds,2),
                          'min':round(seconds*(1-rate['uncertainty']),2), 'max':round(seconds*(1+rate['uncertainty']),2)})
             if seconds/len(sc['beats']) < 1.5:
@@ -179,6 +181,8 @@ def review_plan(b, c, previous=None, requests=()):
     for scene in c['scenes']:
         lines += ['## '+scene['id']+' — '+scene['title'], 'Mục đích: '+scene['purpose'], scene['narration']]
         if scene.get('narration_en'): lines.append('EN: '+scene['narration_en'])
+        for lang, direction in scene.get('audio_direction', {}).items():
+            lines.append(f"Chỉ đạo âm thanh {lang}: {direction['intent']} · Lưu ý phát âm: {direction['pronunciation_notes'] or 'Không có'} · Khoảng chờ học viên cuối cảnh: {direction['learner_pause_seconds']} giây (chưa xác minh WAV). Ý đồ giọng chưa phải điều khiển TTS.")
         for im in scene['images']:
             words='; '.join('“'+x['text']+'” — '+x['placement']+'; đối tượng: '+x['object'] for x in im['visible_text']) or 'Không có chữ/số'
             lines.append('**Hình '+im['id']+'** — '+im['description']+'\n\nẢnh gốc: '+str(im['based_on'] or 'Tạo mới')+'; giữ: '+(im['preserve'] or 'Không áp dụng')+'; đổi: '+im['change']+'\n\nLý do: '+im['reason']+'\n\nChữ được phép: '+words)
@@ -217,14 +221,14 @@ def timeline(c, images, audio, language, ratio):
         for bt in sc['beats']:
             offset=occurrence(text,bt['anchor'][language])
             # Use actual chunk bounds when available; interpolate within the chunk.
-            at=start+offset/max(1,len(text))*(end-start)
+            at=start+offset/max(1,len(text))*(spans[-1].get('content_end',end)-start)
             if language=='vi':
                 cursor=0
                 for seg in spans:
                     pos=text.find(seg['text'],cursor)
                     if pos<0: continue
                     if pos<=offset<pos+len(seg['text']):
-                        at=seg['start']+(offset-pos)/max(1,len(seg['text']))*(seg['end']-seg['start']);break
+                        at=seg['start']+(offset-pos)/max(1,len(seg['text']))*(seg.get('content_end',seg['end'])-seg['start']);break
                     cursor=pos+len(seg['text'])
             im=by_id[(bt['image_id'],ratio)]
             beats.append({'id':bt['id'],'src':im['path'],'at':round(at-start,4),'effect':bt['effect'],'focus':bt['focus']})
@@ -249,10 +253,10 @@ def calibrate_rates(c, audio, source):
 def safe_corrections(c, note):
     """Keep verbatim feedback in journals; translate management IDs only for the model prompt."""
     if c.get('schema_version') != '3.0': return note
-    replacements={x['id']:'nhân vật ('+x['appearance']+'; '+x['outfit']+')' for x in c['characters']}
+    replacements={x['id']:x['name'] for x in c['characters']}
     for sc in c['scenes']:
         replacements[sc['id']]='cảnh đang được sửa'
-        replacements.update({x['id']:'hình ('+x['description']+')' for x in sc['images']})
+        replacements.update({x['id']:'the specified image' for x in sc['images']})
         replacements.update({x['id']:'nhịp đang được sửa' for x in sc['beats']})
     pattern=r'(?<!\w)('+ '|'.join(re.escape(k) for k in sorted(replacements,key=len,reverse=True))+r')(?!\w)'
     return re.sub(pattern,lambda m:replacements[m.group()],note) if replacements else note

@@ -179,8 +179,13 @@ class ImagesV2Tests(unittest.TestCase):
                 e = read(pf); e['observed_at'] = time.time() - 700; write(pf, e)
             return result
         self.mock.stop()
+        def serial_read(path):
+            value = read(path)
+            # This test's 1/6 progress assertion requires one in-flight image.
+            # Production concurrency is deliberately tested separately below.
+            return dict(value, concurrency=1) if Path(path) == self.root / 'config.json' else value
         try:
-            with patch('adapters.gflow', side_effect=flaky):
+            with patch('adapters.gflow', side_effect=flaky), patch('image_pipeline.read', side_effect=serial_read):
                 with self.assertRaisesRegex(Blocked, 'M2_PREFLIGHT_EXPIRED') as ctx:
                     self.run_stage()
             msg = str(ctx.exception)
@@ -401,9 +406,12 @@ class ImagesV2Tests(unittest.TestCase):
                           'every 9:16 image must submit before any 16:9 image')
 
         prompts_seen = [a[a.index('--prompt') + 1] for a in self.calls]
-        expected_scene_order = ['SC01 image 1', 'SC01 image 2', 'SC02 image 1', 'SC02 image 2'] * 2
-        self.assertEqual([p.rsplit('Scene prompt: ', 1)[-1] for p in prompts_seen], expected_scene_order,
-                          'a based_on chain inside one scene must stay in order within each ratio')
+        actual = [p.rsplit('Scene prompt: ', 1)[-1] for p in prompts_seen]
+        for offset in (0, 4):
+            for scene in ('SC01', 'SC02'):
+                self.assertEqual([prompt for prompt in actual[offset:offset + 4] if prompt.startswith(scene)],
+                                 [f'{scene} image 1', f'{scene} image 2'],
+                                 'each dependency chain stays ordered while independent scenes may interleave')
 
         base_image_calls = [a for a in self.calls if '--base-image' in a]
         self.assertEqual(len(base_image_calls), 4, 'the four chained variations must attach their predecessor')
@@ -411,6 +419,10 @@ class ImagesV2Tests(unittest.TestCase):
         # Final payload keeps the original scene-major/ratio-minor plan order
         # even though submission itself was ratio-major.
         self.assertEqual([x['scene_id'] for x in payload['items']], [u['id'] for u in units])
+        for item, unit in zip(payload['items'], units):
+            request = read(self.p.path(self.j, item['request']))
+            if unit['based_on']:
+                self.assertEqual(request['identity']['base_image']['target'], unit['based_on'])
 
     def test_user_policy_allows_preflight_without_screenshot(self):
         import image_pipeline

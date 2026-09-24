@@ -16,6 +16,10 @@ function reference(file,mediaId) {
  if(!mimeType)throw Error('REFERENCE_FORMAT_UNSUPPORTED');
  return {mediaId,base64:bytes.toString('base64'),mimeType,name:path.basename(file),sha256:hash(bytes)};
 }
+const cfg = fs.existsSync(path.resolve(here, '../../config.json')) ? JSON.parse(fs.readFileSync(path.resolve(here, '../../config.json'), 'utf8')) : {};
+const configuredModel = cfg.flow_model || 'Nano Banana 2';
+const modelLabel = configuredModel.startsWith('🍌') ? configuredModel : `🍌 ${configuredModel}`;
+
 export function prepareRequests(specs) {
  if(!Array.isArray(specs)||!specs.length||specs.length>4)throw Error('QUEUE_SIZE_1_TO_4_REQUIRED');
  if(new Set(specs.map(s=>s.testCase)).size!==specs.length)throw Error('DUPLICATE_REQUEST_ID');
@@ -23,24 +27,28 @@ export function prepareRequests(specs) {
   if(!/^[\w-]+$/.test(s.testCase)||!s.prompt||!['9:16','16:9'].includes(s.ratio))throw Error('INVALID_QUEUE_REQUEST');
   const character=reference(s.characterRefPath,s.charMediaId),base=reference(s.baseRefPath,s.baseMediaId);
   if(!character)throw Error('CHARACTER_REFERENCE_REQUIRED');
-  return {spec:s,character,base,identity:{toolUrl,id:s.testCase,prompt:s.prompt,ratio:s.ratio,preserve:s.preserve||'',change:s.change||'',literalText:s.literalText||'',model:'Nano Banana Pro',references:[character,base].filter(Boolean).map(({mediaId,sha256})=>({mediaId,sha256})),outDir:path.resolve(s.outDir)}};
+  return {spec:s,character,base,identity:{toolUrl,id:s.testCase,prompt:s.prompt,ratio:s.ratio,preserve:s.preserve||'',change:s.change||'',literalText:s.literalText||'',model:configuredModel,references:[character,base].filter(Boolean).map(({mediaId,sha256})=>({mediaId,sha256})),outDir:path.resolve(s.outDir)}};
  });
 }
 export async function runQueue(specs,bound) {
  try { return await executeQueue(specs,bound); }
  catch(error) {
   // Only report not-submitted when durable records prove no dispatch began.
-  let notSubmitted=false;
+  let notSubmitted=false,collectionOnly=false,attemptStates=[];
   try {
    const requests=prepareRequests(specs),store=new AttemptStore(path.join(safeResults(),'production-attempts'));
-   notSubmitted=requests.every(r=>store.prepare(r.identity).state==='prepared');
+   attemptStates=requests.map(r=>({request_id:r.spec.testCase,state:store.prepare(r.identity).state}));
+   const states=attemptStates.map(a=>a.state);
+   notSubmitted=states.every(s=>s==='prepared');
+   collectionOnly=states.every(s=>['generated','collected'].includes(s));
   } catch {}
-  return {status:'blocked',reason:error.message,generationSubmitted:!notSubmitted};
+  return {status:'blocked',reason:error.message,generationSubmitted:!notSubmitted,collectionOnly,attemptStates};
  }
 }
 async function executeQueue(specs,bound) {
  const requests=prepareRequests(specs),store=new AttemptStore(path.join(safeResults(),'production-attempts'));
  const attempts=requests.map(r=>store.prepare(r.identity));
+ if(requests.some(r=>r.spec.collectionOnly)&&attempts.some(a=>!['generated','collected'].includes(a.state)))throw Error('COLLECTION_ONLY_RESULT_NOT_FOUND');
  // Reuse fully downloaded results without interacting with Flow.
  if(attempts.every(a=>a.state==='collected'&&fs.existsSync(a.events.at(-1).collection.path)))return {items:attempts.map(a=>a.events.at(-1).collection)};
  if(attempts.every(a=>['generated','collected'].includes(a.state)))return collectResults(store,attempts,requests);
@@ -67,14 +75,14 @@ async function executeQueue(specs,bound) {
   await boxes.nth(0).fill(r.spec.prompt);await boxes.nth(1).fill('Match the attached canonical character and scene references.');
   await boxes.nth(2).fill(r.spec.preserve||'');await boxes.nth(3).fill(r.spec.change||'');await boxes.nth(4).fill(r.spec.literalText||'');
   await frame.getByRole('button',{name:r.spec.ratio,exact:true}).click();
-  await frame.getByRole('combobox').nth(2).selectOption({label:'🍌 Nano Banana Pro'});
+  await frame.getByRole('combobox').nth(2).selectOption({label:modelLabel});
   const before=await state();
   await frame.getByRole('button',{name:'Initialize Generation',exact:true}).click();
   const after=await state(),added=after.queue.filter(i=>!before.queue?.some(p=>p.id===i.id));
   if(added.length!==1||added[0].config.topic!==r.spec.prompt||added[0].characterRefMediaId!==r.character.mediaId||added[0].baseImageMediaId!==(r.base?.mediaId||null)||added[0].config.aspectRatio!==r.spec.ratio)throw Error('QUEUE_REFERENCE_MAPPING_FAILED');
   ids.push(added[0].id);
  }
- await frame.getByRole('combobox').nth(3).selectOption({label:`${requests.length===3?2:requests.length} Workers`});
+ await frame.getByRole('combobox').nth(3).selectOption({label:'4 Workers'});
  const queued=await state();
  if(queued.queue.filter(i=>i.status==='QUEUED').length!==ids.length)throw Error('UNEXPECTED_QUEUED_REQUEST');
  const shot=null;
@@ -101,7 +109,7 @@ async function executeQueue(specs,bound) {
  const afterShot=null;
  return collectResults(store,attempts,requests,afterShot,started);
 }
-function collectResults(store,attempts,requests,afterShot=null,started=null) {
+export function collectResults(store,attempts,requests,afterShot=null,started=null) {
  const items=[];
  for(let i=0;i<attempts.length;i++) {
   const a=store.read(attempts[i]);
@@ -109,6 +117,7 @@ function collectResults(store,attempts,requests,afterShot=null,started=null) {
   const event=a.events.find(e=>e.event==='generated'),r=event.result;
   const submission=a.events.find(e=>e.event==='submitting');
   const shot=submission.screenshot;
+  try {
   const ext={'image/png':'.png','image/jpeg':'.jpg','image/webp':'.webp'}[r.mimeType];
   if(!ext)throw Error('OUTPUT_FORMAT_UNSUPPORTED');
   const folder=path.resolve(requests[i].spec.outDir);fs.mkdirSync(folder,{recursive:true});
@@ -116,6 +125,10 @@ function collectResults(store,attempts,requests,afterShot=null,started=null) {
   const validation=JSON.parse(execFileSync('python3',[path.join(here,'validate_asset.py'),file,'--ratio',requests[i].spec.ratio],{encoding:'utf8'}));
   const result={path:file,forge_id:a.mediaId,media_id:a.mediaId,before_submit:shot,screenshot:afterShot||shot,technical_validation:validation,latency:started?(Date.now()-started)/1000:null,request_id:requests[i].spec.testCase};
   store.recordCollected(a,result);items.push(result);
+  } catch(error) {
+   if(a.state==='generated')store.recordCollectionFailure(a,error);
+   throw error;
+  }
  }
  return {items};
 }

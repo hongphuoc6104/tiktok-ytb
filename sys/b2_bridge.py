@@ -84,7 +84,8 @@ def generate_b2_image(
     literal_text: str = "",
     out_dir: str | Path | None = None,
     test_case: str = "SCENE",
-    timeout: float = 120.0
+    timeout: float = 120.0,
+    collection_only: bool = False,
 ) -> dict:
     """Generate image via B-2 Illustrator applet and harvest committed result."""
     require_queue_acceptance()
@@ -98,18 +99,11 @@ def generate_b2_image(
     target_dir = Path(out_dir).resolve() if out_dir else (ROOT / "experiments/b2_illustrator/results/controller").resolve()
     target_dir.mkdir(parents=True, exist_ok=True)
 
-    char_guidance = (
-        " Strict Stickman CH01 canonical anatomy: exactly ONE single torso wearing plain light ocean blue shirt #8CCFE8, "
-        "exactly two simple navy stick arms, two simple navy stick legs, round white head with dark navy contour, "
-        "two solid black vertical oval eyes, simple open smile with coral tongue, absolutely NO eyebrows, NO teeth, NO white anime pupils. "
-        "Maintain identical camera perspective, framing, and furniture structure from the reference."
-    )
-    enhanced_prompt = prompt if "Stickman CH01" in prompt else (prompt + "\n" + char_guidance)
-
     spec = {
         "testCase": test_case,
         "testName": f"Pipeline B-2 Generation: {test_case}",
-        "prompt": enhanced_prompt,
+        "prompt": prompt,
+        "collectionOnly": collection_only,
         "preserve": preserve,
         "change": change,
         "literalText": literal_text,
@@ -142,6 +136,8 @@ def generate_b2_batch(specs: list[dict], timeout: float = 240.0) -> list[dict]:
     if result.get("status") == "blocked":
         error = Blocked(result.get("reason", "B-2 queue blocked"))
         error.generation_submitted = result.get("generationSubmitted", True)
+        error.collection_only = result.get("collectionOnly", False)
+        error.attempt_states = result.get("attemptStates", [])
         raise error
     items = result.get("items", [])
     if len(items) != len(specs):

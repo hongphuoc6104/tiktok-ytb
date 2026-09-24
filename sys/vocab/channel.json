@@ -1,25 +1,35 @@
 {
-  "version": 1,
+  "version": 2,
   "note": "Mặc định của kênh khi sinh brief từ kho từ vựng. Sửa ở đây thay vì sửa vocab/bank.py.",
   "video_type": "explainer",
   "aspect_ratio": "9:16",
-  "scene_count": 4,
-  "duration": {"min_seconds": 25.0, "max_seconds": 45.0},
+  "scene_count": 5,
+  "duration": {
+    "min_seconds": 30.0,
+    "max_seconds": 55.0
+  },
   "language": "vi",
   "tone": "hài hước, gần gũi, truyền cảm hứng",
   "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
-  "audience": "Người học tiếng Anh muốn ghi nhớ sâu từ vựng qua tình huống thực tế và bản chất gốc từ",
+  "audience": "Người Việt học tiếng Anh ở mức độ của mục kho, muốn dùng đúng một nghĩa từ trong tình huống đời thường",
   "prior_knowledge": "Tiếng Anh cơ bản, đã quen bảng chữ cái và câu đơn giản",
-  "pacing": "Nhanh, cuốn hút, dồn dập ở phần ví dụ thực tế",
+  "pacing": "Mở rõ tình huống và lợi ích học; tăng nhịp khi có biến chuyển, giữ đủ thời gian đọc câu và đáp lại mẫu nghe; số hình theo chức năng kể chuyện",
   "avoid": [
     "Dịch nghĩa sáo rỗng kiểu từ điển",
     "Nhồi quá nhiều từ mới ngoài từ khoá chính",
     "Nhân vật quá phức tạp gây rối mắt"
   ],
   "domain_requirements": [
-    "Giữ nét vẽ stickman đồng nhất giữa các cảnh",
-    "Nhân vật chính luôn là Người que áo xanh biển nhạt (CH01) theo chuẩn assets/characters/channel-mascot/reference-v1.png",
-    "Từ khoá tiếng Anh phải xuất hiện bằng chữ in trên hình ít nhất một lần"
+    "Nhân vật chính CH01 dùng đúng mascot chuẩn assets/characters/channel-mascot/reference-v1.png; giữ cấu trúc mặt, một thân, áo và độ dày nét qua mọi hình",
+    "Một video phục vụ một kết quả học quan sát được: nhận ra nghĩa đã chọn và dùng được từ trong câu đơn giản phù hợp mức học",
+    "Các ví dụ thuộc một micro-story có nguyên nhân, hành động và hậu quả hoặc một đối chiếu có mục đích; số cảnh trong brief là kế hoạch sản xuất, không phải năm mục giảng cố định",
+    "Hook cho thấy một tình huống hoặc câu hỏi cụ thể; từ khóa/cách dùng xuất hiện đủ sớm để người xem hiểu lợi ích, kết thúc trả lời được lời hứa mở đầu",
+    "Có một lượt luyện nói hoặc nhớ lại với mẫu đúng, khoảng chờ thật và phản hồi; khai báo audio_direction cho cảnh luyện tập khi cần khoảng chờ cuối cảnh",
+    "Phát âm, IPA, nối âm, đối chiếu từ dễ nhầm và gốc từ chỉ dùng khi hữu ích và có căn cứ; không bắt buộc nhồi đủ mọi mục",
+    "Từ khóa/câu học hiển thị rõ gần hành động, ưu tiên 1/3 phía trên và tránh vùng phụ đề/UI; giữ đúng chính tả tiếng Anh, I không biến thành Ai",
+    "Mỗi hình/beat có chức năng học hoặc kể chuyện; đủ ảnh cho thay đổi cần thấy, giữ liên tục trạng thái trước khi tối ưu hàng đợi",
+    "Không hứa xem khẩu hình với ảnh tĩnh; phân biệt shadowing với nghe-dừng-nhắc lại; không dùng nhãn chuẩn Tây làm tiêu chí phát âm",
+    "Phụ đề chia theo cụm nghĩa, tối đa hai dòng, không dấu câu đứng riêng; nhận xét đồng bộ phải căn cứ âm thanh/video thật"
   ],
   "character": {
     "id": "channel-mascot",
@@ -35,5 +45,6 @@
     "outline": "Nền sáng tương phản",
     "size": "Lớn, dễ đọc trên màn hình điện thoại",
     "placement": "Trung tâm hoặc 1/3 phía trên, tránh vùng viền mép"
-  }
+  },
+  "example_count": 2
 }

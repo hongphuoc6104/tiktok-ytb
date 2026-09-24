@@ -15,7 +15,7 @@ Khi tiếp tục job, không start/draw lại. Chạy `python3 pilot.py status J
 
 ## Thứ tự
 
-1. Đọc `vp-content/SKILL.md` ở thư mục skills bên cạnh; chạy `python3 pilot.py run JOB content`. Bố cục và số cảnh lấy từ brief/channel. Chốt lời dẫn trước coverage/anchor.
+1. Đọc `vp-content/SKILL.md` và `vp-content/references/vocab-pedagogy.md`; chạy `python3 pilot.py run JOB content`. Dùng các vai trò đạo diễn theo docs/director-system.md: mục tiêu học rõ, câu chuyện có liên hệ, mẫu nghe/lượt thực hành và phản hồi. Giữ số cảnh/ý của brief đã lưu; không áp khuôn năm phần cho mọi job mới. Chốt lời dẫn trước coverage/anchor.
 2. Sau quyết định content hợp lệ, đọc `vp-media/SKILL.md`; chạy `python3 pilot.py run JOB media`. Âm thanh trước, đo WAV, sau đó ảnh và nhịp. Giữ tốc độ TTS cấu hình kênh (hiện 0.92), không tự đổi. Câu ví dụ tiếng Anh trong narration Việt cần dấu câu rõ; giữ narration_en là tiếng Anh chuẩn khi brief yêu cầu.
 3. Sau quyết định media hợp lệ, đọc `vp-video/SKILL.md`; chạy `python3 pilot.py run JOB video`.
 4. Khi video đã có quyết định hợp lệ và xuất thành công, chạy `python3 vocab/bank.py mark JOB`. Trả đường dẫn MP4 thật trong `video/<job>/`, không gán revision 1.

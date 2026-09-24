@@ -99,3 +99,7 @@ Video và môi trường chạy nằm local, không được đưa lên GitHub. 
 ## Skills trên nhánh từ vựng
 
 `vp-vocab` điều phối kho và CLI; `vp-content` viết nội dung; `vp-media` chạy audio trước images; `vp-video` dựng/duyệt/xuất; `vp-clean` kiểm kê và dọn scratch rỗng. Văn phong nằm trong references của vp-content và được adapter nạp vào lượt viết chi tiết. Xem sys/docs/vocab-redesign-plan.md.
+
+## Hệ thống đạo diễn
+
+Xem [hệ thống đạo diễn](sys/docs/director-system.md), [kế hoạch nâng cấp](sys/docs/director-upgrade-plan.md) và [khảo sát có bằng chứng](sys/reports/director-research-20260924/bao-cao.md). Bốn skill đạo diễn làm việc trong ba phần hiện có. Khi Python hệ thống thiếu phụ thuộc, dùng `sys/.venv/bin/python pilot.py ...` từ gốc hoặc `.venv/bin/python pilot.py ...` trong `sys/`.

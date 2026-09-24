@@ -18,6 +18,8 @@ def setup(p):
       signature TEXT, note TEXT, at REAL, PRIMARY KEY(job, checkpoint, revision));
     CREATE TABLE IF NOT EXISTS image_edits(
       id INTEGER PRIMARY KEY, job TEXT, target TEXT, note TEXT, at REAL);
+    CREATE TABLE IF NOT EXISTS image_repair_details(
+      edit_id INTEGER PRIMARY KEY, plan TEXT NOT NULL);
     ''')
 
 
@@ -56,6 +58,7 @@ def signature(p, j, stage):
     if stage != 'references':
         targets += [x['id'] for x in c['scenes']]
         targets += ['proof:' + x['id'] for x in c['characters']]
+        targets += [x['id'] for x in planned_units(p,j) if x['id'] not in targets]
     return hashobj({'content': p.rows(j)['content']['hash'],
                     'edits': {t: edits(p, j, t) for t in targets}})
 
@@ -231,14 +234,17 @@ def image_check(p, j, path, expected_hash=None, full=True):
 
 
 def requested_prompt(p, j, target, prompt, notes, ratio, registration=False):
-    from scripts.story_plan import safe_corrections, text_prompt
+    from scripts.story_plan import safe_corrections
     from prompt_templates import image_prompt
     c = content(p,j)
     corrections = safe_corrections(c, notes)
-    revised = prompt + ('\nRequested corrections (keep the approved visible-text list unchanged): '+corrections if corrections else '') if c.get('schema_version')=='3.0' else prompt + ('\nRequested corrections: '+corrections if corrections else '')
     unit = next((x for x in planned_units(p,j) if x['id']==target),None)
-    if unit and c.get('schema_version')=='3.0':
-        revised = text_prompt(revised,unit['visible_text'],p.brief(j)[0]['planning']['text_style'])
+    mascot_target = (target == 'ref:CH01' or target.startswith('register:CH01:') or
+                     bool(unit and 'CH01' in unit['character_ids']))
+    if mascot_target:
+        prompt += ('\nPreserve the attached canonical character design. Express emotion through posture and gesture; '
+                   'do not add eyebrows, teeth, white cartoon eyes, extra clothing or a second torso.')
+    revised = prompt + ('\nRequested corrections (keep the approved visible-text list unchanged): '+corrections if corrections else '') if c.get('schema_version')=='3.0' else prompt + ('\nRequested corrections: '+corrections if corrections else '')
     return revised if registration else image_prompt(revised,ratio)
 
 
@@ -259,8 +265,8 @@ def _plan_request(p, j, target, prompt, refs, registration, base_image):
         if list(refs) != linked or prompt != scene['prompt']:
             raise Blocked('M2_REFERENCE_LINK: scene request must use approved prompt and registered characters')
     cfg = read(p.root / 'config.json')
-    edit_target = scene.get('scene_id',target) if scene else target
-    corrections = '\n'.join(x['note'] for x in edits(p, j, edit_target))
+    from scripts.image_repairs import active
+    corrections = active(p, j, scene, target)
     ratio = scene.get('ratio') if scene and scene.get('ratio') else ('16:9' if p.brief(j)[0]['aspect_ratio']=='16:9' else '9:16')
     if scene and scene.get('based_on'):
         if not base_image or base_image.get('target') != scene['based_on'] or digest(p.path(j,base_image['path'])) != base_image['sha256']:
@@ -274,9 +280,12 @@ def _plan_request(p, j, target, prompt, refs, registration, base_image):
     identity_registration = {'name': registration['name'], 'sha256': registration['sha256']} if registration else None
     identity = {'target': target,
                 'prompt': prompt, 'actual_prompt': actual_prompt, 'model': cfg['flow_model'], 'ratio': ratio,
-                'references': list(refs), 'edits': edits(p, j, edit_target), 'base_image': base_image,
+                'references': list(refs), 'corrections': corrections, 'base_image': base_image,
                 'registration': identity_registration, 'config_hash': digest(p.root / 'config.json')}
-    return cfg, ratio, actual_prompt, identity, hashobj(identity)
+    cache_identity = dict(identity)
+    if base_image:
+        cache_identity['base_image'] = {k: base_image[k] for k in ('target','sha256')}
+    return cfg, ratio, actual_prompt, identity, hashobj(cache_identity)
 
 
 def _unresolved_conflict(p, j, target):
@@ -289,6 +298,7 @@ def _unresolved_conflict(p, j, target):
     base = p.job(j) / 'flow/attempts'
     if not base.exists():
         return None
+    generated = None
     for q in base.glob('*/request.json'):
         old = read(q)
         same_target = old['identity']['target'] == target
@@ -296,7 +306,9 @@ def _unresolved_conflict(p, j, target):
             same_target = old['identity']['target'].rsplit(':', 1)[0] == target.rsplit(':', 1)[0]
         if same_target and old['state'] in ('submitted', 'ambiguous'):
             return old
-    return None
+        if same_target and old['state'] == 'generated':
+            generated = old
+    return generated
 
 
 def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
@@ -308,7 +320,7 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
     base.mkdir(parents=True, exist_ok=True)
     # Even changed prompts/edits cannot hide an unresolved submission.
     conflict = _unresolved_conflict(p, j, target)
-    if conflict:
+    if conflict and not (conflict['key'] == key and conflict['state'] == 'generated'):
         raise Blocked('M2_AMBIGUOUS: reconcile request ' + conflict['key'] + ' before another submission')
     folder = base / key
     record = folder / 'request.json'
@@ -317,13 +329,16 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
         if result['state'] == 'downloaded':
             image_check(p, j, result['path'], result['sha256'], full=registration is None)
             return result
-        raise Blocked('M2_ATTEMPT: request needs explicit reconciliation')
-    evidence = preflight(p, j, 'character-register' if registration else 'image')
+        if result['state'] not in ('not_submitted','generated'):
+            raise Blocked('M2_ATTEMPT: request needs explicit reconciliation')
+    collection_only = record.exists() and read(record)['state'] == 'generated'
+    evidence = read(folder/'preflight.json') if collection_only else preflight(p, j, 'character-register' if registration else 'image')
     folder.mkdir(exist_ok=True)
     write(folder / 'preflight.json', evidence)
-    if requires_ui_evidence(p): shutil.copy(p.path(j, evidence['screenshot']), folder / 'preflight.png')
-    out = folder / 'download'
-    out.mkdir()
+    if requires_ui_evidence(p) and not collection_only: shutil.copy(p.path(j, evidence['screenshot']), folder / 'preflight.png')
+    recovery_out = read(record).get('collection_out') if collection_only else None
+    out = p.path(j,recovery_out) if recovery_out else folder / 'download'
+    out.mkdir(exist_ok=True)
     common = ['--profile', cfg['flow_profile'], '--project', cfg['flow_project'], '--out', str(out)]
     model_arg = 'nano-banana-pro' if 'pro' in cfg['flow_model'].lower() else ('nano-banana-2' if '2' in cfg['flow_model'] else cfg['flow_model'])
     if registration:
@@ -333,14 +348,20 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
     else:
         args = ['image', '--id', key[:16], '--prompt', actual_prompt, '--model', model_arg,
                 '--ratio', ratio, '--outputs', '1'] + common
+        if collection_only:
+            args += ['--collect-only']
+        if recovery_out:
+            args += ['--evidence-out',str(folder)]
         if base_image:
             args += ['--base-image', str(p.path(j,base_image['path']))]
         if refs:
             args += ['--character'] + [x['name'] for x in refs]
-    result = {'key': key, 'identity': identity, 'state': 'submitted', 'submitted_at': time.time(),
+    result = {'key': key, 'identity': identity, 'state': 'generated' if collection_only else 'submitted', 'submitted_at': time.time(),
               'args': args, 'journal': str(record.relative_to(p.job(j)))}
+    if recovery_out:
+        result['collection_out'] = recovery_out
     write(record, result)
-    p.event(j, 'images', 'flow_submitted', key)
+    p.event(j, 'images', 'flow_collection_resumed' if collection_only else 'flow_submitted', key)
     try:
         r = adapters.gflow(p, *args)
         (folder / 'command.log').write_text(r.stdout + '\n' + r.stderr)
@@ -382,7 +403,9 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
     except Exception as ex:
         # A known downloaded but invalid image is not an unknown submission.
         if result['state'] != 'downloaded':
-            result.update(state='ambiguous', error=str(ex))
+            state = 'generated' if collection_only or getattr(ex,'collection_only',False) else (
+                'not_submitted' if getattr(ex,'generation_submitted',None) is False else 'ambiguous')
+            result.update(state=state, error=str(ex))
             write(record, result)
         raise Blocked('M2_FLOW: ' + str(ex)) from ex
 
@@ -401,12 +424,9 @@ def batch_submit(p, j, units, registrations):
     that carefully, and this pre-pass does not attempt to reproduce it, so
     chains always fall through to request() individually.
 
-    Failure handling mirrors the single-image path exactly: a job that
-    completes but fails verification, or that gflow reports failed, becomes
-    an 'ambiguous' journal (never auto-resent; needs flow-reconcile). A job
-    the batch never got to (process crashed, hard-stop mid-run) is left with
-    no journal at all, so it is simply retried through the normal per-image
-    path next time -- nothing already completed is touched or resent.
+    Every potential submission is journaled before dispatch. Unknown outcomes
+    remain blocked; only explicit not-submitted evidence permits generation.
+    Known generated results use collection-only recovery through request().
     """
     import adapters
     cfg = read(p.root / 'config.json')
@@ -443,6 +463,12 @@ def batch_submit(p, j, units, registrations):
     jobs_file = batch_dir / 'jobs.json'
     write(jobs_file, {'jobs': jobs})
     args = ['batch', str(jobs_file), '--out', str(batch_dir), '--profile', cfg['flow_profile'], '--continue-on-failure']
+    # Persist every potential submission before calling the external adapter.
+    # Missing/partial adapter logs after a crash are unknown, never "not sent".
+    for plan in plans:
+        write(plan['folder'] / 'request.json', {'key': plan['key'], 'identity': plan['identity'],
+              'state':'submitted','submitted_at':time.time(),'args':jobs_by_id[plan['job_id']][0],
+              'journal':str((plan['folder']/'request.json').relative_to(p.job(j)))})
     try:
         r = adapters.gflow(p, *args, timeout=max(960, 300 * len(jobs)))
         (batch_dir / 'command.log').write_text(r.stdout + '\n' + r.stderr)
@@ -450,21 +476,25 @@ def batch_submit(p, j, units, registrations):
         (batch_dir / 'command.log').write_text('EXCEPTION: ' + str(ex))
     run_state_path = batch_dir / 'gflow-run.json'
     if not run_state_path.exists():
-        return  # nothing attempted; leave every plan unjournaled for a plain retry
+        raise Blocked('M2_AMBIGUOUS: batch thiếu nhật ký; phải đối chiếu, không gửi lại')
     run_state = read(run_state_path)
     for entry in run_state.get('jobs', []):
         found = jobs_by_id.get(entry.get('id'))
-        if not found or entry.get('status') not in ('completed', 'failed'):
-            continue  # never attempted (batch stopped early) -- retry normally later
+        if not found or entry.get('status') not in ('completed', 'failed', 'not_submitted'):
+            continue
         job, plan = found
         folder, key, identity = plan['folder'], plan['key'], plan['identity']
         record = folder / 'request.json'
-        if record.exists():
-            continue
         result = {'key': key, 'identity': identity, 'state': 'submitted', 'submitted_at': time.time(),
-                  'args': job, 'journal': str(record.relative_to(p.job(j)))}
+              'args': job, 'journal': str(record.relative_to(p.job(j)))}
+        if entry['status'] == 'not_submitted':
+            result.update(state='not_submitted',error=entry.get('error',''))
+            write(record,result)
+            continue
         if entry['status'] == 'failed':
-            result.update(state='ambiguous', error=entry.get('error', 'batch job failed'))
+            result.update(state='generated' if entry.get('collection_only') else 'ambiguous', error=entry.get('error', 'batch job failed'))
+            if entry.get('collection_only'):
+                result['collection_out'] = str((batch_dir / plan['job_id']).relative_to(p.job(j)))
             write(record, result)
             p.event(j, 'images', 'flow_batch_ambiguous', key)
             continue
@@ -710,7 +740,7 @@ def check(p, j, data):
         files.append(image_check(p, j, item['path'], item['sha256']))
         req = read(p.path(j, item['request']))
         from prompt_templates import image_prompt
-        changes = '\n'.join(x['note'] for x in req['identity']['edits'])
+        changes = req['identity'].get('corrections', '\n'.join(x['note'] for x in req['identity'].get('edits',[])))
         expected_prompt = requested_prompt(p,j,req['identity']['target'],item['prompt'],changes,req['identity']['ratio'])
         if item['actual_prompt'] != expected_prompt:
             raise Blocked('M2_PROMPT: actual prompt differs from configured template')
@@ -787,7 +817,7 @@ def approve(p, j, rev, note, checkpoint, actor='user'):
     p.db.commit();p.event(j, 'images', 'technical_accepted' if actor=='technical' else 'checkpoint_approved', json.dumps({'checkpoint': s, 'revision': rev, 'actor': actor, 'note': note}, ensure_ascii=False))
 
 
-def reject(p, j, rev, note, checkpoint, scene=None, character=None):
+def reject(p, j, rev, note, checkpoint, scene=None, character=None, image=None, ratio=None, repair_plan=None):
     p.gate(j, 'images');row = p.rows(j)['images']
     if not note.strip() or row['revision'] != rev or checkpoint not in STAGES:
         raise Blocked('M2_REJECT: exact revision, checkpoint and reason required')
@@ -795,17 +825,44 @@ def reject(p, j, rev, note, checkpoint, scene=None, character=None):
     if current != checkpoint:
         raise Blocked('M2_REJECT: checkpoint differs from current output')
     c = content(p, j)
-    if bool(scene) == bool(character):
-        raise Blocked('M2_REJECT: select exactly one --scene or --character')
+    if sum(bool(x) for x in (scene, character, image)) != 1:
+        raise Blocked('M2_REJECT: chọn đúng một --image, --scene hoặc --character')
+    if ratio and not image:
+        raise Blocked('M2_REJECT: --ratio chỉ dùng với --image')
     if scene and scene not in [x['id'] for x in c['scenes'][:0 if checkpoint=='references' else len(c['scenes'])]]:
         raise Blocked('M2_REJECT: scene is not in this checkpoint')
     if character and character not in [x['id'] for x in c['characters']]:
         raise Blocked('M2_REJECT: unknown character')
-    target = scene or 'ref:' + character
-    p.db.execute('INSERT INTO image_edits(job,target,note,at) VALUES(?,?,?,?)', (j, target, note, time.time()))
+    units = planned_units(p,j)
+    selected = [u for u in units if (u.get('image_id',u['id']) == image and (not ratio or u.get('ratio') == ratio))
+                or (scene and u.get('scene_id',u['id']) == scene)]
+    if image and (checkpoint == 'references' or not selected):
+        raise Blocked('M2_REJECT: ảnh/tỷ lệ không thuộc checkpoint hiện tại')
+    from scripts.image_repairs import validate_plan
+    if repair_plan is not None and len(selected) != 1 and not character:
+        raise Blocked('M2_REPAIR_PLAN: kế hoạch đối chiếu phải nhắm đúng một ảnh/tỷ lệ')
+    # A scene-wide note must not silently carry a correction for one sibling.
+    if scene and len(selected) > 1:
+        import re
+        if any(re.search(r'(?<!\w)' + re.escape(u.get('image_id',u['id'])) + r'(?!\w)',note) for u in selected):
+            raise Blocked('M2_REPAIR_SCOPE: phản hồi nhắc ảnh cụ thể; dùng --image thay --scene')
+    payload = p.payload(j,'images')
+    records = []
+    for unit in selected:
+        item = next(x for x in payload['items'] if
+                    (x.get('image_id','')+'_'+x.get('ratio','').replace(':','x') if x.get('image_id') else x['scene_id']) == unit['id'])
+        if _unresolved_conflict(p,j,unit['id']):
+            raise Blocked('M2_AMBIGUOUS: đối chiếu lần gửi cũ trước khi yêu cầu sửa')
+        records.append((unit['id'], validate_plan(p,j,unit['id'],item,note,repair_plan)))
+    if character:
+        item = next(x for x in payload['references'] if x['character_id'] == character)
+        records.append(('ref:'+character, validate_plan(p,j,'ref:'+character,item,note,repair_plan)))
+    for target, plan in records:
+        cursor = p.db.execute('INSERT INTO image_edits(job,target,note,at) VALUES(?,?,?,?)', (j, target, note, time.time()))
+        p.db.execute('INSERT INTO image_repair_details(edit_id,plan) VALUES(?,?)', (cursor.lastrowid,json.dumps(plan,ensure_ascii=False)))
     p.db.execute("UPDATE modules SET state='needs_changes' WHERE job=? AND module='images'", (j,))
     p.db.execute("UPDATE modules SET state='stale' WHERE job=? AND module='render' AND state!='pending'", (j,))
-    p.db.commit();p.event(j, 'images', 'image_revision_requested', json.dumps({'target': target, 'note': note}, ensure_ascii=False))
+    p.db.commit();p.event(j, 'images', 'image_revision_requested', json.dumps({'targets': [t for t,_ in records], 'note': note}, ensure_ascii=False))
 
 
 def record_preflight(p, a):

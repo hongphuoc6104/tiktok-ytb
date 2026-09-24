@@ -6,7 +6,7 @@
 
 ## Ràng buộc bắt buộc
 
-- **Không bỏ ý, không rút ngắn.** Nguyên tắc dưới đây chỉ sửa CÁCH DIỄN ĐẠT, không bao giờ là cớ để bỏ `required_points`, gộp cảnh hay cắt nội dung. Mọi ý bắt buộc vẫn phải được `coverage` ánh xạ đủ.
+- **Giữ đủ ý bắt buộc và khoảng thời lượng của brief.** Nguyên tắc dưới đây chỉ sửa CÁCH DIỄN ĐẠT, không bao giờ là cớ để bỏ `required_points`, gộp cảnh hay cắt nội dung. Mọi ý bắt buộc vẫn phải được `coverage` ánh xạ đủ.
 - **Không bịa để đỡ mơ hồ.** Không thêm số liệu, tên, nguồn không có trong brief/sources. `claims` phải khớp `facts` thật.
 - **Thứ tự bắt buộc: viết lời dẫn xong, chốt, rồi mới đặt neo.** Đặt `coverage.quote`/`quote_en`, `claims.quote`, `beats[].anchor.vi/en` lên trên lời dẫn đã chốt. Không sửa lời dẫn sau khi đã đặt neo — sửa là lệch quote/occurrence, hỏng validate_content và validate_plan.
 - Đầu ra là JSON theo schema (content-v3), không dùng định dạng trả lời 4 phần (bản viết lại/đã sửa/đã xóa/cần xác nhận) của skill humanizer gốc.
@@ -40,6 +40,15 @@ Nhịp câu dài ngắn xen kẽ nghe tự nhiên khi đọc lên, không chỉ 
 | Trang trọng hóa thừa: "tiến hành thực hiện", "sử dụng" thay "dùng"; EN *utilize, authored, relocated* | Dùng từ ngắn, đúng khẩu ngữ khi đọc lên. |
 | Câu nào cũng cùng độ dài, cùng cấu trúc | Xen câu ngắn với câu dài hơn. |
 
+## Dấu hiệu cần tránh — Kịch bản từ vựng & Video ngắn (Anti-Boilerplate)
+
+| Dấu hiệu lối mòn | Vì sao hỏng video | Cách sửa |
+|---|---|---|
+| Mở đầu công thức: *"Chuông reo... bạn nằm dính giường... Giây phút/Khoảnh khắc đó gọi là..."* | Đoán trước 100%, gây nhàm chán từ giây đầu. | Bắt đầu bằng độc thoại nội tâm, câu đùa éo le, hoặc thử thách mini quiz. |
+| Lệnh phát âm khuôn mẫu: *"Cụm này nối âm cực mượt / rất đã tai: Cùng nhại lại nhé: X, thêm lần nữa: X!"* | Giọng robot trả bài, lặp đi lặp lại. | Dẫn vào một mẫu nghe đúng và lượt thực hành thật; không hứa khẩu hình khi chỉ có ảnh tĩnh. |
+| Liệt kê bài giảng: *"Ba ví dụ thực tế. Một,... Hai,... Ba,..."* | Phá hủy nhịp kể chuyện, biến video thành slide lớp học. | **Narrative Arc**: Nối các ví dụ được brief yêu cầu thành diễn tiến có nguyên nhân, hành động và hậu quả; không mặc định mọi bài phải có ba ví dụ. |
+| Kết bài sáo rỗng: *"Mẹo nhớ siêu nhanh:... Hãy tự đặt một câu dưới bình luận nhé."* | Thiếu sức hút, người xem lướt qua. | Đưa câu đố chọn đáp án A/B, câu chốt bất ngờ (punchline) hoặc lượt hoàn thành câu có hỗ trợ và phản hồi. |
+
 ## narration_en
 
 Áp dụng đúng các nguyên tắc trên với danh sách dấu hiệu tiếng Anh ở bảng trên. Bản 16:9 phát **hoàn toàn** bằng tiếng Anh, không phụ đề — đây là bản độc lập, không phải bản dịch phụ của tiếng Việt. Cùng giới hạn `tts_max_chars` áp dụng cho `narration_en` khi tổng hợp giọng Anh theo cảnh.
@@ -48,8 +57,9 @@ Nhịp câu dài ngắn xen kẽ nghe tự nhiên khi đọc lên, không chỉ 
 
 Khi kịch bản chứa từ khoá hoặc câu ví dụ tiếng Anh (video học ngoại ngữ):
 - **Không viết hoa toàn bộ từ tiếng Anh** (tránh TTS đánh vần từng ký tự). Dùng chữ thường hoặc viết hoa chữ đầu (`wake`, `get up`).
-- **Tách riêng câu ví dụ tiếng Anh bằng dấu chấm và ngoặc kép**: Không dùng dấu phẩy nối liền câu tiếng Anh với câu dịch tiếng Việt. Viết: `Thứ nhất: "We wake up early every day." Chúng tôi thức giấc sớm mỗi ngày.` để audio có khoảng ngắt nghỉ tự nhiên và phụ đề tách thẻ riêng biệt.
-- **Tốc độ đọc**: Giọng đọc đã được cấu hình chậm hơn ~8% (`tts_speed: 0.92`), phát âm rõ từng âm tiết.
+- **Tách riêng câu ví dụ tiếng Anh bằng dấu chấm và ngoặc kép**: Không dùng dấu phẩy nối liền câu tiếng Anh với câu dịch tiếng Việt. Viết: `Cả nhà cùng thức giấc: "We wake up early every day."` để audio có khoảng ngắt nghỉ tự nhiên và phụ đề tách thẻ riêng biệt.
+- **Chính tả và phát âm**: Giữ I trong câu tiếng Anh, không viết Ai vào narration/phụ đề/anchor. Adapter VieNeu xử lý cách đọc riêng; phải nghe WAV để xác minh.
+- **Tốc độ đọc**: `tts_speed: 0.92` là cấu hình hiện tại, không chứng minh phát âm rõ. Lượt luyện nói dùng audio_direction và kiểm tra khoảng chờ thật; không chỉ chèn dấu câu.
 
 ## Đừng sửa quá tay
 

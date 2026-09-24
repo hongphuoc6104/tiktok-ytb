@@ -226,7 +226,7 @@ class TTSWorkerCacheTests(unittest.TestCase):
   self.assertNotEqual(k,tts_worker.cache_key('Xin chào bạn',s,'1.0.0',24000))
   self.assertNotEqual(k,tts_worker.cache_key('Xin chào',dict(s,temperature=.7),'1.0.0',24000))
   self.assertNotEqual(k,tts_worker.cache_key('Xin chào',s,'1.0.1',24000))
-  self.assertNotEqual(k,tts_worker.cache_key('Xin chào',s,'1.0.0',24000,cache_version=2))
+  self.assertNotEqual(k,tts_worker.cache_key('Xin chào',s,'1.0.0',24000,cache_version=tts_worker.CACHE_VERSION+1))
 
 @contextlib.contextmanager
 def fake_torch(cuda=True,capability=(6,1)):

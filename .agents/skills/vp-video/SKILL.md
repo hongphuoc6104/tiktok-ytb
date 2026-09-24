@@ -7,6 +7,8 @@ description: Video hoàn chỉnh cho Video Pilot v3; dùng khi chạy hoặc s�
 
 # Video hoàn chỉnh
 
+Read [editing direction](../vp-edit-director/SKILL.md) and [audio direction](../vp-audio-director/SKILL.md) before final playback review. Inspect actual MP4, not only stills or metadata; unsupported listening/playback cannot pass.
+
 Đọc AGENTS.md và docs/workflow.md. Trước sản xuất chạy status JOB và next JOB. Hai chế độ review/auto; chỉ ba phần content/media/video. Không áp dụng hướng dẫn duyệt từng module cũ.
 
 Chỉ run JOB video sau media được duyệt hợp lệ. 9:16 Việt có phụ đề; 16:9 Anh timeline riêng, ẩn phụ đề. Review: đưa tất cả MP4 và revision để người dùng xem. Auto: máy xem/nghe bản dựng thật; không hỗ trợ thì blocked. Chỉ quyết định video hợp lệ mới là hoàn tất.
@@ -15,4 +17,4 @@ Quyết định người dùng cần đúng phần/revision và phản hồi ngu
 
 Job content 3.0: dựng theo danh sách beats/images đã duyệt và timeline riêng Việt/Anh; không tự phát hiện ảnh phụ theo tên hoặc gán mốc giây cố định. Hỗ trợ hold/cut/fade/slide_left/zoom_in/zoom_out. Chữ minh họa đã nằm trong ảnh; không dựng thêm lớp từ vựng. Giữ phụ đề Việt theo quy trình. Chuyển động phóng gần phải được kiểm tra không cắt mất chữ; không tự thêm hiệu ứng ngoài kế hoạch.
 
-Xuất qua workflow vào `video/<job>/` sau đủ ba quyết định hiện tại. Trả đường dẫn thật từ kết quả điều phối; không đoán revision hoặc dùng script dựng lại độc lập. Nếu xuất lỗi sau duyệt, resume để thử xuất lại, không duyệt giả lần nữa.
+Xuất qua workflow vào `video/<job>/` sau đủ ba quyết định hiện tại. Trả đường dẫn thật từ kết quả điều phối; không đoán revision hoặc dùng script dựng lại độc lập. Nếu xuất lỗi sau duyệt, resume để thử xuất lại, không duyệt giả lần nữa. Sau khi video xuất bản thành công, tham chiếu `vp-video/references/social-publishing.md` để cung cấp sẵn Tiêu đề, Caption và Mô tả chuẩn SEO cho TikTok và YouTube Shorts.
