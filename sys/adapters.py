@@ -416,6 +416,73 @@ def scene_tail(scene, language, gaps, last):
  return max(default, requested)
 
 
+QUOTE=re.compile(r'"([^"]+)"|“([^”]+)”')
+def is_english(s):
+ """Pure-ASCII Latin text: no Vietnamese letter can be inside it."""
+ return bool(re.search('[A-Za-z]',s)) and all(ord(c)<128 or c in '‘’…–—' for c in s)
+
+def english_parts(text,words):
+ """Split one narration chunk into ordered Vietnamese/English parts.
+
+ English = a quoted pure-ASCII phrase, or one of the scene's vocabulary words
+ (content field `vocabulary`, plus -s/-es/-ed/-d/-ing) outside quotes. Only
+ called for scenes that declare vocabulary, so a quoted Vietnamese word
+ written without accents is never mistaken for English. Sentence punctuation
+ right after a word stays with it (it sets the English intonation); parts
+ without letters (quote marks, a stray colon) are dropped."""
+ spans=[(m.start(),m.end(),(m.group(1) or m.group(2)).strip()) for m in QUOTE.finditer(text) if is_english(m.group(1) or m.group(2))]
+ for w in words:
+  pat=r"(?<![\w'’])"+r'\s+'.join(map(re.escape,w.split()))+r"(?:s|es|ed|d|ing)?(?![\w'’])"
+  for m in re.finditer(pat,text,re.I):
+   if any(a<=m.start()<b for a,b,_ in spans):continue
+   end=m.end()
+   while end<len(text) and text[end] in '.!?':end+=1
+   spans.append((m.start(),end,text[m.start():end]))
+ parts=[];pos=0
+ for a,b,t in sorted(spans):
+  if a<pos:continue
+  if re.search(r'\w',text[pos:a]):parts.append({'lang':'vi','text':text[pos:a].strip()})
+  parts.append({'lang':'en','text':t});pos=b
+ if re.search(r'\w',text[pos:]):parts.append({'lang':'vi','text':text[pos:].strip()})
+ return parts
+
+def span_take(cfg,retake):
+ """Deterministic English delivery for the n-th retake of a scene. The reseed
+ alone was not enough (SC04 of vocab-scold-002 failed three retakes): each
+ retake also lowers the sampling temperature and, for embedded words, slows
+ the speaking rate, so a rejected read changes something audible and recorded.
+ Retake 0 is exactly the configured delivery."""
+ r=max(0,int(retake))
+ return {'seed':int(cfg.get('en_seed',42))+r,
+         'temperature':round(max(.1,float(cfg.get('en_temperature',.3))-.05*r),3),
+         'rate':round(max(.8,float(cfg.get('audio_english_spans_rate',1.))-.05*r),3)}
+
+def english_spans(p,j,out,cfg,scenes):
+ """Voice the English parts of Vietnamese narration with the English engine.
+
+ VieNeu has no English final clusters: in vocab-scold-002 the reviewer kept
+ hearing "Please don't scold me!" as "sco"/"scood". Identical text with an
+ identical take is synthesized once and reused, so a word sounds the same in
+ every scene. Fills each English part with its WAV, take and rate in place."""
+ py=p.root/'.venv-en/bin/python'
+ if not py.exists():raise Blocked('Thiếu môi trường TTS tiếng Anh (.venv-en) để đọc từ/câu tiếng Anh; cài .venv-en hoặc đặt audio_english_spans_engine khác "en"')
+ items=[];ids={}
+ for sc in scenes:
+  take=span_take(cfg,sc['retake'])
+  for x in (x for c in sc.get('parts',[]) for x in c if x['lang']=='en'):
+   k=(x['text'],take['seed'],take['temperature'])
+   if k not in ids:ids[k]=f'S{len(items):03}';items.append({'id':ids[k],'text':x['text'],'retake':sc['retake'],'take':take})
+   x.update(id=ids[k],rate=take['rate'])
+ keys=('en_voice','en_device','en_quantize','en_temperature','en_threads','en_seed')
+ request=out/'request-en-spans.json';write(request,{'mode':'spans','settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'cache_dir':str(p.job(j)/'cache/tts-en-spans'),'spans':items})
+ r=subprocess.run([str(py),str(p.root/'scripts/en_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
+ (out/'tts-en-spans.log').write_text(r.stdout+'\n'+r.stderr)
+ if r.returncode:raise Blocked('TTS tiếng Anh cho từ/câu mẫu thất bại; xem tts-en-spans.log')
+ meta=read(out/'en-spans-result.json');done={x['id']:x for x in meta['spans']}
+ for x in (x for sc in scenes for c in sc.get('parts',[]) for x in c if x['lang']=='en'):
+  d=done[x.pop('id')]
+  x.update(wav=str(out/d['path']),take=dict(engine=meta['engine'],voice=meta['voice'],seed=d['seed'],temperature=d['temperature'],rate=x['rate']))
+
 def english(p,j,out,cfg,scenes):
  py=p.root/'.venv-en/bin/python'
  if not py.exists():raise Blocked('Install the English TTS environment (.venv-en)')
@@ -424,6 +491,7 @@ def english(p,j,out,cfg,scenes):
  g=cfg.get('tts_pause',DEFAULT_PAUSE)
  retake=retakes(p,j)
  items=[{'scene_id':s['id'],'narration_en':s['narration_en'],'retake':retake.get(s['id'],0),
+         'take':{x:v for x,v in span_take(cfg,retake.get(s['id'],0)).items() if x!='rate'},
          'tail':scene_tail(s,'en',g,k==len(scenes)-1)}
         for k,s in enumerate(scenes)]
  keys=('en_voice','en_device','en_quantize','en_temperature','en_threads','en_seed')
@@ -441,6 +509,7 @@ def english(p,j,out,cfg,scenes):
    params=fmt;d=wav.getnframes()/wav.getframerate();frames.append(wav.readframes(wav.getnframes()))
   item={'scene_id':x['scene_id'],'start':cursor,'end':cursor+d,'path':rel(p,j,f)}
   if 'content_duration' in x:item['content_end']=cursor+x['content_duration']
+  if 'take' in x:item['take']=x['take']
   done.append(item);cursor+=d
  combined=out/'narration_en.wav'
  with wave.open(str(combined),'wb') as wav:wav.setnchannels(params[0]);wav.setsampwidth(params[1]);wav.setframerate(params[2]);wav.writeframes(b''.join(frames))
@@ -462,7 +531,14 @@ def audio(p,j,out):
  for k,sc in enumerate(scenes):
   sc['gaps']=[gap_after(t,g) for t in sc['texts'][:-1]]
   sc['tail']=scene_tail(content['scenes'][k],'vi',g,k==len(scenes)-1)
- keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision','tts_speed','tts_device','tts_gpu_dtype','tts_batch_size')
+  words=[v['word'] for v in content['scenes'][k].get('vocabulary') or [] if is_english(v.get('word',''))]
+  # audio_english_spans_engine: 'en' (default) voices English inside Vietnamese
+  # narration with the English engine; any other value keeps it on VieNeu.
+  if words and cfg.get('audio_english_spans_engine','en')=='en':
+   parts=[english_parts(t,words) for t in sc['texts']]
+   if any(x['lang']=='en' for c in parts for x in c):sc['parts']=parts
+ if any('parts' in sc for sc in scenes):english_spans(p,j,out,cfg,scenes)
+ keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision','tts_speed','tts_device','tts_gpu_dtype','tts_batch_size','audio_english_spans_gap')
  # Job-level cache dir (not per-revision): pilot.run() always mkdirs a fresh
  # revisions/audio/N, so a cache rooted there could never hit across runs.
  # tts_worker.py now keys cache entries by content hash (text+settings+model
@@ -488,6 +564,7 @@ def audio(p,j,out):
  master(combined,out/'narration_eq.wav',cfg)
  srt=out/'subtitles.srt';srt.write_text(make_srt(segments))
  payload={'voice':meta['voice'],'backend':meta.get('engine',{}).get('backend','onnx'),'wav':rel(p,j,combined),'srt':rel(p,j,srt),'duration':cursor,'segments':segments}
+ if meta.get('english_spans'):payload['english_spans']=meta['english_spans']
  if needs_en(p,j):payload['en']=english(p,j,out,cfg,content['scenes'])
  return payload
 
