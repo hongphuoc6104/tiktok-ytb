@@ -753,6 +753,13 @@ def check(p, j, data):
         if req.get('reconciliation_evidence'): files.append(req['reconciliation_evidence'])
         base = p.path(j, item['request']).parent
         files.extend(str((base / n).relative_to(p.job(j))) for n in (['preflight.json', 'preflight.png', 'ui-proof.json', 'before-submit.png'] if requires_ui_evidence(p) else ['preflight.json', 'ui-proof.json']))
+        # A raw read() here throws an unguarded FileNotFoundError (a bare
+        # "[Errno 2] ..." with no M2_ prefix) instead of the clean M2_FILE
+        # check the bottom of this function already performs for every other
+        # path in `files` -- guard it the same way so a downloaded record
+        # missing its evidence file fails with an actionable message.
+        if not (base / 'ui-proof.json').is_file():
+            raise Blocked('M2_FILE: missing ' + str((base / 'ui-proof.json').relative_to(p.job(j))))
         ui = read(base / 'ui-proof.json')
         base_image = req['identity'].get('base_image')
         if base_image:

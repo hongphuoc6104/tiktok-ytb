@@ -24,6 +24,28 @@ def is_session_available() -> bool:
         return False
 
 
+def _config() -> dict:
+    try:
+        return json.loads((ROOT / "config.json").read_text())
+    except Exception:
+        return {}
+
+
+def _mark_not_submitted(exc: Blocked) -> Blocked:
+    """Tag a pre-submission failure so it is never treated as an unresolved
+    (ambiguous) Flow submission by callers (image_pipeline.request()/
+    batch_submit(), adapters.gflow()'s 'batch' handler). Everything wrapped
+    with this -- the queue-acceptance gate, session status/connect, batch
+    shape checks -- runs strictly before the one socket call that can ever
+    reach Flow's queue ("tool-snapshot:queue:..."), so a failure here proves
+    nothing was submitted and the caller is free to retry without a costly
+    manual flow-reconcile.
+    """
+    if getattr(exc, "generation_submitted", None) is None:
+        exc.generation_submitted = False
+    return exc
+
+
 def send_raw_command(command: str, timeout: float = 120.0) -> dict:
     if not SOCKET_PATH.exists():
         raise Blocked(
@@ -58,8 +80,26 @@ def send_raw_command(command: str, timeout: float = 120.0) -> dict:
         client.close()
 
 
-def query_status() -> dict:
-    return send_raw_command("status", timeout=5.0)
+def query_status(timeout: float | None = None) -> dict:
+    """Read-only session probe. session.mjs answers 'status' immediately
+    (it never waits behind a queued tool-snapshot/connect command), but the
+    daemon itself can still be mid-restart or cold-starting its browser
+    connection, so a couple of retries with backoff are cheap insurance
+    against a false timeout -- nothing here ever reaches Flow.
+    """
+    cfg = _config()
+    timeout = timeout if timeout is not None else cfg.get("flow_status_timeout_seconds", 30.0)
+    retries = cfg.get("flow_status_retries", 2)
+    backoff = cfg.get("flow_status_backoff_seconds", 2.0)
+    last_exc: Blocked | None = None
+    for attempt in range(retries + 1):
+        try:
+            return send_raw_command("status", timeout=timeout)
+        except Blocked as exc:
+            last_exc = exc
+            if attempt < retries:
+                time.sleep(backoff * (attempt + 1))
+    raise last_exc
 
 
 def ensure_connected() -> dict:
@@ -88,8 +128,12 @@ def generate_b2_image(
     collection_only: bool = False,
 ) -> dict:
     """Generate image via B-2 Illustrator applet and harvest committed result."""
-    require_queue_acceptance()
-    ensure_connected()
+    try:
+        require_queue_acceptance()
+        ensure_connected()
+    except Blocked as exc:
+        _mark_not_submitted(exc)
+        raise
 
     canonical_mascot = (ROOT / "assets/characters/channel-mascot/reference-v1.png").resolve()
     if char_ref_path is None and canonical_mascot.exists():
@@ -123,15 +167,30 @@ def generate_b2_image(
 
 def generate_b2_batch(specs: list[dict], timeout: float = 240.0) -> list[dict]:
     """Submit immutable groups through the persistent queue UI adapter."""
-    require_queue_acceptance()
-    ensure_connected()
-    if not 1 <= len(specs) <= 4:
-        raise Blocked("B-2 queue requires one to four independent requests")
-    folder = ROOT / "experiments/b2_illustrator/results/controller"
-    folder.mkdir(parents=True, exist_ok=True)
-    import uuid
-    manifest = folder / f"queue-{uuid.uuid4().hex}.json"
-    manifest.write_text(json.dumps(specs, ensure_ascii=False, indent=2), encoding="utf-8")
+    try:
+        require_queue_acceptance()
+        ensure_connected()
+        if not 1 <= len(specs) <= 4:
+            raise Blocked("B-2 queue requires one to four independent requests")
+        for spec in specs:
+            # Same check queue-runner.mjs's prepareRequests() makes on the
+            # Node side (REFERENCE_MEDIA_ID_REQUIRED there), but done here,
+            # before the socket call, so a missing media id (e.g. a base
+            # image reconciled/collected without a forgeId sidecar) is a
+            # clean, retryable, pre-submit failure instead of an ambiguous
+            # one discovered mid-flight inside Flow's queue.
+            if spec.get("characterRefPath") and not spec.get("charMediaId"):
+                raise Blocked("REFERENCE_MEDIA_ID_REQUIRED: characterRefPath thiếu charMediaId tương ứng")
+            if spec.get("baseRefPath") and not spec.get("baseMediaId"):
+                raise Blocked("REFERENCE_MEDIA_ID_REQUIRED: baseRefPath thiếu baseMediaId (thiếu sidecar .json chứa forgeId)")
+        folder = ROOT / "experiments/b2_illustrator/results/controller"
+        folder.mkdir(parents=True, exist_ok=True)
+        import uuid
+        manifest = folder / f"queue-{uuid.uuid4().hex}.json"
+        manifest.write_text(json.dumps(specs, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Blocked as exc:
+        _mark_not_submitted(exc)
+        raise
     result = send_raw_command(f"tool-snapshot:queue:{manifest}", timeout=max(timeout, 240))
     if result.get("status") == "blocked":
         error = Blocked(result.get("reason", "B-2 queue blocked"))

@@ -55,11 +55,19 @@ async function serve(){
       if(!data.includes('\n'))return;
       client.removeAllListeners('data');
       const command=data.trim();
+      if(command==='status') {
+        // Read-only and synchronous: answer immediately instead of waiting
+        // behind whatever long tool-snapshot/connect call is already queued.
+        // A status probe queued behind a multi-minute batch submission was
+        // the main reason a 5s (now configurable, retried) client-side
+        // timeout looked like a dead daemon when it was really just busy.
+        client.end(JSON.stringify(session.status())+'\n');
+        return;
+      }
       queue=queue.then(async()=>{
         try {
           let result;
-          if(command==='status') result=session.status();
-          else if(command==='connect') {
+          if(command==='connect') {
             result=await session.start();
             await ensureBoundPage();
             if(bound?.page && !bound.page.url().startsWith(toolUrl)) {
