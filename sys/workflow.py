@@ -30,7 +30,7 @@ def new(p, job, brief, mode='review'):
     if brief is None or mode not in ('review', 'auto'):
         raise Blocked('New jobs require --brief and mode review/auto')
     from scripts.story_plan import normalize_brief
-    p.new(job, normalize_brief(brief))
+    p.new(job, normalize_brief(brief), mode=mode)
     data = {'version': 3, 'mode': mode, 'created_at': time.time()}
     write(p.job(job) / 'workflow.json', data)
     p.event(job, 'control', 'workflow_created', hashobj(data))
@@ -435,6 +435,77 @@ def publish_videos(p, job):
     return [str(target) for _, target, _ in plans]
 
 
+# Hard caps for auto repair loops ("Không lặp vô hạn"). Scope is the whole job
+# since the last human lift_cap: content re-approval does NOT reset them, because
+# in auto the agent itself rejects content and that would be a free reset
+# (per-target image limits were already dodged by rotating targets).
+CAPS = {'auto_max_media_rejections': 3, 'auto_max_audio_retakes_per_scene': 2, 'auto_max_audio_retakes': 4,
+        'auto_max_repeat_failures': 3}
+LOOP_TARGET = 'auto-loop'
+STOP = ('DỪNG NGAY: không reject, resume hay --retry-review tiếp và KHÔNG tạo job mới để né giới hạn; '
+        'báo cáo cho người dùng (lý do và file báo cáo này) rồi chờ họ quyết định. '
+        'Chỉ người dùng mới được mở lại bằng lệnh lift-cap.')
+
+
+def cap(p, key):
+    return int(read(p.root / 'config.json').get(key, CAPS[key]))
+
+
+def lifted(p, job):
+    with p._db_lock:
+        row = p.db.execute("SELECT id,at FROM events WHERE job=? AND event='loop_cap_lifted' ORDER BY id DESC LIMIT 1", (job,)).fetchone()
+    return (row['id'], row['at']) if row else (0, 0)
+
+
+def loop_events(p, job, event):
+    since = lifted(p, job)[0]  # _db_lock is not reentrant
+    with p._db_lock:
+        rows = p.db.execute('SELECT detail FROM events WHERE job=? AND event=? AND id>? ORDER BY id', (job, event, since)).fetchall()
+    return [r['detail'] for r in rows]
+
+
+def loop_guard(p, job, part=None, scenes=()):
+    """Auto mode only: stop with needs_attention before another repair round.
+
+    part='images' / 'audio' is the reject about to be recorded; None is a
+    resume about to regenerate or re-review media.
+    """
+    if settings(p, job)['mode'] != 'auto':
+        return
+    from scripts.image_repairs import stop, repeat_failures
+    halt = lambda reason, **detail: stop(p, job, LOOP_TARGET, reason + ' ' + STOP, detail, 'AUTO_LOOP_CAP_NEEDS_ATTENTION')
+    n = cap(p, 'auto_max_repeat_failures')
+    failing, reviews = repeat_failures(p, job, n, lifted(p, job)[1])
+    if failing:
+        halt(f"Tiêu chí {', '.join(failing)} chưa đạt trong {n} lần đánh giá media liên tiếp; sửa tiếp không tạo tiến bộ.",
+             kind='repeat_failures', criteria=failing, reviews=reviews, limit=n)
+    if part == 'images':
+        used = len(loop_events(p, job, 'image_revision_requested'))
+        if used >= cap(p, 'auto_max_media_rejections'):
+            halt(f"Đã dùng {used}/{cap(p, 'auto_max_media_rejections')} lượt sửa ảnh media tự động của job này.",
+                 kind='media_rejections', used=used, limit=cap(p, 'auto_max_media_rejections'))
+    if part == 'audio':
+        done = [json.loads(d)['scenes'] for d in loop_events(p, job, 'audio_retake_requested')]
+        if len(done) >= cap(p, 'auto_max_audio_retakes'):
+            halt(f"Đã dùng {len(done)}/{cap(p, 'auto_max_audio_retakes')} lượt đọc lại âm thanh tự động của job này.",
+                 kind='audio_retakes', used=len(done), limit=cap(p, 'auto_max_audio_retakes'))
+        per = cap(p, 'auto_max_audio_retakes_per_scene')
+        over = [s for s in scenes if sum(s in d for d in done) >= per]
+        if over:
+            halt(f"Cảnh {', '.join(over)} đã đọc lại {per} lần mà vẫn bị chê; TTS có thể không đọc được câu này, cần người quyết định.",
+                 kind='audio_retakes_per_scene', scenes=over, limit=per)
+
+
+def lift_cap(p, job, reason):
+    """HUMAN ONLY, after reading the stop report: grants a fresh allowance of every
+    auto loop cap and clears older repair stops. Agents must never call this."""
+    settings(p, job)
+    if not reason or not reason.strip():
+        raise Blocked('Cần lý do mở khóa (người dùng đã xem báo cáo dừng)')
+    p.event(job, 'media', 'loop_cap_lifted', json.dumps({'reason': reason}, ensure_ascii=False))
+    return status(p, job)
+
+
 def retake_audio(p, job, note, scene=None):
     """Ask for a new read of the narration, optionally of one scene only.
 
@@ -467,8 +538,10 @@ def reject(p, job, stage, revision, note, part=None, scene=None, character=None,
         # --part audio is checked first: with a --scene it means "read this scene
         # again", not "redraw this scene's image".
         if part == 'audio':
+            loop_guard(p, job, 'audio', [scene] if scene else [s['id'] for s in p.payload(job, 'content')['scenes']])
             retake_audio(p, job, note, scene)
         elif scene or character or image:
+            loop_guard(p, job, 'images')
             p.reject(job, 'images', note, p.rows(job)['images']['revision'], 'final', scene, character, image, ratio, repair_plan)
         else:
             raise Blocked('Sửa media: chọn --image, --scene, --character hoặc --part audio')
@@ -486,7 +559,11 @@ def advance(p, job, target=None, retry_review=False):
         if 'blocked' in step:
             raise Blocked(step['blocked'])
         if step.get('state') == 'needs_attention':
-            raise Blocked('M2_REPAIR_NEEDS_ATTENTION: '+step['repair_report'])
+            try:
+                reason = read(step['repair_report']).get('reason', '')
+            except (OSError, ValueError):
+                reason = ''
+            raise Blocked('M2_REPAIR_NEEDS_ATTENTION: ' + (reason + '; ' if reason else '') + step['repair_report'])
         if step.get('action') == 'complete':
             result = status(p, job)
             result['videos'] = publish_videos(p, job)
@@ -494,10 +571,18 @@ def advance(p, job, target=None, retry_review=False):
         stage = step['stage']
         if target and stage != target:
             raise Blocked(f'Phần được phép hiện tại: {stage}')
+        guarded = cfg['mode'] == 'auto' and stage == 'media'
+        if guarded:
+            loop_guard(p, job)  # before any Flow/TTS/review spend
         data = prepare(p, job, stage)
         if cfg['mode'] == 'review':
             return next_step(p, job)
-        approve(p, job, stage, data['revision'], 'Automated quality review', machine=True, retry_review=retry_review)
+        try:
+            approve(p, job, stage, data['revision'], 'Automated quality review', machine=True, retry_review=retry_review)
+        except Blocked:
+            if guarded:
+                loop_guard(p, job)  # this failure may complete a streak: stop now, not on the next reject
+            raise
         if target:
             return next_step(p, job)
     return status(p, job)
