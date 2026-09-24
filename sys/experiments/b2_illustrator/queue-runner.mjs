@@ -31,12 +31,25 @@ export function prepareRequests(specs) {
  });
 }
 export async function runQueue(specs,bound) {
- try { return await executeQueue(specs,bound); }
+ let requests;
+ try { requests=prepareRequests(specs); }
+ catch(error) {
+  // prepareRequests() is pure local validation (request shape, reference
+  // files, media ids): it never touches the durable attempt store or the
+  // browser, so a failure here proves nothing was ever dispatched. Reporting
+  // it any other way previously mis-fired for e.g. REFERENCE_MEDIA_ID_REQUIRED
+  // -- the fallback below used to re-call prepareRequests(specs) to recover
+  // this same information, but that re-call throws the identical error before
+  // ever reaching store.prepare(), so it was swallowed by the bare `catch{}`
+  // and generationSubmitted defaulted to true (ambiguous).
+  return {status:'blocked',reason:error.message,generationSubmitted:false,collectionOnly:false,attemptStates:[]};
+ }
+ try { return await executeQueue(specs,bound,requests); }
  catch(error) {
   // Only report not-submitted when durable records prove no dispatch began.
   let notSubmitted=false,collectionOnly=false,attemptStates=[];
   try {
-   const requests=prepareRequests(specs),store=new AttemptStore(path.join(safeResults(),'production-attempts'));
+   const store=new AttemptStore(path.join(safeResults(),'production-attempts'));
    attemptStates=requests.map(r=>({request_id:r.spec.testCase,state:store.prepare(r.identity).state}));
    const states=attemptStates.map(a=>a.state);
    notSubmitted=states.every(s=>s==='prepared');
@@ -45,8 +58,8 @@ export async function runQueue(specs,bound) {
   return {status:'blocked',reason:error.message,generationSubmitted:!notSubmitted,collectionOnly,attemptStates};
  }
 }
-async function executeQueue(specs,bound) {
- const requests=prepareRequests(specs),store=new AttemptStore(path.join(safeResults(),'production-attempts'));
+async function executeQueue(specs,bound,requests) {
+ const store=new AttemptStore(path.join(safeResults(),'production-attempts'));
  const attempts=requests.map(r=>store.prepare(r.identity));
  if(requests.some(r=>r.spec.collectionOnly)&&attempts.some(a=>!['generated','collected'].includes(a.state)))throw Error('COLLECTION_ONLY_RESULT_NOT_FOUND');
  // Reuse fully downloaded results without interacting with Flow.

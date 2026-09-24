@@ -199,7 +199,10 @@ def select(args, led, items):
     """Lọc rồi sắp xếp ứng viên; chỉ trả về mục chưa reserved/done."""
     # Làm lại một từ đã có video phải nói rõ bằng --redo kèm --word; mặc định thì không.
     allowed = {'todo', 'done'} if getattr(args, 'redo', False) else {'todo'}
-    pool = [x for x in items if state_of(led, x['id']) in allowed]
+    # --supersede cho phép rút lại đúng mục đang giữ chỗ bởi job cũ bị thay thế.
+    replaced = set(supersede_list(args))
+    pool = [x for x in items if state_of(led, x['id']) in allowed
+            or (state_of(led, x['id']) == 'reserved' and led['entries'][x['id']].get('job') in replaced)]
     if args.topic:
         wanted = set(args.topic.split(','))
         unknown = wanted - {t['id'] for t in topics()}
@@ -364,6 +367,35 @@ def cmd_show(args):
          'job': led['entries'].get(x['id'], {}).get('job')} for x in items]}
 
 
+def supersede_list(args):
+    return [x for x in (getattr(args, 'supersede', None) or '').split(',') if x.strip()]
+
+
+def open_jobs(led):
+    """Job dang dở theo mục: có trong runs/ hoặc đang giữ chỗ, chưa mark done, chưa bị thay thế.
+
+    `release` rồi `start --word` lại từng tạo bốn job cho cùng một từ, mỗi job làm lại từ đầu;
+    runs/ vẫn giữ job cũ nên đây là nguồn đối chiếu, không chỉ ledger.
+    """
+    found = {}
+    runs = REPO / 'runs'
+    for job in sorted(x.name for x in runs.iterdir() if x.is_dir()) if runs.is_dir() else []:
+        try:
+            entry = brief_entry(job)
+        except (OSError, ValueError, KeyError, Stop):
+            entry = None
+        if entry:
+            found.setdefault(entry, set()).add(job)
+    for key, record in led['entries'].items():
+        if record.get('status') == 'reserved' and record.get('job'):
+            found.setdefault(key, set()).add(record['job'])
+        closed = {x.get('job') for x in record.get('previous', []) + record.get('superseded', [])}
+        if record.get('status') == 'done':
+            closed.add(record.get('job'))
+        found[key] = found.get(key, set()) - closed
+    return {k: sorted(v) for k, v in found.items() if v}
+
+
 def cmd_draw(args):
     """Giữ chỗ một mục cho job và ghi brief; chưa tạo job trong pilot."""
     led = ledger()
@@ -372,10 +404,30 @@ def cmd_draw(args):
         raise Stop(f'Job {args.job} đã giữ chỗ một từ; dùng `mark` hoặc `release` trước')
     if args.redo and not (args.word and args.note.strip()):
         raise Stop('--redo cần --word và --note nêu lý do làm lại từ đã có video')
+    replaced = supersede_list(args)
+    reason = (getattr(args, 'reason', None) or '').strip()
+    if replaced and not (args.word and reason):
+        raise Stop('--supersede cần --word và --reason nêu lý do bỏ job cũ (người dùng quyết định)')
+    unfinished = open_jobs(led)
     pool = select(args, led, items)
+    if not args.word:
+        # Tự chọn từ thì bỏ qua mục đã có job dang dở, không chặn cả hàng đợi.
+        pool = [x for x in pool if x['id'] not in unfinished]
     if not pool:
         raise Stop('Không còn từ nào hợp bộ lọc; nới --topic/--level hoặc bổ sung nguồn')
     entry = pool[0]
+    pending = unfinished.get(entry['id'], [])
+    extra = sorted(set(replaced) - set(pending))
+    if extra:
+        raise Stop(f'--supersede {", ".join(extra)} không phải job dang dở của mục {entry["id"]}'
+                   + (f' (job dang dở: {", ".join(pending)})' if pending else ''))
+    left = [x for x in pending if x not in replaced]
+    if left:
+        raise Stop(f'Mục {entry["id"]} ({entry["word"]}) đã có job chưa xong: {", ".join(left)}. '
+                   'Không tạo job mới cho cùng từ (job mới làm lại từ đầu, tốn quota): tiếp tục job cũ '
+                   f'(python3 pilot.py resume {left[-1]}) hoặc dừng lại báo người dùng. Chỉ khi người dùng '
+                   f'quyết định bỏ job cũ: bank.py start {args.job} --word {entry["word"]} '
+                   f'--supersede {",".join(pending)} --reason "..."')
     path = Path(args.out) if args.out else BRIEFS / f'{args.job}.json'
     if path.exists():
         raise Stop(f'{path} đã có; xoá hoặc chọn --out khác')
@@ -385,6 +437,9 @@ def cmd_draw(args):
         # Làm lại một từ đã có video là quyết định có ý thức; giữ lại dấu vết bản cũ.
         record.setdefault('previous', []).append(
             {k: record[k] for k in ('job', 'at', 'note', 'video') if k in record})
+    for old in replaced:
+        record.setdefault('superseded', []).append(
+            {'job': old, 'by': args.job, 'reason': reason, 'at': stamp()})
     record.update({'status': 'reserved', 'job': args.job,
                    'brief': str(path.relative_to(REPO)), 'at': stamp()})
     if args.note.strip():
@@ -399,13 +454,17 @@ def cmd_draw(args):
 
 def cmd_start(args):
     """draw + pilot new: một lệnh để bắt đầu video cho từ kế tiếp."""
+    before = copy.deepcopy(ledger()['entries'])
     drawn = cmd_draw(args)
     run = subprocess.run([sys.executable, 'pilot.py', 'new', args.job, '--brief', drawn['brief'],
                           '--mode', args.mode], cwd=REPO, capture_output=True, text=True)
     sys.stderr.write(run.stderr)
     if run.returncode != 0:
         led = ledger()
-        led['entries'].pop(drawn['entry'], None)
+        if drawn['entry'] in before:
+            led['entries'][drawn['entry']] = before[drawn['entry']]
+        else:
+            led['entries'].pop(drawn['entry'], None)
         save_ledger(led)
         # Brief chỉ có nghĩa khi job tồn tại; để lại sẽ chặn lần start sau của cùng mã job.
         Path(drawn['brief']).unlink(missing_ok=True)
@@ -550,7 +609,12 @@ def cmd_release(args):
     if not freed:
         raise Stop(f'Job {args.job} không giữ chỗ mục nào đang chờ')
     for key in freed:
-        led['entries'].pop(key)
+        # Giữ dấu vết bản cũ/job bị thay thế; mục vẫn về kho (todo).
+        kept = {k: v for k, v in led['entries'][key].items() if k in ('previous', 'superseded')}
+        if kept:
+            led['entries'][key] = {'status': 'todo', **kept}
+        else:
+            led['entries'].pop(key)
     save_ledger(led)
     return {'released': freed, 'job': args.job}
 
@@ -624,6 +688,8 @@ def main():
     ap.add_argument('--prefix', default='vocab-', help='tiền tố mã job cho lệnh queue')
     ap.add_argument('--redo', action='store_true',
                     help='làm lại một từ đã có video; cần --word và --note')
+    ap.add_argument('--supersede', help='start/draw: job cũ dang dở của cùng mục bị thay thế (người dùng quyết định), cách nhau bằng dấu phẩy')
+    ap.add_argument('--reason', default='', help='lý do bắt buộc khi --supersede')
     args = ap.parse_args()
     if args.command in ('draw', 'start', 'release') and not args.job:
         raise Stop(f'Lệnh {args.command} cần mã job')

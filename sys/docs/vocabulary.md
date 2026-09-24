@@ -143,3 +143,8 @@ nguồn không xoá dấu trong ledger — dấu cũ nằm lại vô hại và t
 được thêm lại.
 
 Kiểm tra kho: `.venv/bin/python -m pytest vocab/test_bank.py -q`.
+
+
+## Không tạo job trùng
+
+`bank.py start` từ chối bốc một từ đang có job chưa `mark`. Chỉ người dùng được thay job cũ bằng `--supersede JOB_CŨ --reason "..."`; lý do được ghi trong ledger (`superseded`). `release` giữ lịch sử `previous/superseded`.

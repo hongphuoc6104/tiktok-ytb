@@ -108,6 +108,23 @@
               "content_end": {
                 "type": "number",
                 "minimum": 0
+              },
+              "take": {
+                "type": "object",
+                "properties": {
+                  "retake": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "seed": {
+                    "type": "integer"
+                  },
+                  "temperature": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": false
               }
             },
             "required": [
@@ -128,6 +145,62 @@
         "scenes"
       ],
       "additionalProperties": false
+    },
+    "english_spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "engine": {
+            "type": "string",
+            "minLength": 1
+          },
+          "voice": {
+            "type": "string",
+            "minLength": 1
+          },
+          "retake": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "seed": {
+            "type": "integer"
+          },
+          "temperature": {
+            "type": "number",
+            "minimum": 0
+          },
+          "rate": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "duration": {
+            "type": "number",
+            "minimum": 0
+          },
+          "gain_db": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "scene_id",
+          "text",
+          "engine",
+          "retake",
+          "seed",
+          "temperature",
+          "rate"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [

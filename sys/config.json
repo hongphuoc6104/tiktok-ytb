@@ -53,6 +53,15 @@
     "appearance": "Đầu tròn trắng viền xanh đen đậm, hai mắt oval đen, miệng cười tươi, tay chân người que tối giản",
     "outfit": "Áo thun cộc tay màu xanh biển nhạt"
   },
+  "auto_require_clean_code": true,
+  "auto_max_media_rejections": 3,
+  "auto_max_audio_retakes_per_scene": 2,
+  "auto_max_audio_retakes": 4,
+  "auto_max_repeat_failures": 3,
+  "flow_status_timeout_seconds": 30,
+  "flow_status_retries": 2,
+  "flow_status_backoff_seconds": 2,
+  "audio_english_spans_engine": "en",
   "brief_policies": [
     "vocab.policy:check"
   ]

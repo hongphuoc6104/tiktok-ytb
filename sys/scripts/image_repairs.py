@@ -34,25 +34,53 @@ def active(p, job, unit, target):
     return '\n'.join(instructions)
 
 
-def stop(p, job, target, reason):
+def stop(p, job, target, reason, detail=None, code='M2_REPAIR_NEEDS_ATTENTION'):
     report = p.job(job) / 'repair-stops' / (uuid.uuid4().hex + '.json')
     write(report, {'state': 'needs_attention', 'target': target, 'reason': reason,
-                   'history': history(p, job, target)})
+                   'history': history(p, job, target) if detail is None else detail})
     p.event(job, 'images', 'repair_needs_attention', str(report.relative_to(p.job(job))))
-    raise Blocked(f'M2_REPAIR_NEEDS_ATTENTION: {reason}; {report}')
+    raise Blocked(f'{code}: {reason}; {report}')
 
 
 def attention(p, job):
+    # A human lift (workflow.lift_cap) clears every older stop; per-target limits re-check on the next reject.
     with p._db_lock:
-        rows = p.db.execute("SELECT event,detail FROM events WHERE job=? AND module='images' AND "
-                            "event IN ('repair_needs_attention','image_revision_requested') ORDER BY id DESC", (job,)).fetchall()
+        rows = p.db.execute("SELECT event,detail FROM events WHERE job=? AND ((module='images' AND "
+                            "event IN ('repair_needs_attention','image_revision_requested')) OR event='loop_cap_lifted') "
+                            "ORDER BY id DESC", (job,)).fetchall()
     cleared = set()
     for row in rows:
+        if row['event'] == 'loop_cap_lifted':
+            return None
         if row['event'] == 'image_revision_requested':
             data=json.loads(row['detail']);cleared.update(data.get('targets', [data.get('target')]))
         elif read(p.path(job,row['detail']))['target'] not in cleared:
             return row['detail']
     return None
+
+
+def repeat_failures(p, job, n, after=0):
+    """Machine-review criteria that failed in each of the last n completed media reviews.
+
+    Ordered by when response.json was written; reviews without a parseable
+    response (crashed/running) are skipped, and anything before `after` (the
+    last human lift) is ignored. A passing review breaks every streak.
+    """
+    done = []
+    for response in (p.job(job) / 'machine-reviews').glob('*/response.json'):
+        try:
+            when = response.stat().st_mtime
+            if when <= after or read(response.parent / 'request.json').get('stage') != 'media':
+                continue
+            checks = read(response)['structured_output']['checks']
+            done.append((when, response.parent.name, {k for k, v in checks.items() if v.get('verdict') != 'pass'}))
+        except (OSError, ValueError, KeyError, TypeError, AttributeError):
+            continue
+    last = sorted(done, key=lambda x: x[:2])[-n:] if n > 0 else []
+    if len(last) < n or not last:
+        return [], []
+    common = sorted(set.intersection(*(x[2] for x in last)))
+    return (common, [x[1] for x in last]) if common else ([], [])
 
 
 def validate_plan(p, job, target, item, note, supplied):

@@ -85,6 +85,46 @@ def change_tempo(w,sr,speed):
  out_w,_=sf.read(buf_out,dtype='float32')
  return out_w
 
+def active_rms(w,sr,win_s=.02):
+ """RMS over the speech frames only (windows within 20 dB of the loudest), so
+ leading/trailing silence and pauses do not skew a loudness match."""
+ win=max(1,int(win_s*sr));n=w.size//win
+ if n==0:return 0.
+ e=np.sqrt((w[:n*win].reshape(n,win)**2).mean(1));act=e[e>=e.max()*.1]
+ return float(np.sqrt((act**2).mean())) if act.size and e.max()>0 else 0.
+
+def trim(w,sr,thresh_db=-45.,lead_s=.03,tail_s=.12,win_s=.01):
+ """Strip edge silence but keep margins. The tail margin is deliberately wide:
+ a weak final consonant release (the /d/ of 'scold') must never be cut."""
+ win=max(1,int(win_s*sr));n=w.size//win
+ if n==0:return w
+ loud=np.flatnonzero(np.abs(w[:n*win]).reshape(n,win).mean(1)>10**(thresh_db/20))
+ if not loud.size:return w
+ return w[max(0,int(loud[0])*win-int(lead_s*sr)):min(w.size,(int(loud[-1])+1)*win+int(tail_s*sr))]
+
+def splice(parts,sr,gap,fade_s=.01):
+ """Join Vietnamese/English part takes through `gap` seconds of silence. Each
+ edge gets a 10 ms fade, i.e. a crossfade through silence: no clicks, and no
+ overlap that could smear the English word into its Vietnamese neighbour."""
+ out=[]
+ for i,w in enumerate(parts):
+  w=np.asarray(w,dtype=np.float32).copy();n=min(w.size//2,int(fade_s*sr))
+  if n>0:r=np.linspace(0,1,n,dtype=np.float32);w[:n]*=r;w[-n:]*=r[::-1]
+  if i:out.append(np.zeros(int(gap*sr),dtype=np.float32))
+  out.append(w)
+ return np.concatenate(out)
+
+def load_span(part,sr):
+ """English take from scripts/en_worker.py at the VieNeu rate and the take's
+ speaking rate (slower on each retake, see adapters.span_take)."""
+ w,fsr=sf.read(part['wav'],dtype='float32')
+ if w.ndim>1:w=w.mean(1)
+ if fsr!=sr:
+  from math import gcd
+  from scipy.signal import resample_poly
+  g=gcd(sr,fsr);w=resample_poly(w,sr//g,fsr//g).astype(np.float32)
+ return change_tempo(w,sr,float(part.get('rate',1.)))
+
 def load_engine(cfg):
  """(Vieneu instance, engine description). tts_device: auto = CUDA when this
  interpreter has torch with a visible GPU, else ONNX/CPU; cuda = require GPU;
@@ -190,12 +230,36 @@ def run(source,out):
   prefetch([(text,retake)])
   return sf.read(str(cached(text,retake)),dtype='float32')[0]
 
+ spans=[];gap=float(cfg.get('audio_english_spans_gap',.18))
+ def mixed(sc,retake):
+  """Scene whose narration embeds English (adapters.english_parts): Vietnamese
+  parts come from VieNeu, English parts from the English engine, spliced per
+  chunk so each chunk still maps to one subtitle segment. The English take is
+  level-matched to this scene's Vietnamese speech before splicing."""
+  vi={x['text']:trim(synth(x['text'],retake),sr) for c in sc['parts'] for x in c if x['lang']=='vi'}
+  ref=active_rms(np.concatenate(list(vi.values())),sr) if vi else 0.
+  pieces=[]
+  for chunk in sc['parts']:
+   if all(x['lang']=='vi' for x in chunk):pieces.append(synth(chunk[0]['text'],retake));continue
+   ws=[]
+   for x in chunk:
+    if x['lang']=='vi':ws.append(vi[x['text']]);continue
+    w=trim(load_span(x,sr),sr);lv=active_rms(w,sr);gain=float(np.clip(ref/lv,.25,4.)) if ref and lv else 1.
+    peak=float(np.max(np.abs(w)))*gain if w.size else 0.
+    if peak>.97:gain*=.97/peak
+    ws.append((w*gain).astype(np.float32))
+    spans.append(dict(x.get('take',{}),scene_id=sc['scene_id'],text=x['text'],retake=retake,
+                      duration=round(len(w)/sr,4),gain_db=round(float(20*np.log10(gain)),2)))
+   pieces.append(splice(ws,sr,gap))
+  return pieces
+
  def scene_level(sc):
   return cfg.get('tts_scene_synthesis',True) and len(sc['narration'])<=cfg.get('tts_max_chars',256)
  first=[]
  for sc in req['scenes']:
   r=int(sc.get('retake',0))
-  first+=[(sc['narration'],r)] if scene_level(sc) else [(t,r) for t in sc['texts']]
+  if sc.get('parts'):first+=[(x['text'],r) for c in sc['parts'] for x in c if x['lang']=='vi']
+  else:first+=[(sc['narration'],r)] if scene_level(sc) else [(t,r) for t in sc['texts']]
  prefetch(first)
 
  # Scene-level synthesis keeps the intonation arc across sentences: vieneu infers
@@ -204,16 +268,17 @@ def run(source,out):
  sr=st['sr'];flat=[];modes=[]
  for sc in req['scenes']:
   texts=sc['texts'];pieces=None;retake=int(sc.get('retake',0))
-  if scene_level(sc):
-   pieces=split_at(synth(sc['narration'],retake),sr,texts)
+  if sc.get('parts'):pieces=mixed(sc,retake);mode='mixed'
+  elif scene_level(sc):
+   pieces=split_at(synth(sc['narration'],retake),sr,texts);mode='scene'
   if pieces is None:
    prefetch([(t,retake) for t in texts])
-   pieces=[synth(t,retake) for t in texts]
+   pieces=[synth(t,retake) for t in texts];mode='per-sentence'
+  if mode!='scene':
    for i in range(len(pieces)-1):
     pad=pause_pad_samples(pieces[i],pieces[i+1],sr,float(sc['gaps'][i]))
     pieces[i]=np.concatenate([pieces[i],np.zeros(pad,dtype=np.float32)])
-   modes.append({'scene_id':sc['scene_id'],'mode':'per-sentence'})
-  else:modes.append({'scene_id':sc['scene_id'],'mode':'scene'})
+  modes.append({'scene_id':sc['scene_id'],'mode':mode})
   flat.extend([{'scene_id':sc['scene_id'],'text':t,'wav':w} for t,w in zip(texts,pieces)])
   flat[-1]['pause']=float(sc['tail'])
 
@@ -229,7 +294,7 @@ def run(source,out):
   path=f'segment-{i:03}.wav'
   sf.write(str(out/path),w,sr,subtype='PCM_16')
   results.append({'scene_id':x['scene_id'],'text':x['text'],'path':path,'content_duration':content_duration})
- (out/'tts-result.json').write_text(json.dumps({'voice':str(st['voice']),'label':st['label'],'engine':st['engine'],'fallbacks':fallbacks,'settings':cfg,'scenes':modes,'segments':results},ensure_ascii=False,indent=2))
+ (out/'tts-result.json').write_text(json.dumps({'voice':str(st['voice']),'label':st['label'],'engine':st['engine'],'fallbacks':fallbacks,'settings':cfg,'scenes':modes,'segments':results,'english_spans':spans},ensure_ascii=False,indent=2))
 
 if __name__=='__main__':
  run(Path(sys.argv[1]),Path(sys.argv[2]))
