@@ -1,4 +1,5 @@
 import React, {useLayoutEffect} from 'react';
+import {captionStyle, captionMaxHeight} from './captions.mjs';
 import {AbsoluteFill, Audio, Composition, Img, registerRoot, staticFile, useCurrentFrame} from 'remotion';
 
 
@@ -8,16 +9,14 @@ const Video: React.FC<any> = (p) => {
   const t = frame / fps;
   const width = p.width || 1080;
   const height = p.height || 1920;
-  const isVertical = height >= width;
 
   useLayoutEffect(() => {
     for (const element of document.querySelectorAll<HTMLElement>('[data-check]')) {
-      const rect = element.getBoundingClientRect();
-      if (element.scrollWidth > element.clientWidth || (element.dataset.check === 'subtitle' && element.offsetHeight > 180)) {
+      if (element.scrollWidth > element.clientWidth || (element.dataset.check === 'subtitle' && element.offsetHeight > captionMaxHeight(width, height))) {
         throw new Error('Actual render text overflow: ' + element.textContent);
       }
     }
-  }, [frame]);
+  }, [frame, width, height]);
 
   const scene = p.scenes.find((s: any) => t >= s.start && t < s.end) || p.scenes[p.scenes.length - 1] || {start: 0, end: 1, image: '', title: ''};
   // Cues are pre-cut once in Python (adapters.subtitle_cues); the renderer
@@ -55,30 +54,11 @@ const Video: React.FC<any> = (p) => {
         />
       )}
 
-      {/* Phụ đề: chỉ hiển thị nếu không bật hideSubtitles - luôn nằm gọn trên 1 dòng duy nhất */}
+      {/* Phụ đề dùng cùng bố cục với preflight, tối đa hai dòng có chủ đích */}
       {!p.hideSubtitles && cue && (() => {
         const lineText = cue.text;
         return (
-          <div data-check="subtitle" style={{
-            position: 'absolute',
-            bottom: isVertical ? 180 : 70,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            maxWidth: isVertical ? width - 80 : Math.min(width - 160, 1400),
-            width: 'auto',
-            whiteSpace: 'nowrap',
-            fontSize: isVertical ? 32 : 28,
-            fontWeight: 800,
-            lineHeight: '44px',
-            textAlign: 'center',
-            padding: '10px 24px',
-            boxSizing: 'border-box',
-            borderRadius: 18,
-            background: 'rgba(15, 23, 42, 0.88)',
-            border: '1.5px solid rgba(255, 255, 255, 0.25)',
-            boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-            letterSpacing: '0.2px'
-          }}>
+          <div data-check="subtitle" style={captionStyle(width, height) as React.CSSProperties}>
             {lineText}
           </div>
         );

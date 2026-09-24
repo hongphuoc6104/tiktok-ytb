@@ -62,6 +62,9 @@ async function serve(){
           else if(command==='connect') {
             result=await session.start();
             await ensureBoundPage();
+            if(bound?.page && !bound.page.url().startsWith(toolUrl)) {
+              await bound.page.goto(toolUrl,{waitUntil:'domcontentloaded',timeout:30000});
+            }
           }
           else if(command==='inspect') {
             if(session.status().status!=='connected') throw Error('CONNECT_FIRST: session unavailable');

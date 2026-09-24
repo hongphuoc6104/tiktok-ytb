@@ -346,6 +346,59 @@
               "additionalProperties": false
             },
             "minItems": 1
+          },
+          "audio_direction": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "properties": {
+              "vi": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "intent": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "pronunciation_notes": {
+                    "type": "string"
+                  },
+                  "learner_pause_seconds": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 8
+                  }
+                },
+                "required": [
+                  "intent",
+                  "pronunciation_notes",
+                  "learner_pause_seconds"
+                ]
+              },
+              "en": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "intent": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "pronunciation_notes": {
+                    "type": "string"
+                  },
+                  "learner_pause_seconds": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 8
+                  }
+                },
+                "required": [
+                  "intent",
+                  "pronunciation_notes",
+                  "learner_pause_seconds"
+                ]
+              }
+            }
           }
         },
         "required": [

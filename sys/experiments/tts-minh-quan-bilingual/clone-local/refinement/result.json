@@ -1,0 +1,60 @@
+{
+  "engine": "v3turbo-onnx-fp32",
+  "listening": "not_evaluated",
+  "clips": [
+    {
+      "file": "A-same.wav",
+      "text": "Xin chào, hôm nay chúng ta sẽ tìm hiểu cách deploy một ứng dụng lên server bằng docker và nginx.",
+      "denoise": true,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "seconds": 4.72,
+      "sha256": "0878e41fda325c48cb04bbf6aec12d5f8c0a89cfda666368a0b37f06f0376ba6"
+    },
+    {
+      "file": "A-mixed.wav",
+      "text": "Trong tiếng Anh, <en>wake</en> có nghĩa là thức giấc. Ví dụ: <en>I wake at six every morning.</en>",
+      "denoise": true,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "seconds": 4.64,
+      "sha256": "d0036f27c34362348000a9e904f43a9cda5b2e86fc497e8ec23e3047cf84822f"
+    },
+    {
+      "file": "B-same.wav",
+      "text": "Xin chào, hôm nay chúng ta sẽ tìm hiểu cách deploy một ứng dụng lên server bằng docker và nginx.",
+      "denoise": false,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "seconds": 5.04,
+      "sha256": "5fc637a1b0623a9868bacb365b24cb383c2a2cbd6373e4a0157cad6bcb9ba863"
+    },
+    {
+      "file": "B-mixed.wav",
+      "text": "Trong tiếng Anh, <en>wake</en> có nghĩa là thức giấc. Ví dụ: <en>I wake at six every morning.</en>",
+      "denoise": false,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "seconds": 4.72,
+      "sha256": "b5405de4d9e5dc26edfb4936f5ed0eb630cf4a5ec080be1c24a2321491b593d8"
+    },
+    {
+      "file": "C-same.wav",
+      "text": "Xin chào, hôm nay chúng ta sẽ tìm hiểu cách deploy một ứng dụng lên server bằng docker và nginx.",
+      "denoise": false,
+      "temperature": 0.65,
+      "top_p": 0.95,
+      "seconds": 5.36,
+      "sha256": "e004e0c5237e2d8334a38521fa0b4a31b00b0db2b4431c96928f4c72178b167f"
+    },
+    {
+      "file": "C-mixed.wav",
+      "text": "Trong tiếng Anh, <en>wake</en> có nghĩa là thức giấc. Ví dụ: <en>I wake at six every morning.</en>",
+      "denoise": false,
+      "temperature": 0.65,
+      "top_p": 0.95,
+      "seconds": 4.64,
+      "sha256": "863928c980e46b3701770b30c8cf82b9a7801a31adbf30ad2a44671a3a5d0e58"
+    }
+  ]
+}

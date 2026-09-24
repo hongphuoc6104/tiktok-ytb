@@ -1,0 +1,59 @@
+{
+  "name": "MQ tham chiếu V4 — thử nghiệm",
+  "engine": "v3turbo",
+  "backend": "onnx",
+  "precision": "fp32",
+  "vieneu": "3.8.1",
+  "sea_g2p": "0.9.1",
+  "reference_sha256": "55a7a812f6f450f3c365306f16c8a2c9165103d0b3a612874c9700dd2e9a5197",
+  "profile_sha256": "72c9a6e2834b7f92c2f8f918afa12780dbfddb85e55b733a6d578bb00692136e",
+  "temperature": 0.8,
+  "top_p": 0.95,
+  "speed": 1.0,
+  "denoise_reference": true,
+  "note": "Local synthesis conditioned on V4 demo audio; NOT the V4 model. Listening quality not evaluated.",
+  "clips": [
+    {
+      "file": "vi-clone.wav",
+      "kind": "clone",
+      "text": "Ví dụ này rất rõ ràng. Bạn tỉnh chưa? Mẹ bảo bé mở cửa rồi nghỉ một lát.",
+      "duration": 3.92,
+      "sha256": "74b7fc89b6e22b1afee285b71139202fb4e194b415955af5cfbd9b72704c0f92"
+    },
+    {
+      "file": "vi-preset.wav",
+      "kind": "preset",
+      "text": "Ví dụ này rất rõ ràng. Bạn tỉnh chưa? Mẹ bảo bé mở cửa rồi nghỉ một lát.",
+      "duration": 4.16,
+      "sha256": "9f22d9161f9a57daf776ee4264b3f9aeb8f16a711990ee2252a15ee5f81359e8"
+    },
+    {
+      "file": "en-clone.wav",
+      "kind": "clone",
+      "text": "Wake. I wake at six every morning. Think about these three things before you leave.",
+      "duration": 4.56,
+      "sha256": "1cde4ae99e2194973e3b5f5a7a28b80c309c7659cbcab0545c78de238f8a4ab8"
+    },
+    {
+      "file": "en-preset.wav",
+      "kind": "preset",
+      "text": "Wake. I wake at six every morning. Think about these three things before you leave.",
+      "duration": 4.96,
+      "sha256": "e12aa65c4bbc3c5ae101e73e2fec3c58dd636d151236f8f9bbdf5bd986c77b04"
+    },
+    {
+      "file": "mixed-clone.wav",
+      "kind": "clone",
+      "text": "Trong tiếng Anh, <en>wake</en> có nghĩa là thức giấc. Ví dụ: <en>I wake at six every morning.</en>",
+      "duration": 4.64,
+      "sha256": "d0036f27c34362348000a9e904f43a9cda5b2e86fc497e8ec23e3047cf84822f"
+    },
+    {
+      "file": "mixed-preset.wav",
+      "kind": "preset",
+      "text": "Trong tiếng Anh, <en>wake</en> có nghĩa là thức giấc. Ví dụ: <en>I wake at six every morning.</en>",
+      "duration": 4.8,
+      "sha256": "2bc69980ed3553eb15f2f6ecbb6d37117acadb76a8f39487fcb233cb21cb85f5"
+    }
+  ]
+}

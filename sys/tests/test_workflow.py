@@ -26,6 +26,8 @@ class WorkflowTests(unittest.TestCase):
         for name in ['pilot.py', 'workflow.py', 'machine_review.py', 'image_pipeline.py',
                      'content_contract.py', 'prompt_templates.py', 'adapters.py', 'config.json', 'AGENTS.md', 'GEMINI.md']:
             shutil.copy(ROOT / name, self.root / name)
+        # This fixture implements serial generation. Batch behavior has its own provider tests.
+        cfg=read(self.root/'config.json');cfg['flow_batch']=False;write(self.root/'config.json',cfg)
         self.p = Pilot(self.root)
         self.job = 'three-gates'
         self.addCleanup(self.temp.cleanup)

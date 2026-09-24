@@ -185,6 +185,7 @@ class Pilot:
    if {x['scene_id'] for x in segs}!={s['id'] for s in scenes}:raise Blocked('Unknown audio scene')
    for x in segs:
     if abs(x['start']-last)>.001 or x['end']<=x['start']:raise Blocked('Invalid segment timeline')
+    if not x['start']<x.get('content_end',x['end'])<=x['end']:raise Blocked('Invalid content boundary before silence')
     with wave.open(str(self.path(j,x['path']))) as wav:
      duration=wav.getnframes()/wav.getframerate();raw=wav.readframes(wav.getnframes())
      if audioop.rms(raw,wav.getsampwidth())<5:raise Blocked('Silent audio segment')
@@ -204,6 +205,7 @@ class Pilot:
     last=0
     for x in en['scenes']:
      if abs(x['start']-last)>.001 or x['end']<=x['start']:raise Blocked('Invalid English timeline')
+     if not x['start']<x.get('content_end',x['end'])<=x['end']:raise Blocked('Invalid English content boundary before silence')
      with wave.open(str(self.path(j,x['path']))) as wav:
       duration=wav.getnframes()/wav.getframerate();raw=wav.readframes(wav.getnframes())
       if audioop.rms(raw,wav.getsampwidth())<5:raise Blocked('Silent English scene')
@@ -227,6 +229,10 @@ class Pilot:
    checked=layout.get('checked_cues',layout.get('checked_frames',0))
    if not layout.get('passed') or (layout.get('applies') is not False and checked<1):raise Blocked('Layout check missing/failed')
    files=[p['video'],p['layout_report']]+p['stills']
+   if p.get('editorial_report'):
+    editorial=read(self.path(j,p['editorial_report']))
+    if editorial.get('errors'):raise Blocked('Editorial technical defects in render')
+    files.append(p['editorial_report'])
    en=self.payload(j,'audio').get('en')
    if en and p.get('video_16x9'):
     d16=float(probe(self.path(j,p['video_16x9']))['format']['duration'])
@@ -288,10 +294,10 @@ class Pilot:
   self.validate(j,m);r=self.rows(j)[m]
   if r['state']!='awaiting_review' or r['revision']!=rev or not note.strip():raise Blocked('Explicit approval of current awaiting revision required')
   self.db.execute('UPDATE modules SET state=? WHERE job=? AND module=?',('approved',j,m));self.db.commit();self.event(j,m,'technical_accepted' if actor=='technical' else 'approved',json.dumps({'revision':rev,'actor':actor,'note':note},ensure_ascii=False))
- def reject(self,j,m,note,rev=None,checkpoint=None,scene=None,character=None):
+ def reject(self,j,m,note,rev=None,checkpoint=None,scene=None,character=None,image=None,ratio=None,repair_plan=None):
   if m=='images' and self.brief(j):
    import image_pipeline
-   return image_pipeline.reject(self,j,rev,note,checkpoint,scene,character)
+   return image_pipeline.reject(self,j,rev,note,checkpoint,scene,character,image,ratio,repair_plan)
   self.refresh(j);self.db.execute('UPDATE modules SET state=? WHERE job=? AND module=?',('needs_changes',j,m))
   affected={m}
   for n in ORDER:
@@ -330,13 +336,15 @@ def locked(root):
 def main():
  import workflow
  ap=argparse.ArgumentParser(description='Video Pilot: content → media → video; review hoặc auto')
- ap.add_argument('command',choices=['doctor','new','status','next','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','flow-confirm-registration','check-draft','revise-brief','batch'])
+ ap.add_argument('command',choices=['doctor','new','status','next','repair-status','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','flow-confirm-registration','check-draft','revise-brief','batch'])
  ap.add_argument('job',nargs='?');ap.add_argument('stage',nargs='?',choices=workflow.STAGES)
  ap.add_argument('--mode',choices=['review','auto'],default='review')
  ap.add_argument('--revision',type=int);ap.add_argument('--note',default='')
- for name in ['evidence','scene','asset','character','request','brief','queue']:
+ for name in ['evidence','scene','asset','character','request','brief','queue','image','repair-plan']:
   ap.add_argument('--'+name)
  ap.add_argument('--part',choices=['audio'])
+ ap.add_argument('--ratio',choices=['9:16','16:9'])
+ ap.add_argument('--retry-review',action='store_true')
  a=ap.parse_args()
  with locked(ROOT):
   p=Pilot()
@@ -354,9 +362,12 @@ def main():
     if c=='new':result=workflow.new(p,a.job,read(a.brief) if a.brief else None,a.mode)
     elif c=='status':result=workflow.status(p,a.job)
     elif c=='next':result=workflow.next_step(p,a.job)
+    elif c=='repair-status':
+     from scripts.image_repairs import status as repair_status
+     result=repair_status(p,a.job,a.image,a.ratio)
     else:
      workflow.settings(p,a.job)
-     if c in ('run','resume'):result=workflow.advance(p,a.job,a.stage)
+     if c in ('run','resume'):result=workflow.advance(p,a.job,a.stage,retry_review=a.retry_review)
      elif c=='check-draft':result=p.check_draft(a.job)
      elif c=='revise-brief':
       if not a.brief:raise Blocked('--brief FILE required')
@@ -367,7 +378,7 @@ def main():
      else:
       if not a.stage:raise Blocked('Stage required: content, media or video')
       if c=='approve':result=workflow.approve(p,a.job,a.stage,a.revision,a.note)
-      elif c=='reject':result=workflow.reject(p,a.job,a.stage,a.revision,a.note,a.part,a.scene,a.character)
+      elif c=='reject':result=workflow.reject(p,a.job,a.stage,a.revision,a.note,a.part,a.scene,a.character,a.image,a.ratio,read(a.repair_plan) if a.repair_plan else None)
       elif c=='validate':
        for m in workflow.STAGES[a.stage]:p.validate(a.job,m)
        result={'passed':True,'stage':a.stage}

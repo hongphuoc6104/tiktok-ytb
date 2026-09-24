@@ -108,7 +108,8 @@ def gflow(p,*args,timeout=960):
     char_media_id=char_media_id,
     out_dir=out_folder,
     test_case=job_id,
-    timeout=timeout
+    timeout=timeout,
+    collection_only='--collect-only' in args_list,
    )
    src_img = Path(b2_res['path'])
    # The queue journal owns this stable path; preserve it for replay.
@@ -130,7 +131,9 @@ def gflow(p,*args,timeout=960):
    }
    dest_img.with_suffix('.json').write_text(json.dumps(meta, indent=2), encoding='utf-8')
 
-  proof_file = out_folder.parent / 'ui-proof.json'
+  evidence_folder = Path(_get_arg('--evidence-out', str(out_folder.parent)))
+  evidence_folder.mkdir(parents=True, exist_ok=True)
+  proof_file = evidence_folder / 'ui-proof.json'
   proof = {
    'passed': True,
    'mode': 'character-register' if is_reg else 'image',
@@ -141,7 +144,7 @@ def gflow(p,*args,timeout=960):
   if base_img: proof['base_image'] = base_img
   proof_file.write_text(json.dumps(proof, indent=2), encoding='utf-8')
 
-  shot = out_folder.parent / 'before-submit.png'
+  shot = evidence_folder / 'before-submit.png'
   copy_optional_flow_screenshot(b2_res.get('before_submit'), shot,
                                required=config(p).get('flow_require_ui_evidence', True))
 
@@ -153,7 +156,7 @@ def gflow(p,*args,timeout=960):
   batch_out = Path(args[args.index('--out')+1]).resolve()
   batch_out.mkdir(parents=True, exist_ok=True)
   jobs = data.get('jobs', [])
-  run_jobs = []
+  run_jobs = [{'id':job['id'],'status':'not_submitted','error':'Chưa đến lượt gửi'} for job in jobs]
   state_file = batch_out / 'gflow-run.json'
   mascot = p.root / 'assets/characters/channel-mascot/reference-v1.png'
   for offset in range(0, len(jobs), 4):
@@ -162,8 +165,8 @@ def gflow(p,*args,timeout=960):
              'outDir': str(batch_out / job['id']), 'characterRefPath': str(mascot),
              'charMediaId': 'de94a39b-155f-4afe-acbb-d9d4b59ad532'} for job in group]
    # Persist attempted membership BEFORE the external call. Ambiguous groups cannot fall through to serial retries.
-   entries = [{'id': job['id'], 'status': 'failed', 'error': 'Submission pending; reconcile before retry'} for job in group]
-   run_jobs.extend(entries)
+   entries = run_jobs[offset:offset+4]
+   for entry in entries: entry.update(status='failed',error='Submission pending; reconcile before retry')
    write(state_file, {'jobs': run_jobs})
    try:
     results = b2_bridge.generate_b2_batch(specs, timeout=timeout)
@@ -183,6 +186,12 @@ def gflow(p,*args,timeout=960):
      entry.pop('error', None)
      write(state_file, {'jobs':run_jobs})
    except Exception as ex:
+    observed = {x['request_id']:x['state'] for x in getattr(ex,'attempt_states',[]) if 'request_id' in x and 'state' in x}
+    for entry in entries:
+     if observed.get(entry['id']) in ('generated','collected'): entry.update(collection_only=True)
+     elif observed.get(entry['id']) == 'prepared': entry.update(status='not_submitted',error=str(ex))
+    if getattr(ex, 'collection_only', False):
+     for entry in entries: entry.update(collection_only=True)
     if getattr(ex, 'generation_submitted', True) is False:
      for entry in entries: entry.update(status='not_submitted', error=str(ex))
     write(state_file, {'jobs':run_jobs})
@@ -291,70 +300,12 @@ def images(p,j,out):
 def timestamp(t):
  ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
 
-_PHRASE_PUNCT=('.',',','?','!',';',':','—')
+from scripts.subtitles import subtitle_cues, phrase_chunks
 
-def split_into_phrases(text,max_len=32):
- """Python port of splitIntoPhrases (formerly duplicated in renderer/index.tsx
- and renderer/render.mjs). Must match that algorithm byte-for-byte: split on
- clause-ending punctuation first (keeping the punctuation on the preceding
- clause), then hard-wrap any clause still over max_len on word boundaries.
- This is the ONLY place this text is chunked for display now -- the renderer
- no longer carries a copy of this logic, it just plays back the cues this
- produces.
- """
- if not text or len(text)<=max_len:return [text or '']
- raw_parts=[p for p in re.split(r'([,?!;:.—])',text) if p]
- clauses=[];curr=''
- for p in raw_parts:
-  if p in _PHRASE_PUNCT:
-   curr+=p
-  else:
-   if curr.strip():clauses.append(curr.strip())
-   curr=p
- if curr.strip():clauses.append(curr.strip())
- result=[]
- for clause in clauses:
-  if len(clause)<=max_len:
-   result.append(clause)
-  else:
-   words=re.split(r'\s+',clause);buf=''
-   for w in words:
-    candidate=buf+' '+w if buf else w
-    if len(candidate)<=max_len:
-     buf=candidate
-    else:
-     if buf:result.append(buf)
-     buf=w
-   if buf:result.append(buf)
- return result if result else [text]
 
-def subtitle_cues(segments):
- """The single place subtitle text is cut into on-screen cues.
+def split_into_phrases(text, max_len=32):
+ return phrase_chunks(text or '', max_len)
 
- Splits each segment's text with split_into_phrases (max 32 chars/cue --
- matches getActiveSubtitle's on-screen limit) and allocates that segment's
- [start, end] across the resulting chunks by the same max(len(chunk), 6)
- character-weighting getActiveSubtitle used to compute on the fly, so the
- pacing feel is unchanged. Returns a flat, contiguous, non-overlapping list
- of {'text','start','end','scene_id'} cues; make_srt() and render() both
- consume this list so the exported SRT and the burned-in video always agree.
- Does NOT touch segment start/end themselves -- only how a segment's own
- span is subdivided for display.
- """
- cues=[]
- for seg in segments:
-  text=seg.get('text') or '';start=seg['start'];end=seg['end'];scene_id=seg.get('scene_id')
-  chunks=split_into_phrases(text,32)
-  if len(chunks)<=1:
-   cues.append({'text':chunks[0] if chunks else text,'start':start,'end':end,'scene_id':scene_id})
-   continue
-  weights=[max(len(c),6) for c in chunks];total=sum(weights)
-  duration=end-start;cursor=start
-  for i,c in enumerate(chunks):
-   c_end=end if i==len(chunks)-1 else start+(sum(weights[:i+1])/total)*duration
-   cues.append({'text':c,'start':cursor,'end':c_end,'scene_id':scene_id})
-   cursor=c_end
- return cues
 
 def make_srt(segs):
  cues=subtitle_cues(segs)
@@ -456,6 +407,15 @@ def needs_en(p,j):
  b=p.brief(j)
  return bool(b) and b[0].get('aspect_ratio') in ('dual','16:9')
 
+def scene_tail(scene, language, gaps, last):
+ """A learner turn is a measured scene-tail hold, never spoken metadata."""
+ default = gaps.get('tail' if last else 'para', DEFAULT_PAUSE['tail' if last else 'para'])
+ requested = scene.get('audio_direction', {}).get(language, {}).get('learner_pause_seconds', 0)
+ if isinstance(requested, bool) or not isinstance(requested, (int, float)) or not 0 <= requested <= 8:
+  raise Blocked('learner_pause_seconds must be between 0 and 8')
+ return max(default, requested)
+
+
 def english(p,j,out,cfg,scenes):
  py=p.root/'.venv-en/bin/python'
  if not py.exists():raise Blocked('Install the English TTS environment (.venv-en)')
@@ -464,7 +424,7 @@ def english(p,j,out,cfg,scenes):
  g=cfg.get('tts_pause',DEFAULT_PAUSE)
  retake=retakes(p,j)
  items=[{'scene_id':s['id'],'narration_en':s['narration_en'],'retake':retake.get(s['id'],0),
-         'tail':g.get('tail',DEFAULT_PAUSE['tail']) if k==len(scenes)-1 else g.get('para',DEFAULT_PAUSE['para'])}
+         'tail':scene_tail(s,'en',g,k==len(scenes)-1)}
         for k,s in enumerate(scenes)]
  keys=('en_voice','en_device','en_quantize','en_temperature','en_threads','en_seed')
  # Job-level cache dir so it survives pilot.run()'s fresh per-revision folders.
@@ -479,7 +439,9 @@ def english(p,j,out,cfg,scenes):
    fmt=(wav.getnchannels(),wav.getsampwidth(),wav.getframerate())
    if params and fmt!=params:raise Blocked('Inconsistent English audio formats')
    params=fmt;d=wav.getnframes()/wav.getframerate();frames.append(wav.readframes(wav.getnframes()))
-  done.append({'scene_id':x['scene_id'],'start':cursor,'end':cursor+d,'path':rel(p,j,f)});cursor+=d
+  item={'scene_id':x['scene_id'],'start':cursor,'end':cursor+d,'path':rel(p,j,f)}
+  if 'content_duration' in x:item['content_end']=cursor+x['content_duration']
+  done.append(item);cursor+=d
  combined=out/'narration_en.wav'
  with wave.open(str(combined),'wb') as wav:wav.setnchannels(params[0]);wav.setsampwidth(params[1]);wav.setframerate(params[2]);wav.writeframes(b''.join(frames))
  master(combined,out/'narration_en_eq.wav',cfg)
@@ -499,7 +461,7 @@ def audio(p,j,out):
  scenes=[{'scene_id':s['id'],'narration':s['narration'],'texts':chunks(s['narration']),'retake':retake.get(s['id'],0)} for s in content['scenes']]
  for k,sc in enumerate(scenes):
   sc['gaps']=[gap_after(t,g) for t in sc['texts'][:-1]]
-  sc['tail']=g.get('tail',DEFAULT_PAUSE['tail']) if k==len(scenes)-1 else g.get('para',DEFAULT_PAUSE['para'])
+  sc['tail']=scene_tail(content['scenes'][k],'vi',g,k==len(scenes)-1)
  keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision','tts_speed','tts_device','tts_gpu_dtype','tts_batch_size')
  # Job-level cache dir (not per-revision): pilot.run() always mkdirs a fresh
  # revisions/audio/N, so a cache rooted there could never hit across runs.
@@ -518,7 +480,9 @@ def audio(p,j,out):
    fmt=(wav.getnchannels(),wav.getsampwidth(),wav.getframerate())
    if params and fmt!=params:raise Blocked('Inconsistent TTS audio formats')
    params=fmt;duration=wav.getnframes()/wav.getframerate();frames.append(wav.readframes(wav.getnframes()))
-  segments.append({'scene_id':x['scene_id'],'text':x['text'],'start':cursor,'end':cursor+duration,'path':rel(p,j,file)});cursor+=duration
+  item={'scene_id':x['scene_id'],'text':x['text'],'start':cursor,'end':cursor+duration,'path':rel(p,j,file)}
+  if 'content_duration' in x:item['content_end']=cursor+x['content_duration']
+  segments.append(item);cursor+=duration
  combined=out/'narration.wav'
  with wave.open(str(combined),'wb') as wav:wav.setnchannels(params[0]);wav.setsampwidth(params[1]);wav.setframerate(params[2]);wav.writeframes(b''.join(frames))
  master(combined,out/'narration_eq.wav',cfg)
@@ -552,10 +516,13 @@ def render(p,j,out):
  if en:
   props['en_duration']=en['duration']
   props['en_scenes']=scenes if ratio=='16:9' else render_scenes('en','16:9')
+ from scripts.editorial_audit import audit
+ editorial=audit(props);write(out/'editorial-audit.json',editorial)
+ if editorial['errors']:raise Blocked('Editorial technical defects; see editorial-audit.json')
  write(out/'props.json',props)
  r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=3600);(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
  if r.returncode:raise Blocked('Render or layout check failed; see render.log: '+r.stderr[-500:])
- result={'video':rel(p,j,out/'video.mp4'),'stills':[rel(p,j,out/(s['id']+'.png')) for s in scenes],'layout_report':rel(p,j,out/'layout.json'),'duration':en['duration'] if ratio=='16:9' else snd['duration']}
+ result={'video':rel(p,j,out/'video.mp4'),'stills':[rel(p,j,out/(s['id']+'.png')) for s in scenes],'layout_report':rel(p,j,out/'layout.json'),'editorial_report':rel(p,j,out/'editorial-audit.json'),'duration':en['duration'] if ratio=='16:9' else snd['duration']}
  if (out/'video_16x9.mp4').exists():result['video_16x9']=rel(p,j,out/'video_16x9.mp4')
  if (out/'video_9x16.mp4').exists():result['video_9x16']=rel(p,j,out/'video_9x16.mp4')
  return result

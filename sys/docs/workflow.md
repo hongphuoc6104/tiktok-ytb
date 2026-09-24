@@ -73,6 +73,8 @@ Mode được giữ cố định trong job. Job trước v3 chỉ đọc lịch 
 
 ## Kho từ vựng cho kênh học từ
 
+Quy trình sửa đúng từng ảnh, đối chiếu tiến bộ và giới hạn vòng sửa nằm tại [Chống vòng lặp sửa ảnh](image-repair-loops.md). Ưu tiên `--image IMAGE_ID --ratio 9:16`; `--scene` có nghĩa sửa tất cả ảnh trong cảnh. Từ lượt sửa thứ hai của mỗi ảnh cần `--repair-plan`; xem hash và lịch sử bằng `repair-status JOB --image IMAGE_ID`.
+
 Job dạy từ vựng lấy brief từ `vocab/bank.py` thay vì viết tay: mỗi video một nghĩa, ledger
 giữ dấu từ đã làm, từ nhiều nghĩa tách thành nhiều mục. Dữ liệu kho (sources, bank.jsonl,
 ledger) không nằm trong integrity baseline nên thêm từ không chặn job đang chạy.
@@ -94,3 +96,7 @@ Việt: Minh Quân Pro / VieNeu v3 Turbo ONNX FP32. Anh: Alba / Pocket TTS CPU I
 ## Dọn dẹp
 
 Không xóa lịch sử, bằng chứng Flow hoặc model đang dùng để làm sạch mã cũ. Script dọn cũ xóa toàn bộ attempts đã được bỏ. Xuất thành phẩm chỉ sau video được duyệt; chưa tự dọn artifact của job.
+
+## Đạo diễn và kiểm tra biên tập
+
+Đọc [director-system.md](director-system.md). Bốn vai trò đạo diễn hỗ trợ ba gate hiện có. Brief mới dùng mục tiêu học và câu chuyện; brief đã lưu không thay đổi. Lượt thực hành có thể khai báo khoảng chờ cuối cảnh qua audio_direction của content-v3. Phụ đề dùng một bộ cue chung cho SRT/MP4, tối đa hai dòng; report kỹ thuật biên tập không thay thế nghe/xem thật. Khi Python mặc định thiếu phụ thuộc, dùng `.venv/bin/python pilot.py ...`.

@@ -5,8 +5,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {outputPlans} from './outputs.mjs';
+import {captionStyle, captionMaxHeight} from './captions.mjs';
 
-const dir = process.argv[2];
+const dir = path.resolve(process.argv[2]);
 const props = JSON.parse(fs.readFileSync(path.join(dir, 'props.json')));
 const publicDir = path.join(dir, 'public');
 
@@ -51,14 +52,20 @@ try {
     let failures = [];
 
     for (const cue of props.cues) {
-      await page.setContent(`
-        <div id="subtitle" style="position:absolute;bottom:100px;left:50%;transform:translateX(-50%);max-width:${checkWidth - 80}px;white-space:nowrap;font:800 32px/44px Arial;padding:10px 24px;box-sizing:border-box;text-align:center"></div>
-      `);
-      await page.locator('#subtitle').evaluate((e, t) => e.textContent = t, cue.text);
-      const bad = await page.evaluate(([w, h]) => [...document.querySelectorAll('div')].flatMap(e => {
+      await page.setContent('<div id="subtitle"></div>');
+      const style = captionStyle(checkWidth, checkHeight);
+      await page.locator('#subtitle').evaluate((e, {text, style}) => {
+        for (const [key, value] of Object.entries(style)) {
+          e.style[key] = typeof value === 'number' && !['fontWeight', 'lineHeight'].includes(key) ? `${value}px` : String(value);
+        }
+        e.textContent = text;
+      }, {text: cue.text, style});
+      const bad = await page.evaluate(([w, h, maxHeight]) => {
+        const e = document.querySelector('#subtitle');
         const r = e.getBoundingClientRect();
-        return r.left < 0 || r.right > w || r.top < 0 || r.bottom > h || (e.id === 'subtitle' && r.height > 100) ? [e.id] : [];
-      }), [checkWidth, checkHeight]);
+        return r.left < 0 || r.right > w || r.top < 0 || r.bottom > h || r.height > maxHeight || e.scrollWidth > e.clientWidth
+          ? ['subtitle'] : [];
+      }, [checkWidth, checkHeight, captionMaxHeight(checkWidth, checkHeight)]);
       if (bad.length) failures.push({text: cue.text, errors: bad});
     }
     await pw.close();
@@ -67,7 +74,7 @@ try {
       passed: !failures.length,
       applies: true,
       checked_cues: props.cues.length,
-      method: 'matching text geometry; representative rendered stills require human review',
+      method: 'shared composition style; at most two lines; actual playback/readability still requires review',
       failures
     };
   }

@@ -6,7 +6,10 @@
       "minLength": 1
     },
     "backend": {
-      "enum": ["onnx", "pytorch"]
+      "enum": [
+        "onnx",
+        "pytorch"
+      ]
     },
     "wav": {
       "type": "string",
@@ -22,7 +25,7 @@
     },
     "segments": {
       "type": "array",
-      "minItems": 6,
+      "minItems": 1,
       "items": {
         "type": "object",
         "properties": {
@@ -45,6 +48,10 @@
           "path": {
             "type": "string",
             "minLength": 1
+          },
+          "content_end": {
+            "type": "number",
+            "minimum": 0
           }
         },
         "required": [
@@ -97,6 +104,10 @@
               "path": {
                 "type": "string",
                 "minLength": 1
+              },
+              "content_end": {
+                "type": "number",
+                "minimum": 0
               }
             },
             "required": [

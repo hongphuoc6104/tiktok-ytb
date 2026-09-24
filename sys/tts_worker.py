@@ -3,7 +3,7 @@ import hashlib,json,sys
 from pathlib import Path
 import numpy as np,soundfile as sf
 
-CACHE_VERSION=1  # bump to invalidate every cached WAV (e.g. after a model/package upgrade)
+CACHE_VERSION=2  # bump to invalidate every cached WAV (e.g. after a model/package upgrade)
 
 def troughs(w,sr,thresh_db=-40.,win_s=0.01,min_s=0.10):
  """Silence runs strictly inside w, as (start,end) sample pairs."""
@@ -69,7 +69,9 @@ def normalize_text_for_tts(text):
  def _repl(m):
   w=m.group(0)
   return w if w in ACRONYM_WHITELIST else w.lower()
- return re.sub(r'\b[A-Z]{2,}\b',_repl,text)
+ text=re.sub(r'\b[A-Z]{2,}\b',_repl,text)
+ # Pronunciation workaround stays in VieNeu input; original script/captions stay I.
+ return re.sub(r'\bI\b', 'Ai', text)
 
 def change_tempo(w,sr,speed):
  """Adjust audio tempo without changing pitch using ffmpeg atempo filter."""
@@ -220,12 +222,13 @@ def run(source,out):
  results=[]
  for i,x in enumerate(flat):
   w=x['wav']
+  content_duration=len(w)/sr  # Chunk boundary, not detected phoneme timing.
   if 'pause' in x:
    nxt=flat[i+1]['wav'] if i+1<len(flat) else np.zeros(1,dtype=np.float32)
    w=np.concatenate([w,np.zeros(pause_pad_samples(w,nxt,sr,x['pause']),dtype=np.float32)])
   path=f'segment-{i:03}.wav'
   sf.write(str(out/path),w,sr,subtype='PCM_16')
-  results.append({'scene_id':x['scene_id'],'text':x['text'],'path':path})
+  results.append({'scene_id':x['scene_id'],'text':x['text'],'path':path,'content_duration':content_duration})
  (out/'tts-result.json').write_text(json.dumps({'voice':str(st['voice']),'label':st['label'],'engine':st['engine'],'fallbacks':fallbacks,'settings':cfg,'scenes':modes,'segments':results},ensure_ascii=False,indent=2))
 
 if __name__=='__main__':
