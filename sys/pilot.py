@@ -7,6 +7,8 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parent
 ORDER=['control','content','audio','images','render']
 DEPS={'control':[],'content':['control'],'images':['control','content'],'audio':['control','content'],'render':['control','content','images','audio']}
+PROTECTED_FILES=['pilot.py','workflow.py','machine_review.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','tts-gpu-requirements.lock','en-requirements.lock','b2_bridge.py']
+PROTECTED_DIRS=['schemas','.agents','renderer','tests','examples','scripts']
 class Blocked(Exception):pass
 def read(p):return json.loads(Path(p).read_text())
 def write(p,x):
@@ -30,15 +32,31 @@ class Pilot:
   with self._db_lock:
    return {r['module']:dict(r) for r in self.db.execute('SELECT * FROM modules WHERE job=?',(j,))}
  def protected(self):
-  paths=[self.root/x for x in ['pilot.py','workflow.py','machine_review.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','tts-gpu-requirements.lock','en-requirements.lock']]
-  paths.append(self.root/'b2_bridge.py')
+  paths=[self.root/x for x in PROTECTED_FILES]
   paths += list((self.root/'vocab').glob('*.py'))
   engine = self.root/'experiments/b2_illustrator'
   paths += [x for x in engine.glob('*') if x.suffix in ('.py','.mjs') and not x.name.startswith('test')]
   paths += [engine/x for x in ('config.json','acceptance.json','browser-profiles.json')]
-  for folder in ['schemas','.agents','renderer','tests','examples','scripts']:
+  for folder in PROTECTED_DIRS:
    paths+=list((self.root/folder).rglob('*'))
   return {str(p.relative_to(self.root)):digest(p) for p in sorted(paths) if p.is_file() and '__pycache__' not in str(p)}
+ def git_state(self):
+  """HEAD and uncommitted protected changes for provenance; None fields when git is unavailable."""
+  specs=PROTECTED_FILES+PROTECTED_DIRS+[':(glob)vocab/*.py',':(glob)experiments/b2_illustrator/*.py',':(glob)experiments/b2_illustrator/*.mjs',':(exclude,glob)experiments/b2_illustrator/test*']+[f'experiments/b2_illustrator/{x}' for x in ('config.json','acceptance.json','browser-profiles.json')]
+  git=lambda *a:subprocess.run(['git','-C',str(self.root),*a],capture_output=True,text=True,timeout=60)
+  try:
+   head=git('rev-parse','HEAD')
+   if head.returncode:return {'head':None,'dirty':None,'changes':None}
+   st=git('status','--porcelain','--',*specs)
+   changes=[x for x in st.stdout.splitlines() if x.strip() and '__pycache__' not in x]
+   return {'head':head.stdout.strip(),'dirty':bool(changes) if not st.returncode else None,'changes':changes if not st.returncode else None}
+  except (OSError,subprocess.SubprocessError):return {'head':None,'dirty':None,'changes':None}
+ def clean_code(self,mode):
+  """Auto jobs run unattended, so they must start from committed protected code (traceable, restorable)."""
+  g=self.git_state()
+  if mode=='auto' and g['dirty'] and read(self.root/'config.json').get('auto_require_clean_code',True):
+   raise Blocked(f"AUTO_REQUIRES_CLEAN_CODE: code được bảo vệ có {len(g['changes'])} thay đổi chưa commit ("+', '.join(x[3:] for x in g['changes'][:10])+(' …' if len(g['changes'])>10 else '')+'). Job auto chỉ được tạo trên code đã commit. Dừng lại và báo người dùng commit hoặc khôi phục các thay đổi này; agent không tự sửa/commit code bảo vệ.')
+  return g
  def job(self,j):
   if not j or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_' for c in j):raise Blocked('Invalid job ID')
   return self.root/'runs'/j
@@ -46,21 +64,56 @@ class Pilot:
   p=(self.job(j)/s).resolve()
   if not p.is_relative_to(self.job(j).resolve()):raise Blocked('Artifact escapes job directory')
   return p
+ def integrity_diff(self,j,now=None):
+  old=read(self.job(j)/'integrity.json');now=self.protected() if now is None else now
+  d={'modified':sorted(k for k in old.keys()&now.keys() if old[k]!=now[k]),'added':sorted(now.keys()-old.keys()),'removed':sorted(old.keys()-now.keys())}
+  return {'job':j,'changed':sum(map(len,d.values())),**d}
  def integrity(self,j):
-  if read(self.job(j)/'integrity.json')!=self.protected():raise Blocked('Protected implementation changed. Production blocked; review changes in development mode and create a new job.')
+  d=self.integrity_diff(j)
+  if d['changed']:
+   lines=[f'{k}: {x}' for k in ('modified','added','removed') for x in d[k]]
+   raise Blocked(f"Protected implementation changed. Production blocked: {d['changed']} file bảo vệ khác baseline của job {j}:\n  "+'\n  '.join(lines[:15])+(f'\n  … và {len(lines)-15} file khác' if len(lines)>15 else '')
+    +f'\nKHÔNG tạo job mới cho cùng nội dung (sẽ làm lại từ đầu, tốn quota). Dừng lại và báo người dùng. Cách xử lý: khôi phục các file trên về đúng bản cũ, '
+    +f'hoặc người dùng (không phải agent) xem `python3 pilot.py integrity-diff {j}` rồi tự chạy `python3 pilot.py adopt-code {j} --confirm {j} --reason "..."` để job chạy tiếp với code mới.')
+ def adopt_code(self,j,confirm,reason):
+  """Human-only rebaseline: keep all recorded revisions/reviews/approvals, continue under the new code.
+  Stale needs_attention machine reviews are superseded so the next resume re-reviews under the new code."""
+  if confirm!=j:raise Blocked(f'adopt-code cần --confirm {j} (đúng mã job)')
+  if not (reason or '').strip():raise Blocked('adopt-code cần --reason nêu lý do nhận code mới')
+  base=self.job(j)/'integrity.json'
+  if not base.is_file() or not self.rows(j):raise Blocked('Unknown job')
+  now=self.protected();d=self.integrity_diff(j,now)
+  if not d['changed']:raise Blocked('Code bảo vệ trùng baseline của job; không có gì để nhận')
+  at=time.time();ts=time.strftime('%Y%m%dT%H%M%S',time.localtime(at))+f'-{time.time_ns()%10**9:09d}'
+  hist=self.job(j)/'integrity-history'/f'{ts}.json';rel=str(hist.relative_to(self.job(j)))
+  if hist.exists():raise Blocked('Integrity history entry already exists; retry')
+  stale=[]
+  for f in sorted((self.job(j)/'machine-reviews').glob('*/attempt.json')):
+   x=read(f)
+   if x.get('state')=='needs_attention':stale.append((f,x))
+  g=self.git_state()
+  write(hist,{'job':j,'at':at,'actor':'user','reason':reason.strip(),'git_head':g['head'],'git_dirty':g['dirty'],'git_changes':g['changes'],'diff':d,
+   'old_baseline':read(base),'old_baseline_sha256':digest(base),'new_baseline_sha256':hashobj(now),
+   'superseded_machine_reviews':{str(f.relative_to(self.job(j))):x for f,x in stale}})
+  for f,x in stale:write(f,{**x,'state':'superseded','superseded_state':x['state'],'superseded_by':'code_adopted','history':rel})
+  write(base,now)
+  self.event(j,'control','code_adopted',json.dumps({'history':rel,'reason':reason.strip(),'changed':d['changed'],'git_head':g['head'],'superseded_machine_reviews':len(stale)},ensure_ascii=False))
+  return {'job':j,'adopted':True,'history':str(hist),'changed':d['changed'],'superseded_machine_reviews':len(stale),'next':f'python3 pilot.py resume {j}'}
  def brief_policies(self,j,brief):
   # Chính sách riêng của kênh do config chỉ định; bộ điều phối không biết chủ đề nào cả.
   for ref in read(self.root/'config.json').get('brief_policies',[]):
    module,_,func=ref.partition(':')
    import importlib
    getattr(importlib.import_module(module),func or 'check')(self.root,j,brief)
- def new(self,j,brief=None):
+ def new(self,j,brief=None,mode=None):
   if brief is not None:
    from content_contract import validate_brief
    validate_brief(self.root,brief);self.brief_policies(j,brief)
   p=self.job(j)
   if p.exists():raise Blocked('Job already exists')
+  g=self.clean_code(mode)
   p.mkdir(parents=True);write(p/'integrity.json',self.protected())
+  write(p/'integrity-meta.json',{'created_at':time.time(),'mode':mode,'git_head':g['head'],'protected_dirty':g['dirty'],'protected_changes':g['changes']})
   (p/'draft').mkdir()
   if brief is None:shutil.copy(self.root/'examples/content.json',p/'draft/content.json')
   else:
@@ -336,7 +389,7 @@ def locked(root):
 def main():
  import workflow
  ap=argparse.ArgumentParser(description='Video Pilot: content → media → video; review hoặc auto')
- ap.add_argument('command',choices=['doctor','new','status','next','repair-status','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','flow-confirm-registration','check-draft','revise-brief','batch'])
+ ap.add_argument('command',choices=['lift-cap','doctor','new','status','next','repair-status','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','flow-confirm-registration','check-draft','revise-brief','batch','integrity-diff','adopt-code'])
  ap.add_argument('job',nargs='?');ap.add_argument('stage',nargs='?',choices=workflow.STAGES)
  ap.add_argument('--mode',choices=['review','auto'],default='review')
  ap.add_argument('--revision',type=int);ap.add_argument('--note',default='')
@@ -345,6 +398,7 @@ def main():
  ap.add_argument('--part',choices=['audio'])
  ap.add_argument('--ratio',choices=['9:16','16:9'])
  ap.add_argument('--retry-review',action='store_true')
+ ap.add_argument('--confirm',help='adopt-code: nhập lại đúng mã job');ap.add_argument('--reason',default='')
  a=ap.parse_args()
  with locked(ROOT):
   p=Pilot()
@@ -359,7 +413,13 @@ def main():
     result=workflow.batch(p,jobs)
    else:
     if not a.job:raise Blocked('Job required')
-    if c=='new':result=workflow.new(p,a.job,read(a.brief) if a.brief else None,a.mode)
+    if c=='new':p.clean_code(a.mode);result=workflow.new(p,a.job,read(a.brief) if a.brief else None,a.mode)
+    elif c=='integrity-diff':result=p.integrity_diff(a.job)
+    elif c=='adopt-code':
+     if not sys.stdin.isatty():raise Blocked('adopt-code chỉ dành cho người dùng, chạy trực tiếp trong terminal')
+     # Human-only: agents must never run this; they report the integrity block to the user instead.
+     print(f'CẢNH BÁO: adopt-code chỉ dành cho NGƯỜI DÙNG. Job {a.job} sẽ chạy tiếp với code bảo vệ hiện tại; baseline cũ được lưu trong integrity-history. Agent không bao giờ tự chạy lệnh này.',file=sys.stderr)
+     result=p.adopt_code(a.job,a.confirm,a.reason)
     elif c=='status':result=workflow.status(p,a.job)
     elif c=='next':result=workflow.next_step(p,a.job)
     elif c=='repair-status':
@@ -367,7 +427,10 @@ def main():
      result=repair_status(p,a.job,a.image,a.ratio)
     else:
      workflow.settings(p,a.job)
-     if c in ('run','resume'):result=workflow.advance(p,a.job,a.stage,retry_review=a.retry_review)
+     if c=='lift-cap':
+      if not sys.stdin.isatty() or input(f'Gõ lại mã job {a.job} để xác nhận mở khóa: ').strip()!=a.job:raise Blocked('lift-cap chỉ dành cho người dùng, chạy trực tiếp trong terminal')
+      result=workflow.lift_cap(p,a.job,a.note)
+     elif c in ('run','resume'):result=workflow.advance(p,a.job,a.stage,retry_review=a.retry_review)
      elif c=='check-draft':result=p.check_draft(a.job)
      elif c=='revise-brief':
       if not a.brief:raise Blocked('--brief FILE required')
