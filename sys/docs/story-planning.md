@@ -24,7 +24,10 @@ Adapter lưu outline trước khi viết chi tiết. Nội dung tạo thủ côn
 - Mỗi hình có id quản lý, description, character_ids, based_on (null hoặc ảnh trước cùng cảnh), preserve, change, reason, visible_text.
 - based_on được đính kèm bằng ảnh thật trong cùng tỷ lệ; không coi việc lặp prompt là giữ nền. Bằng chứng UI phải xác nhận ảnh đã được đính kèm; không xác nhận được thì dừng trước gửi.
 - Mỗi beat chỉ định image_id, purpose, anchor.vi/en (quote và occurrence), effect và focus.x/y trong khoảng 0–1. Nhịp đầu neo đầu lời dẫn; các nhịp sau tăng dần. Có thể dùng lại một hình nhiều lần.
-- Hiệu ứng hỗ trợ: hold, cut, fade, slide_left, zoom_in, zoom_out. Không tự thêm hiệu ứng ngoài danh sách.
+- Hiệu ứng hỗ trợ: hold, cut, fade, slide_left, zoom_in, zoom_out, pan_left, pan_right (trượt ngang trong biên phóng 10%), pop (nảy vào bằng spring). Không tự thêm hiệu ứng ngoài danh sách.
+- `beats[].overlays[]` (tùy chọn, tối đa 6): `label`, `chapter_title` (hiện ~3,5 s rồi trượt ra), `map_pin`, `counter` (đếm từ 0 tới `to`, định dạng vi-VN), `arrow` (`angle` độ, 0 = chỉ sang phải; x,y là đầu mũi tên). x,y trong 0–1, `at` giây tính từ đầu beat. Remotion vẽ bằng Noto Sans Bold nhúng trong bundle (`renderer/fonts`), nên chữ Việt có dấu luôn đúng; chữ tràn ô là lỗi render. `to` chỉ dành cho counter, `angle` chỉ cho arrow; giới hạn chữ 40 (label/map_pin), 60 (chapter_title), 30 (counter/arrow).
+- `images[].kind: "clip"` (mặc định still): cần `from_image` (ảnh still cùng cảnh làm khung đầu) và `motion`, không có visible_text. Tệp clip là MP4 ở chỗ của ảnh; renderer nhận diện theo đuôi .mp4, phát tắt tiếng bằng OffthreadVideo, lặp khi clip ngắn hơn beat, cắt ở cuối beat; overlay vẫn vẽ chồng lên.
+- `scenes[].chapter` (tên chương cho mô tả YouTube) và `packaging` (titles ×3, thumbnail.image_id là ảnh still có sẵn, hook, tags) chỉ được kiểm hình dạng/tham chiếu ở content.
 - Dual tạo riêng bộ hình 9:16 và 16:9 để giữ bố cục/chữ đúng khung. Số hình thực tế vì vậy có thể gấp đôi số hình logic.
 - Vân tay (identity) của một yêu cầu ảnh (image_pipeline.request()) gắn theo target/prompt/edits/tham chiếu của chính ảnh đó, không theo hash toàn bộ kịch bản; sửa một cảnh không làm mất hiệu lực ảnh của cảnh khác.
 - Khi tạo hàng loạt, ảnh được gom theo tỷ lệ trước rồi mới theo cảnh (produce() hoàn tất một tỷ lệ mới sang tỷ lệ kế) để không đảo toggle tỷ lệ trên giao diện Flow từng tấm.
@@ -32,7 +35,9 @@ Adapter lưu outline trước khi viết chi tiết. Nội dung tạo thủ côn
 
 ## Ý bắt buộc và tiếng Anh (coverage)
 
-coverage ánh xạ mỗi ý bắt buộc tới một cảnh và trích dẫn nguyên văn `quote` (Việt) từ narration của đúng cảnh đó. Khi bản có tiếng Anh (16:9 hoặc dual), mỗi mục coverage còn phải có `quote_en` trích nguyên văn từ narration_en của CHÍNH cảnh đó; validate_content (content_contract.py) chặn nếu thiếu quote_en hoặc trích sai cảnh. Bản duyệt (review_plan) hiện bảng hai cột Việt/Anh khi có ít nhất một quote_en.
+Brief có `voice_language` (ngôn ngữ bản 16:9; mặc định `en`, 9:16 luôn `vi`) và `subtitles` (mặc định bật cho giọng Việt). 16:9 + `vi` chỉ tạo WAV Việt; không cần narration_en, quote_en, neo `en` hay ước tính tiếng Anh, và thời lượng lấy theo brief (long-form 480–780 s được). Lời dẫn dài được cắt câu, rồi dấu phẩy, rồi khoảng trắng để mỗi đoạn TTS ≤240 ký tự.
+
+coverage ánh xạ mỗi ý bắt buộc tới một cảnh và trích dẫn nguyên văn `quote` (Việt) từ narration của đúng cảnh đó. Khi bản có tiếng Anh (16:9/dual giọng Anh), mỗi mục coverage còn phải có `quote_en` trích nguyên văn từ narration_en của CHÍNH cảnh đó; validate_content (content_contract.py) chặn nếu thiếu quote_en hoặc trích sai cảnh. Bản duyệt (review_plan) hiện bảng hai cột Việt/Anh khi có ít nhất một quote_en.
 
 ## Sinh ảnh hàng loạt (flow_batch)
 
@@ -42,7 +47,7 @@ Cờ `flow_batch` trong config.json (mặc định không có, tức tắt) cho 
 
 visible_text là danh sách cho phép chính xác, mỗi mục gồm text, placement, object. Rỗng nghĩa là không có chữ/số. planning.text_style quy định font tham chiếu, color, outline, size, placement chung. Prompt hình chỉ lấy nội dung nhìn thấy, không tuần tự hóa mã quản lý. Mẫu prompt_templates.py giữ nguyên.
 
-Ở media kiểm tra đúng chữ, không chữ thừa/mã nhân vật/logo, tính dễ đọc, màu/kiểu/vị trí, vùng phụ đề và mép hình. Tên font trong prompt là yêu cầu thẩm mỹ, không chứng minh font kết quả đúng. Phụ đề lời đọc cắt một lần ở Python (adapters.subtitle_cues); make_srt và renderer dùng chung danh sách cue đó nên .srt xuất ra luôn khớp đúng chữ trên màn hình — renderer không tự cắt chữ nữa. Bản 16:9 ẩn phụ đề nên layout.json ghi applies:false thay vì kiểm một thứ không tồn tại. Chữ thay đổi phải tạo ảnh biến thể và duyệt cùng media.
+Ở media kiểm tra đúng chữ, không chữ thừa/mã nhân vật/logo, tính dễ đọc, màu/kiểu/vị trí, vùng phụ đề và mép hình. Tên font trong prompt là yêu cầu thẩm mỹ, không chứng minh font kết quả đúng. Phụ đề lời đọc cắt một lần ở Python (adapters.subtitle_cues); make_srt và renderer dùng chung danh sách cue đó nên .srt xuất ra luôn khớp đúng chữ trên màn hình — renderer không tự cắt chữ nữa. Bản 16:9 tiếng Anh ẩn phụ đề nên layout.json ghi applies:false thay vì kiểm một thứ không tồn tại. Bản 16:9 tiếng Việt (`voice_language: "vi"`) đốt phụ đề Việt cùng danh sách cue, kiểm hình học ở 1920×1080 (chữ 46 px); `subtitles: false` tắt phụ đề ở mọi bản tiếng Việt. Chữ thay đổi phải tạo ảnh biến thể và duyệt cùng media.
 
 ## Thời lượng và nhịp
 

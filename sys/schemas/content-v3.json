@@ -91,10 +91,6 @@
             "type": "string",
             "minLength": 1
           },
-          "chapter": {
-            "type": "string",
-            "minLength": 1
-          },
           "purpose": {
             "type": "string",
             "minLength": 1
@@ -176,22 +172,6 @@
                   "type": "string",
                   "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
                 },
-                "kind": {
-                  "enum": [
-                    "still",
-                    "clip"
-                  ]
-                },
-                "from_image": {
-                  "type": [
-                    "string",
-                    "null"
-                  ]
-                },
-                "motion": {
-                  "type": "string",
-                  "minLength": 1
-                },
                 "description": {
                   "type": "string",
                   "minLength": 1
@@ -246,6 +226,20 @@
                     "additionalProperties": false
                   },
                   "minItems": 0
+                },
+                "kind": {
+                  "enum": [
+                    "still",
+                    "clip"
+                  ]
+                },
+                "from_image": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                },
+                "motion": {
+                  "type": "string",
+                  "minLength": 1
                 }
               },
               "required": [
@@ -255,10 +249,53 @@
                 "based_on",
                 "preserve",
                 "change",
-                "reason",
-                "visible_text"
+                "reason"
               ],
-              "additionalProperties": false
+              "additionalProperties": false,
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "kind": {
+                        "const": "clip"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "from_image",
+                      "motion"
+                    ],
+                    "properties": {
+                      "visible_text": {
+                        "maxItems": 0
+                      }
+                    }
+                  },
+                  "else": {
+                    "required": [
+                      "visible_text"
+                    ],
+                    "not": {
+                      "anyOf": [
+                        {
+                          "required": [
+                            "from_image"
+                          ]
+                        },
+                        {
+                          "required": [
+                            "motion"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
             },
             "minItems": 1
           },
@@ -337,55 +374,6 @@
                     "pop"
                   ]
                 },
-                "overlays": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "enum": [
-                          "label",
-                          "chapter_title",
-                          "map_pin",
-                          "counter",
-                          "arrow"
-                        ]
-                      },
-                      "text": {
-                        "type": "string",
-                        "minLength": 1
-                      },
-                      "x": {
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 1
-                      },
-                      "y": {
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 1
-                      },
-                      "at": {
-                        "type": "number",
-                        "minimum": 0
-                      },
-                      "to": {
-                        "type": "number"
-                      },
-                      "angle": {
-                        "type": "number"
-                      }
-                    },
-                    "required": [
-                      "type",
-                      "text",
-                      "x",
-                      "y"
-                    ],
-                    "additionalProperties": false
-                  },
-                  "minItems": 0
-                },
                 "focus": {
                   "type": "object",
                   "properties": {
@@ -405,6 +393,56 @@
                     "y"
                   ],
                   "additionalProperties": false
+                },
+                "overlays": {
+                  "type": "array",
+                  "maxItems": 6,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "enum": [
+                          "label",
+                          "chapter_title",
+                          "map_pin",
+                          "counter",
+                          "arrow"
+                        ]
+                      },
+                      "text": {
+                        "type": "string",
+                        "maxLength": 60
+                      },
+                      "x": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "y": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "at": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "to": {
+                        "type": "number"
+                      },
+                      "angle": {
+                        "type": "number",
+                        "minimum": -360,
+                        "maximum": 360
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false
+                  }
                 }
               },
               "required": [
@@ -471,6 +509,11 @@
                 ]
               }
             }
+          },
+          "chapter": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
           }
         },
         "required": [
@@ -647,7 +690,8 @@
           "type": "array",
           "items": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "maxLength": 100
           },
           "minItems": 3,
           "maxItems": 3
@@ -657,11 +701,12 @@
           "properties": {
             "image_id": {
               "type": "string",
-              "minLength": 1
+              "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
             },
             "text": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "maxLength": 40
             },
             "emotion": {
               "type": "string",

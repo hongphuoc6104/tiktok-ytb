@@ -253,7 +253,8 @@ class Pilot:
    if abs(float(probe(self.path(j,p['wav']))['format']['duration'])-last)>.03:raise Blocked('Combined audio mismatch')
    files += [p['wav'],p['srt']]
    en=p.get('en')
-   if self.brief(j) and self.brief(j)[0]['aspect_ratio'] in ('dual','16:9') and not en:raise Blocked('English audio required')
+   from scripts.story_plan import needs_english
+   if self.brief(j) and needs_english(self.brief(j)[0]) and not en:raise Blocked('English audio required')
    if en:
     if [x['scene_id'] for x in en['scenes']]!=[s['id'] for s in scenes]:raise Blocked('English scenes missing or reordered')
     last=0
@@ -277,7 +278,8 @@ class Pilot:
    min_sec,max_sec=45,60
    if self.brief(j):b=self.brief(j)[0];min_sec,max_sec=b['duration']['min_seconds'],b['duration']['max_seconds']
    audio=self.payload(j,'audio');ratio=self.brief(j)[0]['aspect_ratio'] if self.brief(j) else '9:16'
-   expected=audio['en']['duration'] if ratio=='16:9' else audio['duration']
+   from scripts.story_plan import voice_language
+   expected=audio['en']['duration'] if ratio=='16:9' and voice_language(self.brief(j)[0])=='en' else audio['duration']
    if not min_sec<=dur<=max_sec or abs(dur-float(a['duration']))>.1 or abs(dur-expected)>.1:raise Blocked('Video/audio duration mismatch')
    layout=read(self.path(j,p['layout_report']))
    checked=layout.get('checked_cues',layout.get('checked_frames',0))

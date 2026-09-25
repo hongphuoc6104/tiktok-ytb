@@ -4,15 +4,15 @@ export function captionStyle(width = 1080, height = 1920) {
   const scale = width / (portrait ? 1080 : 1920);
   return {
     position: 'absolute',
-    bottom: Math.round((portrait ? 290 : 85) * scale),
+    bottom: Math.round((portrait ? 290 : 64) * scale),
     left: '50%',
     transform: 'translateX(-50%)',
     width: Math.round((portrait ? 880 : 1380) * scale),
     maxWidth: '90%',
     whiteSpace: 'pre-line',
     overflowWrap: 'normal',
-    fontFamily: 'Arial, sans-serif',
-    fontSize: Math.round((portrait ? 50 : 40) * scale),
+    fontFamily: "'Noto Sans', 'DejaVu Sans', Arial, sans-serif",
+    fontSize: Math.round((portrait ? 50 : 46) * scale),
     fontWeight: 700,
     lineHeight: 1.24,
     textAlign: 'center',

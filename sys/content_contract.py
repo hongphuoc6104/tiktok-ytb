@@ -32,6 +32,8 @@ def validate_brief(root,b):
  if len(ids)!=len(set(ids)): errors.append(error('DUPLICATE','required_points','Trùng mã ý','Dùng mã riêng.'))
  ids=[x['id'] for x in b['sources']]
  if len(ids)!=len(set(ids)): errors.append(error('DUPLICATE','sources','Trùng mã nguồn','Dùng mã riêng.'))
+ if b.get('voice_language')=='en' and b.get('aspect_ratio')=='9:16':
+  errors.append(error('VOICE_LANGUAGE','voice_language','Bản 9:16 chỉ đọc tiếng Việt','Bỏ voice_language hoặc dùng 16:9/dual.'))
  if b['facts_required'] and not b['sources']:
   errors.append(error('SOURCE_REQUIRED','sources','Chưa cung cấp dữ kiện','Bổ sung tài liệu và dữ kiện trước khi viết.'))
  if errors: raise ContractError(errors)
@@ -55,7 +57,9 @@ def validate_content(root,b,revision,bhash,p):
   if set(s['character_ids'])-set(chars): fail('CHARACTER_REF',s['id'],'Nhân vật chưa khai báo')
   if set(s['source_ids'])-source_ids: fail('SOURCE_REF',s['id'],'Nguồn chưa khai báo')
   if set(s['requirements'])-set(req): fail('REQUIREMENT_REF',s['id'],'Mã ý không tồn tại')
- needs_en=b.get('aspect_ratio') in ('dual','16:9')
+ from scripts.story_plan import needs_english
+ # 16:9/dual narrate English unless the brief sets voice_language "vi".
+ needs_en=needs_english(b)
  # quote_en is only defined on the content-v3 coverage schema; content-v2 has no field to satisfy this with.
  check_coverage_en=needs_en and p.get('schema_version')=='3.0'
  covered=set()
