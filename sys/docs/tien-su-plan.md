@@ -177,6 +177,20 @@ FlowPool làm sớm vì là phần rủi ro cao nhất và các giai đoạn sau
 Nhật ký (mỗi giai đoạn thêm 5–10 dòng: đã làm, file chính, lệnh test, việc còn lại):
 
 - 25/09/2026: lập kế hoạch; bổ sung FlowPool + Veo theo yêu cầu người dùng.
+- 25/09/2026 GĐ2 + GĐ3 (phần renderer): brief `voice_language`/`subtitles`/`channel`/`clips`;
+  16:9 + `vi` dùng narration.wav, không cần narration_en/quote_en/neo en (story_plan.needs_english
+  là nguồn duy nhất cho content_contract, estimates, review_plan, pilot gate audio/render, workflow
+  visual-timing, editorial_audit, machine_review). Phụ đề Việt đốt vào 16:9, kiểm hình học ở 1920×1080.
+  Content-v3: clip (`kind/from_image/motion`), hiệu ứng pan_left/pan_right/pop, `overlays[]`,
+  `chapter`, `packaging` (chỉ kiểm hình dạng). Renderer: overlay Noto Sans Bold nhúng (`renderer/fonts`),
+  counter đếm lên, chapter_title 3,5 s, clip MP4 qua OffthreadVideo + Loop (tắt tiếng), render-timing.json.
+  TTS: đoạn không dấu câu bị cắt ≤240 ký tự. Test: `tests/test_longform_16x9.py`; toàn bộ 295 test đạt.
+- Đo render (Ryzen 5 6600H, RTX 3050; `scripts/render_benchmark.py`, 600 s 1920×1080, 8 cảnh, 120 beat,
+  2 clip, overlay mọi loại, phụ đề): 30 fps, concurrency 6 → 1340 s (**2,23×**); encode đã là h264_nvenc
+  qua `hardwareAcceleration`. Đường rẻ: `config.render_fps: 15` (chỉ 16:9) + `render_concurrency: 8` →
+  Remotion chụp 15 fps rồi ffmpeg lặp khung lên 30 fps (nvenc, fallback libx264) → 719 s (**1,20×**).
+  Việc còn lại: đặt `render_fps: 15`, `render_concurrency: 8` trong config.json kênh (agent GĐ1 giữ file
+  này); đường ffmpeg-tĩnh + Remotion-overlay chưa cần. Chưa đo trên máy 16 GB/P620 và chưa xem clip Veo thật.
 
 ## 8. Hợp đồng dữ liệu chung (khóa trước khi phát triển song song)
 

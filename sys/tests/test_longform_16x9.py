@@ -92,7 +92,7 @@ class VoiceLanguageTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp); out = root / 'render'; out.mkdir()
             (root / 'voice.wav').write_bytes(b'TEST'); (root / 'image.png').write_bytes(b'TEST'); (root / 'clip.mp4').write_bytes(b'TEST')
-            write(root / 'config.json', {})
+            write(root / 'config.json', {'render_fps': 15})
             audio = {'wav': 'voice.wav', 'duration': 700, 'segments': [{'scene_id': 'SC01', 'text': 'Xin chào.', 'start': 0, 'end': 700}]}
             payloads = {'content': {}, 'images': {}, 'audio': audio}
             brief = {'aspect_ratio': '16:9', 'voice_language': 'vi'}
@@ -107,7 +107,7 @@ class VoiceLanguageTests(unittest.TestCase):
             self.assertEqual(build.call_args.args[-2:], ('vi', '16:9'))
             self.assertGreaterEqual(run.call_args.kwargs['timeout'], 700 * 8)
             props = read(out / 'props.json')
-            self.assertEqual((props['voice_language'], props['subtitles']), ('vi', True))
+            self.assertEqual((props['voice_language'], props['subtitles'], props['fps']), ('vi', True, 15))
             self.assertNotIn('en_scenes', props)
             self.assertTrue(props['cues'])
             self.assertTrue(props['scenes'][0]['images'][1]['src'].endswith('.mp4'))

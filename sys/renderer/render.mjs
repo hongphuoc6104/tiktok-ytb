@@ -120,7 +120,7 @@ try {
       composition: compStills,
       inputProps: plans[0].props,
       puppeteerInstance: browser,
-      frame: Math.min(compStills.durationInFrames - 1, Math.round((scene.start + scene.end) / 2 * 30)),
+      frame: Math.min(compStills.durationInFrames - 1, Math.round((scene.start + scene.end) / 2 * compStills.fps)),
       output: path.join(dir, scene.id + '.png')
     });
   }
@@ -129,13 +129,29 @@ try {
   for (const plan of plans) {
     const composition = await selectComposition({serveUrl: url, id: 'Pilot', inputProps: plan.props, puppeteerInstance: browser});
     const started = Date.now();
+    const output = path.join(dir, plan.file);
+    // hardwareAcceleration 'if-possible' encodes with h264_nvenc on this laptop,
+    // so an x264 preset must not be passed here (nvenc rejects it).
+    // Cheaper long-form path: render_fps < 30 screenshots fewer frames, then
+    // ffmpeg repeats frames up to the 30 fps the video gate requires.
+    const lowFps = composition.fps < 30;
     await renderMedia({serveUrl: url, composition, inputProps: plan.props, puppeteerInstance: browser,
       codec: 'h264', hardwareAcceleration: 'if-possible', audioCodec: 'aac',
-      x264Preset: props.render_x264_preset || undefined,
-      concurrency: props.render_concurrency || 4, outputLocation: path.join(dir, plan.file)});
+      concurrency: props.render_concurrency || 4, outputLocation: lowFps ? output + '.low.mp4' : output});
+    if (lowFps) {
+      const retime = (codec) => execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', output + '.low.mp4', '-vf', 'fps=30',
+        ...codec, '-pix_fmt', 'yuv420p', '-c:a', 'copy', '-movflags', '+faststart', output]);
+      try {
+        retime(['-c:v', 'h264_nvenc', '-preset', 'p5', '-rc', 'vbr', '-cq', '21']);
+      } catch {
+        retime(['-c:v', 'libx264', '-preset', props.render_x264_preset || 'veryfast', '-crf', '20']);
+      }
+      fs.rmSync(output + '.low.mp4');
+    }
     const seconds = (Date.now() - started) / 1000;
-    timings.push({file: plan.file, video_seconds: composition.durationInFrames / composition.fps, render_seconds: seconds,
-      ratio: +(seconds / (composition.durationInFrames / composition.fps)).toFixed(3)});
+    const videoSeconds = composition.durationInFrames / composition.fps;
+    timings.push({file: plan.file, video_seconds: videoSeconds, render_fps: composition.fps, render_seconds: seconds,
+      ratio: +(seconds / videoSeconds).toFixed(3)});
     console.log('render timing', JSON.stringify(timings.at(-1)));
   }
   fs.writeFileSync(path.join(dir, 'render-timing.json'), JSON.stringify(timings, null, 2));

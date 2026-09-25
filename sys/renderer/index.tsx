@@ -251,6 +251,7 @@ registerRoot(() => (
       return {
         width: props.width || (isHorizontal ? 1920 : 1080),
         height: props.height || (isHorizontal ? 1080 : 1920),
+        fps: props.fps || 30,
         durationInFrames: Math.ceil((props.duration || 60) * (props.fps || 30))
       };
     }}

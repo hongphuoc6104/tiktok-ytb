@@ -52,7 +52,7 @@ def images(public, scenes, per_scene, clips, width, height):
     return names
 
 
-def build(out, seconds, scenes, beat_seconds, concurrency, preset, clips, gl=None):
+def build(out, seconds, scenes, beat_seconds, concurrency, preset, clips, gl=None, fps=None):
     public = out / 'public'; public.mkdir(parents=True, exist_ok=True)
     width, height = 1920, 1080
     per_scene = 6
@@ -93,6 +93,7 @@ def build(out, seconds, scenes, beat_seconds, concurrency, preset, clips, gl=Non
              'aspect_ratio': '16:9', 'voice_language': 'vi', 'subtitles': True, 'render_concurrency': concurrency}
     if preset: props['render_x264_preset'] = preset
     if gl: props['render_gl'] = gl
+    if fps: props['fps'] = fps
     (out / 'props.json').write_text(json.dumps(props, ensure_ascii=False, indent=1))
     return n
 
@@ -107,10 +108,11 @@ def main():
     ap.add_argument('--concurrency', type=int, default=6)
     ap.add_argument('--preset', default=None, help='x264 preset, e.g. veryfast')
     ap.add_argument('--gl', default=None, help='Chrome GL backend, e.g. angle, vulkan, swangle')
+    ap.add_argument('--fps', type=int, default=None, help='render fps (<30 uses the re-timed cheap path)')
     ap.add_argument('--build-only', action='store_true')
     a = ap.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
-    beats = build(a.out.resolve(), a.seconds, a.scenes, a.beat_seconds, a.concurrency, a.preset, a.clips, a.gl)
+    beats = build(a.out.resolve(), a.seconds, a.scenes, a.beat_seconds, a.concurrency, a.preset, a.clips, a.gl, a.fps)
     print(f'fixture: {a.seconds:.0f}s, {a.scenes} scenes, {beats} beats -> {a.out}')
     if a.build_only: return
     t = time.time()

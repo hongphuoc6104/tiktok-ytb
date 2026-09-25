@@ -606,6 +606,8 @@ def render(p,j,out):
         'voice_language':wide,'subtitles':subtitles_enabled(b),'render_concurrency':cfg.get('render_concurrency',4)}
  for k in ('render_x264_preset','render_gl'):
   if cfg.get(k):props[k]=cfg[k]
+ # config.render_fps (e.g. 15): cheaper long-form render, re-timed to 30 fps.
+ if cfg.get('render_fps') and ratio=='16:9':props['fps']=int(cfg['render_fps'])
  if en and wide=='en':
   props['en_duration']=en['duration']
   props['en_scenes']=scenes if ratio=='16:9' else render_scenes('en','16:9')
