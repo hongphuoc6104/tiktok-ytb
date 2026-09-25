@@ -5,12 +5,13 @@ import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from PIL import Image
 
 import image_pipeline as ip
-from pilot import Blocked, ROOT, read, write
+from pilot import Blocked, ROOT, digest, read, write
 from flowpool import pipeline as fpp
 from scripts.story_plan import image_units
 
@@ -63,6 +64,18 @@ class RoutingTests(PipelineCase):
         self.set_cfg(flowpool_enabled=False)
         self.assertIs(ip.flow_call(self.p), adapters.gflow)
 
+    def test_flow_login_uses_existing_daemon_connection(self):
+        import adapters
+        action = SimpleNamespace(job='j', command='flow-login')
+        with patch('flowpool.daemon_client.DaemonClient.status',
+                   return_value={'ok': True, 'connected': True}) as status, \
+             patch('adapters.gflow') as legacy, patch('b2_bridge.ensure_connected') as second_cdp:
+            reply = adapters.flow_action(self.p, action)
+        self.assertIn('daemon connected', reply['login'])
+        status.assert_called_once()
+        legacy.assert_not_called()
+        second_cdp.assert_not_called()
+
     def fake_run(self, status='ok', state='validated'):
         def run(p, requests):
             out = []
@@ -78,21 +91,26 @@ class RoutingTests(PipelineCase):
 
     def test_image_request_writes_pipeline_evidence(self):
         out = self.p.job('j') / 'flow/attempts/k/download'
+        char = self.p.job('j') / 'registered.jpg'
+        Image.new('RGB', (64, 64), 'brown').save(char)
         with patch('flowpool.pipeline._run', side_effect=self.fake_run()):
             r = fpp.gflow(self.p, 'image', '--id', 'abc', '--prompt', 'P', '--ratio', '16:9', '--out', str(out),
-                          '--character', 'j-CH01-x')
+                          '--character', 'j-CH01-x', '--character-ref', str(char))
         self.assertEqual(r.returncode, 0)
-        self.assertEqual(self.requests[0]['refs'], [str(self.root / fpp.MASCOT)])
+        self.assertEqual(len(self.requests[0]['refs']), 1)
+        self.assertTrue(Path(self.requests[0]['refs'][0]).is_file())
+        self.assertNotEqual(self.requests[0]['refs'][0], str(char))
         self.assertEqual(self.requests[0]['job'], 'j')
         meta = read(out / 'abc-1.json')
         self.assertEqual((meta['jobId'], meta['characters'], meta['forgeId'], meta['source']),
                          ('abc', ['j-CH01-x'], 'MID', 'google-flow-browser'))
         proof = read(out.parent / 'ui-proof.json')
         self.assertEqual((proof['passed'], proof['mode'], proof['tool'], proof['profile']), (True, 'image', 'flowpool', 'Profile 13'))
+        self.assertEqual(proof['source_references'], [str(self.root / fpp.MASCOT), str(char)])
 
     def test_outcomes_map_to_submission_flags(self):
         out = self.p.job('j') / 'o'
-        args = ('image', '--id', 'abc', '--prompt', 'P', '--ratio', '16:9', '--out', str(out), '--character', 'n')
+        args = ('image', '--id', 'abc', '--prompt', 'P', '--ratio', '16:9', '--out', str(out))
         with patch('flowpool.pipeline._run', side_effect=self.fake_run('unknown', 'unknown')):
             with self.assertRaises(Blocked) as cm:
                 fpp.gflow(self.p, *args)
@@ -102,19 +120,90 @@ class RoutingTests(PipelineCase):
                 fpp.gflow(self.p, *args)
         self.assertFalse(cm.exception.generation_submitted)
 
-    def test_local_mascot_and_registration_stay_on_adapters(self):
-        with patch('adapters.gflow', return_value=subprocess.CompletedProcess([], 0, '', '')) as g, \
-             patch('flowpool.pipeline._run') as run:
-            fpp.gflow(self.p, 'image', '--id', 'x', '--prompt', 'p', '--out', str(self.root / 'o'))
-            fpp.gflow(self.p, 'character', 'create', '--name', 'n', '--out', str(self.root / 'o'))
-        self.assertEqual(g.call_count, 2)
+    def test_reference_and_registration_use_one_daemon_path(self):
+        source = self.p.job('j') / 'ref.jpg'
+        Image.new('RGB', (64, 64), 'brown').save(source)
+        out = self.p.job('j') / 'flow/attempts/r/download'
+        with patch('flowpool.pipeline._run', side_effect=self.fake_run()) as run, \
+             patch('adapters.gflow') as legacy, patch('b2_bridge.ensure_connected') as second_cdp:
+            fpp.gflow(self.p, 'image', '--id', 'ref2', '--prompt', 'reference', '--out', str(out))
+            self.assertEqual(self.requests[0]['refs'], [str(self.root / fpp.MASCOT)])
+            fpp.gflow(self.p, 'character', 'create', '--id', 'reg2', '--name', 'j-CH02-x',
+                      '--prompt', 'register', '--ratio', '16:9', '--image', str(source), '--out', str(out))
+        self.assertEqual(run.call_count, 2)
+        legacy.assert_not_called()
+        second_cdp.assert_not_called()
+        self.assertEqual(self.requests[0]['refs'], [str(source)])
+        self.assertEqual(self.requests[0]['variants'], 1)
+        proof = read(out.parent / 'ui-proof.json')
+        self.assertEqual((proof['mode'], proof['source_references']), ('character-register', [str(source)]))
+
+    def test_missing_character_source_is_not_submitted(self):
+        out = self.p.job('j') / 'flow/attempts/k/download'
+        with patch('flowpool.pipeline._run') as run, patch('adapters.gflow') as legacy:
+            with self.assertRaises(Blocked) as cm:
+                fpp.gflow(self.p, 'image', '--id', 'x', '--prompt', 'P', '--out', str(out), '--character', 'j-CH02-x')
+        self.assertFalse(cm.exception.generation_submitted)
         run.assert_not_called()
+        legacy.assert_not_called()
+
+    def test_strict_ui_screenshot_policy_stops_before_submission(self):
+        self.set_cfg(flow_require_ui_evidence=True)
+        out = self.p.job('j') / 'flow/attempts/k/download'
+        with patch('flowpool.pipeline._run') as run:
+            with self.assertRaisesRegex(Blocked, 'FLOWPOOL_UI_EVIDENCE_UNAVAILABLE') as cm:
+                fpp.gflow(self.p, 'image', '--id', 'x', '--prompt', 'P', '--out', str(out))
+        self.assertFalse(cm.exception.generation_submitted)
+        run.assert_not_called()
+
+    def test_registered_source_is_bound_to_this_job_and_confirmed_hash(self):
+        source = self.p.job('j') / 'registered.jpg'
+        Image.new('RGB', (64, 64), 'brown').save(source)
+        sha = digest(source)
+        journal = self.p.job('j') / 'flow/attempts/abc/request.json'
+        journal.parent.mkdir(parents=True)
+        write(journal, {'state': 'downloaded', 'identity': {'registration': {'name': 'j-CH02-x', 'sha256': 'REF'}},
+                        'path': str(source.relative_to(self.p.job('j'))), 'sha256': sha})
+        confirmation = journal.parent / 'confirmation.json'
+        write(confirmation, {'reference_hash': 'REF', 'result_hash': sha,
+                             'matches_approved_reference': True})
+        linked = {'name': 'j-CH02-x', 'sha256': 'REF', 'registration_hash': sha,
+                  'registration_journal': str(journal.relative_to(self.p.job('j'))),
+                  'confirmation': str(confirmation.relative_to(self.p.job('j')))}
+        self.assertEqual(ip._registered_sources(self.p, 'j', [linked]), [str(source)])
+        with self.assertRaisesRegex(Blocked, 'outside this job'):
+            ip._registered_sources(self.p, 'j', [dict(linked, registration_journal='../other/request.json')])
+        Image.new('RGB', (64, 64), 'red').save(source)
+        with self.assertRaisesRegex(Blocked, 'changed'):
+            ip._registered_sources(self.p, 'j', [linked])
+
+    def test_multiple_characters_share_one_board_and_keep_base_separate(self):
+        char1, char2 = (self.p.job('j') / f'char{i}.jpg' for i in (1, 2))
+        base = self.p.job('j') / 'base.jpg'
+        for path, colour in ((char1, 'brown'), (char2, 'red'), (base, 'blue')):
+            Image.new('RGB', (64, 64), colour).save(path)
+        out = self.p.job('j') / 'flow/attempts/k/download'
+        with patch('flowpool.pipeline._run', side_effect=self.fake_run()):
+            fpp.gflow(self.p, 'image', '--id', 'x', '--prompt', 'scene', '--out', str(out),
+                      '--base-image', str(base), '--character', 'j-CH01-x', 'j-CH02-x',
+                      '--character-ref', str(char1), str(char2))
+        refs = self.requests[0]['refs']
+        self.assertEqual(len(refs), 2)
+        self.assertEqual(refs[1], str(base))
+        with Image.open(refs[0]) as board:
+            self.assertEqual(board.size, (1920, 720))
+        self.assertEqual(read(out.parent / 'ui-proof.json')['source_references'],
+                         [str(self.root / fpp.MASCOT), str(char1), str(char2)])
 
     def test_batch_writes_gflow_run_state(self):
         batch = self.p.job('j') / 'flow/batches/b'
         batch.mkdir(parents=True)
-        write(batch / 'jobs.json', {'jobs': [{'id': 'a1', 'prompt': 'x', 'ratio': '16:9', 'character': ['n']},
-                                             {'id': 'a2', 'prompt': 'y', 'ratio': '16:9', 'character': ['n']}]})
+        source = self.p.job('j') / 'registered.jpg'
+        Image.new('RGB', (64, 64), 'brown').save(source)
+        write(batch / 'jobs.json', {'jobs': [{'id': 'a1', 'prompt': 'x', 'ratio': '16:9', 'character': ['n'],
+                                             'reference_images': [str(source)]},
+                                            {'id': 'a2', 'prompt': 'y', 'ratio': '16:9', 'character': ['n'],
+                                             'reference_images': [str(source)]}]})
         def run(p, requests):
             ok = self.fake_run()(p, requests[:1])
             return ok + [{'id': 'a2', 'status': 'failed', 'state': 'not_submitted', 'files': [], 'error': 'NO_READY_PROFILE'}]
@@ -124,6 +213,19 @@ class RoutingTests(PipelineCase):
         self.assertEqual((state['a1']['status'], state['a2']['status']), ('completed', 'not_submitted'))
         self.assertTrue((batch / 'a1.jpg').is_file() and (batch / '.evidence/a1/ui-proof.json').is_file())
         self.assertEqual(read(batch / 'a1.json')['jobId'], 'a1')
+        self.assertEqual(read(batch / '.evidence/a1/ui-proof.json')['source_references'],
+                         [str(self.root / fpp.MASCOT), str(source)])
+
+    def test_invalid_batch_reference_is_explicitly_not_submitted(self):
+        batch = self.p.job('j') / 'flow/batches/b'
+        batch.mkdir(parents=True)
+        write(batch / 'jobs.json', {'jobs': [{'id': 'a1', 'prompt': 'x', 'ratio': '16:9',
+                                             'character': ['j-CH02-x'], 'reference_images': []}]})
+        with patch('flowpool.pipeline._run') as run, patch('adapters.gflow') as legacy:
+            fpp.gflow(self.p, 'batch', str(batch / 'jobs.json'), '--out', str(batch))
+        self.assertEqual(read(batch / 'gflow-run.json')['jobs'][0]['status'], 'not_submitted')
+        run.assert_not_called()
+        legacy.assert_not_called()
 
 
 class ClipLockTests(PipelineCase):
@@ -252,12 +354,14 @@ class ProduceWithClipsTests(unittest.TestCase):
         self.iv = iv.ImagesV2Tests
         self.iv.setUp(self)
         cfg = read(self.root / 'config.json')
-        cfg.update(flowpool_enabled=True, video_generation=True, credit_budget=500)
+        cfg.update(flowpool_enabled=True, video_generation=True, credit_budget=500,
+                   flow_require_ui_evidence=False)
         write(self.root / 'config.json', cfg)
         # The fixture job's integrity baseline predates this config edit (test-only bypass).
         self.integrity = patch.object(type(self.p), 'integrity', lambda *a, **k: None)
         self.integrity.start()
         self.clip_calls = []
+        self.image_calls = []
 
     def tearDown(self):
         self.integrity.stop()
@@ -279,6 +383,17 @@ class ProduceWithClipsTests(unittest.TestCase):
         return {'id': request['id'], 'status': 'ok', 'files': [str(f)], 'media_ids': ['V1'], 'profile': 'Profile 13',
                 'credits_before': 500, 'credits_after': 480}
 
+    def fake_image(self, p, requests):
+        self.image_calls.extend(requests)
+        outputs = []
+        for request in requests:
+            dest = Path(request['out_dir']) / f"{request['id']}-1.jpg"
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            Image.new('RGB', (768, 1376), 'brown').save(dest)
+            outputs.append({'id': request['id'], 'status': 'ok', 'state': 'validated', 'files': [str(dest)],
+                            'media_ids': ['I1'], 'profile': 'Profile 13'})
+        return outputs
+
     def test_clip_follows_its_still_and_passes_check(self):
         units = [{'id': 'SC01_I1_9x16', 'image_id': 'SC01_I1', 'scene_id': 'SC01', 'ratio': '9:16', 'based_on': None,
                   'prompt': 'still one', 'character_ids': [], 'visible_text': []},
@@ -292,6 +407,7 @@ class ProduceWithClipsTests(unittest.TestCase):
              patch('image_pipeline.planned_units', return_value=units), \
              patch.object(self.p, 'brief', return_value=clip_brief), \
              patch('scripts.image_repairs.active', return_value=''), \
+             patch('flowpool.pipeline._run', side_effect=self.fake_image), \
              patch('flowpool.pipeline.clip', side_effect=self.fake_clip):
             self.p.run(self.j, 'images')
             self.approve('references')
@@ -309,7 +425,8 @@ class ProduceWithClipsTests(unittest.TestCase):
         still = read(self.p.path(self.j, payload['items'][0]['request']))
         self.assertEqual(self.clip_calls[0]['start_frame'], str(self.p.path(self.j, still['path'])))
         self.assertIn(payload['items'][1]['path'], files)
-        self.assertEqual(len(self.calls), 1)  # one still through the (patched) provider
+        self.assertEqual(len(self.image_calls), 1)
+        self.assertEqual(self.calls, [])  # no legacy provider / second CDP path
 
 
 if __name__ == '__main__':

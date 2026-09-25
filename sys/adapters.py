@@ -240,6 +240,15 @@ def flow_action(p,a):
   import image_pipeline
   return image_pipeline.flow_action(p,a)
  if a.command=='flow-login':
+  if cfg.get('flowpool_enabled'):
+   # The FlowPool daemon owns Chrome's single CDP connection. A legacy
+   # gflow_guard login would open a second client and trigger another Allow.
+   from flowpool.daemon_client import DaemonClient
+   status=DaemonClient(cfg).status()
+   if not status.get('ok') or not status.get('connected'):
+    raise Blocked('FlowPool daemon is not connected; run python3 -m flowpool daemon start/reconnect, then open-profile')
+   return {'login':'FlowPool daemon connected; use the existing Chrome profile tab for manual sign-in',
+           'output':json.dumps(status,ensure_ascii=False)}
   # Routed through gflow_guard so sign-in lands in the same user-data-dir AND
   # profile-directory the image path generates from; the bundled CLI's own
   # login sets no profile-directory and would sign into `Default` instead.

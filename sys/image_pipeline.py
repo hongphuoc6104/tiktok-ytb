@@ -351,11 +351,43 @@ def _unresolved_conflict(p, j, target):
     return generated
 
 
+def _registered_sources(p, j, refs):
+    """Resolve confirmed character images in this job; never search another job."""
+    root = p.job(j).resolve()
+    sources = []
+    for ref in refs:
+        journal = p.path(j, ref['registration_journal']).resolve()
+        if not journal.is_relative_to(root / 'flow/attempts') or not journal.is_file():
+            raise Blocked('M2_REFERENCE_SOURCE: registration journal is outside this job or missing')
+        entry = read(journal)
+        registered = (entry.get('identity') or {}).get('registration') or {}
+        if (entry.get('state') != 'downloaded' or registered.get('name') != ref['name']
+                or registered.get('sha256') != ref['sha256'] or entry.get('sha256') != ref['registration_hash']):
+            raise Blocked('M2_REFERENCE_SOURCE: registration is not downloaded for this character')
+        source = p.path(j, entry['path']).resolve()
+        if not source.is_relative_to(root) or not source.is_file() or digest(source) != ref['registration_hash']:
+            raise Blocked('M2_REFERENCE_SOURCE: registered image is missing or changed')
+        confirmation = p.path(j, ref['confirmation']).resolve()
+        if not confirmation.is_relative_to(root) or not confirmation.is_file():
+            raise Blocked('M2_REFERENCE_SOURCE: registration confirmation is missing')
+        evidence = read(confirmation)
+        if (evidence.get('reference_hash') != ref['sha256'] or evidence.get('result_hash') != ref['registration_hash']
+                or not registration_accepted(p, j, evidence)):
+            raise Blocked('M2_REFERENCE_SOURCE: registration confirmation does not match')
+        sources.append(str(source))
+    return sources
+
+
 def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
     """One durable journal per identity; unknown outcomes are never retried."""
     import adapters
     p.gate(j, 'images')
     cfg, ratio, actual_prompt, identity, key = _plan_request(p, j, target, prompt, refs, registration, base_image)
+    registered_sources = _registered_sources(p, j, refs)
+    if registration:
+        source = p.path(j, registration['path']).resolve()
+        if not source.is_relative_to(p.job(j).resolve()) or not source.is_file() or digest(source) != registration['sha256']:
+            raise Blocked('M2_REFERENCE_SOURCE: approved character image is missing or changed')
     base = p.job(j) / 'flow/attempts'
     base.mkdir(parents=True, exist_ok=True)
     # Even changed prompts/edits cannot hide an unresolved submission.
@@ -386,9 +418,9 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
     common = ['--profile', cfg['flow_profile'], '--project', cfg['flow_project'], '--out', str(out)]
     model_arg = 'nano-banana-pro' if 'pro' in cfg['flow_model'].lower() else ('nano-banana-2' if '2' in cfg['flow_model'] else cfg['flow_model'])
     if registration:
-        args = ['character', 'create', '--name', registration['name'], '--prompt', actual_prompt,
+        args = ['character', 'create', '--id', key[:16], '--name', registration['name'], '--prompt', actual_prompt,
                 '--model', model_arg,
-                '--image', str(p.path(j, registration['path']))] + common
+                '--ratio', ratio, '--image', str(source)] + common
     else:
         args = ['image', '--id', key[:16], '--prompt', actual_prompt, '--model', model_arg,
                 '--ratio', ratio, '--outputs', '1'] + common
@@ -400,6 +432,8 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
             args += ['--base-image', str(p.path(j,base_image['path']))]
         if refs:
             args += ['--character'] + [x['name'] for x in refs]
+            if cfg.get('flowpool_enabled'):
+                args += ['--character-ref'] + registered_sources
     if target == 'ref:' + characters.CHARACTER_ID or target.startswith('register:' + characters.CHARACTER_ID + ':'):
         # Only the mascot's own reference/registration request needs the
         # channel-resolved mascot attached explicitly; adapters.gflow must
@@ -435,6 +469,12 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
         proof = read(folder / 'ui-proof.json')
         if proof.get('passed') is not True or proof.get('characters') != [x['name'] for x in refs]:
             raise Blocked('Flow UI attachment/mode evidence missing')
+        if cfg.get('flowpool_enabled'):
+            expected_sources = ([str(source)] if registration else
+                                [str(characters.mascot_for(p, p.brief(j))['reference_path'].resolve())] + registered_sources)
+            if (proof.get('source_references') != expected_sources or
+                    proof.get('source_hashes') != [digest(Path(path)) for path in expected_sources]):
+                raise Blocked('M2_REFERENCE_SOURCE: FlowPool ingredient evidence differs')
         if base_image and proof.get('base_image') != str(p.path(j,base_image['path'])):
             raise Blocked('M2_BASE_IMAGE: UI attachment evidence missing')
         if proof.get('mode') != ('character-register' if registration else 'image'):
@@ -595,10 +635,11 @@ def batch_submit(p, j, units, registrations):
             continue  # let request() raise M2_AMBIGUOUS as usual
         linked = [registrations[x] for x in unit['character_ids']]
         _, plan_ratio, actual_prompt, identity, key = _plan_request(p, j, unit['id'], unit['prompt'], linked, None, None)
+        source_paths = _registered_sources(p, j, linked)
         if (p.job(j) / 'flow/attempts' / key / 'request.json').exists():
             continue  # already resolved (e.g. downloaded on a prior run)
         plans.append({'unit': unit, 'ratio': plan_ratio, 'actual_prompt': actual_prompt,
-                      'identity': identity, 'key': key, 'linked': linked})
+                      'identity': identity, 'key': key, 'linked': linked, 'source_paths': source_paths})
     if not plans:
         return
     evidence = preflight(p, j, 'image')  # one preflight for the whole batch
@@ -614,7 +655,8 @@ def batch_submit(p, j, units, registrations):
         if requires_ui_evidence(p): shutil.copy(p.path(j, evidence['screenshot']), folder / 'preflight.png')
         jobs.append({'id': plan['key'][:16], 'type': 'image', 'project': cfg['flow_project'],
                      'prompt': plan['actual_prompt'], 'model': model_arg, 'ratio': plan['ratio'],
-                     'outputs': 1, 'character': [x['name'] for x in plan['linked']], 'out': str(batch_dir)})
+                     'outputs': 1, 'character': [x['name'] for x in plan['linked']],
+                     'reference_images': plan['source_paths'], 'out': str(batch_dir)})
         plan['folder'], plan['job_id'] = folder, plan['key'][:16]
     jobs_by_id = {job['id']: (job, plan) for job, plan in zip(jobs, plans)}
     jobs_file = batch_dir / 'jobs.json'
@@ -664,6 +706,11 @@ def batch_submit(p, j, units, registrations):
             expected_names = [x['name'] for x in plan['linked']]
             if proof.get('passed') is not True or proof.get('characters') != expected_names:
                 raise Blocked('Flow UI attachment/mode evidence missing')
+            if cfg.get('flowpool_enabled'):
+                expected_sources = [str(characters.mascot_for(p, p.brief(j))['reference_path'].resolve())] + plan['source_paths']
+                if (proof.get('source_references') != expected_sources or
+                        proof.get('source_hashes') != [digest(Path(path)) for path in expected_sources]):
+                    raise Blocked('M2_REFERENCE_SOURCE: FlowPool batch ingredient evidence differs')
             if proof.get('mode') != 'image':
                 raise Blocked('Flow UI mode evidence differs')
             if requires_ui_evidence(p):
