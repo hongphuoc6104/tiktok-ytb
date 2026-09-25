@@ -432,7 +432,14 @@ def publish_videos(p, job):
             target.hardlink_to(temporary)
         finally:
             temporary.unlink(missing_ok=True)
-    return [str(target) for _, target, _ in plans]
+    result = [str(target) for _, target, _ in plans]
+    # GD5 packaging (thumbnail/metadata/description) only for channels whose
+    # content declares `packaging`; vocab/legacy jobs have no such field and
+    # are unaffected.
+    if p.payload(job, 'content').get('packaging'):
+        import packaging as video_packaging
+        video_packaging.build(p, job, folder)
+    return result
 
 
 # Hard caps for auto repair loops ("Không lặp vô hạn"). Scope is the whole job
