@@ -40,10 +40,14 @@ def planned_units(p, j):
     if c.get('schema_version') != '3.0': return units
     brief = p.brief(j)[0]
     ratios = ['9:16','16:9'] if brief['aspect_ratio']=='dual' else [brief['aspect_ratio']]
-    return [dict(u, id=u['id']+'_'+ratio.replace(':','x'), image_id=u['id'], ratio=ratio,
-                 based_on=(u['based_on']+'_'+ratio.replace(':','x')) if u['based_on'] else None,
-                 prompt=text_prompt(u['prompt'],u['visible_text'],brief['planning']['text_style']))
-            for u in units for ratio in ratios]
+    def one(u, ratio):
+        sfx = '_'+ratio.replace(':','x')
+        if u.get('kind') == 'clip':
+            return dict(u, id=u['id']+sfx, image_id=u['id'], ratio=ratio, from_image=u['from_image']+sfx)
+        return dict(u, id=u['id']+sfx, image_id=u['id'], ratio=ratio,
+                    based_on=(u['based_on']+sfx) if u['based_on'] else None,
+                    prompt=text_prompt(u['prompt'],u['visible_text'],brief['planning']['text_style']))
+    return [one(u, ratio) for u in units for ratio in ratios]
 
 
 def edits(p, j, target):
@@ -166,7 +170,7 @@ def requires_ui_evidence(p):
 
 def preflight(p, j, operation):
     cfg = read(p.root / 'config.json')
-    if cfg.get('video_generation') or cfg.get('credit_budget', 0) != 0:
+    if declared_clips(p, j) is None and (cfg.get('video_generation') or cfg.get('credit_budget', 0) != 0):
         raise Blocked('M2_POLICY: credit budget must be non-negative')
     if not requires_ui_evidence(p):
         return {'mode': 'image', 'operation': operation, 'cost_policy': 'user_assumed_zero',
@@ -177,6 +181,39 @@ def preflight(p, j, operation):
     if digest(p.path(j, e['screenshot'])) != e['screenshot_hash']:
         raise Blocked('M2_PREFLIGHT: screenshot changed')
     return e
+
+
+def declared_clips(p, j):
+    """The brief's `clips` block, or None. Only such briefs lift the video/credit lock."""
+    try:
+        found = p.brief(j)
+    except Exception:
+        return None
+    return (found[0] if found else {}).get('clips') or None
+
+
+def clip_policy(p, j, cfg=None):
+    """Clip settings for this job, or Blocked. Needs a brief that declares
+    `clips`, config video_generation=true, a positive monthly credit_budget
+    (FlowPool enforces it against its credit ledger) and flowpool_enabled."""
+    clips = declared_clips(p, j)
+    if not clips:
+        raise Blocked('M2_CLIPS: content has clip images but the brief declares no clips')
+    cfg = cfg or read(p.root / 'config.json')
+    if not cfg.get('video_generation') or (cfg.get('credit_budget') or 0) <= 0:
+        raise Blocked('M2_CLIPS: set config video_generation=true and a positive monthly credit_budget')
+    if not cfg.get('flowpool_enabled'):
+        raise Blocked('M2_CLIPS: Veo clips run only through FlowPool (config flowpool_enabled=true)')
+    return clips
+
+
+def flow_call(p):
+    """adapters.gflow, or the FlowPool drop-in when config flowpool_enabled is true."""
+    if read(p.root / 'config.json').get('flowpool_enabled'):
+        from flowpool import pipeline as flowpool_pipeline
+        return flowpool_pipeline.gflow
+    import adapters
+    return adapters.gflow
 
 
 def _preflight_expiry_message(done, total):
@@ -363,7 +400,7 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
     write(record, result)
     p.event(j, 'images', 'flow_collection_resumed' if collection_only else 'flow_submitted', key)
     try:
-        r = adapters.gflow(p, *args)
+        r = flow_call(p)(p, *args)
         (folder / 'command.log').write_text(r.stdout + '\n' + r.stderr)
         if r.returncode:
             raise Blocked('Flow failed (login/CAPTCHA/limit or provider error); see command.log: ' + r.stderr[-500:])
@@ -405,6 +442,108 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
         if result['state'] != 'downloaded':
             state = 'generated' if collection_only or getattr(ex,'collection_only',False) else (
                 'not_submitted' if getattr(ex,'generation_submitted',None) is False else 'ambiguous')
+            result.update(state=state, error=str(ex))
+            write(record, result)
+        raise Blocked('M2_FLOW: ' + str(ex)) from ex
+
+
+def clip_actual_prompt(prompt, corrections):
+    return prompt + ('\nRequested corrections: ' + corrections if corrections else '')
+
+
+def clip_check(p, j, path, expected_hash=None):
+    f = p.path(j, path)
+    if expected_hash and digest(f) != expected_hash:
+        raise Blocked('M2_HASH: clip changed: ' + path)
+    with open(f, 'rb') as fh:
+        if fh.read(12)[4:8] != b'ftyp':
+            raise Blocked('M2_CLIP: not an MP4 file: ' + path)
+    return path
+
+
+def check_clip_plan(p, j, units, cfg=None):
+    """Enforce brief `clips` (max distinct clips) and that each clip starts from a still of its scene."""
+    clip_units = [u for u in units if u.get('kind') == 'clip']
+    if not clip_units:
+        return None
+    clips = clip_policy(p, j, cfg)
+    if len({u['image_id'] for u in clip_units}) > int(clips.get('max', 0)):
+        raise Blocked(f"M2_CLIPS: {len({u['image_id'] for u in clip_units})} clips planned; brief clips.max is {clips.get('max', 0)}")
+    by_id = {u['id']: u for u in units}
+    for u in clip_units:
+        src = by_id.get(u['from_image'])
+        if not src or src.get('kind') == 'clip' or src.get('scene_id') != u.get('scene_id'):
+            raise Blocked('M2_CLIP_SOURCE: ' + u['id'] + ' must start from a still of the same scene')
+    return clips
+
+
+def clip_request(p, j, unit, base):
+    """One durable journal per clip identity, like request(); unknown outcomes are never retried."""
+    p.gate(j, 'images')
+    cfg = read(p.root / 'config.json')
+    clips = clip_policy(p, j, cfg)
+    from scripts.image_repairs import active
+    corrections = active(p, j, unit, unit['id'])
+    model = clips.get('model') or cfg.get('veo_model', 'veo-fast')
+    variants = int(clips.get('variants', 2))
+    actual_prompt = clip_actual_prompt(unit['prompt'], corrections)
+    identity = {'target': unit['id'], 'kind': 'clip', 'prompt': unit['prompt'], 'actual_prompt': actual_prompt,
+                'model': model, 'ratio': unit['ratio'], 'variants': variants, 'references': [],
+                'corrections': corrections, 'base_image': base, 'registration': None,
+                'config_hash': digest(p.root / 'config.json')}
+    key = hashobj(dict(identity, base_image={k: base[k] for k in ('target', 'sha256')}))
+    base_dir = p.job(j) / 'flow/attempts'
+    base_dir.mkdir(parents=True, exist_ok=True)
+    conflict = _unresolved_conflict(p, j, unit['id'])
+    if conflict and conflict['key'] != key:
+        raise Blocked('M2_AMBIGUOUS: reconcile request ' + conflict['key'] + ' before another submission')
+    folder = base_dir / key
+    record = folder / 'request.json'
+    if record.exists():
+        result = read(record)
+        if result['state'] == 'downloaded':
+            clip_check(p, j, result['path'], result['sha256'])
+            return result
+        # FlowPool's own journal decides whether an earlier attempt may be retried.
+        if result['state'] not in ('not_submitted', 'ambiguous'):
+            raise Blocked('M2_ATTEMPT: request needs explicit reconciliation')
+    # Clips spend credits: cost evidence is FlowPool's before/after UI reading in its
+    # ledger (never the zero-cost image preflight screenshot).
+    evidence = {'mode': 'clip', 'operation': 'clip', 'cost_policy': 'flowpool_ledger', 'cost_verified': False,
+                'ui_evidence_required': False, 'credit_budget': cfg.get('credit_budget')}
+    folder.mkdir(exist_ok=True)
+    write(folder / 'preflight.json', evidence)
+    out = folder / 'download'
+    out.mkdir(exist_ok=True)
+    request = {'id': 'clip-' + key[:16], 'prompt': actual_prompt, 'ratio': unit['ratio'], 'refs': [],
+               'start_frame': str(p.path(j, base['path'])), 'variants': variants, 'model': model,
+               'job': j, 'scene': unit.get('scene_id'), 'out_dir': str(out)}
+    result = {'key': key, 'identity': identity, 'state': 'submitted', 'submitted_at': time.time(),
+              'args': request, 'journal': str(record.relative_to(p.job(j)))}
+    write(record, result)
+    p.event(j, 'images', 'flow_clip_submitted', key)
+    try:
+        from flowpool import pipeline as flowpool_pipeline
+        r = flowpool_pipeline.clip(p, request)
+        files = [Path(f) for f in r['files']]
+        write(folder / 'ui-proof.json', {'passed': True, 'mode': 'clip', 'characters': [], 'tool': 'flowpool',
+                                         'profile': r.get('profile'), 'media_ids': r.get('media_ids'),
+                                         'base_image': str(p.path(j, base['path'])),
+                                         'credits_before': r.get('credits_before'), 'credits_after': r.get('credits_after')})
+        first = files[0]
+        write(first.with_suffix('.json'), {'jobId': request['id'], 'type': 'video', 'prompt': actual_prompt,
+                                           'ratio': unit['ratio'], 'model': model, 'source': 'google-flow-browser',
+                                           'status': 'downloaded', 'media_ids': r.get('media_ids'),
+                                           'profile': r.get('profile')})
+        result.update(state='downloaded', path=str(first.relative_to(p.job(j))), sha256=digest(first),
+                      variants=[str(f.relative_to(p.job(j))) for f in files], profile=r.get('profile'))
+        write(record, result)
+        clip_check(p, j, result['path'], result['sha256'])
+        p.event(j, 'images', 'flow_clip_downloaded', key)
+        return result
+    except Exception as ex:
+        if result['state'] != 'downloaded':
+            state = 'not_submitted' if getattr(ex, 'generation_submitted', None) is False else 'ambiguous'
             result.update(state=state, error=str(ex))
             write(record, result)
         raise Blocked('M2_FLOW: ' + str(ex)) from ex
@@ -470,7 +609,7 @@ def batch_submit(p, j, units, registrations):
               'state':'submitted','submitted_at':time.time(),'args':jobs_by_id[plan['job_id']][0],
               'journal':str((plan['folder']/'request.json').relative_to(p.job(j)))})
     try:
-        r = adapters.gflow(p, *args, timeout=max(960, 300 * len(jobs)))
+        r = flow_call(p)(p, *args, timeout=max(960, 300 * len(jobs)))
         (batch_dir / 'command.log').write_text(r.stdout + '\n' + r.stderr)
     except Exception as ex:
         (batch_dir / 'command.log').write_text('EXCEPTION: ' + str(ex))
@@ -600,7 +739,7 @@ def produce(p, j, out):
         raise Blocked('M2_APPROVED: reject a specific scene or character before replacement')
     if p.rows(j)['images']['state'] == 'awaiting_review':
         raise Blocked('M2_REVIEW: approve or reject current checkpoint first')
-    refs, items, proofs = [], [], []
+    refs, items, proofs, thumbs = [], [], [], {}
     if s == 'references':
         chars = c['characters']
         for i, char in enumerate(chars):
@@ -624,6 +763,10 @@ def produce(p, j, out):
         import concurrent.futures
         cfg = read(p.root / 'config.json')
         concurrency = cfg.get('concurrency', 3)
+        # Veo clips (kind 'clip') start from a finished still, so they run after all stills.
+        check_clip_plan(p, j, scenes, cfg)
+        clip_units = [u for u in scenes if u.get('kind') == 'clip']
+        still_units = [u for u in scenes if u.get('kind') != 'clip']
 
         completed = {}
         def process_scene(scene):
@@ -641,7 +784,7 @@ def produce(p, j, out):
         # image of that same scene, and planned_units keeps the ratio suffix
         # aligned so a chain never crosses ratios.
         ratio_order, ratio_groups = [], {}
-        for unit in scenes:
+        for unit in still_units:
             rk = unit.get('ratio')
             if rk not in ratio_groups:
                 ratio_groups[rk] = {}
@@ -674,6 +817,16 @@ def produce(p, j, out):
             # submitted unit, it just never starts a new one. Nothing here
             # resubmits; only the message is enriched with progress.
             _reraise_if_expired(ex, len(outcomes), len(scenes))
+        for i, unit in enumerate(clip_units):
+            base = completed.get(unit['from_image'])
+            if not base:
+                raise Blocked('M2_CLIP_SOURCE: start frame ' + unit['from_image'] + ' was not produced')
+            try:
+                r = clip_request(p, j, unit, base)
+            except Blocked as ex:
+                _reraise_if_expired(ex, len(outcomes), len(scenes))
+            outcomes[unit['id']] = (unit['id'], unit['prompt'], [], r)
+            thumbs[unit['id']] = base['path']
 
         # Re-assemble in the original planned order (scene-major, ratio-minor)
         # regardless of the ratio-major order used to submit requests above.
@@ -682,13 +835,16 @@ def produce(p, j, out):
             item = attach(p, j, r, scene_id, prompt, linked, out)
             if c.get('schema_version') == '3.0':
                 item.update(scene_id=unit['scene_id'],image_id=unit['image_id'],ratio=unit['ratio'])
+            if unit['id'] in thumbs:
+                thumbs[item['path']] = thumbs.pop(unit['id'])
             items.append(item)
 
     entries = refs + items + proofs
     sheet = Image.new('RGB', (540, max(1, (len(entries) + 2) // 3) * 350), '#eeeeee')
     draw = ImageDraw.Draw(sheet)
     for i, entry in enumerate(entries):
-        with Image.open(p.path(j, entry['path'])) as im:
+        # A clip is shown by its start frame on the contact sheet.
+        with Image.open(p.path(j, thumbs.get(entry['path'], entry['path']))) as im:
             im = im.convert('RGB');im.thumbnail((180, 320));sheet.paste(im, ((i % 3) * 180, (i // 3) * 350))
         draw.text(((i % 3) * 180 + 5, (i // 3) * 350 + 325), entry['scene_id'], fill='black')
     sheet.save(out / 'contact-sheet.jpg')
@@ -716,8 +872,22 @@ def check(p, j, data):
         a = approved(p, j, 'references')
         if not a or data['references'] != a['payload']['references']:
             raise Blocked('M2_REFERENCES: references not approved')
+    clip_paths = set()
     for item, scene in zip(data['items'], expected):
         if item['scene_id'] != scene.get('scene_id',scene['id']): raise Blocked('M2_SCENE_LINK: wrong parent scene')
+        is_clip = scene.get('kind') == 'clip'
+        if is_clip != item['path'].lower().endswith('.mp4'): raise Blocked('M2_CLIP: clip/still kind differs from plan')
+        if is_clip:
+            clip_paths.add(item['path'])
+            item_request = read(p.path(j,item['request']))
+            req_base = item_request['identity'].get('base_image')
+            prior = next((x for x in data['items'] if x.get('image_id','')+'_'+x.get('ratio','').replace(':','x')==scene['from_image']),None)
+            if (item_request['identity']['target'] != scene['id'] or not prior or not req_base
+                or req_base['target'] != scene['from_image'] or req_base['sha256'] != prior['sha256']):
+                raise Blocked('M2_CLIP_SOURCE: clip does not start from its planned still')
+            if item['prompt'] != scene['prompt'] or item['references']:
+                raise Blocked('M2_PROMPT: approved clip prompt changed')
+            continue
         if scene.get('ratio'):
             with Image.open(p.path(j,item['path'])) as im:
                 target_ratio = 16/9 if scene['ratio']=='16:9' else 9/16
@@ -737,11 +907,13 @@ def check(p, j, data):
     files = [data['contact_sheet']]
     image_check(p, j, data['contact_sheet'], full=False)
     for item in data['references'] + data['items'] + data['proofs']:
-        files.append(image_check(p, j, item['path'], item['sha256']))
+        is_clip = item['path'] in clip_paths
+        files.append(clip_check(p, j, item['path'], item['sha256']) if is_clip else image_check(p, j, item['path'], item['sha256']))
         req = read(p.path(j, item['request']))
         from prompt_templates import image_prompt
         changes = req['identity'].get('corrections', '\n'.join(x['note'] for x in req['identity'].get('edits',[])))
-        expected_prompt = requested_prompt(p,j,req['identity']['target'],item['prompt'],changes,req['identity']['ratio'])
+        expected_prompt = (clip_actual_prompt(item['prompt'], changes) if is_clip else
+                           requested_prompt(p,j,req['identity']['target'],item['prompt'],changes,req['identity']['ratio']))
         if item['actual_prompt'] != expected_prompt:
             raise Blocked('M2_PROMPT: actual prompt differs from configured template')
         if (req['state'] != 'downloaded'
@@ -752,7 +924,7 @@ def check(p, j, data):
         if not req.get('reconciliation_evidence'): files.append(str(p.path(j, req['path']).with_suffix('.json').relative_to(p.job(j))))
         if req.get('reconciliation_evidence'): files.append(req['reconciliation_evidence'])
         base = p.path(j, item['request']).parent
-        files.extend(str((base / n).relative_to(p.job(j))) for n in (['preflight.json', 'preflight.png', 'ui-proof.json', 'before-submit.png'] if requires_ui_evidence(p) else ['preflight.json', 'ui-proof.json']))
+        files.extend(str((base / n).relative_to(p.job(j))) for n in (['preflight.json', 'preflight.png', 'ui-proof.json', 'before-submit.png'] if requires_ui_evidence(p) and not is_clip else ['preflight.json', 'ui-proof.json']))
         # A raw read() here throws an unguarded FileNotFoundError (a bare
         # "[Errno 2] ..." with no M2_ prefix) instead of the clean M2_FILE
         # check the bottom of this function already performs for every other
@@ -766,7 +938,7 @@ def check(p, j, data):
             if digest(p.path(j,base_image['path'])) != base_image['sha256'] or ui.get('base_image') != str(p.path(j,base_image['path'])):
                 raise Blocked('M2_BASE_IMAGE: reference or evidence changed')
             files.append(base_image['path'])
-        if ui.get('passed') is not True or ui.get('mode') != 'image' or ui.get('characters') != [x['name'] for x in item['references']]:
+        if ui.get('passed') is not True or ui.get('mode') != ('clip' if is_clip else 'image') or ui.get('characters') != [x['name'] for x in item['references']]:
             raise Blocked('M2_UI_EVIDENCE: image mode/reference attachment not verified')
         for ref in item['references']:
             original = next((x for x in data['references'] if x['character_id'] == ref['character_id']), None)

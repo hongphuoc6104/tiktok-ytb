@@ -104,6 +104,15 @@ def image_units(c):
     units = []
     for scene in c['scenes']:
         for im in scene['images']:
+            if im.get('kind') == 'clip':
+                # Veo frames-to-video from a still of the same scene; text is drawn by Remotion.
+                prompt = '\n'.join(x for x in [c.get('style', ''), im.get('description', ''), 'Motion: ' + im['motion'],
+                                               'Keep the characters, framing and drawing style of the start frame. '
+                                               'No on-screen text, captions, logos or watermarks.'] if x)
+                units.append({'id': im['id'], 'scene_id': scene['id'], 'kind': 'clip', 'from_image': im['from_image'],
+                              'motion': im['motion'], 'prompt': prompt, 'character_ids': [], 'based_on': None,
+                              'visible_text': []})
+                continue
             # Never serialize IDs or metadata into visible prompt prose.
             people = [chars[x]['appearance'] + '; trang phục: ' + chars[x]['outfit'] for x in im['character_ids']]
             prompt = '\n'.join([c['style'], im['description'], 'Nhân vật: '+'; '.join(people),

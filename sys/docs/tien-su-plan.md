@@ -203,6 +203,13 @@ Nhật ký (mỗi giai đoạn thêm 5–10 dòng: đã làm, file chính, lện
   doodle đã đủ qua `style` + `visible_text: []`, không cần sửa template chung).
   Việc còn lại: viết thật một kịch bản tiensu qua `pilot.py run JOB content` để kiểm references
   trong tình huống thật (chưa làm vì không tạo job sản xuất theo yêu cầu phạm vi).
+- 25/09/2026 GĐ3b (offline, chưa nghiệm thu thật): `sys/flowpool/` (pool/scheduler/journal/ledger/profiles,
+  worker.mjs + flow-ops.mjs). Ảnh qua hàng đợi B-2 (queue-runner tách hàm dùng chung), clip qua Flow
+  frames-to-video (gflow FlowPage). Worker chỉ gắn CDP vào Chrome đang chạy; mọi profile của một
+  user-data-dir chạy trong một Chrome, mỗi profile một cửa sổ mở bằng `flowpool open-profile`.
+  `image_pipeline` dùng FlowPool khi `flowpool_enabled`; `kind: clip` + `brief.clips` mở khóa video/credit.
+  Test: `python -m unittest tests.test_flowpool tests.test_flowpool_pipeline`, `node --test flowpool/test-flow-ops.mjs`.
+  Còn lại: nghiệm thu thật (gắn tab theo profile, đọc credit, selector Veo), tool_url/media ID từng tài khoản.
 
 ## 8. Hợp đồng dữ liệu chung (khóa trước khi phát triển song song)
 
