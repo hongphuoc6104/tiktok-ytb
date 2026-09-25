@@ -2,6 +2,12 @@
 
 Cập nhật: 26/09/2026. Phạm vi: tiếp tục **cùng job** qua content → media → video, sau đó xuất thành phẩm và đánh dấu chủ đề đã làm. Đây là bản đồ điều phối; trạng thái sống phải đọc lại bằng `pilot.py status`, `next`, `integrity-diff` và FlowPool trước mỗi lượt sản xuất. Mọi lệnh bên dưới chạy từ `sys/`.
 
+## Cập nhật tiếp tục: bản duyệt content revision 2
+
+Khóa integrity đã hết ở lượt kiểm tra status/next mới. Đã reject content 1, lưu brief 2 qua revise-brief, viết lại draft và resume thành bản duyệt content revision 2 đang awaiting_review (module content revision 3 theo manifest). Bản mới có tám cảnh, sáu chương SC02–SC07, bảy claims theo sáu nguồn, 65 hình gồm năm clip và 120 beat. Ước tính trung tâm khoảng 620 giây; chưa có WAV để xác nhận. Xem [review content 2](../runs/tiensu-001/reviews/content/2/review.md). Các dòng content 1 và khóa mã bên dưới là bằng chứng lịch sử, đã được cập nhật bởi đoạn này.
+
+Bước kế tiếp: người dùng duyệt hoặc phản hồi content 2; sau duyệt mới chạy media. FlowPool chưa được mở lại, vấn đề cooldown/ảnh mascot và cấu hình vẫn chưa nghiệm thu. Đường agy E2BIG và lỗi token_revoked đã ghi CONTENT-002; không sửa mã được bảo vệ hoặc thử gọi lại.
+
 ## Trạng thái có bằng chứng
 
 | Yêu cầu/cổng | Bằng chứng hiện tại | Kết luận |

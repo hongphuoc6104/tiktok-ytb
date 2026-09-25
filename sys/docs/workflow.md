@@ -100,3 +100,9 @@ Không xóa lịch sử, bằng chứng Flow hoặc model đang dùng để làm
 ## Đạo diễn và kiểm tra biên tập
 
 Đọc [director-system.md](director-system.md). Bốn vai trò đạo diễn hỗ trợ ba gate hiện có. Brief mới dùng mục tiêu học và câu chuyện; brief đã lưu không thay đổi. Lượt thực hành có thể khai báo khoảng chờ cuối cảnh qua audio_direction của content-v3. Phụ đề dùng một bộ cue chung cho SRT/MP4, tối đa hai dòng; report kỹ thuật biên tập không thay thế nghe/xem thật. Khi Python mặc định thiếu phụ thuộc, dùng `.venv/bin/python pilot.py ...`.
+
+## Chuyển job đang làm sang auto theo yêu cầu rõ ràng
+
+`set-mode JOB --mode auto --confirm JOB --reason "Yêu cầu thật của người dùng"` chỉ chuyển review → auto trước khi có lượt audio/images/render. Lệnh giữ nguyên workflow.json gốc, brief, nội dung và lịch sử duyệt; lưu biên bản chuyển chế độ và sự kiện đối chiếu. Bản duyệt cũ không còn hiệu lực dưới chế độ mới; resume tạo bản duyệt mới từ artifact content đã có và gọi bộ đánh giá máy. Không ghi quyết định duyệt thay người dùng.
+
+Mã phải được commit và khớp integrity của job. Nếu cần nhận bản mã mới, chỉ người dùng chạy adopt-code như quy trình hiện hành. Không dùng set-mode để giải quyết hạn mức, lỗi model, phiên đăng nhập hay thiếu khả năng xem/nghe. Lệnh không tự tạo media; tiếp tục bằng resume. Đây là đường chuyển được bổ sung theo yêu cầu người dùng ngày 26/09/2026, thay cho việc sửa trực tiếp chế độ cố định trong workflow.json hoặc tạo job trùng nội dung.

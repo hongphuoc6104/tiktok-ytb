@@ -23,7 +23,49 @@ def settings(p, job):
         row = p.db.execute("SELECT detail FROM events WHERE job=? AND event='workflow_created' ORDER BY id LIMIT 1", (job,)).fetchone()
     if not row or row['detail'] != hashobj(data):
         raise Blocked('Workflow settings changed; job mode is immutable')
+    # The original settings remain immutable. A CLI migration is a separate,
+    # event-backed record; editing a JSON file alone cannot change the mode.
+    with p._db_lock:
+        changes = p.db.execute("SELECT detail FROM events WHERE job=? AND event='workflow_mode_changed' ORDER BY id", (job,)).fetchall()
+    for change in changes:
+        try:
+            receipt = json.loads(change['detail'])
+            record = read(p.path(job, receipt['path']))
+            if (receipt['hash'] != hashobj(record) or record['job'] != job
+                    or record['previous_settings'] != data or data['mode'] != 'review'
+                    or record['settings'] != {**data, 'mode': 'auto'}
+                    or not record['reason'].strip()):
+                raise ValueError('Invalid migration record')
+            data = record['settings']
+        except (OSError, ValueError, KeyError, TypeError) as ex:
+            raise Blocked('WORKFLOW_MIGRATION_TAMPER: invalid mode migration history') from ex
     return data
+
+
+def set_mode(p, job, mode, confirm, reason):
+    """Explicit review → auto migration before media; no quality approvals transfer."""
+    if confirm != job or not reason.strip():
+        raise Blocked('set-mode cần --confirm đúng mã job và --reason ghi yêu cầu chuyển chế độ')
+    p.refresh(job)
+    previous = settings(p, job)
+    if mode != 'auto':
+        raise Blocked('set-mode chỉ hỗ trợ chuyển review sang auto trước media')
+    if previous['mode'] == mode:
+        return {'job': job, 'mode': mode, 'changed': False}
+    if any(p.rows(job)[m]['revision'] for m in ('audio', 'images', 'render')):
+        raise Blocked('MODE_MIGRATION_AFTER_MEDIA: đã có lượt media/video; giữ chế độ hiện tại')
+    provenance = p.clean_code('auto')
+    record = {'job': job, 'previous_settings': previous,
+              'settings': {**previous, 'mode': mode}, 'reason': reason.strip(),
+              'at': time.time(), 'git_head': provenance['head']}
+    relative = f'workflow-migrations/{time.time_ns()}.json'
+    write(p.path(job, relative), record)
+    p.event(job, 'control', 'workflow_mode_changed', json.dumps(
+        {'path': relative, 'hash': hashobj(record)}, ensure_ascii=False))
+    # Changed settings invalidate old public review snapshots. prepare() will
+    # create a fresh review over the same content artifact for machine review.
+    return {'job': job, 'mode': mode, 'changed': True, 'history': relative,
+            'next': f'python3 pilot.py resume {job}'}
 
 
 def new(p, job, brief, mode='review'):

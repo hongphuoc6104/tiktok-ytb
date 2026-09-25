@@ -393,7 +393,7 @@ def locked(root):
 def main():
  import workflow
  ap=argparse.ArgumentParser(description='Video Pilot: content → media → video; review hoặc auto')
- ap.add_argument('command',choices=['lift-cap','doctor','new','status','next','repair-status','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','flow-confirm-registration','check-draft','revise-brief','batch','integrity-diff','adopt-code','mascot-reference'])
+ ap.add_argument('command',choices=['set-mode','lift-cap','doctor','new','status','next','repair-status','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','flow-confirm-registration','check-draft','revise-brief','batch','integrity-diff','adopt-code','mascot-reference'])
  ap.add_argument('job',nargs='?');ap.add_argument('stage',nargs='?',choices=workflow.STAGES)
  ap.add_argument('--mode',choices=['review','auto'],default='review')
  ap.add_argument('--revision',type=int);ap.add_argument('--note',default='')
@@ -437,7 +437,8 @@ def main():
      result=characters.set_reference(p.root,a.job,a.mascot_from)
     else:
      workflow.settings(p,a.job)
-     if c=='lift-cap':
+     if c=='set-mode':result=workflow.set_mode(p,a.job,a.mode,a.confirm,a.reason)
+     elif c=='lift-cap':
       if not sys.stdin.isatty() or input(f'Gõ lại mã job {a.job} để xác nhận mở khóa: ').strip()!=a.job:raise Blocked('lift-cap chỉ dành cho người dùng, chạy trực tiếp trong terminal')
       result=workflow.lift_cap(p,a.job,a.note)
      elif c in ('run','resume'):result=workflow.advance(p,a.job,a.stage,retry_review=a.retry_review)
