@@ -177,6 +177,32 @@ FlowPool làm sớm vì là phần rủi ro cao nhất và các giai đoạn sau
 Nhật ký (mỗi giai đoạn thêm 5–10 dòng: đã làm, file chính, lệnh test, việc còn lại):
 
 - 25/09/2026: lập kế hoạch; bổ sung FlowPool + Veo theo yêu cầu người dùng.
+- 25/09/2026 (GĐ1): thêm `tiensu/` (channel.json, topics.jsonl 30 chủ đề — 3 chủ đề thử đúng mục 5,
+  mỗi chủ đề có `sources` thật để qua cổng facts_required — ledger.json, bank.py CLI
+  status/next/start/mark/queue/audit tái dùng tiện ích từ `vocab/bank.py`, policy.py). Sửa
+  `config.json` (brief_policies → tiensu.policy:check, max_seconds 780) và `pilot.py` (thêm
+  `tiensu/*.py` vào protected()/git_state() cho song song với vocab). Thêm 4 trường brief-v3
+  (channel/voice_language/subtitles/clips) và content-v3 (scenes.chapter, images.kind/from_image/
+  motion, beats.overlays, effect pan_left/pan_right/pop, packaging) — tất cả optional, đã xác minh
+  30 brief sinh từ kho qua được validate_brief. Xoá dữ liệu vocab-only (briefs/*.json,
+  sources/*.txt, bank.jsonl); ledger.json rỗng lại ({"entries":{}}). vocab/test_bank.py::
+  RealBankTests tự skip khi thiếu bank.jsonl (cơ chế skip có sẵn). Sửa 2 chỗ trong
+  tests/test_redesign.py phụ thuộc bank.jsonl thật khác rỗng (so is_file() với bản gốc thay vì
+  assertTrue cứng; skip test dùng bank.bank()[0] khi kho thật đã gỡ) — đây là test chung của cơ
+  chế sandbox, không riêng vocab/tiensu.
+  Test: `sys/.venv/bin/python -m unittest discover -s tests` + `tiensu.test_bank` + `vocab.test_bank`.
+  Việc còn lại: GĐ2 (voice_language chưa được content_contract.py/adapters.py thật sự dùng để bỏ
+  yêu cầu narration_en trên 16:9 — cờ needs_en vẫn theo aspect_ratio), GĐ3/GĐ3b (renderer overlay/
+  clip, FlowPool), GĐ5 (packaging.py chưa tồn tại), GĐ6 pilot 3 video thật.
+- 25/09/2026 (GĐ4): thêm `.agents/skills/vp-content/references/explainer-longform.md` (cấu trúc
+  5 phần, giọng "bạn", ràng buộc facts/sources, quy tắc overlays/clip/packaging) và
+  `.agents/skills/vp-tiensu/SKILL.md`. Sửa `scripts/director_context.py`: thêm `tiensu_brief()` +
+  nạp `explainer-longform.md` ở stage outline/content khi `brief.channel=="tiensu"` (đã kiểm bằng
+  script tay: nạp đúng cho brief tiensu, không nạp cho brief từ vựng). Không sửa
+  `prompt_templates.py` (giữ đúng AGENTS.md "giữ nguyên mẫu prompt"; phong cách no-text/cream
+  doodle đã đủ qua `style` + `visible_text: []`, không cần sửa template chung).
+  Việc còn lại: viết thật một kịch bản tiensu qua `pilot.py run JOB content` để kiểm references
+  trong tình huống thật (chưa làm vì không tạo job sản xuất theo yêu cầu phạm vi).
 
 ## 8. Hợp đồng dữ liệu chung (khóa trước khi phát triển song song)
 
