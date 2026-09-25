@@ -241,7 +241,10 @@ class ProduceWithClipsTests(unittest.TestCase):
     """produce() + check() with a still and its clip, reusing the ImagesV2 fixture helpers."""
 
     def setUp(self):
-        import test_images_v2 as iv
+        try:
+            import test_images_v2 as iv
+        except ImportError:
+            from tests import test_images_v2 as iv
         self.iv = iv.ImagesV2Tests
         self.iv.setUp(self)
         cfg = read(self.root / 'config.json')
