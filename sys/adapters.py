@@ -319,7 +319,14 @@ def chunks(text):
   if not s:continue
   if len(s)>180:
    sub=re.split(r'(?<=[,;:\-])\s+', s)
-   parts.extend([x.strip() for x in sub if x.strip()])
+   for x in (x.strip() for x in sub if x.strip()):
+    # Long-form narration can carry a clause with no punctuation at all;
+    # never hand the TTS model more than it accepts (tts_max_chars 256).
+    while len(x)>240:
+     cut=x.rfind(' ',0,200)
+     cut=cut if cut>0 else 200
+     parts.append(x[:cut].strip());x=x[cut:].strip()
+    if x:parts.append(x)
   else:
    parts.append(s)
  return parts if parts else [text.strip()]
@@ -403,9 +410,11 @@ def retakes(p,j):
  return {r['scene_id']:r['n'] for r in rows}
 
 def needs_en(p,j):
- """16:9 exports carry the English track; 9:16 carries Vietnamese."""
+ """16:9 exports carry the English track unless the brief sets
+ voice_language "vi"; 9:16 always carries Vietnamese."""
+ from scripts.story_plan import needs_english
  b=p.brief(j)
- return bool(b) and b[0].get('aspect_ratio') in ('dual','16:9')
+ return bool(b) and needs_english(b[0])
 
 def scene_tail(scene, language, gaps, last):
  """A learner turn is a measured scene-tail hold, never spoken metadata."""
@@ -573,9 +582,12 @@ def render(p,j,out):
  public=out/'public';public.mkdir(exist_ok=True);shutil.copy(p.path(j,snd['wav']),public/'narration.wav')
  en=snd.get('en')
  if en:shutil.copy(p.path(j,en['wav']),public/'narration_en.wav')
- from scripts.story_plan import timeline
+ from scripts.story_plan import timeline, voice_language, subtitles_enabled
  b=p.brief(j)[0] if p.brief(j) else None
  ratio=b.get('aspect_ratio','9:16') if b else '9:16'
+ # Language of the 16:9 track: English by default, Vietnamese when the brief
+ # sets voice_language "vi" (then it reuses narration.wav and the vi cues).
+ wide=voice_language(b) if b else 'vi'
  def render_scenes(lang, aspect):
   planned=timeline(content,imgs,snd,lang,aspect)
   copied={}
@@ -588,18 +600,23 @@ def render(p,j,out):
    scene['image']=copy_asset(scene['image'])
    for beat in scene.get('images',[]):beat['src']=copy_asset(beat['src'])
   return planned
- scenes=render_scenes('en','16:9') if ratio=='16:9' else render_scenes('vi','9:16')
- props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'cues':subtitle_cues(snd['segments']),'aspect_ratio':ratio,'render_concurrency':config(p).get('render_concurrency',4)}
- if en:
+ scenes=render_scenes(wide,'16:9') if ratio=='16:9' else render_scenes('vi','9:16')
+ cfg=config(p)
+ props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'cues':subtitle_cues(snd['segments']),'aspect_ratio':ratio,
+        'voice_language':wide,'subtitles':subtitles_enabled(b),'render_concurrency':cfg.get('render_concurrency',4)}
+ for k in ('render_x264_preset','render_gl'):
+  if cfg.get(k):props[k]=cfg[k]
+ if en and wide=='en':
   props['en_duration']=en['duration']
   props['en_scenes']=scenes if ratio=='16:9' else render_scenes('en','16:9')
+ elif ratio=='dual':props['horizontal_scenes']=render_scenes('vi','16:9')
  from scripts.editorial_audit import audit
  editorial=audit(props);write(out/'editorial-audit.json',editorial)
  if editorial['errors']:raise Blocked('Editorial technical defects; see editorial-audit.json')
  write(out/'props.json',props)
- r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=3600);(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
+ r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=max(3600,int(props['duration']*8)));(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
  if r.returncode:raise Blocked('Render or layout check failed; see render.log: '+r.stderr[-500:])
- result={'video':rel(p,j,out/'video.mp4'),'stills':[rel(p,j,out/(s['id']+'.png')) for s in scenes],'layout_report':rel(p,j,out/'layout.json'),'editorial_report':rel(p,j,out/'editorial-audit.json'),'duration':en['duration'] if ratio=='16:9' else snd['duration']}
+ result={'video':rel(p,j,out/'video.mp4'),'stills':[rel(p,j,out/(s['id']+'.png')) for s in scenes],'layout_report':rel(p,j,out/'layout.json'),'editorial_report':rel(p,j,out/'editorial-audit.json'),'duration':en['duration'] if ratio=='16:9' and wide=='en' else snd['duration']}
  if (out/'video_16x9.mp4').exists():result['video_16x9']=rel(p,j,out/'video_16x9.mp4')
  if (out/'video_9x16.mp4').exists():result['video_9x16']=rel(p,j,out/'video_9x16.mp4')
  return result

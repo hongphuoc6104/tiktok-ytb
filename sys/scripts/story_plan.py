@@ -26,6 +26,36 @@ def normalize_brief(brief):
     return b
 
 
+def voice_language(b):
+    """Language of the 16:9 narration track. 9:16 is always Vietnamese; a
+    16:9/dual brief without voice_language keeps the historical English track."""
+    if not b or b.get('aspect_ratio', '9:16') == '9:16':
+        return 'vi'
+    return b.get('voice_language') or 'en'
+
+
+def needs_english(b):
+    """True when some output is narrated in English (narration_en/quote_en/WAV)."""
+    return bool(b) and b.get('aspect_ratio') in ('dual', '16:9') and voice_language(b) == 'en'
+
+
+def subtitles_enabled(b):
+    """Burned-in Vietnamese subtitles (default on). English tracks never carry
+    subtitles: there is no English cue list."""
+    return not b or b.get('subtitles', True) is not False
+
+
+def plan_languages(b):
+    return ['vi'] + (['en'] if needs_english(b) else [])
+
+
+def is_clip_path(path):
+    return str(path).lower().endswith('.mp4')
+
+
+OVERLAY_TEXT_LIMIT = {'label': 40, 'map_pin': 40, 'chapter_title': 60, 'counter': 30, 'arrow': 30}
+
+
 def occurrence(text, anchor):
     start = 0
     for _ in range(anchor['occurrence']):
@@ -55,6 +85,7 @@ def validate_plan(b, c):
         if outline['purpose'] != s['purpose'] or outline['requirements'] != s['requirements']:
             fail('OUTLINE', s['id'], 'Mục đích hoặc ý của cảnh khác dàn ý')
         seen = set()
+        stills = {im['id'] for im in s['images'] if im.get('kind', 'still') == 'still'}
         for im in s['images']:
             if im['id'] in all_images: fail('IMAGE_ID', s['id'], 'Mã ảnh trùng')
             all_images.add(im['id'])
@@ -64,14 +95,19 @@ def validate_plan(b, c):
                 fail('IMAGE_BASE', im['id'], 'Thiếu nội dung cần giữ nguyên')
             if not set(im['character_ids']) <= set(s['character_ids']):
                 fail('CHARACTER_REF', im['id'], 'Nhân vật ảnh không thuộc cảnh')
-            visible = ' '.join(im[k] for k in ['description','preserve','change'])
-            visible += ' ' + ' '.join(x['text']+' '+x['placement']+' '+x['object'] for x in im['visible_text'])
+            if im.get('kind', 'still') == 'clip':
+                if im.get('from_image') not in stills:
+                    fail('CLIP_SOURCE', im['id'], 'Clip phải lấy khung đầu từ một ảnh still cùng cảnh (from_image)')
+                if im.get('visible_text'):
+                    fail('CLIP_TEXT', im['id'], 'Clip không được có chữ trong hình; dùng overlays của beat')
+            visible = ' '.join(im[k] for k in ['description','preserve','change']) + ' ' + im.get('motion', '')
+            visible += ' ' + ' '.join(x['text']+' '+x['placement']+' '+x['object'] for x in im.get('visible_text', []))
             if any(re.search(r'(?<!\w)'+re.escape(code)+r'(?!\w)', visible, re.I) for code in internal):
                 fail('INTERNAL_LABEL', im['id'], 'Mã nội bộ không được đưa vào mô tả hình/chữ')
             seen.add(im['id'])
         used = {x['image_id'] for x in s['beats']}
         if used != seen: fail('IMAGE_USAGE', s['id'], 'Mỗi ảnh phải được sử dụng, không tham chiếu ảnh ngoài cảnh')
-        for lang in ['vi'] + (['en'] if b['aspect_ratio'] in ('dual','16:9') else []):
+        for lang in plan_languages(b):
             text = s.get('narration_en' if lang == 'en' else 'narration', '')
             positions = []
             for beat in s['beats']:
@@ -82,6 +118,19 @@ def validate_plan(b, c):
         for beat in s['beats']:
             if beat['id'] in all_beats: fail('BEAT_ID', s['id'], 'Mã nhịp trùng')
             all_beats.add(beat['id'])
+            for k, ov in enumerate(beat.get('overlays', [])):
+                where = beat['id'] + '/overlays/' + str(k)
+                kind, text = ov['type'], ov.get('text', '')
+                if kind in ('label', 'map_pin', 'chapter_title') and not text.strip():
+                    fail('OVERLAY', where, 'Overlay '+kind+' cần text')
+                if len(text) > OVERLAY_TEXT_LIMIT[kind]:
+                    fail('OVERLAY', where, f'Chữ overlay quá dài (tối đa {OVERLAY_TEXT_LIMIT[kind]} ký tự)')
+                if (kind == 'counter') != ('to' in ov):
+                    fail('OVERLAY', where, 'Chỉ counter có (và bắt buộc có) trường to')
+                if 'angle' in ov and kind != 'arrow':
+                    fail('OVERLAY', where, 'Chỉ arrow có trường angle')
+                if any(re.search(r'(?<!\w)'+re.escape(code)+r'(?!\w)', text, re.I) for code in internal):
+                    fail('INTERNAL_LABEL', where, 'Mã nội bộ không được hiện trên overlay')
     source = {x['id']: x for x in b['sources']}
     scene_by_id = {x['id']: x for x in scenes}
     for claim in c['claims']:
@@ -92,6 +141,11 @@ def validate_plan(b, c):
             fail('CLAIM_SOURCE','claims','Phát biểu/nguồn/dữ kiện không khớp; đúng nghĩa vẫn cần đánh giá')
     if b['facts_required'] and not c['claims']:
         fail('CLAIM_SOURCE','claims','Nội dung yêu cầu dữ kiện phải có liên kết phát biểu và nguồn')
+    pack = c.get('packaging')
+    if pack:
+        still_ids = {im['id'] for s in scenes for im in s['images'] if im.get('kind', 'still') == 'still'}
+        if pack['thumbnail']['image_id'] not in still_ids:
+            fail('PACKAGING', 'packaging/thumbnail', 'Thumbnail phải dùng một ảnh still có trong kịch bản')
     valid_scenes=set(ids)
     for response in c['revision_response']:
         if not set(response['scene_ids'])<=valid_scenes: fail('REVISION_RESPONSE','revision_response','Phản hồi trỏ tới cảnh không tồn tại')
@@ -110,7 +164,9 @@ def image_units(c):
                                 'Giữ nguyên: '+im['preserve'], 'Thay đổi: '+im['change']])
             units.append({'id': im['id'], 'scene_id': scene['id'], 'prompt': prompt,
                           'character_ids': im['character_ids'], 'based_on': im['based_on'],
-                          'visible_text': im['visible_text']})
+                          'visible_text': im.get('visible_text', [])})
+            if im.get('kind') == 'clip':
+                units[-1].update(kind='clip', from_image=im['from_image'], motion=im['motion'])
     return units
 
 
@@ -122,7 +178,7 @@ def text_prompt(prompt, allowed, style):
 
 def estimates(b, c):
     result = {'languages': {}, 'warnings': [], 'status': 'estimated_not_measured'}
-    for lang in ['vi'] + (['en'] if b['aspect_ratio'] in ('dual','16:9') else []):
+    for lang in plan_languages(b):
         rate = b['planning']['speech_rates'][lang]; rows = []
         for sc in c['scenes']:
             text = sc['narration_en' if lang=='en' else 'narration']
@@ -170,6 +226,8 @@ def review_plan(b, c, previous=None, requests=()):
            'Nhịp kể: '+plan['pacing'], 'Giả định cần kiểm tra:\n'+bullets(plan['assumptions']),
            f"{len(c['scenes'])} cảnh · {sum(len(s['images']) for s in c['scenes'])} hình logic · {sum(len(s['beats']) for s in c['scenes'])} nhịp",
            'Dual tạo hai bộ hình riêng cho hai tỷ lệ.' if b['aspect_ratio']=='dual' else 'Tỷ lệ: '+b['aspect_ratio'],
+           'Giọng bản 16:9: '+('tiếng Anh' if needs_english(b) else 'tiếng Việt')+' · Phụ đề tiếng Việt: '+('bật' if subtitles_enabled(b) else 'tắt')
+           if b['aspect_ratio']!='9:16' else 'Phụ đề tiếng Việt: '+('bật' if subtitles_enabled(b) else 'tắt'),
            '## Thời lượng dự kiến (chưa phải WAV)']
     for lang, data in timing['languages'].items():
         lines.append(f"{lang.upper()}: {data['min']}–{data['max']} giây. Cơ sở: {data['rate']['source']}")
@@ -180,15 +238,20 @@ def review_plan(b, c, previous=None, requests=()):
               'Chỉ những chữ liệt kê ở từng hình được phép xuất hiện; danh sách rỗng nghĩa là không chữ hoặc số.']
     for scene in c['scenes']:
         lines += ['## '+scene['id']+' — '+scene['title'], 'Mục đích: '+scene['purpose'], scene['narration']]
+        if scene.get('chapter'): lines.insert(len(lines)-2, 'Chương: '+scene['chapter'])
         if scene.get('narration_en'): lines.append('EN: '+scene['narration_en'])
         for lang, direction in scene.get('audio_direction', {}).items():
             lines.append(f"Chỉ đạo âm thanh {lang}: {direction['intent']} · Lưu ý phát âm: {direction['pronunciation_notes'] or 'Không có'} · Khoảng chờ học viên cuối cảnh: {direction['learner_pause_seconds']} giây (chưa xác minh WAV). Ý đồ giọng chưa phải điều khiển TTS.")
         for im in scene['images']:
+            if im.get('kind') == 'clip':
+                lines.append('**Clip '+im['id']+'** — '+im['description']+'\n\nKhung đầu: '+im['from_image']+'; chuyển động: '+im['motion']+'\n\nLý do: '+im['reason']+'\n\nKhông có chữ trong clip; chữ do overlay vẽ.')
+                continue
             words='; '.join('“'+x['text']+'” — '+x['placement']+'; đối tượng: '+x['object'] for x in im['visible_text']) or 'Không có chữ/số'
             lines.append('**Hình '+im['id']+'** — '+im['description']+'\n\nẢnh gốc: '+str(im['based_on'] or 'Tạo mới')+'; giữ: '+(im['preserve'] or 'Không áp dụng')+'; đổi: '+im['change']+'\n\nLý do: '+im['reason']+'\n\nChữ được phép: '+words)
         for beat in scene['beats']:
             anchors='; '.join(lang+': “'+a['quote']+'” (lần '+str(a['occurrence'])+')' for lang,a in beat['anchor'].items())
-            lines.append('Nhịp '+beat['id']+' → '+beat['image_id']+' · '+beat['effect']+' · '+anchors+' · '+beat['purpose'])
+            overlays='; '.join(ov['type']+(': “'+ov['text']+'”' if ov.get('text') else '')+(' → '+str(ov['to']) if 'to' in ov else '')+f" @{ov.get('at',0)}s ({ov['x']:.2f},{ov['y']:.2f})" for ov in beat.get('overlays', []))
+            lines.append('Nhịp '+beat['id']+' → '+beat['image_id']+' · '+beat['effect']+' · '+anchors+' · '+beat['purpose']+(' · Overlay: '+overlays if overlays else ''))
     lines += ['## Nhân vật', bullets(x['name']+': '+x['appearance']+'; '+x['outfit'] for x in c['characters'])]
     if any(x.get('quote_en') for x in c['coverage']):
         lines += ['## Đối chiếu ý bắt buộc (Việt / Anh)',
@@ -196,6 +259,11 @@ def review_plan(b, c, previous=None, requests=()):
                   '\n'.join(f"| {x['requirement_id']} | {x['scene_id']} | {x['quote']} | {x.get('quote_en','—')} |" for x in c['coverage'])]
     else:
         lines += ['## Đối chiếu ý bắt buộc', bullets(x['requirement_id']+' → '+x['scene_id']+': '+x['quote'] for x in c['coverage'])]
+    if c.get('packaging'):
+        pk=c['packaging']
+        lines += ['## Đóng gói', 'Tiêu đề:\n'+bullets(pk['titles']),
+                  f"Thumbnail: {pk['thumbnail']['image_id']} · chữ “{pk['thumbnail']['text']}” · cảm xúc: {pk['thumbnail']['emotion']}",
+                  'Hook mô tả: '+pk['hook'], 'Tags: '+', '.join(pk['tags'])]
     lines += ['## Phát biểu và nguồn', bullets(x['scene_id']+': “'+x['quote']+'” → '+x['source_id']+': '+x['fact'] for x in c['claims']),
               '## Nguồn', bullets(x['id']+' — '+x['title']+'; '+x['reference'] for x in b['sources']),
               '## Phản hồi cần xử lý', bullets(x['request_id']+': '+x['note'] for x in requests),
@@ -231,12 +299,17 @@ def timeline(c, images, audio, language, ratio):
                         at=seg['start']+(offset-pos)/max(1,len(seg['text']))*(seg.get('content_end',seg['end'])-seg['start']);break
                     cursor=pos+len(seg['text'])
             im=by_id[(bt['image_id'],ratio)]
-            beats.append({'id':bt['id'],'src':im['path'],'at':round(at-start,4),'effect':bt['effect'],'focus':bt['focus']})
+            beat={'id':bt['id'],'src':im['path'],'at':round(at-start,4),'effect':bt['effect'],'focus':bt['focus']}
+            # A clip is whatever MP4 the image stage delivered for this id.
+            if is_clip_path(im['path']): beat['kind']='clip'
+            if bt.get('overlays'): beat['overlays']=[dict(ov, at=ov.get('at',0)) for ov in bt['overlays']]
+            beats.append(beat)
         beats[0]['at']=0
         if any(round(a['at']*30)>=round(z['at']*30) for a,z in zip(beats,beats[1:])):
             raise ValueError('Visual beats collide at 30 fps; revise content anchors')
         output.append({'id':sc['id'],'title':sc['title'],'start':start,'end':end,'image':beats[0]['src'],'images':beats,
                        'timing_method':'narration_anchor_interpolated; verify against audio at media review'})
+        if sc.get('chapter'): output[-1]['chapter']=sc['chapter']
     return output
 
 

@@ -89,7 +89,7 @@ Inspect every actual image, listen to complete WAVs and watch complete videos wh
 If a required modality is unavailable, mark the affected criteria unsupported. inspected_files must contain only actually inspected files.
 Give specific evidence with scene/image IDs, quotations or timecodes. Do not invent listening observations or treat a technical check as quality approval.
 Judge the current brief, learner, selected meaning and required points. Check semantic coverage in each language, not only quote presence.
-The English 16:9 version is independent and hides subtitles; do not demand Vietnamese captions there. Compare claims with real source facts.
+An English-narrated 16:9 version is independent and hides subtitles; do not demand Vietnamese captions there. When the brief sets voice_language "vi", the 16:9 video is Vietnamese-only (no narration_en/quote_en/English WAV; bilingual_equivalence is not applicable) and burns Vietnamese subtitles unless subtitles is false. Overlay text (labels, map pins, counters, chapter titles) is drawn by the renderer: check its spelling, diacritics and placement in the video, not in the images. Compare claims with real source facts.
 Unresolved questions affecting the goal, omitted required content, or unsupported factual claims fail their relevant checks.
 Inspect exact visible_text, text style/placement, inherited-image continuity and mascot anatomy. Validate image meaning, not merely topical resemblance.
 Natural narration should be specific and spoken, with useful variation and little filler. Judge the actual context; a phrase blacklist or sentence length alone is not evidence of poor writing.
