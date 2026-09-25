@@ -64,7 +64,13 @@ def generate(p,job):
   prompt+='\nHướng dẫn văn phong cho narration/narration_en (chỉ sửa cách diễn đạt lời dẫn, không được dùng để bỏ ý, gộp cảnh hay rút ngắn nội dung bắt buộc; viết lời dẫn trước rồi mới đặt coverage/claims/anchor lên trên):\n'+(p.root/'.agents/skills/vp-content/references/narration-style.md').read_text()
   prompt+='\n'+context(p.root,'detail',b)
   prompt+='\nOptional audio_direction is content-v3 only. Keep correct English spelling in narration and captions. Intent and pronunciation_notes are review instructions, not engine parameters. learner_pause_seconds creates a quiet hold at the end of that scene. Return only schema JSON; do not invoke tools or create sidecar files.'
-  result=invoke(prompt,read(p.root/('schemas/content-v3.json' if version else 'schemas/content-v2.json')),out,timeout=int(read(p.root/'config.json').get('agy_content_timeout',180)))
+  cfg=read(p.root/'config.json')
+  from scripts import agy_longform
+  if version and agy_longform.is_longform(b):
+   # Long-form: cast, one call per scene against a budget, packaging, then bounded targeted repair.
+   payload,calls=agy_longform.generate(p.root,out,prompt,b,revision,bhash,outline,invoke,int(cfg.get('agy_scene_timeout',400)))
+   result={'status':'SUCCESS','mode':'longform','conversation_id':None,'calls':calls,'structured_output':payload}
+  else:result=invoke(prompt,read(p.root/('schemas/content-v3.json' if version else 'schemas/content-v2.json')),out,timeout=int(cfg.get('agy_content_timeout',180)))
   if version and result['structured_output'].get('outline') != outline['outline']:raise Blocked('OUTLINE: detailed script changed outline')
   write(out/'response.json',result)
   p.gate(job,'content')

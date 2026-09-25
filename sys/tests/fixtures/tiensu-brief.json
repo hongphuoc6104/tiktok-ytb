@@ -1,0 +1,114 @@
+{
+  "schema_version": "3.0",
+  "channel": "tiensu",
+  "voice_language": "vi",
+  "subtitles": true,
+  "topic": "Một ngày sống như người săn bắt hái lượm: kiếm ăn, ngủ và giữ ấm ra sao? — Theo một ngày từ sáng đến tối của một nhóm săn bắt hái lượm thời đồ đá cũ: dậy sớm, chia việc theo giới/tuổi, tìm nước, săn/hái, nấu quanh bếp lửa, ngủ theo ca canh gác",
+  "audience": "Người Việt tò mò về khảo cổ/nhân học, xem video dài trên YouTube, quen giọng kể 2 ngôi 'bạn'",
+  "goal": "Người xem trả lời được câu hỏi \"Một ngày sống như người săn bắt hái lượm: kiếm ăn, ngủ và giữ ấm ra sao?\" bằng bằng chứng khảo cổ/nghiên cứu thật, không phải suy đoán, và nhớ được niềm tin sai đã bị video phá bỏ",
+  "video_type": "explainer",
+  "duration": {
+    "min_seconds": 480.0,
+    "max_seconds": 720.0
+  },
+  "scene_count": 8,
+  "required_points": [
+    {
+      "id": "R1",
+      "text": "Hook 2 ngôi \"bạn\": đối lập đời sống hiện đại của người xem với cảnh Theo một ngày từ sáng đến tối của một nhóm săn bắt hái lượm thời đồ đá cũ: dậy sớm, chia việc theo giới/tuổi, tìm nước, săn/hái, nấu quanh bếp lửa, ngủ theo ca canh gác khoảng 50.000 năm trước, dẫn thẳng tới câu hỏi mở đầu"
+    },
+    {
+      "id": "R2",
+      "text": "Phá một niềm tin phổ biến/sai lầm thường gặp về chủ đề trước khi vào bằng chứng"
+    },
+    {
+      "id": "R3",
+      "text": "Nhắc lại rõ ràng câu hỏi bí ẩn cần trả lời: \"Một ngày sống như người săn bắt hái lượm: kiếm ăn, ngủ và giữ ấm ra sao?\""
+    },
+    {
+      "id": "R4",
+      "text": "6 chương bằng chứng (scenes[].chapter đặt tên riêng từng chương), mỗi chương dựng trên đúng một nghiên cứu/di chỉ/số liệu cụ thể có claim trỏ tới một mục trong sources"
+    },
+    {
+      "id": "R5",
+      "text": "Kết quay lại đúng hình ảnh mở đầu, chốt bằng đối chiếu \"Bạn thì… còn họ thì…\" giữa đời sống hiện đại và điều vừa học được"
+    }
+  ],
+  "language": "vi",
+  "tone": "tò mò, nhập vai, kể chuyện có bằng chứng thật, không giật gân hoá quá mức",
+  "style": "Minimalist ink stick-figure doodle on off-white/cream background, hand-drawn sketch lines, labeled props/maps/diagrams drawn separately (never baked into the image); no text, numbers or letters rendered inside the image itself",
+  "aspect_ratio": "16:9",
+  "facts_required": true,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "What Hunters Do for a Living, or How to Make Out on Scarce Resources",
+      "reference": "Richard B. Lee (1968), nghiên cứu dân tộc học về người Ju/'hoansi (!Kung San), Kalahari",
+      "facts": [
+        "Người Ju/'hoansi trưởng thành chỉ dành trung bình khoảng 15-20 giờ mỗi tuần để kiếm ăn trực tiếp, theo số liệu điền dã của Lee",
+        "Phần lớn calo hái lượm đến từ thực vật (đặc biệt hạt mongongo), không chỉ từ săn bắt"
+      ]
+    }
+  ],
+  "planning": {
+    "success_criteria": [
+      "Người xem trả lời lại được câu hỏi \"Một ngày sống như người săn bắt hái lượm: kiếm ăn, ngủ và giữ ấm ra sao?\" bằng ít nhất hai bằng chứng cụ thể có nguồn",
+      "Người xem nhớ được niềm tin sai đã bị phá trong video và vì sao nó sai",
+      "Mọi số liệu/tuyên bố then chốt trong lời dẫn truy được về đúng một mục trong sources; hiệu quả giữ chân người xem thật cần đo sau khi có dữ liệu Analytics của pilot"
+    ],
+    "avoid": [
+      "Giật tít sai sự thật hoặc phóng đại số liệu chưa có nguồn",
+      "Sao chép kịch bản, hình ảnh, nhân vật hoặc thumbnail của kênh mẫu Ink Explainer; chỉ lấy khuôn kể chuyện",
+      "Khẳng định chắc nịch về chi tiết khảo cổ còn đang tranh cãi mà không nói rõ mức độ chắc chắn",
+      "Nhồi thuật ngữ chuyên ngành không giải thích",
+      "Chữ/nhãn/số liệu tạo trong ảnh; toàn bộ chữ hiển thị phải do Remotion vẽ ở lớp overlay"
+    ],
+    "prior_knowledge": "Không cần kiến thức chuyên ngành; mọi thuật ngữ khảo cổ/nhân học phải được giải thích ngay khi xuất hiện",
+    "pacing": "Hook nhanh trong 30-45 giây đầu; mỗi chương bằng chứng có nhịp riêng theo lượng thông tin, không ép đều; giữ đủ thời gian cho khán giả tiêu hoá số liệu trước khi chuyển chương",
+    "domain_requirements": [
+      "Nhân vật chính CH01 dùng đúng mascot chuẩn assets/characters/tiensu-mascot/reference-v1.png (character.json); người que tiền sử tóc bù, áo da thú, vòng cổ xương — khác hẳn mascot áo xanh của kênh từ vựng và khác nhân vật của Ink Explainer",
+      "Cấu trúc 5 phần bắt buộc theo khuôn Ink Explainer: (1) hook 2 ngôi 'bạn' đối lập đời sống hiện đại với cảnh sống 50.000 năm trước; (2) phá một niềm tin phổ biến/sai lầm thường gặp; (3) nhắc lại rõ câu hỏi bí ẩn của video; (4) 6-8 chương bằng chứng (scenes[].chapter đặt tên từng chương), mỗi chương dựng trên đúng một nghiên cứu/di chỉ/số liệu cụ thể; (5) kết quay lại đúng hình ảnh mở đầu, chốt bằng đối chiếu 'Bạn thì… còn họ thì…'",
+      "facts_required luôn true: mọi số liệu/tuyên bố then chốt trong narration phải có claim trỏ tới đúng một mục trong sources; không bịa nguồn, không suy diễn quá xa dữ liệu khảo cổ thật",
+      "Ảnh không chứa chữ (visible_text rỗng); nhãn, số, tên chương, mốc thời gian do Remotion vẽ qua beats[].overlays (type: label/chapter_title/map_pin/counter/arrow)",
+      "images[].kind mặc định 'still'; ảnh loại 'clip' phải khai báo from_image (id ảnh still cùng cảnh làm khung đầu) và motion (mô tả chuyển động, tiếng Anh); không vượt quá clips.max của brief",
+      "packaging bắt buộc trước khi đóng gói: titles gồm 3 phương án theo khuôn 'Người tiền sử làm gì khi ___?'; thumbnail.text 2-4 từ in hoa, thường kết thúc bằng dấu hỏi; hook 2 câu; tags liên quan tiền sử/khảo cổ/sinh tồn",
+      "voice_language 'vi' trên tỷ lệ 16:9: đọc bằng giọng Việt (WAV Việt), không bắt buộc narration_en/quote_en; phụ đề bật theo subtitles của brief",
+      "Giọng kể xưng 'bạn' xuyên suốt (văn nói tiếng Việt tự nhiên, không dịch máy); xem references/explainer-longform.md trong vp-content khi viết lời dẫn",
+      "Mỗi hình/beat có chức năng kể chuyện hoặc minh hoạ bằng chứng; đổi hình khoảng 4-6 giây theo khuôn kênh mẫu, không lấy tốc độ hàng đợi Flow làm tiêu chí sáng tạo",
+      "Không dùng lại hình, nhân vật hay thumbnail của kênh mẫu; mỗi video tự nghiên cứu, nguồn thật, không sản xuất hàng loạt lặp nội dung",
+      "Mã chủ đề trong kho tiền sử: hunter-gatherer-daily-life",
+      "Góc kể riêng của video này: Theo một ngày từ sáng đến tối của một nhóm săn bắt hái lượm thời đồ đá cũ: dậy sớm, chia việc theo giới/tuổi, tìm nước, săn/hái, nấu quanh bếp lửa, ngủ theo ca canh gác",
+      "Gợi ý nghiên cứu thêm khi viết kịch bản (không phải bằng chứng đã duyệt, phải tự tìm nguồn thật trước khi đưa vào claims): Phân bổ thời gian lao động mỗi ngày theo nghiên cứu dân tộc học; Phân công việc theo giới và tuổi trong nhóm nhỏ; Vai trò bếp lửa trong sinh hoạt buổi tối"
+    ],
+    "assumptions": [
+      "Tiêu chí ban đầu lấy từ mục tiêu; cần kiểm tra khi duyệt kịch bản.",
+      "Tốc độ giọng là ước lượng ban đầu, chưa phải số đo hiệu chỉnh; hiệu chỉnh ở GĐ6 bằng scripts/calibrate_speech_rates.py sau khi có video pilot thật."
+    ],
+    "text_style": {
+      "font": "Inter, sans-serif",
+      "color": "#2B2118",
+      "outline": "Nền kem/be sáng tương phản",
+      "size": "Lớn, dễ đọc trên màn hình 16:9 lẫn di động",
+      "placement": "1/3 phía dưới cho nhãn/chapter title, tránh vùng phụ đề; map_pin/arrow đặt theo toạ độ x,y của overlay"
+    },
+    "speech_rates": {
+      "vi": {
+        "units_per_second": 3.6,
+        "uncertainty": 0.25,
+        "includes_pauses": false,
+        "source": "initial estimate; replace with measured voice rate after pilot"
+      },
+      "en": {
+        "units_per_second": 2.5,
+        "uncertainty": 0.25,
+        "includes_pauses": false,
+        "source": "unused placeholder; channel voice_language=vi, no narration_en required"
+      }
+    }
+  },
+  "clips": {
+    "max": 10,
+    "model": "veo-fast",
+    "variants": 2
+  }
+}

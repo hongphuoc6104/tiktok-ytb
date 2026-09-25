@@ -77,6 +77,27 @@ dụng nguyên vẹn ở đây, cộng thêm:
   `brief.clips.max`. Không tự đặt `kind: clip` khi brief không có trường `clips` (kênh/job đó
   chưa bật Veo).
 
+## Ngân sách độ dài/nhịp và lỗi chặn thường gặp (bắt buộc)
+
+Brief dài (`duration.max_seconds > 300` hoặc `channel == "tiensu"`) được adapter viết theo từng
+cảnh (`scripts/agy_longform.py`): sau dàn ý, mỗi cảnh một lượt gọi kèm ngân sách riêng, lời dẫn các
+cảnh trước và schema một cảnh; rồi một lượt đóng gói; lỗi hợp đồng được sửa có giới hạn (tối đa 2
+vòng, chỉ cảnh lỗi). Ngân sách tính từ điểm giữa `duration` và `planning.speech_rates` (8-12 phút,
+3,6 âm tiết/giây ≈ 1.800-2.400 âm tiết cả video) và là mục tiêu cứng ±15% cho từng cảnh:
+
+- Lời dẫn: đủ số âm tiết (đếm theo từ cách nhau bởi dấu cách) của cảnh; thiếu hoặc thừa quá 15% bị
+  chặn `BUDGET_UNITS`. Viết lời dẫn đủ dài trước, rồi mới đặt neo/coverage/claims lên trên.
+- Nhịp: một beat mỗi 4-6 giây lời dẫn (cả video khoảng 80-150 beat); sai khoảng bị chặn
+  `BUDGET_BEATS`. Không cần ảnh mới cho mỗi beat: dùng lại một ảnh `still` qua nhiều beat liên
+  tiếp và đổi overlay/effect/focus (cả video khoảng 40-70 ảnh riêng, kể cả clip trong `clips.max`).
+- Mô tả hình (`description`, `preserve`, `change`, `motion`), lời dẫn và chữ overlay KHÔNG được chứa
+  mã quản lý (mã nhân vật như CH01, mã cảnh SC…, mã ảnh/beat như IMG_…/B…). Gọi nhân vật bằng tên và
+  ngoại hình ("người tiền sử tóc bù mặc áo da thú"), không viết "CH01 ngồi dậy". Lỗi này bị chặn
+  `INTERNAL_LABEL`.
+- Chữ overlay ngắn: `label`/`map_pin` ≤ 40 ký tự, `chapter_title` ≤ 60, `counter`/`arrow` ≤ 30;
+  vượt bị chặn `OVERLAY`. Tên chương dài đặt ở `scenes[].chapter`, overlay chỉ ghi bản rút gọn.
+- Mã ảnh/beat đặt theo cảnh (`SC03_I01`, `SC03_C01`, `SC03_B01`) để không trùng giữa các cảnh.
+
 ## Đóng gói (`packaging`)
 
 Viết cùng lúc với kịch bản, không phải bước riêng: điền `packaging` ở top-level content-v3.
