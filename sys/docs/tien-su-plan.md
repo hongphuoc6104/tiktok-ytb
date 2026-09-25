@@ -177,3 +177,40 @@ FlowPool làm sớm vì là phần rủi ro cao nhất và các giai đoạn sau
 Nhật ký (mỗi giai đoạn thêm 5–10 dòng: đã làm, file chính, lệnh test, việc còn lại):
 
 - 25/09/2026: lập kế hoạch; bổ sung FlowPool + Veo theo yêu cầu người dùng.
+
+## 8. Hợp đồng dữ liệu chung (khóa trước khi phát triển song song)
+
+Mọi trường mới đều **tùy chọn**; thiếu trường thì hành vi cũ giữ nguyên (job từ vựng, job lịch sử).
+
+### Brief (brief-v3, thêm)
+- `channel`: `"tiensu"` | … — tên kênh sinh brief.
+- `voice_language`: `"vi"` | `"en"`. Mặc định: 16:9 → `en`, 9:16 → `vi` (như cũ). 16:9 + `vi` =
+  WAV Việt, không cần `narration_en`, không cần `quote_en`.
+- `subtitles`: bool. Mặc định: true khi giọng Việt, false khi 16:9 tiếng Anh.
+- `clips`: `{ "max": int, "model": "veo-fast" | "veo-quality", "variants": int }` — thiếu = không clip.
+
+### Content-v3 (thêm)
+- `images[].kind`: `"still"` (mặc định) | `"clip"`. Clip có `from_image` (id ảnh still cùng cảnh
+  làm khung đầu), `motion` (mô tả chuyển động, tiếng Anh), không có `visible_text`.
+  Tệp clip là MP4 do FlowPool trả về; beat trỏ `image_id` tới clip như ảnh thường.
+- `beats[].effect` thêm: `pan_left`, `pan_right`, `pop`.
+- `beats[].overlays[]`: `{ "type": "label"|"chapter_title"|"map_pin"|"counter"|"arrow",
+  "text": str, "x": 0–1, "y": 0–1, "at": giây tính từ đầu beat (mặc định 0),
+  "to": số đích (chỉ counter), "angle": độ (chỉ arrow) }`. Chữ do Remotion vẽ, tiếng Việt có dấu.
+- `packaging`: `{ "titles": [3 chuỗi], "thumbnail": { "image_id": id ảnh still có sẵn,
+  "text": 2–4 từ in hoa, "emotion": str }, "hook": 2 câu mô tả, "tags": [..] }`.
+- `scenes[].chapter`: tên chương hiển thị trong mô tả YouTube.
+
+### FlowPool (`sys/flowpool/`)
+- Yêu cầu: `{ "id", "kind": "image"|"clip", "prompt", "ratio": "16:9"|"9:16",
+  "refs": [đường dẫn ảnh tham chiếu], "start_frame": đường dẫn (clip), "variants": n,
+  "model": str, "job", "scene" }`.
+- Kết quả: `{ "id", "status": "ok"|"failed"|"unknown", "files": [..], "profile",
+  "credits_before", "credits_after", "error" }`.
+- API Python: `flowpool.run(requests, cfg) -> list[result]`; CLI
+  `python3 -m flowpool status|doctor|run --queue FILE`.
+
+### Đóng gói (`sys/packaging.py`)
+- Chạy sau render đạt duyệt video; ghi `thumbnail.jpg` (1280×720), `metadata.json`
+  (titles, description, chapters, tags, sources), `description.txt` vào `video/<job>/`.
+- Chapters lấy từ thời điểm bắt đầu thật của từng cảnh trong WAV; chương đầu 0:00.
