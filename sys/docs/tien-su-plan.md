@@ -99,7 +99,8 @@ Mỗi giai đoạn kết thúc bằng tests đạt + commit riêng. Flow thật 
 Mở rộng `experiments/b2_illustrator` (queue-runner, attempt-store, session) thành
 `sys/flowpool/`, dùng chung cho ảnh và clip.
 
-- **Pool profile** (`flowpool/profiles.json`, sinh từ `browser-profiles.json`): mỗi profile
+- **Pool tài khoản** (`flowpool/profiles.json`; mỗi tài khoản một Chrome riêng do FlowPool quản lý,
+  user-data-dir `sys/.gflow/pool/<tên>/` + cổng debug riêng — xem nhật ký 25/09 bản 2): mỗi profile
   có trạng thái `ready | busy | low_credit | needs_login | captcha | cooldown`, số credit đọc
   từ UI trước/sau mỗi lượt, giới hạn song song riêng.
 - **Bộ lập lịch**: ảnh (Nano Banana, không tốn credit theo đo 22/09) chia vòng tròn cho mọi
@@ -210,6 +211,16 @@ Nhật ký (mỗi giai đoạn thêm 5–10 dòng: đã làm, file chính, lện
   `image_pipeline` dùng FlowPool khi `flowpool_enabled`; `kind: clip` + `brief.clips` mở khóa video/credit.
   Test: `python -m unittest tests.test_flowpool tests.test_flowpool_pipeline`, `node --test flowpool/test-flow-ops.mjs`.
   Còn lại: nghiệm thu thật (gắn tab theo profile, đọc credit, selector Veo), tool_url/media ID từng tài khoản.
+- 25/09/2026 GĐ3b bản 2 (sau nghiệm thu thật lần 1): Chrome 152 chỉ cho CDP thấy một profile của
+  user-data-dir mặc định (bật qua chrome://inspect), gắn tab theo dấu URL chập chờn; labs.google/fx/tools/flow
+  chuyển sang flow.google.com; tài khoản mới chưa có project "Video Pilot". Đổi sang **mỗi tài khoản một Chrome
+  riêng**: `add NAME` (thư mục `sys/.gflow/pool/NAME/`, cổng 9301+), `login NAME` (mở không có cổng debug để
+  người dùng tự đăng nhập), `launch NAME|--all`, `stop NAME|--all`. Bỏ chế độ profile dùng chung và
+  `open-profile`. Worker nối đúng cổng của instance; chỉ instance đang chạy mới nhận việc (tối đa
+  `flowpool_max_browsers`). Project tự mở theo URL đã ghi, không có thì tìm theo tên, không có nữa thì bấm
+  "New project" và ghi `project_url` (không đổi tên project). Ảnh mặc định đi đường Flow UI (đính kèm ảnh tham
+  chiếu bằng Upload, 1 ảnh/lượt); đường B-2 x4 chỉ khi instance có `tool_url` + media ID của tài khoản đó.
+  Selector chỉ kiểm bằng đọc mã (gflow-cli 1.1.1), chưa chạy thật.
 - 25/09/2026 GĐ2 + GĐ3 (phần renderer): brief `voice_language`/`subtitles`/`channel`/`clips`;
   16:9 + `vi` dùng narration.wav, không cần narration_en/quote_en/neo en (story_plan.needs_english
   là nguồn duy nhất cho content_contract, estimates, review_plan, pilot gate audio/render, workflow

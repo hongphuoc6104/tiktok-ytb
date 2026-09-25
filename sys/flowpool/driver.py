@@ -1,7 +1,7 @@
 """Browser drivers. The pool talks to one driver per active profile.
 
 Protocol (all read-only except `commit`):
-  open()            bind the profile's tab in the running Chrome; detect CAPTCHA/login
+  open()            attach to the instance's own Chrome (its debugging port); detect CAPTCHA/login
   probe(kinds)      doctor checks: logged in, Flow reachable, model selectable, credits
   read_credits()    {'value': int|None, 'raw': ..., 'method': ...}
   prepare(kind, items)  fill the form / local queue; MUST NOT start a generation
@@ -23,7 +23,7 @@ HERE = Path(__file__).resolve().parent
 PROFILE_CODES = {
     'CAPTCHA': 'captcha',
     'NEEDS_LOGIN': 'needs_login',
-    'PROFILE_MISMATCH': 'needs_login',
+    'PROFILE_MISMATCH': 'needs_login',  # Flow shows a different account than the instance's account_hint
     'RATE_LIMITED': 'cooldown',
     'CREDIT_LIMIT': 'low_credit',
 }
@@ -67,7 +67,7 @@ class NodeDriver(Driver):
         self.cfg = cfg
         self.proc = None
         self.lines = queue.Queue()
-        self.phase = None
+        self.project_url = None  # reported by the worker once it opened/created the Flow project
 
     def _start(self):
         self.proc = subprocess.Popen([self.cfg.get('flowpool_node', 'node'), str(HERE / 'worker.mjs')],
@@ -102,6 +102,8 @@ class NodeDriver(Driver):
             reply = json.loads(line)
         except ValueError:
             raise DriverError('PROTOCOL', line[:200], submitted=submitted_on_error)
+        if reply.get('project_url'):
+            self.project_url = reply['project_url']
         if not reply.get('ok'):
             raise DriverError(reply.get('code') or 'WORKER_ERROR', reply.get('error', ''),
                               submitted=bool(reply.get('submitted', submitted_on_error)), partial=reply.get('partial'))
@@ -154,5 +156,5 @@ class NodeDriver(Driver):
 
 def _worker_cfg(cfg):
     keys = ('flow_model', 'flow_project', 'veo_model', 'flowpool_credit_probe', 'flowpool_model_labels',
-            'flowpool_clip_seconds')
+            'flowpool_clip_seconds', 'flowpool_flow_url')
     return {k: cfg.get(k) for k in keys}

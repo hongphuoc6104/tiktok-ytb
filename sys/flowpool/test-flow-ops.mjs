@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import * as ops from './flow-ops.mjs';
-import {createWorker, debugEndpoint} from './worker.mjs';
+import {createWorker, debugEndpoint, endpointFor} from './worker.mjs';
 import {pollQueue} from '../experiments/b2_illustrator/queue-runner.mjs';
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'flowpool-'));
@@ -37,20 +37,55 @@ test('credit balances are parsed; cost phrases and ambiguity give null', () => {
   assert.equal(ops.pickCredits(['no numbers here']).value, null);
 });
 
-test('tabs bind by recorded target, else by the open-profile marker', async () => {
-  const pages = [fakePage('https://labs.google/fx/tools/flow#flowpool=profile-13'), fakePage('https://labs.google/fx/tools/flow')];
-  const infos = new Map([[pages[0], {targetId: 'T13', browserContextId: 'C13'}], [pages[1], {targetId: 'T10', browserContextId: 'C10'}]]);
-  const browser = {contexts: () => [{pages: () => pages}]};
-  const info = async p => infos.get(p);
-  const p13 = {name: 'Profile 13', slug: 'profile-13'};
-  assert.equal((await ops.bindPage(browser, p13, info)).binding.target_id, 'T13');
-  const p10 = {name: 'Profile 10', slug: 'profile-10', binding: {target_id: 'T10'}};
-  assert.equal((await ops.bindPage(browser, p10, info)).page, pages[1]);
-  await assert.rejects(ops.bindPage(browser, {name: 'Profile 14', slug: 'profile-14'}, info), e => e.code === 'PROFILE_TAB_NOT_FOUND');
-  await assert.rejects(ops.bindPage(browser, {...p13, _other_context_ids: ['C13']}, info), e => e.code === 'PROFILE_MISMATCH');
-  pages.push(fakePage('https://x#flowpool=profile-13'));
-  infos.set(pages[2], {targetId: 'T99'});
-  await assert.rejects(ops.bindPage(browser, p13, info), /2 tabs/);
+test('one instance = one account: reuse its Flow tab, else a plain tab, else open one', async () => {
+  const other = fakePage('chrome://newtab/'), flow = fakePage('https://flow.google.com/project/abc');
+  const browser = pages => ({contexts: () => [{pages: () => pages, newPage: async () => 'NEW'}]});
+  assert.equal(await ops.pickPage(browser([other, flow])), flow);
+  const plain = fakePage('https://example.org/');
+  assert.equal(await ops.pickPage(browser([other, plain])), plain);
+  assert.equal(await ops.pickPage(browser([other])), 'NEW');
+  await assert.rejects(ops.pickPage({contexts: () => []}), e => e.code === 'NO_CDP');
+});
+
+test('project URLs are canonical and resolved on the current (flow.google.com) host', async () => {
+  assert.equal(ops.projectUrlOf('https://flow.google.com/project/7c815425-4625-4afb?x=1#flowpool=a'), 'https://flow.google.com/project/7c815425-4625-4afb');
+  assert.equal(ops.projectUrlOf('https://labs.google/fx/tools/flow/project/41d3d574-907c/tool/2791'), 'https://labs.google/fx/tools/flow/project/41d3d574-907c');
+  assert.equal(ops.projectUrlOf('https://flow.google.com/'), null);
+  const page = {url: () => 'https://flow.google.com/', evaluate: async () => '/project/0123abcd-ef'};
+  assert.equal(await ops.findProjectUrl(page, 'Video Pilot'), 'https://flow.google.com/project/0123abcd-ef');
+});
+
+function fakeFlow({cards = {}, canCreate = true, url = 'https://flow.google.com/'} = {}) {
+  const calls = [];
+  const loc = (visible, onClick) => ({first: () => loc(visible, onClick), or: () => loc(visible, onClick),
+    waitFor: async () => {}, isVisible: async () => visible, click: async () => onClick && onClick()});
+  const page = {
+    url: () => url, goto: async u => { calls.push(['goto', u]); url = u; },
+    evaluate: async (fn, arg) => typeof arg === 'string' ? (cards[arg] || null) : {text: '', frames: []},
+    locator: () => loc(Object.keys(cards).length > 0),
+    waitForURL: async () => {},
+  };
+  const newProject = loc(canCreate, () => { calls.push(['new-project']); url = 'https://flow.google.com/project/beef0001-aaaa'; });
+  const g = {flowLocators: () => ({newProjectButton: newProject})};
+  return {page, g, calls};
+}
+
+test('ensureProject: recorded URL, else named card, else creates one (no generation)', async () => {
+  let f = fakeFlow();
+  const cfg = {flowpool_flow_url: 'https://flow.google.com/'};
+  let session = {page: f.page, profile: {name: 'acc1', project: 'Video Pilot'}};
+  assert.equal(await ops.ensureProject(session, cfg, f.g), 'https://flow.google.com/project/beef0001-aaaa');
+  assert.deepEqual(f.calls.map(c => c[0]), ['goto', 'new-project']);
+  f = fakeFlow({cards: {'Video Pilot': '/project/cafe0002-bbbb'}});
+  session = {page: f.page, profile: {name: 'acc1', project: 'Video Pilot'}};
+  assert.equal(await ops.ensureProject(session, cfg, f.g), 'https://flow.google.com/project/cafe0002-bbbb');
+  assert.ok(!f.calls.some(c => c[0] === 'new-project'));
+  f = fakeFlow();
+  session = {page: f.page, profile: {name: 'acc1', project: 'Video Pilot', project_url: 'https://flow.google.com/project/dddd0003-cccc'}};
+  assert.equal(await ops.ensureProject(session, cfg, f.g), 'https://flow.google.com/project/dddd0003-cccc');
+  assert.deepEqual(f.calls, [['goto', 'https://flow.google.com/project/dddd0003-cccc']]);
+  f = fakeFlow({canCreate: false});
+  await assert.rejects(ops.ensureProject({page: f.page, profile: {name: 'acc1', project: 'X'}}, cfg, f.g), e => e.code === 'NEEDS_LOGIN');
 });
 
 function fakeB2(calls, {pollError = null, queued = []} = {}) {
@@ -98,16 +133,16 @@ test('queue failure after start is submitted, keeps partial outputs', async () =
   const busy = {...session, page: fakePage('https://flow.test/tool')};
   busy.page.evaluate = async () => ({text: "I'm not a robot", frames: []});
   await ops.imagePrepare({...session}, [item('f')], fakeB2([])).catch(() => {});
-  const s2 = {page: busy.page, profile: session.profile, pending: {kind: 'image', frame: {}, ids: ['q0'], items: [item('f')]}};
+  const s2 = {page: busy.page, profile: session.profile, pending: {kind: 'b2', frame: {}, ids: ['q0'], items: [item('f')]}};
   await assert.rejects(ops.imageCommit(s2, 10, fakeB2([], {pollError: 'FLOW_RECONCILIATION_REQUIRED'})), e => e.code === 'CAPTCHA' && e.submitted);
 });
 
-test('clip refusals map to declined codes; timeouts stay unknown', async () => {
+test('Flow refusals map to declined codes; timeouts stay unknown', async () => {
   class RateLimitedError extends Error { constructor(m) { super(m); this.name = 'RateLimitedError'; } }
   const run = async err => {
     const fp = {submit: async () => {}, waitForResults: async () => { throw err; }};
-    const session = {page: fakePage('https://labs.google/fx/tools/flow/project/1'), pending: {kind: 'clip', fp, before: new Set(), item: item('c', {variants: 2})}};
-    return ops.clipCommit(session, 10, {}).catch(e => e);
+    const session = {page: fakePage('https://flow.google.com/project/1'), pending: {kind: 'flow', type: 'video', expected: 2, fp, before: new Set(), item: item('c', {variants: 2})}};
+    return ops.flowCommit(session, 10, {}).catch(e => e);
   };
   assert.equal((await run(new RateLimitedError('slow down'))).code, 'RATE_LIMITED');
   const failed = new Error('Flow displayed a generation failed message.'); failed.name = 'GenerationFailedError';
@@ -118,26 +153,67 @@ test('clip refusals map to declined codes; timeouts stay unknown', async () => {
   assert.equal(e.submitted, true);
 });
 
-test('worker protocol: no CDP, commit semantics, disconnect only', async () => {
+test('plain-Flow image: attaches refs, fills prompt, submits only on commit', async () => {
+  const calls = [];
+  const it = item('g', {kind: 'image', engine: 'flow', refs: ['/tmp/mascot.png']});
+  const page = {url: () => 'https://flow.google.com/project/abcd0001-ef', goto: async () => {}, isClosed: () => false,
+    evaluate: async () => ({text: '', frames: []}), context: () => ({}),
+    getByText: () => ({count: async () => 0})};
+  const g = {
+    FlowPage: class { constructor() {} async assertReady() {} async applySettings(job) { calls.push(['settings', job]); }
+      async resultSrcs() { return ['old']; } async fillPrompt(p) { calls.push(['prompt', p]); } async submit() { calls.push(['SUBMIT']); }
+      async waitForResults(before, n, t, type) { calls.push(['wait', n, type]); return ['new-src?name=abcd-1234']; } },
+    flowLocators: () => ({settingsButton: {first: () => ({innerText: async () => '🍌 Nano Banana 2 crop_16_9 x1'})}}),
+    downloadResult: async ({basename, outDir}) => ({assetPath: path.join(outDir, basename + '.png')}),
+    mediaIdFromSrc: () => 'abcd-1234',
+  };
+  const session = {page, profile: {name: 'acc1', project_url: 'https://flow.google.com/project/abcd0001-ef'}, projectUrl: null};
+  // No ingredient button on this fake page: a reference that cannot be attached blocks before submit.
+  page.locator = () => ({filter: () => ({first: () => ({isVisible: async () => false})})});
+  await assert.rejects(ops.flowPrepare(session, [it], {}, g), e => e.code === 'REFERENCE_NOT_ATTACHED');
+  assert.ok(!calls.some(c => c[0] === 'SUBMIT'));
+  const noRef = {...it, refs: []};
+  await ops.flowPrepare(session, [noRef], {flowpool_model_labels: {}}, g);
+  assert.deepEqual(calls.find(c => c[0] === 'settings')[1], {type: 'image', ratio: '16:9', outputs: 1, model: 'Nano Banana 2'});
+  assert.ok(!calls.some(c => c[0] === 'SUBMIT'));
+  const [out] = await ops.flowCommit(session, 1000, g);
+  assert.equal(calls.filter(c => c[0] === 'SUBMIT').length, 1);
+  assert.deepEqual(calls.find(c => c[0] === 'wait').slice(1), [1, 'image']);
+  assert.deepEqual([out.files.length, out.media_ids], [1, ['abcd-1234']]);
+  await assert.rejects(ops.flowPrepare(session, [noRef, noRef], {}, g), e => e.code === 'INVALID_BATCH');
+});
+
+test('worker protocol: per-instance port, engine dispatch, commit semantics, disconnect only', async () => {
   const dir = fs.mkdtempSync(path.join(tmp, 'udd-'));
   let closed = 0;
+  const seen = [];
   const operations = {
     ...ops,
-    bindPage: async () => ({page: fakePage('https://labs.google/fx/tools/flow'), binding: {target_id: 'T'}}),
+    pickPage: async () => fakePage('https://flow.google.com/'),
     assertUsable: async () => ({state: 'ok'}), verifyAccount: async () => null,
-    imagePrepare: async s => { s.pending = {kind: 'image'}; return ['q0']; },
-    imageCommit: async () => { throw Object.assign(new Error('boom'), {code: 'TIMEOUT'}); },
+    imagePrepare: async s => { seen.push('b2'); s.pending = {kind: 'b2'}; return ['q0']; },
+    flowPrepare: async s => { seen.push('flow'); s.projectUrl = 'https://flow.google.com/project/aaaa0001-bb'; s.pending = {kind: 'flow'}; return [null]; },
+    imageCommit: async s => { s.pending = null; throw Object.assign(new Error('boom'), {code: 'TIMEOUT'}); },
+    flowCommit: async s => { s.pending = null; return [{id: 'x', files: ['/f.png'], media_ids: ['m']}]; },
   };
-  const handle = createWorker({connect: async () => ({close: async () => { closed++; }}), operations});
-  const profile = {name: 'P', slug: 'p', user_data_dir: dir};
-  assert.equal((await handle({op: 'open', profile})).code, 'NO_CDP');
+  const endpoints = [];
+  const handle = createWorker({connect: async ep => { endpoints.push(ep); if (ep.includes('9399')) throw new Error('ECONNREFUSED'); return {close: async () => { closed++; }}; }, operations});
+  assert.equal((await handle({op: 'open', profile: {name: 'P', user_data_dir: dir}})).code, 'NO_CDP');
+  assert.equal((await handle({op: 'open', profile: {name: 'P', port: 9399}})).code, 'NO_CDP');
+  assert.equal(endpointFor({name: 'P', port: 9301}), 'http://127.0.0.1:9301');
   fs.writeFileSync(path.join(dir, 'DevToolsActivePort'), '9222\n/devtools/browser/abc-123\n');
-  assert.equal((await handle({op: 'open', profile, cfg: {}})).ok, true);
+  assert.equal(endpointFor({name: 'P', user_data_dir: dir}), 'ws://127.0.0.1:9222/devtools/browser/abc-123');
+  assert.equal((await handle({op: 'open', profile: {name: 'P', port: 9301}, cfg: {}})).ok, true);
   const early = await handle({op: 'commit', timeout_ms: 5});
   assert.deepEqual([early.ok, early.code, early.submitted], [false, 'INVALID_STATE', false]);
-  assert.deepEqual((await handle({op: 'prepare', kind: 'image', items: []})).prepared, ['q0']);
+  const flowReply = await handle({op: 'prepare', kind: 'image', items: [{engine: 'flow'}]});
+  assert.equal(flowReply.project_url, 'https://flow.google.com/project/aaaa0001-bb');
+  assert.equal((await handle({op: 'commit', timeout_ms: 5})).items[0].id, 'x');
+  assert.deepEqual((await handle({op: 'prepare', kind: 'image', items: [{engine: 'b2'}]})).prepared, ['q0']);
   const late = await handle({op: 'commit', timeout_ms: 5});
   assert.deepEqual([late.code, late.submitted], ['TIMEOUT', true]);
+  await handle({op: 'prepare', kind: 'clip', items: [{engine: 'clip'}]});
+  assert.deepEqual(seen, ['flow', 'b2', 'flow']);
   assert.equal((await handle({op: 'close'})).ok, true);
   assert.equal(closed, 1);
   assert.equal((await handle({op: 'launch'})).code, 'PROTOCOL');

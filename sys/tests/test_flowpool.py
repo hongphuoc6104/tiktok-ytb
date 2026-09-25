@@ -14,7 +14,8 @@ from flowpool import scheduler
 from flowpool.driver import Driver, DriverError
 from flowpool.journal import Journal, JournalError, identity, key_for
 from flowpool.ledger import Ledger
-from flowpool.profiles import Pool, derive
+from flowpool import instances
+from flowpool.profiles import Pool, empty_pool
 from flowpool.store import read_ndjson
 
 W, H = 1376, 768
@@ -34,6 +35,8 @@ class World:
         self.probe = {}
         self.clip_cost = 20
         self.delay = 0.0
+        self.engines = []
+        self.stopped = set()   # instances whose Chrome is not running
 
 
 class FakeDriver(Driver):
@@ -51,8 +54,7 @@ class FakeDriver(Driver):
     def open(self):
         self.w.log.append(('open', self.name))
         self._maybe_fail('open')
-        return {'binding': {'target_id': 'T-' + self.profile['slug'], 'browser_context_id': 'C-' + self.profile['slug']},
-                'account_verified': True}
+        return {'account_verified': True}
 
     def probe(self, kinds):
         self._maybe_fail('probe')
@@ -66,7 +68,9 @@ class FakeDriver(Driver):
     def prepare(self, kind, items):
         self._maybe_fail('prepare')
         self.kind, self.items = kind, items
+        self.project_url = f'https://flow.test/project/{self.profile["slug"]}-0001'
         self.w.log.append(('prepare', self.name, [i['id'] for i in items]))
+        self.w.engines.append((self.name, [i['engine'] for i in items]))
         return [f'Q-{i["id"]}' for i in items]
 
     def commit(self, timeout):
@@ -106,12 +110,13 @@ class FakeDriver(Driver):
                 self.w.active -= 1
 
 
-def profile(name, prio, tool=True, media=None, udd='/fake/udd', state='ready', credits=None):
-    return {'name': name, 'slug': name.lower().replace(' ', '-'), 'user_data_dir': udd, 'profile_directory': name,
-            'enabled': True, 'priority': prio, 'max_parallel': 4, 'tool_url': f'https://flow.test/{prio}' if tool else None,
+def profile(name, prio, tool=True, media=None, state='ready', credits=None):
+    return {'name': name, 'slug': name.lower().replace(' ', '-'), 'user_data_dir': f'/fake/pool/{prio}',
+            'port': 9301 + prio, 'enabled': True, 'priority': prio, 'max_parallel': 4,
+            'tool_url': f'https://flow.test/{prio}' if tool else None,
             'project': 'Video Pilot', 'project_url': None, 'media_ids': media or {}, 'state': state,
             'state_reason': None, 'state_since': 0, 'cooldown_until': None, 'credits': credits, 'credits_at': None,
-            'binding': None, 'account_hint': None}
+            'pid': None, 'launched_at': None, 'account_hint': None}
 
 
 class FlowPoolCase(unittest.TestCase):
@@ -137,10 +142,11 @@ class FlowPoolCase(unittest.TestCase):
         self.tmp.cleanup()
 
     def write_profiles(self, *profiles):
-        (self.state / 'profiles.json').write_text(json.dumps({'schema_version': 1, 'profiles': list(profiles)}))
+        (self.state / 'profiles.json').write_text(json.dumps(dict(empty_pool(), profiles=list(profiles))))
 
     def pool(self, **cfg):
-        return FlowPool(dict(self.cfg, **cfg), lambda p, c: FakeDriver(self.world, p, c))
+        return FlowPool(dict(self.cfg, **cfg), lambda p, c: FakeDriver(self.world, p, c),
+                        alive=lambda p: p['name'] not in self.world.stopped)
 
     def image(self, i, **kw):
         return dict({'id': f'img{i}', 'kind': 'image', 'prompt': f'scene {i}', 'ratio': '16:9',
@@ -199,16 +205,36 @@ class SchedulerTests(FlowPoolCase):
         ps[1]['credits'] = 10  # below one clip: ineligible, unknown balance is still tried
         self.assertEqual(scheduler.next_batch([req], ps, ctx)[0]['name'], 'A')
 
-    def test_image_without_media_id_on_profile_is_not_routed_there(self):
-        self.write_profiles(profile('Profile 10', 0, media={self.ref_sha: 'M'}), profile('Profile 13', 1))
-        results = self.pool().run([self.image(i) for i in range(3)])
-        self.assertEqual({r['profile'] for r in results}, {'Profile 10'})
+    def test_new_accounts_without_remix_use_plain_flow_one_per_submission(self):
+        self.write_profiles(profile('acc1', 0, tool=False), profile('acc2', 1, tool=False))
+        results = self.pool().run([self.image(i) for i in range(4)])
+        self.assertEqual({r['status'] for r in results}, {'ok'})
+        self.assertEqual({r['profile'] for r in results}, {'acc1', 'acc2'})
+        self.assertTrue(all(len(c[2]) == 1 for c in self.commits()))
+        self.assertEqual({e for _, es in self.world.engines for e in es}, {'flow'})
 
-    def test_no_eligible_profile_fails_without_submission(self):
-        self.write_profiles(profile('Profile 13', 1))
+    def test_engine_choice(self):
+        ctx = scheduler.Context({})
+        req = {'kind': 'image', '_ref_shas': [self.ref_sha]}
+        self.assertEqual(scheduler.engine(profile('a', 0, media={self.ref_sha: 'M'}), req, ctx), 'b2')
+        self.assertEqual(scheduler.engine(profile('a', 0), req, ctx), 'flow')       # remix but no media id
+        self.assertEqual(scheduler.engine(profile('a', 0, tool=False), req, ctx), 'flow')
+        self.assertEqual(scheduler.engine(profile('a', 0), {'kind': 'clip'}, ctx), 'clip')
+
+    def test_only_running_instances_take_work(self):
+        self.two_image_profiles()
+        self.world.stopped = {'Profile 10', 'Profile 13', 'Profile 14'}
         [r] = self.pool().run([self.image(1)])
         self.assertEqual((r['status'], r['code'], r['state']), ('failed', 'NO_ELIGIBLE_PROFILE', 'not_submitted'))
+        self.assertIn('not_running', r['error'])
         self.assertEqual(self.commits(), [])
+        self.world.stopped = {'Profile 10'}
+        self.assertEqual(self.pool().run([self.image(2)])[0]['profile'], 'Profile 13')
+
+    def test_project_url_is_recorded_per_instance(self):
+        self.write_profiles(profile('acc1', 0, tool=False))
+        self.pool().run([self.image(1)])
+        self.assertEqual(Pool(self.state / 'profiles.json').get('acc1')['project_url'], 'https://flow.test/project/acc1-0001')
 
     def test_concurrency_limited_by_max_browsers(self):
         media = {self.ref_sha: 'M'}
@@ -216,17 +242,16 @@ class SchedulerTests(FlowPoolCase):
         self.world.delay = 0.05
         self.pool(flowpool_max_browsers=2).run([self.image(i) for i in range(12)])
         self.assertEqual(self.world.max_active, 2)
-        self.world.max_active = 0
-        self.pool(flowpool_max_browsers=3, flowpool_serialize_user_data_dir=True).run([self.image(i) for i in range(20, 32)])
-        self.assertEqual(self.world.max_active, 1)
 
     def test_dependent_image_follows_profile_that_owns_base_media(self):
         self.two_image_profiles()
         [base] = self.pool().run([self.image(1)])
         owner = base['profile']
         dep = self.image(2, refs=[str(self.ref), base['files'][0]])
-        [r] = self.pool().run([dep])
-        self.assertEqual((r['status'], r['profile']), ('ok', owner))
+        [r] = self.pool(flowpool_max_browsers=1).run([dep])
+        self.assertEqual(r['status'], 'ok')
+        # Only the owner knows the base image's media ID, so only there can the B-2 queue take it.
+        self.assertEqual(self.world.engines[-1][1], ['b2' if r['profile'] == owner else 'flow'])
 
 
 class SafetyTests(FlowPoolCase):
@@ -235,7 +260,7 @@ class SafetyTests(FlowPoolCase):
         self.world.fail[('Profile 10', 'open')] = DriverError('CAPTCHA', 'challenge shown')
         results = self.pool().run([self.image(i) for i in range(4)])
         self.assertEqual({r['status'] for r in results}, {'ok'})
-        self.assertEqual({r['profile'] for r in results}, {'Profile 13'})
+        self.assertNotIn('Profile 10', {r['profile'] for r in results})
         pool = Pool(self.state / 'profiles.json')
         self.assertEqual(pool.get('Profile 10')['state'], 'captcha')
         # Sticky: the next run never opens it again.
@@ -447,22 +472,21 @@ class JournalLedgerProfileTests(FlowPoolCase):
         self.assertEqual(led.month_spend(), (60.0, True))
         self.assertEqual(led.cost_per_clip('veo-fast', 99), (20.0, 'measured'))
 
-    def test_derive_profiles_from_b2_config(self):
-        udd = self.dir / 'chrome'
-        for d in ('Default', 'Profile 10', 'Profile 13', 'Profile 99', 'Crashpad'):
-            (udd / d).mkdir(parents=True)
-        (udd / 'Local State').write_text(json.dumps({'profile': {'info_cache': {
-            'Profile 13': {'name': 'Kênh 2', 'user_name': 'second@example.com'}}}}))
-        src = self.dir / 'browser-profiles.json'
-        src.write_text(json.dumps({'executable_path': '/opt/google/chrome/google-chrome', 'flow_user_data_dir': str(udd),
-                                   'flow_profile_directory': 'Profile 10', 'priority': ['Profile 10', 'Profile 13']}))
-        data = derive(src, self.dir / 'missing.json', {'flow_project': 'Video Pilot'})
-        names = [p['name'] for p in data['profiles']]
-        self.assertEqual(names, ['Profile 10', 'Profile 13', 'Default', 'Profile 99'])
-        self.assertEqual([p['enabled'] for p in data['profiles']], [True, True, False, False])
-        self.assertEqual(data['profiles'][1]['account_hint'], 'second@example.com')
-        self.assertTrue(all(p['state'] == 'ready' and p['user_data_dir'] == str(udd) for p in data['profiles']))
-        self.assertFalse(data['automatic_account_switching'])
+    def test_add_instances_get_own_dir_and_port(self):
+        pool = Pool(self.state / 'profiles.json', {'flowpool_instances_dir': str(self.dir / 'pool'), 'flowpool_base_port': 9401})
+        a, b = pool.add('acc1'), pool.add('acc2')
+        self.assertEqual((a['port'], b['port']), (9401, 9402))
+        self.assertNotEqual(a['user_data_dir'], b['user_data_dir'])
+        self.assertTrue(Path(a['user_data_dir']).is_dir() and a['user_data_dir'].startswith(str(self.dir / 'pool')))
+        self.assertEqual((a['tool_url'], a['project_url'], a['state']), (None, None, 'ready'))
+        for bad in ('acc1', '../x', ''):
+            with self.assertRaises(ValueError):
+                pool.add(bad)
+
+    def test_old_shared_profile_pool_is_refused(self):
+        (self.state / 'profiles.json').write_text(json.dumps({'schema_version': 1, 'profiles': []}))
+        with self.assertRaisesRegex(RuntimeError, 'OLD_POOL_FORMAT'):
+            Pool(self.state / 'profiles.json')
 
     def test_profile_state_machine(self):
         self.write_profiles(profile('P', 0), profile('Q', 1, state='cooldown'))
@@ -501,6 +525,88 @@ class JournalLedgerProfileTests(FlowPoolCase):
         self.assertEqual({r['status'] for r in results}, {'failed'})
         self.assertEqual(self.world.log, [])
 
+
+
+class InstanceTests(FlowPoolCase):
+    """Chrome instance lifecycle with fake process table/popen: nothing is launched."""
+
+    def setUp(self):
+        super().setUp()
+        self.exe = self.dir / 'chrome'
+        self.exe.write_text('')
+        self.cfg['flowpool_chrome'] = str(self.exe)
+        self.p = Pool(self.state / 'profiles.json', {'flowpool_instances_dir': str(self.dir / 'pool')})
+        self.p.add('acc1')
+        self.spawned, self.procs, self.ports = [], {}, set()
+
+    def popen(self, args, **kw):
+        self.spawned.append(args)
+        pid = 4000 + len(self.spawned)
+        self.procs[pid] = args
+        if any(a.startswith('--remote-debugging-port=') for a in args):
+            self.ports.add(int(next(a for a in args if a.startswith('--remote-debugging-port=')).split('=')[1]))
+        return type('P', (), {'pid': pid})()
+
+    def pids(self, udd):
+        return [pid for pid, args in self.procs.items() if f'--user-data-dir={Path(udd).resolve()}' in args]
+
+    def launch(self, **kw):
+        return instances.launch(self.p, 'acc1', self.cfg, popen=self.popen, alive=lambda port: port in self.ports,
+                                pids=self.pids, sleep=lambda s: None, **kw)
+
+    def test_launch_uses_own_dir_and_port_and_is_idempotent(self):
+        r = self.launch()
+        self.assertEqual((r['status'], r['port']), ('launched', 9301))
+        args = self.spawned[0]
+        entry = self.p.get('acc1')
+        self.assertIn(f"--user-data-dir={entry['user_data_dir']}", args)
+        self.assertIn('--remote-debugging-port=9301', args)
+        self.assertEqual(args[-1], 'https://flow.google.com/')
+        self.assertFalse([a for a in args if 'automation' in a.lower() or 'profile-directory' in a])
+        self.assertEqual(self.launch()['status'], 'already_running')
+        self.assertEqual(len(self.spawned), 1)
+        self.assertEqual(entry['pid'], 4001)
+
+    def test_login_has_no_debugging_port_and_blocks_launch_until_closed(self):
+        r = self.launch(login=True)
+        self.assertEqual(r['status'], 'sign_in_window_opened')
+        self.assertFalse([a for a in self.spawned[0] if a.startswith('--remote-debugging')])
+        with self.assertRaisesRegex(RuntimeError, 'INSTANCE_ALREADY_OPEN'):
+            self.launch()
+        self.procs.clear()   # user closed the sign-in window
+        self.assertEqual(self.launch()['status'], 'launched')
+
+    def test_foreign_process_on_port_is_refused(self):
+        self.ports.add(9301)
+        with self.assertRaisesRegex(RuntimeError, 'PORT_IN_USE'):
+            self.launch()
+
+    def test_stop_signals_only_this_instance(self):
+        self.launch()
+        self.procs[999] = ['/opt/google/chrome/chrome', '--user-data-dir=/home/u/.config/google-chrome']
+        killed = []
+        r = instances.stop(self.p, 'acc1', pids=self.pids, kill=lambda pid, sig: (killed.append(pid), self.procs.pop(pid)),
+                           sleep=lambda s: None)
+        self.assertEqual((r['status'], killed), ('stopped', [4001]))
+        self.assertIn(999, self.procs)
+
+    def test_chrome_pids_reads_main_processes_only(self):
+        proc = self.dir / 'proc'
+        udd = self.p.get('acc1')['user_data_dir']
+        for pid, args in {10: ['chrome', f'--user-data-dir={udd}'], 11: ['chrome', '--type=renderer', f'--user-data-dir={udd}'],
+                          12: ['chrome', '--user-data-dir=/other'], 13: ['bash']}.items():
+            (proc / str(pid)).mkdir(parents=True)
+            (proc / str(pid) / 'cmdline').write_bytes('\0'.join(args).encode() + b'\0')
+        (proc / 'self').mkdir()
+        self.assertEqual(instances.chrome_pids(udd, proc), [10])
+
+    def test_doctor_skips_stopped_instances(self):
+        self.two_image_profiles()
+        self.world.stopped = {'Profile 13'}
+        report = {r['profile']: r for r in self.pool().doctor()}
+        self.assertIn('NOT_RUNNING', report['Profile 13']['error'])
+        self.assertNotIn(('open', 'Profile 13'), self.world.log)
+        self.assertEqual(report['Profile 10']['state_after'], 'ready')
 
 if __name__ == '__main__':
     unittest.main()

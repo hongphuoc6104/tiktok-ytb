@@ -7,15 +7,16 @@ HOME = Path(__file__).resolve().parent
 
 DEFAULTS = {
     'flowpool_enabled': False,
-    # Profiles driven at the same time. All profiles of one user-data-dir live in
-    # one Chrome process (one window per profile), so this is "active profile
-    # windows", sized for a 14-16 GB laptop.
+    # Account instances (separate Chrome processes) driven at the same time;
+    # sized for a 14-16 GB laptop.
     'flowpool_max_browsers': 2,
     # Requests queued in one B-2 tool at once (x4 accepted on 22/09/2026).
     'flowpool_per_browser_queue': 4,
-    # true = never drive two profiles of the same user-data-dir concurrently
-    # (fallback if live acceptance shows per-profile tab binding is unreliable).
-    'flowpool_serialize_user_data_dir': False,
+    # First remote-debugging port handed to `flowpool add`; each instance gets its own.
+    'flowpool_base_port': 9301,
+    'flowpool_flow_url': 'https://flow.google.com/',
+    'flowpool_chrome': None,
+    'flowpool_instances_dir': None,  # default sys/.gflow/pool
     'flowpool_state_dir': str(HOME),
     'flowpool_image_timeout_seconds': 300,
     'flowpool_clip_timeout_seconds': 1800,

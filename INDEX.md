@@ -96,6 +96,10 @@ Video và môi trường chạy nằm local, không được đưa lên GitHub. 
 
 Đọc [hướng dẫn hàng đợi Flow](sys/docs/flow-queue-operations.md) trước khi cập nhật tool hoặc chạy ảnh. Tài liệu gồm link share, cấu hình máy riêng, cách khôi phục và trạng thái nghiệm thu; không bật sản xuất chỉ vì đã pull mã mới.
 
+## FlowPool (nhánh video-tien-su)
+
+`sys/flowpool/` chạy Flow (ảnh + clip Veo) song song trên nhiều tài khoản Google AI Pro, **mỗi tài khoản một Chrome riêng** tại `sys/.gflow/pool/<tên>/` (gitignore, chứa phiên đăng nhập — không xóa, không sao chép). Từ `sys/`: `python3 -m flowpool add acc1` → `login acc1` (người dùng tự đăng nhập, đóng cửa sổ) → `launch acc1` → `doctor` → `status`. Agent không đăng nhập hộ, không giải CAPTCHA. Pipeline chỉ dùng FlowPool khi `flowpool_enabled=true`. Xem mục 7 của `sys/docs/tien-su-plan.md`.
+
 ## Skills trên nhánh từ vựng
 
 `vp-vocab` điều phối kho và CLI; `vp-content` viết nội dung; `vp-media` chạy audio trước images; `vp-video` dựng/duyệt/xuất; `vp-clean` kiểm kê và dọn scratch rỗng. Văn phong nằm trong references của vp-content và được adapter nạp vào lượt viết chi tiết. Xem sys/docs/vocab-redesign-plan.md.

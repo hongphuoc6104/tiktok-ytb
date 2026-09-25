@@ -19,7 +19,8 @@ from .driver import DECLINED, PROFILE_CODES, DriverError, NodeDriver
 from .journal import SAFE_ID, UNRESOLVED, Journal, identity, key_for
 from .ledger import Ledger
 from .profiles import Pool, STICKY
-from .scheduler import Context, can_ever_run, eligible, next_batch
+from .instances import cdp_alive
+from .scheduler import Context, can_ever_run, eligible, engine, next_batch
 from .store import file_lock
 from .validate import ValidationError, validate_output
 
@@ -27,8 +28,8 @@ KINDS = ('image', 'clip')
 RATIOS = ('16:9', '9:16')
 # Errors raised before submit that point at the profile's tab/tool rather than
 # at the request: park the profile until a human looks (doctor/mark).
-MANUAL_ATTENTION = ('UNRESOLVED_FLOW_QUEUE', 'PROFILE_TAB_NOT_FOUND', 'TOOL_NOT_READY', 'MODEL_NOT_SELECTABLE',
-                    'FRAME_NOT_ATTACHED', 'NO_CDP')
+MANUAL_ATTENTION = ('UNRESOLVED_FLOW_QUEUE', 'TOOL_NOT_READY', 'MODEL_NOT_SELECTABLE', 'FRAME_NOT_ATTACHED',
+                    'REFERENCE_NOT_ATTACHED', 'PROJECT_NOT_FOUND', 'NO_CDP')
 
 
 def normalize_request(raw, cfg, out_root):
@@ -88,11 +89,13 @@ def result_of(req_id, status, snap=None, error=None, code=None, files=None):
 
 
 class FlowPool:
-    def __init__(self, cfg=None, driver_factory=None, clock=time.time):
+    def __init__(self, cfg=None, driver_factory=None, clock=time.time, alive=None):
         self.cfg = config_mod.load(cfg) if cfg is None or 'flowpool_state_dir' not in cfg else dict(config_mod.DEFAULTS, **cfg)
         self.dir = config_mod.state_dir(self.cfg)
         self.driver_factory = driver_factory or (lambda profile, cfg: NodeDriver(profile, cfg))
         self.clock = clock
+        # An instance takes work only while its Chrome answers on its own debugging port.
+        self.alive = alive or (lambda profile: cdp_alive(profile.get('port')))
         self.journal = Journal(self.dir / 'journal')
         self.ledger = Ledger(self.dir / 'ledger.ndjson')
         self.lock_path = self.dir / 'run.lock'
@@ -122,6 +125,7 @@ class FlowPool:
         return {'id': req['id'], 'kind': req['kind'], 'prompt': req['prompt'], 'ratio': req['ratio'],
                 'refs': req['refs'], 'ref_media_ids': media, 'start_frame': req.get('start_frame'),
                 'variants': req['variants'], 'model': req['model'], 'out_dir': req['out_dir'],
+                'engine': engine(profile, req, ctx),
                 'seconds': self.cfg.get('flowpool_clip_seconds', 8)}
 
     def _validate(self, req, snap):
@@ -220,18 +224,17 @@ class FlowPool:
     def _dispatch(self, pool, pending, results, ctx):
         max_active = max(1, int(self.cfg.get('flowpool_max_browsers') or 1))
         cap = max(1, min(4, int(self.cfg.get('flowpool_per_browser_queue') or 4)))
-        serialize = bool(self.cfg.get('flowpool_serialize_user_data_dir'))
         max_tries = int(self.cfg.get('flowpool_max_profile_attempts') or 2)
         tries = collections.Counter()
         rr = [-1]
         active = {}
+        running = [p for p in pool.profiles if self.alive(p)]
         reserved = {}
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_active) as executor:
             while True:
                 while len(active) < max_active and pending:
                     busy = {name for name, _ in active.values()}
-                    busy_dirs = {pool.get(name).get('user_data_dir') for name in busy}
-                    choice = next_batch(pending, pool.profiles, ctx, busy, busy_dirs, max_active - len(active), rr, cap, serialize)
+                    choice = next_batch(pending, running, ctx, busy, max_active - len(active), rr, cap)
                     if not choice:
                         break
                     profile, batch = choice
@@ -249,9 +252,10 @@ class FlowPool:
                     if batch[0]['kind'] == 'clip':
                         reserved[fut] = ctx.cost(batch[0])
                 for req in list(pending):
-                    if not can_ever_run(req, pool.profiles, ctx):
+                    if not can_ever_run(req, running, ctx):
                         pending.remove(req)
-                        reasons = {p['name']: eligible(p, req, ctx)[1] for p in pool.profiles}
+                        reasons = {p['name']: eligible(p, req, ctx)[1] if p in running else 'not_running'
+                                   for p in pool.profiles} or 'no instances; python3 -m flowpool add NAME'
                         self._finish(results, req, 'failed', f'NO_ELIGIBLE_PROFILE: {reasons}', 'NO_ELIGIBLE_PROFILE', 'not_submitted')
                 if not active:
                     for req in list(pending):
@@ -283,12 +287,8 @@ class FlowPool:
         credits_before = None
         try:
             profile = copy.deepcopy(pool.get(name))
-            profile['_other_context_ids'] = [(p.get('binding') or {}).get('browser_context_id') for p in pool.profiles
-                                             if p['name'] != name and (p.get('binding') or {}).get('browser_context_id')]
             driver = self.driver_factory(profile, self.cfg)
-            opened = driver.open() or {}
-            if opened.get('binding'):
-                pool.record_binding(name, opened['binding'])
+            driver.open()
             reading = driver.read_credits() or {}
             credits_before = reading.get('value')
             self.ledger.reading(name, credits_before, reading.get('raw'), reading.get('method'))
@@ -300,6 +300,7 @@ class FlowPool:
                 return outcome
             items = [self._item(r, profile, ctx) for r in batch]
             queue_ids = driver.prepare(kind, items) or []
+            pool.record_project(name, getattr(driver, 'project_url', None))
             for i, req in enumerate(batch):
                 self.journal.transition(req['_key'], 'submitted', profile=name, credits_before=credits_before,
                                         queue_ids=[queue_ids[i]] if i < len(queue_ids) else [])
@@ -420,16 +421,22 @@ class FlowPool:
             pool = self.pool()
             pool.refresh()
             targets = [pool.get(n) for n in names] if names else pool.profiles
+            if not targets:
+                raise ValueError('NO_INSTANCES: python3 -m flowpool add NAME')
             single_clip = self.clip_cost(self.cfg.get('veo_model'))
             for profile in targets:
                 entry = {'profile': profile['name'], 'state_before': profile['state'], 'checks': {}}
                 driver = None
+                if not self.alive(profile):
+                    entry.update(error=f"NOT_RUNNING: python3 -m flowpool launch {profile['name']}",
+                                 state_after=profile['state'])
+                    report.append(entry)
+                    continue
                 try:
                     driver = self.driver_factory(copy.deepcopy(profile), self.cfg)
                     opened = driver.open() or {}
-                    if opened.get('binding'):
-                        pool.record_binding(profile['name'], opened['binding'])
                     probe = driver.probe(['image', 'clip']) or {}
+                    pool.record_project(profile['name'], getattr(driver, 'project_url', None))
                     credits = (probe.get('credits') or {}).get('value')
                     entry['checks'] = dict(probe, account_verified=opened.get('account_verified'))
                     self.ledger.reading(profile['name'], credits, (probe.get('credits') or {}).get('raw'),
@@ -473,7 +480,8 @@ class FlowPool:
             rows.append({'profile': p['name'], 'enabled': p.get('enabled'), 'account_hint': p.get('account_hint'),
                          'state': p['state'], 'reason': p.get('state_reason'), 'credits': credits, 'credits_at': at,
                          'clips_left_estimate': math.floor(credits / per_clip) if credits is not None and per_clip else None,
-                         'tool_url': bool(p.get('tool_url')), 'max_parallel': p.get('max_parallel')})
+                         'tool_url': bool(p.get('tool_url')), 'max_parallel': p.get('max_parallel'),
+                         'port': p.get('port'), 'running': bool(self.alive(p)), 'project_url': p.get('project_url')})
         spent, estimated = self.ledger.month_spend()
         counts = collections.Counter(s['state'] for s in self.journal.all())
         unresolved = [{'id': (s.get('identity') or {}).get('id'), 'key': s['key'][:12], 'state': s['state'],

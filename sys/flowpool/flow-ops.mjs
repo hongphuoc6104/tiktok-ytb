@@ -1,9 +1,10 @@
 /**
- * FlowPool page operations on an ALREADY RUNNING, user-signed-in Chrome.
+ * FlowPool page operations on a FlowPool-managed Chrome instance (one account,
+ * signed in by the user) reached over that instance's own debugging port.
  *
- * Hard rules: never launch or sign in, never type a password, never touch a
+ * Hard rules: the worker never launches Chrome or signs in, never types a password, never touches a
  * CAPTCHA (detect -> throw CAPTCHA), never read or copy cookies. Only
- * clickStartQueue (images) and FlowPage.submit (clips) can start a generation,
+ * clickStartQueue (B-2 images) and FlowPage.submit (Flow images/clips) can start a generation,
  * and both are called from commit(), after the Python journal fsynced
  * `submitted`.
  */
@@ -109,7 +110,22 @@ export async function readCredits(page, probe = {}) {
   return {...got, method: got.value === null ? 'unreadable' : 'body-text'};
 }
 
-// ----------------------------------------------------------------- binding
+// ----------------------------------------------------------------- page + account
+const FLOW_PAGE = /^https:\/\/(flow\.google\.com|labs\.google)\//;
+
+/** One instance = one account, so any tab of it will do: its Flow tab, else an
+ * ordinary tab, else a new one. */
+export async function pickPage(browser) {
+  const pages = browser.contexts().flatMap(c => c.pages()).filter(p => !p.isClosed());
+  const flow = pages.find(p => FLOW_PAGE.test(p.url()));
+  if (flow) return flow;
+  const plain = pages.find(p => !/^(chrome|devtools|chrome-extension):/.test(p.url()));
+  if (plain) return plain;
+  const ctx = browser.contexts()[0];
+  if (!ctx) throw coded('NO_CDP', 'Chrome exposes no browser context');
+  return ctx.newPage();
+}
+
 export async function readAccountEmails(page) {
   return page.evaluate(() => {
     const re = /[\w.+-]+@[\w-]+(\.[\w-]+)+/g, out = new Set();
@@ -120,42 +136,80 @@ export async function readAccountEmails(page) {
   }).catch(() => []);
 }
 
-async function targetInfo(page) {
-  const s = await page.context().newCDPSession(page);
-  try { return (await s.send('Target.getTargetInfo')).targetInfo; }
-  finally { await s.detach().catch(() => undefined); }
-}
-
-/** Find the tab that belongs to `profile`: the recorded CDP target, else the
- * one tab whose URL carries `#flowpool=<slug>` (opened by `flowpool open-profile`). */
-export async function bindPage(browser, profile, info = targetInfo) {
-  const marker = `flowpool=${profile.slug}`;
-  let byTarget = null;
-  const byMarker = [];
-  for (const page of browser.contexts().flatMap(c => c.pages())) {
-    if (page.isClosed()) continue;
-    let t;
-    try { t = await info(page); } catch { continue; }
-    if (profile.binding?.target_id && t.targetId === profile.binding.target_id) byTarget = {page, t};
-    if (page.url().includes(marker)) byMarker.push({page, t});
-  }
-  if (!byTarget && byMarker.length > 1) throw coded('PROFILE_TAB_NOT_FOUND', `${byMarker.length} tabs carry ${marker}; close the extras`);
-  const found = byTarget || byMarker[0];
-  if (!found) throw coded('PROFILE_TAB_NOT_FOUND', `no tab bound to ${profile.name}; run: python3 -m flowpool open-profile "${profile.name}"`);
-  const ctx = found.t.browserContextId || null;
-  if (ctx && (profile._other_context_ids || []).includes(ctx)) throw coded('PROFILE_MISMATCH', 'tab belongs to another bound profile');
-  return {page: found.page, binding: {target_id: found.t.targetId, browser_context_id: ctx, at: Date.now()}};
-}
-
+/** Optional guard: when the user filled `account_hint`, the page must not show another account. */
 export async function verifyAccount(page, profile) {
   if (!profile.account_hint) return null;
   const emails = await readAccountEmails(page);
   if (!emails.length) return null;
-  if (!emails.includes(profile.account_hint.toLowerCase())) throw coded('PROFILE_MISMATCH', `tab shows ${emails.join(', ')}, expected ${profile.account_hint}`);
+  if (!emails.includes(profile.account_hint.toLowerCase())) throw coded('PROFILE_MISMATCH', `page shows ${emails.join(', ')}, expected ${profile.account_hint}`);
   return true;
 }
 
-// ----------------------------------------------------------------- images (B-2 queue tool)
+// ----------------------------------------------------------------- Flow project
+let gflow;
+async function loadGflow() {
+  if (!gflow) gflow = {...await import(path.join(GFLOW, 'flow/page.js')), ...await import(path.join(GFLOW, 'flow/ui.js')),
+    ...await import(path.join(GFLOW, 'flow/download.js')), ...await import(path.join(GFLOW, 'flow/locators.js'))};
+  return gflow;
+}
+const RATIO_ICON = {'16:9': 'crop_16_9', '9:16': 'crop_9_16'};
+const norm = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+/** Canonical project URL (".../project/<id>") or null. */
+export function projectUrlOf(url) {
+  const m = String(url || '').match(/^(https:\/\/[^/]+(?:\/[^?#]*?)?\/project\/[0-9a-f][0-9a-f-]{7,})/i);
+  return m ? m[1] : null;
+}
+
+/** Absolute URL of the dashboard card whose label contains `name`. Resolved
+ * against the CURRENT page URL: gflow-cli resolves against labs.google, which
+ * now redirects to flow.google.com. */
+export async function findProjectUrl(page, name) {
+  const href = await page.evaluate(n => {
+    const sel = 'a[href*="/project/"]';
+    for (const a of document.querySelectorAll(sel)) {
+      let card = a;
+      while (card.parentElement && card.parentElement.querySelectorAll(sel).length === 1) card = card.parentElement;
+      if ((card.textContent || '').includes(n)) return a.getAttribute('href');
+    }
+    return null;
+  }, name).catch(() => null);
+  return href ? new URL(href, page.url()).toString() : null;
+}
+
+/** Open the instance's Flow project: recorded URL, else the dashboard card named
+ * `profile.project`, else create one with "New project" (no generation, no credits).
+ * The resulting URL is reported back and recorded per instance. */
+export async function ensureProject(session, cfg, g) {
+  const {page, profile} = session;
+  const known = session.projectUrl || profile.project_url;
+  if (known) {
+    if (projectUrlOf(page.url()) !== known) await page.goto(known, {waitUntil: 'domcontentloaded', timeout: 30000});
+    await assertUsable(page);
+    if (projectUrlOf(page.url()) === known) return (session.projectUrl = known);
+  }
+  await page.goto(cfg.flowpool_flow_url || 'https://flow.google.com/', {waitUntil: 'domcontentloaded', timeout: 30000});
+  await assertUsable(page);
+  const newProject = g.flowLocators(page).newProjectButton.first();
+  await page.locator('a[href*="/project/"]').first().or(newProject).waitFor({state: 'visible', timeout: 20000}).catch(() => undefined);
+  await assertUsable(page);
+  const found = profile.project ? await findProjectUrl(page, profile.project) : null;
+  if (found) {
+    await page.goto(found, {waitUntil: 'domcontentloaded', timeout: 30000});
+  } else {
+    if (!(await newProject.isVisible().catch(() => false))) {
+      throw coded('NEEDS_LOGIN', 'Flow shows no projects and no "New project" button (signed out?); sign in by hand: python3 -m flowpool login ' + profile.name);
+    }
+    await newProject.click({timeout: 5000});
+    await page.waitForURL(/\/project\/[0-9a-f-]+/i, {timeout: 30000}).catch(() => undefined);
+  }
+  await assertUsable(page);
+  const url = projectUrlOf(page.url());
+  if (!url) throw coded('PROJECT_NOT_FOUND', `could not open or create Flow project "${profile.project}"`);
+  return (session.projectUrl = url);
+}
+
+// ----------------------------------------------------------------- images (B-2 queue tool, optional per-account remix)
 let b2;
 async function loadB2() {
   if (!b2) b2 = {...await import(path.join(B2, 'queue-runner.mjs')), ...await import(path.join(B2, 'controller.mjs'))};
@@ -180,7 +234,7 @@ export async function imagePrepare(session, items, lib = null) {
   try { await q.assertQueueIdle(frame); } catch (e) { throw coded('UNRESOLVED_FLOW_QUEUE', e.message); }
   const ids = await q.enqueueRequests(frame, requests, {label: q.modelLabelFor(items[0].model)});
   await q.selectWorkers(frame, ids);
-  session.pending = {kind: 'image', frame, ids, items};
+  session.pending = {kind: 'b2', frame, ids, items};
   return ids;
 }
 
@@ -215,68 +269,86 @@ export async function imageCommit(session, timeoutMs, lib = null) {
   return out;
 }
 
-// ----------------------------------------------------------------- clips (Flow frames-to-video)
-let gflow;
-async function loadGflow() {
-  if (!gflow) gflow = {...await import(path.join(GFLOW, 'flow/page.js')), ...await import(path.join(GFLOW, 'flow/ui.js')),
-    ...await import(path.join(GFLOW, 'flow/download.js')), ...await import(path.join(GFLOW, 'flow/locators.js'))};
-  return gflow;
+// ----------------------------------------------------------------- plain Flow UI: images and frames-to-video clips
+/** Count images in the prompt composer (the prompt box's nearest ancestor that also holds the submit arrow). */
+async function composerImageCount(page) {
+  return page.evaluate(() => {
+    let c = document.querySelector('[role="textbox"][contenteditable="true"]');
+    for (let i = 0; c && i < 8; i++, c = c.parentElement)
+      if ([...c.querySelectorAll('button')].some(b => /arrow_forward/.test(b.textContent || ''))) break;
+    return c ? c.querySelectorAll('img').length : -1;
+  }).catch(() => -1);
 }
-const RATIO_ICON = {'16:9': 'crop_16_9', '9:16': 'crop_9_16'};
-const norm = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 
-export async function openProject(page, profile, g) {
-  if (profile.project_url) {
-    if (!page.url().startsWith(profile.project_url)) await page.goto(profile.project_url, {waitUntil: 'domcontentloaded', timeout: 30000});
-  } else {
-    await assertUsable(page);
-    try { await g.navigateToProject(page, profile.project); } catch (e) { throw coded('PROJECT_NOT_FOUND', e.message); }
+/** Upload one reference image as a prompt ingredient ("add_2" picker -> Upload -> Add to prompt). */
+export async function attachReference(page, file, g) {
+  const before = await composerImageCount(page);
+  const trigger = page.locator('button[aria-haspopup="dialog"]').filter({hasText: /add_2/i}).first();
+  if (!(await trigger.isVisible().catch(() => false))) throw coded('REFERENCE_NOT_ATTACHED', 'no ingredient ("add_2") button in the prompt bar');
+  await trigger.click({timeout: 5000});
+  const dialog = page.locator('[role=dialog],[aria-modal=true]').first();
+  await dialog.waitFor({state: 'visible', timeout: 10000}).catch(() => undefined);
+  const upload = dialog.locator('button').filter({hasText: /upload/i}).first();
+  try {
+    const [chooser] = await Promise.all([page.waitForEvent('filechooser', {timeout: 15000}), upload.click()]);
+    await chooser.setFiles(file);
+    await dialog.locator('[role=option][aria-selected="true"]').first().waitFor({state: 'visible', timeout: 30000});
+    await g.confirmPicker(page, dialog);
+  } catch (e) {
+    await g.dismissOpenLayers(page).catch(() => undefined);
+    throw coded('REFERENCE_NOT_ATTACHED', `${path.basename(file)}: ${e.message}`);
   }
-  await assertUsable(page);
+  if (before >= 0 && (await composerImageCount(page)) <= before) throw coded('REFERENCE_NOT_ATTACHED', `${path.basename(file)} not visible in the prompt bar`);
 }
 
-export async function clipPrepare(session, items, cfg, lib = null) {
+export async function flowPrepare(session, items, cfg, lib = null) {
   const g = lib || await loadGflow();
-  if (items.length !== 1) throw coded('INVALID_BATCH', 'one clip request per submission');
+  if (items.length !== 1) throw coded('INVALID_BATCH', 'one request per plain-Flow submission');
   const it = items[0];
-  const {page, profile} = session;
-  await openProject(page, profile, g);
+  const video = it.kind === 'clip';
+  const {page} = session;
+  await ensureProject(session, cfg, g);
   const fp = new g.FlowPage(page);
   try { await fp.assertReady(); } catch (e) { throw coded('NEEDS_LOGIN', e.message); }
   const label = (cfg.flowpool_model_labels || {})[it.model] || it.model;
-  try {
-    await fp.applySettings({type: 'video', ratio: it.ratio, duration: it.seconds, outputs: it.variants, model: label, startFrame: it.start_frame});
-  } catch (e) { throw coded('MODEL_NOT_SELECTABLE', e.message); }
+  const job = video ? {type: 'video', ratio: it.ratio, duration: it.seconds, outputs: it.variants, model: label, startFrame: it.start_frame}
+    : {type: 'image', ratio: it.ratio, outputs: 1, model: label};
+  try { await fp.applySettings(job); } catch (e) { throw coded('MODEL_NOT_SELECTABLE', e.message); }
   const pill = await g.flowLocators(page).settingsButton.first().innerText().catch(() => '');
   if (!pill.includes(RATIO_ICON[it.ratio]) || !norm(pill).includes(norm(label))) throw coded('MODEL_NOT_SELECTABLE', `settings show "${pill}"`);
-  await fp.uploadFrame('Start', it.start_frame);
-  if (await page.getByText('Start', {exact: true}).count().catch(() => 1)) throw coded('FRAME_NOT_ATTACHED', 'Start frame slot is still empty');
-  const before = new Set(await fp.resultSrcs('video'));
+  if (video) {
+    await fp.uploadFrame('Start', it.start_frame);
+    if (await page.getByText('Start', {exact: true}).count().catch(() => 1)) throw coded('FRAME_NOT_ATTACHED', 'Start frame slot is still empty');
+  } else {
+    for (const ref of it.refs || []) await attachReference(page, ref, g);
+  }
+  const type = video ? 'video' : 'image';
+  const before = new Set(await fp.resultSrcs(type));
   await fp.fillPrompt(it.prompt);
-  session.pending = {kind: 'clip', fp, before, item: it};
+  session.pending = {kind: 'flow', type, fp, before, item: it, expected: video ? it.variants : 1};
   return [null];
 }
 
-const CLIP_ERRORS = {RateLimitedError: 'RATE_LIMITED', CreditLimitError: 'CREDIT_LIMIT', GenerationBlockedError: 'POLICY_BLOCKED'};
+const FLOW_ERRORS = {RateLimitedError: 'RATE_LIMITED', CreditLimitError: 'CREDIT_LIMIT', GenerationBlockedError: 'POLICY_BLOCKED'};
 
-export async function clipCommit(session, timeoutMs, lib = null) {
+export async function flowCommit(session, timeoutMs, lib = null) {
   const g = lib || await loadGflow();
-  const {fp, before, item} = session.pending;
+  const {fp, before, item, type, expected} = session.pending;
   session.pending = null;
   await fp.submit();
   let srcs;
-  try { srcs = await fp.waitForResults(before, item.variants, timeoutMs, 'video'); }
+  try { srcs = await fp.waitForResults(before, expected, timeoutMs, type); }
   catch (e) {
     const v = classifySnapshot(await snapshot(session.page));
     const code = v.state === 'captcha' ? 'CAPTCHA' : v.state === 'needs_login' ? 'NEEDS_LOGIN'
-      : CLIP_ERRORS[e.name] || (/timed out/i.test(e.message) ? 'TIMEOUT' : e.name === 'GenerationFailedError' ? 'GENERATION_FAILED' : 'RECONCILE_REQUIRED');
+      : FLOW_ERRORS[e.name] || (/timed out/i.test(e.message) ? 'TIMEOUT' : e.name === 'GenerationFailedError' ? 'GENERATION_FAILED' : 'RECONCILE_REQUIRED');
     throw coded(code, e.message, {submitted: true});
   }
   const out = {id: item.id, files: [], media_ids: []};
   try {
     for (let i = 0; i < srcs.length; i++) {
       const {assetPath} = await g.downloadResult({page: session.page, context: session.page.context(), src: srcs[i],
-        type: 'video', quality: 'original', outDir: item.out_dir, basename: `${item.id}-${i + 1}`});
+        type, quality: 'original', outDir: item.out_dir, basename: `${item.id}-${i + 1}`});
       out.files.push(assetPath);
       out.media_ids.push(g.mediaIdFromSrc(srcs[i]) || null);
     }
@@ -287,30 +359,28 @@ export async function clipCommit(session, timeoutMs, lib = null) {
 // ----------------------------------------------------------------- doctor
 export async function probe(session, kinds, cfg, libs = {}) {
   const {page, profile} = session;
-  const out = {logged_in: false, flow_reachable: false, credits: null, clip_model_selectable: null,
-    image_tool: null, image_model_selectable: null, image_queue_idle: null};
-  if (kinds.includes('clip')) {
-    const g = libs.gflow || await loadGflow();
-    await openProject(page, profile, g);
-    const fp = new g.FlowPage(page);
-    try { await fp.assertReady(); out.logged_in = out.flow_reachable = true; } catch (e) { throw coded('NEEDS_LOGIN', e.message); }
-    out.credits = await readCredits(page, cfg.flowpool_credit_probe);
-    // Read-only look at the settings popover: report the Veo label only if it is listed.
-    const label = (cfg.flowpool_model_labels || {})[cfg.veo_model || 'veo-fast'] || 'Veo';
-    const settings = g.flowLocators(page).settingsButton.first();
-    if (await settings.count()) {
-      await settings.click({timeout: 3000}).catch(() => undefined);
-      await page.waitForTimeout(700);
-      const text = await page.evaluate(() => document.body.innerText).catch(() => '');
-      out.clip_model_selectable = norm(text).includes(norm(label)) ? true : null;
-      await g.dismissOpenLayers(page);
-    }
+  const out = {logged_in: false, flow_reachable: false, project_url: null, credits: null,
+    image_model_visible: null, clip_model_visible: null, image_tool: null, image_model_selectable: null, image_queue_idle: null};
+  const g = libs.gflow || await loadGflow();
+  out.project_url = await ensureProject(session, cfg, g);
+  const fp = new g.FlowPage(page);
+  try { await fp.assertReady(); out.logged_in = out.flow_reachable = true; } catch (e) { throw coded('NEEDS_LOGIN', e.message); }
+  out.credits = await readCredits(page, cfg.flowpool_credit_probe);
+  // Look (without selecting) at the settings popover: which model labels are listed right now.
+  const settings = g.flowLocators(page).settingsButton.first();
+  if (await settings.count()) {
+    await settings.click({timeout: 3000}).catch(() => undefined);
+    await page.waitForTimeout(700);
+    const text = norm(await page.evaluate(() => document.body.innerText).catch(() => ''));
+    const labels = cfg.flowpool_model_labels || {};
+    if (kinds.includes('image')) out.image_model_visible = text.includes(norm(labels[cfg.flow_model] || cfg.flow_model || 'Nano Banana')) || null;
+    if (kinds.includes('clip')) out.clip_model_visible = text.includes(norm(labels[cfg.veo_model || 'veo-fast'] || 'Veo')) || null;
+    await g.dismissOpenLayers(page);
   }
   if (kinds.includes('image') && profile.tool_url) {
     const q = libs.b2 || await loadB2();
-    if (!page.url().startsWith(profile.tool_url)) await page.goto(profile.tool_url, {waitUntil: 'domcontentloaded', timeout: 30000});
+    await page.goto(profile.tool_url, {waitUntil: 'domcontentloaded', timeout: 30000});
     await assertUsable(page);
-    out.logged_in = out.flow_reachable = true;
     try {
       const frame = await q.findToolFrame(page);
       out.image_tool = true;
@@ -318,7 +388,6 @@ export async function probe(session, kinds, cfg, libs = {}) {
       out.image_model_selectable = options.includes(q.modelLabelFor(cfg.flow_model || 'Nano Banana 2'));
       out.image_queue_idle = await q.assertQueueIdle(frame).then(() => true, () => false);
     } catch (e) { out.image_tool = false; out.image_error = e.message; }
-    if (!out.credits || out.credits.value === null) out.credits = await readCredits(page, cfg.flowpool_credit_probe);
   }
   return out;
 }

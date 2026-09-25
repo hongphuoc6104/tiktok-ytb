@@ -1,8 +1,10 @@
-"""Profile pool (profiles.json): one entry per signed-in Chrome profile.
+"""Instance pool (profiles.json): one FlowPool-managed Chrome per Google account.
 
-Derived from experiments/b2_illustrator/browser-profiles.json. Only directory
-names and the profile-picker metadata in `Local State` (display name, account
-e-mail hint) are read; cookies and login databases are never opened or copied.
+Each instance has its own user-data-dir under sys/.gflow/pool/<slug>/ and its
+own remote-debugging port, so every account is a separate Chrome process that
+FlowPool can drive in parallel. The user signs in once per instance by hand
+(`python3 -m flowpool login NAME`); FlowPool never types credentials and never
+reads or copies cookies.
 """
 import json
 import os
@@ -13,33 +15,12 @@ from pathlib import Path
 
 from .config import SYS
 from .store import write_json_atomic
-import characters
 
 STATES = ('ready', 'busy', 'low_credit', 'needs_login', 'captcha', 'cooldown')
 # States that only a clean doctor observation or a human `mark` can clear.
 STICKY = ('needs_login', 'captcha')
-B2 = SYS / 'experiments/b2_illustrator'
-# Which Chrome/Flow account profile already has a channel's mascot registered
-# as a character -- account-specific bookkeeping, not part of which mascot
-# design a channel uses (that's characters.py). Only the default/vocab
-# mascot has a known profile assignment so far; a channel with no entry here
-# simply seeds no media_ids (derive() below resolves the path/media id
-# through characters.py rather than a literal string).
-MASCOT_PROFILE_BY_CHANNEL = {None: 'Profile 10'}
-PROFILE_DIR = re.compile(r'^(Default|Profile \d+)$')
-
-
-def _registered_mascots():
-    """{sha256_of_reference_image: (media_id, profile_name)} for every channel
-    mascot that currently has both an approved reference image and a known
-    Flow media id -- never a hard-coded single (path, media_id) pair."""
-    from .journal import sha256_file
-    out = {}
-    for channel, profile in MASCOT_PROFILE_BY_CHANNEL.items():
-        mascot = characters.try_resolve(SYS, channel)
-        if mascot and mascot['media_id']:
-            out[sha256_file(mascot['reference_path'])] = (mascot['media_id'], profile)
-    return out
+SCHEMA = 2
+NAME = re.compile(r'^[A-Za-z0-9][A-Za-z0-9_-]{0,39}$')
 
 
 def slug(name):
@@ -56,62 +37,49 @@ def _pid_alive(pid):
         return False
 
 
-def _local_state_hints(user_data_dir):
-    try:
-        data = json.loads((Path(user_data_dir) / 'Local State').read_text(encoding='utf-8'))
-        cache = data.get('profile', {}).get('info_cache', {})
-        return {k: {'display_name': v.get('name'), 'account_hint': v.get('user_name') or None}
-                for k, v in cache.items()}
-    except (OSError, ValueError):
-        return {}
-
-
-def derive(browser_profiles=B2 / 'browser-profiles.json', machine_local=B2 / 'machine.local.json', cfg=None):
-    """Build the pool definition. Priority profiles are enabled; every other
-    `Profile N` directory found in the same user-data-dir is listed disabled."""
+def empty_pool(cfg=None):
     cfg = cfg or {}
-    src = json.loads(Path(browser_profiles).read_text(encoding='utf-8'))
-    local = json.loads(Path(machine_local).read_text(encoding='utf-8')) if Path(machine_local).exists() else {}
-    udd = local.get('flow_user_data_dir') or src['flow_user_data_dir']
-    priority = list(src.get('priority') or [src['flow_profile_directory']])
-    found = []
-    try:
-        found = sorted((d.name for d in Path(udd).iterdir() if d.is_dir() and PROFILE_DIR.match(d.name)),
-                       key=lambda n: (0, 0) if n == 'Default' else (1, int(n.split()[-1])))
-    except OSError:
-        pass
-    hints = _local_state_hints(udd)
-    names = priority + [n for n in found if n not in priority]
-    registered = _registered_mascots()  # {sha256: (media_id, profile)}, never a single hard-coded pair
-    profiles = []
-    for i, name in enumerate(names):
-        primary = name == (local.get('flow_profile_directory') or src['flow_profile_directory'])
-        media = {sha: media_id for sha, (media_id, profile) in registered.items() if profile == name}
-        profiles.append({
-            'name': name, 'slug': slug(name), 'user_data_dir': udd, 'profile_directory': name,
-            'enabled': name in priority, 'priority': i, 'max_parallel': cfg.get('flowpool_per_browser_queue', 4),
-            'display_name': hints.get(name, {}).get('display_name'),
-            'account_hint': hints.get(name, {}).get('account_hint'),
-            # Each account needs its own remix of the B-2 queue tool and its own project.
-            'tool_url': local.get('tool_url') if primary else None,
-            'project': cfg.get('flow_project', 'Video Pilot'), 'project_url': None,
-            'media_ids': media,
-            'state': 'ready', 'state_reason': None, 'state_since': time.time(), 'cooldown_until': None,
-            'credits': None, 'credits_at': None, 'binding': None,
-        })
-    return {'schema_version': 1, 'source': str(Path(browser_profiles).relative_to(SYS)) if str(browser_profiles).startswith(str(SYS)) else str(browser_profiles),
-            'executable_path': local.get('executable_path') or src.get('executable_path'),
-            'automatic_account_switching': False, 'profiles': profiles}
+    return {'schema_version': SCHEMA, 'mode': 'instances',
+            'executable_path': cfg.get('flowpool_chrome') or '/opt/google/chrome/google-chrome',
+            'automatic_account_switching': False, 'profiles': []}
+
+
+def new_instance(name, data, cfg=None):
+    """Pool entry for a new account instance: own user-data-dir, next free port."""
+    cfg = cfg or {}
+    if not NAME.match(name or ''):
+        raise ValueError('INVALID_NAME: use 1-40 letters, digits, _ or - (e.g. acc1)')
+    if any(p['name'] == name for p in data['profiles']):
+        raise ValueError(f'INSTANCE_EXISTS: {name}')
+    used = {p.get('port') for p in data['profiles']}
+    port = int(cfg.get('flowpool_base_port', 9301))
+    while port in used:
+        port += 1
+    root = Path(cfg.get('flowpool_instances_dir') or SYS / '.gflow/pool')
+    return {
+        'name': name, 'slug': slug(name), 'user_data_dir': str((root / slug(name)).resolve()), 'port': port,
+        'enabled': True, 'priority': len(data['profiles']), 'max_parallel': cfg.get('flowpool_per_browser_queue', 4),
+        'account_hint': None,  # optional e-mail the user may fill in; checked when Flow shows it
+        # Optional B-2 queue tool remixed into this account (x4 image queue). Empty =
+        # images go through the plain Flow UI like clips, which needs no remix.
+        'tool_url': None, 'media_ids': {},
+        'project': cfg.get('flow_project', 'Video Pilot'), 'project_url': None,
+        'state': 'ready', 'state_reason': None, 'state_since': time.time(), 'cooldown_until': None,
+        'credits': None, 'credits_at': None, 'pid': None, 'launched_at': None,
+    }
 
 
 class Pool:
-    def __init__(self, path, cfg=None, derive_fn=derive):
+    def __init__(self, path, cfg=None):
         self.path = Path(path)
         self.cfg = cfg or {}
         self.lock = threading.RLock()
         if not self.path.exists():
-            write_json_atomic(self.path, derive_fn(cfg=self.cfg))
+            write_json_atomic(self.path, empty_pool(self.cfg))
         self.data = json.loads(self.path.read_text(encoding='utf-8'))
+        if self.data.get('schema_version') != SCHEMA:
+            raise RuntimeError('OLD_POOL_FORMAT: profiles.json is the shared-profile pool; run '
+                               '`python3 -m flowpool init --force` (keeps a .bak) and add instances')
         self._normalize(time.time())
 
     def _normalize(self, now):
@@ -133,7 +101,22 @@ class Pool:
         for p in self.data['profiles']:
             if p['name'] == name:
                 return p
-        raise KeyError(f'unknown profile {name}')
+        raise KeyError(f'unknown instance {name}; add it with `python3 -m flowpool add {name}`')
+
+    def add(self, name):
+        with self.lock:
+            entry = new_instance(name, self.data, self.cfg)
+            Path(entry['user_data_dir']).mkdir(parents=True, exist_ok=True)
+            self.data['profiles'].append(entry)
+            self.save()
+            return entry
+
+    def update(self, name, **fields):
+        with self.lock:
+            p = self.get(name)
+            p.update(fields)
+            self.save()
+            return p
 
     def set_state(self, name, state, reason=None, until=None, now=None):
         if state not in STATES:
@@ -165,17 +148,12 @@ class Pool:
             return self.set_state(name, target, reason, until)
 
     def record_credits(self, name, credits, at=None):
-        if credits is None:
-            return
-        with self.lock:
-            p = self.get(name)
-            p.update(credits=credits, credits_at=at or time.time())
-            self.save()
+        if credits is not None:
+            self.update(name, credits=credits, credits_at=at or time.time())
 
-    def record_binding(self, name, binding):
-        with self.lock:
-            self.get(name)['binding'] = binding
-            self.save()
+    def record_project(self, name, url):
+        if url and self.get(name).get('project_url') != url:
+            self.update(name, project_url=url)
 
     def refresh(self, now=None):
         with self.lock:
