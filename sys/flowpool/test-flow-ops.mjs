@@ -225,6 +225,50 @@ test('Flow refusals map to declined codes; timeouts stay unknown', async () => {
   assert.equal(e.submitted, true);
 });
 
+test('localized Flow radio settings select and verify image/video modes before submission', async () => {
+  const makeUi = ({ignoredGroup = null} = {}) => {
+    const groups = {mode: ['imageHình ảnh', 'videocamVideo'], ratio: ['crop_16_916:9', 'crop_9_169:16'],
+      count: ['x1', 'x2'], input: ['crop_freeKhung hình', 'chrome_extensionThành phần'],
+      duration: ['4 giây', '8 giây']};
+    const state = {mode: groups.mode[1], ratio: groups.ratio[0], count: groups.count[0],
+      input: groups.input[1], duration: groups.duration[1], model: 'Omni 1.1 Flash'};
+    const controls = Object.entries(groups).flatMap(([group, tokens]) => tokens.map(token => ({group, token,
+      textContent: token, getAttribute: key => key === 'aria-checked' ? String(state[group] === token) : null})));
+    let opened = false, modelMenu = false;
+    const settings = {click: async () => { opened = true; },
+      innerText: async () => `${state.mode.startsWith('image') ? 'Hình ảnh' : 'Video'} ${state.ratio} ${state.count}`};
+    const page = {waitForTimeout: async () => {}, locator: sel => {
+      if (sel.includes('[role="radio"]')) return {
+        count: async () => opened ? controls.length : 0,
+        first: () => ({waitFor: async () => {}}),
+        evaluateAll: async fn => fn(opened ? controls : []),
+        nth: index => ({click: async () => { const c = controls[index]; if (c.group !== ignoredGroup) state[c.group] = c.token; }}),
+      };
+      if (sel.includes('arrow_drop_down')) return {first: () => ({isVisible: async () => opened,
+        innerText: async () => `${state.model}\narrow_drop_down`, click: async () => { modelMenu = true; }})};
+      throw new Error(`unexpected selector ${sel}`);
+    }};
+    const g = {flowLocators: () => ({settingsButton: {first: () => settings}}),
+      dismissOpenLayers: async () => { opened = false; },
+      selectModelOption: async (_page, model) => { assert.ok(modelMenu); state.model = model; modelMenu = false; }};
+    return {page, g, state};
+  };
+  let ui = makeUi();
+  await ops.applyFlowSettings(ui.page, {type: 'image', ratio: '9:16', outputs: 1, model: 'Nano Banana 2'}, ui.g);
+  assert.ok(ui.state.mode.startsWith('image') && ui.state.ratio.startsWith('crop_9_16'));
+  assert.equal(ui.state.model, 'Nano Banana 2');
+  ui = makeUi();
+  ui.state.mode = 'imageHình ảnh';
+  await ops.applyFlowSettings(ui.page, {type: 'video', ratio: '16:9', outputs: 2,
+    model: 'Veo 3.1 - Fast', startFrame: '/frame.png', duration: 8}, ui.g);
+  assert.ok(ui.state.mode.startsWith('videocam') && ui.state.input.startsWith('crop_free'));
+  assert.equal(ui.state.duration, '8 giây');
+  assert.equal(ui.state.count, 'x2');
+  ui = makeUi({ignoredGroup: 'mode'});
+  await assert.rejects(ops.applyFlowSettings(ui.page,
+    {type: 'image', ratio: '9:16', outputs: 1, model: 'Nano Banana 2'}, ui.g), e => e.code === 'MODEL_NOT_SELECTABLE');
+});
+
 test('plain-Flow image: attaches refs, fills prompt, submits only on commit', async () => {
   const calls = [];
   const it = item('g', {kind: 'image', engine: 'flow', refs: ['/tmp/mascot.png']});
@@ -242,6 +286,7 @@ test('plain-Flow image: attaches refs, fills prompt, submits only on commit', as
     downloadResult: async ({basename, outDir}) => ({assetPath: path.join(outDir, basename + '.png')}),
     mediaIdFromSrc: () => 'abcd-1234',
     dismissOpenLayers: async () => {},
+    applyFlowSettings: async (_page, job) => calls.push(['settings', job]),
   };
   const session = {page, profile: {name: 'acc1', project_url: 'https://flow.google.com/project/abcd0001-ef'}, projectUrl: null};
   // No ingredient button on this fake page: a reference that cannot be attached blocks before submit.

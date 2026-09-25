@@ -194,6 +194,83 @@ async function loadGflow() {
 }
 const RATIO_ICON = {'16:9': 'crop_16_9', '9:16': 'crop_9_16'};
 const norm = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+const RADIO_SELECTOR = 'button[role="radio"]:visible,[role="radio"]:visible';
+const MODEL_TRIGGER = 'button[aria-label="Chọn nhóm mô hình"]:visible,button[aria-label="Select model group"]:visible,'
+  + 'button[aria-label="Choose model group"]:visible,button:has-text("arrow_drop_down"):visible';
+
+async function radioOptions(page) {
+  return page.locator(RADIO_SELECTOR).evaluateAll(els => els.map((el, index) => ({
+    index, text: (el.textContent || '').trim().toLowerCase().replace(/\s+/g, ''),
+    checked: el.getAttribute('aria-checked') === 'true',
+  })));
+}
+
+function radioOption(options, token) {
+  return options.find(o => o.text.startsWith(token) &&
+    (!/^x\d+$/.test(token) || !/\d/.test(o.text[token.length] || '')));
+}
+
+/** Select the actual Flow radio control and verify aria-checked after React updates.
+ * Icon ligatures are stable across the English and Vietnamese Flow labels. */
+export async function applyFlowSettings(page, job, g) {
+  const settings = g.flowLocators(page).settingsButton.first();
+  const open = async () => {
+    if ((await page.locator(RADIO_SELECTOR).count()) > 0) return;
+    await g.dismissOpenLayers(page);
+    await settings.click({force: true, timeout: 5000});
+    await page.locator(RADIO_SELECTOR).first().waitFor({state: 'visible', timeout: 5000});
+  };
+  const select = async (tokens, name) => {
+    tokens = Array.isArray(tokens) ? tokens : [tokens];
+    const find = options => tokens.map(token => radioOption(options, token)).find(Boolean);
+    await open();
+    const chosen = find(await radioOptions(page));
+    if (!chosen) throw coded('MODEL_NOT_SELECTABLE', `Flow has no ${name} option (${tokens.join('/')})`);
+    if (!chosen.checked) {
+      await page.locator(RADIO_SELECTOR).nth(chosen.index).click({force: true, timeout: 5000});
+      await page.waitForTimeout(350);
+    }
+    await open();
+    if (!find(await radioOptions(page))?.checked)
+      throw coded('MODEL_NOT_SELECTABLE', `Flow did not select ${name} (${tokens.join('/')})`);
+  };
+  await g.dismissOpenLayers(page);
+  const modeTokens = job.type === 'video' ? ['videocam', 'video'] : ['image', 'hìnhảnh', 'ảnh'];
+  await select(modeTokens, 'mode');
+  if (job.type === 'video') {
+    await select(job.startFrame ? ['crop_free', 'frames', 'khunghình'] : ['chrome_extension', 'ingredients', 'thànhphần'], 'video input');
+    if (job.duration) await select([`${job.duration}giây`, `${job.duration}s`], 'duration');
+  }
+  await select(RATIO_ICON[job.ratio], 'aspect ratio');
+  const outputTokens = [`x${job.outputs}`, `${job.outputs}x`];
+  await select(outputTokens, 'output count');
+  await open();
+  const modelTrigger = page.locator(MODEL_TRIGGER).first();
+  if (!(await modelTrigger.isVisible().catch(() => false)))
+    throw coded('MODEL_NOT_SELECTABLE', 'Flow model selector is missing');
+  if (!norm(await modelTrigger.innerText()).includes(norm(job.model))) {
+    await modelTrigger.click({force: true, timeout: 5000});
+    await g.selectModelOption(page, job.model);
+    await open();
+  }
+  if (!norm(await page.locator(MODEL_TRIGGER).first().innerText()).includes(norm(job.model)))
+    throw coded('MODEL_NOT_SELECTABLE', `Flow did not select model "${job.model}"`);
+  const expected = [[modeTokens, 'mode'], [RATIO_ICON[job.ratio], 'aspect ratio'], [outputTokens, 'output count']];
+  if (job.type === 'video') {
+    expected.push([job.startFrame ? ['crop_free', 'frames', 'khunghình'] : ['chrome_extension', 'ingredients', 'thànhphần'], 'video input']);
+    if (job.duration) expected.push([[`${job.duration}giây`, `${job.duration}s`], 'duration']);
+  }
+  for (const [tokens, name] of expected) {
+    const candidates = Array.isArray(tokens) ? tokens : [tokens];
+    const options = await radioOptions(page);
+    if (!candidates.some(token => radioOption(options, token)?.checked))
+      throw coded('MODEL_NOT_SELECTABLE', `Flow changed ${name} after model selection`);
+  }
+  const pill = await settings.innerText();
+  if (!pill.includes(RATIO_ICON[job.ratio]) || !outputTokens.some(token => pill.includes(token)))
+    throw coded('MODEL_NOT_SELECTABLE', `settings show "${pill}"`);
+  await g.dismissOpenLayers(page);
+}
 
 /** Canonical project URL (".../project/<id>") or null. */
 export function projectUrlOf(url) {
@@ -386,9 +463,8 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   const label = (cfg.flowpool_model_labels || {})[it.model] || it.model;
   const job = video ? {type: 'video', ratio: it.ratio, duration: it.seconds, outputs: it.variants, model: label, startFrame: it.start_frame}
     : {type: 'image', ratio: it.ratio, outputs: it.variants || 1, model: label};
-  try { await fp.applySettings(job); } catch (e) { throw coded('MODEL_NOT_SELECTABLE', e.message); }
-  const pill = await g.flowLocators(page).settingsButton.first().innerText().catch(() => '');
-  if (!pill.includes(RATIO_ICON[it.ratio]) || !norm(pill).includes(norm(label))) throw coded('MODEL_NOT_SELECTABLE', `settings show "${pill}"`);
+  try { await (g.applyFlowSettings || applyFlowSettings)(page, job, g); }
+  catch (e) { if (e.code) throw e; throw coded('MODEL_NOT_SELECTABLE', e.message); }
   if (video) {
     await fp.uploadFrame('Start', it.start_frame);
     if (await page.getByText('Start', {exact: true}).count().catch(() => 1)) throw coded('FRAME_NOT_ATTACHED', 'Start frame slot is still empty');
