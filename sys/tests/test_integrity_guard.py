@@ -62,6 +62,16 @@ class IntegrityGuardTests(unittest.TestCase):
                          (3, ['AGENTS.md'], ['schemas/test-extra.json'], ['GEMINI.md']))
         self.assertEqual(base, (self.p.job(self.job) / 'integrity.json').read_bytes())
 
+    def test_flowpool_source_is_protected_but_runtime_state_is_not(self):
+        self.new()
+        directory = self.root / 'flowpool'
+        directory.mkdir(exist_ok=True)
+        (directory / 'flow-ops.mjs').write_text('export const version = 1;')
+        (directory / 'profiles.json').write_text('{"profiles": []}')
+        diff = self.p.integrity_diff(self.job)
+        self.assertEqual(['flowpool/flow-ops.mjs'], diff['added'])
+        self.assertEqual([], diff['modified'])
+
     def test_adopt_code_needs_exact_confirmation_and_reason(self):
         self.new()
         with self.assertRaisesRegex(Blocked, 'trùng baseline'):
