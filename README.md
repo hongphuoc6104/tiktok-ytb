@@ -35,6 +35,7 @@ python3 vocab/bank.py audit                        # job nào làm ngoài kho, j
 - `master`: nền dùng chung; chỉ nhận cải tiến pipeline áp dụng cho nhiều kênh.
 - `video-nghien-cuu`: nội dung giải thích và hướng dẫn nghiên cứu.
 - `video-vocabulary`: bản lưu phát triển kênh học tiếng Anh/từ vựng.
+- `video-tien-su`: kênh video dài giải thích đời sống tiền sử; kế hoạch tại [tien-su-plan.md](sys/docs/tien-su-plan.md).
 
 Không merge ngược toàn bộ nội dung riêng của kênh vào master; chuyển riêng các
 commit cải tiến dùng chung. Xem [hướng dẫn từ vựng](sys/docs/vocabulary.md).
