@@ -99,8 +99,8 @@ Mỗi giai đoạn kết thúc bằng tests đạt + commit riêng. Flow thật 
 Mở rộng `experiments/b2_illustrator` (queue-runner, attempt-store, session) thành
 `sys/flowpool/`, dùng chung cho ảnh và clip.
 
-- **Pool tài khoản** (`flowpool/profiles.json`; mỗi tài khoản một Chrome riêng do FlowPool quản lý,
-  user-data-dir `sys/.gflow/pool/<tên>/` + cổng debug riêng — xem nhật ký 25/09 bản 2): mỗi profile
+- **Pool profile** (`flowpool/profiles.json`, từ các profile đã đăng nhập khai báo trong `browser-profiles.json`;
+  một daemon giữ kết nối CDP duy nhất — xem nhật ký 26/09 bản 3): mỗi profile
   có trạng thái `ready | busy | low_credit | needs_login | captcha | cooldown`, số credit đọc
   từ UI trước/sau mỗi lượt, giới hạn song song riêng.
 - **Bộ lập lịch**: ảnh (Nano Banana, không tốn credit theo đo 22/09) chia vòng tròn cho mọi
@@ -221,6 +221,24 @@ Nhật ký (mỗi giai đoạn thêm 5–10 dòng: đã làm, file chính, lện
   "New project" và ghi `project_url` (không đổi tên project). Ảnh mặc định đi đường Flow UI (đính kèm ảnh tham
   chiếu bằng Upload, 1 ảnh/lượt); đường B-2 x4 chỉ khi instance có `tool_url` + media ID của tài khoản đó.
   Selector chỉ kiểm bằng đọc mã (gflow-cli 1.1.1), chưa chạy thật.
+- 26/09/2026 GĐ3b bản 3 (quy tắc người dùng + nghiệm thu thật lần 2): **chỉ dùng các profile đã đăng nhập sẵn** trong
+  `browser-profiles.json` (Profile 10/102/13/14 của `~/.config/google-chrome`); bỏ chế độ Chrome riêng
+  (`add/login/launch/stop`, `sys/.gflow/pool`). Chrome chỉ mở CDP qua chrome://inspect (DevToolsActivePort, cổng
+  9222, đường ws ở dòng 2; /json không dùng được) và hỏi "Allow" cho mỗi client, nên `flowpool/daemon.mjs` giữ **một**
+  kết nối (`daemon start|stop|status|reconnect`), socket `sys/flowpool/daemon.sock`; mất kết nối thì thử lại 1 lần rồi báo
+  `NEEDS_ALLOW`. `open-profile "Profile N"` mở cửa sổ profile có dấu `#flowpool=…`, daemon dò tab tới 30 s, đóng tab trùng,
+  ghi target id + email thấy trên Flow vào profiles.json (email sai → `PROFILE_MISMATCH`). Việc UI tuần tự theo tab, song
+  song giữa profile tối đa `flowpool_max_parallel` (2). Credit: mỗi profile trần `flowpool_profile_monthly_credits`
+  (1050, ghi đè bằng `monthly_credits` trong profiles.json); còn lại = trần − chi tiêu tháng trong sổ, hạ xuống số dư
+  UI nếu đọc được trong tháng; clip không giao cho profile còn ít hơn giá clip; ngân sách pool = tổng trần các profile
+  trừ khi `credit_budget` thấp hơn; sang tháng mới tự tính lại. Thêm profile chỉ cần sửa browser-profiles.json.
+  Chất lượng: `flowpool/prompts.py` ghép style kênh (tiensu/channel.json) + nhận diện mascot + cảnh + ràng buộc cấm chữ;
+  ảnh sinh `flowpool_image_variants` (2) bản, clip theo `brief.clips.variants`; `flowpool/rank.py` chấm điểm cục bộ (tỷ lệ,
+  ảnh trống, vùng giống chữ, dHash so với tham chiếu) và chọn bản tốt nhất. Bảng điều khiển `python3 -m flowpool ui`
+  (http://127.0.0.1:8765): thẻ profile, hàng đợi, thư viện; "Chọn bản này" ghi `decisions.ndjson`, pipeline dùng bản
+  chọn khi media chạy lại (duyệt vẫn qua pilot.py); "Tạo lại" ghi quyết định và đưa lệnh `pilot.py reject ... --image`.
+  Sửa kèm: `schemas/control.json` và `image_pipeline.preflight` không còn chặn mọi job khi config bật video/credit
+  (chi tiêu Veo vẫn chỉ qua `clip_policy`). Selector UI chỉ kiểm bằng đọc mã; chưa chạy thật.
 - 25/09/2026 GĐ2 + GĐ3 (phần renderer): brief `voice_language`/`subtitles`/`channel`/`clips`;
   16:9 + `vi` dùng narration.wav, không cần narration_en/quote_en/neo en (story_plan.needs_english
   là nguồn duy nhất cho content_contract, estimates, review_plan, pilot gate audio/render, workflow

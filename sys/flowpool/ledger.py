@@ -59,12 +59,15 @@ class Ledger:
             return statistics.median(measured), 'measured'
         return fallback, 'estimate'
 
-    def month_spend(self, month=None, kind=None):
-        """Credits spent this month: measured deltas plus estimates where the UI gave none."""
+    def month_spend(self, month=None, kind=None, profile=None):
+        """Credits spent this month (optionally for one profile): measured deltas plus
+        estimates where the UI gave none. A new month starts from zero."""
         month = month or month_of(time.time())
         total, estimated = 0.0, False
         for e in self.entries():
             if e['type'] != 'submission' or month_of(e['at']) != month or (kind and e.get('kind') != kind):
+                continue
+            if profile and e.get('profile') != profile:
                 continue
             if e.get('delta') is not None:
                 total += max(0.0, e['delta'])

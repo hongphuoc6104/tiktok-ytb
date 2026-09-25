@@ -171,7 +171,9 @@ def requires_ui_evidence(p):
 
 def preflight(p, j, operation):
     cfg = read(p.root / 'config.json')
-    if declared_clips(p, j) is None and (cfg.get('video_generation') or cfg.get('credit_budget', 0) != 0):
+    # Image generation never spends the clip budget; Veo spending is gated separately by
+    # clip_policy() (brief `clips` + video_generation + positive credit_budget + FlowPool).
+    if (cfg.get('credit_budget') or 0) < 0:
         raise Blocked('M2_POLICY: credit budget must be non-negative')
     if not requires_ui_evidence(p):
         return {'mode': 'image', 'operation': operation, 'cost_policy': 'user_assumed_zero',
@@ -365,6 +367,10 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
     if record.exists():
         result = read(record)
         if result['state'] == 'downloaded':
+            if cfg.get('flowpool_enabled') and not registration:
+                # A variant picked in the FlowPool dashboard replaces the candidate (review gate still applies).
+                from flowpool import pipeline as flowpool_pipeline
+                result = flowpool_pipeline.apply_pick(p, j, result)
             image_check(p, j, result['path'], result['sha256'], full=registration is None)
             return result
         if result['state'] not in ('not_submitted','generated'):
@@ -528,7 +534,7 @@ def clip_request(p, j, unit, base):
     out.mkdir(exist_ok=True)
     request = {'id': 'clip-' + key[:16], 'prompt': actual_prompt, 'ratio': unit['ratio'], 'refs': [],
                'start_frame': str(p.path(j, base['path'])), 'variants': variants, 'model': model,
-               'job': j, 'scene': unit.get('scene_id'), 'out_dir': str(out)}
+               'job': j, 'scene': unit.get('scene_id'), 'target': unit['id'], 'out_dir': str(out)}
     result = {'key': key, 'identity': identity, 'state': 'submitted', 'submitted_at': time.time(),
               'args': request, 'journal': str(record.relative_to(p.job(j)))}
     write(record, result)
@@ -541,11 +547,12 @@ def clip_request(p, j, unit, base):
                                          'profile': r.get('profile'), 'media_ids': r.get('media_ids'),
                                          'base_image': str(p.path(j, base['path'])),
                                          'credits_before': r.get('credits_before'), 'credits_after': r.get('credits_after')})
-        first = files[0]
+        first = Path(r.get('chosen') or files[0])  # user pick > ranked best > first
         write(first.with_suffix('.json'), {'jobId': request['id'], 'type': 'video', 'prompt': actual_prompt,
                                            'ratio': unit['ratio'], 'model': model, 'source': 'google-flow-browser',
                                            'status': 'downloaded', 'media_ids': r.get('media_ids'),
-                                           'profile': r.get('profile')})
+                                           'profile': r.get('profile'), 'flow_prompt': r.get('flow_prompt'),
+                                           'choice': r.get('choice')})
         result.update(state='downloaded', path=str(first.relative_to(p.job(j))), sha256=digest(first),
                       variants=[str(f.relative_to(p.job(j))) for f in files], profile=r.get('profile'))
         write(record, result)

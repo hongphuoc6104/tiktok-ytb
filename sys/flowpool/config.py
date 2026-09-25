@@ -7,17 +7,21 @@ HOME = Path(__file__).resolve().parent
 
 DEFAULTS = {
     'flowpool_enabled': False,
-    # Account instances (separate Chrome processes) driven at the same time;
-    # sized for a 14-16 GB laptop.
-    'flowpool_max_browsers': 2,
+    # Profiles driven at the same time (all share the user's one Chrome and the
+    # daemon's single CDP connection; each profile has its own tab).
+    'flowpool_max_parallel': 2,
     # Requests queued in one B-2 tool at once (x4 accepted on 22/09/2026).
     'flowpool_per_browser_queue': 4,
-    # First remote-debugging port handed to `flowpool add`; each instance gets its own.
-    'flowpool_base_port': 9301,
+    # Credits each Google AI Pro account may spend per month (override per profile
+    # with `monthly_credits` in profiles.json).
+    'flowpool_profile_monthly_credits': 1050,
+    'flowpool_image_variants': 2,
     'flowpool_flow_url': 'https://flow.google.com/',
-    'flowpool_chrome': None,
-    'flowpool_instances_dir': None,  # default sys/.gflow/pool
+    'flowpool_ui_port': 8765,
+    'flowpool_daemon_socket': None,  # default sys/flowpool/daemon.sock
     'flowpool_state_dir': str(HOME),
+    # The user's declared, already signed-in profiles (the only ones FlowPool uses).
+    'flowpool_browser_profiles': str(SYS / 'experiments/b2_illustrator/browser-profiles.json'),
     'flowpool_image_timeout_seconds': 300,
     'flowpool_clip_timeout_seconds': 1800,
     'flowpool_cooldown_seconds': 900,
@@ -32,6 +36,7 @@ DEFAULTS = {
     'flowpool_credit_probe': {'selectors': ['[aria-label*="credit" i]', '[data-testid*="credit" i]'],
                               'open': []},
     'flowpool_node': 'node',
+    'flowpool_chrome': '/opt/google/chrome/google-chrome',
     'flow_model': 'Nano Banana 2',
     'flow_project': 'Video Pilot',
     'veo_model': 'veo-fast',

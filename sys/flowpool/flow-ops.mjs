@@ -1,6 +1,6 @@
 /**
- * FlowPool page operations on a FlowPool-managed Chrome instance (one account,
- * signed in by the user) reached over that instance's own debugging port.
+ * FlowPool page operations on the user's existing signed-in Chrome profiles,
+ * reached through the FlowPool daemon's single CDP connection (one tab per profile).
  *
  * Hard rules: the worker never launches Chrome or signs in, never types a password, never touches a
  * CAPTCHA (detect -> throw CAPTCHA), never read or copy cookies. Only
@@ -110,20 +110,14 @@ export async function readCredits(page, probe = {}) {
   return {...got, method: got.value === null ? 'unreadable' : 'body-text'};
 }
 
-// ----------------------------------------------------------------- page + account
+// ----------------------------------------------------------------- profiles in the shared Chrome
 const FLOW_PAGE = /^https:\/\/(flow\.google\.com|labs\.google)\//;
+export const markerOf = profile => `flowpool=${profile.slug}`;
 
-/** One instance = one account, so any tab of it will do: its Flow tab, else an
- * ordinary tab, else a new one. */
-export async function pickPage(browser) {
-  const pages = browser.contexts().flatMap(c => c.pages()).filter(p => !p.isClosed());
-  const flow = pages.find(p => FLOW_PAGE.test(p.url()));
-  if (flow) return flow;
-  const plain = pages.find(p => !/^(chrome|devtools|chrome-extension):/.test(p.url()));
-  if (plain) return plain;
-  const ctx = browser.contexts()[0];
-  if (!ctx) throw coded('NO_CDP', 'Chrome exposes no browser context');
-  return ctx.newPage();
+async function targetIdOf(page) {
+  const s = await page.context().newCDPSession(page);
+  try { return (await s.send('Target.getTargetInfo')).targetInfo.targetId; }
+  finally { await s.detach().catch(() => undefined); }
 }
 
 export async function readAccountEmails(page) {
@@ -136,13 +130,49 @@ export async function readAccountEmails(page) {
   }).catch(() => []);
 }
 
-/** Optional guard: when the user filled `account_hint`, the page must not show another account. */
+/** Find each declared profile's tab among all tabs the one CDP connection sees:
+ * 1. the recorded CDP target id, 2. the `#flowpool=<slug>` marker that
+ * `flowpool open-profile` puts in the URL, 3. the Flow tab showing the
+ * profile's recorded account e-mail. Extra marker tabs are closed when `dedupe`. */
+export async function locateProfiles(browser, profiles, {dedupe = false, info = targetIdOf, emails = readAccountEmails} = {}) {
+  const entries = [];
+  for (const page of browser.contexts().flatMap(c => c.pages())) {
+    if (page.isClosed()) continue;
+    try { entries.push({page, id: await info(page)}); } catch { /* tab went away */ }
+  }
+  const claimed = new Set(), out = {};
+  const take = (p, e, via) => { out[p.name] = {page: e.page, target_id: e.id, url: e.page.url(), via, closed: 0}; claimed.add(e.id); };
+  for (const p of profiles) {
+    const e = p.binding?.target_id && entries.find(x => x.id === p.binding.target_id);
+    if (e) take(p, e, 'target');
+  }
+  for (const p of profiles) {
+    const marked = entries.filter(x => !claimed.has(x.id) && x.page.url().includes(markerOf(p)));
+    if (!marked.length) continue;
+    if (!out[p.name]) take(p, marked.shift(), 'marker');
+    for (const extra of marked) {
+      if (!dedupe) continue;
+      await extra.page.close().catch(() => undefined);
+      out[p.name].closed += 1;
+    }
+  }
+  const waiting = profiles.filter(p => !out[p.name] && p.account_email);
+  for (const e of entries.filter(x => waiting.length && !claimed.has(x.id) && FLOW_PAGE.test(x.page.url()))) {
+    const shown = await emails(e.page);
+    const p = waiting.find(q => !out[q.name] && shown.includes(q.account_email.toLowerCase()));
+    if (p) take(p, e, 'email');
+  }
+  return out;
+}
+
+/** The account the tab shows. With a recorded e-mail, another visible account is a mismatch. */
 export async function verifyAccount(page, profile) {
-  if (!profile.account_hint) return null;
-  const emails = await readAccountEmails(page);
-  if (!emails.length) return null;
-  if (!emails.includes(profile.account_hint.toLowerCase())) throw coded('PROFILE_MISMATCH', `page shows ${emails.join(', ')}, expected ${profile.account_hint}`);
-  return true;
+  const shown = await readAccountEmails(page);
+  const expected = (profile.account_email || '').toLowerCase();
+  if (expected && shown.length && !shown.includes(expected)) {
+    throw coded('PROFILE_MISMATCH', `tab shows ${shown.join(', ')}, expected ${expected} for ${profile.name}`);
+  }
+  return {email: shown.length === 1 ? shown[0] : null, verified: expected ? (shown.length ? true : null) : null};
 }
 
 // ----------------------------------------------------------------- Flow project
@@ -177,9 +207,9 @@ export async function findProjectUrl(page, name) {
   return href ? new URL(href, page.url()).toString() : null;
 }
 
-/** Open the instance's Flow project: recorded URL, else the dashboard card named
+/** Open the profile's Flow project: recorded URL, else the dashboard card named
  * `profile.project`, else create one with "New project" (no generation, no credits).
- * The resulting URL is reported back and recorded per instance. */
+ * The resulting URL is reported back and recorded per profile. */
 export async function ensureProject(session, cfg, g) {
   const {page, profile} = session;
   const known = session.projectUrl || profile.project_url;
@@ -198,7 +228,7 @@ export async function ensureProject(session, cfg, g) {
     await page.goto(found, {waitUntil: 'domcontentloaded', timeout: 30000});
   } else {
     if (!(await newProject.isVisible().catch(() => false))) {
-      throw coded('NEEDS_LOGIN', 'Flow shows no projects and no "New project" button (signed out?); sign in by hand: python3 -m flowpool login ' + profile.name);
+      throw coded('NEEDS_LOGIN', `Flow shows no projects and no "New project" button in ${profile.name} (signed out?); the user signs in again by hand in that Chrome profile`);
     }
     await newProject.click({timeout: 5000});
     await page.waitForURL(/\/project\/[0-9a-f-]+/i, {timeout: 30000}).catch(() => undefined);
@@ -312,7 +342,7 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   try { await fp.assertReady(); } catch (e) { throw coded('NEEDS_LOGIN', e.message); }
   const label = (cfg.flowpool_model_labels || {})[it.model] || it.model;
   const job = video ? {type: 'video', ratio: it.ratio, duration: it.seconds, outputs: it.variants, model: label, startFrame: it.start_frame}
-    : {type: 'image', ratio: it.ratio, outputs: 1, model: label};
+    : {type: 'image', ratio: it.ratio, outputs: it.variants || 1, model: label};
   try { await fp.applySettings(job); } catch (e) { throw coded('MODEL_NOT_SELECTABLE', e.message); }
   const pill = await g.flowLocators(page).settingsButton.first().innerText().catch(() => '');
   if (!pill.includes(RATIO_ICON[it.ratio]) || !norm(pill).includes(norm(label))) throw coded('MODEL_NOT_SELECTABLE', `settings show "${pill}"`);
@@ -325,7 +355,7 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   const type = video ? 'video' : 'image';
   const before = new Set(await fp.resultSrcs(type));
   await fp.fillPrompt(it.prompt);
-  session.pending = {kind: 'flow', type, fp, before, item: it, expected: video ? it.variants : 1};
+  session.pending = {kind: 'flow', type, fp, before, item: it, expected: it.variants || 1};
   return [null];
 }
 

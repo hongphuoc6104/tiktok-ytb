@@ -1,7 +1,7 @@
 """Browser drivers. The pool talks to one driver per active profile.
 
 Protocol (all read-only except `commit`):
-  open()            attach to the instance's own Chrome (its debugging port); detect CAPTCHA/login
+  open()            find the profile's tab in the shared Chrome (via the daemon); detect CAPTCHA/login
   probe(kinds)      doctor checks: logged in, Flow reachable, model selectable, credits
   read_credits()    {'value': int|None, 'raw': ..., 'method': ...}
   prepare(kind, items)  fill the form / local queue; MUST NOT start a generation
@@ -11,10 +11,6 @@ Protocol (all read-only except `commit`):
 Errors are DriverError(code, submitted=bool). `submitted` tells the pool
 whether the generation may have started.
 """
-import json
-import queue
-import subprocess
-import threading
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -23,10 +19,12 @@ HERE = Path(__file__).resolve().parent
 PROFILE_CODES = {
     'CAPTCHA': 'captcha',
     'NEEDS_LOGIN': 'needs_login',
-    'PROFILE_MISMATCH': 'needs_login',  # Flow shows a different account than the instance's account_hint
+    'PROFILE_MISMATCH': 'needs_login',  # Flow shows another account than the one recorded for this profile
     'RATE_LIMITED': 'cooldown',
     'CREDIT_LIMIT': 'low_credit',
 }
+# The daemon's single CDP connection is gone: nothing can run until the user acts.
+DAEMON_CODES = ('NO_DAEMON', 'NEEDS_ALLOW', 'NOT_CONNECTED')
 # Explicit refusals shown by Flow after submit: terminal, never retried automatically.
 DECLINED = ('RATE_LIMITED', 'CREDIT_LIMIT', 'POLICY_BLOCKED', 'GENERATION_FAILED')
 
@@ -59,49 +57,25 @@ class Driver:
         pass
 
 
-class NodeDriver(Driver):
-    """Runs sys/flowpool/worker.mjs and speaks line-delimited JSON over stdio."""
+class DaemonDriver(Driver):
+    """Per-profile driver over the FlowPool daemon's single CDP connection.
+    Each call carries the profile record; the daemon serializes work per tab."""
 
-    def __init__(self, profile, cfg):
-        self.profile = profile
+    def __init__(self, profile, cfg, client=None):
+        from .daemon_client import DaemonClient
+        self.profile = {k: v for k, v in profile.items() if not k.startswith('_')}
         self.cfg = cfg
-        self.proc = None
-        self.lines = queue.Queue()
-        self.project_url = None  # reported by the worker once it opened/created the Flow project
+        self.client = client or DaemonClient(cfg)
+        self.project_url = None
+        self.email = None
 
-    def _start(self):
-        self.proc = subprocess.Popen([self.cfg.get('flowpool_node', 'node'), str(HERE / 'worker.mjs')],
-                                     stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                                     text=True, cwd=str(HERE.parent), bufsize=1)
-
-        def pump(stream, sink):
-            for line in stream:
-                sink.put(line)
-            sink.put(None)
-
-        threading.Thread(target=pump, args=(self.proc.stdout, self.lines), daemon=True).start()
-        self.stderr = queue.Queue()
-        threading.Thread(target=pump, args=(self.proc.stderr, self.stderr), daemon=True).start()
-
-    def _call(self, message, timeout, submitted_on_error=False):
-        if self.proc is None:
-            self._start()
+    def _call(self, op, timeout, submitted_on_error=False, **params):
+        from .daemon_client import DaemonError
         try:
-            self.proc.stdin.write(json.dumps(message, ensure_ascii=False) + '\n')
-            self.proc.stdin.flush()
-        except (BrokenPipeError, OSError) as ex:
-            raise DriverError('WORKER_DIED', str(ex), submitted=submitted_on_error)
-        try:
-            line = self.lines.get(timeout=timeout)
-        except queue.Empty:
-            self.kill()
-            raise DriverError('TIMEOUT', f'{message["op"]} exceeded {timeout}s', submitted=submitted_on_error)
-        if line is None:
-            raise DriverError('WORKER_DIED', self._stderr_tail(), submitted=submitted_on_error)
-        try:
-            reply = json.loads(line)
-        except ValueError:
-            raise DriverError('PROTOCOL', line[:200], submitted=submitted_on_error)
+            reply = self.client.call(op, timeout=timeout, profile=self.profile, cfg=_worker_cfg(self.cfg), **params)
+        except DaemonError as ex:
+            # Once commit was sent, a lost reply means the generation may have started.
+            raise DriverError(ex.code, str(ex), submitted=submitted_on_error)
         if reply.get('project_url'):
             self.project_url = reply['project_url']
         if not reply.get('ok'):
@@ -109,49 +83,28 @@ class NodeDriver(Driver):
                               submitted=bool(reply.get('submitted', submitted_on_error)), partial=reply.get('partial'))
         return reply
 
-    def _stderr_tail(self):
-        out = []
-        while True:
-            try:
-                item = self.stderr.get_nowait()
-            except (queue.Empty, AttributeError):
-                break
-            if item:
-                out.append(item)
-        return ''.join(out)[-500:]
-
     def open(self):
-        return self._call({'op': 'open', 'profile': self.profile, 'cfg': _worker_cfg(self.cfg)}, 120)
+        reply = self._call('open', 120)
+        self.email = reply.get('email')
+        return reply
 
     def probe(self, kinds):
-        return self._call({'op': 'probe', 'kinds': list(kinds)}, 180)
+        return self._call('probe', 240, kinds=list(kinds))
 
     def read_credits(self):
-        return self._call({'op': 'credits'}, 60)['credits']
+        return self._call('credits', 60)['credits']
 
     def prepare(self, kind, items):
-        return self._call({'op': 'prepare', 'kind': kind, 'items': items}, 300)['prepared']
+        return self._call('prepare', 300, kind=kind, items=items)['prepared']
 
     def commit(self, timeout):
-        return self._call({'op': 'commit', 'timeout_ms': int(timeout * 1000)}, timeout + 120,
-                          submitted_on_error=True)['items']
+        return self._call('commit', timeout + 120, submitted_on_error=True, timeout_ms=int(timeout * 1000))['items']
 
     def close(self):
-        if self.proc and self.proc.poll() is None:
-            try:
-                self._call({'op': 'close'}, 30)
-                self.proc.wait(5)
-            except (DriverError, subprocess.TimeoutExpired):
-                pass
-            self.kill()
-
-    def kill(self):
-        if self.proc and self.proc.poll() is None:
-            self.proc.terminate()
-            try:
-                self.proc.wait(10)
-            except subprocess.TimeoutExpired:
-                self.proc.kill()
+        try:
+            self._call('release', 30)
+        except DriverError:
+            pass
 
 
 def _worker_cfg(cfg):

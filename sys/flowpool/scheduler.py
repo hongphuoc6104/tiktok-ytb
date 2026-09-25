@@ -1,10 +1,11 @@
 """Pure scheduling decisions (no I/O), so they can be tested exhaustively.
 
-Images: round-robin over free ready instances. An instance with a B-2 tool
+Images: round-robin over free ready profiles. A profile with a B-2 tool
 remix and media IDs for every reference takes up to one B-2 queue (<=4);
 otherwise the image goes through the plain Flow UI, one per submission.
-Clips: the free ready instance with the most remaining credits (unknown
-balances rank last), one clip submission at a time.
+Clips: the free ready profile with the most credits left this month (the
+lower of the UI balance and its monthly cap minus ledger spend; unknown ranks
+last), one clip submission at a time.
 """
 import math
 
@@ -16,10 +17,12 @@ TRANSIENT = ('busy', 'cooldown')
 class Context:
     """Facts the scheduler needs: per-profile media IDs and clip cost."""
 
-    def __init__(self, cfg, media_lookup=None, clip_cost=None):
+    def __init__(self, cfg, media_lookup=None, clip_cost=None, remaining=None):
         self.cfg = cfg
         self.media_lookup = media_lookup or {}
         self.clip_cost = clip_cost or (lambda model: cfg.get('flowpool_clip_credit_estimate', {}).get(model, 0))
+        # Credits this profile may still spend this month (None = unknown).
+        self.remaining = remaining or (lambda profile: profile.get('credits'))
 
     def media_id(self, profile, sha):
         return (profile.get('media_ids') or {}).get(sha) or self.media_lookup.get(sha, {}).get(profile['name'])
@@ -34,7 +37,8 @@ def engine(profile, req, ctx):
     """'b2' (remixed queue tool, needs account media IDs), 'flow' (plain Flow UI) or 'clip'."""
     if req['kind'] == 'clip':
         return 'clip'
-    if profile.get('tool_url') and all(ctx.media_id(profile, sha) for sha in req.get('_ref_shas') or []):
+    if (profile.get('tool_url') and int(req.get('variants') or 1) == 1
+            and all(ctx.media_id(profile, sha) for sha in req.get('_ref_shas') or [])):
         return 'b2'
     return 'flow'
 
@@ -49,8 +53,8 @@ def eligible(profile, req, ctx, states=None):
         return False, profile.get('state')
     if kind == 'image':
         return True, None
-    credits = profile.get('credits')
-    if credits is not None and credits < ctx.cost(req):
+    left = ctx.remaining(profile)
+    if left is not None and left < ctx.cost(req):
         return False, 'insufficient_credits'
     return True, None
 
@@ -73,7 +77,7 @@ def next_batch(pending, profiles, ctx, busy=(), slots=1, rr=None, cap=4):
         if not cands:
             continue
         if req['kind'] == 'clip':
-            best = max(cands, key=lambda p: (p.get('credits') is not None, p.get('credits') or 0, -p.get('priority', 0)))
+            best = max(cands, key=lambda p: (ctx.remaining(p) is not None, ctx.remaining(p) or 0, -p.get('priority', 0)))
             return best, [req]
         after = [p for p in cands if p.get('priority', 0) > rr[0]]
         chosen = (after or cands)[0]

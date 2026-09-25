@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlowPool</title>
+<style>
+  :root { --bg:#f6f3ec; --card:#fff; --ink:#23201b; --muted:#6f685c; --line:#e3ddd0; --ok:#2f7d4f; --warn:#b7791f; --bad:#b83a2e; --accent:#3a5a8c; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1b1a17; --card:#26241f; --ink:#eee8dc; --muted:#a79f90; --line:#3a372f; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.45 system-ui, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:14px 20px; display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; border-bottom:1px solid var(--line); }
+  h1 { font-size:18px; margin:0; } h2 { font-size:15px; margin:22px 20px 8px; }
+  .muted { color:var(--muted); } .ok { color:var(--ok); } .warn { color:var(--warn); } .bad { color:var(--bad); }
+  .banner { margin:12px 20px 0; padding:10px 14px; border-radius:8px; background:#fdecea; color:#7a1f16; display:none; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; padding:0 20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px; }
+  .card h3 { margin:0 0 6px; font-size:15px; display:flex; justify-content:space-between; }
+  .pill { font-size:12px; padding:1px 8px; border-radius:99px; border:1px solid currentColor; }
+  .bar { height:6px; background:var(--line); border-radius:4px; overflow:hidden; margin:6px 0; }
+  .bar > i { display:block; height:100%; background:var(--accent); }
+  .action { margin-top:8px; padding:6px 8px; border-radius:6px; background:rgba(183,121,31,.12); }
+  table { width:calc(100% - 40px); margin:0 20px; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); font-size:13px; vertical-align:top; }
+  .gallery .card { padding:10px; }
+  .variants { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
+  .variant { flex:1 1 160px; border:2px solid transparent; border-radius:8px; padding:4px; }
+  .variant.best { border-color:var(--line); } .variant.picked { border-color:var(--ok); }
+  .variant img, .variant video { width:100%; border-radius:6px; background:#000; display:block; }
+  .prompt { font-size:12px; color:var(--muted); max-height:5.5em; overflow:auto; white-space:pre-wrap; }
+  button, a.btn { font:inherit; font-size:12px; padding:4px 10px; border-radius:6px; border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; text-decoration:none; }
+  button:hover, a.btn:hover { border-color:var(--accent); }
+  .toast { position:fixed; bottom:16px; right:16px; max-width:520px; background:var(--ink); color:var(--bg); padding:10px 14px; border-radius:8px; display:none; white-space:pre-wrap; }
+</style>
+</head>
+<body>
+<header>
+  <h1>FlowPool</h1>
+  <span id="summary" class="muted">Đang tải…</span>
+  <span id="daemon" class="muted"></span>
+</header>
+<div id="banner" class="banner"></div>
+
+<h2>Profile Chrome</h2>
+<div id="profiles" class="grid"></div>
+
+<h2>Hàng đợi</h2>
+<table><thead><tr><th>Yêu cầu</th><th>Loại</th><th>Job / cảnh</th><th>Trạng thái</th><th>Profile</th><th>Thời gian</th><th>Lỗi</th></tr></thead>
+<tbody id="queue"></tbody></table>
+
+<h2>Thư viện ảnh / clip</h2>
+<div id="gallery" class="grid gallery"></div>
+<div id="toast" class="toast"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const t = s => s ? new Date(s * 1000).toLocaleTimeString('vi-VN') : '';
+const secs = (a, b) => (a && b) ? `${Math.round(b - a)} s` : '';
+const STATE_VI = {ready:'sẵn sàng', busy:'đang chạy', low_credit:'hết credit tháng', needs_login:'cần đăng nhập', captcha:'CAPTCHA', cooldown:'tạm nghỉ'};
+const DAEMON_ACTION = {NEEDS_ALLOW:'Bấm "Allow" trong Chrome rồi chạy: python3 -m flowpool daemon reconnect',
+  NOT_CONNECTED:'Bấm "Allow" trong Chrome rồi chạy: python3 -m flowpool daemon reconnect'};
+let rendered = '';
+
+function toast(msg) { const el = $('toast'); el.textContent = msg; el.style.display = 'block'; setTimeout(() => el.style.display = 'none', 9000); }
+
+async function post(url, body) {
+  const r = await fetch(url, {method:'POST', headers:{'content-type':'application/json'}, body:JSON.stringify(body)});
+  const data = await r.json();
+  if (!r.ok || data.ok === false) throw new Error(data.error || data.blocked || r.statusText);
+  return data;
+}
+async function pick(key, index) {
+  try { const d = await post('/api/pick', {key, index}); toast('Đã chọn bản ' + (index + 1) + '. ' + (d.next || '')); refresh(true); }
+  catch (e) { toast('Không chọn được: ' + e.message); }
+}
+async function regenerate(key) {
+  const note = prompt('Ghi chú cho lần tạo lại (có thể để trống):', '');
+  if (note === null) return;
+  try { const d = await post('/api/regenerate', {key, note}); toast('Đã ghi yêu cầu tạo lại.' + (d.next ? '\nChạy lệnh sau để tạo lại qua quy trình duyệt:\n' + d.next : '')); refresh(true); }
+  catch (e) { toast('Không ghi được: ' + e.message); }
+}
+
+function render(data) {
+  const s = data.status, d = data.daemon || {};
+  $('summary').textContent = `Tháng ${s.month}: đã dùng ${Math.round(s.month_spent)}/${Math.round(s.credit_budget)} credit · còn khoảng ${s.clips_left_total} clip · clip ≈ ${Math.round(s.credits_per_clip)} credit (${s.cost_basis === 'measured' ? 'đo thật' : 'ước tính'})`;
+  const code = d.ok === false ? d.code : (d.needs_allow ? 'NEEDS_ALLOW' : (!d.connected ? 'NOT_CONNECTED' : null));
+  $('daemon').innerHTML = code ? `<span class="bad">Daemon: ${esc(code)}</span>` : '<span class="ok">Daemon: đã kết nối Chrome</span>';
+  const banner = $('banner');
+  banner.style.display = code ? 'block' : 'none';
+  banner.textContent = code ? (DAEMON_ACTION[code] || 'Chạy: python3 -m flowpool daemon start') : '';
+
+  const act = d.activity || {};
+  $('profiles').innerHTML = s.profiles.map(p => {
+    const a = act[p.profile] || {};
+    const cls = {ready:'ok', busy:'ok', low_credit:'warn', cooldown:'warn'}[p.state] || 'bad';
+    const pct = p.monthly_cap ? Math.min(100, 100 * p.month_used / p.monthly_cap) : 0;
+    const err = a.last_error ? `<div class="muted">Lỗi gần nhất: ${esc(a.last_error.code)} — ${esc(a.last_error.message).slice(0, 160)}</div>` : '';
+    return `<div class="card"><h3>${esc(p.profile)} <span class="pill ${cls}">${STATE_VI[p.state] || esc(p.state)}</span></h3>
+      <div class="muted">${esc(p.account_email || p.account_hint || 'chưa thấy email')} · tab: ${p.tab_open ? 'đang mở' : 'chưa mở'}</div>
+      <div>Credit tháng: ${Math.round(p.month_used)} / ${Math.round(p.monthly_cap)} · còn ${Math.round(p.month_remaining)} (≈ ${p.clips_left_estimate ?? '-'} clip)</div>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <div>Số dư trên Flow: ${p.credits ?? 'chưa đọc được'}</div>
+      <div>Việc hiện tại: ${a.task ? esc(a.task) + ' từ ' + new Date(a.since).toLocaleTimeString('vi-VN') : 'không'}</div>
+      ${err}${p.action ? `<div class="action">${esc(p.action)}</div>` : ''}
+      ${p.project_url ? `<div style="margin-top:6px"><a class="btn" target="_blank" rel="noopener" href="${esc(p.project_url)}">Mở project Flow</a></div>` : ''}
+    </div>`;
+  }).join('') || '<div class="muted">Chưa có profile (khai báo trong browser-profiles.json).</div>';
+
+  $('queue').innerHTML = data.queue.map(q => `<tr>
+      <td>${esc(q.id)}<div class="muted">${esc(q.key.slice(0, 12))}</div></td><td>${q.kind === 'clip' ? 'clip' : 'ảnh'}</td>
+      <td>${esc(q.job || '')} ${esc(q.scene || '')}</td>
+      <td class="${q.needs_attention ? 'bad' : ''}">${esc(q.label)}</td><td>${esc(q.profile || '')}</td>
+      <td>${t(q.times.intent)}${q.times.submitted ? ' → gửi ' + t(q.times.submitted) : ''}${q.times.collected ? ' → xong sau ' + secs(q.times.submitted, q.times.collected) : ''}</td>
+      <td>${esc(q.code || '')}</td></tr>`).join('') || '<tr><td colspan="7" class="muted">Chưa có yêu cầu.</td></tr>';
+
+  $('gallery').innerHTML = data.gallery.map(g => `<div class="card">
+      <h3>${esc(g.job || 'adhoc')} · ${esc(g.scene || g.id)} <span class="pill">${g.kind === 'clip' ? 'clip' : 'ảnh'}</span></h3>
+      <div class="muted">${esc(g.profile || '')} · ${esc(g.id)}${g.regenerate_requested ? ' · <span class="warn">đã yêu cầu tạo lại</span>' : ''}</div>
+      <div class="variants">${g.variants.map(v => {
+        const src = `/media?key=${encodeURIComponent(g.key)}&i=${v.index}`;
+        const media = g.kind === 'clip' ? `<video src="${src}" muted loop controls preload="metadata"></video>` : `<img loading="lazy" src="${src}" alt="bản ${v.index + 1}">`;
+        return `<div class="variant ${v.best ? 'best' : ''} ${v.picked ? 'picked' : ''}">${media}
+          <div>Bản ${v.index + 1} · điểm ${v.score ?? '-'}${v.best ? ' · <b>tốt nhất</b>' : ''}${v.picked ? ' · <span class="ok">đã chọn</span>' : ''}</div>
+          <button onclick="pick('${g.key}', ${v.index})">Chọn bản này</button></div>`;
+      }).join('')}</div>
+      <div class="prompt">${esc(g.prompt)}</div>
+      <div style="margin-top:6px;display:flex;gap:6px"><button onclick="regenerate('${g.key}')">Tạo lại…</button>
+      ${g.open_in_flow ? `<a class="btn" target="_blank" rel="noopener" href="${esc(g.open_in_flow)}">Mở trong Flow</a>` : ''}</div>
+    </div>`).join('') || '<div class="muted">Chưa có ảnh hoặc clip.</div>';
+}
+
+async function refresh(force) {
+  try {
+    const r = await fetch('/api/state', {cache: 'no-store'});
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || r.statusText);
+    const sig = JSON.stringify(data);
+    if (force || sig !== rendered) { rendered = sig; render(data); }
+  } catch (e) {
+    $('summary').textContent = 'Không đọc được trạng thái: ' + e.message;
+  }
+}
+refresh(true);
+setInterval(refresh, 4000);
+</script>
+</body>
+</html>

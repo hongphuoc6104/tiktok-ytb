@@ -4,7 +4,8 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import * as ops from './flow-ops.mjs';
-import {createWorker, debugEndpoint, endpointFor} from './worker.mjs';
+import http from 'node:http';
+import {createDaemon, createDashboard, debugEndpoint, endpointFromDir} from './daemon.mjs';
 import {pollQueue} from '../experiments/b2_illustrator/queue-runner.mjs';
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'flowpool-'));
@@ -37,14 +38,40 @@ test('credit balances are parsed; cost phrases and ambiguity give null', () => {
   assert.equal(ops.pickCredits(['no numbers here']).value, null);
 });
 
-test('one instance = one account: reuse its Flow tab, else a plain tab, else open one', async () => {
-  const other = fakePage('chrome://newtab/'), flow = fakePage('https://flow.google.com/project/abc');
-  const browser = pages => ({contexts: () => [{pages: () => pages, newPage: async () => 'NEW'}]});
-  assert.equal(await ops.pickPage(browser([other, flow])), flow);
-  const plain = fakePage('https://example.org/');
-  assert.equal(await ops.pickPage(browser([other, plain])), plain);
-  assert.equal(await ops.pickPage(browser([other])), 'NEW');
-  await assert.rejects(ops.pickPage({contexts: () => []}), e => e.code === 'NO_CDP');
+function tabs(list) {
+  const pages = list.map(([url, id]) => ({...fakePage(url), id, closed: false, close: async function () { this.closed = true; }}));
+  return {pages, browser: {contexts: () => [{pages: () => pages.filter(p => !p.closed)}]}, info: async p => p.id};
+}
+
+test('profiles are found by target id, then URL marker (duplicates closed), then account e-mail', async () => {
+  const {pages, browser, info} = tabs([
+    ['https://flow.google.com/project/aa11bb22', 'T10'],
+    ['https://flow.google.com/#flowpool=profile-13', 'T13a'],
+    ['https://flow.google.com/#flowpool=profile-13', 'T13b'],
+    ['https://flow.google.com/', 'T14'],
+    ['chrome://newtab/', 'TX'],
+  ]);
+  const emails = async p => (p.id === 'T14' ? ['c@example.com'] : []);
+  const profiles = [
+    {name: 'Profile 10', slug: 'profile-10', binding: {target_id: 'T10'}},
+    {name: 'Profile 13', slug: 'profile-13'},
+    {name: 'Profile 14', slug: 'profile-14', account_email: 'C@example.com'},
+    {name: 'Profile 102', slug: 'profile-102'},
+  ];
+  let found = await ops.locateProfiles(browser, profiles, {info, emails});
+  assert.deepEqual(Object.fromEntries(Object.entries(found).map(([n, f]) => [n, [f.target_id, f.via]])),
+    {'Profile 10': ['T10', 'target'], 'Profile 13': ['T13a', 'marker'], 'Profile 14': ['T14', 'email']});
+  assert.ok(!pages[2].closed);
+  found = await ops.locateProfiles(browser, profiles, {info, emails, dedupe: true});
+  assert.equal(found['Profile 13'].closed, 1);
+  assert.ok(pages[2].closed && !pages[1].closed);
+});
+
+test('account check: a recorded e-mail must match what the tab shows', async () => {
+  const page = {evaluate: async () => ['a@example.com']};
+  assert.deepEqual(await ops.verifyAccount(page, {name: 'P'}), {email: 'a@example.com', verified: null});
+  assert.deepEqual(await ops.verifyAccount(page, {name: 'P', account_email: 'A@example.com'}), {email: 'a@example.com', verified: true});
+  await assert.rejects(ops.verifyAccount(page, {name: 'P', account_email: 'b@example.com'}), e => e.code === 'PROFILE_MISMATCH');
 });
 
 test('project URLs are canonical and resolved on the current (flow.google.com) host', async () => {
@@ -183,41 +210,130 @@ test('plain-Flow image: attaches refs, fills prompt, submits only on commit', as
   await assert.rejects(ops.flowPrepare(session, [noRef, noRef], {}, g), e => e.code === 'INVALID_BATCH');
 });
 
-test('worker protocol: per-instance port, engine dispatch, commit semantics, disconnect only', async () => {
-  const dir = fs.mkdtempSync(path.join(tmp, 'udd-'));
-  let closed = 0;
-  const seen = [];
+function fakeBrowser() {
+  const handlers = {};
+  return {connected: true, closes: 0, isConnected() { return this.connected; }, on(ev, fn) { handlers[ev] = fn; },
+    drop() { this.connected = false; handlers.disconnected?.(); }, async close() { this.closes += 1; this.connected = false; }};
+}
+
+function daemonWith({connectResults, operations = {}}) {
+  const connects = [];
+  const results = [...connectResults];
+  const handle = createDaemon({
+    endpoint: () => 'ws://127.0.0.1:9222/devtools/browser/x',
+    connect: async ep => { connects.push(ep); const r = results.shift(); if (r instanceof Error) throw r; return r; },
+    operations: {...ops, assertUsable: async () => ({state: 'ok'}), verifyAccount: async () => ({email: 'a@x.com', verified: null}),
+      locateProfiles: async (b, ps) => Object.fromEntries(ps.map(p => [p.name, {page: fakePage('https://flow.google.com/'), target_id: 'T-' + p.name, url: 'u', via: 'target', closed: 0}])),
+      ...operations},
+    onShutdown: () => {},
+  });
+  return {handle, connects};
+}
+
+test('daemon: one connection, one automatic reconnect, then NEEDS_ALLOW until the user reconnects', async () => {
+  const b1 = fakeBrowser(), b2 = fakeBrowser(), b3 = fakeBrowser();
+  const {handle, connects} = daemonWith({connectResults: [b1, b2, new Error('not allowed'), b3]});
+  const P = {name: 'Profile 10', slug: 'profile-10'};
+  assert.equal((await handle({op: 'open', profile: P})).code, 'NOT_CONNECTED');
+  assert.equal((await handle({op: 'reconnect'})).connected, true);
+  assert.equal((await handle({op: 'reconnect'})).reused, true);
+  const opened = await handle({op: 'open', profile: P});
+  assert.deepEqual([opened.ok, opened.email, opened.binding.target_id], [true, 'a@x.com', 'T-Profile 10']);
+  assert.equal(connects.length, 1);
+  b1.drop();
+  assert.equal((await handle({op: 'open', profile: P})).ok, true);       // the one automatic reconnect
+  assert.equal(connects.length, 2);
+  b2.drop();
+  const lost = await handle({op: 'open', profile: P});
+  assert.equal(lost.code, 'NEEDS_ALLOW');
+  assert.equal((await handle({op: 'credits', profile: P})).code, 'NEEDS_ALLOW');
+  assert.equal(connects.length, 2);                                       // no reconnect loop
+  assert.equal((await handle({op: 'reconnect'})).code, 'NEEDS_ALLOW');     // user has not clicked Allow yet
+  assert.equal((await handle({op: 'reconnect'})).connected, true);
+  const st = await handle({op: 'status'});
+  assert.deepEqual([st.connected, st.needs_allow, st.activity['Profile 10'].last_error.code], [true, false, 'NEEDS_ALLOW']);
+  assert.equal((await handle({op: 'shutdown'})).stopped, true);
+  assert.equal(b3.closes, 1);
+});
+
+test('daemon: prepare/commit per profile, serialized per tab, parallel across profiles', async () => {
+  const order = [];
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
   const operations = {
-    ...ops,
-    pickPage: async () => fakePage('https://flow.google.com/'),
-    assertUsable: async () => ({state: 'ok'}), verifyAccount: async () => null,
-    imagePrepare: async s => { seen.push('b2'); s.pending = {kind: 'b2'}; return ['q0']; },
-    flowPrepare: async s => { seen.push('flow'); s.projectUrl = 'https://flow.google.com/project/aaaa0001-bb'; s.pending = {kind: 'flow'}; return [null]; },
+    flowPrepare: async (s, items) => { order.push(`prep ${s.profile.name}`); await sleep(20); s.projectUrl = 'https://flow.google.com/project/p1'; s.pending = {kind: 'flow'}; return [null]; },
+    imagePrepare: async s => { s.pending = {kind: 'b2'}; return ['q0']; },
+    flowCommit: async s => { order.push(`commit ${s.profile.name}`); s.pending = null; return [{id: 'x', files: ['/f.png'], media_ids: ['m']}]; },
     imageCommit: async s => { s.pending = null; throw Object.assign(new Error('boom'), {code: 'TIMEOUT'}); },
-    flowCommit: async s => { s.pending = null; return [{id: 'x', files: ['/f.png'], media_ids: ['m']}]; },
   };
-  const endpoints = [];
-  const handle = createWorker({connect: async ep => { endpoints.push(ep); if (ep.includes('9399')) throw new Error('ECONNREFUSED'); return {close: async () => { closed++; }}; }, operations});
-  assert.equal((await handle({op: 'open', profile: {name: 'P', user_data_dir: dir}})).code, 'NO_CDP');
-  assert.equal((await handle({op: 'open', profile: {name: 'P', port: 9399}})).code, 'NO_CDP');
-  assert.equal(endpointFor({name: 'P', port: 9301}), 'http://127.0.0.1:9301');
-  fs.writeFileSync(path.join(dir, 'DevToolsActivePort'), '9222\n/devtools/browser/abc-123\n');
-  assert.equal(endpointFor({name: 'P', user_data_dir: dir}), 'ws://127.0.0.1:9222/devtools/browser/abc-123');
-  assert.equal((await handle({op: 'open', profile: {name: 'P', port: 9301}, cfg: {}})).ok, true);
-  const early = await handle({op: 'commit', timeout_ms: 5});
-  assert.deepEqual([early.ok, early.code, early.submitted], [false, 'INVALID_STATE', false]);
-  const flowReply = await handle({op: 'prepare', kind: 'image', items: [{engine: 'flow'}]});
-  assert.equal(flowReply.project_url, 'https://flow.google.com/project/aaaa0001-bb');
-  assert.equal((await handle({op: 'commit', timeout_ms: 5})).items[0].id, 'x');
-  assert.deepEqual((await handle({op: 'prepare', kind: 'image', items: [{engine: 'b2'}]})).prepared, ['q0']);
-  const late = await handle({op: 'commit', timeout_ms: 5});
+  const {handle} = daemonWith({connectResults: [fakeBrowser()], operations});
+  await handle({op: 'reconnect'});
+  const A = {name: 'A', slug: 'a'}, B = {name: 'B', slug: 'b'};
+  assert.deepEqual([(await handle({op: 'commit', profile: A})).code, (await handle({op: 'commit', profile: A})).submitted], ['INVALID_STATE', false]);
+  const [pa, ca, pb] = await Promise.all([handle({op: 'prepare', profile: A, kind: 'image', items: [{engine: 'flow'}]}),
+    handle({op: 'commit', profile: A, timeout_ms: 5}), handle({op: 'prepare', profile: B, kind: 'clip', items: [{}]})]);
+  assert.equal(pa.project_url, 'https://flow.google.com/project/p1');
+  assert.equal(ca.items[0].id, 'x');
+  assert.ok(pb.ok);
+  assert.ok(order.indexOf('commit A') > order.indexOf('prep A'));          // same tab: in order
+  assert.ok(order.indexOf('prep B') < order.indexOf('commit A'));          // other profile: in parallel
+  await handle({op: 'prepare', profile: A, kind: 'image', items: [{engine: 'b2'}]});
+  const late = await handle({op: 'commit', profile: A, timeout_ms: 5});
   assert.deepEqual([late.code, late.submitted], ['TIMEOUT', true]);
-  await handle({op: 'prepare', kind: 'clip', items: [{engine: 'clip'}]});
-  assert.deepEqual(seen, ['flow', 'b2', 'flow']);
-  assert.equal((await handle({op: 'close'})).ok, true);
-  assert.equal(closed, 1);
+  assert.equal((await handle({op: 'prepare'})).code, 'PROTOCOL');
   assert.equal((await handle({op: 'launch'})).code, 'PROTOCOL');
+});
+
+test('daemon: missing tab is reported with the open-profile command', async () => {
+  const {handle} = daemonWith({connectResults: [fakeBrowser()], operations: {locateProfiles: async () => ({})}});
+  await handle({op: 'reconnect'});
+  const r = await handle({op: 'open', profile: {name: 'Profile 13', slug: 'profile-13'}});
+  assert.equal(r.code, 'PROFILE_TAB_NOT_FOUND');
+  assert.match(r.error, /open-profile "Profile 13"/);
+});
+
+test('endpoint comes from DevToolsActivePort in the user-data-dir (port + ws path)', () => {
+  const dir = fs.mkdtempSync(path.join(tmp, 'udd-'));
+  assert.throws(() => endpointFromDir(dir), e => e.code === 'NEEDS_ALLOW');
+  fs.writeFileSync(path.join(dir, 'DevToolsActivePort'), '9222\n/devtools/browser/abc-123\n');
+  assert.equal(endpointFromDir(dir), 'ws://127.0.0.1:9222/devtools/browser/abc-123');
   assert.throws(() => debugEndpoint('abc'), e => e.code === 'NO_CDP');
+});
+
+async function serveDashboard(runPython) {
+  const handler = createDashboard({handle: async () => ({ok: true, connected: true}), runPython, html: () => '<h1>FlowPool</h1>'});
+  const server = http.createServer(handler);
+  await new Promise(r => server.listen(0, '127.0.0.1', r));
+  const base = `http://127.0.0.1:${server.address().port}`;
+  return {base, close: () => new Promise(r => server.close(r))};
+}
+
+test('dashboard API: state, media allow-list, pick and regenerate', async () => {
+  const img = path.join(tmp, 'v1.png');
+  fs.writeFileSync(img, Buffer.from('iVBORw0KGgo=', 'base64'));
+  const calls = [];
+  const key = 'ab'.repeat(32);
+  const runPython = async args => {
+    calls.push(args);
+    if (args[0] === 'ui-state') return {status: {profiles: []}, queue: [], gallery: [{key, variants: [{index: 0, path: img}]}]};
+    return {ok: true, next: 'python3 pilot.py reject j media --image SC01'};
+  };
+  const {base, close} = await serveDashboard(runPython);
+  try {
+    assert.match(await (await fetch(base + '/')).text(), /FlowPool/);
+    const state = await (await fetch(base + '/api/state')).json();
+    assert.equal(state.daemon.connected, true);
+    assert.equal((await fetch(`${base}/media?key=${key}&i=0`)).status, 200);
+    assert.equal((await fetch(`${base}/media?key=${key}&i=1`)).status, 404);
+    assert.equal((await fetch(`${base}/media?key=../../etc&i=0`)).status, 404);
+    const post = (url, body, type = 'application/json') => fetch(base + url, {method: 'POST', headers: {'content-type': type}, body: JSON.stringify(body)});
+    assert.equal((await post('/api/pick', {key, index: 1})).status, 200);
+    assert.deepEqual(calls.at(-1), ['decide', 'pick', key, '--index', '1']);
+    await post('/api/regenerate', {key, note: 'rõ mặt hơn'});
+    assert.deepEqual(calls.at(-1), ['decide', 'regenerate', key, '--note', 'rõ mặt hơn']);
+    assert.equal((await post('/api/pick', {key: 'x; rm -rf /', index: 0})).status, 400);
+    assert.equal((await post('/api/pick', {key, index: 0}, 'text/plain')).status, 415);
+    assert.equal((await fetch(base + '/api/nope')).status, 404);
+  } finally { await close(); }
 });
 
 test('B-2 pollQueue captures each result once and stops on a vanished queue', async () => {

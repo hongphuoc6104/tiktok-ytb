@@ -15,11 +15,11 @@ import time
 from pathlib import Path
 
 from . import config as config_mod
-from .driver import DECLINED, PROFILE_CODES, DriverError, NodeDriver
+from .driver import DAEMON_CODES, DECLINED, PROFILE_CODES, DaemonDriver, DriverError
 from .journal import SAFE_ID, UNRESOLVED, Journal, identity, key_for
 from .ledger import Ledger
 from .profiles import Pool, STICKY
-from .instances import cdp_alive
+from .ledger import month_of
 from .scheduler import Context, can_ever_run, eligible, engine, next_batch
 from .store import file_lock
 from .validate import ValidationError, validate_output
@@ -29,7 +29,7 @@ RATIOS = ('16:9', '9:16')
 # Errors raised before submit that point at the profile's tab/tool rather than
 # at the request: park the profile until a human looks (doctor/mark).
 MANUAL_ATTENTION = ('UNRESOLVED_FLOW_QUEUE', 'TOOL_NOT_READY', 'MODEL_NOT_SELECTABLE', 'FRAME_NOT_ATTACHED',
-                    'REFERENCE_NOT_ATTACHED', 'PROJECT_NOT_FOUND', 'NO_CDP')
+                    'REFERENCE_NOT_ATTACHED', 'PROJECT_NOT_FOUND')
 
 
 def normalize_request(raw, cfg, out_root):
@@ -57,8 +57,6 @@ def normalize_request(raw, cfg, out_root):
         raise ValueError('INVALID_REQUEST: variants must be 1..4')
     r['variants'] = variants
     if r['kind'] == 'image':
-        if variants != 1:
-            raise ValueError('IMAGE_VARIANTS_UNSUPPORTED: the B-2 queue returns one image per request; send separate requests')
         if not r['refs']:
             raise ValueError('CHARACTER_REFERENCE_REQUIRED: refs[0] is the character reference (refs[1] optional base image)')
         if len(r['refs']) > 2:
@@ -79,8 +77,11 @@ def normalize_request(raw, cfg, out_root):
 def result_of(req_id, status, snap=None, error=None, code=None, files=None):
     snap = snap or {}
     outputs = snap.get('outputs') or []
+    ranking = next((e.get('ranking') for e in reversed(snap.get('events') or []) if e.get('ranking')), None)
     return {'id': req_id, 'status': status,
             'files': files if files is not None else [o['path'] for o in outputs],
+            # Best variant by local checks (flowpool.rank); a dashboard pick overrides it downstream.
+            'best': ranking[0]['path'] if ranking else None, 'ranking': ranking,
             'media_ids': [o.get('media_id') for o in outputs],
             'profile': snap.get('profile'), 'credits_before': snap.get('credits_before'),
             'credits_after': snap.get('credits_after'), 'error': error if error is not None else snap.get('error'),
@@ -89,27 +90,69 @@ def result_of(req_id, status, snap=None, error=None, code=None, files=None):
 
 
 class FlowPool:
-    def __init__(self, cfg=None, driver_factory=None, clock=time.time, alive=None):
+    def __init__(self, cfg=None, driver_factory=None, clock=time.time, locate=None):
         self.cfg = config_mod.load(cfg) if cfg is None or 'flowpool_state_dir' not in cfg else dict(config_mod.DEFAULTS, **cfg)
         self.dir = config_mod.state_dir(self.cfg)
-        self.driver_factory = driver_factory or (lambda profile, cfg: NodeDriver(profile, cfg))
+        self.driver_factory = driver_factory or (lambda profile, cfg: DaemonDriver(profile, cfg))
         self.clock = clock
-        # An instance takes work only while its Chrome answers on its own debugging port.
-        self.alive = alive or (lambda profile: cdp_alive(profile.get('port')))
+        # Which declared profiles currently have a tab in the shared Chrome: asked from
+        # the daemon (its single CDP connection) -> ({name: {target_id, url, via}}, error|None).
+        self.locate_fn = locate or self._daemon_locate
         self.journal = Journal(self.dir / 'journal')
         self.ledger = Ledger(self.dir / 'ledger.ndjson')
         self.lock_path = self.dir / 'run.lock'
 
     # ------------------------------------------------------------------ helpers
     def pool(self):
-        return Pool(self.dir / 'profiles.json', self.cfg)
+        return Pool(self.dir / 'profiles.json', self.cfg, declared=self.cfg.get('flowpool_browser_profiles'))
 
     def clip_cost(self, model):
         fallback = (self.cfg.get('flowpool_clip_credit_estimate') or {}).get(model, 0)
         return self.ledger.cost_per_clip(model, fallback)[0]
 
     def context(self):
-        return Context(self.cfg, self.journal.media_lookup(), self.clip_cost)
+        return Context(self.cfg, self.journal.media_lookup(), self.clip_cost, self.remaining)
+
+    # ------------------------------------------------------------------ credits
+    def monthly_cap(self, profile):
+        return float(profile.get('monthly_credits') or self.cfg.get('flowpool_profile_monthly_credits') or 0)
+
+    def month_used(self, profile):
+        return self.ledger.month_spend(profile=profile['name'])[0]
+
+    def remaining(self, profile):
+        """Credits this profile may still spend this month: its monthly cap minus the
+        ledger's spend, lowered to the UI balance when one was read this month."""
+        left = self.monthly_cap(profile) - self.month_used(profile)
+        ui = profile.get('credits')
+        if ui is not None and profile.get('credits_at') and month_of(profile['credits_at']) == month_of(self.clock()):
+            left = min(left, ui)
+        return max(0.0, left)
+
+    def effective_budget(self, pool):
+        """Monthly pool budget: sum of the active profiles' caps, unless credit_budget is lower."""
+        caps = sum(self.monthly_cap(p) for p in pool.profiles)
+        budget = self.cfg.get('credit_budget') or 0
+        return min(caps, budget) if budget > 0 else 0
+
+    # ------------------------------------------------------------------ daemon
+    def _daemon_locate(self, profiles, dedupe=False):
+        from .daemon_client import DaemonClient, DaemonError
+        try:
+            reply = DaemonClient(self.cfg).call('locate', timeout=60, dedupe=dedupe,
+                                               profiles=[{k: v for k, v in p.items() if not k.startswith('_')} for p in profiles])
+        except DaemonError as ex:
+            return {}, ex.code
+        if not reply.get('ok'):
+            return {}, reply.get('code') or 'DAEMON_ERROR'
+        return reply.get('located') or {}, None
+
+    def located(self, pool, dedupe=False):
+        found, error = self.locate_fn(pool.profiles, dedupe) if dedupe else self.locate_fn(pool.profiles)
+        for name, info in (found or {}).items():
+            if info and info.get('target_id'):
+                pool.record_binding(name, {'target_id': info['target_id']})
+        return {n for n, info in (found or {}).items() if info}, error
 
     def _finish(self, results, req, status, error=None, code=None, state=None, **payload):
         snap = None
@@ -132,7 +175,7 @@ class FlowPool:
         infos = []
         for out in snap.get('outputs') or []:
             infos.append(validate_output(out['path'], req['kind'], req['ratio'], self.cfg.get('flowpool_clip_seconds', 8)))
-        if len(infos) < (req['variants'] if req['kind'] == 'clip' else 1):
+        if len(infos) < req['variants']:
             raise ValidationError(f'OUTPUT_COUNT: expected {req["variants"]}, got {len(infos)}')
         return infos
 
@@ -143,7 +186,10 @@ class FlowPool:
             # Bytes exist; a bad file is a failed result, never a reason to regenerate.
             self._finish(results, req, 'failed', str(ex), 'VALIDATION_FAILED', 'failed')
             return
-        snap = self.journal.transition(req['_key'], 'validated', validation=infos)
+        from .rank import rank
+        refs = list(req.get('refs') or []) + ([req['start_frame']] if req.get('start_frame') else [])
+        ranking = rank([i['path'] for i in infos], req['ratio'], refs)
+        snap = self.journal.transition(req['_key'], 'validated', validation=infos, ranking=ranking)
         results[req['id']] = result_of(req['id'], 'ok', snap)
 
     # ------------------------------------------------------------------ run
@@ -216,19 +262,19 @@ class FlowPool:
                 pending.remove(req)
                 self._finish(results, req, 'failed', code, code.split(':')[0], 'not_submitted')
 
-    def _budget_allows(self, req, ctx, reserved):
-        budget = self.cfg.get('credit_budget') or 0
+    def _budget_allows(self, req, ctx, reserved, pool):
         spent, _ = self.ledger.month_spend()
-        return spent + reserved + ctx.cost(req) <= budget
+        return spent + reserved + ctx.cost(req) <= self.effective_budget(pool)
 
     def _dispatch(self, pool, pending, results, ctx):
-        max_active = max(1, int(self.cfg.get('flowpool_max_browsers') or 1))
+        max_active = max(1, int(self.cfg.get('flowpool_max_parallel') or self.cfg.get('flowpool_max_browsers') or 1))
         cap = max(1, min(4, int(self.cfg.get('flowpool_per_browser_queue') or 4)))
         max_tries = int(self.cfg.get('flowpool_max_profile_attempts') or 2)
         tries = collections.Counter()
         rr = [-1]
         active = {}
-        running = [p for p in pool.profiles if self.alive(p)]
+        open_names, daemon_error = self.located(pool) if pending else (set(), None)
+        running = [p for p in pool.profiles if p['name'] in open_names]
         reserved = {}
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_active) as executor:
             while True:
@@ -238,7 +284,7 @@ class FlowPool:
                     if not choice:
                         break
                     profile, batch = choice
-                    if batch[0]['kind'] == 'clip' and not self._budget_allows(batch[0], ctx, sum(reserved.values())):
+                    if batch[0]['kind'] == 'clip' and not self._budget_allows(batch[0], ctx, sum(reserved.values()), pool):
                         pending.remove(batch[0])
                         self._finish(results, batch[0], 'failed', 'CREDIT_BUDGET_EXCEEDED: monthly credit_budget reached',
                                      'CREDIT_BUDGET_EXCEEDED', 'not_submitted')
@@ -254,8 +300,10 @@ class FlowPool:
                 for req in list(pending):
                     if not can_ever_run(req, running, ctx):
                         pending.remove(req)
-                        reasons = {p['name']: eligible(p, req, ctx)[1] if p in running else 'not_running'
-                                   for p in pool.profiles} or 'no instances; python3 -m flowpool add NAME'
+                        reasons = {p['name']: eligible(p, req, ctx)[1] if p in running else 'no_tab'
+                                   for p in pool.profiles}
+                        if daemon_error:
+                            reasons = f'daemon {daemon_error} (python3 -m flowpool daemon start)'
                         self._finish(results, req, 'failed', f'NO_ELIGIBLE_PROFILE: {reasons}', 'NO_ELIGIBLE_PROFILE', 'not_submitted')
                 if not active:
                     for req in list(pending):
@@ -270,6 +318,14 @@ class FlowPool:
                     outcome = fut.result()
                     pool.release(name, outcome['state'], outcome['reason'], outcome['until'])
                     results.update(outcome['results'])
+                    if outcome.get('drop_profile'):
+                        running = [p for p in running if p['name'] != name]
+                    if outcome.get('daemon_lost'):
+                        for req in list(pending):
+                            pending.remove(req)
+                            self._finish(results, req, 'failed', f"{outcome['daemon_lost']}: FlowPool daemon lost its Chrome "
+                                         'connection; click Allow in Chrome, then python3 -m flowpool daemon reconnect',
+                                         outcome['daemon_lost'], 'not_submitted')
                     for req in outcome['retry']:
                         if tries[req['id']] < max_tries:
                             self.journal.intent(req, req['_ident'])
@@ -288,15 +344,17 @@ class FlowPool:
         try:
             profile = copy.deepcopy(pool.get(name))
             driver = self.driver_factory(profile, self.cfg)
-            driver.open()
+            opened = driver.open() or {}
+            pool.record_email(name, opened.get('email'))
             reading = driver.read_credits() or {}
             credits_before = reading.get('value')
             self.ledger.reading(name, credits_before, reading.get('raw'), reading.get('method'))
             pool.record_credits(name, credits_before)
-            if kind == 'clip' and credits_before is not None and credits_before < ctx.cost(batch[0]):
+            if kind == 'clip' and self.remaining(pool.get(name)) < ctx.cost(batch[0]):
                 for req in batch:
                     self.journal.transition(req['_key'], 'not_submitted', code='LOW_CREDIT', profile=name)
-                outcome.update(state='low_credit', reason=f'{credits_before} credits < {ctx.cost(batch[0])}', retry=list(batch))
+                outcome.update(state='low_credit', reason=f'{self.remaining(pool.get(name)):.0f} credits left < {ctx.cost(batch[0])}',
+                               retry=list(batch))
                 return outcome
             items = [self._item(r, profile, ctx) for r in batch]
             queue_ids = driver.prepare(kind, items) or []
@@ -308,8 +366,8 @@ class FlowPool:
             produced = driver.commit(self.cfg.get('flowpool_clip_timeout_seconds' if kind == 'clip' else 'flowpool_image_timeout_seconds', 300))
             credits_after = self._read_after(driver, name, pool)
             self._collect(batch, produced, name, credits_before, credits_after, outcome)
-            if kind == 'clip' and credits_after is not None and credits_after < ctx.cost(batch[0]):
-                outcome.update(state='low_credit', reason=f'{credits_after} credits left')
+            if kind == 'clip' and self.remaining(pool.get(name)) < self.clip_cost(batch[0]['model']):
+                outcome.update(state='low_credit', reason=f'{self.remaining(pool.get(name)):.0f} credits left this month')
         except DriverError as ex:
             self._driver_failure(ex, batch, name, submitted, credits_before, driver, outcome, pool)
         except Exception as ex:  # programming or local I/O error
@@ -377,7 +435,14 @@ class FlowPool:
             for req in batch:
                 self.journal.transition(req['_key'], 'not_submitted', code=ex.code, error=str(ex), profile=name)
             outcome['retry'] = list(batch)
-            if state == 'cooldown':
+            if ex.code in DAEMON_CODES:
+                # The one CDP connection is gone: stop everything and let the user act (Allow / daemon start).
+                outcome.update(state=None, reason=None, retry=[], daemon_lost=ex.code)
+                for req in batch:
+                    outcome['results'][req['id']] = result_of(req['id'], 'failed', self.journal.load(req['_key']))
+            elif ex.code == 'PROFILE_TAB_NOT_FOUND':
+                outcome.update(state=None, reason=None, drop_profile=True)   # its tab closed: others take the work
+            elif state == 'cooldown':
                 outcome.update(state='cooldown', reason=ex.code, until=self.clock() + self.cfg.get('flowpool_cooldown_seconds', 900))
             elif state:
                 outcome.update(state=state, reason=str(ex))
@@ -422,19 +487,22 @@ class FlowPool:
             pool.refresh()
             targets = [pool.get(n) for n in names] if names else pool.profiles
             if not targets:
-                raise ValueError('NO_INSTANCES: python3 -m flowpool add NAME')
+                raise ValueError('NO_PROFILES: declare them in experiments/b2_illustrator/browser-profiles.json')
+            open_names, daemon_error = self.located(pool)
             single_clip = self.clip_cost(self.cfg.get('veo_model'))
             for profile in targets:
                 entry = {'profile': profile['name'], 'state_before': profile['state'], 'checks': {}}
                 driver = None
-                if not self.alive(profile):
-                    entry.update(error=f"NOT_RUNNING: python3 -m flowpool launch {profile['name']}",
+                if profile['name'] not in open_names:
+                    entry.update(error=(f'DAEMON {daemon_error}: python3 -m flowpool daemon start' if daemon_error else
+                                        f'NO_TAB: python3 -m flowpool open-profile "{profile["name"]}"'),
                                  state_after=profile['state'])
                     report.append(entry)
                     continue
                 try:
                     driver = self.driver_factory(copy.deepcopy(profile), self.cfg)
                     opened = driver.open() or {}
+                    pool.record_email(profile['name'], opened.get('email'))
                     probe = driver.probe(['image', 'clip']) or {}
                     pool.record_project(profile['name'], getattr(driver, 'project_url', None))
                     credits = (probe.get('credits') or {}).get('value')
@@ -444,8 +512,9 @@ class FlowPool:
                     pool.record_credits(profile['name'], credits)
                     healthy = probe.get('logged_in') and probe.get('flow_reachable')
                     if healthy and profile['state'] != 'busy':
-                        new = 'low_credit' if credits is not None and credits < single_clip else 'ready'
-                        pool.set_state(profile['name'], new, None if new == 'ready' else f'{credits} credits')
+                        left = self.remaining(pool.get(profile['name']))
+                        new = 'low_credit' if left < single_clip else 'ready'
+                        pool.set_state(profile['name'], new, None if new == 'ready' else f'{left:.0f} credits left this month')
                 except DriverError as ex:
                     entry['error'] = str(ex)
                     state = PROFILE_CODES.get(ex.code)
@@ -462,35 +531,36 @@ class FlowPool:
         return report
 
     # ------------------------------------------------------------------ status
-    def status(self):
+    def status(self, locate=True):
         pool = self.pool()
         pool.refresh()
         model = self.cfg.get('veo_model')
         fallback = (self.cfg.get('flowpool_clip_credit_estimate') or {}).get(model, 0)
         per_clip, basis = self.ledger.cost_per_clip(model, fallback)
-        balances = self.ledger.balances()
-        rows = []
-        for p in pool.data['profiles']:
-            if not p.get('enabled') and p['name'] not in balances:
-                continue
-            credits = p.get('credits')
-            at = p.get('credits_at')
-            if credits is None and p['name'] in balances:
-                credits, at = balances[p['name']]
-            rows.append({'profile': p['name'], 'enabled': p.get('enabled'), 'account_hint': p.get('account_hint'),
-                         'state': p['state'], 'reason': p.get('state_reason'), 'credits': credits, 'credits_at': at,
-                         'clips_left_estimate': math.floor(credits / per_clip) if credits is not None and per_clip else None,
-                         'tool_url': bool(p.get('tool_url')), 'max_parallel': p.get('max_parallel'),
-                         'port': p.get('port'), 'running': bool(self.alive(p)), 'project_url': p.get('project_url')})
+        open_names, daemon_error = self.located(pool) if locate else (set(), 'NOT_ASKED')
         spent, estimated = self.ledger.month_spend()
+        budget = self.effective_budget(pool)
+        rows = []
+        for p in pool.profiles:
+            left = self.remaining(p)
+            rows.append({'profile': p['name'], 'account_email': p.get('account_email'), 'account_hint': p.get('account_hint'),
+                         'state': p['state'], 'reason': p.get('state_reason'), 'credits': p.get('credits'),
+                         'credits_at': p.get('credits_at'), 'monthly_cap': self.monthly_cap(p), 'month_used': self.month_used(p),
+                         'month_remaining': left, 'clips_left_estimate': math.floor(left / per_clip) if per_clip else None,
+                         'tab_open': p['name'] in open_names, 'tool_url': bool(p.get('tool_url')),
+                         'project_url': p.get('project_url')})
+        pool_left = max(0.0, budget - spent)
+        clips_total = sum(r['clips_left_estimate'] or 0 for r in rows if r['state'] not in ('captcha', 'needs_login'))
+        if per_clip:
+            clips_total = min(clips_total, math.floor(pool_left / per_clip))
         counts = collections.Counter(s['state'] for s in self.journal.all())
         unresolved = [{'id': (s.get('identity') or {}).get('id'), 'key': s['key'][:12], 'state': s['state'],
                        'profile': s.get('profile'), 'code': s.get('code')}
                       for s in self.journal.all() if s['state'] in UNRESOLVED + ('failed',)]
-        budget = self.cfg.get('credit_budget') or 0
         return {'profiles': rows, 'veo_model': model, 'credits_per_clip': per_clip, 'cost_basis': basis,
-                'month_spent': spent, 'month_spent_includes_estimates': estimated, 'credit_budget': budget,
-                'budget_left': budget - spent, 'video_generation': bool(self.cfg.get('video_generation')),
+                'month': month_of(self.clock()), 'month_spent': spent, 'month_spent_includes_estimates': estimated,
+                'credit_budget': budget, 'budget_left': pool_left, 'clips_left_total': clips_total,
+                'video_generation': bool(self.cfg.get('video_generation')), 'daemon_error': daemon_error,
                 'journal': dict(counts), 'attention': unresolved}
 
     # ------------------------------------------------------------------ human actions

@@ -98,7 +98,20 @@ Video và môi trường chạy nằm local, không được đưa lên GitHub. 
 
 ## FlowPool (nhánh video-tien-su)
 
-`sys/flowpool/` chạy Flow (ảnh + clip Veo) song song trên nhiều tài khoản Google AI Pro, **mỗi tài khoản một Chrome riêng** tại `sys/.gflow/pool/<tên>/` (gitignore, chứa phiên đăng nhập — không xóa, không sao chép). Từ `sys/`: `python3 -m flowpool add acc1` → `login acc1` (người dùng tự đăng nhập, đóng cửa sổ) → `launch acc1` → `doctor` → `status`. Agent không đăng nhập hộ, không giải CAPTCHA. Pipeline chỉ dùng FlowPool khi `flowpool_enabled=true`. Xem mục 7 của `sys/docs/tien-su-plan.md`.
+`sys/flowpool/` chạy Flow (ảnh + clip Veo) trên **các profile Chrome đã đăng nhập sẵn** khai báo trong `sys/experiments/b2_illustrator/browser-profiles.json` (Profile 10, 102, 13, 14 của `~/.config/google-chrome`). Không tạo phiên đăng nhập mới, không thư mục Chrome riêng, không sao chép dữ liệu profile. Một daemon giữ **một** kết nối CDP duy nhất (Chrome hỏi "Allow" cho mỗi kết nối mới). Thêm profile: chỉ cần thêm vào `priority` của browser-profiles.json. Mỗi profile tối đa `flowpool_profile_monthly_credits` (1050) credit/tháng.
+
+Hằng ngày, từ `sys/` (remote debugging đã bật tại chrome://inspect/#remote-debugging):
+
+```bash
+python3 -m flowpool daemon start          # bấm "Allow" một lần trong Chrome
+python3 -m flowpool open-profile "Profile 10"   # lặp cho 102, 13, 14 (mở tab Flow, gắn profile)
+python3 -m flowpool doctor                # đăng nhập, Flow, model, credit từng profile (chỉ đọc)
+python3 -m flowpool ui                    # bảng điều khiển http://127.0.0.1:8765
+python3 -m flowpool status                # credit đã dùng/còn lại, số clip còn tạo được
+python3 -m flowpool daemon stop           # chỉ ngắt kết nối, không đóng Chrome
+```
+
+Mất kết nối: bấm "Allow" rồi `python3 -m flowpool daemon reconnect`. CAPTCHA/đăng xuất: người dùng tự xử lý trong Chrome, tool chỉ báo. Pipeline chỉ dùng FlowPool khi `flowpool_enabled=true`. Xem mục 7 của `sys/docs/tien-su-plan.md`.
 
 ## Skills trên nhánh từ vựng
 

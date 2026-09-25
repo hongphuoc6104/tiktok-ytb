@@ -127,13 +127,15 @@ class RoutingTests(PipelineCase):
 
 
 class ClipLockTests(PipelineCase):
-    def test_lock_lifted_only_for_briefs_with_clips(self):
+    def test_clip_budget_does_not_block_images_but_negative_budget_does(self):
         self.assertEqual(ip.preflight(self.p, 'j', 'image')['ui_evidence_required'], False)
-        self.p._brief = {'aspect_ratio': '16:9'}
+        self.p._brief = {'aspect_ratio': '16:9'}          # no clips: images still allowed
+        self.assertEqual(ip.preflight(self.p, 'j', 'image')['ui_evidence_required'], False)
+        with self.assertRaisesRegex(Blocked, 'declares no clips'):
+            ip.clip_policy(self.p, 'j')                   # ...but no Veo spending for this job
+        self.set_cfg(credit_budget=-1)
         with self.assertRaisesRegex(Blocked, 'M2_POLICY'):
             ip.preflight(self.p, 'j', 'image')
-        self.set_cfg(video_generation=False, credit_budget=0)
-        self.assertEqual(ip.preflight(self.p, 'j', 'image')['ui_evidence_required'], False)
 
     def test_clip_policy_needs_config_and_flowpool(self):
         self.assertEqual(ip.clip_policy(self.p, 'j')['max'], 2)
