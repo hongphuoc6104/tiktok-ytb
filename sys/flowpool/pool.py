@@ -56,8 +56,11 @@ def normalize_request(raw, cfg, out_root):
     if not isinstance(variants, int) or not 1 <= variants <= 4:
         raise ValueError('INVALID_REQUEST: variants must be 1..4')
     r['variants'] = variants
+    bootstrap = r.get('purpose') == 'mascot_bootstrap'
+    if bootstrap and (r['kind'] != 'image' or r['refs'] or variants != 1):
+        raise ValueError('INVALID_MASCOT_BOOTSTRAP: requires one image variant with no refs')
     if r['kind'] == 'image':
-        if not r['refs']:
+        if not r['refs'] and not bootstrap:
             raise ValueError('CHARACTER_REFERENCE_REQUIRED: refs[0] is the character reference (refs[1] optional base image)')
         if len(r['refs']) > 2:
             raise ValueError('INVALID_REQUEST: at most two refs (character, base)')
@@ -168,6 +171,7 @@ class FlowPool:
         return {'id': req['id'], 'kind': req['kind'], 'prompt': req['prompt'], 'ratio': req['ratio'],
                 'refs': req['refs'], 'ref_media_ids': media, 'start_frame': req.get('start_frame'),
                 'variants': req['variants'], 'model': req['model'], 'out_dir': req['out_dir'],
+                'purpose': req.get('purpose'),
                 'engine': engine(profile, req, ctx),
                 'seconds': self.cfg.get('flowpool_clip_seconds', 8)}
 

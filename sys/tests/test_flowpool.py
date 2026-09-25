@@ -227,7 +227,28 @@ class SchedulerTests(FlowPoolCase):
         self.assertEqual(scheduler.engine(profile('a', 0, media={self.ref_sha: 'M'}), req, ctx), 'b2')
         self.assertEqual(scheduler.engine(profile('a', 0), req, ctx), 'flow')       # remix but no media id
         self.assertEqual(scheduler.engine(profile('a', 0, tool=False), req, ctx), 'flow')
+        self.assertEqual(scheduler.engine(profile('a', 0),
+                                          {'kind': 'image', 'purpose': 'mascot_bootstrap', '_ref_shas': []}, ctx), 'flow')
+        self.assertEqual(scheduler.engine(profile('a', 0), {'kind': 'image', '_ref_shas': []}, ctx), 'flow')
         self.assertEqual(scheduler.engine(profile('a', 0), {'kind': 'clip'}, ctx), 'clip')
+
+    def test_mascot_bootstrap_is_one_reference_free_plain_flow_image(self):
+        from flowpool.pool import normalize_request
+        raw = {'id': 'mascot-original', 'kind': 'image', 'purpose': 'mascot_bootstrap',
+               'prompt': 'Create the channel mascot.', 'ratio': '16:9', 'refs': [], 'variants': 1, 'job': 'job1'}
+        req = normalize_request(raw, self.cfg, self.state / 'out')
+        self.assertEqual((req['purpose'], req['refs'], req['variants']), ('mascot_bootstrap', [], 1))
+        for bad in (dict(raw, purpose=None), dict(raw, purpose='mascot_bootstrap', refs=[str(self.ref)]),
+                    dict(raw, variants=2), dict(raw, kind='clip', start_frame=str(self.still))):
+            with self.subTest(bad=bad):
+                with self.assertRaises(ValueError):
+                    normalize_request(bad, self.cfg, self.state / 'out')
+        self.write_profiles(profile('Profile 10', 0))  # a remix exists, but bootstrap must use plain Flow
+        [out] = self.pool().run([raw])
+        self.assertEqual(out['status'], 'ok')
+        self.assertEqual(self.world.engines, [('Profile 10', ['flow'])])
+        self.assertEqual(Journal(self.state / 'journal').by_request_id(raw['id'])[0]['request']['purpose'],
+                         'mascot_bootstrap')
 
     def test_only_profiles_with_an_open_tab_take_work(self):
         self.two_image_profiles()

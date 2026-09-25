@@ -37,8 +37,11 @@ def engine(profile, req, ctx):
     """'b2' (remixed queue tool, needs account media IDs), 'flow' (plain Flow UI) or 'clip'."""
     if req['kind'] == 'clip':
         return 'clip'
+    if req.get('purpose') == 'mascot_bootstrap':
+        return 'flow'
     if (profile.get('tool_url') and int(req.get('variants') or 1) == 1
-            and all(ctx.media_id(profile, sha) for sha in req.get('_ref_shas') or [])):
+            and req.get('_ref_shas')
+            and all(ctx.media_id(profile, sha) for sha in req['_ref_shas'])):
         return 'b2'
     return 'flow'
 
