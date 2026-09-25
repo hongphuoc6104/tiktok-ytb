@@ -7,6 +7,7 @@ from pathlib import Path
 import jsonschema
 from PIL import Image, ImageDraw
 from pilot import Blocked, digest, hashobj, read, write
+import characters
 
 STAGES = ('references', 'final')
 
@@ -393,6 +394,16 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
             args += ['--base-image', str(p.path(j,base_image['path']))]
         if refs:
             args += ['--character'] + [x['name'] for x in refs]
+    if target == 'ref:' + characters.CHARACTER_ID or target.startswith('register:' + characters.CHARACTER_ID + ':'):
+        # Only the mascot's own reference/registration request needs the
+        # channel-resolved mascot attached explicitly; adapters.gflow must
+        # never guess this from an empty --character list. Raises
+        # Blocked(MASCOT_REFERENCE_MISSING: ...) rather than silently
+        # falling back to a different channel's mascot.
+        mascot = characters.mascot_for(p, p.brief(j))
+        args += ['--mascot-ref', str(mascot['reference_path']), '--mascot-id', mascot['character_id']]
+        if mascot['media_id']:
+            args += ['--mascot-media-id', mascot['media_id']]
     result = {'key': key, 'identity': identity, 'state': 'generated' if collection_only else 'submitted', 'submitted_at': time.time(),
               'args': args, 'journal': str(record.relative_to(p.job(j)))}
     if recovery_out:

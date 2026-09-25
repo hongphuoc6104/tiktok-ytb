@@ -18,9 +18,9 @@ import prompt_templates as pt
 class ImagesV2Tests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory();self.root = Path(self.tmp.name)
-        for n in ['schemas','.agents','renderer','tests','examples','scripts']:
+        for n in ['schemas','.agents','renderer','tests','examples','scripts','assets']:
             shutil.copytree(ROOT/n,self.root/n)
-        for n in ['pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:
+        for n in ['pilot.py','workflow.py','machine_review.py','image_pipeline.py','characters.py','prompt_templates.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:
             shutil.copy(ROOT/n,self.root/n)
         cfg = read(self.root / 'config.json')
         cfg.pop('flow_batch', None)

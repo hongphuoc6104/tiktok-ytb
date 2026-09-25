@@ -7,7 +7,7 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parent
 ORDER=['control','content','audio','images','render']
 DEPS={'control':[],'content':['control'],'images':['control','content'],'audio':['control','content'],'render':['control','content','images','audio']}
-PROTECTED_FILES=['pilot.py','workflow.py','machine_review.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','tts-gpu-requirements.lock','en-requirements.lock','b2_bridge.py']
+PROTECTED_FILES=['pilot.py','workflow.py','machine_review.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','characters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','tts-gpu-requirements.lock','en-requirements.lock','b2_bridge.py']
 PROTECTED_DIRS=['schemas','.agents','renderer','tests','examples','scripts']
 class Blocked(Exception):pass
 def read(p):return json.loads(Path(p).read_text())
@@ -392,12 +392,13 @@ def locked(root):
 def main():
  import workflow
  ap=argparse.ArgumentParser(description='Video Pilot: content → media → video; review hoặc auto')
- ap.add_argument('command',choices=['lift-cap','doctor','new','status','next','repair-status','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','flow-confirm-registration','check-draft','revise-brief','batch','integrity-diff','adopt-code'])
+ ap.add_argument('command',choices=['lift-cap','doctor','new','status','next','repair-status','run','validate','approve','reject','resume','flow-login','flow-preflight','flow-reconcile','flow-confirm-registration','check-draft','revise-brief','batch','integrity-diff','adopt-code','mascot-reference'])
  ap.add_argument('job',nargs='?');ap.add_argument('stage',nargs='?',choices=workflow.STAGES)
  ap.add_argument('--mode',choices=['review','auto'],default='review')
  ap.add_argument('--revision',type=int);ap.add_argument('--note',default='')
  for name in ['evidence','scene','asset','character','request','brief','queue','image','repair-plan']:
   ap.add_argument('--'+name)
+ ap.add_argument('--from',dest='mascot_from',help='mascot-reference: approved image file to install as the reference')
  ap.add_argument('--part',choices=['audio'])
  ap.add_argument('--ratio',choices=['9:16','16:9'])
  ap.add_argument('--retry-review',action='store_true')
@@ -428,6 +429,11 @@ def main():
     elif c=='repair-status':
      from scripts.image_repairs import status as repair_status
      result=repair_status(p,a.job,a.image,a.ratio)
+    elif c=='mascot-reference':
+     # a.job is the channel/mascot name here (e.g. "tiensu" or "default"), not a job id.
+     if not a.mascot_from:raise Blocked('mascot-reference requires --from FILE')
+     import characters
+     result=characters.set_reference(p.root,a.job,a.mascot_from)
     else:
      workflow.settings(p,a.job)
      if c=='lift-cap':

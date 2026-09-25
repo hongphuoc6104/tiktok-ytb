@@ -3,6 +3,7 @@ import json, re, shutil, subprocess, time, wave
 from pathlib import Path
 from PIL import Image, ImageDraw
 from pilot import Blocked,read,write,digest
+import characters
 
 def copy_optional_flow_screenshot(source, destination, *, required):
  """Never substitute preflight/account evidence for a real submission screenshot."""
@@ -58,13 +59,31 @@ def gflow(p,*args,timeout=960):
     if item.startswith('--'): break
     char_names.append(item)
 
-  canonical_mascot = p.root / 'assets/characters/channel-mascot/reference-v1.png'
+  # image_pipeline.request() resolves the channel-appropriate mascot (see
+  # characters.mascot_for) for the mascot's own ref:CH01/register:CH01:*
+  # requests and passes it explicitly via --mascot-ref/--mascot-media-id --
+  # never hard-code a path/media id here. Any other caller (legacy
+  # adapters.generate_image(), or a scene/registration request for a
+  # non-mascot character) gets the channel-agnostic default mascot as a
+  # plain reference image, matching the pre-existing behaviour, but does
+  # NOT take the instant local-composition shortcut below, which is
+  # reserved for the mascot's own identity.
+  mascot_ref_arg = _get_arg('--mascot-ref')
+  mascot_media_arg = _get_arg('--mascot-media-id')
+  is_mascot_call = mascot_ref_arg is not None
+  if is_mascot_call:
+   mascot_path, mascot_media_id = Path(mascot_ref_arg), mascot_media_arg
+  else:
+   default_mascot = characters.try_resolve(p.root, None)
+   mascot_path = default_mascot['reference_path'] if default_mascot else None
+   mascot_media_id = default_mascot['media_id'] if default_mascot else None
+
   char_ref_path = reg_img if is_reg else None
   char_media_id = None
   if not char_ref_path:
-   if canonical_mascot.exists():
-    char_ref_path = str(canonical_mascot)
-    char_media_id = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
+   if mascot_path and mascot_path.exists() and (is_mascot_call or (not char_names and not base_img)):
+    char_ref_path = str(mascot_path)
+    char_media_id = mascot_media_id
    elif char_names:
     for name in char_names:
      key_prefix = name.rsplit('-', 1)[-1]
@@ -79,8 +98,8 @@ def gflow(p,*args,timeout=960):
       except Exception: pass
      if char_ref_path: break
 
-  if canonical_mascot.exists() and (is_reg or (not char_names and not base_img)):
-   with Image.open(canonical_mascot) as ref_im:
+  if is_mascot_call and mascot_path.exists() and (is_reg or (not char_names and not base_img)):
+   with Image.open(mascot_path) as ref_im:
     if ratio == '9:16':
      w, h = 768, 1365
      canvas = Image.new('RGB', (w, h), (255, 255, 255))
@@ -156,14 +175,19 @@ def gflow(p,*args,timeout=960):
   batch_out = Path(args[args.index('--out')+1]).resolve()
   batch_out.mkdir(parents=True, exist_ok=True)
   jobs = data.get('jobs', [])
+  # The queue tool (queue-runner.mjs) requires a Flow-registered character
+  # reference for every job in the batch, so this resolves the *channel's*
+  # mascot (never a hard-coded vocab path) and fails loudly and early if it
+  # has no reference image / no registered Flow media id yet, instead of
+  # silently sending a different channel's mascot.
+  mascot = characters.mascot_for(p, characters.job_of(batch_out), require_media_id=True)
   run_jobs = [{'id':job['id'],'status':'not_submitted','error':'Chưa đến lượt gửi'} for job in jobs]
   state_file = batch_out / 'gflow-run.json'
-  mascot = p.root / 'assets/characters/channel-mascot/reference-v1.png'
   for offset in range(0, len(jobs), 4):
    group = jobs[offset:offset+4]
    specs = [{'testCase': job['id'], 'prompt': job['prompt'], 'ratio': job.get('ratio', '9:16'),
-             'outDir': str(batch_out / job['id']), 'characterRefPath': str(mascot),
-             'charMediaId': 'de94a39b-155f-4afe-acbb-d9d4b59ad532'} for job in group]
+             'outDir': str(batch_out / job['id']), 'characterRefPath': str(mascot['reference_path']),
+             'charMediaId': mascot['media_id']} for job in group]
    # Persist attempted membership BEFORE the external call. Ambiguous groups cannot fall through to serial retries.
    entries = run_jobs[offset:offset+4]
    for entry in entries: entry.update(status='failed',error='Submission pending; reconcile before retry')

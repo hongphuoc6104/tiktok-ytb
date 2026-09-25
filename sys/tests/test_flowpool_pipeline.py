@@ -41,6 +41,8 @@ class PipelineCase(unittest.TestCase):
         self.root = Path(self.tmp.name)
         (self.root / 'assets/characters/channel-mascot').mkdir(parents=True)
         Image.new('RGB', (64, 64)).save(self.root / fpp.MASCOT)
+        write(self.root / 'assets/characters/channel-mascot/character.json',
+              {'reference': 'reference-v1.png', 'flow': {'media_id': 'MASCOT-MEDIA-ID'}})
         self.cfg = dict(read(ROOT / 'config.json'), flowpool_enabled=True, video_generation=True, credit_budget=500,
                         flow_require_ui_evidence=False)
         write(self.root / 'config.json', self.cfg)

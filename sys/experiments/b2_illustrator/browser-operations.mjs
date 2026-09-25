@@ -606,7 +606,12 @@ export async function runOperation(command, bound) {
         name: path.basename(baseRefPath)
       } : null,
       charData: charRefPath && fs.existsSync(charRefPath) ? {
-        mediaId: testConfig.charMediaId || (charRefPath === canonicalMascotPath ? canonicalMascotMediaId : 'de94a39b-155f-4afe-acbb-d9d4b59ad532'),
+        // Python (image_pipeline.request()/characters.mascot_for) always resolves the
+        // channel-appropriate mediaId and passes it as testConfig.charMediaId. Only the
+        // vocab canonicalMascotPath default (unset testConfig.characterRefPath) has a
+        // known standing mediaId; any other reference with no explicit id is a genuinely
+        // new/unregistered character and must not silently borrow the vocab mascot's id.
+        mediaId: testConfig.charMediaId || (charRefPath === canonicalMascotPath ? canonicalMascotMediaId : null),
         base64: fs.readFileSync(charRefPath).toString('base64'),
         mimeType: charRefPath.endsWith('.png') ? 'image/png' : charRefPath.endsWith('.webp') ? 'image/webp' : 'image/jpeg',
         name: path.basename(charRefPath)
