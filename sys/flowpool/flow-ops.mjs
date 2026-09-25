@@ -451,6 +451,39 @@ export async function attachReference(page, file, g) {
   if (before >= 0 && (await composerImageCount(page)) <= before) throw coded('REFERENCE_NOT_ATTACHED', `${path.basename(file)} not visible in the prompt bar`);
 }
 
+/** Attach the Start frame in Frames mode. The empty slot and upload button
+ * have observed English/Vietnamese names; an unknown confirm control is a
+ * pre-submit failure, never evidence that a frame was attached. */
+export async function attachStartFrame(page, file, g) {
+  const empty = page.getByRole('button', {name: /^(Start|Bắt đầu)$/i}).first();
+  if (!(await empty.isVisible().catch(() => false)))
+    throw coded('FRAME_NOT_ATTACHED', 'Start/Bắt đầu frame slot is not visible');
+  try {
+    await empty.click({timeout: 5000});
+    const dialog = page.locator('[role=dialog],[aria-modal=true]').first();
+    await dialog.waitFor({state: 'visible', timeout: 10000});
+    const upload = dialog.getByRole('button', {name: /^(Upload media|Tải nội dung nghe nhìn lên)$/i}).first();
+    if (!(await upload.isVisible().catch(() => false)))
+      throw new Error('Upload media/Tải nội dung nghe nhìn lên button is missing');
+    const [chooser] = await Promise.all([page.waitForEvent('filechooser', {timeout: 15000}), upload.click({timeout: 5000})]);
+    await chooser.setFiles(file);
+    await dialog.locator('[role=option][aria-selected="true"]').first().waitFor({state: 'visible', timeout: 30000});
+    // The only confirmed action text is the English Flow control. If Flow
+    // localizes it differently, stop so a human can identify the real button.
+    const confirm = dialog.getByRole('button', {name: /\bAdd to (Prompt|Scene)\b/i}).first();
+    if (!(await confirm.isVisible().catch(() => false))) throw new Error('Add to Prompt/Scene control is unverified');
+    await confirm.click({timeout: 5000});
+    await dialog.waitFor({state: 'hidden', timeout: 10000});
+    await empty.waitFor({state: 'hidden', timeout: 10000});
+    await assertUsable(page);
+    if (await empty.isVisible().catch(() => true)) throw new Error('Start/Bắt đầu frame slot is still empty');
+  } catch (e) {
+    await assertUsable(page); // preserve real CAPTCHA/sign-in errors
+    await g.dismissOpenLayers(page).catch(() => undefined);
+    throw coded('FRAME_NOT_ATTACHED', `${path.basename(file)}: ${e.message}`);
+  }
+}
+
 export async function flowPrepare(session, items, cfg, lib = null) {
   const g = lib || await loadGflow();
   if (items.length !== 1) throw coded('INVALID_BATCH', 'one request per plain-Flow submission');
@@ -466,8 +499,7 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   try { await (g.applyFlowSettings || applyFlowSettings)(page, job, g); }
   catch (e) { if (e.code) throw e; throw coded('MODEL_NOT_SELECTABLE', e.message); }
   if (video) {
-    await fp.uploadFrame('Start', it.start_frame);
-    if (await page.getByText('Start', {exact: true}).count().catch(() => 1)) throw coded('FRAME_NOT_ATTACHED', 'Start frame slot is still empty');
+    await attachStartFrame(page, it.start_frame, g);
   } else {
     for (const ref of it.refs || []) await attachReference(page, ref, g);
   }

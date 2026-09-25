@@ -269,6 +269,45 @@ test('localized Flow radio settings select and verify image/video modes before s
     {type: 'image', ratio: '9:16', outputs: 1, model: 'Nano Banana 2'}, ui.g), e => e.code === 'MODEL_NOT_SELECTABLE');
 });
 
+test('Start/Bắt đầu frame upload needs a verified confirm and a filled slot', async () => {
+  const frameUi = (slotLabel, uploadLabel, confirmLabel) => {
+    const state = {dialogOpen: false, uploaded: false, attached: false, submitted: false, file: null};
+    const slot = {isVisible: async () => !state.attached, click: async () => { state.dialogOpen = true; },
+      waitFor: async ({state: wanted}) => { if (wanted === 'hidden' && !state.attached) throw Error('slot still empty'); }};
+    const dialog = {waitFor: async ({state: wanted}) => {
+      if ((wanted === 'visible') !== state.dialogOpen) throw Error('dialog state mismatch');
+    }, getByRole: (_role, {name}) => ({first: () => ({
+      isVisible: async () => state.dialogOpen && (name.test(uploadLabel) || state.uploaded && name.test(confirmLabel)),
+      click: async () => { if (name.test(confirmLabel)) { state.attached = true; state.dialogOpen = false; } },
+    })}), locator: () => ({first: () => ({waitFor: async () => {
+      if (!state.uploaded) throw Error('upload was not selected');
+    }})})};
+    const editor = {waitFor: async () => {}, isVisible: async () => true};
+    const page = {url: () => 'https://flow.google.com/project/abcd0001-ef',
+      evaluate: async () => ({text: '', frames: []}),
+      getByRole: (_role, {name}) => ({first: () => name.test(slotLabel) ? slot : {isVisible: async () => false}}),
+      locator: sel => sel === ops.PROMPT_EDITOR ? {first: () => editor} : {first: () => dialog},
+      waitForEvent: async () => ({setFiles: async file => {state.uploaded = true; state.file = file; }}),
+    };
+    const g = {dismissOpenLayers: async () => { state.dialogOpen = false; }};
+    return {state, page, g};
+  };
+  let ui = frameUi('Start', 'Upload media', 'Add to Prompt');
+  await ops.attachStartFrame(ui.page, '/tmp/start.png', ui.g);
+  assert.equal(ui.state.file, '/tmp/start.png');
+  assert.equal(ui.state.attached, true);
+  ui = frameUi('Bắt đầu', 'Tải nội dung nghe nhìn lên', 'Thêm vào lời nhắc');
+  await assert.rejects(ops.attachStartFrame(ui.page, '/tmp/start.png', ui.g), e => e.code === 'FRAME_NOT_ATTACHED');
+  assert.equal(ui.state.uploaded, true); // localized Upload found
+  assert.equal(ui.state.attached, false); // unverified localized confirm was never clicked
+  const g = {...ui.g, FlowPage: class {}, applyFlowSettings: async () => {}};
+  const session = {page: ui.page, profile: {name: 'P', project_url: 'https://flow.google.com/project/abcd0001-ef'}};
+  await assert.rejects(ops.flowPrepare(session, [item('clip-frame', {kind: 'clip', start_frame: '/tmp/start.png',
+    variants: 1, model: 'veo-fast', refs: []})], {flowpool_model_labels: {'veo-fast': 'Veo 3.1 - Fast'}}, g),
+    e => e.code === 'FRAME_NOT_ATTACHED');
+  assert.equal(session.pending, undefined);
+});
+
 test('plain-Flow image: attaches refs, fills prompt, submits only on commit', async () => {
   const calls = [];
   const it = item('g', {kind: 'image', engine: 'flow', refs: ['/tmp/mascot.png']});
