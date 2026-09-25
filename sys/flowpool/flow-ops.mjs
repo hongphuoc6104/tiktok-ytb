@@ -213,12 +213,46 @@ function radioOption(options, token) {
 /** Select the actual Flow radio control and verify aria-checked after React updates.
  * Icon ligatures are stable across the English and Vietnamese Flow labels. */
 export async function applyFlowSettings(page, job, g) {
-  const settings = g.flowLocators(page).settingsButton.first();
-  const open = async () => {
-    if ((await page.locator(RADIO_SELECTOR).count()) > 0) return;
+  // The current Angular Flow page has a dedicated trigger. The bundled
+  // gflow-cli text filter can also match a radio inside an open settings pane.
+  const currentTrigger = page.locator('button.settings-trigger-button:visible').first();
+  const settings = await currentTrigger.isVisible().catch(() => false)
+    ? currentTrigger : g.flowLocators(page).settingsButton.first();
+  const radios = page.locator(RADIO_SELECTOR);
+  const clearObstructions = async () => {
     await g.dismissOpenLayers(page);
-    await settings.click({force: true, timeout: 5000});
-    await page.locator(RADIO_SELECTOR).first().waitFor({state: 'visible', timeout: 5000});
+    const account = page.locator('.cdk-overlay-pane.flow-account-panel-overlay:visible').first();
+    if (await account.isVisible().catch(() => false)) {
+      const close = account.locator('button[aria-label="Đóng bảng điều khiển tài khoản"]').first();
+      if (await close.isVisible().catch(() => false)) await close.click({timeout: 3000});
+      else await page.keyboard.press('Escape');
+      await account.waitFor({state: 'hidden', timeout: 2000});
+    }
+    if (await radios.count()) return;
+    const stale = page.locator('.cdk-overlay-pane:visible').first();
+    if (await stale.isVisible().catch(() => false)) {
+      await page.keyboard.press('Escape');
+      await stale.waitFor({state: 'hidden', timeout: 2000});
+    }
+  };
+  const open = async () => {
+    await clearObstructions();
+    if (await radios.count()) return;
+    let lastError;
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        await settings.click({timeout: 3000});
+        await radios.first().waitFor({state: 'visible', timeout: 2500});
+        return;
+      } catch (e) {
+        lastError = e;
+        if (attempt === 0) {
+          await clearObstructions();
+          if (await radios.count()) return;
+        }
+      }
+    }
+    throw coded('MODEL_NOT_SELECTABLE', `Flow settings radios did not open: ${lastError?.message || 'unknown error'}`);
   };
   const select = async (tokens, name) => {
     tokens = Array.isArray(tokens) ? tokens : [tokens];
@@ -234,7 +268,6 @@ export async function applyFlowSettings(page, job, g) {
     if (!find(await radioOptions(page))?.checked)
       throw coded('MODEL_NOT_SELECTABLE', `Flow did not select ${name} (${tokens.join('/')})`);
   };
-  await g.dismissOpenLayers(page);
   const modeTokens = job.type === 'video' ? ['videocam', 'video'] : ['image', 'hìnhảnh', 'ảnh'];
   await select(modeTokens, 'mode');
   if (job.type === 'video') {
@@ -269,6 +302,12 @@ export async function applyFlowSettings(page, job, g) {
   const pill = await settings.innerText();
   if (!pill.includes(RATIO_ICON[job.ratio]) || !outputTokens.some(token => pill.includes(token)))
     throw coded('MODEL_NOT_SELECTABLE', `settings show "${pill}"`);
+  // Close the Angular CDK settings panel before focusing the prompt composer.
+  for (let attempt = 0; attempt < 2 && await radios.count(); attempt++) {
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(200);
+  }
+  if (await radios.count()) throw coded('MODEL_NOT_SELECTABLE', 'Flow settings panel stayed open over the prompt');
   await g.dismissOpenLayers(page);
 }
 

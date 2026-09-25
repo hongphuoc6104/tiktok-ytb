@@ -226,18 +226,32 @@ test('Flow refusals map to declined codes; timeouts stay unknown', async () => {
 });
 
 test('localized Flow radio settings select and verify image/video modes before submission', async () => {
-  const makeUi = ({ignoredGroup = null} = {}) => {
+  const makeUi = ({ignoredGroup = null, accountOpen = false} = {}) => {
     const groups = {mode: ['imageHình ảnh', 'videocamVideo'], ratio: ['crop_16_916:9', 'crop_9_169:16'],
       count: ['x1', 'x2'], input: ['crop_freeKhung hình', 'chrome_extensionThành phần'],
       duration: ['4 giây', '8 giây']};
     const state = {mode: groups.mode[1], ratio: groups.ratio[0], count: groups.count[0],
-      input: groups.input[1], duration: groups.duration[1], model: 'Omni 1.1 Flash'};
+      input: groups.input[1], duration: groups.duration[1], model: 'Omni 1.1 Flash', accountOpen,
+      settingsClicks: 0};
     const controls = Object.entries(groups).flatMap(([group, tokens]) => tokens.map(token => ({group, token,
       textContent: token, getAttribute: key => key === 'aria-checked' ? String(state[group] === token) : null})));
     let opened = false, modelMenu = false;
-    const settings = {click: async () => { opened = true; },
+    const settings = {isVisible: async () => true, click: async () => {
+      if (state.accountOpen) throw Error('account CDK overlay intercepts settings');
+      state.settingsClicks += 1; opened = true;
+    },
       innerText: async () => `${state.mode.startsWith('image') ? 'Hình ảnh' : 'Video'} ${state.ratio} ${state.count}`};
-    const page = {waitForTimeout: async () => {}, locator: sel => {
+    const page = {waitForTimeout: async () => {}, keyboard: {press: async () => {
+      if (state.accountOpen) state.accountOpen = false; else opened = false;
+    }}, locator: sel => {
+      if (sel.includes('settings-trigger-button')) return {first: () => settings};
+      if (sel.includes('flow-account-panel-overlay')) return {first: () => ({
+        isVisible: async () => state.accountOpen,
+        waitFor: async ({state: wanted}) => { if (wanted === 'hidden' && state.accountOpen) throw Error('account panel stayed open'); },
+        locator: () => ({first: () => ({isVisible: async () => state.accountOpen,
+          click: async () => { state.accountOpen = false; }})}),
+      })};
+      if (sel === '.cdk-overlay-pane:visible') return {first: () => ({isVisible: async () => false})};
       if (sel.includes('[role="radio"]')) return {
         count: async () => opened ? controls.length : 0,
         first: () => ({waitFor: async () => {}}),
@@ -249,7 +263,7 @@ test('localized Flow radio settings select and verify image/video modes before s
       throw new Error(`unexpected selector ${sel}`);
     }};
     const g = {flowLocators: () => ({settingsButton: {first: () => settings}}),
-      dismissOpenLayers: async () => { opened = false; },
+      dismissOpenLayers: async () => {}, // bundled gflow-cli only closes Radix, not Angular CDK
       selectModelOption: async (_page, model) => { assert.ok(modelMenu); state.model = model; modelMenu = false; }};
     return {page, g, state};
   };
@@ -267,6 +281,10 @@ test('localized Flow radio settings select and verify image/video modes before s
   ui = makeUi({ignoredGroup: 'mode'});
   await assert.rejects(ops.applyFlowSettings(ui.page,
     {type: 'image', ratio: '9:16', outputs: 1, model: 'Nano Banana 2'}, ui.g), e => e.code === 'MODEL_NOT_SELECTABLE');
+  ui = makeUi({accountOpen: true});
+  await ops.applyFlowSettings(ui.page, {type: 'image', ratio: '9:16', outputs: 1, model: 'Nano Banana 2'}, ui.g);
+  assert.equal(ui.state.accountOpen, false);
+  assert.equal(ui.state.settingsClicks, 1); // account CDK panel closed before the trigger was clicked
 });
 
 test('Start/Bắt đầu frame upload needs a verified confirm and a filled slot', async () => {
