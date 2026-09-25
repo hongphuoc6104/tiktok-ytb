@@ -31,28 +31,40 @@ mẫu. Chỉ lấy khuôn. Đây cũng là điều kiện kiếm tiền (chính 
 | Kho `vocab/` + `vocab.policy` | Kho `tiensu/` (chủ đề, ledger, policy) cùng cơ chế |
 | Mascot áo xanh | Mascot người tiền sử riêng (tóc bù, áo da thú) |
 | Chữ tạo trong ảnh (`visible_text`) | Nhãn/bản đồ/số do Remotion vẽ để khỏi tạo lại ảnh vì sai chữ |
-| Mỗi beat = 1 ảnh Flow | Thư viện ảnh tái sử dụng + ghép lớp để giảm số ảnh mới |
+| Mỗi beat = 1 ảnh Flow | Thư viện ảnh tái sử dụng + ghép lớp giữ nhận diện |
+| `video_generation: false`, `credit_budget: 0` | Bật clip Veo (ảnh → video) cho hook, mở chương, cao trào |
+| B-2 chạy 1 profile, `automatic_account_switching: false` | FlowPool: hàng đợi bền trên nhiều profile AI Pro, sổ credit từng profile |
 | Không có đóng gói | Thumbnail, tiêu đề, mô tả, chapters, nguồn, tags |
 | Máy duyệt xem toàn bộ artifact | Duyệt video dài bằng contact sheet + đoạn audio lấy mẫu |
 
-## 3. Nguyên tắc tiết kiệm quota
+## 3. Hai loại quota
 
-Ba nguồn quota: lượt Antigravity (viết/duyệt), ảnh Flow, thời gian máy (TTS/render).
+### 3a. Phát triển — tiết kiệm tối đa
+Quota của agent lập trình (token/lượt) là thứ cần giữ.
 
-1. **Rẻ trước, đắt sau.** Giữ thứ tự content → audio (local, miễn phí) → ảnh. Thời lượng
-   WAV lệch khoảng brief thì dừng trước khi tạo ảnh.
-2. **Ngân sách cứng mỗi video:** tối đa 1 outline + 1 draft + 2 lượt sửa content;
-   3 lượt máy duyệt; tối đa 40 ảnh Flow mới/video; vượt thì `needs_attention`, không tự nới.
-3. **Tái sử dụng ảnh.** Thư viện `assets/library/` gắn tag (tư thế, cảm xúc, bối cảnh, vật);
-   planner chọn ảnh có sẵn trước khi xin ảnh mới. Video sau càng rẻ hơn video trước.
-4. **Chữ không nằm trong ảnh.** Nhãn, bản đồ, con số, tiêu đề chương do Remotion vẽ lên
-   ảnh sạch. Sửa chữ = sửa JSON, không tốn ảnh.
-5. **Chuyển động bằng Remotion.** Pan/zoom/tách lớp/nhãn bật lên tạo nhịp 4–6 s từ một ảnh
-   gốc; mỗi ảnh Flow dùng cho 2–4 beat.
-6. **Duyệt máy lấy mẫu.** Content: duyệt văn bản. Media: contact sheet mỗi chương + 3 đoạn
-   audio 20 s. Video: contact sheet 1 khung/10 s + loudness/overflow báo cáo máy.
-7. **Cache mọi thứ.** Giữ khóa cache TTS theo cảnh và identity ảnh theo yêu cầu; sửa một
-   chương không làm lại chương khác.
+1. **Sửa, không viết lại.** Mở rộng `vocab/bank.py`, `image_pipeline.py`, `renderer/`,
+   B-2 queue runner hiện có; module mới chỉ khi không có chỗ cắm.
+2. **Đọc có mục tiêu.** Agent đọc `INDEX.md` + file của giai đoạn đang làm, dùng `grep`/`sed -n`
+   thay vì đọc cả file lớn; không mở lại `reports/` lịch sử.
+3. **Test offline bằng fixture** (`sys/tests`, `node --test`) trước; chạm Flow thật chỉ ở
+   bước nghiệm thu từng giai đoạn, mỗi lần một lệnh ngắn.
+4. **Một giai đoạn = một commit + ghi chú 5–10 dòng** trong mục 7 bên dưới để phiên sau
+   không phải dò lại.
+
+### 3b. Vận hành — dùng hết tài nguyên được cấp
+Khi sản xuất video, được phép dùng tối đa lượt Antigravity, credit Flow và máy.
+
+1. **Chất lượng trước.** Không cap cứng số ảnh; tạo 2–4 phương án mỗi ảnh/clip rồi chọn.
+   Cap chỉ để chống vòng lặp vô hạn (giữ `auto_max_*` hiện có), không để tiết kiệm.
+2. **Rẻ trước để hỏng sớm**, không phải để tiết kiệm: content → audio (local) → ảnh → clip.
+   WAV lệch thời lượng thì dừng trước khi tốn Veo.
+3. **Tận dụng mọi profile Google AI Pro** qua FlowPool (GĐ3b): ảnh chạy song song trên mọi
+   profile; clip Veo phân bổ theo số credit còn lại của từng profile.
+4. **Chữ không nằm trong ảnh/clip.** Nhãn, bản đồ, số, tiêu đề chương do Remotion vẽ — lý do
+   là độ chính xác tiếng Việt (model sinh chữ Việt sai dấu), không phải tiết kiệm.
+5. **Thư viện tái sử dụng** vẫn giữ để giữ nhận diện nhân vật/bối cảnh xuyên video.
+6. **Máy duyệt đầy đủ**: content toàn văn; media xem từng ảnh/clip; video xem toàn bộ nếu
+   phiên Antigravity hỗ trợ, nếu không thì contact sheet 1 khung/5 s + mọi clip Veo.
 
 ## 4. Các giai đoạn
 
@@ -77,9 +89,42 @@ Mỗi giai đoạn kết thúc bằng tests đạt + commit riêng. Không chạ
 - Mascot mới `assets/characters/tiensu-mascot/` (tham chiếu + character.json).
 - Remotion: lớp nền + lớp nhân vật + overlay (`label`, `map_pin`, `counter`, `chapter_title`,
   `arrow`) khai báo trong beat; hiệu ứng thêm `pan_left/right`, `pop`.
+- Beat loại `clip`: phát clip Veo bằng `OffthreadVideo` (tắt tiếng, cắt/lặp theo neo lời
+  đọc), overlay chữ vẫn chồng được lên clip.
 - `assets/library/index.jsonl` + bước planner "reuse-first"; ảnh mới được đăng ký vào thư
   viện sau khi media đạt duyệt.
 - Prompt template doodle nền kem, không chữ trong ảnh.
+
+### GĐ3b — FlowPool: tool Flow tự động nhiều profile
+Mở rộng `experiments/b2_illustrator` (queue-runner, attempt-store, session) thành
+`sys/flowpool/`, dùng chung cho ảnh và clip.
+
+- **Pool profile** (`flowpool/profiles.json`, sinh từ `browser-profiles.json`): mỗi profile
+  có trạng thái `ready | busy | low_credit | needs_login | captcha | cooldown`, số credit đọc
+  từ UI trước/sau mỗi lượt, giới hạn song song riêng.
+- **Bộ lập lịch**: ảnh (Nano Banana, không tốn credit theo đo 22/09) chia vòng tròn cho mọi
+  profile `ready`; clip Veo giao cho profile còn nhiều credit nhất. Profile gặp
+  CAPTCHA/đăng xuất bị loại khỏi vòng và báo người dùng — tool **không** tự giải CAPTCHA,
+  không tự đăng nhập.
+- **Song song theo RAM**: mặc định 2 Chrome cùng lúc trên máy 16 GB (đo lại), mỗi Chrome
+  gửi hàng đợi 4 yêu cầu như B-2 x4 đã nghiệm thu.
+- **Hàng đợi bền**: mỗi yêu cầu có intent → submitted → collected → validated, ghi
+  ndjson fsync; khởi động lại không gửi trùng yêu cầu chưa rõ kết quả (giữ quy tắc timeout
+  hiện có).
+- **Clip Veo**: chế độ ảnh → video (frames to video) từ ảnh đã duyệt để giữ nhân vật; 8 s,
+  tắt tiếng clip, lời đọc vẫn là VieNeu; 2 phương án/clip, máy duyệt chọn.
+- **Sổ credit** `flowpool/ledger.ndjson`: profile, loại, model, credit trước/sau, job, scene.
+  `pilot.py flowpool status` in số dư, clip còn tạo được trong tháng theo từng profile.
+- **Cấu hình**: `config.video_generation: true`, `credit_budget` = tổng trần theo tháng người
+  dùng đặt, `veo_model` (Fast/Quality), `veo_clips_per_video` (mặc định 8–12).
+- Bỏ khóa trong `image_pipeline.py:169` chỉ cho job có brief khai báo `clips`.
+
+Phân bổ clip mỗi video (mặc định, chỉnh theo credit thật): hook 0–45 s (2–3 clip),
+mở mỗi chương (1 clip), cao trào + kết (2 clip). Phần còn lại ảnh tĩnh + chuyển động
+Remotion, đúng phong cách doodle của kênh mẫu.
+
+Ràng buộc: chỉ dùng profile của chính người dùng, mỗi tài khoản có gói AI Pro hợp lệ;
+người dùng tự chịu trách nhiệm tuân thủ điều khoản Google về nhiều tài khoản.
 
 ### GĐ4 — Kịch bản
 - Skill `vp-explainer` (hoặc references mới trong `vp-content`): cấu trúc 5 phần, giọng
@@ -96,8 +141,9 @@ Mỗi giai đoạn kết thúc bằng tests đạt + commit riêng. Không chạ
 - Ghi chú khai báo: hoạt hình cách điệu, không cần nhãn nội dung tổng hợp chân thực.
 
 ### GĐ6 — Pilot có người duyệt
-- 3 video thử ở chế độ `review` (người duyệt đủ 3 mốc). Đo: số lượt Antigravity, số ảnh
-  Flow mới, thời gian TTS/render, lỗi phải sửa.
+- 3 video thử ở chế độ `review` (người duyệt đủ 3 mốc). Đo: credit Veo thật/clip và
+  /video theo sổ FlowPool, số ảnh, thời gian mỗi profile, TTS/render, lỗi phải sửa.
+- Từ số đo, đặt `veo_clips_per_video` và số video/tháng mà tổng credit các profile nuôi được.
 - Hiệu chỉnh speech_rates bằng `scripts/calibrate_speech_rates.py`.
 
 ### GĐ7 — Tự động
@@ -117,4 +163,17 @@ Mỗi giai đoạn kết thúc bằng tests đạt + commit riêng. Không chạ
 - Chính sách YouTube về nội dung lặp/hàng loạt → giữ người duyệt ở mốc content cho tới khi
   kênh ổn định; mỗi video tự nghiên cứu, nguồn thật.
 - Máy đích 16 GB / P620 2 GB: render và TTS 10 phút chưa đo.
-- Flow: chi phí credit chưa kiểm chứng tuyệt đối (flow-x4-results-20260922.md).
+- Flow: chi phí ảnh chưa kiểm chứng tuyệt đối (flow-x4-results-20260922.md); credit Veo
+  mỗi clip phải đo từ UI trước/sau, không lấy từ tài liệu.
+- Giao diện Flow thay đổi làm hỏng selector → FlowPool có `doctor` kiểm tra từng profile
+  trước mỗi batch và dừng sạch khi lệch.
+- Nhiều Chrome song song trên 16 GB RAM → bắt đầu 2 profile, tăng khi đo được.
+
+## 7. Thứ tự thực hiện và nhật ký
+
+Thứ tự: GĐ1 → GĐ3b (FlowPool, cần máy có profile) → GĐ2 → GĐ3 → GĐ4 → GĐ5 → GĐ6 → GĐ7.
+FlowPool làm sớm vì là phần rủi ro cao nhất và các giai đoạn sau phụ thuộc số đo credit.
+
+Nhật ký (mỗi giai đoạn thêm 5–10 dòng: đã làm, file chính, lệnh test, việc còn lại):
+
+- 25/09/2026: lập kế hoạch; bổ sung FlowPool + Veo theo yêu cầu người dùng.
