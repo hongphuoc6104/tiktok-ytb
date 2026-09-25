@@ -35,7 +35,7 @@ mẫu. Chỉ lấy khuôn. Đây cũng là điều kiện kiếm tiền (chính 
 | `video_generation: false`, `credit_budget: 0` | Bật clip Veo (ảnh → video) cho hook, mở chương, cao trào |
 | B-2 chạy 1 profile, `automatic_account_switching: false` | FlowPool: hàng đợi bền trên nhiều profile AI Pro, sổ credit từng profile |
 | Không có đóng gói | Thumbnail, tiêu đề, mô tả, chapters, nguồn, tags |
-| Máy duyệt xem toàn bộ artifact | Duyệt video dài bằng contact sheet + đoạn audio lấy mẫu |
+| Máy duyệt short 1 phút | Duyệt video dài 10 phút + mọi clip Veo (mục 3b.6) |
 
 ## 3. Hai loại quota
 
@@ -68,7 +68,7 @@ Khi sản xuất video, được phép dùng tối đa lượt Antigravity, cred
 
 ## 4. Các giai đoạn
 
-Mỗi giai đoạn kết thúc bằng tests đạt + commit riêng. Không chạy Flow thật trước giai đoạn 6.
+Mỗi giai đoạn kết thúc bằng tests đạt + commit riêng. Flow thật chỉ dùng ở bước nghiệm thu GĐ3b và từ GĐ6.
 
 ### GĐ1 — Khung kênh (`tiensu/`)
 - `tiensu/channel.json`: 16:9, vi, 480–720 s, 7–9 cảnh, style doodle, tone, avoid,
