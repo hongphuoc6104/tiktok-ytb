@@ -31,11 +31,32 @@ test('assertUsable throws coded errors and never interacts', async () => {
 
 test('credit balances are parsed; cost phrases and ambiguity give null', () => {
   assert.equal(ops.pickCredits(['1.050 credits']).value, 1050);
+  assert.equal(ops.pickCredits(['1,050 Google Flow credits']).value, 1050);
   assert.equal(ops.pickCredits(['AI credits: 1,050']).value, 1050);
   assert.equal(ops.pickCredits(['Còn lại 980 tín dụng']).value, 980);
-  assert.equal(ops.pickCredits(['Veo 3.1 - Fast uses 20 credits', '20 credits per video']).value, null);
+  assert.equal(ops.pickCredits(['Veo 3.1 - Fast uses 20 Google Flow credits', '20 credits per video']).value, null);
   assert.equal(ops.pickCredits(['1,050 credits', '900 credits']).value, null);
   assert.equal(ops.pickCredits(['no numbers here']).value, null);
+});
+
+test('credit probe opens the account panel and reads its balance link in both UI locales', async () => {
+  for (const [label, creditLabel, creditSelector] of [
+    ['Account details', '1,050 Google Flow credits', '[aria-label*="Google Flow credits" i]'],
+    ['Thông tin về tài khoản', '1.050 tín dụng', '[aria-label*="tín dụng" i]'],
+  ]) {
+    let opened = false, escaped = false;
+    const balance = {getBoundingClientRect: () => ({width: 180, height: 30}),
+      getAttribute: name => name === 'aria-label' ? creditLabel : null, innerText: ''};
+    const page = {
+      locator: sel => ({evaluateAll: async fn => opened && sel === creditSelector ? fn([balance]) : [],
+        first: () => ({isVisible: async () => sel.includes(`aria-label="${label}"`), click: async () => { opened = true; }})}),
+      waitForTimeout: async () => {}, keyboard: {press: async key => { escaped = key === 'Escape'; }},
+    };
+    const got = await ops.readCredits(page, {selectors: [], open: []});
+    assert.equal(got.value, 1050);
+    assert.match(got.method, /^open:/);
+    assert.ok(escaped);
+  }
 });
 
 function tabs(list) {
@@ -82,6 +103,26 @@ test('project URLs are canonical and resolved on the current (flow.google.com) h
   assert.equal(await ops.findProjectUrl(page, 'Video Pilot'), 'https://flow.google.com/project/0123abcd-ef');
 });
 
+test('current project is reused and missing editor is distinct from sign-out or CAPTCHA', async () => {
+  const calls = [];
+  const editor = {waitFor: async () => {}, isVisible: async () => true,
+    click: async () => calls.push('click'), press: async k => calls.push(k),
+    pressSequentially: async s => calls.push(s)};
+  const page = {...fakePage('https://flow.google.com/project/abcd1234-ef'),
+    locator: sel => { assert.equal(sel, ops.PROMPT_EDITOR); return {first: () => editor}; }};
+  const s = {page, profile: {name: 'P', project: 'Video Pilot'}};
+  assert.equal(await ops.ensureProject(s, {}, {}), 'https://flow.google.com/project/abcd1234-ef');
+  assert.equal(s.projectUrl, 'https://flow.google.com/project/abcd1234-ef');
+  await ops.fillFlowPrompt(page, 'A hunter waits.', {dismissOpenLayers: async () => {}});
+  assert.deepEqual(calls, ['click', 'ControlOrMeta+a', 'Backspace', 'A hunter waits.']);
+  editor.isVisible = async () => false;
+  await assert.rejects(ops.readyProjectEditor(page), e => e.code === 'EDITOR_NOT_FOUND');
+  page.evaluate = async () => ({text: 'Choose an account to continue', frames: []});
+  await assert.rejects(ops.readyProjectEditor(page), e => e.code === 'NEEDS_LOGIN');
+  page.evaluate = async () => ({text: "Verify you're not a robot", frames: []});
+  await assert.rejects(ops.readyProjectEditor(page), e => e.code === 'CAPTCHA');
+});
+
 function fakeFlow({cards = {}, canCreate = true, url = 'https://flow.google.com/'} = {}) {
   const calls = [];
   const loc = (visible, onClick) => ({first: () => loc(visible, onClick), or: () => loc(visible, onClick),
@@ -112,7 +153,11 @@ test('ensureProject: recorded URL, else named card, else creates one (no generat
   assert.equal(await ops.ensureProject(session, cfg, f.g), 'https://flow.google.com/project/dddd0003-cccc');
   assert.deepEqual(f.calls, [['goto', 'https://flow.google.com/project/dddd0003-cccc']]);
   f = fakeFlow({canCreate: false});
-  await assert.rejects(ops.ensureProject({page: f.page, profile: {name: 'acc1', project: 'X'}}, cfg, f.g), e => e.code === 'NEEDS_LOGIN');
+  await assert.rejects(ops.ensureProject({page: f.page, profile: {name: 'acc1', project: 'X'}}, cfg, f.g), e => e.code === 'PROJECT_NOT_FOUND');
+  f = fakeFlow();
+  await assert.rejects(ops.ensureProject({page: f.page, profile: {name: 'acc1', project: 'X'}}, cfg, f.g, {create: false}),
+    e => e.code === 'PROJECT_NOT_FOUND');
+  assert.ok(!f.calls.some(c => c[0] === 'new-project'));
 });
 
 function fakeB2(calls, {pollError = null, queued = []} = {}) {
@@ -186,17 +231,22 @@ test('plain-Flow image: attaches refs, fills prompt, submits only on commit', as
   const page = {url: () => 'https://flow.google.com/project/abcd0001-ef', goto: async () => {}, isClosed: () => false,
     evaluate: async () => ({text: '', frames: []}), context: () => ({}),
     getByText: () => ({count: async () => 0})};
+  const editor = {waitFor: async () => {}, isVisible: async () => true, click: async () => {},
+    press: async () => {}, pressSequentially: async p => calls.push(['prompt', p])};
   const g = {
-    FlowPage: class { constructor() {} async assertReady() {} async applySettings(job) { calls.push(['settings', job]); }
+    FlowPage: class { constructor() {} async assertReady() { throw new Error('old role=textbox locator failed'); }
+      async applySettings(job) { calls.push(['settings', job]); }
       async resultSrcs() { return ['old']; } async fillPrompt(p) { calls.push(['prompt', p]); } async submit() { calls.push(['SUBMIT']); }
       async waitForResults(before, n, t, type) { calls.push(['wait', n, type]); return ['new-src?name=abcd-1234']; } },
     flowLocators: () => ({settingsButton: {first: () => ({innerText: async () => '🍌 Nano Banana 2 crop_16_9 x1'})}}),
     downloadResult: async ({basename, outDir}) => ({assetPath: path.join(outDir, basename + '.png')}),
     mediaIdFromSrc: () => 'abcd-1234',
+    dismissOpenLayers: async () => {},
   };
   const session = {page, profile: {name: 'acc1', project_url: 'https://flow.google.com/project/abcd0001-ef'}, projectUrl: null};
   // No ingredient button on this fake page: a reference that cannot be attached blocks before submit.
-  page.locator = () => ({filter: () => ({first: () => ({isVisible: async () => false})})});
+  page.locator = sel => sel === ops.PROMPT_EDITOR ? {first: () => editor}
+    : {filter: () => ({first: () => ({isVisible: async () => false})})};
   await assert.rejects(ops.flowPrepare(session, [it], {}, g), e => e.code === 'REFERENCE_NOT_ATTACHED');
   assert.ok(!calls.some(c => c[0] === 'SUBMIT'));
   const noRef = {...it, refs: []};

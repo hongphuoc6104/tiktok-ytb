@@ -297,6 +297,21 @@ class SafetyTests(FlowPoolCase):
         self.assertEqual(report['Profile 13']['state_after'], 'captcha')
         self.assertFalse([e for e in self.world.log if e[0] in ('prepare', 'commit')])
 
+    def test_doctor_keeps_project_url_when_later_editor_probe_fails(self):
+        self.write_profiles(profile('Profile 10', 0))
+
+        class EditorMissingDriver(FakeDriver):
+            def probe(self, kinds):
+                self.project_url = 'https://flow.google.com/project/abcd1234-ef'
+                raise DriverError('EDITOR_NOT_FOUND', 'prompt editor missing')
+
+        fp = FlowPool(self.cfg, lambda p, c: EditorMissingDriver(self.world, p, c), locate=self.locate)
+        [entry] = fp.doctor(['Profile 10'])
+        self.assertIn('EDITOR_NOT_FOUND', entry['error'])
+        self.assertEqual(entry['state_after'], 'ready')
+        self.assertEqual(Pool(self.state / 'profiles.json').get('Profile 10')['project_url'],
+                         'https://flow.google.com/project/abcd1234-ef')
+
     def test_restart_never_resubmits_interrupted_submission(self):
         self.two_image_profiles()
         req = self.image(1)

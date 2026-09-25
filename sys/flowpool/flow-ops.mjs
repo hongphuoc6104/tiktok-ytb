@@ -62,7 +62,7 @@ export async function assertUsable(page) {
 
 // ----------------------------------------------------------------- credits
 const NUM = String.raw`(\d{1,3}(?:[.,\s ]\d{3})+|\d+)`;
-const AFTER = new RegExp(NUM + String.raw`\s*(?:AI\s+)?(?:credits?|tín dụng)\b(?!\s*(?:per|\/|each|mỗi|a |an ))`, 'gi');
+const AFTER = new RegExp(NUM + String.raw`\s*(?:(?:Google\s+Flow|AI)\s+)?(?:credits?|tín dụng)\b(?!\s*(?:per|\/|each|mỗi|a |an ))`, 'gi');
 const BEFORE = new RegExp(String.raw`(?:credits?|tín dụng)\s*(?:left|remaining|còn lại)?\s*[:：]?\s*` + NUM, 'gi');
 const toInt = s => Number(String(s).replace(/[^\d]/g, ''));
 
@@ -89,19 +89,29 @@ export function pickCredits(texts) {
 }
 
 export async function readCredits(page, probe = {}) {
+  const balanceSelectors = ['[aria-label*="Google Flow credits" i]', '[aria-label*="tín dụng" i]'];
   const visibleTexts = sel => page.locator(sel).evaluateAll(els => els
     .filter(e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.height > 0; })
     .map(e => `${e.getAttribute('aria-label') || ''} ${e.innerText || ''}`)).catch(() => []);
-  for (const sel of probe.selectors || []) {
+  for (const sel of [...balanceSelectors, ...(probe.selectors || [])]) {
     const got = pickCredits(await visibleTexts(sel));
     if (got.value !== null) return {...got, method: `selector:${sel}`};
   }
-  for (const sel of probe.open || []) {
+  // Flow now keeps the balance inside the account panel. This is a menu control,
+  // never a generation control; the two labels are the observed English/Vietnamese UI.
+  const accountOpener = '[role="button"][aria-label="Account details"],button[aria-label="Account details"],'
+    + '[role="button"][aria-label="Thông tin về tài khoản"],button[aria-label="Thông tin về tài khoản"]';
+  for (const sel of [...(probe.open || []), accountOpener]) {
     const opener = page.locator(sel).first();
     if (!(await opener.isVisible().catch(() => false))) continue;
     await opener.click({timeout: 3000}).catch(() => undefined);
     await page.waitForTimeout(600);
-    const got = pickCredits(await visibleTexts('[role=menu],[role=dialog],[role=listbox],[data-radix-popper-content-wrapper]'));
+    let got = {value: null, raw: []};
+    for (const balanceSel of balanceSelectors) {
+      got = pickCredits(await visibleTexts(balanceSel));
+      if (got.value !== null) break;
+    }
+    if (got.value === null) got = pickCredits(await visibleTexts('[role=menu],[role=dialog],[role=listbox],[data-radix-popper-content-wrapper]'));
     await page.keyboard.press('Escape').catch(() => undefined);
     if (got.value !== null) return {...got, method: `open:${sel}`};
   }
@@ -191,6 +201,33 @@ export function projectUrlOf(url) {
   return m ? m[1] : null;
 }
 
+// The bundled gflow-cli still expects role=textbox. Current Flow exposes a
+// ProseMirror contenteditable without that role; keep both editor generations.
+export const PROMPT_EDITOR = 'div.ProseMirror[contenteditable="true"]:visible,[role="textbox"][contenteditable="true"]:visible';
+
+export async function readyProjectEditor(page) {
+  await assertUsable(page);
+  const editor = page.locator(PROMPT_EDITOR).first();
+  await editor.waitFor({state: 'visible', timeout: 20000}).catch(() => undefined);
+  await assertUsable(page);
+  if (!(await editor.isVisible().catch(() => false))) {
+    throw coded('EDITOR_NOT_FOUND', `Flow project is open but its prompt editor is missing at ${page.url()}`);
+  }
+  return editor;
+}
+
+export async function fillFlowPrompt(page, prompt, g) {
+  const box = await readyProjectEditor(page);
+  await g.dismissOpenLayers(page);
+  await box.click({timeout: 2000}).catch(async () => {
+    await g.dismissOpenLayers(page);
+    await box.click({timeout: 5000}).catch(() => box.evaluate(el => el.focus()));
+  });
+  await box.press('ControlOrMeta+a');
+  await box.press('Backspace');
+  await box.pressSequentially(prompt, {delay: 8});
+}
+
 /** Absolute URL of the dashboard card whose label contains `name`. Resolved
  * against the CURRENT page URL: gflow-cli resolves against labs.google, which
  * now redirects to flow.google.com. */
@@ -207,16 +244,21 @@ export async function findProjectUrl(page, name) {
   return href ? new URL(href, page.url()).toString() : null;
 }
 
-/** Open the profile's Flow project: recorded URL, else the dashboard card named
- * `profile.project`, else create one with "New project" (no generation, no credits).
- * The resulting URL is reported back and recorded per profile. */
-export async function ensureProject(session, cfg, g) {
+/** Reuse the current/recorded/named project; only production preparation may
+ * create one when none exists. Doctor passes create=false and remains read-only. */
+export async function ensureProject(session, cfg, g, {create = true} = {}) {
   const {page, profile} = session;
   const known = session.projectUrl || profile.project_url;
   if (known) {
     if (projectUrlOf(page.url()) !== known) await page.goto(known, {waitUntil: 'domcontentloaded', timeout: 30000});
     await assertUsable(page);
     if (projectUrlOf(page.url()) === known) return (session.projectUrl = known);
+    throw coded('PROJECT_NOT_FOUND', `recorded Flow project ${known} did not open in ${profile.name}`);
+  }
+  const current = projectUrlOf(page.url());
+  if (current) {
+    await assertUsable(page);
+    return (session.projectUrl = current);
   }
   await page.goto(cfg.flowpool_flow_url || 'https://flow.google.com/', {waitUntil: 'domcontentloaded', timeout: 30000});
   await assertUsable(page);
@@ -227,8 +269,9 @@ export async function ensureProject(session, cfg, g) {
   if (found) {
     await page.goto(found, {waitUntil: 'domcontentloaded', timeout: 30000});
   } else {
+    if (!create) throw coded('PROJECT_NOT_FOUND', `no recorded or named Flow project for ${profile.name}; doctor will not create one`);
     if (!(await newProject.isVisible().catch(() => false))) {
-      throw coded('NEEDS_LOGIN', `Flow shows no projects and no "New project" button in ${profile.name} (signed out?); the user signs in again by hand in that Chrome profile`);
+      throw coded('PROJECT_NOT_FOUND', `Flow shows no projects and no "New project" button in ${profile.name}`);
     }
     await newProject.click({timeout: 5000});
     await page.waitForURL(/\/project\/[0-9a-f-]+/i, {timeout: 30000}).catch(() => undefined);
@@ -303,7 +346,7 @@ export async function imageCommit(session, timeoutMs, lib = null) {
 /** Count images in the prompt composer (the prompt box's nearest ancestor that also holds the submit arrow). */
 async function composerImageCount(page) {
   return page.evaluate(() => {
-    let c = document.querySelector('[role="textbox"][contenteditable="true"]');
+    let c = document.querySelector('[role="textbox"][contenteditable="true"],div.ProseMirror[contenteditable="true"]');
     for (let i = 0; c && i < 8; i++, c = c.parentElement)
       if ([...c.querySelectorAll('button')].some(b => /arrow_forward/.test(b.textContent || ''))) break;
     return c ? c.querySelectorAll('img').length : -1;
@@ -339,7 +382,7 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   const {page} = session;
   await ensureProject(session, cfg, g);
   const fp = new g.FlowPage(page);
-  try { await fp.assertReady(); } catch (e) { throw coded('NEEDS_LOGIN', e.message); }
+  await readyProjectEditor(page);
   const label = (cfg.flowpool_model_labels || {})[it.model] || it.model;
   const job = video ? {type: 'video', ratio: it.ratio, duration: it.seconds, outputs: it.variants, model: label, startFrame: it.start_frame}
     : {type: 'image', ratio: it.ratio, outputs: it.variants || 1, model: label};
@@ -354,7 +397,7 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   }
   const type = video ? 'video' : 'image';
   const before = new Set(await fp.resultSrcs(type));
-  await fp.fillPrompt(it.prompt);
+  await fillFlowPrompt(page, it.prompt, g);
   session.pending = {kind: 'flow', type, fp, before, item: it, expected: it.variants || 1};
   return [null];
 }
@@ -392,9 +435,9 @@ export async function probe(session, kinds, cfg, libs = {}) {
   const out = {logged_in: false, flow_reachable: false, project_url: null, credits: null,
     image_model_visible: null, clip_model_visible: null, image_tool: null, image_model_selectable: null, image_queue_idle: null};
   const g = libs.gflow || await loadGflow();
-  out.project_url = await ensureProject(session, cfg, g);
-  const fp = new g.FlowPage(page);
-  try { await fp.assertReady(); out.logged_in = out.flow_reachable = true; } catch (e) { throw coded('NEEDS_LOGIN', e.message); }
+  out.project_url = await ensureProject(session, cfg, g, {create: false});
+  await readyProjectEditor(page);
+  out.logged_in = out.flow_reachable = true;
   out.credits = await readCredits(page, cfg.flowpool_credit_probe);
   // Look (without selecting) at the settings popover: which model labels are listed right now.
   const settings = g.flowLocators(page).settingsButton.first();

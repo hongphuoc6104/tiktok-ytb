@@ -358,7 +358,6 @@ class FlowPool:
                 return outcome
             items = [self._item(r, profile, ctx) for r in batch]
             queue_ids = driver.prepare(kind, items) or []
-            pool.record_project(name, getattr(driver, 'project_url', None))
             for i, req in enumerate(batch):
                 self.journal.transition(req['_key'], 'submitted', profile=name, credits_before=credits_before,
                                         queue_ids=[queue_ids[i]] if i < len(queue_ids) else [])
@@ -385,6 +384,9 @@ class FlowPool:
             outcome.update(state='cooldown', reason=f'{code}: {ex!r}', until=None)
         finally:
             if driver is not None:
+                # A project can be identified before a later UI check fails.
+                # Keep its URL so the next probe does not create another one.
+                pool.record_project(name, getattr(driver, 'project_url', None))
                 try:
                     driver.close()
                 except Exception:
@@ -504,7 +506,6 @@ class FlowPool:
                     opened = driver.open() or {}
                     pool.record_email(profile['name'], opened.get('email'))
                     probe = driver.probe(['image', 'clip']) or {}
-                    pool.record_project(profile['name'], getattr(driver, 'project_url', None))
                     credits = (probe.get('credits') or {}).get('value')
                     entry['checks'] = dict(probe, account_verified=opened.get('account_verified'))
                     self.ledger.reading(profile['name'], credits, (probe.get('credits') or {}).get('raw'),
@@ -522,6 +523,7 @@ class FlowPool:
                         pool.set_state(profile['name'], state, str(ex))
                 finally:
                     if driver is not None:
+                        pool.record_project(profile['name'], getattr(driver, 'project_url', None))
                         try:
                             driver.close()
                         except Exception:
