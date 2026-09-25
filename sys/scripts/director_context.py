@@ -18,12 +18,22 @@ def vocabulary_brief(brief):
         x in text for x in ('từ vựng', 'tu vung', 'vocabulary', 'học từ ', 'word of the day'))
 
 
+def tiensu_brief(brief):
+    """True for the prehistory/survival explainer channel (brief.channel=='tiensu', section 8 contract)."""
+    if brief.get('channel') == 'tiensu':
+        return True
+    requirements = brief.get('planning', {}).get('domain_requirements', [])
+    return any(x.startswith('Mã chủ đề trong kho tiền sử:') for x in requirements)
+
+
 def context(root, stage, brief):
     base = Path(root) / '.agents/skills'
     paths = [base / 'vp-content/references/director-contract.md']
     paths += [base / name / 'SKILL.md' for name in ROLES[stage]]
     if stage in ('outline', 'content') and vocabulary_brief(brief):
         paths.append(base / 'vp-content/references/vocab-pedagogy.md')
+    if stage in ('outline', 'content') and tiensu_brief(brief):
+        paths.append(base / 'vp-content/references/explainer-longform.md')
     text = '\n\n'.join(f'Local craft guidance ({p.relative_to(base)}):\n{p.read_text()}' for p in paths)
     return text + '\n\n' + tolerance_guidance(root) if stage in TOLERANCE_STAGES else text
 

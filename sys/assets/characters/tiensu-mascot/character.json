@@ -1,0 +1,29 @@
+{
+  "id": "tiensu-mascot",
+  "name": "Người tiền sử tóc bù áo da thú",
+  "version": 1,
+  "reference": null,
+  "sha256": null,
+  "identity": {
+    "head": "round white, bold dark ink (near-black) outline, no ears",
+    "hair": "messy dark-brown hair tuft standing up on top of the head, short uneven doodle strokes",
+    "eyes": "two simple dark ovals",
+    "mouth": "simple line, expression changes per scene (curious/worried/smiling)",
+    "outfit": "single-tone earthy brown fur/hide tunic, one shoulder wrap, roughly cut hem",
+    "accent": "necklace of small bone/tooth beads around the neck — the one distinctive, repeatable accessory",
+    "limbs": "dark ink stick arms and legs, simple rounded hands and feet, may hold a wooden stick/spear as a prop"
+  },
+  "distinguishing_notes": "Deliberately different from both the vocab channel mascot (assets/characters/channel-mascot: light-blue T-shirt, no hair) and from the Ink Explainer channel's own stick figure: this character has visible messy hair, an earth-tone fur tunic (not a modern shirt) and a bone-necklace accent unique to this channel. Original design, not a copy of any existing channel's character.",
+  "usage": "Always attach the reference image as character reference once generated; text description alone is insufficient. Preserve identity (head/hair/outfit/necklace) across scenes. Use a separate base-scene reference for scene continuity. Used as CH01 in every tiensu channel script.",
+  "generation": "Not yet generated. This is a text-only character definition (GĐ1 scaffolding); no image has been produced and no Flow/image-generation call has been made for this character.",
+  "flow": {
+    "project_id": null,
+    "upload_status": "not uploaded",
+    "character_registration": "not completed",
+    "media_id": null,
+    "filename": null,
+    "verification": null
+  },
+  "canonical": true,
+  "pipeline_binding": "Declared in tiensu/channel.json (character field) and this file only. Not yet wired into config.json canonical_character (that key is bound to the vocab channel-mascot project-wide); tiensu scripts reference this mascot via tiensu/channel.json domain_requirements and vp-content/references/explainer-longform.md instead."
+}
