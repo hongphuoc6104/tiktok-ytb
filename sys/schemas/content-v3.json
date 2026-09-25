@@ -91,6 +91,10 @@
             "type": "string",
             "minLength": 1
           },
+          "chapter": {
+            "type": "string",
+            "minLength": 1
+          },
           "purpose": {
             "type": "string",
             "minLength": 1
@@ -171,6 +175,22 @@
                 "id": {
                   "type": "string",
                   "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                },
+                "kind": {
+                  "enum": [
+                    "still",
+                    "clip"
+                  ]
+                },
+                "from_image": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "motion": {
+                  "type": "string",
+                  "minLength": 1
                 },
                 "description": {
                   "type": "string",
@@ -311,8 +331,60 @@
                     "fade",
                     "slide_left",
                     "zoom_in",
-                    "zoom_out"
+                    "zoom_out",
+                    "pan_left",
+                    "pan_right",
+                    "pop"
                   ]
+                },
+                "overlays": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "enum": [
+                          "label",
+                          "chapter_title",
+                          "map_pin",
+                          "counter",
+                          "arrow"
+                        ]
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "x": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "y": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "at": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "to": {
+                        "type": "number"
+                      },
+                      "angle": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "text",
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 0
                 },
                 "focus": {
                   "type": "object",
@@ -567,6 +639,61 @@
         "type": "string",
         "minLength": 1
       }
+    },
+    "packaging": {
+      "type": "object",
+      "properties": {
+        "titles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "thumbnail": {
+          "type": "object",
+          "properties": {
+            "image_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "emotion": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "image_id",
+            "text",
+            "emotion"
+          ],
+          "additionalProperties": false
+        },
+        "hook": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "titles",
+        "thumbnail",
+        "hook",
+        "tags"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [
