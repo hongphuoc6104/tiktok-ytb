@@ -125,3 +125,11 @@ logs/
 
 # Per-machine Flow identity; never sync another machine profile.
 /sys/experiments/b2_illustrator/machine.local.json
+
+# FlowPool machine-local state (profiles, credit ledger, request journal, outputs)
+/sys/flowpool/profiles.json
+/sys/flowpool/ledger.ndjson
+/sys/flowpool/journal/
+/sys/flowpool/out/
+/sys/flowpool/run.lock
+/sys/flowpool/*.tmp-*
