@@ -19,10 +19,14 @@ def invoke(prompt,schema,workspace,conversation=None,timeout=180):
  for name in ['GEMINI_API_KEY','GOOGLE_API_KEY']:env.pop(name,None)
  try:r=subprocess.run(args,cwd=workspace,env=env,capture_output=True,text=True,timeout=timeout+15)
  except subprocess.TimeoutExpired as ex:raise Blocked('AGY_TIMEOUT: no automatic retry; inspect the saved attempt') from ex
+ def keep():
+  try:(Path(workspace)/'agy-raw.txt').write_text('RC '+str(r.returncode)+'\n--stdout--\n'+str(getattr(r,'stdout',''))[-20000:]+'\n--stderr--\n'+str(getattr(r,'stderr',''))[-5000:])
+  except OSError:pass
  try:data=json.loads(r.stdout)
- except ValueError as ex:raise Blocked('AGY_PROTOCOL: CLI did not return JSON; check account login with agy') from ex
- if r.returncode or data.get('status')!='SUCCESS':raise Blocked('AGY_FAILED: '+str(data.get('error',data.get('status'))))
- if not isinstance(data.get('structured_output'),dict):raise Blocked('AGY_PROTOCOL: missing structured_output')
+ except ValueError as ex:
+  keep();raise Blocked('AGY_PROTOCOL: CLI did not return JSON; check account login with agy') from ex
+ if r.returncode or data.get('status')!='SUCCESS':keep();raise Blocked('AGY_FAILED: '+str(data.get('error',data.get('status'))))
+ if not isinstance(data.get('structured_output'),dict):keep();raise Blocked('AGY_PROTOCOL: missing structured_output')
  return data
 
 def generate(p,job):
@@ -60,7 +64,7 @@ def generate(p,job):
   prompt+='\nHướng dẫn văn phong cho narration/narration_en (chỉ sửa cách diễn đạt lời dẫn, không được dùng để bỏ ý, gộp cảnh hay rút ngắn nội dung bắt buộc; viết lời dẫn trước rồi mới đặt coverage/claims/anchor lên trên):\n'+(p.root/'.agents/skills/vp-content/references/narration-style.md').read_text()
   prompt+='\n'+context(p.root,'detail',b)
   prompt+='\nOptional audio_direction is content-v3 only. Keep correct English spelling in narration and captions. Intent and pronunciation_notes are review instructions, not engine parameters. learner_pause_seconds creates a quiet hold at the end of that scene. Return only schema JSON; do not invoke tools or create sidecar files.'
-  result=invoke(prompt,read(p.root/('schemas/content-v3.json' if version else 'schemas/content-v2.json')),out)
+  result=invoke(prompt,read(p.root/('schemas/content-v3.json' if version else 'schemas/content-v2.json')),out,timeout=int(read(p.root/'config.json').get('agy_content_timeout',180)))
   if version and result['structured_output'].get('outline') != outline['outline']:raise Blocked('OUTLINE: detailed script changed outline')
   write(out/'response.json',result)
   p.gate(job,'content')
