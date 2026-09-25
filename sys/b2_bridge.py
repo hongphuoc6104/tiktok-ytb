@@ -5,6 +5,7 @@ import socket
 import time
 from pathlib import Path
 from pilot import Blocked, digest
+import characters
 
 ROOT = Path(__file__).resolve().parent
 SOCKET_PATH = ROOT / "experiments/b2_illustrator/results/controller/session.sock"
@@ -135,10 +136,17 @@ def generate_b2_image(
         _mark_not_submitted(exc)
         raise
 
-    canonical_mascot = (ROOT / "assets/characters/channel-mascot/reference-v1.png").resolve()
-    if char_ref_path is None and canonical_mascot.exists():
-        char_ref_path = canonical_mascot
-        char_media_id = char_media_id or "de94a39b-155f-4afe-acbb-d9d4b59ad532"
+    # Callers that already resolved a channel-specific mascot (adapters.gflow,
+    # via image_pipeline.request()/characters.mascot_for) always pass an
+    # explicit char_ref_path; this default only covers direct/legacy callers
+    # that never resolved one, and it must stay the pre-existing (vocab)
+    # default rather than guessing a channel -- never raises, matching the
+    # old `.exists()` check's graceful degrade.
+    if char_ref_path is None:
+        default_mascot = characters.try_resolve(ROOT, None)
+        if default_mascot:
+            char_ref_path = default_mascot["reference_path"]
+            char_media_id = char_media_id or default_mascot["media_id"]
 
     target_dir = Path(out_dir).resolve() if out_dir else (ROOT / "experiments/b2_illustrator/results/controller").resolve()
     target_dir.mkdir(parents=True, exist_ok=True)

@@ -41,7 +41,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 PROTECTED_DIRS = ['schemas', '.agents', 'renderer', 'tests', 'examples', 'scripts']
 PROTECTED_FILES = [
     'pilot.py', 'workflow.py', 'machine_review.py', 'content_contract.py',
-    'image_pipeline.py', 'prompt_templates.py', 'adapters.py', 'tts_worker.py', 'b2_bridge.py',
+    'image_pipeline.py', 'prompt_templates.py', 'adapters.py', 'characters.py', 'tts_worker.py', 'b2_bridge.py',
     'config.json', 'AGENTS.md', 'GEMINI.md', 'package.json', 'package-lock.json',
     'requirements.txt', 'tts-requirements.lock', 'en-requirements.lock',
 ]

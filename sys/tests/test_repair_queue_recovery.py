@@ -18,6 +18,9 @@ class QueueRecoveryTests(unittest.TestCase):
             root=Path(tmp);out=root/'out';spec=root/'jobs.json'
             jobs=[{'id':f'image-{i}','prompt':'TEST','ratio':'9:16'} for i in range(5)]
             write(spec,{'jobs':jobs})
+            char_dir=root/'assets/characters/channel-mascot';char_dir.mkdir(parents=True)
+            (char_dir/'reference-v1.png').write_bytes(b'TEST')
+            write(char_dir/'character.json',{'reference':'reference-v1.png','flow':{'media_id':'MASCOT-MEDIA-ID'}})
             error=Blocked('TEST interrupted batch')
             error.attempt_states=[{'request_id':'image-0','state':'collected'},
                                   {'request_id':'image-1','state':'generated'},

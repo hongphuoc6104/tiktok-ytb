@@ -13,18 +13,33 @@ from pathlib import Path
 
 from .config import SYS
 from .store import write_json_atomic
+import characters
 
 STATES = ('ready', 'busy', 'low_credit', 'needs_login', 'captcha', 'cooldown')
 # States that only a clean doctor observation or a human `mark` can clear.
 STICKY = ('needs_login', 'captcha')
 B2 = SYS / 'experiments/b2_illustrator'
-CANONICAL_MASCOT_MEDIA = {
-    # Profile 10's registered channel mascot (see adapters.gflow); valid for that account only.
-    'path': SYS / 'assets/characters/channel-mascot/reference-v1.png',
-    'media_id': 'de94a39b-155f-4afe-acbb-d9d4b59ad532',
-    'profile': 'Profile 10',
-}
+# Which Chrome/Flow account profile already has a channel's mascot registered
+# as a character -- account-specific bookkeeping, not part of which mascot
+# design a channel uses (that's characters.py). Only the default/vocab
+# mascot has a known profile assignment so far; a channel with no entry here
+# simply seeds no media_ids (derive() below resolves the path/media id
+# through characters.py rather than a literal string).
+MASCOT_PROFILE_BY_CHANNEL = {None: 'Profile 10'}
 PROFILE_DIR = re.compile(r'^(Default|Profile \d+)$')
+
+
+def _registered_mascots():
+    """{sha256_of_reference_image: (media_id, profile_name)} for every channel
+    mascot that currently has both an approved reference image and a known
+    Flow media id -- never a hard-coded single (path, media_id) pair."""
+    from .journal import sha256_file
+    out = {}
+    for channel, profile in MASCOT_PROFILE_BY_CHANNEL.items():
+        mascot = characters.try_resolve(SYS, channel)
+        if mascot and mascot['media_id']:
+            out[sha256_file(mascot['reference_path'])] = (mascot['media_id'], profile)
+    return out
 
 
 def slug(name):
@@ -67,16 +82,11 @@ def derive(browser_profiles=B2 / 'browser-profiles.json', machine_local=B2 / 'ma
         pass
     hints = _local_state_hints(udd)
     names = priority + [n for n in found if n not in priority]
-    mascot_sha = None
-    if CANONICAL_MASCOT_MEDIA['path'].exists():
-        from .journal import sha256_file
-        mascot_sha = sha256_file(CANONICAL_MASCOT_MEDIA['path'])
+    registered = _registered_mascots()  # {sha256: (media_id, profile)}, never a single hard-coded pair
     profiles = []
     for i, name in enumerate(names):
         primary = name == (local.get('flow_profile_directory') or src['flow_profile_directory'])
-        media = {}
-        if mascot_sha and name == CANONICAL_MASCOT_MEDIA['profile']:
-            media[mascot_sha] = CANONICAL_MASCOT_MEDIA['media_id']
+        media = {sha: media_id for sha, (media_id, profile) in registered.items() if profile == name}
         profiles.append({
             'name': name, 'slug': slug(name), 'user_data_dir': udd, 'profile_directory': name,
             'enabled': name in priority, 'priority': i, 'max_parallel': cfg.get('flowpool_per_browser_queue', 4),

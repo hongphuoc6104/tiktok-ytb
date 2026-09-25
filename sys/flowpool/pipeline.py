@@ -11,8 +11,9 @@ import subprocess
 from pathlib import Path
 
 from pilot import Blocked, read, write
+import characters
 
-MASCOT = 'assets/characters/channel-mascot/reference-v1.png'
+MASCOT = 'assets/characters/channel-mascot/reference-v1.png'  # default/vocab mascot; see characters.resolve()
 
 
 def config(p):
@@ -77,14 +78,18 @@ def gflow(p, *args, timeout=960):
     if args[:1] == ['batch']:
         return _batch(p, args)
     chars, base_img = _characters(args), _arg(args, '--base-image')
-    mascot = p.root / MASCOT
-    # Same local-composition rule as adapters.gflow: no Flow call there.
-    if args[:1] != ['image'] or not mascot.exists() or not (chars or base_img):
+    if args[:1] != ['image'] or not (chars or base_img):
         return adapters.gflow(p, *args, timeout=timeout)
     out_folder = Path(_arg(args, '--out')).resolve()
+    # The channel-resolved mascot (never a hard-coded vocab path); same
+    # local-composition rule as adapters.gflow applies when it can't be
+    # resolved here (e.g. no job context) -- delegate rather than guess.
+    mascot = characters.try_mascot_for(p, _job_of(out_folder))
+    if not mascot:
+        return adapters.gflow(p, *args, timeout=timeout)
     out_folder.mkdir(parents=True, exist_ok=True)
     job_id, prompt, ratio = _arg(args, '--id'), _arg(args, '--prompt', ''), _arg(args, '--ratio', '16:9')
-    refs = [str(mascot)] + ([str(Path(base_img).resolve())] if base_img else [])
+    refs = [str(mascot['reference_path'])] + ([str(Path(base_img).resolve())] if base_img else [])
     [result] = _run(p, [{'id': job_id, 'kind': 'image', 'prompt': prompt, 'ratio': ratio, 'refs': refs,
                          'variants': 1, 'job': _job_of(out_folder), 'out_dir': str(out_folder)}])
     if result['status'] != 'ok':
@@ -99,11 +104,15 @@ def _batch(p, args):
     batch_out = Path(_arg(args, '--out')).resolve()
     batch_out.mkdir(parents=True, exist_ok=True)
     jobs = data.get('jobs', [])
+    # Every job in a FlowPool batch gets the same raw reference image (no
+    # per-character lookup here), so this resolves the *channel's* mascot --
+    # never a hard-coded vocab path -- and fails loudly and early rather
+    # than silently sending a different channel's mascot.
+    mascot = str(characters.mascot_for(p, characters.job_of(batch_out))['reference_path'])
     state_file = batch_out / 'gflow-run.json'
     run_jobs = [{'id': job['id'], 'status': 'failed', 'error': 'Submission pending; reconcile before retry'} for job in jobs]
     # Persist attempted membership before the external call.
     write(state_file, {'jobs': run_jobs})
-    mascot = str(p.root / MASCOT)
     requests = [{'id': job['id'], 'kind': 'image', 'prompt': job['prompt'], 'ratio': job.get('ratio', '9:16'),
                  'refs': [mascot], 'variants': 1, 'job': _job_of(batch_out), 'out_dir': str(batch_out / job['id'])}
                 for job in jobs]
