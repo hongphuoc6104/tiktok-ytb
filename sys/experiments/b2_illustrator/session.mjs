@@ -19,7 +19,9 @@ export class Session {
     return {status:'connected',reused:false,identity:this.identity};
   }
   status(){return {status:this.browser?.isConnected()?'connected':this.attempted?'disconnected':'not_connected'};}
-  async stop(){if(this.browser) await this.browser.close();this.browser=null;this.identity=null;}
+  // Never browser.close(): on a CDP-attached user Chrome it quits Chrome itself (FLOW-007/B2-001). Drop the
+  // reference; the connection ends when this process exits.
+  async stop(){this.browser=null;this.identity=null;}
 }
 async function serve(){
   safeResults();
@@ -89,7 +91,7 @@ async function serve(){
             await session.stop();result={status:'stopped'};
           } else throw Error('Unsupported session command');
           client.end(JSON.stringify(result)+'\n');
-          if(command==='stop')server.close();
+          if(command==='stop'){server.close();setTimeout(()=>process.exit(0),300);}
         }catch(e){client.end(JSON.stringify({status:'blocked',reason:e.message})+'\n');}
       });
     });
@@ -97,7 +99,7 @@ async function serve(){
   server.on('close',()=>{if(fs.existsSync(socketPath))fs.unlinkSync(socketPath);});
   server.on('error',e=>{console.error(e.message);process.exitCode=2;});
   server.listen(socketPath,()=>{fs.chmodSync(socketPath,0o600);console.log('Persistent session ready; run session.mjs connect once.');});
-  for(const sig of ['SIGTERM','SIGINT'])process.on(sig,async()=>{await session.stop().catch(()=>{});server.close();});
+  for(const sig of ['SIGTERM','SIGINT'])process.on(sig,async()=>{await session.stop().catch(()=>{});server.close();setTimeout(()=>process.exit(0),300);});
 }
 async function client(command){
   await new Promise((resolve,reject)=>{

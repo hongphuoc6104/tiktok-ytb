@@ -46,11 +46,13 @@ const Visual: React.FC<{beat: any; from: number; frames: number; style: React.CS
   const media: React.CSSProperties = {position: 'absolute', width: '100%', height: '100%', objectFit: 'contain', ...style};
   if (!isClip(beat)) return <Img src={staticFile(beat.src)} style={media} />;
   // Clip beats: muted MP4, looped when shorter than the beat, cut at its end.
-  const clipFrames = Math.max(1, Math.round((beat.clip_seconds || 8) * fps));
+  // Optional rate < 1 stretches a clip slightly to cover a longer beat instead of looping.
+  const rate = beat.rate || 1;
+  const clipFrames = Math.max(1, Math.round((beat.clip_seconds || 8) / rate * fps));
   return (
     <Sequence from={from} durationInFrames={Math.max(1, frames)} name={beat.id}>
       <Loop durationInFrames={clipFrames}>
-        <OffthreadVideo src={staticFile(beat.src)} muted style={media} />
+        <OffthreadVideo src={staticFile(beat.src)} muted playbackRate={rate} style={media} />
       </Loop>
     </Sequence>
   );

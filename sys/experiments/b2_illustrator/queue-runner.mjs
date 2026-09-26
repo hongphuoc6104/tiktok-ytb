@@ -29,7 +29,7 @@ export function prepareRequests(specs,{tool=toolUrl,model=configuredModel}={}) {
   if(!/^[\w-]+$/.test(s.testCase)||!s.prompt||!['9:16','16:9'].includes(s.ratio))throw Error('INVALID_QUEUE_REQUEST');
   const character=reference(s.characterRefPath,s.charMediaId),base=reference(s.baseRefPath,s.baseMediaId);
   if(!character)throw Error('CHARACTER_REFERENCE_REQUIRED');
-  return {spec:s,character,base,identity:{toolUrl:tool,id:s.testCase,prompt:s.prompt,ratio:s.ratio,preserve:s.preserve||'',change:s.change||'',literalText:s.literalText||'',model,references:[character,base].filter(Boolean).map(({mediaId,sha256})=>({mediaId,sha256})),outDir:path.resolve(s.outDir)}};
+  return {spec:s,character,base,identity:{toolUrl:tool,id:s.testCase,prompt:s.prompt,ratio:s.ratio,preserve:s.preserve||'',change:s.change||'',literalText:s.literalText||'',model:s.model||model,style:s.style||'',references:[character,base].filter(Boolean).map(({mediaId,sha256})=>({mediaId,sha256})),outDir:path.resolve(s.outDir)}};
  });
 }
 export async function runQueue(specs,bound) {
@@ -70,7 +70,7 @@ async function executeQueue(specs,bound,requests) {
  if(attempts.some(a=>a.state!=='prepared'))throw Error('FLOW_RECONCILIATION_REQUIRED: existing attempt; no resubmission');
  const page=bound.page;
  if(!page.url().startsWith(toolUrl))throw Error('WRONG_TOOL_URL');
- const frame=await findToolFrame(page);
+ const frame=await pruneToolStorage(page,await findToolFrame(page));
  await assertQueueIdle(frame);
  const ids=await enqueueRequests(frame,requests);
  await selectWorkers(frame,ids);
@@ -81,9 +81,29 @@ async function executeQueue(specs,bound,requests) {
  for(let i=0;i<attempts.length;i++)store.beginSubmission(attempts[i],{queueId:ids[i],screenshot:shot});
  const started=Date.now();
  await clickStartQueue(frame);
- await pollQueue(frame,ids,{onGenerated:(i,item)=>store.recordGenerated(attempts[i],{mediaId:item.mediaId,result:item.result,queueId:item.id,timestamps:item.timestamps})});
+ await pollQueue(frame,ids,{timeoutMs:360000,onGenerated:(i,item)=>store.recordGenerated(attempts[i],{mediaId:item.mediaId,result:item.result,queueId:item.id,timestamps:item.timestamps})});
  const afterShot=null;
  return collectResults(store,attempts,requests,afterShot,started);
+}
+/* B2-002: the tool keeps every result as base64 in localStorage (~5 MB quota). Once full, new
+ * results end as UNKNOWN "Persistence failure after result". Before a batch, when the stored state is
+ * large and nothing is in flight, drop finished queue items (their bytes are already collected by the
+ * local attempt store) and reload the tool so React starts from the pruned state. */
+export async function pruneToolStorage(page,frame,limit=2500000) {
+ // The tool iframe gets a fresh random origin on every load, so a reload starts from an empty
+ // localStorage. Reload only when nothing is in flight and the state is large or dead.
+ const need=await frame.evaluate(limit=>{
+  const raw=localStorage.getItem('VP_LAB_STATE_V2')||'{}';
+  const st=JSON.parse(raw);
+  if((st.queue||[]).some(i=>['QUEUED','RUNNING','PENDING','SUBMITTING'].includes(i.status))&&st.status==='RUNNING')return false;
+  const dead=st.status==='UNKNOWN'||(st.queue||[]).some(i=>['UNKNOWN','FAILED'].includes(i.status));
+  return raw.length>=limit||dead;
+ },limit);
+ if(!need)return frame;
+ await page.reload({waitUntil:'domcontentloaded',timeout:45000});
+ const toolRadio=page.getByRole('radio',{name:'Tool',exact:true});
+ if(await toolRadio.isVisible({timeout:5000}).catch(()=>false)&&!(await toolRadio.isChecked().catch(()=>true)))await toolRadio.click().catch(()=>{});
+ return findToolFrame(page,60000);
 }
 /* Reusable queue steps (B-2 session and FlowPool). Only clickStartQueue()
  * can start a generation; every step before it edits the local queue only,
@@ -109,10 +129,10 @@ export async function enqueueRequests(frame,requests,{label=modelLabel}={}) {
   },r);
   await frame.getByRole('button',{name:'Clear Character',exact:true}).waitFor();
   const boxes=frame.getByRole('textbox');
-  await boxes.nth(0).fill(r.spec.prompt);await boxes.nth(1).fill('Match the attached canonical character and scene references.');
+  await boxes.nth(0).fill(r.spec.prompt);await boxes.nth(1).fill(r.spec.style||'Match the attached canonical character and scene references.');
   await boxes.nth(2).fill(r.spec.preserve||'');await boxes.nth(3).fill(r.spec.change||'');await boxes.nth(4).fill(r.spec.literalText||'');
   await frame.getByRole('button',{name:r.spec.ratio,exact:true}).click();
-  await frame.getByRole('combobox').nth(2).selectOption({label});
+  await frame.getByRole('combobox').nth(2).selectOption({label:r.spec.model?modelLabelFor(r.spec.model):label});
   const before=await state();
   await frame.getByRole('button',{name:'Initialize Generation',exact:true}).click();
   const after=await state(),added=after.queue.filter(i=>!before.queue?.some(p=>p.id===i.id));
