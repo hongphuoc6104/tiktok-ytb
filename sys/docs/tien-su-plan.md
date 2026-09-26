@@ -286,7 +286,7 @@ Mọi trường mới đều **tùy chọn**; thiếu trường thì hành vi c�
 - API Python: `flowpool.run(requests, cfg) -> list[result]`; CLI
   `python3 -m flowpool status|doctor|run --queue FILE`.
 
-### Đóng gói (`sys/packaging.py`)
+### Đóng gói (`sys/video_packaging.py`; đổi tên từ packaging.py vì trùng thư viện PyPI, xem AUDIO-001)
 - Chạy sau render đạt duyệt video; ghi `thumbnail.jpg` (1280×720), `metadata.json`
   (titles, description, chapters, tags, sources), `description.txt` vào `video/<job>/`.
 - Chapters lấy từ thời điểm bắt đầu thật của từng cảnh trong WAV; chương đầu 0:00.

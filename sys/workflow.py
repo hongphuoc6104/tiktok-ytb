@@ -483,7 +483,7 @@ def publish_videos(p, job):
     # content declares `packaging`; vocab/legacy jobs have no such field and
     # are unaffected.
     if p.payload(job, 'content').get('packaging'):
-        import packaging as video_packaging
+        import video_packaging
         video_packaging.build(p, job, folder)
     return result
 

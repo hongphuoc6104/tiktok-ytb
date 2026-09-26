@@ -13,7 +13,7 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from PIL import Image, ImageDraw
 
-import packaging as video_packaging
+import video_packaging
 from pilot import Blocked
 
 

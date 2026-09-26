@@ -24,7 +24,7 @@ Dự án này dùng đúng ba phần công khai: **content → media → video**
 ## Hai chế độ
 - `review` (mặc định): người dùng duyệt đúng ba phần và revision hiện tại. Ghi nguyên văn phản hồi bằng `approve`; không tự suy ra đồng ý.
 - `auto`: bộ đánh giá máy xem/nghe artifact thật, lưu báo cáo rồi quyết định. Không cần người dùng duyệt từng phần. Không dùng lệnh approve của người dùng trong auto.
-- Chế độ cố định khi `new --mode review|auto`; không sửa workflow.json để đổi giữa chừng.
+- Chế độ cố định khi `new --mode review|auto`; không sửa workflow.json để đổi giữa chừng. Ngoại lệ duy nhất: `pilot.py set-mode JOB auto --confirm JOB --reason "..."` chuyển review → auto **trước media**, có lịch sử kiểm toán; agent chỉ chạy khi người dùng yêu cầu rõ trong hội thoại và ghi nguyên văn yêu cầu vào `--reason`. Không chuyển ngược, không chuyển sau khi đã có media/video.
 - Kiểm tra kỹ thuật nội bộ không phải duyệt chất lượng. Không tạo ảnh bằng chứng giả, không ghi phản hồi người dùng giả. Thiếu khả năng nghe/xem phải báo unsupported và giữ job chưa hoàn tất.
 
 ## Thực hiện

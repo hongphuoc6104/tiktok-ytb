@@ -2,6 +2,10 @@
 
 Cập nhật: 26/09/2026. Phạm vi: tiếp tục **cùng job** qua content → media → video, sau đó xuất thành phẩm và đánh dấu chủ đề đã làm. Đây là bản đồ điều phối; trạng thái sống phải đọc lại bằng `pilot.py status`, `next`, `integrity-diff` và FlowPool trước mỗi lượt sản xuất. Mọi lệnh bên dưới chạy từ `sys/`.
 
+## Trạng thái mới nhất: đã chuyển auto, content máy duyệt
+
+Yêu cầu chạy auto của người dùng đã thực hiện bằng set-mode; integrity khớp. Content bản duyệt 3 được máy duyệt thật, tái sử dụng module content 3. Audio lượt 1 dừng do packaging.py dự án che thư viện packaging của Transformers (AUDIO-001), chưa sinh WAV. FlowPool Profile 13 qua doctor nhưng retry đúng request mascot cũ vẫn MODEL_NOT_SELECTABLE trước submit (FLOW-005), không có ảnh. Cần sửa hai lỗi triển khai; hiện quy tắc auto cấm sửa mã bảo vệ trong job đang dở. Không chạy tiếp/retry hoặc tự nhận baseline.
+
 ## Cập nhật tiếp tục: bản duyệt content revision 2
 
 Khóa integrity đã hết ở lượt kiểm tra status/next mới. Đã reject content 1, lưu brief 2 qua revise-brief, viết lại draft và resume thành bản duyệt content revision 2 đang awaiting_review (module content revision 3 theo manifest). Bản mới có tám cảnh, sáu chương SC02–SC07, bảy claims theo sáu nguồn, 65 hình gồm năm clip và 120 beat. Ước tính trung tâm khoảng 620 giây; chưa có WAV để xác nhận. Xem [review content 2](../runs/tiensu-001/reviews/content/2/review.md). Các dòng content 1 và khóa mã bên dưới là bằng chứng lịch sử, đã được cập nhật bởi đoạn này.
@@ -22,7 +26,7 @@ Bước kế tiếp: người dùng duyệt hoặc phản hồi content 2; sau d
 | Mascot tiền sử | [`character.json`](../assets/characters/tiensu-mascot/character.json): `reference=null`; chưa có ảnh tham chiếu; xem [MASCOT-001](../logs/issues/MASCOT-001.md). Request bootstrap đầu tiên vẫn `not_submitted` | Xem ảnh thật sau lượt tạo thành công và cài qua CLI `mascot-reference`; không dùng mascot từ vựng hoặc ảnh test giả. |
 | Cấu hình và chi phí | [`config.json`](../config.json): `video_generation=true`, `credit_budget=4200`, `flowpool_enabled=false`; Flow thật hiển thị 0 credit cho chế độ ảnh và 20 credit cho Veo Fast 8 giây ở Profile 10, nhưng chưa gửi generation | Clip job còn bị `clip_policy` chặn cho tới khi bật FlowPool hợp lệ. Số dư UI là quan sát thật; chi phí thực tế mỗi lượt phải đo trước/sau, không suy từ giá trên menu. |
 | Media, video và xuất | Chưa có revision media/video, WAV/ảnh sản xuất/SRT/MP4 trong job hoặc thư mục `video/tiensu-001` | Chưa có dữ liệu nghe/xem thật, chưa có duyệt media/video, chưa thể `mark`. |
-| Đóng gói | [`packaging.py`](../packaging.py) đã được gọi bởi `workflow.publish_videos` sau khi MP4 được duyệt và xuất; chưa có thumbnail/metadata thật | Kiểm tra `thumbnail*.jpg`, `metadata.json`, `description.txt` sau khi xuất; không coi mã nguồn hay test là thành phẩm. |
+| Đóng gói | [`video_packaging.py`](../video_packaging.py) đã được gọi bởi `workflow.publish_videos` sau khi MP4 được duyệt và xuất; chưa có thumbnail/metadata thật | Kiểm tra `thumbnail*.jpg`, `metadata.json`, `description.txt` sau khi xuất; không coi mã nguồn hay test là thành phẩm. |
 
 ## Kế hoạch tổng quát, lặp ở mỗi cổng
 
