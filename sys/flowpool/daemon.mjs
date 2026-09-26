@@ -118,8 +118,9 @@ export function createDaemon({connect, endpoint, operations = ops, onShutdown = 
       return {located: Object.fromEntries(Object.entries(found).map(([n, f]) => [n, {target_id: f.target_id, url: f.url, via: f.via, closed: f.closed}]))};
     },
     async shutdown() {
-      // Disconnect only: for a CDP-attached browser this never closes the user's Chrome or tabs.
-      if (st.browser) await st.browser.close().catch(() => undefined);
+      // Never call browser.close(): for a connectOverCDP browser Playwright sends
+      // Browser.close and quits the user's real Chrome. Dropping the reference and
+      // exiting the process closes only our WebSocket (FLOW-007).
       st.browser = null;
       setTimeout(onShutdown, 10);
       return {stopped: true};

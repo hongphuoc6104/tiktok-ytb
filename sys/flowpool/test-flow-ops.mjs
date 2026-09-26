@@ -405,7 +405,7 @@ test('daemon: one connection, one automatic reconnect, then NEEDS_ALLOW until th
   const st = await handle({op: 'status'});
   assert.deepEqual([st.connected, st.needs_allow, st.activity['Profile 10'].last_error.code], [true, false, 'NEEDS_ALLOW']);
   assert.equal((await handle({op: 'shutdown'})).stopped, true);
-  assert.equal(b3.closes, 1);
+  assert.equal(b3.closes, 0); // FLOW-007: shutdown must never quit the user's Chrome
 });
 
 test('daemon: prepare/commit per profile, serialized per tab, parallel across profiles', async () => {
