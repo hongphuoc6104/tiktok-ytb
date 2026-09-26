@@ -240,7 +240,8 @@ def flow_action(p,a):
   import image_pipeline
   return image_pipeline.flow_action(p,a)
  if a.command=='flow-login':
-  if cfg.get('flowpool_enabled'):
+  import image_pipeline as _ip
+  if _ip.flowpool_on(p,j,cfg):
    # The FlowPool daemon owns Chrome's single CDP connection. A legacy
    # gflow_guard login would open a second client and trigger another Allow.
    from flowpool.daemon_client import DaemonClient

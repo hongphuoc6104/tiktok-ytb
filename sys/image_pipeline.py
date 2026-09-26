@@ -205,14 +205,27 @@ def clip_policy(p, j, cfg=None):
     cfg = cfg or read(p.root / 'config.json')
     if not cfg.get('video_generation') or (cfg.get('credit_budget') or 0) <= 0:
         raise Blocked('M2_CLIPS: set config video_generation=true and a positive monthly credit_budget')
-    if not cfg.get('flowpool_enabled'):
-        raise Blocked('M2_CLIPS: Veo clips run only through FlowPool (config flowpool_enabled=true)')
+    if not flowpool_on(p, j, cfg):
+        raise Blocked('M2_CLIPS: Veo clips run only through FlowPool (config flowpool_enabled=true or brief channel in flowpool_channels)')
     return clips
 
 
-def flow_call(p):
+def flowpool_on(p, j, cfg=None):
+    """FlowPool routing: global `flowpool_enabled`, or the job's brief channel is
+    listed in `flowpool_channels` (keeps other channels/tests on the old path)."""
+    cfg = cfg or read(p.root / 'config.json')
+    if cfg.get('flowpool_enabled'):
+        return True
+    channels = cfg.get('flowpool_channels') or []
+    if not channels or not j:
+        return False
+    brief = p.brief(j)
+    return bool(brief and brief[0].get('channel') in channels)
+
+
+def flow_call(p, j=None):
     """adapters.gflow, or the FlowPool drop-in when config flowpool_enabled is true."""
-    if read(p.root / 'config.json').get('flowpool_enabled'):
+    if flowpool_on(p, j):
         from flowpool import pipeline as flowpool_pipeline
         return flowpool_pipeline.gflow
     import adapters
@@ -399,7 +412,7 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
     if record.exists():
         result = read(record)
         if result['state'] == 'downloaded':
-            if cfg.get('flowpool_enabled') and not registration:
+            if flowpool_on(p, j, cfg) and not registration:
                 # A variant picked in the FlowPool dashboard replaces the candidate (review gate still applies).
                 from flowpool import pipeline as flowpool_pipeline
                 result = flowpool_pipeline.apply_pick(p, j, result)
@@ -432,7 +445,7 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
             args += ['--base-image', str(p.path(j,base_image['path']))]
         if refs:
             args += ['--character'] + [x['name'] for x in refs]
-            if cfg.get('flowpool_enabled'):
+            if flowpool_on(p, j, cfg):
                 args += ['--character-ref'] + registered_sources
     if target == 'ref:' + characters.CHARACTER_ID or target.startswith('register:' + characters.CHARACTER_ID + ':'):
         # Only the mascot's own reference/registration request needs the
@@ -451,7 +464,7 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
     write(record, result)
     p.event(j, 'images', 'flow_collection_resumed' if collection_only else 'flow_submitted', key)
     try:
-        r = flow_call(p)(p, *args)
+        r = flow_call(p, j)(p, *args)
         (folder / 'command.log').write_text(r.stdout + '\n' + r.stderr)
         if r.returncode:
             raise Blocked('Flow failed (login/CAPTCHA/limit or provider error); see command.log: ' + r.stderr[-500:])
@@ -469,7 +482,7 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
         proof = read(folder / 'ui-proof.json')
         if proof.get('passed') is not True or proof.get('characters') != [x['name'] for x in refs]:
             raise Blocked('Flow UI attachment/mode evidence missing')
-        if cfg.get('flowpool_enabled'):
+        if flowpool_on(p, j, cfg):
             expected_sources = ([str(source)] if registration else
                                 [str(characters.mascot_for(p, p.brief(j))['reference_path'].resolve())] + registered_sources)
             if (proof.get('source_references') != expected_sources or
@@ -706,7 +719,7 @@ def batch_submit(p, j, units, registrations):
             expected_names = [x['name'] for x in plan['linked']]
             if proof.get('passed') is not True or proof.get('characters') != expected_names:
                 raise Blocked('Flow UI attachment/mode evidence missing')
-            if cfg.get('flowpool_enabled'):
+            if flowpool_on(p, j, cfg):
                 expected_sources = [str(characters.mascot_for(p, p.brief(j))['reference_path'].resolve())] + plan['source_paths']
                 if (proof.get('source_references') != expected_sources or
                         proof.get('source_hashes') != [digest(Path(path)) for path in expected_sources]):
