@@ -121,7 +121,20 @@ export function createDaemon({connect, endpoint, operations = ops, onShutdown = 
         .slice(0, 250).map(e => ({tag: e.tagName.toLowerCase(), role: e.getAttribute('role'), text: (e.innerText || '').trim().replace(/\s+/g, ' ').slice(0, 80),
           aria: e.getAttribute('aria-label'), checked: e.getAttribute('aria-checked'), disabled: e.disabled || e.getAttribute('aria-disabled') === 'true',
           cls: String(e.className).slice(0, 60)})));
-      return {url: s.page.url(), screenshot: shot, prepare_error: prepareError, elements};
+      const media = (await operations.mediaSrcs(s.page, 'image')).map(x => x.slice(0, 160));
+      return {url: s.page.url(), screenshot: shot, prepare_error: prepareError, elements, media};
+    },
+    /** Recover a result the tool missed (FLOW-010): list result media on the page and,
+     * with `index`, save that one item to scratch/flow-collect. Only srcs present on the
+     * project page can be fetched; no caller-supplied URLs. */
+    async collect(s, msg) {
+      const type = msg.type === 'video' ? 'video' : 'image';
+      const srcs = await operations.mediaSrcs(s.page, type);
+      if (!Number.isInteger(msg.index)) return {count: srcs.length, media: srcs.map(x => x.slice(0, 160))};
+      if (msg.index < 0 || msg.index >= srcs.length) throw ops.coded('INVALID_INDEX', `index ${msg.index} of ${srcs.length}`);
+      const dir = path.join(SYS, 'scratch', 'flow-collect');
+      const file = await operations.downloadSrc(s.page, srcs[msg.index], dir, `${s.profile.slug || 'profile'}-${now()}-${msg.index}`, type);
+      return {file, count: srcs.length};
     },
   };
   const global = {

@@ -535,6 +535,10 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   const fp = new g.FlowPage(page);
   // Real gflow-cli only waits for an English "Create" button (FLOW-009).
   if (!lib) fp.submit = () => submitFlowPrompt(page);
+  if (!lib) {
+    fp.resultSrcs = t => mediaSrcs(page, t);
+    fp.waitForResults = (b, n, ms, t) => waitNewMedia(page, b, n, ms, t, g);
+  }
   await readyProjectEditor(page);
   const label = (cfg.flowpool_model_labels || {})[it.model] || it.model;
   const job = video ? {type: 'video', ratio: it.ratio, duration: it.seconds, outputs: it.variants, model: label, startFrame: it.start_frame}
@@ -551,6 +555,52 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   await fillFlowPrompt(page, it.prompt, g);
   session.pending = {kind: 'flow', type, fp, before, item: it, expected: it.variants || 1};
   return [null];
+}
+
+/** Result media on the project page, robust to Flow URL changes (FLOW-010): every
+ * large visible <img> (or <video>) whose src is http(s)/data/blob, outside the header.
+ * New results are found by diffing against the set taken before submit. */
+export async function mediaSrcs(page, type) {
+  const sel = type === 'video' ? 'video' : 'img';
+  return page.$$eval(sel, (els, isVideo) => els.filter(e => {
+    if (e.closest('header,[role=banner],.header-user-button')) return false;
+    const r = e.getBoundingClientRect();
+    if (r.width < 80 || r.height < 80) return false;
+    if (!isVideo && (e.naturalWidth < 256 || e.naturalHeight < 256)) return false;
+    return true;
+  }).map(e => e.currentSrc || e.src).filter(s => /^(https?:|data:|blob:)/.test(s || '')), type === 'video');
+}
+
+export async function waitNewMedia(page, before, expected, timeoutMs, type, g = null) {
+  const deadline = Date.now() + timeoutMs;
+  const rate = g?.flowLocators ? g.flowLocators(page).rateLimitMarker?.first() : null;
+  while (Date.now() < deadline) {
+    const fresh = [...new Set(await mediaSrcs(page, type))].filter(s => !before.has(s));
+    if (fresh.length >= expected) return fresh.slice(0, expected);
+    if (rate && await rate.isVisible().catch(() => false)) { const e = new Error('Flow displayed a rate limit message'); e.name = 'RateLimitedError'; throw e; }
+    await page.waitForTimeout(2000);
+  }
+  throw new Error(`Timed out waiting for ${expected} result(s)`);
+}
+
+/** Save one result src through the profile's own session (http via context.request;
+ * data:/blob: read inside the page). Returns the written path. */
+export async function downloadSrc(page, src, outDir, basename, type) {
+  let buf, mime = '';
+  if (/^https?:/.test(src)) {
+    const r = await page.context().request.get(src, {timeout: 120000});
+    if (!r.ok()) throw new Error(`HTTP ${r.status()} for result media`);
+    buf = await r.body(); mime = r.headers()['content-type'] || '';
+  } else {
+    const b64 = await page.evaluate(async u => { const r = await fetch(u); const b = await r.blob();
+      return await new Promise(res => { const f = new FileReader(); f.onload = () => res(String(f.result)); f.readAsDataURL(b); }); }, src);
+    mime = b64.slice(5, b64.indexOf(';')); buf = Buffer.from(b64.slice(b64.indexOf(',') + 1), 'base64');
+  }
+  const ext = /png/.test(mime) ? '.png' : /webp/.test(mime) ? '.webp' : /mp4|video/.test(mime) || type === 'video' ? '.mp4' : '.jpg';
+  fs.mkdirSync(outDir, {recursive: true});
+  const file = path.join(outDir, basename + ext);
+  fs.writeFileSync(file, buf);
+  return file;
 }
 
 const FLOW_ERRORS = {RateLimitedError: 'RATE_LIMITED', CreditLimitError: 'CREDIT_LIMIT', GenerationBlockedError: 'POLICY_BLOCKED'};
@@ -598,8 +648,14 @@ export async function flowCommit(session, timeoutMs, lib = null) {
   const out = {id: item.id, files: [], media_ids: []};
   try {
     for (let i = 0; i < srcs.length; i++) {
-      const {assetPath} = await g.downloadResult({page: session.page, context: session.page.context(), src: srcs[i],
-        type, quality: 'original', outDir: item.out_dir, basename: `${item.id}-${i + 1}`});
+      let assetPath;
+      try {
+        ({assetPath} = await g.downloadResult({page: session.page, context: session.page.context(), src: srcs[i],
+          type, quality: 'original', outDir: item.out_dir, basename: `${item.id}-${i + 1}`}));
+      } catch (e) {
+        if (lib) throw e;  // fixtures exercise the gflow path only
+        assetPath = await downloadSrc(session.page, srcs[i], item.out_dir, `${item.id}-${i + 1}`, type);
+      }
       out.files.push(assetPath);
       out.media_ids.push(g.mediaIdFromSrc(srcs[i]) || null);
     }

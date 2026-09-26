@@ -78,6 +78,8 @@ def main(argv=None):
     op = sub.add_parser('open-profile', help='open a window of an existing profile and bind its tab'); op.add_argument('profile')
     db = sub.add_parser('debug', help='read-only: screenshot + visible controls of a profile tab (stage prepare = settings+prompt, never submits)')
     db.add_argument('profile'); db.add_argument('--stage', choices=['page', 'prepare'], default='page'); db.add_argument('--ratio', choices=['16:9', '9:16'], default='9:16')
+    cl = sub.add_parser('collect', help='list result media on a profile tab; --index N saves that item to scratch/flow-collect')
+    cl.add_argument('profile'); cl.add_argument('--index', type=int); cl.add_argument('--type', choices=['image', 'video'], default='image')
     sub.add_parser('ui', help='print the dashboard URL (starts the daemon if needed)')
     sub.add_parser('ui-state', help='dashboard data as JSON')
     dc = sub.add_parser('decide'); dc.add_argument('kind', choices=['pick', 'regenerate']); dc.add_argument('key')
@@ -130,6 +132,11 @@ def main(argv=None):
             p = {k: v for k, v in fp.pool().get(a.profile).items() if not k.startswith('_')}
             client = daemon_client.DaemonClient(fp.cfg)
             out(client.call('debug', timeout=240, profile=p, cfg=_worker_cfg(fp.cfg), stage=a.stage, ratio=a.ratio))
+        elif a.cmd == 'collect':
+            from .driver import _worker_cfg
+            p = {k: v for k, v in fp.pool().get(a.profile).items() if not k.startswith('_')}
+            extra = {'index': a.index} if a.index is not None else {}
+            out(daemon_client.DaemonClient(fp.cfg).call('collect', timeout=300, profile=p, cfg=_worker_cfg(fp.cfg), type=a.type, **extra))
         elif a.cmd == 'open-profile':
             out(open_profile(fp, a.profile))
         elif a.cmd == 'ui':
