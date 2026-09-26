@@ -123,6 +123,8 @@ export async function readCredits(page, probe = {}) {
 // ----------------------------------------------------------------- profiles in the shared Chrome
 const FLOW_PAGE = /^https:\/\/(flow\.google\.com|labs\.google)\//;
 export const markerOf = profile => `flowpool=${profile.slug}`;
+/** Exact marker match: `profile-10` must not match `profile-102` (FLOW-008). */
+export const hasMarker = (url, profile) => new RegExp(`[#&]${markerOf(profile).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`).test(url);
 
 async function targetIdOf(page) {
   const s = await page.context().newCDPSession(page);
@@ -157,7 +159,7 @@ export async function locateProfiles(browser, profiles, {dedupe = false, info = 
     if (e) take(p, e, 'target');
   }
   for (const p of profiles) {
-    const marked = entries.filter(x => !claimed.has(x.id) && x.page.url().includes(markerOf(p)));
+    const marked = entries.filter(x => !claimed.has(x.id) && hasMarker(x.page.url(), p));
     if (!marked.length) continue;
     if (!out[p.name]) take(p, marked.shift(), 'marker');
     for (const extra of marked) {

@@ -502,3 +502,11 @@ test('B-2 pollQueue captures each result once and stops on a vanished queue', as
   const gone = {evaluate: async () => ({queue: []})};
   await assert.rejects(pollQueue(gone, ['a'], {sleep: async () => {}}), /QUEUE_DISAPPEARED/);
 });
+
+test('marker match is exact: profile-10 does not match profile-102 (FLOW-008)', async () => {
+  const {hasMarker} = await import('./flow-ops.mjs');
+  const p10 = {slug: 'profile-10'};
+  assert.equal(hasMarker('https://flow.google.com/project/x#flowpool=profile-102', p10), false);
+  assert.equal(hasMarker('https://flow.google.com/project/x#flowpool=profile-10', p10), true);
+  assert.equal(hasMarker('https://flow.google.com/#flowpool=profile-10&a=1', p10), true);
+});
