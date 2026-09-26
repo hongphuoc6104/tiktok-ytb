@@ -510,3 +510,10 @@ test('marker match is exact: profile-10 does not match profile-102 (FLOW-008)', 
   assert.equal(hasMarker('https://flow.google.com/project/x#flowpool=profile-10', p10), true);
   assert.equal(hasMarker('https://flow.google.com/#flowpool=profile-10&a=1', p10), true);
 });
+
+test('localized submit: missing button is a provable pre-submit failure (FLOW-009)', async () => {
+  const {submitFlowPrompt} = await import('./flow-ops.mjs');
+  const btn = {first() { return btn; }, filter() { return btn; }, async waitFor() { throw new Error('Timeout 15000ms'); }};
+  const page = {locator: () => btn};
+  await assert.rejects(submitFlowPrompt(page), e => e.code === 'SUBMIT_NOT_FOUND' && e.submitted === false);
+});

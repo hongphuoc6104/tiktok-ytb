@@ -533,6 +533,8 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   const {page} = session;
   await ensureProject(session, cfg, g);
   const fp = new g.FlowPage(page);
+  // Real gflow-cli only waits for an English "Create" button (FLOW-009).
+  if (!lib) fp.submit = () => submitFlowPrompt(page);
   await readyProjectEditor(page);
   const label = (cfg.flowpool_model_labels || {})[it.model] || it.model;
   const job = video ? {type: 'video', ratio: it.ratio, duration: it.seconds, outputs: it.variants, model: label, startFrame: it.start_frame}
@@ -552,6 +554,30 @@ export async function flowPrepare(session, items, cfg, lib = null) {
 }
 
 const FLOW_ERRORS = {RateLimitedError: 'RATE_LIMITED', CreditLimitError: 'CREDIT_LIMIT', GenerationBlockedError: 'POLICY_BLOCKED'};
+
+/** Locale-independent submit (FLOW-009): gflow-cli waits for an English "Create"
+ * button; the Vietnamese UI labels it "Tạo". Match the arrow_forward icon and exclude
+ * the sibling "add_2" button. Failing before the click is provably not submitted. */
+export async function submitFlowPrompt(page) {
+  const btn = page.locator('button').filter({hasText: /arrow_forward/}).filter({hasNotText: /add_2/})
+    .filter({hasText: /Create|Tạo/i}).first();
+  try { await btn.waitFor({state: 'visible', timeout: 15000}); }
+  catch (e) { throw coded('SUBMIT_NOT_FOUND', `submit button not visible: ${e.message}`, {submitted: false}); }
+  const deadline = Date.now() + 15000;
+  let enabled = false;
+  while (Date.now() < deadline) {
+    enabled = await btn.evaluate(b => !(b.disabled || b.getAttribute('aria-disabled') === 'true')).catch(() => false);
+    if (enabled) break;
+    await page.waitForTimeout(300);
+  }
+  if (!enabled) throw coded('SUBMIT_DISABLED', 'submit button stayed disabled', {submitted: false});
+  try { await btn.click({timeout: 3000}); }
+  catch (e) {
+    await page.keyboard.press('Escape').catch(() => undefined);
+    try { await btn.click({timeout: 3000}); }
+    catch (e2) { throw coded('SUBMIT_CLICK_FAILED', e2.message, {submitted: false}); }
+  }
+}
 
 export async function flowCommit(session, timeoutMs, lib = null) {
   const g = lib || await loadGflow();
