@@ -513,7 +513,7 @@ test('marker match is exact: profile-10 does not match profile-102 (FLOW-008)', 
 
 test('localized submit: missing button is a provable pre-submit failure (FLOW-009)', async () => {
   const {submitFlowPrompt} = await import('./flow-ops.mjs');
-  const btn = {first() { return btn; }, filter() { return btn; }, async waitFor() { throw new Error('Timeout 15000ms'); }};
+  const btn = {first() { return btn; }, filter() { return btn; }, or() { return btn; }, async waitFor() { throw new Error('Timeout 15000ms'); }};
   const page = {locator: () => btn};
   await assert.rejects(submitFlowPrompt(page), e => e.code === 'SUBMIT_NOT_FOUND' && e.submitted === false);
 });

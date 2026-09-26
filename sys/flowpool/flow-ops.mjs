@@ -559,8 +559,11 @@ const FLOW_ERRORS = {RateLimitedError: 'RATE_LIMITED', CreditLimitError: 'CREDIT
  * button; the Vietnamese UI labels it "Tạo". Match the arrow_forward icon and exclude
  * the sibling "add_2" button. Failing before the click is provably not submitted. */
 export async function submitFlowPrompt(page) {
-  const btn = page.locator('button').filter({hasText: /arrow_forward/}).filter({hasNotText: /add_2/})
-    .filter({hasText: /Create|Tạo/i}).first();
+  // Live UI 26/09 (vi): icon-only <button aria-label="Bắt đầu tạo">arrow_forward</button>.
+  const byLabel = page.locator('button[aria-label="Bắt đầu tạo"]:visible,button[aria-label="Create"]:visible,button[aria-label="Start creating"]:visible,button[aria-label="Generate"]:visible');
+  const iconOnly = page.locator('button:visible').filter({hasText: /^\s*arrow_forward\s*$/});
+  const labelled = page.locator('button:visible').filter({hasText: /arrow_forward/}).filter({hasNotText: /add_2/}).filter({hasText: /Create|Tạo/i});
+  const btn = byLabel.or(iconOnly).or(labelled).first();
   try { await btn.waitFor({state: 'visible', timeout: 15000}); }
   catch (e) { throw coded('SUBMIT_NOT_FOUND', `submit button not visible: ${e.message}`, {submitted: false}); }
   const deadline = Date.now() + 15000;
