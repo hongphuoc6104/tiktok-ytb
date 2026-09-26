@@ -99,6 +99,30 @@ export function createDaemon({connect, endpoint, operations = ops, onShutdown = 
       return {items};
     },
     async release(s) { s.pending = null; return {}; },
+    /** Read-only inspection for live UI repair (FLOW-009). stage "page": screenshot +
+     * visible controls. stage "prepare": run the normal flowPrepare for a fixed test
+     * image request (settings + prompt, never submit), inspect, then drop the pending
+     * batch. No caller-supplied selectors, clicks, paths or code. */
+    async debug(s, msg) {
+      const dir = path.join(SYS, 'scratch', 'flow-debug');
+      fs.mkdirSync(dir, {recursive: true});
+      let prepareError = null;
+      if (msg.stage === 'prepare') {
+        const ratio = msg.ratio === '16:9' ? '16:9' : '9:16';
+        const item = {id: 'debug-probe', kind: 'image', ratio, variants: 1, refs: [], prompt: 'debug probe, do not submit', model: (msg.cfg || {}).flow_model};
+        try { await operations.flowPrepare(s, [item], msg.cfg || {}); }
+        catch (e) { prepareError = `${e.code || ''} ${e.message}`.trim(); }
+        finally { s.pending = null; }
+      }
+      const shot = path.join(dir, `${s.profile.slug || 'profile'}-${msg.stage === 'prepare' ? 'prepare' : 'page'}-${now()}.png`);
+      await s.page.screenshot({path: shot});
+      const elements = await s.page.evaluate(() => [...document.querySelectorAll('button,[role=button],[role=radio],[role=menuitem],[role=option],[aria-checked],textarea,[contenteditable=true]')]
+        .filter(e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.height > 0; })
+        .slice(0, 250).map(e => ({tag: e.tagName.toLowerCase(), role: e.getAttribute('role'), text: (e.innerText || '').trim().replace(/\s+/g, ' ').slice(0, 80),
+          aria: e.getAttribute('aria-label'), checked: e.getAttribute('aria-checked'), disabled: e.disabled || e.getAttribute('aria-disabled') === 'true',
+          cls: String(e.className).slice(0, 60)})));
+      return {url: s.page.url(), screenshot: shot, prepare_error: prepareError, elements};
+    },
   };
   const global = {
     async status() {
