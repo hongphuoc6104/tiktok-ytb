@@ -1,4 +1,4 @@
-"""Build the AI-illustrated variants of a Mơ script from one shared narration.
+"""Build an AI-illustrated story from one shared narration.
 
   python3 -m doodle.build_ai tts    SCRIPT_MODULE WORK            # narration (local VieNeu) -> WORK/audio.json
   python3 -m doodle.build_ai render SCRIPT_MODULE WORK images NAME  # stills: every shot, 1–2 per line (+ reaction inserts)
@@ -98,7 +98,9 @@ def stage_render(script, work, mode, name, images_dir=None, dest_root=None):
     cfg = json.loads((SYS / 'config.json').read_text())
     segs = audio['segments']
     props = {'duration': audio['duration'], 'scenes': scenes, 'segments': segs, 'cues': adapters.subtitle_cues(segs),
-             'aspect_ratio': '16:9', 'voice_language': 'vi', 'subtitles': False, 'render_concurrency': cfg.get('render_concurrency', 6)}
+             'aspect_ratio': '16:9', 'voice_language': 'vi',
+             'subtitles': getattr(script, 'BURN_SUBTITLES', False),
+             'render_concurrency': cfg.get('render_concurrency', 6)}
     (out / 'props.json').write_text(json.dumps(props, ensure_ascii=False))
     r = subprocess.run(['node', str(SYS / 'renderer' / 'render.mjs'), str(out)], cwd=str(SYS), capture_output=True, text=True)
     (out / 'render.log').write_text(r.stdout + '\n' + r.stderr)

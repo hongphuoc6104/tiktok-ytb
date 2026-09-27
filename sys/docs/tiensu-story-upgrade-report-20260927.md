@@ -6,6 +6,7 @@
 - Kho tiensu tạo brief **360–900 giây**, `character_mode: story_cast`, 16:9 giọng Việt, không `clips`, khoảng 9 cảnh theo mục tiêu giữa 630 giây. Brief cũ thiếu `character_mode` giữ đường canonical; không sửa revision hay integrity của job đã lưu.
 - Bộ chia nội dung ước lượng nhiều ảnh still hơn cho `story_cast` (khoảng 75% số visual beats); mỗi ảnh/beat vẫn phải có chức năng, không biến tỷ lệ này thành số lượng cứng. Đường FlowPool và B-2 không gắn mascot mặc định vào cảnh mới không người; ảnh có một nhân vật riêng dùng reference và media ID của chính job. Ảnh dựa trên ảnh trước vẫn giữ Base reference; journal unknown không được gửi lại.
 - `doodle.build_ai` nhận thư mục ảnh và thư mục xuất tùy chọn, bỏ câu mô tả gắn cứng với Mơ. Đây là bộ dựng dùng cho phép thử và bản đã có; sản phẩm mới đi qua cổng Pilot content → media → video.
+- Bộ dựng ảnh tĩnh giờ đọc `BURN_SUBTITLES` từ script; mẫu 15 giây bật phụ đề trong khung hình để kiểm khả năng đọc, bên cạnh file SRT.
 
 ## Kiểm chứng
 
@@ -17,9 +18,10 @@
 | Brief mới qua schema/contract | Đạt: 360–900 s, 9 cảnh, `story_cast`, không clips |
 | Render tổng hợp 900 s, 16:9, 12 cảnh/180 beat, 15 fps nguồn | MP4 dài 900,053 s; render 1071,572 s (1,191× thời lượng), tổng gồm chuẩn bị 1082,3 s |
 | WAV mới cho mẫu 15 s | PCM 48 kHz, dài 14,020 s, giải mã sạch |
-| 3–5 ảnh Flow mới và MP4 mẫu | **Chưa đạt**: Flow từ chối ảnh đầu tiên vì `usage limit`, xác nhận không tính phí; không gửi ảnh tiếp hoặc thay nguồn ảnh |
+| Kiểm tra sau sửa tùy chọn phụ đề | Skill valid; 9/9 kiểm tra đóng gói đạt; mã Python biên dịch được |
+| 3–5 ảnh Flow mới và MP4 mẫu | **Chưa đạt**: Flow tiếp tục từ chối ảnh mở đầu vì `usage limit`, xác nhận không tính phí; không gửi ảnh tiếp hoặc thay nguồn ảnh |
 
-Video tổng hợp 900 giây là dữ liệu kiểm tra renderer, không phải sản phẩm. WAV 14 giây nằm ở `sys/scratch/story-smoke-15/audio/narration.wav`; chưa có MP4 mẫu. Yêu cầu đầu tiên và lỗi hạn mức nằm trong dự án Flow `6ab8f469-4d15-41a7-9182-b82d15080bd9`. Xem `sys/logs/issues/FLOW-013.md` trong checkout chính để biết điều kiện thử lại. Không coi bài kiểm tra này là quyết định duyệt media/video.
+Video tổng hợp 900 giây là dữ liệu kiểm tra renderer, không phải sản phẩm. WAV 14 giây nằm ở `sys/scratch/story-smoke-15/audio/narration.wav`; chưa có MP4 mẫu. Yêu cầu đầu tiên và lỗi hạn mức nằm trong dự án Flow `6ab8f469-4d15-41a7-9182-b82d15080bd9`. Lần kiểm tra lại ngày 27/09 trên đúng Profile 10 cho thấy 1.026 credit còn lại nhưng yêu cầu ảnh vẫn thất bại vì `usage limit`, không tính phí. Không bấm Retry hoặc gửi ảnh tiếp. Xem `sys/logs/issues/FLOW-013.md` trong checkout chính để biết điều kiện thử lại. Không coi bài kiểm tra này là quyết định duyệt media/video.
 
 ## Giới hạn vận hành
 
