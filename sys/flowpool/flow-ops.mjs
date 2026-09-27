@@ -212,6 +212,15 @@ function radioOption(options, token) {
     (!/^x\d+$/.test(token) || !/\d/.test(o.text[token.length] || '')));
 }
 
+async function closeAccountPanel(page) {
+  const account = page.locator('.cdk-overlay-pane.flow-account-panel-overlay:visible').first();
+  if (!(await account.isVisible().catch(() => false))) return;
+  const close = account.locator('button[aria-label="Đóng bảng điều khiển tài khoản"],button[aria-label="Close account panel"]').first();
+  if (await close.isVisible().catch(() => false)) await close.click({timeout: 3000});
+  else await page.keyboard.press('Escape');
+  await account.waitFor({state: 'hidden', timeout: 2000});
+}
+
 /** Select the actual Flow radio control and verify aria-checked after React updates.
  * Icon ligatures are stable across the English and Vietnamese Flow labels. */
 export async function applyFlowSettings(page, job, g) {
@@ -223,13 +232,7 @@ export async function applyFlowSettings(page, job, g) {
   const radios = page.locator(RADIO_SELECTOR);
   const clearObstructions = async () => {
     await g.dismissOpenLayers(page);
-    const account = page.locator('.cdk-overlay-pane.flow-account-panel-overlay:visible').first();
-    if (await account.isVisible().catch(() => false)) {
-      const close = account.locator('button[aria-label="Đóng bảng điều khiển tài khoản"]').first();
-      if (await close.isVisible().catch(() => false)) await close.click({timeout: 3000});
-      else await page.keyboard.press('Escape');
-      await account.waitFor({state: 'hidden', timeout: 2000});
-    }
+    await closeAccountPanel(page);
     if (await radios.count()) return;
     const stale = page.locator('.cdk-overlay-pane:visible').first();
     if (await stale.isVisible().catch(() => false)) {
@@ -323,6 +326,33 @@ export function projectUrlOf(url) {
 // ProseMirror contenteditable without that role; keep both editor generations.
 export const PROMPT_EDITOR = 'div.ProseMirror[contenteditable="true"]:visible,[role="textbox"][contenteditable="true"]:visible';
 
+/** Flow's Agent sidebar and selected Agent chip hide the image settings pill.
+ * Restore the ordinary Image/Video composer before preparing a request. */
+export async function closeAgentSidebar(page) {
+  await closeAccountPanel(page);
+  const history = page.locator('button[aria-label="Mở nhật ký phiên"],button[aria-label="Open session history"]').first();
+  let changed = false;
+  if (await history.isVisible().catch(() => false)) {
+    const close = page.locator('button[aria-label="Đóng"],button[aria-label="Close"]').first();
+    if (!(await close.isVisible().catch(() => false)))
+      throw coded('AGENT_SIDEBAR_OPEN', 'Agent sidebar hides the Image/Video settings');
+    await close.click({timeout: 3000});
+    await history.waitFor({state: 'hidden', timeout: 5000}).catch(() => undefined);
+    if (await history.isVisible().catch(() => false))
+      throw coded('AGENT_SIDEBAR_OPEN', 'Agent sidebar did not close');
+    changed = true;
+  }
+  const agentMode = page.locator('button.agent-mode-chip-checked:visible').first();
+  if (await agentMode.isVisible().catch(() => false)) {
+    await agentMode.click({timeout: 3000});
+    await agentMode.waitFor({state: 'hidden', timeout: 5000}).catch(() => undefined);
+    if (await agentMode.isVisible().catch(() => false))
+      throw coded('AGENT_MODE_ACTIVE', 'Flow stayed in Agent mode');
+    changed = true;
+  }
+  return changed;
+}
+
 export async function readyProjectEditor(page) {
   await assertUsable(page);
   const editor = page.locator(PROMPT_EDITOR).first();
@@ -368,7 +398,7 @@ export async function ensureProject(session, cfg, g, {create = true} = {}) {
   const {page, profile} = session;
   const known = session.projectUrl || profile.project_url;
   if (known) {
-    if (projectUrlOf(page.url()) !== known) await page.goto(known, {waitUntil: 'domcontentloaded', timeout: 30000});
+    if (page.url().split(/[?#]/)[0] !== known) await page.goto(known, {waitUntil: 'domcontentloaded', timeout: 30000});
     await assertUsable(page);
     if (projectUrlOf(page.url()) === known) return (session.projectUrl = known);
     throw coded('PROJECT_NOT_FOUND', `recorded Flow project ${known} did not open in ${profile.name}`);
@@ -417,8 +447,11 @@ export async function imagePrepare(session, items, lib = null) {
   let frame;
   try { frame = await q.findToolFrame(page); } catch (e) { throw coded('TOOL_NOT_READY', e.message); }
   const specs = items.map(it => ({testCase: it.id, prompt: it.prompt, ratio: it.ratio, outDir: it.out_dir,
-    characterRefPath: it.refs[0], charMediaId: it.ref_media_ids[0], baseRefPath: it.refs[1] || null,
-    baseMediaId: it.ref_media_ids[1] || null}));
+    characterRefPath: it.reference_mode === 'base_only' ? null : it.refs[0],
+    charMediaId: it.reference_mode === 'base_only' ? null : it.ref_media_ids[0],
+    baseRefPath: it.reference_mode === 'base_only' ? it.refs[0] : it.refs[1] || null,
+    baseMediaId: it.reference_mode === 'base_only' ? it.ref_media_ids[0] : it.ref_media_ids[1] || null,
+    referenceMode: it.reference_mode}));
   let requests;
   try { requests = q.prepareRequests(specs, {tool: profile.tool_url, model: items[0].model}); }
   catch (e) { throw coded('INVALID_BATCH', e.message); }
@@ -532,6 +565,7 @@ export async function flowPrepare(session, items, cfg, lib = null) {
   const video = it.kind === 'clip';
   const {page} = session;
   await ensureProject(session, cfg, g);
+  await closeAgentSidebar(page);
   const fp = new g.FlowPage(page);
   // Real gflow-cli only waits for an English "Create" button (FLOW-009).
   if (!lib) fp.submit = () => submitFlowPrompt(page);

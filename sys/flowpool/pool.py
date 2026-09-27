@@ -52,6 +52,15 @@ def normalize_request(raw, cfg, out_root):
     for x in r['refs']:
         if not Path(x).is_file():
             raise ValueError(f'INVALID_REQUEST: missing reference {x}')
+    reference_mode = r.get('reference_mode')
+    if reference_mode not in (None, 'none', 'base_only'):
+        raise ValueError('INVALID_REQUEST: reference_mode must be none or base_only when supplied')
+    if r['kind'] != 'image' and reference_mode is not None:
+        raise ValueError('INVALID_REQUEST: reference_mode applies only to images')
+    if reference_mode == 'none' and r['refs']:
+        raise ValueError('INVALID_REQUEST: reference_mode none requires no refs')
+    if reference_mode == 'base_only' and len(r['refs']) != 1:
+        raise ValueError('INVALID_REQUEST: reference_mode base_only requires exactly one base ref')
     variants = r.get('variants', 1)
     if not isinstance(variants, int) or not 1 <= variants <= 4:
         raise ValueError('INVALID_REQUEST: variants must be 1..4')
@@ -60,7 +69,7 @@ def normalize_request(raw, cfg, out_root):
     if bootstrap and (r['kind'] != 'image' or r['refs'] or variants != 1):
         raise ValueError('INVALID_MASCOT_BOOTSTRAP: requires one image variant with no refs')
     if r['kind'] == 'image':
-        if not r['refs'] and not bootstrap:
+        if not r['refs'] and not bootstrap and reference_mode != 'none':
             raise ValueError('CHARACTER_REFERENCE_REQUIRED: refs[0] is the character reference (refs[1] optional base image)')
         if len(r['refs']) > 2:
             raise ValueError('INVALID_REQUEST: at most two refs (character, base)')
@@ -87,8 +96,10 @@ def result_of(req_id, status, snap=None, error=None, code=None, files=None):
             'best': ranking[0]['path'] if ranking else None, 'ranking': ranking,
             'media_ids': [o.get('media_id') for o in outputs],
             'profile': snap.get('profile'), 'credits_before': snap.get('credits_before'),
-            'credits_after': snap.get('credits_after'), 'error': error if error is not None else snap.get('error'),
-            'code': code if code is not None else snap.get('code'), 'key': snap.get('key'),
+            'credits_after': snap.get('credits_after'),
+            'error': None if status == 'ok' else error if error is not None else snap.get('error'),
+            'code': None if status == 'ok' else code if code is not None else snap.get('code'),
+            'key': snap.get('key'),
             'state': snap.get('state')}
 
 
@@ -170,6 +181,7 @@ class FlowPool:
         media = [ctx.media_id(profile, sha) for sha in req['_ref_shas']]
         return {'id': req['id'], 'kind': req['kind'], 'prompt': req['prompt'], 'ratio': req['ratio'],
                 'refs': req['refs'], 'ref_media_ids': media, 'start_frame': req.get('start_frame'),
+                'reference_mode': req.get('reference_mode'),
                 'variants': req['variants'], 'model': req['model'], 'out_dir': req['out_dir'],
                 'purpose': req.get('purpose'),
                 'engine': engine(profile, req, ctx),

@@ -25,6 +25,14 @@ test('story cast may submit a people-free still without a character reference',(
  assert.equal(r.character,null);assert.deepEqual(r.identity.references,[]);
  assert.equal(r.identity.prompt,request.prompt);
 });
+test('story cast may carry a base scene without treating it as a character',()=>{
+ const [r]=prepareRequests([{...request,testCase:'story-base',characterRefPath:null,charMediaId:null,
+  baseRefPath:file,baseMediaId:'base-id',referenceMode:'base_only'}]);
+ assert.equal(r.character,null);assert.equal(r.base.mediaId,'base-id');
+ assert.deepEqual(r.identity.references.map(x=>x.mediaId),['base-id']);
+ assert.throws(()=>prepareRequests([{...request,characterRefPath:null,charMediaId:null,
+  referenceMode:'base_only',baseRefPath:null,baseMediaId:null}]),/BASE_ONLY/);
+});
 test('collection-only mode preserves generation identity',()=>{
  assert.deepEqual(prepareRequests([request])[0].identity,prepareRequests([{...request,collectionOnly:true}])[0].identity);
 });

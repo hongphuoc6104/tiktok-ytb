@@ -178,7 +178,9 @@ def gflow(p, *args, timeout=960):
     mascot = None if characters.story_cast_for(p, job) else characters.try_mascot_for(p, job)
     flow_prompt = prompts.image_prompt(prompt, ratio, prompts.channel_style(p.root, _channel(p, job)), mascot, bool(base_img))
     # Variants live next to --out, not inside it: request() expects exactly one image in --out.
+    reference_mode = ('base_only' if base_img else 'none') if characters.story_cast_for(p, job) and not sources else None
     [result] = _run(p, [{'id': job_id, 'kind': 'image', 'prompt': flow_prompt, 'ratio': ratio, 'refs': refs,
+                         **({'reference_mode': reference_mode} if reference_mode else {}),
                          'model': config(p)['flow_model'],
                          'variants': int(config(p).get('flowpool_image_variants') or 1), 'job': job,
                          'scene': _target_of(out_folder), 'target': _target_of(out_folder),

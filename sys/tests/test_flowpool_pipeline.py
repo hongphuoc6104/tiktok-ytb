@@ -146,6 +146,7 @@ class RoutingTests(PipelineCase):
             fpp.gflow(self.p, 'image', '--id', 'landscape', '--prompt', 'River rises',
                       '--ratio', '16:9', '--out', str(out))
         self.assertEqual(self.requests[0]['refs'], [])
+        self.assertEqual(self.requests[0]['reference_mode'], 'none')
         self.assertEqual(read(out.parent / 'ui-proof.json')['source_references'], [])
         self.assertNotIn('Main character', self.requests[0]['prompt'])
 
@@ -155,6 +156,7 @@ class RoutingTests(PipelineCase):
             fpp.gflow(self.p, 'image', '--id', 'river-rises', '--prompt', 'Water climbs',
                       '--ratio', '16:9', '--out', str(out), '--base-image', str(base))
         self.assertEqual(self.requests[0]['refs'], [str(base)])
+        self.assertEqual(self.requests[0]['reference_mode'], 'base_only')
         self.assertEqual(read(out.parent / 'ui-proof.json')['base_image'], str(base))
 
     def test_outcomes_map_to_submission_flags(self):

@@ -28,7 +28,9 @@ export function prepareRequests(specs,{tool=toolUrl,model=configuredModel}={}) {
  return specs.map(s=>{
   if(!/^[\w-]+$/.test(s.testCase)||!s.prompt||!['9:16','16:9'].includes(s.ratio))throw Error('INVALID_QUEUE_REQUEST');
   const character=reference(s.characterRefPath,s.charMediaId),base=reference(s.baseRefPath,s.baseMediaId);
-  if(!character&&s.referenceMode!=='none')throw Error('CHARACTER_REFERENCE_REQUIRED');
+  if(!character&&!['none','base_only'].includes(s.referenceMode))throw Error('CHARACTER_REFERENCE_REQUIRED');
+  if(s.referenceMode==='none'&&(character||base))throw Error('REFERENCE_MODE_NONE_REQUIRES_NO_REFS');
+  if(s.referenceMode==='base_only'&&(character||!base))throw Error('REFERENCE_MODE_BASE_ONLY_REQUIRES_BASE');
   return {spec:s,character,base,identity:{toolUrl:tool,id:s.testCase,prompt:s.prompt,ratio:s.ratio,preserve:s.preserve||'',change:s.change||'',literalText:s.literalText||'',model:s.model||model,style:s.style||'',references:[character,base].filter(Boolean).map(({mediaId,sha256})=>({mediaId,sha256})),outDir:path.resolve(s.outDir)}};
  });
 }

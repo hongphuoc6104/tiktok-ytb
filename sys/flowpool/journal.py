@@ -52,6 +52,8 @@ def identity(request):
         'refs': [sha256_file(r) for r in request.get('refs') or []],
         'start_frame': sha256_file(request['start_frame']) if request.get('start_frame') else None,
     }
+    if request.get('reference_mode') in ('none', 'base_only'):
+        ident['reference_mode'] = request['reference_mode']
     return ident
 
 

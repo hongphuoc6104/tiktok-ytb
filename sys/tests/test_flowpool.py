@@ -230,6 +230,10 @@ class SchedulerTests(FlowPoolCase):
         self.assertEqual(scheduler.engine(profile('a', 0),
                                           {'kind': 'image', 'purpose': 'mascot_bootstrap', '_ref_shas': []}, ctx), 'flow')
         self.assertEqual(scheduler.engine(profile('a', 0), {'kind': 'image', '_ref_shas': []}, ctx), 'flow')
+        self.assertEqual(scheduler.engine(profile('a', 0),
+                                          {'kind': 'image', 'reference_mode': 'none', '_ref_shas': []}, ctx), 'b2')
+        self.assertEqual(scheduler.engine(profile('a', 0, tool=False),
+                                          {'kind': 'image', 'reference_mode': 'none', '_ref_shas': []}, ctx), 'flow')
         self.assertEqual(scheduler.engine(profile('a', 0), {'kind': 'clip'}, ctx), 'clip')
 
     def test_mascot_bootstrap_is_one_reference_free_plain_flow_image(self):
@@ -249,6 +253,46 @@ class SchedulerTests(FlowPoolCase):
         self.assertEqual(self.world.engines, [('Profile 10', ['flow'])])
         self.assertEqual(Journal(self.state / 'journal').by_request_id(raw['id'])[0]['request']['purpose'],
                          'mascot_bootstrap')
+
+    def test_story_still_without_character_uses_explicit_no_reference_mode(self):
+        from flowpool.pool import normalize_request
+        raw = {'id': 'story-landscape', 'kind': 'image', 'prompt': 'Cold steppe under rain',
+               'ratio': '16:9', 'refs': [], 'variants': 1, 'job': 'story-smoke'}
+        with self.assertRaisesRegex(ValueError, 'CHARACTER_REFERENCE_REQUIRED'):
+            normalize_request(raw, self.cfg, self.state / 'out')
+        with self.assertRaisesRegex(ValueError, 'requires no refs'):
+            normalize_request(dict(raw, reference_mode='none', refs=[str(self.ref)]), self.cfg, self.state / 'out')
+        with self.assertRaisesRegex(ValueError, 'exactly one base ref'):
+            normalize_request(dict(raw, reference_mode='base_only'), self.cfg, self.state / 'out')
+        request = dict(raw, reference_mode='none')
+        normalized = normalize_request(request, self.cfg, self.state / 'out')
+        self.assertEqual((normalized['refs'], normalized['reference_mode']), ([], 'none'))
+        self.assertEqual(identity(normalized)['reference_mode'], 'none')
+        based = normalize_request(dict(raw, reference_mode='base_only', refs=[str(self.still)]),
+                                  self.cfg, self.state / 'out')
+        self.assertEqual(identity(based)['reference_mode'], 'base_only')
+        self.write_profiles(profile('Profile 102', 0, tool=False))
+        [result] = self.pool().run([request])
+        self.assertEqual((result['status'], result['profile']), ('ok', 'Profile 102'))
+        self.assertEqual(self.world.engines, [('Profile 102', ['flow'])])
+
+    def test_story_stills_without_references_batch_only_on_a_tool_profile(self):
+        self.write_profiles(profile('Profile 14', 0))
+        requests = [dict(self.image(i), refs=[], reference_mode='none') for i in range(2)]
+        results = self.pool().run(requests)
+        self.assertEqual([r['status'] for r in results], ['ok', 'ok'])
+        self.assertEqual(self.world.engines, [('Profile 14', ['b2', 'b2'])])
+
+    def test_success_after_a_pre_submit_failure_clears_old_error(self):
+        self.write_profiles(profile('Profile 14', 0, tool=False))
+        self.world.fail[('Profile 14', 'prepare')] = DriverError('MODEL_NOT_SELECTABLE', 'old settings panel')
+        [failed] = self.pool().run([self.image(1)])
+        self.assertEqual((failed['status'], failed['state']), ('failed', 'not_submitted'))
+        del self.world.fail[('Profile 14', 'prepare')]
+        self.pool().doctor(['Profile 14'])
+        [passed] = self.pool().run([self.image(1)])
+        self.assertEqual((passed['status'], passed['state'], passed['error'], passed['code']),
+                         ('ok', 'validated', None, None))
 
     def test_only_profiles_with_an_open_tab_take_work(self):
         self.two_image_profiles()

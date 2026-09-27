@@ -123,6 +123,20 @@ test('current project is reused and missing editor is distinct from sign-out or 
   await assert.rejects(ops.readyProjectEditor(page), e => e.code === 'CAPTCHA');
 });
 
+test('Agent sidebar is closed before the ordinary image composer is used', async () => {
+  let open = true, selected = true, clicks = 0;
+  const history = {isVisible: async () => open, waitFor: async () => {}};
+  const close = {isVisible: async () => open, click: async () => { clicks++; open = false; }};
+  const chip = {isVisible: async () => selected, click: async () => { selected = false; }, waitFor: async () => {}};
+  const page = {locator: sel => ({first: () => sel.includes('flow-account-panel-overlay')
+    ? {isVisible: async () => false} : sel.includes('Mở nhật ký phiên') ? history
+    : sel.includes('agent-mode-chip-checked') ? chip : close})};
+  assert.equal(await ops.closeAgentSidebar(page), true);
+  assert.equal(clicks, 1);
+  assert.equal(selected, false);
+  assert.equal(await ops.closeAgentSidebar(page), false);
+});
+
 function fakeFlow({cards = {}, canCreate = true, url = 'https://flow.google.com/'} = {}) {
   const calls = [];
   const loc = (visible, onClick) => ({first: () => loc(visible, onClick), or: () => loc(visible, onClick),
@@ -152,6 +166,10 @@ test('ensureProject: recorded URL, else named card, else creates one (no generat
   session = {page: f.page, profile: {name: 'acc1', project: 'Video Pilot', project_url: 'https://flow.google.com/project/dddd0003-cccc'}};
   assert.equal(await ops.ensureProject(session, cfg, f.g), 'https://flow.google.com/project/dddd0003-cccc');
   assert.deepEqual(f.calls, [['goto', 'https://flow.google.com/project/dddd0003-cccc']]);
+  f = fakeFlow({url: 'https://flow.google.com/project/dddd0003-cccc/tool/shared-tool'});
+  session = {page: f.page, profile: {name: 'acc1', project_url: 'https://flow.google.com/project/dddd0003-cccc'}};
+  assert.equal(await ops.ensureProject(session, cfg, f.g), 'https://flow.google.com/project/dddd0003-cccc');
+  assert.deepEqual(f.calls, [['goto', 'https://flow.google.com/project/dddd0003-cccc']]);
   f = fakeFlow({canCreate: false});
   await assert.rejects(ops.ensureProject({page: f.page, profile: {name: 'acc1', project: 'X'}}, cfg, f.g), e => e.code === 'PROJECT_NOT_FOUND');
   f = fakeFlow();
@@ -163,7 +181,7 @@ test('ensureProject: recorded URL, else named card, else creates one (no generat
 function fakeB2(calls, {pollError = null, queued = []} = {}) {
   return {
     findToolFrame: async () => ({frame: true}),
-    prepareRequests: (specs, opts) => { calls.push(['prepareRequests', opts]); return specs.map(s => ({spec: s})); },
+    prepareRequests: (specs, opts) => { calls.push(['prepareRequests', opts, specs]); return specs.map(s => ({spec: s})); },
     assertQueueIdle: async () => { calls.push(['assertQueueIdle']); },
     enqueueRequests: async (f, reqs) => { calls.push(['enqueue', reqs.length]); return reqs.map((_, i) => `q${i}`); },
     selectWorkers: async () => { calls.push(['selectWorkers']); },
@@ -191,6 +209,13 @@ test('image prepare fills the local queue only; commit is the single start', asy
   assert.deepEqual(out[0].media_ids, ['MID']);
   assert.ok(fs.existsSync(out[0].files[0]));
   assert.equal(JSON.parse(fs.readFileSync(path.join(tmp, 'a', 'a-1.flowpool.json'))).mediaId, 'MID');
+  await ops.imagePrepare(session, [item('no-ref', {refs: [], ref_media_ids: [], reference_mode: 'none'})], lib);
+  assert.equal(calls.filter(c => c[0] === 'prepareRequests').at(-1)[2][0].referenceMode, 'none');
+  await ops.imagePrepare(session, [item('base-only', {refs: ['/base.png'], ref_media_ids: ['B'],
+    reference_mode: 'base_only'})], lib);
+  const baseSpec = calls.filter(c => c[0] === 'prepareRequests').at(-1)[2][0];
+  assert.deepEqual([baseSpec.characterRefPath, baseSpec.baseRefPath, baseSpec.baseMediaId, baseSpec.referenceMode],
+    [null, '/base.png', 'B', 'base_only']);
   await assert.rejects(ops.imagePrepare({...session, profile: {name: 'P'}}, [item('b')], lib), e => e.code === 'TOOL_NOT_READY');
   await assert.rejects(ops.imagePrepare(session, [item('b'), item('c', {model: 'Other'})], lib), e => e.code === 'INVALID_BATCH');
 });
@@ -304,7 +329,11 @@ test('Start/Bắt đầu frame upload needs a verified confirm and a filled slot
     const page = {url: () => 'https://flow.google.com/project/abcd0001-ef',
       evaluate: async () => ({text: '', frames: []}),
       getByRole: (_role, {name}) => ({first: () => name.test(slotLabel) ? slot : {isVisible: async () => false}}),
-      locator: sel => sel === ops.PROMPT_EDITOR ? {first: () => editor} : {first: () => dialog},
+      locator: sel => sel === ops.PROMPT_EDITOR ? {first: () => editor}
+        : sel.includes('flow-account-panel-overlay') ? {first: () => ({isVisible: async () => false})}
+        : sel.includes('Mở nhật ký phiên') ? {first: () => ({isVisible: async () => false})}
+        : sel.includes('agent-mode-chip-checked') ? {first: () => ({isVisible: async () => false})}
+        : {first: () => dialog},
       waitForEvent: async () => ({setFiles: async file => {state.uploaded = true; state.file = file; }}),
     };
     const g = {dismissOpenLayers: async () => { state.dialogOpen = false; }};
@@ -348,7 +377,7 @@ test('plain-Flow image: attaches refs, fills prompt, submits only on commit', as
   const session = {page, profile: {name: 'acc1', project_url: 'https://flow.google.com/project/abcd0001-ef'}, projectUrl: null};
   // No ingredient button on this fake page: a reference that cannot be attached blocks before submit.
   page.locator = sel => sel === ops.PROMPT_EDITOR ? {first: () => editor}
-    : {filter: () => ({first: () => ({isVisible: async () => false})})};
+    : {first: () => ({isVisible: async () => false}), filter: () => ({first: () => ({isVisible: async () => false})})};
   await assert.rejects(ops.flowPrepare(session, [it], {}, g), e => e.code === 'REFERENCE_NOT_ATTACHED');
   assert.ok(!calls.some(c => c[0] === 'SUBMIT'));
   const noRef = {...it, refs: []};

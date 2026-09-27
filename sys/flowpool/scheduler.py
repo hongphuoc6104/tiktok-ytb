@@ -40,8 +40,8 @@ def engine(profile, req, ctx):
     if req.get('purpose') == 'mascot_bootstrap':
         return 'flow'
     if (profile.get('tool_url') and int(req.get('variants') or 1) == 1
-            and req.get('_ref_shas')
-            and all(ctx.media_id(profile, sha) for sha in req['_ref_shas'])):
+            and ((req.get('reference_mode') == 'none' and not req.get('_ref_shas'))
+                 or (req.get('_ref_shas') and all(ctx.media_id(profile, sha) for sha in req['_ref_shas'])))):
         return 'b2'
     return 'flow'
 

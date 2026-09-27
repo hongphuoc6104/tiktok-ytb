@@ -287,6 +287,7 @@ Mọi trường mới đều **tùy chọn**; thiếu trường thì hành vi c�
 - Yêu cầu: `{ "id", "kind": "image"|"clip", "prompt", "ratio": "16:9"|"9:16",
   "refs": [đường dẫn ảnh tham chiếu], "start_frame": đường dẫn (clip), "variants": n,
   "model": str, "job", "scene" }`.
+- Ảnh `story_cast` không có nhân vật dùng `reference_mode: "none"` với `refs=[]`; ảnh chỉ kế thừa bối cảnh dùng `reference_mode: "base_only"` với đúng một ảnh Base trong `refs`. Thiếu trường này giữ quy tắc cũ: `refs[0]` là tham chiếu nhân vật.
 - Kết quả: `{ "id", "status": "ok"|"failed"|"unknown", "files": [..], "profile",
   "credits_before", "credits_after", "error" }`.
 - API Python: `flowpool.run(requests, cfg) -> list[result]`; CLI

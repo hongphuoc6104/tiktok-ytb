@@ -7,22 +7,24 @@
 - Bộ chia nội dung ước lượng nhiều ảnh still hơn cho `story_cast` (khoảng 75% số visual beats); mỗi ảnh/beat vẫn phải có chức năng, không biến tỷ lệ này thành số lượng cứng. Đường FlowPool và B-2 không gắn mascot mặc định vào cảnh mới không người; ảnh có một nhân vật riêng dùng reference và media ID của chính job. Ảnh dựa trên ảnh trước vẫn giữ Base reference; journal unknown không được gửi lại.
 - `doodle.build_ai` nhận thư mục ảnh và thư mục xuất tùy chọn, bỏ câu mô tả gắn cứng với Mơ. Đây là bộ dựng dùng cho phép thử và bản đã có; sản phẩm mới đi qua cổng Pilot content → media → video.
 - Bộ dựng ảnh tĩnh giờ đọc `BURN_SUBTITLES` từ script; mẫu 15 giây bật phụ đề trong khung hình để kiểm khả năng đọc, bên cạnh file SRT.
+- FlowPool nhận `reference_mode: none` cho ảnh `story_cast` độc lập và `base_only` cho ảnh kế thừa bối cảnh mà không có nhân vật. Khi tài khoản có bản VP Stickman Lab đã mở trong dự án, các ảnh này dùng B-2; `base_only` gắn ảnh cảnh trước vào ô Base. Giao diện Agent của Flow được đóng trước khi chọn Image/model; đường B-2 không gửi lại journal `unknown`.
 
 ## Kiểm chứng
 
 | Kiểm tra | Kết quả |
 |---|---|
 | Skill validator, `git diff --check` | Đạt |
-| Bộ kiểm tra Python | 410 đạt, 2 skip (lượt trước chỉnh sửa cuối cùng); các kiểm tra liên quan sau chỉnh sửa đều đạt |
-| Kiểm tra queue B-2 | 9/9 đạt, gồm cảnh không tham chiếu nhân vật và giữ chặn gửi lại unknown |
+| Bộ kiểm tra Python | 410 đạt, 2 skip ở lượt nền; sau thay đổi FlowPool, 75/75 kiểm tra liên quan đạt |
+| Kiểm tra FlowPool/B-2 | 24/24 kiểm tra Flow Node và 10/10 kiểm tra queue B-2 đạt, gồm cảnh không tham chiếu, Base scene và giữ chặn gửi lại unknown |
 | Brief mới qua schema/contract | Đạt: 360–900 s, 9 cảnh, `story_cast`, không clips |
 | Render tổng hợp 900 s, 16:9, 12 cảnh/180 beat, 15 fps nguồn | MP4 dài 900,053 s; render 1071,572 s (1,191× thời lượng), tổng gồm chuẩn bị 1082,3 s |
-| WAV mới cho mẫu 15 s | PCM 48 kHz, dài 14,020 s, giải mã sạch |
+| WAV cuối cho mẫu 15 s | PCM 48 kHz, dài 15,390 s, giải mã sạch; người dùng đã nghe và xác nhận đạt |
 | Kiểm tra sau sửa tùy chọn phụ đề | Skill valid; 9/9 kiểm tra đóng gói đạt; mã Python biên dịch được |
-| 3–5 ảnh Flow mới và MP4 mẫu | **Chưa đạt**: Flow tiếp tục từ chối ảnh mở đầu vì `usage limit`, xác nhận không tính phí; không gửi ảnh tiếp hoặc thay nguồn ảnh |
+| 5 ảnh Flow mới | 3 ảnh từ Flow thường và 2 ảnh cùng một lô VP Stickman Lab trên Profile 14; đã xem từng ảnh, không có mascot. Lô B-2 trả media ID `72e9da54-f495-43cc-9341-47b2f4c36e09` và `f9af67d1-600d-4cfc-8063-900050f5bba5`. Đường Flow thường tải được file nhưng chưa trả media ID. |
+| MP4 thử | 15,445 s, 1920×1080, H.264/AAC, 5 nhịp ảnh, phụ đề trong hình và SRT; dài hơn WAV 0,055 s. Kiểm tra 2 khung hình/giây và `blackdetect` không thấy khung đen; phụ đề đọc được trong bản xem 360 px. Người dùng xác nhận nghe/xem đạt. |
 
-Video tổng hợp 900 giây là dữ liệu kiểm tra renderer, không phải sản phẩm. WAV 14 giây nằm ở `sys/scratch/story-smoke-15/audio/narration.wav`; chưa có MP4 mẫu. Yêu cầu đầu tiên và lỗi hạn mức nằm trong dự án Flow `6ab8f469-4d15-41a7-9182-b82d15080bd9`. Lần kiểm tra lại ngày 27/09 trên đúng Profile 10 cho thấy 1.026 credit còn lại nhưng yêu cầu ảnh vẫn thất bại vì `usage limit`, không tính phí. Không bấm Retry hoặc gửi ảnh tiếp. Xem `sys/logs/issues/FLOW-013.md` trong checkout chính để biết điều kiện thử lại. Không coi bài kiểm tra này là quyết định duyệt media/video.
+Video tổng hợp 900 giây vẫn chỉ là dữ liệu kiểm tra renderer. Video thử cuối nằm ở `sys/scratch/story-smoke-15/deliverables/story-smoke-15/story-smoke-15.mp4`; WAV, SRT, contact sheet, manifest ảnh và nhật ký yêu cầu nằm cùng thư mục scratch. Dự án Flow riêng cho hàng đợi B-2 có ID `0fb6366e-83b8-4a4c-9a30-6f39bc550c30`. Dữ kiện Mezhyrich được viết ở mức giả thuyết nơi trú theo nguồn `https://pmc.ncbi.nlm.nih.gov/articles/PMC12639289/`. Mẫu này không phải quyết định duyệt content/media/video của một job Pilot.
 
 ## Giới hạn vận hành
 
-Ảnh `story_cast` chưa được nghiệm thu trực tiếp qua B-2/FlowPool trên một job Pilot thật vì Flow đang báo hạn mức. Các kiểm tra offline xác nhận dữ liệu đi đúng đường, nhưng UI thật có thể thay đổi. Ba job `tiensu-001/002/003` giữ nguyên trạng thái trong checkout chính; bản mã worktree này chưa được hợp nhất vào đó. Khi Flow khả dụng, tạo 3–5 ảnh mới cho mẫu đã chuẩn bị, xem từng ảnh, dựng MP4 14–16 s và xem/nghe toàn bộ trước khi coi phép thử đạt. Không dùng ảnh cũ để giả bài thử mới.
+Phép thử xác nhận đường ảnh `story_cast` không nhân vật và batch B-2 trên Flow thật, nhưng chưa thay thế nghiệm thu một job Pilot dài với ba gate. Nhánh `base_only` đã qua kiểm thử giao diện giả lập, chưa có lượt Flow thật dùng ảnh Base kế thừa. Profile 10 vẫn báo `usage limit` dù còn 1.026 credit (`FLOW-013`); một yêu cầu khác trên Profile 102 còn `unknown` sau timeout và UI báo hoạt động bất thường (`FLOW-015`), nên không gửi lại. Profile 13 dừng trước submit vì nút settings; Profile 14 hoạt động sau khi đóng Agent mode (`FLOW-005`). Ba job `tiensu-001/002/003` vẫn giữ nguyên revision và integrity; không dùng mẫu này để hợp thức hóa quyết định duyệt của chúng. Media ID của ba ảnh Flow thường vẫn là `null` (`FLOW-016`), cần kiểm tra trước khi dùng chúng làm tham chiếu tài khoản trong sản xuất.
