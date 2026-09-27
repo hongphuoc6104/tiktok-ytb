@@ -1,120 +1,29 @@
-Đường dẫn vận hành trong skill tính từ `sys/` của dự án; chạy `cd sys` trước các lệnh. Video cho người dùng nằm ở `../video/<tên-video>/`.
+# Long-form prehistoric stories (16:9 Vietnamese)
 
-# Kịch bản dài 16:9 cho kênh giải thích tiền sử (tiensu)
+Use when `brief.channel == "tiensu"`; the adapter loads this file for outline and content. Read the saved brief first. Its duration, character mode, sources and required points outrank new channel defaults. Write Vietnamese narration naturally for the actual era and topic; read [narration-style.md](narration-style.md) before writing it.
 
-Dùng khi `brief.channel == "tiensu"` (adapter tự nạp file này ở lượt outline/content, xem
-`scripts/director_context.py`). Khuôn kể chuyện mô phỏng kênh mẫu Ink Explainer — xem
-`docs/tien-su-plan.md` mục 1 — nhưng KHÔNG dịch kịch bản, không dùng lại hình/nhân vật/thumbnail
-của kênh mẫu. Đọc `tiensu/channel.json` (domain_requirements) và brief hiện tại trước khi viết;
-brief đã lưu là hợp đồng, sửa qua đúng workflow nếu muốn đổi yêu cầu.
+## Observed content pattern, not a copied template
 
-## Cấu trúc 5 phần bắt buộc
+A comparison of the channel's high-view examples — [daily life](https://www.youtube.com/watch?v=49_Ph2q6uIM), [a rainy week](https://www.youtube.com/watch?v=SD7XyG2wd1k), [other human species](https://www.youtube.com/watch?v=OCr6NteWSQ8), [alcohol](https://www.youtube.com/watch?v=9AFO6MHy8y4), and [travel](https://www.youtube.com/watch?v=QP1maS6hYn4) — suggests a common function: a concrete situation or sharp question; stakes; a progression of sourced explanations; an answer that changes how the viewer sees the opening question. The examples vary in era, narrator viewpoint and how they group evidence. This is an inference about storytelling, not proof that a template causes views. Do not translate their narration, reproduce their figures, or imitate their thumbnails.
 
-Ánh xạ vào `required_points` R1-R5 do `tiensu/bank.py` sinh sẵn trong brief; `coverage` phải phủ
-đủ cả 5. Không ép mọi chương dài bằng nhau — nhịp theo lượng bằng chứng thật của từng chương.
+Use the arc that explains this topic best: a day unfolding, a problem and its attempts, a comparison, a timeline, a journey, or several cases. The modern-day contrast, a mistaken belief, a mystery, and a visual callback are tools, not mandatory beats. Never force the setting to 50,000 years ago or force six to eight evidence chapters. Each scene should change the viewer's understanding of the question. Name chapters for the actual transitions rather than splitting by equal time.
 
-1. **Hook 2 ngôi "bạn"** (30-45 giây đầu): đối lập trực tiếp một hành động đời thường của người
-   xem hôm nay với cùng hành động đó khoảng 50.000 năm trước. Không mở bằng lời chào chung chung
-   hay giới thiệu kênh. Kết hook bằng câu hỏi bí ẩn của video.
-2. **Phá niềm tin phổ biến**: nêu một hiểu lầm/định kiến thường gặp về chủ đề, rồi chỉ ra vì sao
-   nó sai hoặc chưa đủ — dựa trên bằng chứng thật trong `sources`, không phải khẳng định suông.
-3. **Nhắc lại câu hỏi bí ẩn** rõ ràng, thành một câu độc lập người xem nhớ được, trước khi vào
-   chương bằng chứng đầu tiên.
-4. **6-8 chương bằng chứng**: mỗi chương dựng trên đúng MỘT nghiên cứu/di chỉ/số liệu cụ thể có
-   trong `sources` của brief. Đặt tên chương ngắn gọn vào `scenes[].chapter` (dùng cho mô tả
-   YouTube ở bước đóng gói, xem `packaging`). Mỗi tuyên bố có số liệu/tên riêng/niên đại phải có
-   một `claims[]` trỏ đúng `source_id`; không suy diễn quá xa dữ liệu khảo cổ/nhân học thật, nói
-   rõ mức độ chắc chắn khi nguồn còn tranh cãi (xem ví dụ Toba trong `tiensu/topics.jsonl`).
-5. **Kết callback**: quay lại đúng hình ảnh đã dùng ở hook (dùng lại `image_id` hoặc ảnh cùng bối
-   cảnh), chốt bằng một cặp câu đối chiếu dạng "Bạn thì… còn họ thì…" giữa đời sống hiện đại của
-   người xem và điều vừa học được. Không thêm CTA sub/theo dõi vào giữa nội dung.
+New bank briefs use R1–R4: specific opening, question/stakes, evidence-led progression, and an honest payoff. Cover them with quotes from the finished narration. For old briefs, keep their stored R1–R5 and every other saved requirement; revise a brief through Pilot rather than silently changing its contract.
 
-## Giọng kể "bạn" — văn nói tiếng Việt tự nhiên
+## Length and speech
 
-Đây là lời đọc lên (VieNeu), không phải văn viết để đọc bằng mắt; áp dụng cùng lúc với
-[văn phong chung](narration-style.md) — đọc file đó trước khi viết narration, các ràng buộc bắt
-buộc ở đó (giữ đủ ý, không bịa, viết narration xong mới đặt neo, câu ngắn cho TTS ≤256 ký tự) áp
-dụng nguyên vẹn ở đây, cộng thêm:
+New channel briefs permit 360–900 seconds. The default writing budget is the midpoint, about 630 seconds, so a normal request does not collapse to six minutes. Choose a narrower brief window before content if the question and evidence justify one; do not stretch a thin idea, omit material to fit, or invent extra claims. The budget is estimated from Vietnamese space-separated units; real VieNeu WAV duration decides whether the media gate passes. Finish narration before placing anchors, coverage, claims or subtitle cues. Keep sentences manageable for local TTS; do not encode pronunciation hacks in the lesson text.
 
-- Xưng "bạn" xuyên suốt khi nói với người xem (thì hiện tại), xưng "họ"/tên nhóm người khi kể về
-  người tiền sử (thì quá khứ) — giữ ranh giới hai ngôi rõ ràng, không lẫn lộn giữa các câu.
-- Văn nói tự nhiên của người kể chuyện YouTube tiếng Việt: câu hỏi tu từ, câu cụt có chủ đích,
-  nhấn bằng nhịp câu chứ không phải viết hoa toàn từ. Tránh giọng học thuật/báo cáo khoa học.
-  Tránh sáo ngữ AI — xem [ai-tells.md](ai-tells.md) khi câu nghe "trơn" bất thường.
-  Không dịch máy từ tiếng Anh; viết thẳng bằng tiếng Việt.
-- Thuật ngữ khảo cổ/nhân học (ví dụ: "Cựu Thạch khí", "hominin", tên di chỉ nước ngoài) phải được
-  giải thích ngay bằng lời dẫn thường khi xuất hiện lần đầu, không giả định người xem đã biết.
-  Tên riêng/địa danh nước ngoài đọc được bằng tiếng Việt tự nhiên; không phiên âm gượng ép.
-  Năm/số liệu đọc thành lời tự nhiên ("khoảng ba mươi tư nghìn năm trước"), không đọc dạng số viết.
+## Research and claims
 
-## Bằng chứng và nguồn — facts_required luôn true
+`facts_required` remains true. A `seed_fact` is only a research lead. Every date, site, quantity, study result or strong historical claim in the narration needs a matching `claims[]` item whose `source_id` and `fact` refer to an actual `sources[]` fact in the brief; quote the exact narration span. If more sources are needed, research them and revise the brief before content. Distinguish archaeological observation, plausible reconstruction and speculation in the wording. Do not make one source stand in for unrelated claims or repeat a claim just to satisfy coverage.
 
-- Không thêm số liệu, tên nghiên cứu, hoặc kết quả khảo cổ không có trong `sources` của brief.
-  Cần thêm bằng chứng ngoài brief thì phải nghiên cứu và bổ sung vào `sources` qua revise-brief
-  trước, không tự bịa rồi viết `claims` khớp theo.
-  `planning.domain_requirements` có dòng "Gợi ý nghiên cứu thêm" lấy từ `seed_facts` của kho chủ
-  đề (`tiensu/topics.jsonl`) — đây là hướng tìm thêm, KHÔNG phải bằng chứng đã duyệt; chỉ dùng sau
-  khi tự tìm được nguồn thật và đưa vào `sources`.
-- Mỗi chương bằng chứng (R4) cần ít nhất một `claims[]` với `source_id` trỏ đúng mục trong
-  `sources`, `fact` khớp với một fact đã liệt kê ở source đó, và `quote` trích nguyên văn từ
-  narration của đúng cảnh đang neo — không diễn giải khác đi khi trích.
-  Máy duyệt content chặn claim không nguồn hoặc lệch mức độ chắc chắn của nguồn gốc.
-- Khi một giả thuyết còn tranh cãi trong giới nghiên cứu (ví dụ có nguồn ủng hộ và nguồn phản
-  bác), nói rõ điều đó trong lời dẫn thay vì chọn một phía rồi trình bày như sự thật đã chốt.
+## Storyboard of many stills
 
-## Hình ảnh — không chữ trong ảnh, chữ do Remotion vẽ
+For `character_mode: story_cast`, a cast can be empty. A video-specific recurring person or group gets a consistent appearance only when the story needs it; there is no channel-wide lead. Use the `character_ids` of each actual shot, and keep them empty for landscapes, objects, maps or other people-free shots. A dependent shot uses `based_on` to preserve camera and setting; an independent composition starts separately. Every image/beat should show a visible action, consequence, reaction, evidence or change of state. Plan enough distinct stills and optional reaction inserts to make the narration visually legible; reuse a still deliberately for a callback or a hold that serves the story, not to hide an image-generation failure. Beat timing follows the measured narration rather than a fixed number of seconds per image.
 
-- Mọi `images[]` giữ `visible_text: []`; không yêu cầu model sinh chữ/số/nhãn trong ảnh (tiếng
-  Việt có dấu thường bị model vẽ sai). Phong cách theo `channel.json.style`: doodle người que mực
-  đen trên nền kem/be, không màu sắc rực rỡ, không chi tiết ảnh thật.
-- Nhãn, tên chương, mốc thời gian, mũi tên chỉ vị trí, số liệu chạy số… đặt vào `beats[].overlays`
-  (không phải `visible_text`): `type` một trong `label|chapter_title|map_pin|counter|arrow`, `text`
-  tiếng Việt có dấu, toạ độ `x,y` trong khung 0-1, `at` là giây tính từ đầu beat. Dùng `counter`
-  khi cần chạy số (ví dụ tuổi di chỉ) kèm `to`; dùng `arrow` kèm `angle` khi chỉ vào chi tiết ảnh.
-- `images[].kind` mặc định `still`. Ảnh loại `clip` (dùng cho hook, mở mỗi chương, cao trào/kết
-  — xem `docs/tien-su-plan.md` mục 3b) phải có `from_image` trỏ tới id một ảnh `still` cùng cảnh
-  làm khung hình đầu, và `motion` mô tả chuyển động bằng tiếng Anh (prompt nội bộ); không vượt
-  `brief.clips.max`. Không tự đặt `kind: clip` khi brief không có trường `clips` (kênh/job đó
-  chưa bật Veo).
+Keep `visible_text: []` and put Vietnamese labels/numbers in `beats[].overlays`; verify at phone size. The channel's cream-paper, thick-ink, muted-color doodle style stays consistent across stories without reusing a protagonist. New briefs omit `clips`; use `kind: clip` only when a user-requested brief revision explicitly includes a positive clip budget.
 
-## Ngân sách độ dài/nhịp và lỗi chặn thường gặp (bắt buộc)
+## Packaging and review
 
-Brief dài (`duration.max_seconds > 300` hoặc `channel == "tiensu"`) được adapter viết theo từng
-cảnh (`scripts/agy_longform.py`): sau dàn ý, mỗi cảnh một lượt gọi kèm ngân sách riêng, lời dẫn các
-cảnh trước và schema một cảnh; rồi một lượt đóng gói; lỗi hợp đồng được sửa có giới hạn (tối đa 2
-vòng, chỉ cảnh lỗi). Ngân sách tính từ điểm giữa `duration` và `planning.speech_rates` (8-12 phút,
-3,6 âm tiết/giây ≈ 1.800-2.400 âm tiết cả video) và là mục tiêu cứng ±15% cho từng cảnh:
-
-- Lời dẫn: đủ số âm tiết (đếm theo từ cách nhau bởi dấu cách) của cảnh; thiếu hoặc thừa quá 15% bị
-  chặn `BUDGET_UNITS`. Viết lời dẫn đủ dài trước, rồi mới đặt neo/coverage/claims lên trên.
-- Nhịp: một beat mỗi 4-6 giây lời dẫn (cả video khoảng 80-150 beat); sai khoảng bị chặn
-  `BUDGET_BEATS`. Không cần ảnh mới cho mỗi beat: dùng lại một ảnh `still` qua nhiều beat liên
-  tiếp và đổi overlay/effect/focus (cả video khoảng 40-70 ảnh riêng, kể cả clip trong `clips.max`).
-- Mô tả hình (`description`, `preserve`, `change`, `motion`), lời dẫn và chữ overlay KHÔNG được chứa
-  mã quản lý (mã nhân vật như CH01, mã cảnh SC…, mã ảnh/beat như IMG_…/B…). Gọi nhân vật bằng tên và
-  ngoại hình ("người tiền sử tóc bù mặc áo da thú"), không viết "CH01 ngồi dậy". Lỗi này bị chặn
-  `INTERNAL_LABEL`.
-- Chữ overlay ngắn: `label`/`map_pin` ≤ 40 ký tự, `chapter_title` ≤ 60, `counter`/`arrow` ≤ 30;
-  vượt bị chặn `OVERLAY`. Tên chương dài đặt ở `scenes[].chapter`, overlay chỉ ghi bản rút gọn.
-- Mã ảnh/beat đặt theo cảnh (`SC03_I01`, `SC03_C01`, `SC03_B01`) để không trùng giữa các cảnh.
-
-## Đóng gói (`packaging`)
-
-Viết cùng lúc với kịch bản, không phải bước riêng: điền `packaging` ở top-level content-v3.
-- `titles`: đúng 3 phương án theo khuôn "Người tiền sử làm gì/ra sao khi ___?" hoặc biến thể câu
-  hỏi 2 ngôi, không phóng đại/giật tít sai bằng chứng đã viết.
-- `thumbnail.text`: 2-4 từ tiếng Việt in hoa, thường kết bằng dấu hỏi; `thumbnail.image_id` trỏ
-  một ảnh `still` đã có trong `images[]` (không tạo ảnh thumbnail riêng ở bước content).
-  `thumbnail.emotion`: cảm xúc nhân vật cần thấy rõ trong ảnh đó (ví dụ "hoảng sợ", "tò mò").
-- `hook`: đúng 2 câu tóm tắt lời hứa mở đầu, dùng cho mô tả video, không trùng nguyên văn narration.
-- `tags`: từ khoá liên quan tiền sử/khảo cổ/sinh tồn, tiếng Việt, không nhồi từ khoá không liên quan.
-- `scenes[].chapter` của mỗi chương bằng chứng (R4) ghép với thời điểm bắt đầu thật của cảnh trong
-  WAV (đo ở bước media) để `packaging.py` (GĐ5) dựng danh sách chapters cho mô tả YouTube.
-
-## Không sao chép kênh mẫu
-
-Chỉ lấy khuôn kể chuyện (hook 2 ngôi, phá niềm tin, 6-8 chương, callback) và công thức thumbnail;
-không dịch bất kỳ câu nào từ video của kênh mẫu, không mô tả lại hình ảnh/nhân vật của họ. Xem
-`tiensu/channel.json.avoid` và `assets/characters/tiensu-mascot/` cho nhân vật riêng của kênh này.
-
-Đọc thêm [director-contract.md](director-contract.md) và [vp-script-director](../../vp-script-director/SKILL.md).
+Write three accurate title options, an image-based thumbnail plan, a two-sentence hook for the description and relevant tags with the content. The thumbnail uses an existing still and a short Remotion text overlay. Build chapter times from actual WAV scene boundaries. Review the entire Vietnamese script for narrative clarity and source fidelity, then review every generated image, the WAV and the finished MP4 at their proper gates. Technical checks and contact sheets are not substitutes for actual viewing/listening or a valid Pilot decision.

@@ -35,11 +35,12 @@ def clip_info(path):
     return float(r.stdout.strip() or 0)
 
 
-def plan(script, audio, mode):
+def plan(script, audio, mode, images_dir=None):
     """Beats per scene. Stills: each line's shots split its time evenly; a reaction insert
     (script.REACT[shot_id]) takes the last 40% of that shot. Clips: a shot's clip covers its span,
     slowed down to at most 25% (rate .8) when the span is longer, looped beyond that."""
-    manifest = json.loads((IMG_DIR / 'manifest.json').read_text())
+    images_dir = Path(images_dir or IMG_DIR)
+    manifest = json.loads((images_dir / 'manifest.json').read_text())
     react = getattr(script, 'REACT', {})
     reuse = getattr(script, 'REUSE', {})
     segs = audio['segments']
@@ -82,7 +83,8 @@ def plan(script, audio, mode):
     return scenes, used
 
 
-def stage_render(script, work, mode, name):
+def stage_render(script, work, mode, name, images_dir=None, dest_root=None):
+    images_dir = Path(images_dir or IMG_DIR)
     audio = json.loads((work / 'audio.json').read_text())
     out = work / mode
     public = out / 'public'
@@ -90,7 +92,7 @@ def stage_render(script, work, mode, name):
         shutil.rmtree(public)
     public.mkdir(parents=True)
     shutil.copy(audio['wav'], public / 'narration.wav')
-    scenes, used = plan(script, audio, mode)
+    scenes, used = plan(script, audio, mode, images_dir)
     for dst, src in used.items():
         shutil.copy(src, public / dst)
     cfg = json.loads((SYS / 'config.json').read_text())
@@ -102,18 +104,19 @@ def stage_render(script, work, mode, name):
     (out / 'render.log').write_text(r.stdout + '\n' + r.stderr)
     if r.returncode or not (out / 'video.mp4').exists():
         raise SystemExit('render failed, see ' + str(out / 'render.log'))
-    dest = SYS.parent / 'video' / name
+    dest = Path(dest_root or SYS.parent / 'video') / name
     dest.mkdir(parents=True, exist_ok=True)
     shutil.copy(out / 'video.mp4', dest / f'{name}.mp4')
     (dest / f'{name}.vi.srt').write_text(adapters.make_srt(segs))
-    manifest = json.loads((IMG_DIR / 'manifest.json').read_text())
+    manifest = json.loads((images_dir / 'manifest.json').read_text())
     video_packaging.write_thumbnails(Path(manifest[script.THUMB['shot']]['path']), script.THUMB['text'], dest)
     content = {'scenes': [{'id': sc['id'], 'chapter': sc['chapter']} for sc in script.SCENES]}
     chapters = video_packaging.build_chapters(content, {'segments': segs})
     desc = video_packaging.build_description(script.HOOK, chapters, [])
     desc = '\n'.join(l for l in desc.splitlines() if 'Nguồn tham khảo' not in l and 'chưa khai báo nguồn' not in l).rstrip()
     how = 'Hình minh họa tạo bằng AI (Google Flow)' + (', chuyển động bằng Omni Flash' if mode == 'clips' else '')
-    desc += f'\n\n{how}; nhân vật Mơ là nhân vật hư cấu. Các con số là ước lượng từ nghiên cứu khảo cổ và nhân học, còn nhiều tranh luận.\n'
+    note = getattr(script, 'CHARACTER_NOTE', '')
+    desc += f'\n\n{how}.' + (f' {note}' if note else '') + '\n'
     (dest / 'description.txt').write_text(desc)
     meta = video_packaging.build_metadata({'titles': script.TITLES, 'tags': script.TAGS, 'hook': script.HOOK}, chapters, [], audio['duration'], desc)
     (dest / 'metadata.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2))
@@ -123,9 +126,12 @@ def stage_render(script, work, mode, name):
 
 
 if __name__ == '__main__':
-    stage, module, work = sys.argv[1], sys.argv[2], Path(sys.argv[3]).resolve()
+    args = sys.argv[1:]
+    stage, module, work = args[0], args[1], Path(args[2]).resolve()
     script = importlib.import_module(module)
     if stage == 'tts':
         stage_tts(script, work)
     else:
-        stage_render(script, work, sys.argv[4], sys.argv[5])
+        images_dir = args[args.index('--images-dir') + 1] if '--images-dir' in args else None
+        dest_root = args[args.index('--dest-root') + 1] if '--dest-root' in args else None
+        stage_render(script, work, args[3], args[4], images_dir, dest_root)

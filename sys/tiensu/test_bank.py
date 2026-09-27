@@ -101,11 +101,12 @@ class BankTests(unittest.TestCase):
         self.assertEqual('16:9', brief['aspect_ratio'])
         self.assertTrue(brief['facts_required'])
         self.assertEqual(1, len(brief['sources']))
-        self.assertIn('clips', brief)
-        self.assertEqual(10, brief['clips']['max'])
-        self.assertIn(brief['scene_count'], range(7, 10))
+        self.assertNotIn('clips', brief)
+        self.assertEqual('story_cast', brief['character_mode'])
+        self.assertEqual({'min_seconds': 360.0, 'max_seconds': 900.0}, brief['duration'])
+        self.assertIn(brief['scene_count'], range(6, 13))
         ids = [r['id'] for r in brief['required_points']]
-        self.assertEqual(['R1', 'R2', 'R3', 'R4', 'R5'], ids)
+        self.assertEqual(['R1', 'R2', 'R3', 'R4'], ids)
         self.assertTrue(any(l.startswith(tb.ENTRY_TAG) for l in brief['planning']['domain_requirements']))
         self.assertIn('vi', brief['planning']['speech_rates'])
         self.assertIn('en', brief['planning']['speech_rates'])  # schema brief-v3 yêu cầu cả hai
@@ -125,8 +126,8 @@ class BankTests(unittest.TestCase):
         self.write_topics([topic('few-facts', seed_facts=['một gợi ý'])])
         drawn = tb.reserve(args(job='v1'))
         brief = json.loads(Path(drawn['brief']).read_text(encoding='utf-8'))
-        self.assertGreaterEqual(brief['scene_count'], 7)
-        self.assertLessEqual(brief['scene_count'], 9)
+        self.assertGreaterEqual(brief['scene_count'], 6)
+        self.assertLessEqual(brief['scene_count'], 12)
 
     # ---------------------------------------------------------- mark
 
@@ -238,8 +239,10 @@ class PilotTopicsAreLoadedTests(unittest.TestCase):
         self.assertEqual('16:9', cfg['aspect_ratio'])
         self.assertEqual('vi', cfg['voice_language'])
         self.assertTrue(cfg['subtitles'])
-        self.assertEqual(480.0, cfg['duration']['min_seconds'])
-        self.assertEqual(720.0, cfg['duration']['max_seconds'])
+        self.assertEqual('story_cast', cfg['character_mode'])
+        self.assertNotIn('clips', cfg)
+        self.assertEqual(360.0, cfg['duration']['min_seconds'])
+        self.assertEqual(900.0, cfg['duration']['max_seconds'])
         self.assertEqual(3.6, cfg['speech_rates']['vi']['units_per_second'])
 
 

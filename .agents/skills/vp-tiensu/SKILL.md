@@ -1,66 +1,30 @@
 ---
 name: vp-tiensu
-description: Tạo hoặc tiếp tục video giải thích đời sống tiền sử/sinh tồn dài 16:9 tiếng Việt từ kho tiensu của Video Pilot; dùng cho yêu cầu video kênh tiensu, không áp dụng cho video từ vựng hay video 9:16.
+description: Create or continue a 16:9 Vietnamese prehistoric story video from the Video Pilot tiensu bank. New briefs use many AI stills over 6–15 minutes; existing briefs retain their saved character and clip requirements. Do not use for vocabulary or 9:16 jobs.
 ---
 
-# Điều phối video kênh giải thích tiền sử (tiensu)
+# Prehistoric story videos
 
-Lệnh tính từ `sys/`. Đọc `AGENTS.md`, `docs/workflow.md` và `docs/tien-su-plan.md` (đặc biệt mục
-1, 4 GĐ1/GĐ4, 5, 8 — hợp đồng dữ liệu mục 8 ràng buộc mọi trường mới). Một video trả lời đúng một
-câu hỏi trong kho; giữ chỗ và cập nhật kho qua `tiensu/bank.py`, không viết brief hay ledger bằng
-tay, không tự chọn chủ đề ngoài kho.
+Paths and commands below are relative to `sys/`. Read `AGENTS.md`, `docs/workflow.md`, the saved brief, and [the long-form story guide](../vp-content/references/explainer-longform.md). The only public gates are **content → media → video**. This skill extends those gates; `doodle.build_ai` and scratch previews never constitute an approved Pilot video.
 
-## Bắt đầu
+## Start or resume
 
-Dùng `python3 tiensu/bank.py start JOB --mode review` cho job mới. Chỉ dùng `--mode auto` khi
-người dùng yêu cầu tự động; mode của job đã có giữ nguyên. Tỷ lệ/ngôn ngữ/phụ đề lấy từ
-`tiensu/channel.json` (16:9, giọng Việt, phụ đề bật) — không cần cờ tỷ lệ như kênh từ vựng.
-Muốn chọn đúng một chủ đề, thêm `--id TOPIC_ID` (xem `python3 tiensu/bank.py next --count 10`
-để tra id). Chủ đề phải đã có `sources` thật trong `tiensu/topics.jsonl`; `reserve`/`start` chặn
-chủ đề chưa có nguồn (facts_required=true không cho sources rỗng).
+For a new video, select a question with real sources from `tiensu/topics.jsonl` and run `python3 tiensu/bank.py start JOB --mode review` (or `--mode auto` only when the user requested auto). Do not handwrite a brief or reserve the same topic twice. For an existing job, run `python3 pilot.py status JOB` and `python3 pilot.py next JOB` first. Its saved brief remains the contract; do not retrofit the new defaults into historical revisions or override integrity failures.
 
-Khi tiếp tục job, không start lại. Chạy `python3 pilot.py status JOB` và `python3 pilot.py next JOB`.
+New bank briefs set `character_mode: story_cast`, `duration: 360–900 s`, 16:9 Vietnamese, and no `clips`. The middle of that window gives the writer a roughly 10.5-minute starting budget, not a command to stretch every topic to one length. If the story needs a narrower window or more scenes, revise the brief **before content** through Pilot. Clips require an explicit user request and a valid brief revision; do not infer permission from `config.video_generation`.
 
-## Thứ tự
+## Content
 
-1. Đọc `vp-content/SKILL.md` và `vp-content/references/explainer-longform.md` (adapter tự nạp
-   file này vào lượt outline/content vì `brief.channel == "tiensu"`, xem
-   `scripts/director_context.py`); chạy `python3 pilot.py run JOB content`. Dùng các vai trò đạo
-   diễn theo `docs/director-system.md`. Giữ đúng cấu trúc 5 phần trong `required_points` (R1-R5)
-   của brief: hook 2 ngôi "bạn", phá niềm tin phổ biến, nhắc lại câu hỏi bí ẩn, 6-8 chương bằng
-   chứng (mỗi chương một nghiên cứu/di chỉ có nguồn, đặt tên vào `scenes[].chapter`), kết callback
-   "Bạn thì… còn họ thì…". Viết `packaging` (titles/thumbnail/hook/tags) cùng lúc với kịch bản.
-   Ảnh giữ `visible_text: []`; chữ/nhãn/số hiển thị đặt vào `beats[].overlays`. Chốt lời dẫn trước
-   khi đặt neo/coverage/claims, không sửa sau khi đã neo.
-2. Sau quyết định content hợp lệ, đọc `vp-media/SKILL.md`; chạy `python3 pilot.py run JOB media`.
-   Âm thanh tiếng Việt trước, đo WAV thật, sau đó ảnh và nhịp. Video dài (8-12 phút) nên số cảnh
-   và lượt tổng hợp TTS nhiều hơn video 9:16 thường gặp; theo dõi log lỗi nếu một cảnh vượt
-   `tts_max_chars` (chia câu tự động theo cấu hình hiện có, không tự sửa cấu hình TTS).
-   Ảnh loại `clip` (nếu brief có `clips`) dùng `from_image`/`motion` đã viết ở content; đây vẫn là
-   nghiệm thu GĐ3b/GĐ6, không tự bật khi chưa được yêu cầu.
-3. Sau quyết định media hợp lệ, đọc `vp-video/SKILL.md`; chạy `python3 pilot.py run JOB video`.
-4. Khi video đã có quyết định hợp lệ và xuất thành công, chạy `python3 tiensu/bank.py mark JOB`.
-   Trả đường dẫn MP4 thật trong `video/<job>/`, không gán revision 1. Đóng gói (thumbnail/mô
-   tả/chapters/nguồn, `sys/packaging.py`) là GĐ5, chạy sau khi có sẵn — không tự chạy nếu module
-   đó chưa được triển khai trên nhánh.
+Follow the question and available evidence, not a fixed number of chapters or a required protagonist. Open with a concrete situation or question, establish stakes, develop a causal, chronological, or comparative sequence, and answer with an honest payoff. A modern contrast, misconception, callback, or recurring person is optional when it serves this story. Do not force a 50,000-year setting. Cite real archaeological or research sources in the brief; every named finding, date, or number in narration must map to a source-backed claim. Write Vietnamese narration fully before anchors, coverage, and claims; never change the narration after anchoring it.
 
-Review dừng đúng ba điểm content/media/video, đưa review.md và revision. Auto dùng báo cáo
-xem/nghe artifact thật; unsupported hoặc lỗi đăng nhập/CAPTCHA/hạn mức thì dừng, không tự pass.
-Skill hướng dẫn agent điều phối CLI, không gọi lớp Pilot để vượt gate.
+For new `story_cast` briefs, `characters` may be empty. Introduce story-specific characters only when the same design must recur within this video; name them in the cast and attach their actual references only to shots where they appear. An old brief without `character_mode` keeps its canonical mascot. Write the image plan as visible actions, state changes, evidence and reactions, with enough distinct stills to show what changes. `images[].kind` is `still`; `visible_text` is empty; Vietnamese labels belong in `beats[].overlays`. Use `based_on` when camera and setting continuity matter. Put packaging and short chapter titles into content.
 
-Lỗi hoặc yêu cầu sửa: dùng reject đúng stage/phạm vi rồi resume; giữ journal ambiguous và đối
-chiếu trước gửi lại. Không mark chỉ vì render thành công. Không dùng --force để hoàn tất job
-pipeline bị chặn.
+Run `python3 pilot.py run JOB content`; in review mode stop with the current `review.md` and revision. In auto mode only the actual machine review can pass. A technical check does not approve quality.
 
-Nhiều video: chỉ dùng `tiensu/bank.py queue` khi được yêu cầu, mark từng job đạt. Không sản xuất
-hàng loạt/lặp nội dung (chính sách kiếm tiền YouTube, xem mục 6 kế hoạch) — mỗi video tự nghiên
-cứu, nguồn thật, không dịch/sao chép kênh mẫu Ink Explainer. Sau hoàn tất có thể dùng `vp-clean`
-để kiểm kê dữ liệu tạm; dọn dẹp không là điều kiện hoàn tất và không tự xóa media/bằng chứng.
+## Media and video
 
-## Bổ sung chủ đề vào kho
+After valid content approval, run `python3 pilot.py run JOB media`. Synthesize local Vietnamese narration first and measure the complete WAV. If it misses the saved duration window, repair content through reject/resume; do not pad, cut, or shorten ideas to make the number pass. Then generate the approved still plan with the configured Flow route. An independent composition may have no character reference in `story_cast` mode; use an approved video-specific cast reference where needed and a Base scene reference for dependent shots. Never silently attach the old channel mascot, substitute another image provider, or resend a request whose outcome is unknown. Check model, reference/media ID, journal, aspect ratio and each actual image; reconcile timeouts before another submit. Record a credit assumption as an assumption when UI cost was not verified.
 
-Thêm dòng mới vào `tiensu/topics.jsonl` (JSONL, mỗi dòng một chủ đề: `id`, `question`, `angle`,
-`seed_facts`, `sources`). `sources` bắt buộc phải là tài liệu/di chỉ/nghiên cứu THẬT có thể tra
-cứu lại được (tên tác giả, năm, nơi công bố hoặc tên di chỉ khảo cổ) — không bịa nguồn; thiếu
-`sources` thì `tiensu/bank.py start` chặn ngay ở bước sinh brief. `seed_facts` chỉ là gợi ý hướng
-nghiên cứu thêm cho người viết kịch bản, không thay thế `sources` đã kiểm chứng.
+Compare the whole image sequence with the measured WAV: each beat needs a narrative purpose, action or expression is visible, and text has enough reading time. Review all WAVs and images before the media decision. After valid media approval run `python3 pilot.py run JOB video`; inspect the full MP4 for image order, continuity, audio, captions, crop, pacing and ending. Only the current video decision permits export and `python3 tiensu/bank.py mark JOB`. Deliver the actual MP4, SRT, thumbnails, chapters, description and sources from the workflow output.
+
+When this skill or its still-image path changes, perform a separate **new ~15-second smoke video** in `sys/scratch/` using fresh narration and 3–5 fresh Flow stills. Watch/listen to it and compare MP4 duration with WAV. The smoke is test data, never a Pilot job or a substitute for the three production decisions. If Flow is blocked by login, CAPTCHA, unusual activity, upload permission or quota, stop the smoke and report it as incomplete; do not switch accounts or tools to claim success.

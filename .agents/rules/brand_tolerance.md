@@ -6,6 +6,8 @@ trigger: always_on
 
 Quy định này áp dụng cho toàn bộ quá trình lập kịch bản, tạo hình ảnh (Flow / B-2 Illustrator) và đánh giá chất lượng (Machine Review / Human Review) của Video Pilot.
 
+Phạm vi nhận diện cố định dưới đây chỉ áp dụng khi brief dùng mascot canonical. Brief mới `character_mode: story_cast` không có mascot chung; dùng nhận diện của nhân vật riêng nếu nhân vật đó xuất hiện, không áp áo xanh/CH01 canonical cho cảnh không người hoặc nhân vật tiền sử.
+
 ## 1. Nguyên lý Cốt lõi: Tỷ lệ 80/20
 Hệ thống cho phép sai số, **không bắt buộc hình ảnh phải giống 100% kịch bản tuyệt đối hay đồng nhất đến từng milimet pixel**.
 - **80% là Nhận diện thương hiệu cốt lõi (Brand Identity)**: Cố định và bắt buộc tuân thủ.

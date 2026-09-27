@@ -17,14 +17,14 @@ Use shot scale and angle to guide attention, not cinematic adjectives. Keep one 
 
 ## Continuity and performance
 
-The canonical mascot reference at `assets/characters/channel-mascot/reference-v1.png` is authoritative. Apply the 80/20 Brand Tolerance Policy: generated images do not need to match the script 100% or be pixel-perfect. 80% is the non-negotiable core brand identity: single torso, pale-blue short-sleeve shirt (#8CCFE8), round white head with dark navy outline, solid black oval eyes, and minimal stick limbs. Reject severe brand violations: doubled shirts, realistic human muscles/fingers, wrong shirt colors, or cartoon/anime eyes with huge whites and pupils.
+For canonical briefs, use the channel's resolved mascot reference (the default channel uses `assets/characters/channel-mascot/reference-v1.png`). For new `tiensu` briefs with `character_mode: story_cast`, there is no channel mascot: judge the actual recurring characters against this video's cast references, and accept a people-free image when planned. Apply 80/20 identity tolerance to the character that is actually present. Reject an extra body, a different outfit or anatomy that destroys the intended identity; do not treat small facial or pose variations as failure.
 20% is acceptable tolerance for situational expression and minor details: subtle expressive eyebrows (slanting downward when scolded/sad, furrowed when concentrating or anxious), minor forehead worry lines, sweat drops, varied mouth expressions (pout, open mouth talking/listening), and slight curvature/rounding of limbs when in motion ARE ACCEPTABLE and MUST NOT be marked as defects or failed in character_consistency review.
 
-Direct emotion through pose, head tilt, gesture, distance, and situational context while honoring the core mascot identity. Prompts and matching media IDs do not prove compliance; actual visible perception does.
+Direct emotion through pose, head tilt, gesture, distance, and situational context while honoring any recurring story character's identity. Prompts and matching media IDs do not prove compliance; actual visible perception does.
 
 Keep line weight, palette, background detail, prop position and scale coherent. Minor props and background variations are acceptable as long as pedagogical clarity is maintained. Choose independent generation for genuinely independent compositions. Use `based_on` for a state change requiring a locked base; it must refer to an earlier image in the same scene. Throughput never decides story continuity.
 
-Attach Character reference for mascot shots and Base reference for inherited shots using the existing Flow route. Never change provider, bypass reference checks or resend an ambiguous request.
+Attach the canonical reference only for canonical briefs. For `story_cast`, attach a story-specific Character reference only to shots that use that character; independent people-free shots may have no Character reference. Attach Base reference for inherited shots using the existing Flow route. Never change provider, bypass reference checks or resend an ambiguous request.
 
 ## Picture review
 

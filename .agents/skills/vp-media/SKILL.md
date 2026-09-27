@@ -12,7 +12,7 @@ Chạy lệnh từ `sys/`. Theo `AGENTS.md` và `docs/workflow.md`; kiểm tra `
 Sau quyết định content hợp lệ, dùng `python3 pilot.py run JOB media` hoặc `resume JOB`. Đọc [âm thanh](references/audio.md) khi tạo/sửa giọng, [hình ảnh](references/images.md) khi tạo/sửa ảnh. Lượt tạo media mới cần cả hai.
 
 Thứ tự bắt buộc: tạo âm thanh → đo WAV → tạo ảnh theo kế hoạch → đối chiếu nhịp và phụ đề. Audio/images là bước nội bộ; chỉ duyệt chung tại media. Giữ CH01 và hai tham chiếu Character/Base cho ảnh kế thừa; không gửi lại yêu cầu chưa rõ kết quả.
-Áp dụng quy tắc dung sai 80/20: kiểm tra 80% nhận diện thương hiệu cốt lõi (áo xanh #8CCFE8, người que 1 thân, đầu tròn trắng mắt đen); chấp nhận 20% dung sai sai lệch nhỏ (nét lông mày biểu cảm nhẹ, mồ hôi, nếp trán lo lắng, biến thiên tư thế tứ chi). Không đánh rớt media vì các chi tiết biểu cảm 20% này. Mọi sự cố phát sinh phải ghi vào `logs/issues/` và cập nhật `INDEX.md`.
+Áp dụng dung sai 80/20 cho nhận diện đã khai báo trong brief: canonical dùng mascot đúng kênh; `story_cast` chỉ đối chiếu nhân vật của câu chuyện ở ảnh thật có nhân vật đó, không bắt mọi ảnh có mascot. Chấp nhận 20% biến thiên nhỏ về biểu cảm, mồ hôi và tư thế khi 80% nhận diện cốt lõi còn đúng. Mọi sự cố phát sinh phải ghi vào `logs/issues/` và cập nhật `INDEX.md`.
 
 Bàn giao toàn bộ WAV, ảnh/nhân vật, SRT, thời lượng thật và review.md đúng revision. Không coi thời điểm nội suy là căn chỉnh từ đã đo. Review chờ người dùng; auto đi qua bộ đánh giá thật, unsupported thì dừng.
 

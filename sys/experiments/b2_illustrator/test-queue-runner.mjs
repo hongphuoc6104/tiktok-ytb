@@ -20,6 +20,11 @@ test('ratio and character reference are required',()=>{
  assert.throws(()=>prepareRequests([{...request,ratio:'1:1'}]),/INVALID/);
  assert.throws(()=>prepareRequests([{...request,characterRefPath:null}]),/CHARACTER/);
 });
+test('story cast may submit a people-free still without a character reference',()=>{
+ const [r]=prepareRequests([{...request,testCase:'story-landscape',characterRefPath:null,charMediaId:null,referenceMode:'none'}]);
+ assert.equal(r.character,null);assert.deepEqual(r.identity.references,[]);
+ assert.equal(r.identity.prompt,request.prompt);
+});
 test('collection-only mode preserves generation identity',()=>{
  assert.deepEqual(prepareRequests([request])[0].identity,prepareRequests([{...request,collectionOnly:true}])[0].identity);
 });

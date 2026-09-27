@@ -292,11 +292,14 @@ def requested_prompt(p, j, target, prompt, notes, ratio, registration=False):
     c = content(p,j)
     corrections = safe_corrections(c, notes)
     unit = next((x for x in planned_units(p,j) if x['id']==target),None)
-    mascot_target = (target == 'ref:CH01' or target.startswith('register:CH01:') or
-                     bool(unit and 'CH01' in unit['character_ids']))
+    mascot_target = (not characters.story_cast_for(p, p.brief(j)) and
+                     (target == 'ref:CH01' or target.startswith('register:CH01:') or
+                      bool(unit and 'CH01' in unit['character_ids'])))
     if mascot_target:
         prompt += ('\nPreserve the attached canonical character design. Express emotion through posture and gesture; '
                    'do not add eyebrows, teeth, white cartoon eyes, extra clothing or a second torso.')
+    elif characters.story_cast_for(p, p.brief(j)) and unit and not unit['character_ids']:
+        prompt += '\nNo recurring character is attached for this shot; draw only the people or objects explicitly described.'
     revised = prompt + ('\nRequested corrections (keep the approved visible-text list unchanged): '+corrections if corrections else '') if c.get('schema_version')=='3.0' else prompt + ('\nRequested corrections: '+corrections if corrections else '')
     return revised if registration else image_prompt(revised,ratio)
 
@@ -445,9 +448,11 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
             args += ['--base-image', str(p.path(j,base_image['path']))]
         if refs:
             args += ['--character'] + [x['name'] for x in refs]
-            if flowpool_on(p, j, cfg):
+            if flowpool_on(p, j, cfg) or characters.story_cast_for(p, p.brief(j)):
                 args += ['--character-ref'] + registered_sources
-    if target == 'ref:' + characters.CHARACTER_ID or target.startswith('register:' + characters.CHARACTER_ID + ':'):
+    if characters.story_cast_for(p, p.brief(j)):
+        args += ['--story-cast']
+    elif target == 'ref:' + characters.CHARACTER_ID or target.startswith('register:' + characters.CHARACTER_ID + ':'):
         # Only the mascot's own reference/registration request needs the
         # channel-resolved mascot attached explicitly; adapters.gflow must
         # never guess this from an empty --character list. Raises
@@ -484,7 +489,8 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
             raise Blocked('Flow UI attachment/mode evidence missing')
         if flowpool_on(p, j, cfg):
             expected_sources = ([str(source)] if registration else
-                                [str(characters.mascot_for(p, p.brief(j))['reference_path'].resolve())] + registered_sources)
+                                ([] if characters.story_cast_for(p, p.brief(j)) else
+                                 [str(characters.mascot_for(p, p.brief(j))['reference_path'].resolve())]) + registered_sources)
             if (proof.get('source_references') != expected_sources or
                     proof.get('source_hashes') != [digest(Path(path)) for path in expected_sources]):
                 raise Blocked('M2_REFERENCE_SOURCE: FlowPool ingredient evidence differs')
@@ -720,7 +726,8 @@ def batch_submit(p, j, units, registrations):
             if proof.get('passed') is not True or proof.get('characters') != expected_names:
                 raise Blocked('Flow UI attachment/mode evidence missing')
             if flowpool_on(p, j, cfg):
-                expected_sources = [str(characters.mascot_for(p, p.brief(j))['reference_path'].resolve())] + plan['source_paths']
+                expected_sources = ([] if characters.story_cast_for(p, p.brief(j)) else
+                                    [str(characters.mascot_for(p, p.brief(j))['reference_path'].resolve())]) + plan['source_paths']
                 if (proof.get('source_references') != expected_sources or
                         proof.get('source_hashes') != [digest(Path(path)) for path in expected_sources]):
                     raise Blocked('M2_REFERENCE_SOURCE: FlowPool batch ingredient evidence differs')
@@ -876,7 +883,7 @@ def produce(p, j, out):
         # populates journals for each ratio's independent images with a single
         # gflow batch call; the per-scene loop below is unchanged either way
         # and simply hits the cache for anything the batch already resolved.
-        if cfg.get('flow_batch', False):
+        if cfg.get('flow_batch', False) and not characters.story_cast_for(p, p.brief(j)):
             for rk in ratio_order:
                 units_in_ratio = [u for group in ratio_groups[rk].values() for u in group]
                 batch_submit(p, j, units_in_ratio, registrations)

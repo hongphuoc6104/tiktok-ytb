@@ -127,6 +127,7 @@ def generate_b2_image(
     test_case: str = "SCENE",
     timeout: float = 120.0,
     collection_only: bool = False,
+    reference_mode: str = "required",
 ) -> dict:
     """Generate image via B-2 Illustrator applet and harvest committed result."""
     try:
@@ -142,7 +143,7 @@ def generate_b2_image(
     # that never resolved one, and it must stay the pre-existing (vocab)
     # default rather than guessing a channel -- never raises, matching the
     # old `.exists()` check's graceful degrade.
-    if char_ref_path is None:
+    if char_ref_path is None and reference_mode != "none":
         default_mascot = characters.try_resolve(ROOT, None)
         if default_mascot:
             char_ref_path = default_mascot["reference_path"]
@@ -165,6 +166,7 @@ def generate_b2_image(
         "characterRefPath": str(Path(char_ref_path).resolve()) if char_ref_path else None,
         "baseMediaId": base_media_id,
         "charMediaId": char_media_id,
+        "referenceMode": reference_mode,
     }
 
     spec_file = target_dir / f".spec-{test_case}-{int(time.time() * 1000)}.json"

@@ -106,13 +106,17 @@ def _image_ingredients(p, out_folder, job, char_names, source_paths, base_img, a
         raise _before_submit('FLOWPOOL_UI_EVIDENCE_UNAVAILABLE: daemon has no real before-submit screenshot for this policy')
     if len(char_names) != len(source_paths):
         raise _before_submit('M2_REFERENCE_SOURCE: every character needs an explicit registered image')
-    mascot = _mascot_reference(p, job, args)
-    character_sources = [str(mascot)] + [str(Path(path).resolve()) for path in source_paths]
-    try:
-        board, source_hashes = references.ingredient(character_sources, out_folder.parent / 'ingredients')
-    except ValueError as ex:
-        raise _before_submit(str(ex)) from ex
-    refs = [board]
+    story_cast = characters.story_cast_for(p, job)
+    character_sources = ([] if story_cast else [str(_mascot_reference(p, job, args))])
+    character_sources += [str(Path(path).resolve()) for path in source_paths]
+    if character_sources:
+        try:
+            board, source_hashes = references.ingredient(character_sources, out_folder.parent / 'ingredients')
+        except ValueError as ex:
+            raise _before_submit(str(ex)) from ex
+        refs = [board]
+    else:
+        source_hashes, refs = [], []
     if base_img:
         source = Path(base_img).resolve()
         if not source.is_file():
@@ -171,7 +175,7 @@ def gflow(p, *args, timeout=960):
     chars, base_img = _characters(args), _arg(args, '--base-image')
     refs, sources, source_hashes = _image_ingredients(
         p, out_folder, job, chars, _values(args, '--character-ref'), base_img, args)
-    mascot = characters.try_mascot_for(p, job)
+    mascot = None if characters.story_cast_for(p, job) else characters.try_mascot_for(p, job)
     flow_prompt = prompts.image_prompt(prompt, ratio, prompts.channel_style(p.root, _channel(p, job)), mascot, bool(base_img))
     # Variants live next to --out, not inside it: request() expects exactly one image in --out.
     [result] = _run(p, [{'id': job_id, 'kind': 'image', 'prompt': flow_prompt, 'ratio': ratio, 'refs': refs,
@@ -184,7 +188,7 @@ def gflow(p, *args, timeout=960):
     evidence = Path(_arg(args, '--evidence-out', str(out_folder.parent)))
     dest = _write_image_evidence(p, out_folder, evidence, result, job_id, prompt, ratio, chars, base_img,
                                  flow_prompt, source_references=sources, source_hashes=source_hashes,
-                                 ingredient=refs[0])
+                                 ingredient=refs[0] if refs else None)
     return subprocess.CompletedProcess(args, 0, stdout=f'FlowPool generated: {dest}', stderr='')
 
 
@@ -230,7 +234,8 @@ def _batch(p, args):
     state_file = batch_out / 'gflow-run.json'
     run_jobs = [{'id': job['id'], 'status': 'not_submitted', 'error': 'Not yet offered to FlowPool'} for job in jobs]
     style = prompts.channel_style(p.root, _channel(p, _job_of(batch_out)))
-    resolved = characters.try_mascot_for(p, characters.job_of(batch_out))
+    resolved = (None if characters.story_cast_for(p, characters.job_of(batch_out)) else
+                characters.try_mascot_for(p, characters.job_of(batch_out)))
     variants = int(config(p).get('flowpool_image_variants') or 1)
     requests, ingredients = [], {}
     for job, entry in zip(jobs, run_jobs):

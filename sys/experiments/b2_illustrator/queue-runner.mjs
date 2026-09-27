@@ -28,7 +28,7 @@ export function prepareRequests(specs,{tool=toolUrl,model=configuredModel}={}) {
  return specs.map(s=>{
   if(!/^[\w-]+$/.test(s.testCase)||!s.prompt||!['9:16','16:9'].includes(s.ratio))throw Error('INVALID_QUEUE_REQUEST');
   const character=reference(s.characterRefPath,s.charMediaId),base=reference(s.baseRefPath,s.baseMediaId);
-  if(!character)throw Error('CHARACTER_REFERENCE_REQUIRED');
+  if(!character&&s.referenceMode!=='none')throw Error('CHARACTER_REFERENCE_REQUIRED');
   return {spec:s,character,base,identity:{toolUrl:tool,id:s.testCase,prompt:s.prompt,ratio:s.ratio,preserve:s.preserve||'',change:s.change||'',literalText:s.literalText||'',model:s.model||model,style:s.style||'',references:[character,base].filter(Boolean).map(({mediaId,sha256})=>({mediaId,sha256})),outDir:path.resolve(s.outDir)}};
  });
 }
@@ -127,16 +127,16 @@ export async function enqueueRequests(frame,requests,{label=modelLabel}={}) {
    if(!h?.next?.next?.queue?.dispatch)throw Error('REFERENCE_HOOK_NOT_FOUND');
    h.next.queue.dispatch(base);h.next.next.queue.dispatch(character);
   },r);
-  await frame.getByRole('button',{name:'Clear Character',exact:true}).waitFor();
+  if(r.character)await frame.getByRole('button',{name:'Clear Character',exact:true}).waitFor();
   const boxes=frame.getByRole('textbox');
-  await boxes.nth(0).fill(r.spec.prompt);await boxes.nth(1).fill(r.spec.style||'Match the attached canonical character and scene references.');
+  await boxes.nth(0).fill(r.spec.prompt);await boxes.nth(1).fill(r.spec.style||(r.character?'Match the attached character and scene references.':'Hand-drawn ink doodle on warm paper; only the subjects described in the prompt.'));
   await boxes.nth(2).fill(r.spec.preserve||'');await boxes.nth(3).fill(r.spec.change||'');await boxes.nth(4).fill(r.spec.literalText||'');
   await frame.getByRole('button',{name:r.spec.ratio,exact:true}).click();
   await frame.getByRole('combobox').nth(2).selectOption({label:r.spec.model?modelLabelFor(r.spec.model):label});
   const before=await state();
   await frame.getByRole('button',{name:'Initialize Generation',exact:true}).click();
   const after=await state(),added=after.queue.filter(i=>!before.queue?.some(p=>p.id===i.id));
-  if(added.length!==1||added[0].config.topic!==r.spec.prompt||added[0].characterRefMediaId!==r.character.mediaId||added[0].baseImageMediaId!==(r.base?.mediaId||null)||added[0].config.aspectRatio!==r.spec.ratio)throw Error('QUEUE_REFERENCE_MAPPING_FAILED');
+  if(added.length!==1||added[0].config.topic!==r.spec.prompt||added[0].characterRefMediaId!==(r.character?.mediaId||null)||added[0].baseImageMediaId!==(r.base?.mediaId||null)||added[0].config.aspectRatio!==r.spec.ratio)throw Error('QUEUE_REFERENCE_MAPPING_FAILED');
   ids.push(added[0].id);
  }
  return ids;

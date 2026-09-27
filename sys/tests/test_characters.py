@@ -125,6 +125,13 @@ class MascotForTests(unittest.TestCase):
         _write_mascot(self.root, 'channel-mascot', reference=None)  # now break the fallback too
         self.assertIsNone(ch.try_mascot_for(p, {'channel': 'unknown-and-unwritten'}))
 
+    def test_story_cast_is_opt_in_and_old_briefs_keep_their_mascot(self):
+        p = SimpleNamespace(root=self.root)
+        self.assertFalse(ch.story_cast_for(p, {'channel': 'tiensu'}))
+        self.assertTrue(ch.story_cast_for(p, {'channel': 'tiensu', 'character_mode': 'story_cast'}))
+        self.assertFalse(ch.story_cast_for(p, {'channel': 'tiensu', 'character_mode': 'canonical'}))
+        self.assertEqual(ch.mascot_for(p, {'channel': 'tiensu'})['id'], 'tiensu-mascot')
+
 
 class HelperTests(unittest.TestCase):
     def test_resolve_mascot_id_known_and_unknown(self):

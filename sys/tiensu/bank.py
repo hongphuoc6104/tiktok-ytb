@@ -123,11 +123,14 @@ def select(args, led, items):
 # ---------------------------------------------------------------- brief
 
 def pick_scene_count(channel, topic):
-    """hook + 6-8 chương bằng chứng + kết callback, giới hạn theo channel.scene_count."""
+    """Choose a useful default for the middle of the allowed duration window.
+
+    Individual stories can revise their brief before content; no fixed chapter
+    count is inferred from the number of seed facts (which are not evidence).
+    """
     lo, hi = channel['scene_count']['min'], channel['scene_count']['max']
-    chapters = len(topic.get('seed_facts')) or 6
-    chapters = max(6, min(8, chapters))
-    return max(lo, min(hi, chapters + 2)), chapters
+    midpoint = (channel['duration']['min_seconds'] + channel['duration']['max_seconds']) / 2
+    return max(lo, min(hi, round(midpoint / 70)))
 
 
 def make_brief(topic, channel):
@@ -137,29 +140,27 @@ def make_brief(topic, channel):
     if not sources:
         raise Stop(f'Chủ đề {topic["id"]} chưa có sources thật trong topics.jsonl; '
                    'bổ sung nghiên cứu trước khi start (facts_required=true không cho sources rỗng)')
-    scene_count, chapters = pick_scene_count(channel, topic)
+    scene_count = pick_scene_count(channel, topic)
     brief = {
         'schema_version': '3.0',
         'channel': channel['channel'],
+        'character_mode': channel.get('character_mode', 'canonical'),
         'voice_language': channel.get('voice_language', 'vi'),
         'subtitles': channel.get('subtitles', True),
         'topic': f'{question} — {angle}',
         'audience': channel['audience'],
-        'goal': (f'Người xem trả lời được câu hỏi "{question}" bằng bằng chứng khảo cổ/nghiên '
-                 f'cứu thật, không phải suy đoán, và nhớ được niềm tin sai đã bị video phá bỏ'),
+        'goal': (f'Người xem theo dõi được câu chuyện trả lời "{question}" bằng bằng chứng khảo cổ/nghiên '
+                 f'cứu thật, nhận ra diễn biến và mức độ chắc chắn của lời giải'),
         'video_type': channel['video_type'],
         'duration': channel['duration'],
         'scene_count': scene_count,
         'required_points': [
-            {'id': 'R1', 'text': (f'Hook 2 ngôi "bạn": đối lập đời sống hiện đại của người xem với '
-                                   f'cảnh {angle} khoảng 50.000 năm trước, dẫn thẳng tới câu hỏi mở đầu')},
-            {'id': 'R2', 'text': 'Phá một niềm tin phổ biến/sai lầm thường gặp về chủ đề trước khi vào bằng chứng'},
-            {'id': 'R3', 'text': f'Nhắc lại rõ ràng câu hỏi bí ẩn cần trả lời: "{question}"'},
-            {'id': 'R4', 'text': (f'{chapters} chương bằng chứng (scenes[].chapter đặt tên riêng từng chương), '
-                                   'mỗi chương dựng trên đúng một nghiên cứu/di chỉ/số liệu cụ thể có claim trỏ '
-                                   'tới một mục trong sources')},
-            {'id': 'R5', 'text': ('Kết quay lại đúng hình ảnh mở đầu, chốt bằng đối chiếu '
-                                   '"Bạn thì… còn họ thì…" giữa đời sống hiện đại và điều vừa học được')},
+            {'id': 'R1', 'text': f'Mở bằng tình huống cụ thể hoặc câu hỏi gây tò mò theo góc kể: {angle}'},
+            {'id': 'R2', 'text': f'Nêu rõ câu hỏi "{question}" và điều gì khiến lời giải đáng quan tâm'},
+            {'id': 'R3', 'text': ('Dẫn người xem qua diễn biến nhân quả, thời gian hoặc các trường hợp có bằng chứng; '
+                                   'claim về khảo cổ/nghiên cứu phải trỏ đúng nguồn trong sources')},
+            {'id': 'R4', 'text': ('Trả lời câu hỏi bằng kết quả và mức độ chắc chắn có căn cứ; '
+                                   'chốt bằng một thay đổi góc nhìn phù hợp câu chuyện')},
         ],
         'language': channel['language'],
         'tone': channel['tone'],
@@ -170,7 +171,7 @@ def make_brief(topic, channel):
         'planning': {
             'success_criteria': [
                 f'Người xem trả lời lại được câu hỏi "{question}" bằng ít nhất hai bằng chứng cụ thể có nguồn',
-                'Người xem nhớ được niềm tin sai đã bị phá trong video và vì sao nó sai',
+                'Người xem thấy được quan hệ giữa tình huống, hành động, bằng chứng và kết quả',
                 'Mọi số liệu/tuyên bố then chốt trong lời dẫn truy được về đúng một mục trong sources; '
                 'hiệu quả giữ chân người xem thật cần đo sau khi có dữ liệu Analytics của pilot',
             ],

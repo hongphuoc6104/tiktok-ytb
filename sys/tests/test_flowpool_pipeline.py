@@ -58,6 +58,37 @@ class PipelineCase(unittest.TestCase):
 
 
 class RoutingTests(PipelineCase):
+    def test_b2_story_cast_does_not_attach_the_default_mascot(self):
+        import adapters
+        out = self.p.job('j') / 'flow/attempts/story/download'
+        def generated(**kw):
+            path = out / 'result.jpg'
+            Image.new('RGB', (1376, 768), 'green').save(path)
+            return {'path': str(path), 'forge_id': 'STORY-MEDIA'}
+        with patch('b2_bridge.generate_b2_image', side_effect=generated) as run:
+            adapters.gflow(self.p, 'image', '--story-cast', '--id', 'story', '--prompt', 'Rising river',
+                           '--ratio', '16:9', '--out', str(out))
+        self.assertIsNone(run.call_args.kwargs['char_ref_path'])
+        self.assertEqual(run.call_args.kwargs['reference_mode'], 'none')
+        self.assertEqual(read(out / 'result.json')['forgeId'], 'STORY-MEDIA')
+
+    def test_b2_story_character_uses_its_confirmed_media_id(self):
+        import adapters
+        out = self.p.job('j') / 'flow/attempts/story-character/download'
+        source = self.p.job('j') / 'registered-story.jpg'
+        Image.new('RGB', (64, 64), 'brown').save(source)
+        write(source.with_suffix('.json'), {'forgeId': 'STORY-CHARACTER-ID'})
+        def generated(**kw):
+            path = out / 'result.jpg'
+            Image.new('RGB', (1376, 768), 'brown').save(path)
+            return {'path': str(path), 'forge_id': 'SCENE-ID'}
+        with patch('b2_bridge.generate_b2_image', side_effect=generated) as run:
+            adapters.gflow(self.p, 'image', '--story-cast', '--id', 'story-character',
+                           '--prompt', 'A person carries wood', '--ratio', '16:9', '--out', str(out),
+                           '--character', 'j-PERSON-x', '--character-ref', str(source))
+        self.assertEqual(run.call_args.kwargs['char_ref_path'], str(source))
+        self.assertEqual(run.call_args.kwargs['char_media_id'], 'STORY-CHARACTER-ID')
+
     def test_flow_call_follows_flowpool_enabled(self):
         import adapters
         self.assertIs(ip.flow_call(self.p), fpp.gflow)
@@ -107,6 +138,24 @@ class RoutingTests(PipelineCase):
         proof = read(out.parent / 'ui-proof.json')
         self.assertEqual((proof['passed'], proof['mode'], proof['tool'], proof['profile']), (True, 'image', 'flowpool', 'Profile 13'))
         self.assertEqual(proof['source_references'], [str(self.root / fpp.MASCOT), str(char)])
+
+    def test_story_cast_still_has_no_forced_mascot_and_can_use_base(self):
+        self.p._brief = {'channel': 'tiensu', 'character_mode': 'story_cast', 'aspect_ratio': '16:9'}
+        out = self.p.job('j') / 'flow/attempts/k/download'
+        with patch('flowpool.pipeline._run', side_effect=self.fake_run()):
+            fpp.gflow(self.p, 'image', '--id', 'landscape', '--prompt', 'River rises',
+                      '--ratio', '16:9', '--out', str(out))
+        self.assertEqual(self.requests[0]['refs'], [])
+        self.assertEqual(read(out.parent / 'ui-proof.json')['source_references'], [])
+        self.assertNotIn('Main character', self.requests[0]['prompt'])
+
+        base = self.p.job('j') / 'base.jpg'
+        Image.new('RGB', (64, 64), 'green').save(base)
+        with patch('flowpool.pipeline._run', side_effect=self.fake_run()):
+            fpp.gflow(self.p, 'image', '--id', 'river-rises', '--prompt', 'Water climbs',
+                      '--ratio', '16:9', '--out', str(out), '--base-image', str(base))
+        self.assertEqual(self.requests[0]['refs'], [str(base)])
+        self.assertEqual(read(out.parent / 'ui-proof.json')['base_image'], str(base))
 
     def test_outcomes_map_to_submission_flags(self):
         out = self.p.job('j') / 'o'

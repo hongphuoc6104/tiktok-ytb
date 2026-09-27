@@ -70,9 +70,12 @@ def gflow(p,*args,timeout=960):
   # reserved for the mascot's own identity.
   mascot_ref_arg = _get_arg('--mascot-ref')
   mascot_media_arg = _get_arg('--mascot-media-id')
+  story_cast = '--story-cast' in args_list
   is_mascot_call = mascot_ref_arg is not None
   if is_mascot_call:
    mascot_path, mascot_media_id = Path(mascot_ref_arg), mascot_media_arg
+  elif story_cast:
+   mascot_path, mascot_media_id = None, None
   else:
    default_mascot = characters.try_resolve(p.root, None)
    mascot_path = default_mascot['reference_path'] if default_mascot else None
@@ -80,6 +83,16 @@ def gflow(p,*args,timeout=960):
 
   char_ref_path = reg_img if is_reg else None
   char_media_id = None
+  if story_cast and char_names and not is_reg:
+   explicit_sources = []
+   if '--character-ref' in args_list:
+    start = args_list.index('--character-ref') + 1
+    for item in args_list[start:]:
+     if item.startswith('--'): break
+     explicit_sources.append(item)
+   if len(char_names) != 1 or len(explicit_sources) != 1:
+    raise Blocked('M2_STORY_CAST_REFERENCE: B-2 needs one confirmed story character reference for this shot')
+   char_ref_path = explicit_sources[0]
   if not char_ref_path:
    if mascot_path and mascot_path.exists() and (is_mascot_call or (not char_names and not base_img)):
     char_ref_path = str(mascot_path)
@@ -97,6 +110,11 @@ def gflow(p,*args,timeout=960):
        if cand.exists(): char_ref_path = str(cand); break
       except Exception: pass
      if char_ref_path: break
+
+  if char_ref_path and not char_media_id:
+   sidecar = Path(char_ref_path).with_suffix('.json')
+   if sidecar.is_file():
+    char_media_id = read(sidecar).get('forgeId')
 
   if is_mascot_call and mascot_path.exists() and (is_reg or (not char_names and not base_img)):
    with Image.open(mascot_path) as ref_im:
@@ -125,6 +143,7 @@ def gflow(p,*args,timeout=960):
     base_media_id=(read(Path(base_img).with_suffix(".json")).get("forgeId") if base_img and Path(base_img).with_suffix(".json").is_file() else None),
     char_ref_path=char_ref_path,
     char_media_id=char_media_id,
+    reference_mode='none' if story_cast and not char_ref_path else 'required',
     out_dir=out_folder,
     test_case=job_id,
     timeout=timeout,

@@ -1,5 +1,11 @@
 # Kế hoạch kênh giải thích đời sống tiền sử (nhánh `video-tien-su`)
 
+> Cập nhật cho **brief mới**, 27/09/2026: skill `vp-tiensu` dùng câu chuyện riêng theo chủ đề,
+> ảnh AI still làm mặc định, không ép mascot chung, khoảng 360–900 giây với ngân sách viết ban đầu
+> gần 630 giây. Clip chỉ dùng khi người dùng yêu cầu và brief khai báo. Các bảng 480–720 giây,
+> mascot và clip bên dưới ghi lại kế hoạch ban đầu; không tự sửa brief/job đã lưu. Xem
+> [đối chiếu mạch kể Ink Explainer](ink-explainer-story-patterns-20260927.md).
+
 Ngày lập: 25/09/2026. Nhánh tách từ `video-vocabulary` (e6080b1), kế thừa toàn bộ
 pipeline content → media → video, Flow, VieNeu, Remotion, auto mode và giới hạn vòng sửa.
 

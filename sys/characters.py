@@ -65,6 +65,20 @@ def _channel_of(p, job_or_brief):
     return brief[0].get('channel') if brief else None
 
 
+def story_cast_for(p, job_or_brief):
+    """Only new opt-in briefs omit the channel mascot; missing means legacy."""
+    if job_or_brief is None:
+        return False
+    if isinstance(job_or_brief, dict):
+        brief = job_or_brief
+    elif isinstance(job_or_brief, (list, tuple)):
+        brief = job_or_brief[0] if job_or_brief else None
+    else:
+        found = p.brief(job_or_brief)
+        brief = found[0] if found else None
+    return bool(brief and brief.get('character_mode') == 'story_cast')
+
+
 def resolve(root, channel=None, *, require_media_id=False):
     """Resolve the canonical mascot folder for `channel` under `root` (sys/).
 

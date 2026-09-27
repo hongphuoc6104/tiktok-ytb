@@ -63,6 +63,15 @@ class FakeAgy:
 
 
 class LongformBudgetTests(unittest.TestCase):
+ def test_new_story_brief_aims_between_six_and_fifteen_minutes_with_many_stills(self):
+  b=tiensu_brief();b['character_mode']='story_cast';b['duration']={'min_seconds':360,'max_seconds':900};b.pop('clips',None)
+  plan=agy_longform.budgets(b,real_sc02()['outline'])
+  self.assertEqual(plan['target_seconds'],630)
+  self.assertEqual(plan['clips_max'],0)
+  self.assertGreaterEqual(plan['images_total'],90)
+  self.assertEqual(agy_longform.cast_schema(ROOT,b)['properties']['characters']['minItems'],0)
+  self.assertEqual(agy_longform.cast_schema(ROOT,tiensu_brief())['properties']['characters']['minItems'],1)
+
  def test_budget_from_duration_and_speech_rate(self):
   b=tiensu_brief();plan=agy_longform.budgets(b,real_sc02()['outline'])
   self.assertEqual(plan['target_seconds'],600)

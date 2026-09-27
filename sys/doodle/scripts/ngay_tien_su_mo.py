@@ -13,6 +13,7 @@ TITLES = ['Người tiền sử làm gì cả ngày?', 'Một ngày của cô b�
 HOOK = ('Tám giờ sáng, bạn kẹt giữa biển xe máy. Năm mươi nghìn năm trước, cô bé Mơ thức dậy '
         'không chuông báo thức, không deadline. Vậy cả nhà Mơ làm gì suốt một ngày?')
 THUMB = {'shot': 's06_rest_1', 'text': 'NHÀN HƠN BẠN?'}
+CHARACTER_NOTE = 'Nhân vật Mơ là nhân vật hư cấu; các con số là ước lượng từ nghiên cứu khảo cổ và nhân học, còn nhiều tranh luận.'
 
 CAST = {
     'MO': 'Mo (the girl from the character reference: round white head, orange-red hair bun tied with a white bone, leopard-spot yellow tunic, turquoise pendant)',

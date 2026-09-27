@@ -1,4 +1,4 @@
-"""Long-form content-v3 (8-12 min explainers): budgeted scene-by-scene generation with bounded repair.
+"""Long-form content-v3: budgeted scene-by-scene generation with bounded repair.
 
 One agy call cannot write a 2,000-syllable script with 100+ beats reliably, so after the outline the
 adapter asks for the cast, then one scene at a time (with the narration already written for earlier
@@ -49,12 +49,15 @@ def budgets(b, outline):
     target = (b['duration']['min_seconds'] + b['duration']['max_seconds']) / 2
     weights = [1 + .2 * max(0, len(x['requirements']) - 1) for x in rows]
     clips = clip_split(int((b.get('clips') or {}).get('max', 0)), len(rows))
+    story_stills = b.get('character_mode') == 'story_cast' and b.get('channel') == 'tiensu'
+    beat_seconds = 4.5 if story_stills else BEAT_SECONDS
+    images_per_beat = .75 if story_stills else IMAGES_PER_BEAT
     rates = b['planning']['speech_rates']
     scenes = []
     for row, weight, clip_max in zip(rows, weights, clips):
         seconds = target * weight / sum(weights)
-        beats = max(2, round(seconds / BEAT_SECONDS))
-        images = max(2, min(beats, round(beats * IMAGES_PER_BEAT)))
+        beats = max(2, round(seconds / beat_seconds))
+        images = max(2, min(beats, round(beats * images_per_beat)))
         speech = {}
         for lang in plan_languages(b):
             n = round(seconds * rates[lang]['units_per_second'])
@@ -88,10 +91,12 @@ def scene_schema(root):
                            'claims': {'type': 'array', 'items': _drop_scene_id(s['claims']['items'])}}}
 
 
-def cast_schema(root):
+def cast_schema(root, brief=None):
     s = _schema(root)['properties']
+    cast = copy.deepcopy(s['characters'])
+    cast['minItems'] = 0 if (brief or {}).get('character_mode') == 'story_cast' else 1
     return {'type': 'object', 'additionalProperties': False, 'required': ['characters'],
-            'properties': {'characters': dict(copy.deepcopy(s['characters']), minItems=1)}}
+            'properties': {'characters': cast}}
 
 
 def closing_schema(root):
@@ -116,7 +121,7 @@ Hard rules:
    scene. Ids: stills "<scene>_I01", "<scene>_I02"...; clips "<scene>_C01"...; beats "<scene>_B01"...
 4. Never write management ids (character ids such as CH01, scene ids such as SC03, image or beat ids) in the
    narration, in image description/preserve/change/motion, or in overlay text. Describe characters by their
-   name and appearance from the cast (e.g. "the prehistoric mascot with messy brown hair and a hide tunic").
+   name and appearance from the cast if present (e.g. "a family wearing simple hide clothing").
 5. Overlay text is short: label and map_pin <= 40 characters, chapter_title <= 60, counter and arrow <= 30.
 6. Keep visible_text [] when the brief forbids text in images; all words go into beat overlays.
 7. Clips: at most clips_max in this scene; a clip needs from_image = a still of this scene, motion in English,
@@ -129,8 +134,10 @@ Return only JSON {"scene", "coverage", "claims"} matching the schema.'''
 
 CAST = '''
 LONG-FORM MODE: before scenes are written, declare the cast for the whole video. Return only JSON {"characters"}.
-The main character follows the brief (channel mascot when the brief names one). name/appearance/outfit describe
-people visually and must never contain ids of any kind (no CH01, SC01, image or beat ids). Keep the cast small.'''
+When character_mode is story_cast, no channel mascot or main character is required. Use a small cast only
+when the story needs recurring people; an empty cast is valid for object, place or group-driven scenes.
+Otherwise keep the brief's canonical character. name/appearance/outfit describe people visually and
+must never contain ids of any kind (no CH01, SC01, image or beat ids).'''
 
 CLOSING = '''
 LONG-FORM MODE: all scenes are written and checked. Do not change them. Return only JSON with
@@ -296,7 +303,7 @@ def generate(root, out, prompt, b, revision, bhash, outline, invoke, timeout, ro
     plan = budgets(b, outline); write(out / 'budget.json', plan)
     call = Recorder(out, invoke, timeout)
     one_scene = scene_schema(root)
-    characters = call('cast', prompt + CAST, cast_schema(root))['characters']
+    characters = call('cast', prompt + CAST, cast_schema(root, b))['characters']
     parts = {}
     budget = {x['scene_id']: x for x in plan['scenes']}
     rows = outline['outline']
