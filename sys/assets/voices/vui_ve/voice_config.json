@@ -1,0 +1,32 @@
+{
+  "voice_id": "vui_ve",
+  "name": "Kênh Vui Vẻ - Narrator",
+  "model": "kjanh/KhanhTTS-OmniVoice",
+  "engine": "OmniVoice-8400h",
+  "source": "https://www.youtube.com/watch?v=2246gxgBcAs",
+  "sample_rate": 24000,
+  "channels": 1,
+  "recommended_params": {
+    "speed": 1.0,
+    "pitch_shift": 1.0,
+    "guidance_scale": 3.0,
+    "layer_penalty_factor": 5.0,
+    "audio_chunk_duration": 0.0,
+    "audio_chunk_threshold": 60.0,
+    "torch_compile": false,
+    "fix_silent_chopping": false,
+    "peak_headroom_dbfs": -1.0
+  },
+  "files": {
+    "reference_wav": "vui_ve.wav",
+    "transcript_txt": "vui_ve.txt",
+    "cached_prompt": "voice_clone_prompt_cache.json"
+  },
+  "style_tags": [
+    "hypothetical",
+    "deadpan_humor",
+    "captivating",
+    "fast_paced",
+    "speculative_storytelling"
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 name: vp-audio-director
-description: Chỉ đạo giọng kể, phát âm mẫu, khoảng chờ luyện nói và vai trò âm thanh cho Video Pilot; dùng khi lập hoặc kiểm tra audio, không tự đổi TTS hay dùng API trả phí.
+description: Chỉ đạo giọng kể, phát âm mẫu, khoảng chờ luyện nói, kiểm soát chất lượng giọng clone và vai trò âm thanh cho Video Pilot; dùng khi lập hoặc kiểm tra audio, không tự đổi TTS hay dùng API trả phí.
 ---
 
 # Audio direction for Video Pilot
@@ -12,6 +12,18 @@ Read [the direction contract](../vp-content/references/director-contract.md) and
 For a spoken scene specify who is being addressed, what the speaker wants to do (tease, warn, reassure, explain, invite), the important words, the pause needed and any pronunciation risk. Avoid vague “energetic/natural” direction without a behavior to listen for.
 
 In content-v3 use `audio_direction.vi` and, when applicable, `.en`, each with `intent`, `pronunciation_notes`, `learner_pause_seconds`. The first two are reviewer/retake instructions, not supported TTS controls; do not claim the engine honored them without listening. A zero pause means no additional learner hold. A positive value requests at least that much quiet at the end of the scene and is included in the total duration. Put the model utterance/question at the scene end if the learner should answer there. For an internal practice turn, plan a scene boundary before anchoring narration; do not insert untracked silence into approved media.
+
+## Expressive Voice Clones & Storytelling Archetypes
+
+Video Pilot supports high-expressivity voice clones stored under `sys/assets/voices/<voice_id>/` (via OmniVoice on Colab GPU):
+- **Vui Vẻ (`vui_ve`)**: Deadpan humor, hypothetical speculation, fast-paced and captivating narration. Phù hợp với các video giải thích khoa học, đặt câu hỏi giả định hoặc tình huống bất ngờ.
+- **Văn Vở (`van_vo`)**: Deep voice, calm, reflective, narrative recap. Phù hợp với các video lịch sử, tiền sử, phân tích tâm lý hoặc tóm tắt tác phẩm.
+- **Minh Quân Pro (`vieneu`)**: Giọng đọc trung tính, chuẩn mực, nhanh và ổn định cục bộ.
+
+Khi chỉ đạo giọng clone:
+1. Đảm bảo nhịp ngắt câu tự nhiên (khoảng lặng 200ms - 350ms giữa các mệnh đề).
+2. Kiểm tra độ liền mạch của pha âm thanh: Tuyệt đối không chấp nhận các bước nhảy biên độ sóng đột ngột (phase discontinuity) gây tiếng nổ (pop/crackle) ở đầu/cuối câu. Nối câu phải có 5ms Cosine Cross-fade.
+3. Không để âm thanh bị vỡ tiếng (digital clipping): Kiểm tra Peak luôn nằm dưới ngưỡng an toàn $-1.0\text{ dBFS}$.
 
 ## Spoken English
 

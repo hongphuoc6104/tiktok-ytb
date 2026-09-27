@@ -1,0 +1,31 @@
+{
+  "voice_id": "van_vo",
+  "name": "Kênh Văn Vở - Tắt Đèn Narrator",
+  "model": "kjanh/KhanhTTS-OmniVoice",
+  "engine": "OmniVoice-8400h",
+  "source": "https://www.youtube.com/watch?v=ZQzFXMn9bKU",
+  "sample_rate": 24000,
+  "channels": 1,
+  "recommended_params": {
+    "speed": 1.0,
+    "pitch_shift": 1.0,
+    "guidance_scale": 3.0,
+    "layer_penalty_factor": 5.0,
+    "audio_chunk_duration": 0.0,
+    "audio_chunk_threshold": 60.0,
+    "torch_compile": false,
+    "fix_silent_chopping": false,
+    "peak_headroom_dbfs": -1.0
+  },
+  "files": {
+    "reference_wav": "van_vo.wav",
+    "transcript_txt": "van_vo.txt"
+  },
+  "style_tags": [
+    "narrative",
+    "deep_voice",
+    "storytelling",
+    "calm_reflective",
+    "literature_recap"
+  ]
+}

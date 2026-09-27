@@ -589,9 +589,25 @@ def audio(p,j,out):
  # one scene's narration cannot resurrect another scene's stale audio.
  cache_dir=p.job(j)/'cache/tts'
  request=out/'request.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'cache_dir':str(cache_dir),'scenes':scenes})
- result=subprocess.run([str(py),str(p.root/'tts_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
- (out/'tts.log').write_text(result.stdout+'\n'+result.stderr)
- if result.returncode:raise Blocked('Local TTS failed; see tts.log; no cloud fallback')
+ from colab_bridge.config import get_colab_config
+ from colab_bridge.client import ColabClient
+ colab_cfg=get_colab_config(p.root)
+ remote_audio_ok=False
+ if colab_cfg.is_task_enabled('expressive_tts'):
+  client=ColabClient(colab_cfg)
+  if not client.is_alive():
+   (out/'tts.log').write_text("Remote Colab worker is not reachable. Expressive TTS requires an active Colab GPU session.\n")
+   raise Blocked('Remote Colab worker is not reachable. Expressive TTS requires an active Colab GPU session.')
+  try:
+   client.synthesize_tts(request_payload={'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'cache_dir':str(cache_dir),'scenes':scenes},output_dir=out)
+   remote_audio_ok=True
+  except Exception as ex:
+   (out/'tts.log').write_text(f"Remote Colab TTS failed: {ex}\n")
+   raise Blocked(f'Remote Colab TTS failed: {ex}')
+ if not remote_audio_ok:
+  result=subprocess.run([str(py),str(p.root/'tts_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
+  (out/'tts.log').write_text(result.stdout+'\n'+result.stderr)
+  if result.returncode:raise Blocked('Local TTS failed; see tts.log; no cloud fallback')
  meta=read(out/'tts-result.json');segments=[];cursor=0.;frames=[];params=None
  for x in meta['segments']:
   file=out/x['path']
@@ -650,8 +666,22 @@ def render(p,j,out):
  editorial=audit(props);write(out/'editorial-audit.json',editorial)
  if editorial['errors']:raise Blocked('Editorial technical defects; see editorial-audit.json')
  write(out/'props.json',props)
- r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=max(3600,int(props['duration']*8)));(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
- if r.returncode:raise Blocked('Render or layout check failed; see render.log: '+r.stderr[-500:])
+ from colab_bridge.config import get_colab_config
+ from colab_bridge.client import ColabClient
+ colab_cfg=get_colab_config(p.root)
+ rendered_remotely=False
+ if colab_cfg.is_task_enabled('remotion_render'):
+  client=ColabClient(colab_cfg)
+  if client.is_alive():
+   try:
+    client.render_remotion(props_path=out/'props.json',public_dir=public,output_dir=out)
+    rendered_remotely=True
+   except Exception as ex:
+    (out/'render.log').write_text(f"Remote Colab render failed: {ex}; falling back to local.\n")
+    if not colab_cfg.fallback_to_local:raise Blocked(f'Remote Colab render failed: {ex}')
+ if not rendered_remotely:
+  r=subprocess.run(['node',str(p.root/'renderer/render.mjs'),str(out.resolve())],cwd=p.root,capture_output=True,text=True,timeout=max(3600,int(props['duration']*8)));(out/'render.log').write_text(r.stdout+'\n'+r.stderr)
+  if r.returncode:raise Blocked('Render or layout check failed; see render.log: '+r.stderr[-500:])
  result={'video':rel(p,j,out/'video.mp4'),'stills':[rel(p,j,out/(s['id']+'.png')) for s in scenes],'layout_report':rel(p,j,out/'layout.json'),'editorial_report':rel(p,j,out/'editorial-audit.json'),'duration':en['duration'] if ratio=='16:9' and wide=='en' else snd['duration']}
  if (out/'video_16x9.mp4').exists():result['video_16x9']=rel(p,j,out/'video_16x9.mp4')
  if (out/'video_9x16.mp4').exists():result['video_9x16']=rel(p,j,out/'video_9x16.mp4')
