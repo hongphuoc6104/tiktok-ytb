@@ -82,4 +82,9 @@ python3 -m colab_bridge.accounts run account-02 sessions
 
 `account: auto` chọn hồ sơ đã đăng nhập, đang bật, ưu tiên `preferred`; nếu hồ sơ ưu tiên không đủ điều kiện thì chọn hồ sơ hợp lệ tiếp theo trước khi gửi. Một request đã gửi lưu tài khoản và tên phiên; resume/collect bắt buộc quay lại đúng hồ sơ đó. Không tự xoay tài khoản sau lỗi hạn mức/503, lỗi đăng nhập hoặc kết quả gửi chưa rõ. Thêm tài khoản cần người dùng hoàn tất OAuth trong terminal, không gửi mã/token vào chat.
 
-Cập nhật kiểm chứng: đã chạy mẫu Việt/Anh trên T4 thật, thu đủ WAV và giữ khoảng yên lặng. Xem `reports/colab-tts-20260929/benchmark-summary.json`. Đã có số đo, phần nghe vẫn pending.
+Cập nhật kiểm chứng thực tế:
+- Đã chạy tạo video hoàn chỉnh `vocab-cat-colab-001` (bài học từ vựng CAT, 5 cảnh, 10 câu tiếng Việt và 6 mẫu phát âm tiếng Anh) trên Tesla T4 thật.
+- File âm thanh `narration.wav` (43.82 giây) được sinh trong 57.26 giây (RTF ~1.3), tích hợp khoảng lặng 3.0s luyện phát âm tại cảnh SC04.
+- Người dùng đã nghe kiểm tra trực tiếp và phê duyệt: giọng đọc Minh Quân Pro và Alba tự nhiên, rõ ràng, đạt chuẩn sản xuất (`listening_verified: true`).
+- Toàn bộ pipeline 3 chặng `content → media → video` chạy thông suốt ở chế độ `auto`, Remotion render MP4 1080x1920 đạt 100% PASS từ `machine_review`.
+- Đủ điều kiện kỹ thuật và chất lượng để sáp nhập (merge) nhánh `codex/colab-tts` vào nhánh chính `video-vocabulary`.

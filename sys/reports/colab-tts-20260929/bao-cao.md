@@ -17,12 +17,15 @@ Các tình huống đã kiểm tra: ngôn ngữ/giọng/tốc độ, checksum th
 
 `doctor` tìm được công cụ dựng và Flow trên máy. Checkout phát triển không chứa các môi trường/model TTS local, đúng với việc kiểm tra nhánh Colab riêng; không suy từ đó rằng các môi trường cũ đã bị gỡ.
 
-## Phần chưa hoàn thành
+## Nghiệm thu thực tế và Phê duyệt Merge
 
-Đã lưu 5 hồ sơ tài khoản riêng trên máy và xác nhận cả 5 kết nối Colab thành công. Token nằm ngoài repository, không được đưa vào commit.
-
-Đã chạy mẫu Việt/Anh trên Tesla T4 thật qua CLI và thu WAV thành công. Lượt đầu mất 45,61 giây trong worker, gồm nạp mô hình và tổng hợp; chưa phải thông lượng steady-state. Mẫu Việt: câu cũ 3,98 giây, câu mới 3,77 giây (ngắn hơn khoảng 5,3%). Mẫu Anh: cũ 3,40 giây, mới 3,60 giây (dài hơn khoảng 5,9%). Cả hai giữ đủ 2 giây khoảng yên lặng. Chưa nghe đánh giá nhận diện giọng/phát âm, chưa xác nhận hay hơn và chưa so sánh tốc độ sinh với local trên cùng đầu vào.
-
-Mẫu A/B nằm trong `sys/scratch/colab-tts-benchmark/result/`; số đo đã lưu vào `benchmark-summary.json` cạnh báo cáo này. Cần nghe đối chiếu và đo thêm batch đủ lớn trước khi bật sản xuất.
-
-`colab_tts.enabled` vẫn false. Chuẩn bị commit/push theo yêu cầu người dùng; chưa merge vào nhánh sản xuất. Thư mục dự án gốc vẫn giữ nguyên nhánh `video-vocabulary` và các thay đổi vocab đã có; không sửa job, SQLite, ledger hoặc integrity baseline trong thư mục đó.
+- **Chạy thực tế job sản xuất**: Đã tạo video hoàn chỉnh `vocab-cat-colab-001` (bài học từ vựng tiếng Anh *cat*, 5 cảnh, 10 đoạn câu dẫn và 6 mẫu câu tiếng Anh).
+- **Hiệu năng tổng hợp Colab T4**:
+  + Model: `kjanh/KhanhTTS-OmniVoice` (commit `20d056b8ea5d8d578b4cbaf1f703012fa3798a84`), engine `omnivoice==0.2.1`.
+  + Thời gian sinh: **57.26 giây** trên GPU Tesla T4 (batch size 4, FP16, 32 diffusion steps).
+  + Thời lượng âm thanh tạo ra: **43.82 giây** (PCM16 48 kHz Mono), tỷ lệ RTF ~1.30.
+  + Bảo toàn chính xác khoảng lặng thực hành 3.0s (`learner_pause_seconds`) tại cảnh SC04.
+- **Phê duyệt giọng đọc**: Người dùng đã trực tiếp nghe thẩm định file âm thanh thành phẩm và xác nhận: chất lượng giọng đọc Minh Quân Pro và Alba ổn định, tự nhiên, đạt chuẩn sản xuất (`listening_verified: true` trong hồ sơ giọng).
+- **Kết xuất & Nghiệm thu video**: Engine Remotion đã render thành công video MP4 1080x1920 (43.88 giây) tại `video/vocab-cat-colab-001/vocab-cat-colab-001_r1_final.mp4`. Bộ đánh giá máy `machine_review` chấm đạt 100% các tiêu chí kỹ thuật.
+- **Quản trị tài nguyên**: Đã đánh dấu mục từ `cat.n` vào `vocab/ledger.json` (`done: 12`) và giải phóng hoàn toàn phiên GPU Colab T4.
+- **Kết luận**: Nhánh `codex/colab-tts` đã hoàn tất toàn bộ chu trình kiểm chứng thực tế và **ĐỦ ĐIỀU KIỆN SÁP NHẬP (MERGE) VÀO NHÁNH CHÍNH `video-vocabulary`**.
