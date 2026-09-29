@@ -1,5 +1,11 @@
 # Video Pilot — quy trình chính v3
 
+## Tuyến podcast ngủ trên nhánh podcast
+
+Dùng `.agents/skills/vp-podcast/SKILL.md`, `sys/podcast/README.md` và coordinator `sys/podcast/`. Yêu cầu “tạo video” mặc định là podcast ngủ tiếng Việt 20–30 phút, giọng podcas trên Colab. Duyệt lời văn và chỉ dẫn giọng trước TTS tối đa ba vòng sửa tổng; audio đã tạo chỉ kiểm tra kỹ thuật để ghép, không nghe duyệt lại.
+
+Theo yêu cầu mới nhất: bỏ hoàn toàn tạo/duyệt ảnh và Flow trong tuyến podcast. Dùng cố định `sys/assets/podcast/sleep-default.png` do người dùng chọn, giữ nhân vật và chữ gốc; ghép nguyên ảnh vào 16:9 với nền hai bên, không cắt. Xong âm thanh thì ghép video. Quy tắc mascot, không chữ, song ngữ, nhiều cảnh và kho research/vocab bên dưới không áp dụng podcast. Nâng cấp chỉ kiểm thử offline, không chạy thử dịch vụ hoặc tạo video thật. Giả định có lượt dùng thử miễn phí, không ghi là đã xác minh.
+
 ## Vị trí hệ thống
 
 Agent bắt đầu hoặc quay lại dự án: đọc [INDEX.md](INDEX.md) ở gốc để tra bản đồ thư mục, đường dẫn cũ → mới và lệnh chạy.

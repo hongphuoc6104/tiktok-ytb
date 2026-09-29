@@ -125,3 +125,10 @@ logs/
 
 # Per-machine Flow identity; never sync another machine profile.
 /sys/experiments/b2_illustrator/machine.local.json
+
+# Podcast local runtime and private voice references
+/sys/.venv-tts
+/sys/assets/voices/
+/sys/podcast/.locks/
+/sys/podcast/requests/
+/sys/podcast/ledger.json
