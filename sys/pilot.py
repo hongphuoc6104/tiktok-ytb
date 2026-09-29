@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parent
 ORDER=['control','content','audio','images','render']
 DEPS={'control':[],'content':['control'],'images':['control','content'],'audio':['control','content'],'render':['control','content','images','audio']}
 PROTECTED_FILES=['pilot.py','workflow.py','machine_review.py','content_contract.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt','tts-requirements.lock','tts-gpu-requirements.lock','en-requirements.lock','b2_bridge.py']
-PROTECTED_DIRS=['schemas','.agents','renderer','tests','examples','scripts']
+PROTECTED_DIRS=['assets/voices','colab_bridge','schemas','.agents','renderer','tests','examples','scripts']
 class Blocked(Exception):pass
 def read(p):return json.loads(Path(p).read_text())
 def write(p,x):
@@ -251,6 +251,7 @@ class Pilot:
    if self.path(j,p['srt']).read_text()!=make_srt(segs):raise Blocked('Subtitle mismatch')
    if abs(float(probe(self.path(j,p['wav']))['format']['duration'])-last)>.03:raise Blocked('Combined audio mismatch')
    files += [p['wav'],p['srt']]
+   if p.get('generation_report'):files.append(p['generation_report'])
    en=p.get('en')
    if self.brief(j) and self.brief(j)[0]['aspect_ratio'] in ('dual','16:9') and not en:raise Blocked('English audio required')
    if en:

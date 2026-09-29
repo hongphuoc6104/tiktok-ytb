@@ -64,5 +64,28 @@
   "audio_english_spans_engine": "en",
   "brief_policies": [
     "vocab.policy:check"
-  ]
+  ],
+  "colab_tts": {
+    "enabled": true,
+    "parallel_images": true,
+    "session": "video-pilot-tts",
+    "batch_size": 4,
+    "num_step": 32,
+    "timeout_seconds": 1800,
+    "voices": {
+      "vi": "assets/voices/minh-quan-pro/profile.json",
+      "en": "assets/voices/alba/profile.json"
+    },
+    "models": {
+      "vi": {
+        "id": "kjanh/KhanhTTS-OmniVoice",
+        "revision": "20d056b8ea5d8d578b4cbaf1f703012fa3798a84"
+      },
+      "en": {
+        "id": "kjanh/KhanhTTS-OmniVoice",
+        "revision": "20d056b8ea5d8d578b4cbaf1f703012fa3798a84"
+      }
+    },
+    "account": "auto"
+  }
 }

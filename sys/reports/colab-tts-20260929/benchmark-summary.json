@@ -1,0 +1,28 @@
+{
+  "production_approval": false,
+  "listening_status": "pending",
+  "gpu": "Tesla T4",
+  "synthesis_seconds": 45.614152862000026,
+  "comparisons": {
+    "vi": {
+      "path": "sys/assets/voices/minh-quan-pro/reference.wav",
+      "duration": 3.98,
+      "voice": "Minh Quân Pro",
+      "speed": 0.92,
+      "candidate": "sys/scratch/colab-tts-benchmark/result/segment-0000.wav",
+      "candidate_speech_seconds": 3.77,
+      "duration_ratio": 0.9472361809045227,
+      "measured_tail_seconds": 1.9999999999999996
+    },
+    "en": {
+      "path": "sys/assets/voices/alba/reference.wav",
+      "duration": 3.4,
+      "voice": "alba",
+      "speed": 1.0,
+      "candidate": "sys/scratch/colab-tts-benchmark/result/en-AB01.wav",
+      "candidate_speech_seconds": 3.6,
+      "duration_ratio": 1.0588235294117647,
+      "measured_tail_seconds": 1.9999999999999996
+    }
+  }
+}

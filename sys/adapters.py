@@ -483,9 +483,9 @@ def english_spans(p,j,out,cfg,scenes):
   d=done[x.pop('id')]
   x.update(wav=str(out/d['path']),take=dict(engine=meta['engine'],voice=meta['voice'],seed=d['seed'],temperature=d['temperature'],rate=x['rate']))
 
-def english(p,j,out,cfg,scenes):
+def english(p,j,out,cfg,scenes,remote=False):
  py=p.root/'.venv-en/bin/python'
- if not py.exists():raise Blocked('Install the English TTS environment (.venv-en)')
+ if not remote and not py.exists():raise Blocked('Install the English TTS environment (.venv-en)')
  missing=[s['id'] for s in scenes if not s.get('narration_en')]
  if missing:raise Blocked('Missing narration_en for '+', '.join(missing))
  g=cfg.get('tts_pause',DEFAULT_PAUSE)
@@ -497,9 +497,10 @@ def english(p,j,out,cfg,scenes):
  keys=('en_voice','en_device','en_quantize','en_temperature','en_threads','en_seed')
  # Job-level cache dir so it survives pilot.run()'s fresh per-revision folders.
  request=out/'request-en.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'cache_dir':str(p.job(j)/'cache/tts-en'),'scenes':items})
- r=subprocess.run([str(py),str(p.root/'scripts/en_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
- (out/'tts-en.log').write_text(r.stdout+'\n'+r.stderr)
- if r.returncode:raise Blocked('English TTS failed; see tts-en.log')
+ if not remote:
+  r=subprocess.run([str(py),str(p.root/'scripts/en_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
+  (out/'tts-en.log').write_text(r.stdout+'\n'+r.stderr)
+  if r.returncode:raise Blocked('English TTS failed; see tts-en.log')
  meta=read(out/'en-result.json');cursor=0.;frames=[];params=None;done=[]
  for x in meta['scenes']:
   f=out/x['path']
@@ -524,8 +525,10 @@ def tts_python(root,cfg):
 
 def audio(p,j,out):
  content=p.payload(j,'content');cfg=config(p);g=cfg.get('tts_pause',DEFAULT_PAUSE)
+ from colab_bridge.client import enabled
+ remote=enabled(cfg)
  py=tts_python(p.root,cfg)
- if not py.exists():raise Blocked('Install local TTS environment')
+ if not remote and not py.exists():raise Blocked('Install local TTS environment')
  retake=retakes(p,j)
  scenes=[{'scene_id':s['id'],'narration':s['narration'],'texts':chunks(s['narration']),'retake':retake.get(s['id'],0)} for s in content['scenes']]
  for k,sc in enumerate(scenes):
@@ -537,7 +540,7 @@ def audio(p,j,out):
   if words and cfg.get('audio_english_spans_engine','en')=='en':
    parts=[english_parts(t,words) for t in sc['texts']]
    if any(x['lang']=='en' for c in parts for x in c):sc['parts']=parts
- if any('parts' in sc for sc in scenes):english_spans(p,j,out,cfg,scenes)
+ if not remote and any('parts' in sc for sc in scenes):english_spans(p,j,out,cfg,scenes)
  keys=('tts_voice','tts_temperature','tts_top_p','tts_max_chars','tts_scene_synthesis','tts_backend','tts_precision','tts_speed','tts_device','tts_gpu_dtype','tts_batch_size','audio_english_spans_gap')
  # Job-level cache dir (not per-revision): pilot.run() always mkdirs a fresh
  # revisions/audio/N, so a cache rooted there could never hit across runs.
@@ -546,9 +549,24 @@ def audio(p,j,out):
  # one scene's narration cannot resurrect another scene's stale audio.
  cache_dir=p.job(j)/'cache/tts'
  request=out/'request.json';write(request,{'settings':{k:cfg.get(k) for k in keys if cfg.get(k) is not None},'cache_dir':str(cache_dir),'scenes':scenes})
- result=subprocess.run([str(py),str(p.root/'tts_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
- (out/'tts.log').write_text(result.stdout+'\n'+result.stderr)
- if result.returncode:raise Blocked('Local TTS failed; see tts.log; no cloud fallback')
+ if remote:
+  from colab_bridge.client import Client, ColabError
+  from colab_bridge.protocol import build_request
+  en_scenes=[]
+  if needs_en(p,j):
+   for k,s in enumerate(content['scenes']):
+    if not s.get('narration_en'):raise Blocked('Missing narration_en for '+s['id'])
+    en_scenes.append({'scene_id':s['id'],'narration_en':s['narration_en'],'retake':retake.get(s['id'],0),
+                      'tail':scene_tail(s,'en',g,k==len(content['scenes'])-1)})
+  try:
+   req=build_request(p.root,cfg,scenes,en_scenes)
+   write(out/'request-colab.json',req)
+   Client(p.root,cfg).synthesize(req,out,p.job(j)/'cache/colab-tts')
+  except (ColabError,ValueError,OSError) as ex:raise Blocked(str(ex)) from ex
+ else:
+  result=subprocess.run([str(py),str(p.root/'tts_worker.py'),str(request),str(out)],capture_output=True,text=True,timeout=7200)
+  (out/'tts.log').write_text(result.stdout+'\n'+result.stderr)
+  if result.returncode:raise Blocked('Local TTS failed; see tts.log; no cloud fallback')
  meta=read(out/'tts-result.json');segments=[];cursor=0.;frames=[];params=None
  for x in meta['segments']:
   file=out/x['path']
@@ -564,8 +582,9 @@ def audio(p,j,out):
  master(combined,out/'narration_eq.wav',cfg)
  srt=out/'subtitles.srt';srt.write_text(make_srt(segments))
  payload={'voice':meta['voice'],'backend':meta.get('engine',{}).get('backend','onnx'),'wav':rel(p,j,combined),'srt':rel(p,j,srt),'duration':cursor,'segments':segments}
+ if remote:payload['generation_report']=rel(p,j,out/'tts-result.json')
  if meta.get('english_spans'):payload['english_spans']=meta['english_spans']
- if needs_en(p,j):payload['en']=english(p,j,out,cfg,content['scenes'])
+ if needs_en(p,j):payload['en']=english(p,j,out,cfg,content['scenes'],remote=remote)
  return payload
 
 def render(p,j,out):

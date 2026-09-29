@@ -8,7 +8,8 @@
     "backend": {
       "enum": [
         "onnx",
-        "pytorch"
+        "pytorch",
+        "colab-omnivoice"
       ]
     },
     "wav": {
@@ -196,11 +197,28 @@
           "engine",
           "retake",
           "seed",
-          "temperature",
           "rate"
         ],
-        "additionalProperties": false
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "temperature"
+            ]
+          },
+          {
+            "properties": {
+              "engine": {
+                "const": "omnivoice"
+              }
+            }
+          }
+        ]
       }
+    },
+    "generation_report": {
+      "type": "string",
+      "minLength": 1
     }
   },
   "required": [

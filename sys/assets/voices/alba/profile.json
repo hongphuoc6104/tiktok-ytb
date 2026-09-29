@@ -1,0 +1,22 @@
+{
+  "voice": "alba",
+  "language": "en",
+  "reference_wav": "reference.wav",
+  "reference_text": "The weather is nice today. Bad weather ruins my plan.",
+  "source_speed": 1.0,
+  "sha256": "5e74ff5ea1f54661747ff0c913d653c0bd2aba2eaa7bc18b42c8adee27f5309b",
+  "sources": [
+    {
+      "path": "runs/vocab-weather-001/revisions/audio/2/en-span-S003.wav",
+      "sha256": "bc275a9b07b21a657762bb0dd7350a6aafef1e562962d22e2decd9cda8f9e47e",
+      "text": "The weather is nice today."
+    },
+    {
+      "path": "runs/vocab-weather-001/revisions/audio/2/en-span-S004.wav",
+      "sha256": "dcdb911cf13852dad67880d285de9775340bb3929993134aefd986064d6a7232",
+      "text": "Bad weather ruins my plan."
+    }
+  ],
+  "listening_verified": true,
+  "note": "Nghiệm thu giọng đọc đạt chuẩn qua job vocab-cat-colab-001 (Tesla T4 GPU OmniVoice, tốc độ 1.0x). Người dùng nghe kiểm tra và phê duyệt đạt chuẩn sản xuất."
+}

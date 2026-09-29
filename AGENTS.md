@@ -57,3 +57,9 @@ Antigravity handshake: VP-RULES-1. Đọc Rules, chạy doctor và status; chỉ
 
 
 Cập nhật theo yêu cầu người dùng: mặc định flow_require_ui_evidence=false; không yêu cầu screenshot trước gửi hoặc chứng minh 0 credit cho tạo ảnh. Ghi chi phí là giả định do người dùng chỉ định, không ghi đã xác minh. Giữ kiểm tra model/tham chiếu, nhật ký và đối chiếu timeout sau gửi; không tự mở khóa yêu cầu cũ chưa rõ kết quả.
+
+## Ngoại lệ phát triển Colab TTS (29/09/2026)
+
+Theo yêu cầu người dùng: được phát triển đường TTS trên Colab T4 và ảnh song song tại máy, giữ nhận diện giọng Minh Quân Pro/Alba và tốc độ hiện có, chỉ đổi mô hình tổng hợp. Đọc `sys/docs/colab-tts.md`. Khi bật `colab_tts.enabled` cùng `parallel_images`, ngoại lệ này thay thứ tự audio → images bằng hai phần đồng thời sau duyệt content; review media, timeline và render vẫn chờ WAV thật và đủ ảnh. Chế độ local giữ quy trình cũ. Chưa xác nhận mô hình mới hay hơn/nhanh hơn trước khi nghe và đo T4 thật. Không đổi giọng thành van_vo/vui_ve, không đổi mascot, không nhập toàn bộ nhánh colab-offload. OAuth do người dùng đăng nhập; không mua compute units. Không tự gửi lại TTS ambiguous; thu kết quả trước, giải phóng phiên riêng sau đợt. Mọi quy tắc integrity và bảo vệ job cũ vẫn áp dụng.
+
+Kho tài khoản Colab dùng chung trên máy: `~/.config/video-pilot/colab/`. Trước thao tác Colab, dùng `python3 -m colab_bridge.accounts list` từ sys của nhánh tích hợp để tra hồ sơ, không in token. `colab_tts.account=auto` ưu tiên hồ sơ preferred đã đăng nhập. Request dở phải tiếp tục đúng account/session đã lưu; lỗi quota/503 vẫn dừng, không xoay tài khoản để vượt. Lệnh login-many mở các lượt OAuth do người dùng tự hoàn tất.

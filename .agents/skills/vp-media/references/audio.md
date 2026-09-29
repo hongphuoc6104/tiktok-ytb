@@ -10,3 +10,6 @@ Dùng run JOB media. Việt Minh Quân Pro / VieNeu: GPU PyTorch FP32 qua `.venv
 Quyết định người dùng cần đúng phần/revision và phản hồi nguyên văn. Quyết định máy chỉ qua báo cáo kiểm tra thật. Không tự tạo bằng chứng, không sửa file đã lưu hoặc ghi SQLite trực tiếp.
 
 Scene-tail practice holds: content-v3 audio_direction.vi/en.learner_pause_seconds is applied before measuring WAV. Intent and pronunciation_notes are review directions, not engine controls. Do not claim they change TTS prosody automatically.
+
+
+Colab T4 development exception requested on 2026-09-29: when `colab_tts.enabled` and `parallel_images` are true, remote audio and local Flow images may run concurrently after content approval. Keep Minh Quân Pro and Alba references and the configured speaking rates; do not substitute the experimental branch's voices. Final timings, captions and the media gate still require measured WAVs and complete images. See `sys/docs/colab-tts.md` from the repository root. Local mode remains audio-first. GPU throughput, voice identity and improved quality require actual benchmark/listening evidence. Never resubmit ambiguous Colab work; collect first and release the dedicated session after the batch.
