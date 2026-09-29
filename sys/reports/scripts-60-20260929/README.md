@@ -82,3 +82,7 @@ Năm brief được làm rõ qua revise-brief vì ghi chú nghĩa anh em trùng/
 Các file trong content/ và briefs/ là bản sao nguyên văn revision hiện tại; reviews/ là bản sao review.md của pipeline, chỉ đổi liên kết artifact sang đường dẫn đọc được trong gói này. Bản gốc trong runs/ giữ nguyên. Bản đọc lấy lời dẫn trực tiếp từ content revision 1.
 
 Các job mới dừng ở content; không duyệt thay người dùng, không tạo media, không mark hoàn thành video. Không cập nhật 50 job cũ đang lệch integrity. Việc tiếp tục job trên máy khác cần dữ liệu vận hành và quy trình integrity riêng; các bản JSON trong gói là tài liệu bàn giao, không phải bản sao SQLite.
+
+## Xác nhận chốt của người dùng
+
+Người dùng đã chốt bộ 60 kịch bản revision 1. Xem [lời chốt nguyên văn và danh mục nội dung](CHOT-KICH-BAN.md). Pipeline vẫn chưa ghi được approve do file mới trong vùng bảo vệ; trạng thái chờ duyệt nêu ở trên là trạng thái pipeline, không phải thiếu phản hồi của người dùng.
