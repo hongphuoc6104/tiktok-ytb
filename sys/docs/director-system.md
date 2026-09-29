@@ -58,3 +58,7 @@ Các job bị chặn vì implementation thay đổi giữ nguyên lịch sử. K
 3. Học tập và phân phối: người học dùng đúng từ, nhớ lại; dữ liệu giữ chân/lưu/chia sẻ theo nền tảng. Chưa có dữ liệu thì ghi chưa đo.
 
 Không lấy kết quả mức 1 thay cho mức 2 hoặc 3. Không tự ghi integration-check cho Antigravity từ kết quả kiểm thử ở phiên này.
+
+## Hướng dẫn bổ sung về độ dài lời dẫn
+
+Xem [Độ dài lời dẫn: hiểu đúng mốc 256 ký tự](narration-length-guidance.md). Mốc này phục vụ lựa chọn cách tổng hợp giọng Việt local, không phải trần sáng tạo; đường Colab có cách chia yêu cầu riêng được giải thích trong tài liệu. Ưu tiên đủ nghĩa và mạch kể; đánh giá âm thanh bằng WAV thật. Hướng dẫn đã được lưu ở cấp tài liệu, chưa đồng bộ vào skill hoặc thay đổi runtime.

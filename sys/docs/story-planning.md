@@ -59,3 +59,7 @@ reject content lưu nguyên văn phản hồi. revision_response liên kết req
 Ví dụ cấu trúc ở examples/story-v3; chỉ là dữ liệu minh họa, không phải chủ đề mặc định hoặc sản phẩm đã duyệt.
 
 Hiệu chỉnh từ job mới đã duyệt media: `python3 scripts/calibrate_speech_rates.py JOB --output /duong-dan-moi/rates.json`. Công cụ chỉ xuất số đo; đưa kết quả vào planning.speech_rates của brief mới hoặc revise-brief. Không sửa brief/revision đã lưu và không giả số đo khi chưa có mẫu thật.
+
+## Hướng dẫn bổ sung về độ dài lời dẫn
+
+Xem [Độ dài lời dẫn: hiểu đúng mốc 256 ký tự](narration-length-guidance.md). Mốc này phục vụ lựa chọn cách tổng hợp giọng Việt local, không phải trần sáng tạo; đường Colab có cách chia yêu cầu riêng được giải thích trong tài liệu. Ưu tiên đủ nghĩa và mạch kể; đánh giá âm thanh bằng WAV thật. Hướng dẫn đã được lưu ở cấp tài liệu, chưa đồng bộ vào skill hoặc thay đổi runtime.
