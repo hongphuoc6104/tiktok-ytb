@@ -1,0 +1,516 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "11ed5298f8b2a944c0eb628b4705fb0ce6c32ede09ca1ab95e6f711237687e80",
+  "topic": "Học từ vựng tiếng Anh ORANGE (danh từ: quả cam) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ ORANGE",
+    "Làm rõ nghĩa lõi \"quả cam\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng ORANGE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại ORANGE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhìn bát cam giữa bàn, bạn ngồi cạnh.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhìn bát cam giữa bàn, bạn ngồi cạnh.",
+      "setting": "Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Giữa bàn có một bát cam, bạn muốn xin một quả rồi chia cho người bên cạnh. Orange trong bài này là quả cam. Mình đang gọi tên thứ cầm được trong tay, không chọn màu để tô một bức tranh.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "orange",
+          "meaning": "quả cam"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhìn bát cam giữa bàn, bạn ngồi cạnh. Setting: Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhìn bát cam giữa bàn, bạn ngồi cạnh.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "orange",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Giữa bàn có một bát cam, bạn muốn xin một quả rồi chia cho người bên cạnh. Orange trong bài này là quả cam. Mình đang gọi tên thứ cầm được trong tay, không chọn màu để tô một bức tranh.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot mở tay về phía bát cam khi xin.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot mở tay về phía bát cam khi xin.",
+      "setting": "Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn hỏi: \"Can I have an orange?\" Cho tôi xin một quả cam được không? An orange là một quả cam. Cả câu cho người chủ nhà biết bạn muốn lấy gì, thay vì chỉ đưa tay về phía bát rồi nhìn chờ.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "orange",
+          "meaning": "quả cam"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot mở tay về phía bát cam khi xin. Setting: Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot mở tay về phía bát cam khi xin.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "Can I have an orange?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Can I have an orange?\" Cho tôi xin một quả cam được không? An orange là một quả cam. Cả câu cho người chủ nhà biết bạn muốn lấy gì, thay vì chỉ đưa tay về phía bát rồi nhìn chờ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot cầm quả cam đã bóc một phần, bạn đặt đĩa nhỏ cạnh.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot cầm quả cam đã bóc một phần, bạn đặt đĩa nhỏ cạnh.",
+      "setting": "Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Nhận quả cam, bạn đề nghị: \"Let's share this orange.\" Mình chia quả cam này nhé. This orange chỉ quả vừa được đưa cho bạn. Bạn bóc vỏ, tách múi ra đĩa, thế là lời chia sẻ thành hành động nhìn thấy được.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "orange",
+          "meaning": "quả cam"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot cầm quả cam nguyên vừa được đưa, đĩa còn trống. Setting: Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot cầm quả cam nguyên vừa được đưa, đĩa còn trống.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "Let's share this orange.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Depict this single concrete story moment: Cam đã bóc, mascot đặt các múi lên đĩa; vỏ nằm gọn ở bát phụ. Setting: Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Keep the base camera, room, character identities, clothes, lighting, prop positions and visible text; change only the stated action or object state.",
+          "change": "Cam đã bóc, mascot đặt các múi lên đĩa; vỏ nằm gọn ở bát phụ.",
+          "reason": "Show the visible consequence after the preceding state.",
+          "visible_text": [
+            {
+              "text": "Let's share this orange.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhận quả cam, bạn đề nghị: \"Let's share this orange.\" Mình chia quả cam này nhé. This orange chỉ quả vừa được đưa cho bạn. Bạn bóc vỏ, tách múi ra đĩa, thế là lời chia sẻ thành hành động nhìn thấy được.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Reveal the action result at the matching spoken cue.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn bóc vỏ, tách múi ra đĩa",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ cam nguyên quả và câu gợi ý, không hiện từ orange.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ cam nguyên quả và câu gợi ý, không hiện từ orange.",
+      "setting": "Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn muốn xin một quả cam. Hãy hoàn thành \"Can I have an...?\" bằng tên quả vừa học và đọc cả câu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "orange",
+          "meaning": "quả cam"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ cam nguyên quả và câu gợi ý, không hiện từ orange. Setting: Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ cam nguyên quả và câu gợi ý, không hiện từ orange.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Can I have an...?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn xin một quả cam. Hãy hoàn thành \"Can I have an...?\" bằng tên quả vừa học và đọc cả câu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Múi cam chia trên hai đĩa nhỏ, vỏ gọn ở bát phụ.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Múi cam chia trên hai đĩa nhỏ, vỏ gọn ở bát phụ.",
+      "setting": "Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Can I have an orange?\" Từ đó là orange. Quả cam được bóc rồi chia múi. Bạn đã xin được một quả và dùng luôn nó để mời người bên cạnh cùng ăn.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "orange",
+          "meaning": "quả cam"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Múi cam chia trên hai đĩa nhỏ, vỏ gọn ở bát phụ. Setting: Bàn tiếp khách có bát cam nguyên quả và đĩa múi cam. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Múi cam chia trên hai đĩa nhỏ, vỏ gọn ở bát phụ.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Can I have an orange?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I have an orange?\" Từ đó là orange. Quả cam được bóc rồi chia múi. Bạn đã xin được một quả và dùng luôn nó để mời người bên cạnh cùng ăn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Giữa bàn có một bát cam, bạn muốn xin một quả rồi chia cho người bên cạnh. Orange trong bài này là quả cam. Mình đang gọi tên thứ cầm được trong tay, không chọn màu để tô một bức tranh."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Giữa bàn có một bát cam, bạn muốn xin một quả rồi chia cho người bên cạnh. Orange trong bài này là quả cam. Mình đang gọi tên thứ cầm được trong tay, không chọn màu để tô một bức tranh."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can I have an orange?\" Cho tôi xin một quả cam được không? An orange là một quả cam. Cả câu cho người chủ nhà biết bạn muốn lấy gì, thay vì chỉ đưa tay về phía bát rồi nhìn chờ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can I have an orange?\" Cho tôi xin một quả cam được không? An orange là một quả cam. Cả câu cho người chủ nhà biết bạn muốn lấy gì, thay vì chỉ đưa tay về phía bát rồi nhìn chờ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Nhận quả cam, bạn đề nghị: \"Let's share this orange.\" Mình chia quả cam này nhé. This orange chỉ quả vừa được đưa cho bạn. Bạn bóc vỏ, tách múi ra đĩa, thế là lời chia sẻ thành hành động nhìn thấy được."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn xin một quả cam. Hãy hoàn thành \"Can I have an...?\" bằng tên quả vừa học và đọc cả câu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can I have an orange?\" Từ đó là orange. Quả cam được bóc rồi chia múi. Bạn đã xin được một quả và dùng luôn nó để mời người bên cạnh cùng ăn."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Quả cam trong túi → xin một quả → hỏi bóc → nhận an orange → chia múi.. Next visual event: Mascot mở tay về phía bát cam khi xin."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Quả cam trong túi → xin một quả → hỏi bóc → nhận an orange → chia múi.. Next visual event: Mascot cầm quả cam đã bóc một phần, bạn đặt đĩa nhỏ cạnh."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Quả cam trong túi → xin một quả → hỏi bóc → nhận an orange → chia múi.. Next visual event: Giữ cam nguyên quả và câu gợi ý, không hiện từ orange."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Quả cam trong túi → xin một quả → hỏi bóc → nhận an orange → chia múi.. Next visual event: Múi cam chia trên hai đĩa nhỏ, vỏ gọn ở bát phụ."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Quả cam trong túi → xin một quả → hỏi bóc → nhận an orange → chia múi.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

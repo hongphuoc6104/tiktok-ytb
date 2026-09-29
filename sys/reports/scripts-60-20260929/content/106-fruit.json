@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "55b4308383f22707afac33c649dda9f3f5c6da307c2bfcc233b6fcb8c00feab1",
+  "topic": "Học từ vựng tiếng Anh FRUIT (danh từ: trái cây) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FRUIT",
+    "Làm rõ nghĩa lõi \"trái cây\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FRUIT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FRUIT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhìn giỏ trái cây trên bàn, chuẩn bị mang đi.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhìn giỏ trái cây trên bàn, chuẩn bị mang đi.",
+      "setting": "Nhà bạn, giỏ táo chuối cam và đĩa bày chung.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn được mời tới nhà chơi, đang nghĩ mang gì thì nhìn thấy giỏ trái cây. Fruit nghĩa là trái cây. Vài quả táo, chuối và cam có thể được bày chung lên một đĩa để mọi người vừa ăn vừa trò chuyện.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fruit",
+          "meaning": "trái cây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhìn giỏ trái cây trên bàn, chuẩn bị mang đi. Setting: Nhà bạn, giỏ táo chuối cam và đĩa bày chung. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhìn giỏ trái cây trên bàn, chuẩn bị mang đi.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "fruit",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn được mời tới nhà chơi, đang nghĩ mang gì thì nhìn thấy giỏ trái cây. Fruit nghĩa là trái cây. Vài quả táo, chuối và cam có thể được bày chung lên một đĩa để mọi người vừa ăn vừa trò chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot đưa giỏ cho bạn áo vàng ở cửa.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot đưa giỏ cho bạn áo vàng ở cửa.",
+      "setting": "Nhà bạn, giỏ táo chuối cam và đĩa bày chung.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Tới cửa, bạn nói: \"I brought some fruit.\" Tôi mang một ít trái cây tới. Some fruit gọi chung phần trái cây trong giỏ, không cần đọc lần lượt tên mọi quả ngay khi người chủ nhà còn đang mở cửa.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fruit",
+          "meaning": "trái cây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot đưa giỏ cho bạn áo vàng ở cửa. Setting: Nhà bạn, giỏ táo chuối cam và đĩa bày chung. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đưa giỏ cho bạn áo vàng ở cửa.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "I brought some fruit.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Tới cửa, bạn nói: \"I brought some fruit.\" Tôi mang một ít trái cây tới. Some fruit gọi chung phần trái cây trong giỏ, không cần đọc lần lượt tên mọi quả ngay khi người chủ nhà còn đang mở cửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot đặt đĩa táo chuối cam ở giữa bàn, bạn ngồi đối diện.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot đặt đĩa táo chuối cam ở giữa bàn, bạn ngồi đối diện.",
+      "setting": "Nhà bạn, giỏ táo chuối cam và đĩa bày chung.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Khi bày ra bàn, bạn mời: \"Would you like some fruit?\" Bạn muốn ăn chút trái cây không? Câu mời để người nghe tự chọn. Bạn đẩy đĩa vào giữa, ai muốn loại nào có thể lấy phần mình thích.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fruit",
+          "meaning": "trái cây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot đặt đĩa táo chuối cam ở giữa bàn, bạn ngồi đối diện. Setting: Nhà bạn, giỏ táo chuối cam và đĩa bày chung. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đặt đĩa táo chuối cam ở giữa bàn, bạn ngồi đối diện.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "Would you like some fruit?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Khi bày ra bàn, bạn mời: \"Would you like some fruit?\" Bạn muốn ăn chút trái cây không? Câu mời để người nghe tự chọn. Bạn đẩy đĩa vào giữa, ai muốn loại nào có thể lấy phần mình thích.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ đĩa trái cây và câu mời khuyết, không chữ đáp án.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ đĩa trái cây và câu mời khuyết, không chữ đáp án.",
+      "setting": "Nhà bạn, giỏ táo chuối cam và đĩa bày chung.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn muốn mời một người ăn chút trái cây. Hoàn thành \"Would you like some...?\" bằng tên nhóm đồ ăn vừa học.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fruit",
+          "meaning": "trái cây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ đĩa trái cây và câu mời khuyết, không chữ đáp án. Setting: Nhà bạn, giỏ táo chuối cam và đĩa bày chung. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ đĩa trái cây và câu mời khuyết, không chữ đáp án.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Would you like some...?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn mời một người ăn chút trái cây. Hoàn thành \"Would you like some...?\" bằng tên nhóm đồ ăn vừa học.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot và bạn mỗi người nhận một phần trái cây khác nhau.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot và bạn mỗi người nhận một phần trái cây khác nhau.",
+      "setting": "Nhà bạn, giỏ táo chuối cam và đĩa bày chung.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Would you like some fruit?\" Từ đó là fruit. Một người chọn táo, người kia chọn cam. Đĩa trái cây ở giữa bàn dần vơi trong lúc hai người ngồi kể chuyện.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fruit",
+          "meaning": "trái cây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot và bạn mỗi người nhận một phần trái cây khác nhau. Setting: Nhà bạn, giỏ táo chuối cam và đĩa bày chung. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot và bạn mỗi người nhận một phần trái cây khác nhau.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Would you like some fruit?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Would you like some fruit?\" Từ đó là fruit. Một người chọn táo, người kia chọn cam. Đĩa trái cây ở giữa bàn dần vơi trong lúc hai người ngồi kể chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn được mời tới nhà chơi, đang nghĩ mang gì thì nhìn thấy giỏ trái cây. Fruit nghĩa là trái cây. Vài quả táo, chuối và cam có thể được bày chung lên một đĩa để mọi người vừa ăn vừa trò chuyện."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn được mời tới nhà chơi, đang nghĩ mang gì thì nhìn thấy giỏ trái cây. Fruit nghĩa là trái cây. Vài quả táo, chuối và cam có thể được bày chung lên một đĩa để mọi người vừa ăn vừa trò chuyện."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tới cửa, bạn nói: \"I brought some fruit.\" Tôi mang một ít trái cây tới. Some fruit gọi chung phần trái cây trong giỏ, không cần đọc lần lượt tên mọi quả ngay khi người chủ nhà còn đang mở cửa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tới cửa, bạn nói: \"I brought some fruit.\" Tôi mang một ít trái cây tới. Some fruit gọi chung phần trái cây trong giỏ, không cần đọc lần lượt tên mọi quả ngay khi người chủ nhà còn đang mở cửa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Khi bày ra bàn, bạn mời: \"Would you like some fruit?\" Bạn muốn ăn chút trái cây không? Câu mời để người nghe tự chọn. Bạn đẩy đĩa vào giữa, ai muốn loại nào có thể lấy phần mình thích."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn mời một người ăn chút trái cây. Hoàn thành \"Would you like some...?\" bằng tên nhóm đồ ăn vừa học."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Would you like some fruit?\" Từ đó là fruit. Một người chọn táo, người kia chọn cam. Đĩa trái cây ở giữa bàn dần vơi trong lúc hai người ngồi kể chuyện."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Chọn trái cây thay lời hỏi mua → nói mang trái cây → mời dùng → nhớ danh từ → bày đĩa chung.. Next visual event: Mascot đưa giỏ cho bạn áo vàng ở cửa."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Chọn trái cây thay lời hỏi mua → nói mang trái cây → mời dùng → nhớ danh từ → bày đĩa chung.. Next visual event: Mascot đặt đĩa táo chuối cam ở giữa bàn, bạn ngồi đối diện."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Chọn trái cây thay lời hỏi mua → nói mang trái cây → mời dùng → nhớ danh từ → bày đĩa chung.. Next visual event: Giữ đĩa trái cây và câu mời khuyết, không chữ đáp án."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chọn trái cây thay lời hỏi mua → nói mang trái cây → mời dùng → nhớ danh từ → bày đĩa chung.. Next visual event: Mascot và bạn mỗi người nhận một phần trái cây khác nhau."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chọn trái cây thay lời hỏi mua → nói mang trái cây → mời dùng → nhớ danh từ → bày đĩa chung.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

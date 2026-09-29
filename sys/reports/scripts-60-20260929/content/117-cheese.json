@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "d3e125806406e5b32d636749f3ee40675ba5de24557e087d71df48c77a8c3da9",
+  "topic": "Học từ vựng tiếng Anh CHEESE (danh từ: phô mai) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CHEESE",
+    "Làm rõ nghĩa lõi \"phô mai\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CHEESE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CHEESE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhìn sandwich đang mở, khay phô mai ở phía quầy.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhìn sandwich đang mở, khay phô mai ở phía quầy.",
+      "setting": "Quầy bánh kẹp có phô mai lát, mascot đang gọi món.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn nhìn người làm bánh xếp nhân rồi nhận ra chưa có lớp phô mai mình thích. Cheese nghĩa là phô mai. Bánh còn đang mở, đây là lúc hỏi thêm, trước khi người bán gói lại và chuyền sang cho bạn.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cheese",
+          "meaning": "phô mai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhìn sandwich đang mở, khay phô mai ở phía quầy. Setting: Quầy bánh kẹp có phô mai lát, mascot đang gọi món. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhìn sandwich đang mở, khay phô mai ở phía quầy.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "cheese",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhìn người làm bánh xếp nhân rồi nhận ra chưa có lớp phô mai mình thích. Cheese nghĩa là phô mai. Bánh còn đang mở, đây là lúc hỏi thêm, trước khi người bán gói lại và chuyền sang cho bạn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot hỏi nhân viên áo vàng, nhân viên nhìn khay phô mai.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot hỏi nhân viên áo vàng, nhân viên nhìn khay phô mai.",
+      "setting": "Quầy bánh kẹp có phô mai lát, mascot đang gọi món.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn hỏi: \"Do you have any cheese?\" Ở đây có phô mai không? Any cheese phù hợp với câu hỏi xem có hay không. Bạn hỏi trước vì không phải món bánh nào trên quầy cũng tự có sẵn phô mai bên trong.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cheese",
+          "meaning": "phô mai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot hỏi nhân viên áo vàng, nhân viên nhìn khay phô mai. Setting: Quầy bánh kẹp có phô mai lát, mascot đang gọi món. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot hỏi nhân viên áo vàng, nhân viên nhìn khay phô mai.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "Do you have any cheese?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Do you have any cheese?\" Ở đây có phô mai không? Any cheese phù hợp với câu hỏi xem có hay không. Bạn hỏi trước vì không phải món bánh nào trên quầy cũng tự có sẵn phô mai bên trong.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nhân viên thêm lát phô mai vào sandwich trước mặt mascot.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Nhân viên thêm lát phô mai vào sandwich trước mặt mascot.",
+      "setting": "Quầy bánh kẹp có phô mai lát, mascot đang gọi món.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người bán đưa khay ra, bạn nói: \"I'd like some cheese, please.\" Cho tôi thêm một ít phô mai nhé. Some cheese nói một lượng phô mai. Bạn chỉ phần muốn thêm, người bán đặt vào bánh rồi mới gói lại.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cheese",
+          "meaning": "phô mai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Nhân viên thêm lát phô mai vào sandwich trước mặt mascot. Setting: Quầy bánh kẹp có phô mai lát, mascot đang gọi món. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Nhân viên thêm lát phô mai vào sandwich trước mặt mascot.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "I'd like some cheese, please.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bán đưa khay ra, bạn nói: \"I'd like some cheese, please.\" Cho tôi thêm một ít phô mai nhé. Some cheese nói một lượng phô mai. Bạn chỉ phần muốn thêm, người bán đặt vào bánh rồi mới gói lại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ khay phô mai cạnh bánh mở, câu gợi ý khuyết.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ khay phô mai cạnh bánh mở, câu gợi ý khuyết.",
+      "setting": "Quầy bánh kẹp có phô mai lát, mascot đang gọi món.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn đã biết quầy có phô mai và muốn xin thêm. Hoàn thành \"I'd like some..., please.\" rồi nói cả câu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cheese",
+          "meaning": "phô mai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ khay phô mai cạnh bánh mở, câu gợi ý khuyết. Setting: Quầy bánh kẹp có phô mai lát, mascot đang gọi món. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ khay phô mai cạnh bánh mở, câu gợi ý khuyết.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "I'd like some..., please.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đã biết quầy có phô mai và muốn xin thêm. Hoàn thành \"I'd like some..., please.\" rồi nói cả câu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot nhận sandwich đã gói, phô mai nhìn thấy ở mép bánh.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot nhận sandwich đã gói, phô mai nhìn thấy ở mép bánh.",
+      "setting": "Quầy bánh kẹp có phô mai lát, mascot đang gọi món.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"I'd like some cheese, please.\" Từ cần điền là cheese. Phô mai được thêm trước khi gói bánh. Lần này bạn mang về đúng phần nhân mình muốn, không phải mở gói rồi tiếc.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cheese",
+          "meaning": "phô mai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot nhận sandwich đã gói, phô mai nhìn thấy ở mép bánh. Setting: Quầy bánh kẹp có phô mai lát, mascot đang gọi món. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhận sandwich đã gói, phô mai nhìn thấy ở mép bánh.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "I'd like some cheese, please.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'd like some cheese, please.\" Từ cần điền là cheese. Phô mai được thêm trước khi gói bánh. Lần này bạn mang về đúng phần nhân mình muốn, không phải mở gói rồi tiếc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn nhìn người làm bánh xếp nhân rồi nhận ra chưa có lớp phô mai mình thích. Cheese nghĩa là phô mai. Bánh còn đang mở, đây là lúc hỏi thêm, trước khi người bán gói lại và chuyền sang cho bạn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn nhìn người làm bánh xếp nhân rồi nhận ra chưa có lớp phô mai mình thích. Cheese nghĩa là phô mai. Bánh còn đang mở, đây là lúc hỏi thêm, trước khi người bán gói lại và chuyền sang cho bạn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Do you have any cheese?\" Ở đây có phô mai không? Any cheese phù hợp với câu hỏi xem có hay không. Bạn hỏi trước vì không phải món bánh nào trên quầy cũng tự có sẵn phô mai bên trong."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Do you have any cheese?\" Ở đây có phô mai không? Any cheese phù hợp với câu hỏi xem có hay không. Bạn hỏi trước vì không phải món bánh nào trên quầy cũng tự có sẵn phô mai bên trong."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bán đưa khay ra, bạn nói: \"I'd like some cheese, please.\" Cho tôi thêm một ít phô mai nhé. Some cheese nói một lượng phô mai. Bạn chỉ phần muốn thêm, người bán đặt vào bánh rồi mới gói lại."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn đã biết quầy có phô mai và muốn xin thêm. Hoàn thành \"I'd like some..., please.\" rồi nói cả câu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I'd like some cheese, please.\" Từ cần điền là cheese. Phô mai được thêm trước khi gói bánh. Lần này bạn mang về đúng phần nhân mình muốn, không phải mở gói rồi tiếc."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Muốn phô mai → hỏi có → thêm ít → chọn some → món đúng ý.. Next visual event: Mascot hỏi nhân viên áo vàng, nhân viên nhìn khay phô mai."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn phô mai → hỏi có → thêm ít → chọn some → món đúng ý.. Next visual event: Nhân viên thêm lát phô mai vào sandwich trước mặt mascot."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn phô mai → hỏi có → thêm ít → chọn some → món đúng ý.. Next visual event: Giữ khay phô mai cạnh bánh mở, câu gợi ý khuyết."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn phô mai → hỏi có → thêm ít → chọn some → món đúng ý.. Next visual event: Mascot nhận sandwich đã gói, phô mai nhìn thấy ở mép bánh."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn phô mai → hỏi có → thêm ít → chọn some → món đúng ý.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

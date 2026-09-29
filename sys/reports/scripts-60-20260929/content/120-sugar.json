@@ -1,0 +1,516 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "d58b597e5709a49de53fe486e578733db027c30ff9936d6f0732956cacca4c05",
+  "topic": "Học từ vựng tiếng Anh SUGAR (danh từ: đường) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SUGAR",
+    "Làm rõ nghĩa lõi \"đường\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SUGAR, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SUGAR, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhìn hai lọ trắng trên bàn trà, nhãn đang quay khỏi góc nhìn.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhìn hai lọ trắng trên bàn trà, nhãn đang quay khỏi góc nhìn.",
+      "setting": "Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn pha trà và định thêm đường, nhưng trước mặt có hai lọ đều đựng hạt trắng. Sugar nghĩa là đường. Màu giống nhau chưa đủ để chọn, nên bạn xoay lọ đọc nhãn hoặc hỏi người đã chuẩn bị chúng.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sugar",
+          "meaning": "đường"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhìn hai lọ trắng trên bàn trà, nhãn đang quay khỏi góc nhìn. Setting: Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhìn hai lọ trắng trên bàn trà, nhãn đang quay khỏi góc nhìn.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "sugar",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn pha trà và định thêm đường, nhưng trước mặt có hai lọ đều đựng hạt trắng. Sugar nghĩa là đường. Màu giống nhau chưa đủ để chọn, nên bạn xoay lọ đọc nhãn hoặc hỏi người đã chuẩn bị chúng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Bạn áo vàng chỉ một lọ, mascot dịch lọ ấy tới cạnh cốc.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Bạn áo vàng chỉ một lọ, mascot dịch lọ ấy tới cạnh cốc.",
+      "setting": "Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn hỏi: \"Which one is sugar?\" Lọ nào là đường? One ở đây thay cho chiếc lọ đang được chọn. Người bạn chỉ đúng lọ, bạn giữ nó riêng về một phía để không lẫn trở lại khi chuẩn bị cốc tiếp theo.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sugar",
+          "meaning": "đường"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Bạn áo vàng chỉ một lọ, mascot dịch lọ ấy tới cạnh cốc. Setting: Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Bạn áo vàng chỉ một lọ, mascot dịch lọ ấy tới cạnh cốc.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "Which one is sugar?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Which one is sugar?\" Lọ nào là đường? One ở đây thay cho chiếc lọ đang được chọn. Người bạn chỉ đúng lọ, bạn giữ nó riêng về một phía để không lẫn trở lại khi chuẩn bị cốc tiếp theo.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot lấy một chút đường bằng thìa nhỏ và đậy nắp lọ.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot lấy một chút đường bằng thìa nhỏ và đậy nắp lọ.",
+      "setting": "Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn nói: \"I only need a little sugar.\" Tôi chỉ cần một ít đường. A little sugar nói lượng nhỏ. Bạn thêm vào cốc theo ý mình rồi đậy nắp; người thích vị khác có thể chọn lượng phù hợp với họ.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sugar",
+          "meaning": "đường"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot cầm thìa nhỏ có đường phía trên cốc, lọ đúng đặt riêng ở cạnh. Setting: Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot cầm thìa nhỏ có đường phía trên cốc, lọ đúng đặt riêng ở cạnh.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "I only need a little sugar.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Depict this single concrete story moment: Đường đã cho vào cốc, mascot đậy nắp lọ, giữ vị trí lọ còn lại. Setting: Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Keep the base camera, room, character identities, clothes, lighting, prop positions and visible text; change only the stated action or object state.",
+          "change": "Đường đã cho vào cốc, mascot đậy nắp lọ, giữ vị trí lọ còn lại.",
+          "reason": "Show the visible consequence after the preceding state.",
+          "visible_text": [
+            {
+              "text": "I only need a little sugar.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I only need a little sugar.\" Tôi chỉ cần một ít đường. A little sugar nói lượng nhỏ. Bạn thêm vào cốc theo ý mình rồi đậy nắp; người thích vị khác có thể chọn lượng phù hợp với họ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Reveal the action result at the matching spoken cue.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn thêm vào cốc",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ hai lọ cùng câu hỏi khuyết, không đánh dấu đáp án bằng màu.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ hai lọ cùng câu hỏi khuyết, không đánh dấu đáp án bằng màu.",
+      "setting": "Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Có hai lọ giống nhau, bạn muốn hỏi lọ nào là đường. Hãy nói \"Which one is...?\" và thêm từ vừa học.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sugar",
+          "meaning": "đường"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ hai lọ cùng câu hỏi khuyết, không đánh dấu đáp án bằng màu. Setting: Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ hai lọ cùng câu hỏi khuyết, không đánh dấu đáp án bằng màu.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Which one is...?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Có hai lọ giống nhau, bạn muốn hỏi lọ nào là đường. Hãy nói \"Which one is...?\" và thêm từ vừa học.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hai lọ đặt thẳng nhãn tượng trưng ra ngoài, mascot cầm cốc trà đã pha.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Hai lọ đặt thẳng nhãn tượng trưng ra ngoài, mascot cầm cốc trà đã pha.",
+      "setting": "Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Which one is sugar?\" Từ đó là sugar. Chọn đúng đường rồi, bạn mới thêm vào trà. Hai lọ được quay nhãn ra ngoài, để lần pha sau không phải đoán lại từ đầu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sugar",
+          "meaning": "đường"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Hai lọ đặt thẳng nhãn tượng trưng ra ngoài, mascot cầm cốc trà đã pha. Setting: Bàn pha trà có hai lọ giống nhau, nhãn được quay về phía người pha. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hai lọ đặt thẳng nhãn tượng trưng ra ngoài, mascot cầm cốc trà đã pha.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Which one is sugar?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Which one is sugar?\" Từ đó là sugar. Chọn đúng đường rồi, bạn mới thêm vào trà. Hai lọ được quay nhãn ra ngoài, để lần pha sau không phải đoán lại từ đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn pha trà và định thêm đường, nhưng trước mặt có hai lọ đều đựng hạt trắng. Sugar nghĩa là đường. Màu giống nhau chưa đủ để chọn, nên bạn xoay lọ đọc nhãn hoặc hỏi người đã chuẩn bị chúng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn pha trà và định thêm đường, nhưng trước mặt có hai lọ đều đựng hạt trắng. Sugar nghĩa là đường. Màu giống nhau chưa đủ để chọn, nên bạn xoay lọ đọc nhãn hoặc hỏi người đã chuẩn bị chúng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Which one is sugar?\" Lọ nào là đường? One ở đây thay cho chiếc lọ đang được chọn. Người bạn chỉ đúng lọ, bạn giữ nó riêng về một phía để không lẫn trở lại khi chuẩn bị cốc tiếp theo."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Which one is sugar?\" Lọ nào là đường? One ở đây thay cho chiếc lọ đang được chọn. Người bạn chỉ đúng lọ, bạn giữ nó riêng về một phía để không lẫn trở lại khi chuẩn bị cốc tiếp theo."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nói: \"I only need a little sugar.\" Tôi chỉ cần một ít đường. A little sugar nói lượng nhỏ. Bạn thêm vào cốc theo ý mình rồi đậy nắp; người thích vị khác có thể chọn lượng phù hợp với họ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Có hai lọ giống nhau, bạn muốn hỏi lọ nào là đường. Hãy nói \"Which one is...?\" và thêm từ vừa học."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Which one is sugar?\" Từ đó là sugar. Chọn đúng đường rồi, bạn mới thêm vào trà. Hai lọ được quay nhãn ra ngoài, để lần pha sau không phải đoán lại từ đầu."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Pha đồ uống không đoán lọ → hỏi đường → xác định cần một ít → nhận noun → đúng lọ.. Next visual event: Bạn áo vàng chỉ một lọ, mascot dịch lọ ấy tới cạnh cốc."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Pha đồ uống không đoán lọ → hỏi đường → xác định cần một ít → nhận noun → đúng lọ.. Next visual event: Mascot lấy một chút đường bằng thìa nhỏ và đậy nắp lọ."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Pha đồ uống không đoán lọ → hỏi đường → xác định cần một ít → nhận noun → đúng lọ.. Next visual event: Giữ hai lọ cùng câu hỏi khuyết, không đánh dấu đáp án bằng màu."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Pha đồ uống không đoán lọ → hỏi đường → xác định cần một ít → nhận noun → đúng lọ.. Next visual event: Hai lọ đặt thẳng nhãn tượng trưng ra ngoài, mascot cầm cốc trà đã pha."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Pha đồ uống không đoán lọ → hỏi đường → xác định cần một ít → nhận noun → đúng lọ.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

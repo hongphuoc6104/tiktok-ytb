@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "6cdfcb7b34ad2b546153fb8648e79913b7f9bf876424593e2c38fa0753ef6f45",
+  "topic": "Học từ vựng tiếng Anh NURSE (danh từ: y tá) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ NURSE",
+    "Làm rõ nghĩa lõi \"y tá\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng NURSE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại NURSE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Y tá",
+      "appearance": "Adult male nurse in plain green work top, small badge with no readable text, flat illustration.",
+      "outfit": "Plain green nursing top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhìn người y tá áo xanh lá, mặt thẻ trống quay ra ngoài.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhìn người y tá áo xanh lá, mặt thẻ trống quay ra ngoài.",
+      "setting": "Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người hướng dẫn bạn tới phòng vừa quay lại, nhưng thẻ tên trên áo bị lật ngược. Bạn chưa đọc được tên thì người ấy tự giới thiệu nghề. Nurse là y tá. Nghe lời nói sẽ rõ hơn việc đoán từ màu trang phục.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nurse",
+          "meaning": "y tá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhìn người y tá áo xanh lá, mặt thẻ trống quay ra ngoài. Setting: Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhìn người y tá áo xanh lá, mặt thẻ trống quay ra ngoài.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "nurse",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Người hướng dẫn bạn tới phòng vừa quay lại, nhưng thẻ tên trên áo bị lật ngược. Bạn chưa đọc được tên thì người ấy tự giới thiệu nghề. Nurse là y tá. Nghe lời nói sẽ rõ hơn việc đoán từ màu trang phục.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Y tá nam giới thiệu với mascot, không đổi áo mascot.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Y tá nam giới thiệu với mascot, không đổi áo mascot.",
+      "setting": "Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người ấy nói: \"I'm a nurse.\" Tôi là y tá. Nurse có thể dùng cho người nam hoặc nữ làm nghề này. Trong câu chuyện, người đang nói là một người đàn ông; nghề của anh ấy vẫn được gọi bằng cùng từ nurse.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nurse",
+          "meaning": "y tá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Y tá nam giới thiệu với mascot, không đổi áo mascot. Setting: Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Y tá nam giới thiệu với mascot, không đổi áo mascot.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "I'm a nurse.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Người ấy nói: \"I'm a nurse.\" Tôi là y tá. Nurse có thể dùng cho người nam hoặc nữ làm nghề này. Trong câu chuyện, người đang nói là một người đàn ông; nghề của anh ấy vẫn được gọi bằng cùng từ nurse.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Y tá chỉ hành lang đúng, mascot cầm túi đi theo.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Y tá chỉ hành lang đúng, mascot cầm túi đi theo.",
+      "setting": "Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn kể lại: \"The nurse is helping me.\" Người y tá đang giúp tôi. Lúc này anh ấy đang chỉ đường tới căn phòng bạn cần tìm. Câu kể gắn với việc đang diễn ra, thay vì yêu cầu người nghe tự hiểu anh ấy giúp điều gì.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nurse",
+          "meaning": "y tá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Y tá chỉ hành lang đúng, mascot cầm túi đi theo. Setting: Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Y tá chỉ hành lang đúng, mascot cầm túi đi theo.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "The nurse is helping me.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể lại: \"The nurse is helping me.\" Người y tá đang giúp tôi. Lúc này anh ấy đang chỉ đường tới căn phòng bạn cần tìm. Câu kể gắn với việc đang diễn ra, thay vì yêu cầu người nghe tự hiểu anh ấy giúp điều gì.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ y tá và mascot bên hành lang, chỉ hiện câu khuyết.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ y tá và mascot bên hành lang, chỉ hiện câu khuyết.",
+      "setting": "Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người vừa nói tôi là y tá sẽ dùng câu \"I'm a...\" gì? Điền tên nghề vừa học và đọc trọn lời giới thiệu của anh ấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nurse",
+          "meaning": "y tá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ y tá và mascot bên hành lang, chỉ hiện câu khuyết. Setting: Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ y tá và mascot bên hành lang, chỉ hiện câu khuyết.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "I'm a...",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Người vừa nói tôi là y tá sẽ dùng câu \"I'm a...\" gì? Điền tên nghề vừa học và đọc trọn lời giới thiệu của anh ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Y tá lật mặt thẻ vẫn không chữ chi tiết",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Y tá lật mặt thẻ vẫn không chữ chi tiết; mascot gật đầu cảm ơn tại cửa.",
+      "setting": "Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"I'm a nurse.\" Từ đó là nurse. Người y tá lật lại thẻ rồi dẫn bạn tới đúng cửa. Bạn mỉm cười cảm ơn người vừa giới thiệu và giúp mình.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nurse",
+          "meaning": "y tá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Y tá lật mặt thẻ vẫn không chữ chi tiết; mascot gật đầu cảm ơn tại cửa. Setting: Hành lang bệnh viện, y tá áo xanh lá đơn giản, thẻ tên quay mặt trống ra ngoài. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Y tá lật mặt thẻ vẫn không chữ chi tiết; mascot gật đầu cảm ơn tại cửa.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "I'm a nurse.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm a nurse.\" Từ đó là nurse. Người y tá lật lại thẻ rồi dẫn bạn tới đúng cửa. Bạn mỉm cười cảm ơn người vừa giới thiệu và giúp mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Người hướng dẫn bạn tới phòng vừa quay lại, nhưng thẻ tên trên áo bị lật ngược. Bạn chưa đọc được tên thì người ấy tự giới thiệu nghề. Nurse là y tá. Nghe lời nói sẽ rõ hơn việc đoán từ màu trang phục."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Người hướng dẫn bạn tới phòng vừa quay lại, nhưng thẻ tên trên áo bị lật ngược. Bạn chưa đọc được tên thì người ấy tự giới thiệu nghề. Nurse là y tá. Nghe lời nói sẽ rõ hơn việc đoán từ màu trang phục."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người ấy nói: \"I'm a nurse.\" Tôi là y tá. Nurse có thể dùng cho người nam hoặc nữ làm nghề này. Trong câu chuyện, người đang nói là một người đàn ông; nghề của anh ấy vẫn được gọi bằng cùng từ nurse."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người ấy nói: \"I'm a nurse.\" Tôi là y tá. Nurse có thể dùng cho người nam hoặc nữ làm nghề này. Trong câu chuyện, người đang nói là một người đàn ông; nghề của anh ấy vẫn được gọi bằng cùng từ nurse."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn kể lại: \"The nurse is helping me.\" Người y tá đang giúp tôi. Lúc này anh ấy đang chỉ đường tới căn phòng bạn cần tìm. Câu kể gắn với việc đang diễn ra, thay vì yêu cầu người nghe tự hiểu anh ấy giúp điều gì."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Người vừa nói tôi là y tá sẽ dùng câu \"I'm a...\" gì? Điền tên nghề vừa học và đọc trọn lời giới thiệu của anh ấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I'm a nurse.\" Từ đó là nurse. Người y tá lật lại thẻ rồi dẫn bạn tới đúng cửa. Bạn mỉm cười cảm ơn người vừa giới thiệu và giúp mình."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Người chăm sóc giới thiệu → xác định y tá → câu kể công việc → nhận nghề qua lời nói → lật thẻ và chào.. Next visual event: Y tá nam giới thiệu với mascot, không đổi áo mascot."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Người chăm sóc giới thiệu → xác định y tá → câu kể công việc → nhận nghề qua lời nói → lật thẻ và chào.. Next visual event: Y tá chỉ hành lang đúng, mascot cầm túi đi theo."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Người chăm sóc giới thiệu → xác định y tá → câu kể công việc → nhận nghề qua lời nói → lật thẻ và chào.. Next visual event: Giữ y tá và mascot bên hành lang, chỉ hiện câu khuyết."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Người chăm sóc giới thiệu → xác định y tá → câu kể công việc → nhận nghề qua lời nói → lật thẻ và chào.. Next visual event: Y tá lật mặt thẻ vẫn không chữ chi tiết; mascot gật đầu cảm ơn tại cửa."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Người chăm sóc giới thiệu → xác định y tá → câu kể công việc → nhận nghề qua lời nói → lật thẻ và chào.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

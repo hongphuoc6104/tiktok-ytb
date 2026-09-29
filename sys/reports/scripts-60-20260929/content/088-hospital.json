@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "a7c93e8d9309194c1dca53ffccba66048da6ff434a76f10d67218f74ed296a37",
+  "topic": "Học từ vựng tiếng Anh HOSPITAL (danh từ: bệnh viện) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ HOSPITAL",
+    "Làm rõ nghĩa lõi \"bệnh viện\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng HOSPITAL, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại HOSPITAL, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot ở điểm xuống xe cầm túi, phía xa có hai tòa nhà khác nhau.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot ở điểm xuống xe cầm túi, phía xa có hai tòa nhà khác nhau.",
+      "setting": "Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn mang một túi đồ tới thăm bà, nhưng xuống xe rồi mới nhận ra mình chưa biết bệnh viện ở hướng nào. Hospital là bệnh viện. Túi đã chuẩn bị đủ, việc còn thiếu là tìm đúng tòa nhà trước khi vào hỏi phòng.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hospital",
+          "meaning": "bệnh viện"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot ở điểm xuống xe cầm túi, phía xa có hai tòa nhà khác nhau. Setting: Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot ở điểm xuống xe cầm túi, phía xa có hai tòa nhà khác nhau.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "hospital",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn mang một túi đồ tới thăm bà, nhưng xuống xe rồi mới nhận ra mình chưa biết bệnh viện ở hướng nào. Hospital là bệnh viện. Túi đã chuẩn bị đủ, việc còn thiếu là tìm đúng tòa nhà trước khi vào hỏi phòng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot hỏi bạn áo vàng, người bạn chỉ tòa nhà có biểu tượng bệnh viện.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot hỏi bạn áo vàng, người bạn chỉ tòa nhà có biểu tượng bệnh viện.",
+      "setting": "Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn hỏi: \"Where is the hospital?\" Bệnh viện ở đâu? Người đi đường chỉ về tòa nhà bên kia đường. Câu hỏi gọi rõ địa điểm bạn cần tìm, nên bạn không phải đưa túi đồ ra rồi mong người khác đoán mình muốn tới đâu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hospital",
+          "meaning": "bệnh viện"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot hỏi bạn áo vàng, người bạn chỉ tòa nhà có biểu tượng bệnh viện. Setting: Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot hỏi bạn áo vàng, người bạn chỉ tòa nhà có biểu tượng bệnh viện.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "Where is the hospital?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Where is the hospital?\" Bệnh viện ở đâu? Người đi đường chỉ về tòa nhà bên kia đường. Câu hỏi gọi rõ địa điểm bạn cần tìm, nên bạn không phải đưa túi đồ ra rồi mong người khác đoán mình muốn tới đâu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot đứng ngoài cửa bệnh viện gọi điện, túi đồ ở tay.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot đứng ngoài cửa bệnh viện gọi điện, túi đồ ở tay.",
+      "setting": "Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn gọi cho người nhà: \"I'm at the hospital.\" Tôi đang ở bệnh viện. At the hospital báo nơi bạn có mặt. Tới đây chưa có nghĩa bạn là bệnh nhân; trong câu chuyện này, bạn đến thăm bà.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hospital",
+          "meaning": "bệnh viện"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot đứng ngoài cửa bệnh viện gọi điện, túi đồ ở tay. Setting: Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đứng ngoài cửa bệnh viện gọi điện, túi đồ ở tay.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "I'm at the hospital.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn gọi cho người nhà: \"I'm at the hospital.\" Tôi đang ở bệnh viện. At the hospital báo nơi bạn có mặt. Tới đây chưa có nghĩa bạn là bệnh nhân; trong câu chuyện này, bạn đến thăm bà.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ góc phố và câu hỏi khuyết từ, biểu tượng không có chữ đáp án.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ góc phố và câu hỏi khuyết từ, biểu tượng không có chữ đáp án.",
+      "setting": "Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn đang hỏi đường và cần tìm bệnh viện. Hãy nói \"Where is the...?\" rồi thêm từ vừa học. Thử đọc trọn câu như hỏi người đi đường.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hospital",
+          "meaning": "bệnh viện"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ góc phố và câu hỏi khuyết từ, biểu tượng không có chữ đáp án. Setting: Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ góc phố và câu hỏi khuyết từ, biểu tượng không có chữ đáp án.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Where is the...?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đang hỏi đường và cần tìm bệnh viện. Hãy nói \"Where is the...?\" rồi thêm từ vừa học. Thử đọc trọn câu như hỏi người đi đường.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot gặp người nhà áo vàng tại cửa, cả hai mang túi đi vào.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot gặp người nhà áo vàng tại cửa, cả hai mang túi đi vào.",
+      "setting": "Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Where is the hospital?\" Từ còn thiếu là hospital. Đến đúng cửa, bạn thấy người nhà ra đón. Túi đồ đã được mang tới nơi, chuyến thăm bà mới bắt đầu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hospital",
+          "meaning": "bệnh viện"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot gặp người nhà áo vàng tại cửa, cả hai mang túi đi vào. Setting: Phố có bệnh viện với biểu tượng chữ thập đơn giản, mascot cầm túi thăm bà. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot gặp người nhà áo vàng tại cửa, cả hai mang túi đi vào.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Where is the hospital?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Where is the hospital?\" Từ còn thiếu là hospital. Đến đúng cửa, bạn thấy người nhà ra đón. Túi đồ đã được mang tới nơi, chuyến thăm bà mới bắt đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn mang một túi đồ tới thăm bà, nhưng xuống xe rồi mới nhận ra mình chưa biết bệnh viện ở hướng nào. Hospital là bệnh viện. Túi đã chuẩn bị đủ, việc còn thiếu là tìm đúng tòa nhà trước khi vào hỏi phòng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn mang một túi đồ tới thăm bà, nhưng xuống xe rồi mới nhận ra mình chưa biết bệnh viện ở hướng nào. Hospital là bệnh viện. Túi đã chuẩn bị đủ, việc còn thiếu là tìm đúng tòa nhà trước khi vào hỏi phòng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Where is the hospital?\" Bệnh viện ở đâu? Người đi đường chỉ về tòa nhà bên kia đường. Câu hỏi gọi rõ địa điểm bạn cần tìm, nên bạn không phải đưa túi đồ ra rồi mong người khác đoán mình muốn tới đâu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Where is the hospital?\" Bệnh viện ở đâu? Người đi đường chỉ về tòa nhà bên kia đường. Câu hỏi gọi rõ địa điểm bạn cần tìm, nên bạn không phải đưa túi đồ ra rồi mong người khác đoán mình muốn tới đâu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn gọi cho người nhà: \"I'm at the hospital.\" Tôi đang ở bệnh viện. At the hospital báo nơi bạn có mặt. Tới đây chưa có nghĩa bạn là bệnh nhân; trong câu chuyện này, bạn đến thăm bà."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn đang hỏi đường và cần tìm bệnh viện. Hãy nói \"Where is the...?\" rồi thêm từ vừa học. Thử đọc trọn câu như hỏi người đi đường."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Where is the hospital?\" Từ còn thiếu là hospital. Đến đúng cửa, bạn thấy người nhà ra đón. Túi đồ đã được mang tới nơi, chuyến thăm bà mới bắt đầu."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Hẹn ở bệnh viện → hỏi địa điểm → chỉ tòa nhà → nhận diện danh từ → đến đúng chỗ thăm người thân.. Next visual event: Mascot hỏi bạn áo vàng, người bạn chỉ tòa nhà có biểu tượng bệnh viện."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Hẹn ở bệnh viện → hỏi địa điểm → chỉ tòa nhà → nhận diện danh từ → đến đúng chỗ thăm người thân.. Next visual event: Mascot đứng ngoài cửa bệnh viện gọi điện, túi đồ ở tay."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Hẹn ở bệnh viện → hỏi địa điểm → chỉ tòa nhà → nhận diện danh từ → đến đúng chỗ thăm người thân.. Next visual event: Giữ góc phố và câu hỏi khuyết từ, biểu tượng không có chữ đáp án."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Hẹn ở bệnh viện → hỏi địa điểm → chỉ tòa nhà → nhận diện danh từ → đến đúng chỗ thăm người thân.. Next visual event: Mascot gặp người nhà áo vàng tại cửa, cả hai mang túi đi vào."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Hẹn ở bệnh viện → hỏi địa điểm → chỉ tòa nhà → nhận diện danh từ → đến đúng chỗ thăm người thân.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

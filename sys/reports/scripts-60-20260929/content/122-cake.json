@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "91a37e64d1df8c91a9aed0c28217eb1327e9f37ca5ab79f7dd94ab80d716eaf2",
+  "topic": "Học từ vựng tiếng Anh CAKE (danh từ: bánh ngọt) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CAKE",
+    "Làm rõ nghĩa lõi \"bánh ngọt\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CAKE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CAKE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhìn bàn với nến và đĩa, hộp bánh ở quầy phía sau.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhìn bàn với nến và đĩa, hộp bánh ở quầy phía sau.",
+      "setting": "Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Nến đã lấy ra, đĩa cũng xếp đủ, nhưng cả bàn vẫn nhìn một khoảng trống ở giữa. Cake là bánh ngọt. Hôm nay đó là chiếc bánh sinh nhật còn nằm trong hộp mà bạn quên mang từ bếp ra.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cake",
+          "meaning": "bánh ngọt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhìn bàn với nến và đĩa, hộp bánh ở quầy phía sau. Setting: Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhìn bàn với nến và đĩa, hộp bánh ở quầy phía sau.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "cake",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Nến đã lấy ra, đĩa cũng xếp đủ, nhưng cả bàn vẫn nhìn một khoảng trống ở giữa. Cake là bánh ngọt. Hôm nay đó là chiếc bánh sinh nhật còn nằm trong hộp mà bạn quên mang từ bếp ra.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot quay nhìn hộp bánh, bạn áo vàng chờ cạnh bàn.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot quay nhìn hộp bánh, bạn áo vàng chờ cạnh bàn.",
+      "setting": "Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người bạn hỏi: \"Where is the cake?\" Bánh ngọt đâu rồi? Bạn quay lại mới thấy chiếc hộp. The cake chỉ chiếc bánh mọi người đang chờ, không phải hỏi trong nhà có loại bánh nào cũng được.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cake",
+          "meaning": "bánh ngọt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot quay nhìn hộp bánh, bạn áo vàng chờ cạnh bàn. Setting: Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot quay nhìn hộp bánh, bạn áo vàng chờ cạnh bàn.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "Where is the cake?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn hỏi: \"Where is the cake?\" Bánh ngọt đâu rồi? Bạn quay lại mới thấy chiếc hộp. The cake chỉ chiếc bánh mọi người đang chờ, không phải hỏi trong nhà có loại bánh nào cũng được.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot đưa đĩa có miếng bánh cho bạn, nến đã tắt trên đĩa phụ.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot đưa đĩa có miếng bánh cho bạn, nến đã tắt trên đĩa phụ.",
+      "setting": "Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Sau khi thổi nến và cắt bánh, bạn mời: \"Have a piece of cake.\" Ăn một miếng bánh nhé. A piece of cake ở đây là một phần bánh được cắt ra. Bạn đưa đĩa nhỏ, để lời mời đi cùng đúng miếng bánh trước mặt.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cake",
+          "meaning": "bánh ngọt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot đưa đĩa có miếng bánh cho bạn, nến đã tắt trên đĩa phụ. Setting: Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đưa đĩa có miếng bánh cho bạn, nến đã tắt trên đĩa phụ.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "Have a piece of cake.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Sau khi thổi nến và cắt bánh, bạn mời: \"Have a piece of cake.\" Ăn một miếng bánh nhé. A piece of cake ở đây là một phần bánh được cắt ra. Bạn đưa đĩa nhỏ, để lời mời đi cùng đúng miếng bánh trước mặt.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ miếng bánh trên đĩa và câu mời khuyết.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ miếng bánh trên đĩa và câu mời khuyết.",
+      "setting": "Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn muốn mời một người ăn một miếng bánh. Hãy hoàn thành \"Have a piece of...\" bằng từ vừa học.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cake",
+          "meaning": "bánh ngọt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ miếng bánh trên đĩa và câu mời khuyết. Setting: Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ miếng bánh trên đĩa và câu mời khuyết.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Have a piece of...",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn mời một người ăn một miếng bánh. Hãy hoàn thành \"Have a piece of...\" bằng từ vừa học.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Các đĩa đều có bánh, hộp rỗng gấp gọn bên cạnh.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Các đĩa đều có bánh, hộp rỗng gấp gọn bên cạnh.",
+      "setting": "Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Have a piece of cake.\" Từ đó là cake. Bánh đã ra khỏi hộp và chia cho cả bàn. Nến làm xong việc, lời mời của bạn đi cùng từng đĩa bánh nhỏ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cake",
+          "meaning": "bánh ngọt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Các đĩa đều có bánh, hộp rỗng gấp gọn bên cạnh. Setting: Bàn sinh nhật có nến chưa thắp, đĩa trống và hộp bánh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Các đĩa đều có bánh, hộp rỗng gấp gọn bên cạnh.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Have a piece of cake.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Have a piece of cake.\" Từ đó là cake. Bánh đã ra khỏi hộp và chia cho cả bàn. Nến làm xong việc, lời mời của bạn đi cùng từng đĩa bánh nhỏ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Nến đã lấy ra, đĩa cũng xếp đủ, nhưng cả bàn vẫn nhìn một khoảng trống ở giữa. Cake là bánh ngọt. Hôm nay đó là chiếc bánh sinh nhật còn nằm trong hộp mà bạn quên mang từ bếp ra."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Nến đã lấy ra, đĩa cũng xếp đủ, nhưng cả bàn vẫn nhìn một khoảng trống ở giữa. Cake là bánh ngọt. Hôm nay đó là chiếc bánh sinh nhật còn nằm trong hộp mà bạn quên mang từ bếp ra."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người bạn hỏi: \"Where is the cake?\" Bánh ngọt đâu rồi? Bạn quay lại mới thấy chiếc hộp. The cake chỉ chiếc bánh mọi người đang chờ, không phải hỏi trong nhà có loại bánh nào cũng được."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người bạn hỏi: \"Where is the cake?\" Bánh ngọt đâu rồi? Bạn quay lại mới thấy chiếc hộp. The cake chỉ chiếc bánh mọi người đang chờ, không phải hỏi trong nhà có loại bánh nào cũng được."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Sau khi thổi nến và cắt bánh, bạn mời: \"Have a piece of cake.\" Ăn một miếng bánh nhé. A piece of cake ở đây là một phần bánh được cắt ra. Bạn đưa đĩa nhỏ, để lời mời đi cùng đúng miếng bánh trước mặt."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn mời một người ăn một miếng bánh. Hãy hoàn thành \"Have a piece of...\" bằng từ vừa học."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Have a piece of cake.\" Từ đó là cake. Bánh đã ra khỏi hộp và chia cho cả bàn. Nến làm xong việc, lời mời của bạn đi cùng từng đĩa bánh nhỏ."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Chuẩn bị sinh nhật → mang bánh → mời một miếng → nhận noun → thắp nến.. Next visual event: Mascot quay nhìn hộp bánh, bạn áo vàng chờ cạnh bàn."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Chuẩn bị sinh nhật → mang bánh → mời một miếng → nhận noun → thắp nến.. Next visual event: Mascot đưa đĩa có miếng bánh cho bạn, nến đã tắt trên đĩa phụ."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Chuẩn bị sinh nhật → mang bánh → mời một miếng → nhận noun → thắp nến.. Next visual event: Giữ miếng bánh trên đĩa và câu mời khuyết."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chuẩn bị sinh nhật → mang bánh → mời một miếng → nhận noun → thắp nến.. Next visual event: Các đĩa đều có bánh, hộp rỗng gấp gọn bên cạnh."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chuẩn bị sinh nhật → mang bánh → mời một miếng → nhận noun → thắp nến.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

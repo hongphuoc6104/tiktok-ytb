@@ -1,0 +1,516 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "d7f361df1954ac11794bbfd07b948e483cbae08b63b1f02d79427337db990d13",
+  "topic": "Học từ vựng tiếng Anh SANDWICH (danh từ: bánh mì kẹp) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SANDWICH",
+    "Làm rõ nghĩa lõi \"bánh mì kẹp\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SANDWICH, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SANDWICH, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhìn chiếc sandwich cao nhiều lớp trên đĩa.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhìn chiếc sandwich cao nhiều lớp trên đĩa.",
+      "setting": "Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn thêm hết lớp này tới lớp khác, chiếc bánh kẹp cao đến mức không biết cắn từ đâu. Sandwich là bánh mì kẹp. Mọi nguyên liệu đều nằm đúng giữa bánh, nhưng người ăn là bạn thì vẫn chưa tìm được cách bắt đầu.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sandwich",
+          "meaning": "bánh mì kẹp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhìn chiếc sandwich cao nhiều lớp trên đĩa. Setting: Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhìn chiếc sandwich cao nhiều lớp trên đĩa.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "sandwich",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn thêm hết lớp này tới lớp khác, chiếc bánh kẹp cao đến mức không biết cắn từ đâu. Sandwich là bánh mì kẹp. Mọi nguyên liệu đều nằm đúng giữa bánh, nhưng người ăn là bạn thì vẫn chưa tìm được cách bắt đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot chỉ chiếc bánh tự làm, nguyên liệu dư ở cạnh.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot chỉ chiếc bánh tự làm, nguyên liệu dư ở cạnh.",
+      "setting": "Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Lúc gọi món, bạn có thể nói: \"I'd like a sandwich.\" Tôi muốn một chiếc bánh mì kẹp. A sandwich là một phần bánh kẹp. Hôm nay bạn tự làm và hơi hào phóng với nhân, nên chiếc sandwich trước mặt đã vượt kế hoạch ban đầu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sandwich",
+          "meaning": "bánh mì kẹp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot chỉ chiếc bánh tự làm, nguyên liệu dư ở cạnh. Setting: Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot chỉ chiếc bánh tự làm, nguyên liệu dư ở cạnh.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "I'd like a sandwich.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Lúc gọi món, bạn có thể nói: \"I'd like a sandwich.\" Tôi muốn một chiếc bánh mì kẹp. A sandwich là một phần bánh kẹp. Hôm nay bạn tự làm và hơi hào phóng với nhân, nên chiếc sandwich trước mặt đã vượt kế hoạch ban đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Bạn cắt sandwich trên thớt, mascot đặt hai đĩa bên cạnh.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Bạn cắt sandwich trên thớt, mascot đặt hai đĩa bên cạnh.",
+      "setting": "Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người bạn gợi ý: \"Cut the sandwich in half.\" Cắt đôi chiếc bánh kẹp đi. In half là thành hai nửa. Bạn đặt bánh xuống thớt, chia phần rồi mang trở lại đĩa; chiếc bánh không còn buộc bạn mở miệng thật lớn để cắn một lần.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sandwich",
+          "meaning": "bánh mì kẹp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Bánh kẹp cao còn nguyên trên thớt; mascot và bạn nhìn món. Setting: Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Bánh kẹp cao còn nguyên trên thớt; mascot và bạn nhìn món.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "Cut the sandwich in half.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Depict this single concrete story moment: Bánh kẹp đã chia làm hai trên cùng thớt, hai đĩa nhỏ chờ bên cạnh. Setting: Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Keep the base camera, room, character identities, clothes, lighting, prop positions and visible text; change only the stated action or object state.",
+          "change": "Bánh kẹp đã chia làm hai trên cùng thớt, hai đĩa nhỏ chờ bên cạnh.",
+          "reason": "Show the visible consequence after the preceding state.",
+          "visible_text": [
+            {
+              "text": "Cut the sandwich in half.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn gợi ý: \"Cut the sandwich in half.\" Cắt đôi chiếc bánh kẹp đi. In half là thành hai nửa. Bạn đặt bánh xuống thớt, chia phần rồi mang trở lại đĩa; chiếc bánh không còn buộc bạn mở miệng thật lớn để cắn một lần.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Reveal the action result at the matching spoken cue.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đặt bánh xuống thớt",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ một chiếc sandwich vừa phải trên đĩa, câu gọi món khuyết.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ một chiếc sandwich vừa phải trên đĩa, câu gọi món khuyết.",
+      "setting": "Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn muốn gọi một chiếc bánh mì kẹp. Hãy nói \"I'd like a...\" rồi điền tên món vừa học. Tưởng tượng mình đang ở quầy bán bánh nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sandwich",
+          "meaning": "bánh mì kẹp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ một chiếc sandwich vừa phải trên đĩa, câu gọi món khuyết. Setting: Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ một chiếc sandwich vừa phải trên đĩa, câu gọi món khuyết.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "I'd like a...",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn gọi một chiếc bánh mì kẹp. Hãy nói \"I'd like a...\" rồi điền tên món vừa học. Tưởng tượng mình đang ở quầy bán bánh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot và bạn mỗi người cầm nửa sandwich trên đĩa riêng.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot và bạn mỗi người cầm nửa sandwich trên đĩa riêng.",
+      "setting": "Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"I'd like a sandwich.\" Từ cần dùng là sandwich. Chiếc bánh tự làm đã được cắt đôi. Bạn đưa người bạn một nửa; lớp nhân quá nhiều bỗng thành phần để chia.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sandwich",
+          "meaning": "bánh mì kẹp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot và bạn mỗi người cầm nửa sandwich trên đĩa riêng. Setting: Bàn làm bánh với bánh kẹp nhiều nhân, đĩa và dao cắt an toàn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot và bạn mỗi người cầm nửa sandwich trên đĩa riêng.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "I'd like a sandwich.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'd like a sandwich.\" Từ cần dùng là sandwich. Chiếc bánh tự làm đã được cắt đôi. Bạn đưa người bạn một nửa; lớp nhân quá nhiều bỗng thành phần để chia.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn thêm hết lớp này tới lớp khác, chiếc bánh kẹp cao đến mức không biết cắn từ đâu. Sandwich là bánh mì kẹp. Mọi nguyên liệu đều nằm đúng giữa bánh, nhưng người ăn là bạn thì vẫn chưa tìm được cách bắt đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn thêm hết lớp này tới lớp khác, chiếc bánh kẹp cao đến mức không biết cắn từ đâu. Sandwich là bánh mì kẹp. Mọi nguyên liệu đều nằm đúng giữa bánh, nhưng người ăn là bạn thì vẫn chưa tìm được cách bắt đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Lúc gọi món, bạn có thể nói: \"I'd like a sandwich.\" Tôi muốn một chiếc bánh mì kẹp. A sandwich là một phần bánh kẹp. Hôm nay bạn tự làm và hơi hào phóng với nhân, nên chiếc sandwich trước mặt đã vượt kế hoạch ban đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Lúc gọi món, bạn có thể nói: \"I'd like a sandwich.\" Tôi muốn một chiếc bánh mì kẹp. A sandwich là một phần bánh kẹp. Hôm nay bạn tự làm và hơi hào phóng với nhân, nên chiếc sandwich trước mặt đã vượt kế hoạch ban đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn gợi ý: \"Cut the sandwich in half.\" Cắt đôi chiếc bánh kẹp đi. In half là thành hai nửa. Bạn đặt bánh xuống thớt, chia phần rồi mang trở lại đĩa; chiếc bánh không còn buộc bạn mở miệng thật lớn để cắn một lần."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn gọi một chiếc bánh mì kẹp. Hãy nói \"I'd like a...\" rồi điền tên món vừa học. Tưởng tượng mình đang ở quầy bán bánh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I'd like a sandwich.\" Từ cần dùng là sandwich. Chiếc bánh tự làm đã được cắt đôi. Bạn đưa người bạn một nửa; lớp nhân quá nhiều bỗng thành phần để chia."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Xếp nhân quá nhiều → gọi sandwich → xin cắt đôi → gọi phần ăn → ăn được.. Next visual event: Mascot chỉ chiếc bánh tự làm, nguyên liệu dư ở cạnh."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Xếp nhân quá nhiều → gọi sandwich → xin cắt đôi → gọi phần ăn → ăn được.. Next visual event: Bạn cắt sandwich trên thớt, mascot đặt hai đĩa bên cạnh."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Xếp nhân quá nhiều → gọi sandwich → xin cắt đôi → gọi phần ăn → ăn được.. Next visual event: Giữ một chiếc sandwich vừa phải trên đĩa, câu gọi món khuyết."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Xếp nhân quá nhiều → gọi sandwich → xin cắt đôi → gọi phần ăn → ăn được.. Next visual event: Mascot và bạn mỗi người cầm nửa sandwich trên đĩa riêng."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Xếp nhân quá nhiều → gọi sandwich → xin cắt đôi → gọi phần ăn → ăn được.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

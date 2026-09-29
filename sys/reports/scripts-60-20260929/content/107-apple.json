@@ -1,0 +1,516 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "b0718f905fe5b5e3526fa3b36233a226704bb569f4d010f1f37284e222c5f516",
+  "topic": "Học từ vựng tiếng Anh APPLE (danh từ: quả táo) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ APPLE",
+    "Làm rõ nghĩa lõi \"quả táo\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng APPLE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại APPLE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhìn hai quả trên bàn, quả thứ ba dưới mép ghế.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhìn hai quả trên bàn, quả thứ ba dưới mép ghế.",
+      "setting": "Bàn ăn có táo, một quả lăn xuống gần ghế.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn đặt ba quả táo lên bàn, quay đi lấy đĩa rồi nhìn lại chỉ còn hai. Apple nghĩa là quả táo. Chưa ai ăn cả, vậy quả còn lại đang ở đâu? Hôm nay từ mới đi kèm một cuộc tìm kiếm nhỏ.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "apple",
+          "meaning": "quả táo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhìn hai quả trên bàn, quả thứ ba dưới mép ghế. Setting: Bàn ăn có táo, một quả lăn xuống gần ghế. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhìn hai quả trên bàn, quả thứ ba dưới mép ghế.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "apple",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đặt ba quả táo lên bàn, quay đi lấy đĩa rồi nhìn lại chỉ còn hai. Apple nghĩa là quả táo. Chưa ai ăn cả, vậy quả còn lại đang ở đâu? Hôm nay từ mới đi kèm một cuộc tìm kiếm nhỏ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot cầm một quả táo rõ hình, hai quả còn lại ở vị trí cũ.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot cầm một quả táo rõ hình, hai quả còn lại ở vị trí cũ.",
+      "setting": "Bàn ăn có táo, một quả lăn xuống gần ghế.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn cầm một quả để gọi tên: \"This is an apple.\" Đây là một quả táo. An apple là một quả. Khi nói câu này, bạn có đúng vật trong tay để người nghe biết mình đang chỉ món nào giữa những đồ trên bàn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "apple",
+          "meaning": "quả táo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot cầm một quả táo rõ hình, hai quả còn lại ở vị trí cũ. Setting: Bàn ăn có táo, một quả lăn xuống gần ghế. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot cầm một quả táo rõ hình, hai quả còn lại ở vị trí cũ.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "This is an apple.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn cầm một quả để gọi tên: \"This is an apple.\" Đây là một quả táo. An apple là một quả. Khi nói câu này, bạn có đúng vật trong tay để người nghe biết mình đang chỉ món nào giữa những đồ trên bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot cúi nhìn dưới bàn, quả táo cạnh chân ghế.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot cúi nhìn dưới bàn, quả táo cạnh chân ghế.",
+      "setting": "Bàn ăn có táo, một quả lăn xuống gần ghế.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Rồi bạn hỏi: \"Where is my apple?\" Quả táo của tôi đâu? Mắt tìm trên bàn nhưng tai nghe một tiếng lăn nhẹ bên dưới. My apple là quả táo mình đang tìm, không phải hỏi chung về mọi quả táo trong nhà.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "apple",
+          "meaning": "quả táo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot cúi nhìn dưới bàn, quả táo cạnh chân ghế. Setting: Bàn ăn có táo, một quả lăn xuống gần ghế. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot cúi nhìn dưới bàn, quả táo cạnh chân ghế.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "Where is my apple?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Rồi bạn hỏi: \"Where is my apple?\" Quả táo của tôi đâu? Mắt tìm trên bàn nhưng tai nghe một tiếng lăn nhẹ bên dưới. My apple là quả táo mình đang tìm, không phải hỏi chung về mọi quả táo trong nhà.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ khoảng trống trên bàn và câu hỏi khuyết, quả táo dưới ghế chưa được nhấn.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ khoảng trống trên bàn và câu hỏi khuyết, quả táo dưới ghế chưa được nhấn.",
+      "setting": "Bàn ăn có táo, một quả lăn xuống gần ghế.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Nếu quả táo của bạn biến mất khỏi bàn, hãy hỏi bằng câu \"Where is my...?\" Thêm đúng từ vừa học rồi nói cả câu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "apple",
+          "meaning": "quả táo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ khoảng trống trên bàn và câu hỏi khuyết, quả táo dưới ghế chưa được nhấn. Setting: Bàn ăn có táo, một quả lăn xuống gần ghế. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ khoảng trống trên bàn và câu hỏi khuyết, quả táo dưới ghế chưa được nhấn.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Where is my...?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Nếu quả táo của bạn biến mất khỏi bàn, hãy hỏi bằng câu \"Where is my...?\" Thêm đúng từ vừa học rồi nói cả câu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot nhặt táo, hai quả trên bàn đã nằm trong bát.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot nhặt táo, hai quả trên bàn đã nằm trong bát.",
+      "setting": "Bàn ăn có táo, một quả lăn xuống gần ghế.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Where is my apple?\" Từ còn thiếu là apple. Quả táo ở cạnh chân ghế. Bạn nhặt lên đem rửa, còn hai quả trên bàn được đặt vào bát để khỏi lăn tiếp.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "apple",
+          "meaning": "quả táo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot phát hiện quả táo cạnh chân ghế, chưa nhặt lên. Setting: Bàn ăn có táo, một quả lăn xuống gần ghế. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot phát hiện quả táo cạnh chân ghế, chưa nhặt lên.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Where is my apple?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC05_I2",
+          "description": "Depict this single concrete story moment: Mascot nhặt quả táo khỏi sàn; hai quả trên bàn đã nằm trong bát, giữ vị trí bàn ghế. Setting: Bàn ăn có táo, một quả lăn xuống gần ghế. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC05_I1",
+          "preserve": "Keep the base camera, room, character identities, clothes, lighting, prop positions and visible text; change only the stated action or object state.",
+          "change": "Mascot nhặt quả táo khỏi sàn; hai quả trên bàn đã nằm trong bát, giữ vị trí bàn ghế.",
+          "reason": "Show the visible consequence after the preceding state.",
+          "visible_text": [
+            {
+              "text": "Where is my apple?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Where is my apple?\" Từ còn thiếu là apple. Quả táo ở cạnh chân ghế. Bạn nhặt lên đem rửa, còn hai quả trên bàn được đặt vào bát để khỏi lăn tiếp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC05_B2",
+          "image_id": "SC05_I2",
+          "purpose": "Reveal the action result at the matching spoken cue.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhặt lên đem rửa",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn đặt ba quả táo lên bàn, quay đi lấy đĩa rồi nhìn lại chỉ còn hai. Apple nghĩa là quả táo. Chưa ai ăn cả, vậy quả còn lại đang ở đâu? Hôm nay từ mới đi kèm một cuộc tìm kiếm nhỏ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn đặt ba quả táo lên bàn, quay đi lấy đĩa rồi nhìn lại chỉ còn hai. Apple nghĩa là quả táo. Chưa ai ăn cả, vậy quả còn lại đang ở đâu? Hôm nay từ mới đi kèm một cuộc tìm kiếm nhỏ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn cầm một quả để gọi tên: \"This is an apple.\" Đây là một quả táo. An apple là một quả. Khi nói câu này, bạn có đúng vật trong tay để người nghe biết mình đang chỉ món nào giữa những đồ trên bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn cầm một quả để gọi tên: \"This is an apple.\" Đây là một quả táo. An apple là một quả. Khi nói câu này, bạn có đúng vật trong tay để người nghe biết mình đang chỉ món nào giữa những đồ trên bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Rồi bạn hỏi: \"Where is my apple?\" Quả táo của tôi đâu? Mắt tìm trên bàn nhưng tai nghe một tiếng lăn nhẹ bên dưới. My apple là quả táo mình đang tìm, không phải hỏi chung về mọi quả táo trong nhà."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Nếu quả táo của bạn biến mất khỏi bàn, hãy hỏi bằng câu \"Where is my...?\" Thêm đúng từ vừa học rồi nói cả câu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Where is my apple?\" Từ còn thiếu là apple. Quả táo ở cạnh chân ghế. Bạn nhặt lên đem rửa, còn hai quả trên bàn được đặt vào bát để khỏi lăn tiếp."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Đếm quả táo → mất một quả → hỏi → nhận noun → nhặt khỏi gầm ghế.. Next visual event: Mascot cầm một quả táo rõ hình, hai quả còn lại ở vị trí cũ."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Đếm quả táo → mất một quả → hỏi → nhận noun → nhặt khỏi gầm ghế.. Next visual event: Mascot cúi nhìn dưới bàn, quả táo cạnh chân ghế."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Đếm quả táo → mất một quả → hỏi → nhận noun → nhặt khỏi gầm ghế.. Next visual event: Giữ khoảng trống trên bàn và câu hỏi khuyết, quả táo dưới ghế chưa được nhấn."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đếm quả táo → mất một quả → hỏi → nhận noun → nhặt khỏi gầm ghế.. Next visual event: Mascot nhặt táo, hai quả trên bàn đã nằm trong bát."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đếm quả táo → mất một quả → hỏi → nhận noun → nhặt khỏi gầm ghế.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

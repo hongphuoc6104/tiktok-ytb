@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "2ecbc1bd08f00a648af14107fb78e19bab6249d647e93c3966c44766d65fcc62",
+  "topic": "Học từ vựng tiếng Anh MENU (danh từ: thực đơn) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ MENU",
+    "Làm rõ nghĩa lõi \"thực đơn\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng MENU, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại MENU, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhìn bàn chưa có thực đơn, nhân viên đứng cạnh.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhìn bàn chưa có thực đơn, nhân viên đứng cạnh.",
+      "setting": "Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn vừa ngồi xuống, người phục vụ hỏi gọi gì. Nhưng trước mặt bạn chỉ có khăn và đũa, chưa biết quán bán món nào. Menu là thực đơn. Xin xem menu trước sẽ dễ hơn việc nhìn sang mọi bàn rồi đoán tên món.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "menu",
+          "meaning": "thực đơn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhìn bàn chưa có thực đơn, nhân viên đứng cạnh. Setting: Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhìn bàn chưa có thực đơn, nhân viên đứng cạnh.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "menu",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn vừa ngồi xuống, người phục vụ hỏi gọi gì. Nhưng trước mặt bạn chỉ có khăn và đũa, chưa biết quán bán món nào. Menu là thực đơn. Xin xem menu trước sẽ dễ hơn việc nhìn sang mọi bàn rồi đoán tên món.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nhân viên đưa thực đơn cho mascot mở ra.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Nhân viên đưa thực đơn cho mascot mở ra.",
+      "setting": "Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn hỏi: \"Can I see the menu, please?\" Cho tôi xem thực đơn được không? Câu này giúp bạn xin thứ cần để chọn món. Người phục vụ hiểu ngay, mang tới cuốn có hình và tên món thay vì tiếp tục đứng chờ câu trả lời.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "menu",
+          "meaning": "thực đơn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Nhân viên đưa thực đơn cho mascot mở ra. Setting: Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Nhân viên đưa thực đơn cho mascot mở ra.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "Can I see the menu, please?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Can I see the menu, please?\" Cho tôi xem thực đơn được không? Câu này giúp bạn xin thứ cần để chọn món. Người phục vụ hiểu ngay, mang tới cuốn có hình và tên món thay vì tiếp tục đứng chờ câu trả lời.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot đặt thực đơn mở giữa hai người, bạn áo vàng ngồi xuống.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot đặt thực đơn mở giữa hai người, bạn áo vàng ngồi xuống.",
+      "setting": "Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người bạn mới tới hỏi: \"Where is the menu?\" Thực đơn đâu? Bạn đẩy cuốn đang xem sang giữa bàn. The menu chỉ cuốn cả hai đang dùng; không ai phải nhướn người nhìn qua vai người kia để chọn phần ăn của mình.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "menu",
+          "meaning": "thực đơn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot đặt thực đơn mở giữa hai người, bạn áo vàng ngồi xuống. Setting: Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đặt thực đơn mở giữa hai người, bạn áo vàng ngồi xuống.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "Where is the menu?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn mới tới hỏi: \"Where is the menu?\" Thực đơn đâu? Bạn đẩy cuốn đang xem sang giữa bàn. The menu chỉ cuốn cả hai đang dùng; không ai phải nhướn người nhìn qua vai người kia để chọn phần ăn của mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ bàn với thực đơn úp, câu xin xem khuyết từ.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ bàn với thực đơn úp, câu xin xem khuyết từ.",
+      "setting": "Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn vừa vào quán và cần xem thực đơn. Hãy nói \"Can I see the..., please?\" rồi thêm từ vừa học.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "menu",
+          "meaning": "thực đơn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ bàn với thực đơn úp, câu xin xem khuyết từ. Setting: Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ bàn với thực đơn úp, câu xin xem khuyết từ.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Can I see the..., please?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn vừa vào quán và cần xem thực đơn. Hãy nói \"Can I see the..., please?\" rồi thêm từ vừa học.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hai người đặt thực đơn đã gấp xuống và nhìn nhân viên.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Hai người đặt thực đơn đã gấp xuống và nhìn nhân viên.",
+      "setting": "Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Can I see the menu, please?\" Từ cần điền là menu. Chọn được món rồi, hai người mới gọi nhân viên. Chiếc thực đơn đã giúp giải quyết câu hỏi ăn gì lúc vừa ngồi xuống.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "menu",
+          "meaning": "thực đơn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Hai người đặt thực đơn đã gấp xuống và nhìn nhân viên. Setting: Bàn nhà hàng, mascot chưa có thực đơn, nhân viên mang tới. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hai người đặt thực đơn đã gấp xuống và nhìn nhân viên.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Can I see the menu, please?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I see the menu, please?\" Từ cần điền là menu. Chọn được món rồi, hai người mới gọi nhân viên. Chiếc thực đơn đã giúp giải quyết câu hỏi ăn gì lúc vừa ngồi xuống.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn vừa ngồi xuống, người phục vụ hỏi gọi gì. Nhưng trước mặt bạn chỉ có khăn và đũa, chưa biết quán bán món nào. Menu là thực đơn. Xin xem menu trước sẽ dễ hơn việc nhìn sang mọi bàn rồi đoán tên món."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn vừa ngồi xuống, người phục vụ hỏi gọi gì. Nhưng trước mặt bạn chỉ có khăn và đũa, chưa biết quán bán món nào. Menu là thực đơn. Xin xem menu trước sẽ dễ hơn việc nhìn sang mọi bàn rồi đoán tên món."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can I see the menu, please?\" Cho tôi xem thực đơn được không? Câu này giúp bạn xin thứ cần để chọn món. Người phục vụ hiểu ngay, mang tới cuốn có hình và tên món thay vì tiếp tục đứng chờ câu trả lời."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can I see the menu, please?\" Cho tôi xem thực đơn được không? Câu này giúp bạn xin thứ cần để chọn món. Người phục vụ hiểu ngay, mang tới cuốn có hình và tên món thay vì tiếp tục đứng chờ câu trả lời."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn mới tới hỏi: \"Where is the menu?\" Thực đơn đâu? Bạn đẩy cuốn đang xem sang giữa bàn. The menu chỉ cuốn cả hai đang dùng; không ai phải nhướn người nhìn qua vai người kia để chọn phần ăn của mình."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn vừa vào quán và cần xem thực đơn. Hãy nói \"Can I see the..., please?\" rồi thêm từ vừa học."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can I see the menu, please?\" Từ cần điền là menu. Chọn được món rồi, hai người mới gọi nhân viên. Chiếc thực đơn đã giúp giải quyết câu hỏi ăn gì lúc vừa ngồi xuống."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Ngồi xuống → xin thực đơn → hỏi xem → điền noun → chọn món được.. Next visual event: Nhân viên đưa thực đơn cho mascot mở ra."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Ngồi xuống → xin thực đơn → hỏi xem → điền noun → chọn món được.. Next visual event: Mascot đặt thực đơn mở giữa hai người, bạn áo vàng ngồi xuống."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Ngồi xuống → xin thực đơn → hỏi xem → điền noun → chọn món được.. Next visual event: Giữ bàn với thực đơn úp, câu xin xem khuyết từ."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Ngồi xuống → xin thực đơn → hỏi xem → điền noun → chọn món được.. Next visual event: Hai người đặt thực đơn đã gấp xuống và nhìn nhân viên."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Ngồi xuống → xin thực đơn → hỏi xem → điền noun → chọn món được.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

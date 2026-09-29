@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "a6ef9734e5353a22948319f41020405e10cf057964d4cb234658bda66d035470",
+  "topic": "Học từ vựng tiếng Anh CARROT (danh từ: cà rốt) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CARROT",
+    "Làm rõ nghĩa lõi \"cà rốt\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CARROT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CARROT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhận củ cà rốt từ bạn áo vàng cạnh thớt.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhận củ cà rốt từ bạn áo vàng cạnh thớt.",
+      "setting": "Bếp, cà rốt nguyên củ, thớt và nồi canh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn chuẩn bị nồi canh, người bạn đưa tới một củ dài màu cam. Carrot là cà rốt. Củ còn nguyên trên thớt, nồi thì đang chờ phần rau được chuẩn bị; giờ hai người chia nhau một việc nhỏ để tiếp tục.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "carrot",
+          "meaning": "cà rốt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhận củ cà rốt từ bạn áo vàng cạnh thớt. Setting: Bếp, cà rốt nguyên củ, thớt và nồi canh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhận củ cà rốt từ bạn áo vàng cạnh thớt.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "carrot",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn chuẩn bị nồi canh, người bạn đưa tới một củ dài màu cam. Carrot là cà rốt. Củ còn nguyên trên thớt, nồi thì đang chờ phần rau được chuẩn bị; giờ hai người chia nhau một việc nhỏ để tiếp tục.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot rửa cà rốt ở bồn, thớt sạch chờ bên cạnh.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot rửa cà rốt ở bồn, thớt sạch chờ bên cạnh.",
+      "setting": "Bếp, cà rốt nguyên củ, thớt và nồi canh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người bạn chỉ công thức: \"Add a carrot.\" Thêm một củ cà rốt. A carrot gọi lượng một củ. Trong câu chuyện, hai người sẽ sơ chế rồi cắt củ ấy trước khi thêm, chứ không thả cả thứ vừa mua còn nguyên đất vào nồi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "carrot",
+          "meaning": "cà rốt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot rửa cà rốt ở bồn, thớt sạch chờ bên cạnh. Setting: Bếp, cà rốt nguyên củ, thớt và nồi canh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot rửa cà rốt ở bồn, thớt sạch chờ bên cạnh.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "Add a carrot.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn chỉ công thức: \"Add a carrot.\" Thêm một củ cà rốt. A carrot gọi lượng một củ. Trong câu chuyện, hai người sẽ sơ chế rồi cắt củ ấy trước khi thêm, chứ không thả cả thứ vừa mua còn nguyên đất vào nồi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Miếng cà rốt trên thớt, mascot dùng thìa gom vào bát.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Miếng cà rốt trên thớt, mascot dùng thìa gom vào bát.",
+      "setting": "Bếp, cà rốt nguyên củ, thớt và nồi canh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Nhìn những miếng đã cắt, bạn nói: \"The carrot is orange.\" Củ cà rốt này màu cam. Câu nhận xét tả chính củ đang dùng. Bạn có cả tên món lẫn đặc điểm nhìn thấy, không cần học thêm một danh sách rau khác trong lúc nấu.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "carrot",
+          "meaning": "cà rốt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Miếng cà rốt trên thớt, mascot dùng thìa gom vào bát. Setting: Bếp, cà rốt nguyên củ, thớt và nồi canh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Miếng cà rốt trên thớt, mascot dùng thìa gom vào bát.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "The carrot is orange.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhìn những miếng đã cắt, bạn nói: \"The carrot is orange.\" Củ cà rốt này màu cam. Câu nhận xét tả chính củ đang dùng. Bạn có cả tên món lẫn đặc điểm nhìn thấy, không cần học thêm một danh sách rau khác trong lúc nấu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ cà rốt nguyên củ trên thẻ minh họa cạnh nồi, câu gợi ý khuyết.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ cà rốt nguyên củ trên thẻ minh họa cạnh nồi, câu gợi ý khuyết.",
+      "setting": "Bếp, cà rốt nguyên củ, thớt và nồi canh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người bạn muốn nhắc thêm một củ cà rốt. Hãy nói \"Add a...\" rồi điền tên củ vừa học. Nói cả lời nhắc nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "carrot",
+          "meaning": "cà rốt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ cà rốt nguyên củ trên thẻ minh họa cạnh nồi, câu gợi ý khuyết. Setting: Bếp, cà rốt nguyên củ, thớt và nồi canh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ cà rốt nguyên củ trên thẻ minh họa cạnh nồi, câu gợi ý khuyết.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Add a...",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn muốn nhắc thêm một củ cà rốt. Hãy nói \"Add a...\" rồi điền tên củ vừa học. Nói cả lời nhắc nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot thêm miếng cà rốt vào nồi, thớt đã trống.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot thêm miếng cà rốt vào nồi, thớt đã trống.",
+      "setting": "Bếp, cà rốt nguyên củ, thớt và nồi canh.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Add a carrot.\" Từ còn thiếu là carrot. Cà rốt đã rửa, cắt và thêm vào nồi. Thớt được dọn sạch, trong canh có những miếng màu cam bạn vừa chuẩn bị.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "carrot",
+          "meaning": "cà rốt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot thêm miếng cà rốt vào nồi, thớt đã trống. Setting: Bếp, cà rốt nguyên củ, thớt và nồi canh. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot thêm miếng cà rốt vào nồi, thớt đã trống.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Add a carrot.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Add a carrot.\" Từ còn thiếu là carrot. Cà rốt đã rửa, cắt và thêm vào nồi. Thớt được dọn sạch, trong canh có những miếng màu cam bạn vừa chuẩn bị.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn chuẩn bị nồi canh, người bạn đưa tới một củ dài màu cam. Carrot là cà rốt. Củ còn nguyên trên thớt, nồi thì đang chờ phần rau được chuẩn bị; giờ hai người chia nhau một việc nhỏ để tiếp tục."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn chuẩn bị nồi canh, người bạn đưa tới một củ dài màu cam. Carrot là cà rốt. Củ còn nguyên trên thớt, nồi thì đang chờ phần rau được chuẩn bị; giờ hai người chia nhau một việc nhỏ để tiếp tục."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người bạn chỉ công thức: \"Add a carrot.\" Thêm một củ cà rốt. A carrot gọi lượng một củ. Trong câu chuyện, hai người sẽ sơ chế rồi cắt củ ấy trước khi thêm, chứ không thả cả thứ vừa mua còn nguyên đất vào nồi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người bạn chỉ công thức: \"Add a carrot.\" Thêm một củ cà rốt. A carrot gọi lượng một củ. Trong câu chuyện, hai người sẽ sơ chế rồi cắt củ ấy trước khi thêm, chứ không thả cả thứ vừa mua còn nguyên đất vào nồi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Nhìn những miếng đã cắt, bạn nói: \"The carrot is orange.\" Củ cà rốt này màu cam. Câu nhận xét tả chính củ đang dùng. Bạn có cả tên món lẫn đặc điểm nhìn thấy, không cần học thêm một danh sách rau khác trong lúc nấu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Người bạn muốn nhắc thêm một củ cà rốt. Hãy nói \"Add a...\" rồi điền tên củ vừa học. Nói cả lời nhắc nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Add a carrot.\" Từ còn thiếu là carrot. Cà rốt đã rửa, cắt và thêm vào nồi. Thớt được dọn sạch, trong canh có những miếng màu cam bạn vừa chuẩn bị."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Cà rốt chưa cắt → gọi tên củ → thêm vào canh → điền noun → nồi có miếng màu cam.. Next visual event: Mascot rửa cà rốt ở bồn, thớt sạch chờ bên cạnh."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Cà rốt chưa cắt → gọi tên củ → thêm vào canh → điền noun → nồi có miếng màu cam.. Next visual event: Miếng cà rốt trên thớt, mascot dùng thìa gom vào bát."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Cà rốt chưa cắt → gọi tên củ → thêm vào canh → điền noun → nồi có miếng màu cam.. Next visual event: Giữ cà rốt nguyên củ trên thẻ minh họa cạnh nồi, câu gợi ý khuyết."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Cà rốt chưa cắt → gọi tên củ → thêm vào canh → điền noun → nồi có miếng màu cam.. Next visual event: Mascot thêm miếng cà rốt vào nồi, thớt đã trống."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Cà rốt chưa cắt → gọi tên củ → thêm vào canh → điền noun → nồi có miếng màu cam.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

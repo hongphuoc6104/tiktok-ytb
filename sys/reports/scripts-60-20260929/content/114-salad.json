@@ -1,0 +1,516 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "0354d227f287be95ea9f1c4a8cafc9691d353647b78f22019574f0f166b242d5",
+  "topic": "Học từ vựng tiếng Anh SALAD (danh từ: món rau trộn) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SALAD",
+    "Làm rõ nghĩa lõi \"món rau trộn\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SALAD, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SALAD, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot nhấc bát có rau ở trên và nước trộn dưới, bạn chỉ hai thìa.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot nhấc bát có rau ở trên và nước trộn dưới, bạn chỉ hai thìa.",
+      "setting": "Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn định mang bát rau ra bàn thì người bạn nhắc: còn chưa trộn. Salad là món rau trộn. Hôm nay bát có rau xanh và cà chua; phần nước trộn còn ở dưới đáy, nên người ăn đầu tiên có thể nhận một miếng rất khác người cuối.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "salad",
+          "meaning": "món rau trộn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot nhấc bát có rau ở trên và nước trộn dưới, bạn chỉ hai thìa. Setting: Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nhấc bát có rau ở trên và nước trộn dưới, bạn chỉ hai thìa.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "salad",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn định mang bát rau ra bàn thì người bạn nhắc: còn chưa trộn. Salad là món rau trộn. Hôm nay bát có rau xanh và cà chua; phần nước trộn còn ở dưới đáy, nên người ăn đầu tiên có thể nhận một miếng rất khác người cuối.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot trộn bát bằng hai thìa, rau vẫn nằm trong bát.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot trộn bát bằng hai thìa, rau vẫn nằm trong bát.",
+      "setting": "Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn đặt bát xuống: \"I'm making a salad.\" Tôi đang làm món rau trộn. Making a salad là chuẩn bị món ấy. Bạn dùng hai thìa đảo nhẹ để các phần được trộn cùng nhau, rồi mới tính chuyện bày ra bàn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "salad",
+          "meaning": "món rau trộn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot đặt bát xuống, rau và phần nước trộn vẫn tách rõ. Setting: Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đặt bát xuống, rau và phần nước trộn vẫn tách rõ.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "I'm making a salad.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Depict this single concrete story moment: Mascot dùng hai thìa đảo nhẹ rau trong cùng bát, nước trộn phủ đều hơn. Setting: Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC02_I1",
+          "preserve": "Keep the base camera, room, character identities, clothes, lighting, prop positions and visible text; change only the stated action or object state.",
+          "change": "Mascot dùng hai thìa đảo nhẹ rau trong cùng bát, nước trộn phủ đều hơn.",
+          "reason": "Show the visible consequence after the preceding state.",
+          "visible_text": [
+            {
+              "text": "I'm making a salad.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đặt bát xuống: \"I'm making a salad.\" Tôi đang làm món rau trộn. Making a salad là chuẩn bị món ấy. Bạn dùng hai thìa đảo nhẹ để các phần được trộn cùng nhau, rồi mới tính chuyện bày ra bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Reveal the action result at the matching spoken cue.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn dùng hai thìa đảo nhẹ",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot đưa bát ra bàn, bạn lấy một phần vào đĩa.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot đưa bát ra bàn, bạn lấy một phần vào đĩa.",
+      "setting": "Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Trộn xong, bạn mời: \"Try this salad.\" Thử món rau trộn này đi. This salad chỉ bát bạn vừa làm. Người bạn lấy một phần nếm thử, còn bạn nhìn phản ứng để biết có cần hỏi thêm về món mình chuẩn bị không.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "salad",
+          "meaning": "món rau trộn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot đưa bát ra bàn, bạn lấy một phần vào đĩa. Setting: Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đưa bát ra bàn, bạn lấy một phần vào đĩa.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "Try this salad.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Trộn xong, bạn mời: \"Try this salad.\" Thử món rau trộn này đi. This salad chỉ bát bạn vừa làm. Người bạn lấy một phần nếm thử, còn bạn nhìn phản ứng để biết có cần hỏi thêm về món mình chuẩn bị không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ bát salad và lời mời khuyết, không hiện đáp án.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ bát salad và lời mời khuyết, không hiện đáp án.",
+      "setting": "Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Món đã làm xong, bạn muốn mời mình thử. Hãy hoàn thành \"Try this...\" bằng tên món vừa học và đọc cả câu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "salad",
+          "meaning": "món rau trộn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ bát salad và lời mời khuyết, không hiện đáp án. Setting: Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ bát salad và lời mời khuyết, không hiện đáp án.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Try this...",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Món đã làm xong, bạn muốn mời mình thử. Hãy hoàn thành \"Try this...\" bằng tên món vừa học và đọc cả câu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot đặt bát salad giữa bàn ăn, hai thìa ở trong bát.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot đặt bát salad giữa bàn ăn, hai thìa ở trong bát.",
+      "setting": "Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Try this salad.\" Từ đó là salad. Bạn mời nếm rồi mang bát ra giữa bàn. Rau đã được trộn cùng nhau, người đầu tiên và người cuối đều lấy được phần như ý.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "salad",
+          "meaning": "món rau trộn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot đặt bát salad giữa bàn ăn, hai thìa ở trong bát. Setting: Bàn bếp, bát rau trộn với lá xanh và cà chua, hai thìa trộn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đặt bát salad giữa bàn ăn, hai thìa ở trong bát.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Try this salad.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Try this salad.\" Từ đó là salad. Bạn mời nếm rồi mang bát ra giữa bàn. Rau đã được trộn cùng nhau, người đầu tiên và người cuối đều lấy được phần như ý.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn định mang bát rau ra bàn thì người bạn nhắc: còn chưa trộn. Salad là món rau trộn. Hôm nay bát có rau xanh và cà chua; phần nước trộn còn ở dưới đáy, nên người ăn đầu tiên có thể nhận một miếng rất khác người cuối."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn định mang bát rau ra bàn thì người bạn nhắc: còn chưa trộn. Salad là món rau trộn. Hôm nay bát có rau xanh và cà chua; phần nước trộn còn ở dưới đáy, nên người ăn đầu tiên có thể nhận một miếng rất khác người cuối."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn đặt bát xuống: \"I'm making a salad.\" Tôi đang làm món rau trộn. Making a salad là chuẩn bị món ấy. Bạn dùng hai thìa đảo nhẹ để các phần được trộn cùng nhau, rồi mới tính chuyện bày ra bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn đặt bát xuống: \"I'm making a salad.\" Tôi đang làm món rau trộn. Making a salad là chuẩn bị món ấy. Bạn dùng hai thìa đảo nhẹ để các phần được trộn cùng nhau, rồi mới tính chuyện bày ra bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Trộn xong, bạn mời: \"Try this salad.\" Thử món rau trộn này đi. This salad chỉ bát bạn vừa làm. Người bạn lấy một phần nếm thử, còn bạn nhìn phản ứng để biết có cần hỏi thêm về món mình chuẩn bị không."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Món đã làm xong, bạn muốn mời mình thử. Hãy hoàn thành \"Try this...\" bằng tên món vừa học và đọc cả câu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Try this salad.\" Từ đó là salad. Bạn mời nếm rồi mang bát ra giữa bàn. Rau đã được trộn cùng nhau, người đầu tiên và người cuối đều lấy được phần như ý."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Rau rời trong bát → làm salad → mời thử → nhớ từ → mang bát ra bàn.. Next visual event: Mascot trộn bát bằng hai thìa, rau vẫn nằm trong bát."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Rau rời trong bát → làm salad → mời thử → nhớ từ → mang bát ra bàn.. Next visual event: Mascot đưa bát ra bàn, bạn lấy một phần vào đĩa."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Rau rời trong bát → làm salad → mời thử → nhớ từ → mang bát ra bàn.. Next visual event: Giữ bát salad và lời mời khuyết, không hiện đáp án."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Rau rời trong bát → làm salad → mời thử → nhớ từ → mang bát ra bàn.. Next visual event: Mascot đặt bát salad giữa bàn ăn, hai thìa ở trong bát."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Rau rời trong bát → làm salad → mời thử → nhớ từ → mang bát ra bàn.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

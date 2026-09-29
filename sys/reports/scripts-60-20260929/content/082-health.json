@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "f18cb583993994961ef3fc31a1470f3e3f01716d2f622a2d8a73ed2496abb431",
+  "topic": "Học từ vựng tiếng Anh HEALTH (danh từ: sức khoẻ) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ HEALTH",
+    "Làm rõ nghĩa lõi \"sức khoẻ\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng HEALTH, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại HEALTH, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot ngồi trước máy tính bảng, ông xuất hiện trên màn hình.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot ngồi trước máy tính bảng, ông xuất hiện trên màn hình.",
+      "setting": "Phòng khách, mascot gọi video cho ông trên máy tính bảng.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Gọi điện cho ông, bạn đã hỏi hôm nay ăn gì, trời có mưa không. Còn một điều muốn hỏi nữa: sức khỏe của ông. Health nghĩa là sức khỏe, tình trạng khỏe hay không khỏe của một người.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "health",
+          "meaning": "sức khoẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot ngồi trước máy tính bảng, ông xuất hiện trên màn hình. Setting: Phòng khách, mascot gọi video cho ông trên máy tính bảng. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot ngồi trước máy tính bảng, ông xuất hiện trên màn hình.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "health",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Gọi điện cho ông, bạn đã hỏi hôm nay ăn gì, trời có mưa không. Còn một điều muốn hỏi nữa: sức khỏe của ông. Health nghĩa là sức khỏe, tình trạng khỏe hay không khỏe của một người.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot nghiêng đầu lắng nghe cuộc gọi, chữ câu hỏi ở phần trên.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot nghiêng đầu lắng nghe cuộc gọi, chữ câu hỏi ở phần trên.",
+      "setting": "Phòng khách, mascot gọi video cho ông trên máy tính bảng.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn hỏi: \"How is your health?\" Sức khỏe của ông thế nào? Trong tiếng Anh, your là của người đang được hỏi. Sang tiếng Việt, mình xưng hô theo quan hệ; ở đây bạn đang nói chuyện với ông nên dùng lời hỏi dành cho ông.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "health",
+          "meaning": "sức khoẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot nghiêng đầu lắng nghe cuộc gọi, chữ câu hỏi ở phần trên. Setting: Phòng khách, mascot gọi video cho ông trên máy tính bảng. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nghiêng đầu lắng nghe cuộc gọi, chữ câu hỏi ở phần trên.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "How is your health?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"How is your health?\" Sức khỏe của ông thế nào? Trong tiếng Anh, your là của người đang được hỏi. Sang tiếng Việt, mình xưng hô theo quan hệ; ở đây bạn đang nói chuyện với ông nên dùng lời hỏi dành cho ông.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Ông trả lời trên màn hình",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Ông trả lời trên màn hình; mascot đặt cốc xuống để nghe.",
+      "setting": "Phòng khách, mascot gọi video cho ông trên máy tính bảng.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Ông đáp: \"My health is good.\" Sức khỏe của ông tốt. Health là danh từ gọi điều hai người đang hỏi thăm. Nghe ông tự kể sẽ rõ hơn việc chỉ nhìn một bức ảnh rồi đoán hôm ấy ông có khỏe hay không.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "health",
+          "meaning": "sức khoẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Ông trả lời trên màn hình; mascot đặt cốc xuống để nghe. Setting: Phòng khách, mascot gọi video cho ông trên máy tính bảng. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Ông trả lời trên màn hình; mascot đặt cốc xuống để nghe.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "My health is good.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Ông đáp: \"My health is good.\" Sức khỏe của ông tốt. Health là danh từ gọi điều hai người đang hỏi thăm. Nghe ông tự kể sẽ rõ hơn việc chỉ nhìn một bức ảnh rồi đoán hôm ấy ông có khỏe hay không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ màn hình cuộc gọi, câu hỏi khuyết từ, không chữ đáp án.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ màn hình cuộc gọi, câu hỏi khuyết từ, không chữ đáp án.",
+      "setting": "Phòng khách, mascot gọi video cho ông trên máy tính bảng.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Giờ bạn muốn hỏi sức khỏe người đang gọi cùng mình. Hoàn thành \"How is your...?\" bằng từ vừa học. Hãy nói thành một lời hỏi thăm.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "health",
+          "meaning": "sức khoẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ màn hình cuộc gọi, câu hỏi khuyết từ, không chữ đáp án. Setting: Phòng khách, mascot gọi video cho ông trên máy tính bảng. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ màn hình cuộc gọi, câu hỏi khuyết từ, không chữ đáp án.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "How is your...?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Giờ bạn muốn hỏi sức khỏe người đang gọi cùng mình. Hoàn thành \"How is your...?\" bằng từ vừa học. Hãy nói thành một lời hỏi thăm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot ngồi nghe ông kể, điện thoại khác úp xuống bàn.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot ngồi nghe ông kể, điện thoại khác úp xuống bàn.",
+      "setting": "Phòng khách, mascot gọi video cho ông trên máy tính bảng.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"How is your health?\" Từ còn thiếu là health. Bạn hỏi xong rồi nghe ông kể tiếp. Có câu hỏi thăm, cuộc gọi đã dành chỗ cho điều mình muốn biết.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "health",
+          "meaning": "sức khoẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot ngồi nghe ông kể, điện thoại khác úp xuống bàn. Setting: Phòng khách, mascot gọi video cho ông trên máy tính bảng. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot ngồi nghe ông kể, điện thoại khác úp xuống bàn.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "How is your health?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"How is your health?\" Từ còn thiếu là health. Bạn hỏi xong rồi nghe ông kể tiếp. Có câu hỏi thăm, cuộc gọi đã dành chỗ cho điều mình muốn biết.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Gọi điện cho ông, bạn đã hỏi hôm nay ăn gì, trời có mưa không. Còn một điều muốn hỏi nữa: sức khỏe của ông. Health nghĩa là sức khỏe, tình trạng khỏe hay không khỏe của một người."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Gọi điện cho ông, bạn đã hỏi hôm nay ăn gì, trời có mưa không. Còn một điều muốn hỏi nữa: sức khỏe của ông. Health nghĩa là sức khỏe, tình trạng khỏe hay không khỏe của một người."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"How is your health?\" Sức khỏe của ông thế nào? Trong tiếng Anh, your là của người đang được hỏi. Sang tiếng Việt, mình xưng hô theo quan hệ; ở đây bạn đang nói chuyện với ông nên dùng lời hỏi dành cho ông."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"How is your health?\" Sức khỏe của ông thế nào? Trong tiếng Anh, your là của người đang được hỏi. Sang tiếng Việt, mình xưng hô theo quan hệ; ở đây bạn đang nói chuyện với ông nên dùng lời hỏi dành cho ông."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Ông đáp: \"My health is good.\" Sức khỏe của ông tốt. Health là danh từ gọi điều hai người đang hỏi thăm. Nghe ông tự kể sẽ rõ hơn việc chỉ nhìn một bức ảnh rồi đoán hôm ấy ông có khỏe hay không."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Giờ bạn muốn hỏi sức khỏe người đang gọi cùng mình. Hoàn thành \"How is your...?\" bằng từ vừa học. Hãy nói thành một lời hỏi thăm."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"How is your health?\" Từ còn thiếu là health. Bạn hỏi xong rồi nghe ông kể tiếp. Có câu hỏi thăm, cuộc gọi đã dành chỗ cho điều mình muốn biết."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Gọi hỏi ông → hiểu sức khỏe là tình trạng chung → hai câu hỏi/đáp → chọn danh từ → tiếp tục chuyện đời thường.. Next visual event: Mascot nghiêng đầu lắng nghe cuộc gọi, chữ câu hỏi ở phần trên."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Gọi hỏi ông → hiểu sức khỏe là tình trạng chung → hai câu hỏi/đáp → chọn danh từ → tiếp tục chuyện đời thường.. Next visual event: Ông trả lời trên màn hình; mascot đặt cốc xuống để nghe."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Gọi hỏi ông → hiểu sức khỏe là tình trạng chung → hai câu hỏi/đáp → chọn danh từ → tiếp tục chuyện đời thường.. Next visual event: Giữ màn hình cuộc gọi, câu hỏi khuyết từ, không chữ đáp án."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Gọi hỏi ông → hiểu sức khỏe là tình trạng chung → hai câu hỏi/đáp → chọn danh từ → tiếp tục chuyện đời thường.. Next visual event: Mascot ngồi nghe ông kể, điện thoại khác úp xuống bàn."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Gọi hỏi ông → hiểu sức khỏe là tình trạng chung → hai câu hỏi/đáp → chọn danh từ → tiếp tục chuyện đời thường.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

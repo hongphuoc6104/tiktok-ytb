@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "8512165fa94351bf7d331b480ac9510aed59a543eaf671d76858e25ce77f4384",
+  "topic": "Học từ vựng tiếng Anh BANANA (danh từ: quả chuối) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ BANANA",
+    "Làm rõ nghĩa lõi \"quả chuối\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng BANANA, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại BANANA, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Mascot xếp đồ cạnh hộp đầy và nải chuối.",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "action": "Mascot xếp đồ cạnh hộp đầy và nải chuối.",
+      "setting": "Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn muốn mang một món ăn cho chuyến đi, nhưng chiếc hộp nhỏ đã đầy. Một quả chuối nằm ngay bên cạnh. Banana nghĩa là quả chuối. Bạn chọn một quả, tìm chỗ trong túi rồi mới quyết định có mang thêm cho người bạn không.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "banana",
+          "meaning": "quả chuối"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Depict this single concrete story moment: Mascot xếp đồ cạnh hộp đầy và nải chuối. Setting: Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot xếp đồ cạnh hộp đầy và nải chuối.",
+          "reason": "Establish the concrete problem and selected sense.",
+          "visible_text": [
+            {
+              "text": "banana",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete problem and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn mang một món ăn cho chuyến đi, nhưng chiếc hộp nhỏ đã đầy. Một quả chuối nằm ngay bên cạnh. Banana nghĩa là quả chuối. Bạn chọn một quả, tìm chỗ trong túi rồi mới quyết định có mang thêm cho người bạn không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot cầm một quả chuối cạnh túi mở.",
+      "purpose": "Use the first English model to advance the situation.",
+      "action": "Mascot cầm một quả chuối cạnh túi mở.",
+      "setting": "Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn nói: \"I'll take a banana.\" Tôi sẽ mang một quả chuối. A banana là một quả. Câu này gắn với lựa chọn bạn vừa làm: một quả cho mình, vừa phần trống còn lại của chiếc túi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "banana",
+          "meaning": "quả chuối"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot cầm một quả chuối cạnh túi mở. Setting: Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot cầm một quả chuối cạnh túi mở.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "I'll take a banana.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model to advance the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I'll take a banana.\" Tôi sẽ mang một quả chuối. A banana là một quả. Câu này gắn với lựa chọn bạn vừa làm: một quả cho mình, vừa phần trống còn lại của chiếc túi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot đưa quả chuối thứ hai cho bạn áo vàng.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot đưa quả chuối thứ hai cho bạn áo vàng.",
+      "setting": "Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Nhớ có người đi cùng, bạn đổi ý: \"We need two bananas.\" Chúng ta cần hai quả chuối. Hai quả thì bananas có thêm s. Bạn lấy thêm một quả, đặt sang túi của bạn ấy, thế là mỗi người có một phần.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "banana",
+          "meaning": "quả chuối"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot đưa quả chuối thứ hai cho bạn áo vàng. Setting: Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đưa quả chuối thứ hai cho bạn áo vàng.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "We need two bananas.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhớ có người đi cùng, bạn đổi ý: \"We need two bananas.\" Chúng ta cần hai quả chuối. Hai quả thì bananas có thêm s. Bạn lấy thêm một quả, đặt sang túi của bạn ấy, thế là mỗi người có một phần.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ hai quả chuối trên hai túi, câu gợi ý khuyết.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ hai quả chuối trên hai túi, câu gợi ý khuyết.",
+      "setting": "Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Đi hai người và muốn mỗi người một quả. Hoàn thành \"We need two...\" bằng dạng phù hợp của từ vừa học.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "banana",
+          "meaning": "quả chuối"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ hai quả chuối trên hai túi, câu gợi ý khuyết. Setting: Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ hai quả chuối trên hai túi, câu gợi ý khuyết.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "We need two...",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Đi hai người và muốn mỗi người một quả. Hoàn thành \"We need two...\" bằng dạng phù hợp của từ vừa học.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hai người đóng túi riêng, mỗi túi có một quả chuối.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Hai người đóng túi riêng, mỗi túi có một quả chuối.",
+      "setting": "Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"We need two bananas.\" Hai quả dùng bananas. Bạn chia mỗi người một quả rồi đóng túi. Chiếc hộp đã đầy không phải nhận thêm việc giữ tất cả đồ của cả hai.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "banana",
+          "meaning": "quả chuối"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Hai người đóng túi riêng, mỗi túi có một quả chuối. Setting: Bàn chuẩn bị chuyến đi ngắn, chuối và hộp đồ ăn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hai người đóng túi riêng, mỗi túi có một quả chuối.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "We need two bananas.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"We need two bananas.\" Hai quả dùng bananas. Bạn chia mỗi người một quả rồi đóng túi. Chiếc hộp đã đầy không phải nhận thêm việc giữ tất cả đồ của cả hai.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn muốn mang một món ăn cho chuyến đi, nhưng chiếc hộp nhỏ đã đầy. Một quả chuối nằm ngay bên cạnh. Banana nghĩa là quả chuối. Bạn chọn một quả, tìm chỗ trong túi rồi mới quyết định có mang thêm cho người bạn không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn muốn mang một món ăn cho chuyến đi, nhưng chiếc hộp nhỏ đã đầy. Một quả chuối nằm ngay bên cạnh. Banana nghĩa là quả chuối. Bạn chọn một quả, tìm chỗ trong túi rồi mới quyết định có mang thêm cho người bạn không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I'll take a banana.\" Tôi sẽ mang một quả chuối. A banana là một quả. Câu này gắn với lựa chọn bạn vừa làm: một quả cho mình, vừa phần trống còn lại của chiếc túi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I'll take a banana.\" Tôi sẽ mang một quả chuối. A banana là một quả. Câu này gắn với lựa chọn bạn vừa làm: một quả cho mình, vừa phần trống còn lại của chiếc túi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Nhớ có người đi cùng, bạn đổi ý: \"We need two bananas.\" Chúng ta cần hai quả chuối. Hai quả thì bananas có thêm s. Bạn lấy thêm một quả, đặt sang túi của bạn ấy, thế là mỗi người có một phần."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Đi hai người và muốn mỗi người một quả. Hoàn thành \"We need two...\" bằng dạng phù hợp của từ vừa học."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"We need two bananas.\" Hai quả dùng bananas. Bạn chia mỗi người một quả rồi đóng túi. Chiếc hộp đã đầy không phải nhận thêm việc giữ tất cả đồ của cả hai."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete problem and selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Chọn chuối cho chuyến đi → một quả → hai quả → chọn a → cất gọn.. Next visual event: Mascot cầm một quả chuối cạnh túi mở."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model to advance the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Chọn chuối cho chuyến đi → một quả → hai quả → chọn a → cất gọn.. Next visual event: Mascot đưa quả chuối thứ hai cho bạn áo vàng."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Chọn chuối cho chuyến đi → một quả → hai quả → chọn a → cất gọn.. Next visual event: Giữ hai quả chuối trên hai túi, câu gợi ý khuyết."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chọn chuối cho chuyến đi → một quả → hai quả → chọn a → cất gọn.. Next visual event: Hai người đóng túi riêng, mỗi túi có một quả chuối."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chọn chuối cho chuyến đi → một quả → hai quả → chọn a → cất gọn.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}
