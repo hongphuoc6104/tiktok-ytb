@@ -103,3 +103,7 @@ Video và môi trường chạy nằm local, không được đưa lên GitHub. 
 ## Hệ thống đạo diễn
 
 Xem [hệ thống đạo diễn](sys/docs/director-system.md), [kế hoạch nâng cấp](sys/docs/director-upgrade-plan.md) và [khảo sát có bằng chứng](sys/reports/director-research-20260924/bao-cao.md). Bốn skill đạo diễn làm việc trong ba phần hiện có. Khi Python hệ thống thiếu phụ thuộc, dùng `sys/.venv/bin/python pilot.py ...` từ gốc hoặc `.venv/bin/python pilot.py ...` trong `sys/`.
+
+## Tích hợp âm thanh Colab T4
+
+Xem [hướng dẫn Colab TTS](sys/docs/colab-tts.md). Giữ mẫu giọng Minh Quân Pro/Alba, thử mô hình OmniVoice; ảnh có thể chạy song song khi bật chế độ Colab. Mặc định chưa bật trước khi đo và nghe mẫu thật.

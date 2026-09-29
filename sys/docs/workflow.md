@@ -12,6 +12,10 @@ Các module control/images/audio/render vẫn là bước kỹ thuật nội b�
 
 `workflow.STAGES['media']` chạy audio trước images: giọng đọc chạy local, miễn phí, đo được thời lượng thật, nên kịch bản lệch khoảng thời lượng hỏng ở bước audio trước khi tốn credit Flow cho ảnh. Trong `Pilot.gate`, hai module audio và images vẫn độc lập để `flow-login`/`flow-preflight` dùng được bất cứ lúc nào; chỉ thứ tự trên đường sản xuất do STAGES quyết định.
 
+## Tùy chọn Colab T4 đang kiểm chứng
+
+Theo yêu cầu cập nhật ngày 29/09/2026, có đường `colab_tts`: dùng mô hình khác với mẫu giọng Minh Quân Pro/Alba hiện tại, giữ tốc độ và khoảng nghỉ. Khi `enabled=true` và `parallel_images=true`, audio trên T4 và ảnh Flow tại máy chạy đồng thời sau duyệt content. Chỉ đo nhịp, tạo phụ đề cuối và review media khi cả hai xong. Chế độ local giữ thứ tự audio trước ảnh. Xem [cài đặt, benchmark và khôi phục](colab-tts.md); hiện mặc định chưa bật vì chưa có nghiệm thu T4/giọng thật.
+
 ## Chế độ Kiểm tra
 
 ```bash

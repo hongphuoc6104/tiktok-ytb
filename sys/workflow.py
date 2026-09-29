@@ -162,6 +162,8 @@ def assets(p, job, stage):
                 files.append(read(p.path(job, ref['registration_journal']))['path'])
         audio = p.payload(job, 'audio')
         files += [audio['wav'], audio['srt']]
+        if audio.get('generation_report'):
+            files.append(audio['generation_report'])
         if audio.get('en'):
             files.append(audio['en']['wav'])
     if stage == 'video':
@@ -240,6 +242,36 @@ def scene_image_lines(p, job, items):
     return lines
 
 
+def prepare_parallel_media(p, job):
+    """Independent DB connections; join both before validation/review or errors.
+
+    Completed modules survive failure of the other side. Re-entry resumes only
+    missing work; provider timeout reconciliation remains in the provider.
+    """
+    from concurrent.futures import ThreadPoolExecutor
+    from pilot import Pilot
+    def produce(module):
+        other = Pilot(p.root)
+        try:
+            while other.rows(job)[module]['state'] != 'approved':
+                if other.rows(job)[module]['state'] != 'awaiting_review':
+                    other.run(job, module)
+                accept_module(other, job, module)
+        finally:
+            other.db.close()
+    pending = [m for m in STAGES['media'] if p.rows(job)[m]['state'] != 'approved']
+    errors = []
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        futures = [(m, pool.submit(produce, m)) for m in pending]
+        for module, future in futures:
+            try:
+                future.result()
+            except Exception as ex:
+                errors.append(f'{module}: {ex}')
+    if errors:
+        raise Blocked('; '.join(errors))
+
+
 def prepare(p, job, stage):
     p.refresh(job)
     if stage not in STAGES:
@@ -252,21 +284,26 @@ def prepare(p, job, stage):
     existing = current(p, job, stage)
     if existing:
         return existing
-    for module in STAGES[stage]:
-        while p.rows(job)[module]['state'] != 'approved':
-            row = p.rows(job)[module]
-            if row['state'] != 'awaiting_review':
-                draft_path = p.job(job) / 'draft/content.json'
-                unchanged_rejected = module == 'content' and row['state'] == 'needs_changes' and row['envelope'] and draft_path.exists() and read(draft_path) == read(p.path(job,row['envelope']))['payload']
-                if module == 'content' and (not draft_path.exists() or unchanged_rejected):
-                    from scripts.agy_pipeline import generate
-                    generate(p, job)
+    remote = read(p.root / 'config.json').get('colab_tts', {})
+    parallel = stage == 'media' and remote.get('enabled') is True and remote.get('parallel_images') is True
+    if parallel:
+        prepare_parallel_media(p, job)
+    else:
+        for module in STAGES[stage]:
+            while p.rows(job)[module]['state'] != 'approved':
+                row = p.rows(job)[module]
+                if row['state'] != 'awaiting_review':
+                    draft_path = p.job(job) / 'draft/content.json'
+                    unchanged_rejected = module == 'content' and row['state'] == 'needs_changes' and row['envelope'] and draft_path.exists() and read(draft_path) == read(p.path(job,row['envelope']))['payload']
+                    if module == 'content' and (not draft_path.exists() or unchanged_rejected):
+                        from scripts.agy_pipeline import generate
+                        generate(p, job)
+                    else:
+                        p.run(job, module)
+                if module in ('images', 'audio'):
+                    accept_module(p, job, module)
                 else:
-                    p.run(job, module)
-            if module in ('images', 'audio'):
-                accept_module(p, job, module)
-            else:
-                break
+                    break
     for module in STAGES[stage]:
         p.validate(job, module)
     revision = 1 + max([int(x.name) for x in (p.job(job) / 'reviews' / stage).glob('*') if x.is_dir() and x.name.isdigit()], default=0)
@@ -601,7 +638,7 @@ def batch(p, jobs):
             entry = {'job': job, 'needs_attention': True, 'error': str(ex)}
             result.append(entry)
             # These failures concern the shared provider, not just one script.
-            if any(word in str(ex).lower() for word in ('login', 'captcha', 'rate limit', 'preflight', 'agy_not_installed', 'agy_api_provider')):
+            if any(word in str(ex).lower() for word in ('login', 'captcha', 'rate limit', 'preflight', 'agy_not_installed', 'agy_api_provider', 'colab_')):
                 entry['queue_paused'] = True
                 break
     path = p.root / '.state' / 'batch-results' / f'{time.time_ns()}.json'

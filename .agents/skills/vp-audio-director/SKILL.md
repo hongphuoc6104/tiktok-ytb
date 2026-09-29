@@ -28,3 +28,6 @@ Narration and the model sentence lead. Silence is a legitimate choice. Propose a
 Measure levels for technical defects; do not label speech robotic from low loudness range or call a universal LUFS value a platform rule. Audition on headphones and a small speaker when available. If listening is unavailable, return unsupported for auditory judgments and keep that gate open.
 
 Report observations in Vietnamese, with the heard/intended phrase, timestamp and proposed retake. Sources: [source notes](../vp-content/references/director-sources.md).
+
+
+Colab T4 development exception requested on 2026-09-29: when `colab_tts.enabled` and `parallel_images` are true, remote audio and local Flow images may run concurrently after content approval. Keep Minh Quân Pro and Alba references and the configured speaking rates; do not substitute the experimental branch's voices. Final timings, captions and the media gate still require measured WAVs and complete images. See `sys/docs/colab-tts.md` from the repository root. Local mode remains audio-first. GPU throughput, voice identity and improved quality require actual benchmark/listening evidence. Never resubmit ambiguous Colab work; collect first and release the dedicated session after the batch.
