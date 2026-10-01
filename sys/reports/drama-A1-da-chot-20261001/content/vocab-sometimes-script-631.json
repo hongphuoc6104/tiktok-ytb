@@ -1,0 +1,591 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "411f06a607d248911b7bf60eca7ba15444d2051a578a38d77b3b0f68fdf03d44",
+  "topic": "Học từ vựng tiếng Anh SOMETIMES (trạng từ: thỉnh thoảng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SOMETIMES",
+    "Làm rõ nghĩa lõi \"thỉnh thoảng\" (trạng từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SOMETIMES, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SOMETIMES, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Linh",
+      "appearance": "A minimal stick figure with a round white head and a simple yellow apron line.",
+      "outfit": "Exactly one plain yellow short-sleeve shirt and minimal navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Lịch trình quá tải",
+      "purpose": "Establish the exhausted companion overwhelmed by excessive social commitments.",
+      "action": "A stick figure in a yellow shirt leans weary over a desk littered with planner notes and party invitations beside the canonical mascot in pale-blue shirt.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Linh cứ thêm tên vào lịch hẹn. Minh rủ cô ở lại nhà một chiều: \"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh ngạc nhiên, ngừng viết.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sometimes",
+          "meaning": "thỉnh thoảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "A stick figure in a yellow shirt leans weary over a desk littered with planner notes and party invitations beside the canonical mascot in pale-blue shirt. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "A stick figure in a yellow shirt leans weary over a desk littered with planner notes and party invitations beside the canonical mascot in pale-blue shirt.",
+          "reason": "Establish the exhausted companion overwhelmed by excessive social commitments.",
+          "visible_text": [
+            {
+              "text": "I sometimes stay at home.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the exhausted companion overwhelmed by excessive social commitments.",
+          "anchor": {
+            "vi": {
+              "quote": "Linh cứ thêm tên vào lịch hẹn. Minh rủ cô ở lại nhà một chiều: \"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh ngạc nhiên, ngừng viết.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the exhausted companion overwhelmed by excessive social commitments. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Khoảng lặng ở nhà",
+      "purpose": "Model the first English sentence with sometimes showing an alternative choice.",
+      "action": "Mascot and yellow-shirt companion talk across the table, closed notebook and a plain glass of water between them. No tea serving or implied therapy.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Cô tưởng cuối tuần nào Minh cũng đi chơi. Cậu kể có hôm ra ngoài, có hôm ở nhà. Sometimes nói thỉnh thoảng trong những dịp ấy, không phải mọi lần.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sometimes",
+          "meaning": "thỉnh thoảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot and yellow-shirt companion talk across the table, closed notebook and a plain glass of water between them. No tea serving or implied therapy. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and yellow-shirt companion talk across the table, closed notebook and a plain glass of water between them. No tea serving or implied therapy.",
+          "reason": "Model the first English sentence with sometimes showing an alternative choice.",
+          "visible_text": [
+            {
+              "text": "sometimes · thỉnh thoảng",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model the first English sentence with sometimes showing an alternative choice.",
+          "anchor": {
+            "vi": {
+              "quote": "Cô tưởng cuối tuần nào Minh cũng đi chơi. Cậu kể có hôm ra ngoài, có hôm ở nhà. Sometimes nói thỉnh thoảng trong những dịp ấy, không phải mọi lần.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Model the first English sentence with sometimes showing an alternative choice. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Dịp thảnh thơi",
+      "purpose": "Clarify sometimes as denoting occasional occurrence rather than a rigid rule.",
+      "action": "Mascot shows one photograph of a previous shared home meal, companion looks from photo to her open planner. Planner has abstract non-legible marks only.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Linh ngại mình từ chối thì bạn sẽ buồn. Minh bảo cuộc hẹn có thể là một bữa ăn ở nhà. Cậu đưa cô xem món hai người từng làm cùng.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sometimes",
+          "meaning": "thỉnh thoảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot shows one photograph of a previous shared home meal, companion looks from photo to her open planner. Planner has abstract non-legible marks only. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot shows one photograph of a previous shared home meal, companion looks from photo to her open planner. Planner has abstract non-legible marks only.",
+          "reason": "Clarify sometimes as denoting occasional occurrence rather than a rigid rule.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify sometimes as denoting occasional occurrence rather than a rigid rule.",
+          "anchor": {
+            "vi": {
+              "quote": "Linh ngại mình từ chối thì bạn sẽ buồn. Minh bảo cuộc hẹn có thể là một bữa ăn ở nhà. Cậu đưa cô xem món hai người từng làm cùng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify sometimes as denoting occasional occurrence rather than a rigid rule. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nấu ăn cùng nhau",
+      "purpose": "Deliver the second English model sentence with sometimes about shared cooking.",
+      "action": "The canonical mascot in pale-blue shirt indicates a wicker basket of fresh green herbs on the kitchen counter.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"We sometimes cook together.\" Chúng tôi thỉnh thoảng nấu cùng nhau. Minh nhắc những buổi như vậy, không hẹn tuần nào cũng nấu. Linh chọn để trống chiều chủ nhật này.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sometimes",
+          "meaning": "thỉnh thoảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "The canonical mascot in pale-blue shirt indicates a wicker basket of fresh green herbs on the kitchen counter. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The canonical mascot in pale-blue shirt indicates a wicker basket of fresh green herbs on the kitchen counter.",
+          "reason": "Deliver the second English model sentence with sometimes about shared cooking.",
+          "visible_text": [
+            {
+              "text": "We sometimes cook together.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Deliver the second English model sentence with sometimes about shared cooking.",
+          "anchor": {
+            "vi": {
+              "quote": "\"We sometimes cook together.\" Chúng tôi thỉnh thoảng nấu cùng nhau. Minh nhắc những buổi như vậy, không hẹn tuần nào cũng nấu. Linh chọn để trống chiều chủ nhật này.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the second English model sentence with sometimes about shared cooking. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kể về ngày nghỉ",
+      "purpose": "Prompt the learner to reproduce the first sentence using sometimes.",
+      "action": "The companion in yellow shirt closes the planner notebook with a relaxed gesture, looking forward.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Linh muốn nói mình cũng có lúc chọn ở nhà, không phải cuối tuần nào cũng đi. Bạn nói giúp cô câu tôi thỉnh thoảng ở nhà nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sometimes",
+          "meaning": "thỉnh thoảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The companion in yellow shirt closes the planner notebook with a relaxed gesture, looking forward. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The companion in yellow shirt closes the planner notebook with a relaxed gesture, looking forward.",
+          "reason": "Prompt the learner to reproduce the first sentence using sometimes.",
+          "visible_text": [
+            {
+              "text": "I ___ stay at home.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to reproduce the first sentence using sometimes.",
+          "anchor": {
+            "vi": {
+              "quote": "Linh muốn nói mình cũng có lúc chọn ở nhà, không phải cuối tuần nào cũng đi. Bạn nói giúp cô câu tôi thỉnh thoảng ở nhà nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to reproduce the first sentence using sometimes. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Bữa cơm ấm cúng",
+      "purpose": "Confirm target sentence and conclude warmly with peaceful home cooking.",
+      "action": "Yellow-shirt companion closes her planner and points to a simple meal photograph, mascot carries two plates toward a cleared table. No cooking instructions or chopping tools.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh cất lịch, nhận lời ăn cùng Minh chủ nhật. Cô tự chọn món, còn Minh nhận phần dọn bàn.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sometimes",
+          "meaning": "thỉnh thoảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Yellow-shirt companion closes her planner and points to a simple meal photograph, mascot carries two plates toward a cleared table. No cooking instructions or chopping tools. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Yellow-shirt companion closes her planner and points to a simple meal photograph, mascot carries two plates toward a cleared table. No cooking instructions or chopping tools.",
+          "reason": "Confirm target sentence and conclude warmly with peaceful home cooking.",
+          "visible_text": [
+            {
+              "text": "I sometimes stay at home.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm target sentence and conclude warmly with peaceful home cooking.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh cất lịch, nhận lời ăn cùng Minh chủ nhật. Cô tự chọn món, còn Minh nhận phần dọn bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm target sentence and conclude warmly with peaceful home cooking. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Linh cứ thêm tên vào lịch hẹn. Minh rủ cô ở lại nhà một chiều: \"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh ngạc nhiên, ngừng viết."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Linh cứ thêm tên vào lịch hẹn. Minh rủ cô ở lại nhà một chiều: \"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh ngạc nhiên, ngừng viết."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Linh cứ thêm tên vào lịch hẹn. Minh rủ cô ở lại nhà một chiều: \"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh ngạc nhiên, ngừng viết."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Cô tưởng cuối tuần nào Minh cũng đi chơi. Cậu kể có hôm ra ngoài, có hôm ở nhà. Sometimes nói thỉnh thoảng trong những dịp ấy, không phải mọi lần."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Linh ngại mình từ chối thì bạn sẽ buồn. Minh bảo cuộc hẹn có thể là một bữa ăn ở nhà. Cậu đưa cô xem món hai người từng làm cùng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"We sometimes cook together.\" Chúng tôi thỉnh thoảng nấu cùng nhau. Minh nhắc những buổi như vậy, không hẹn tuần nào cũng nấu. Linh chọn để trống chiều chủ nhật này."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"We sometimes cook together.\" Chúng tôi thỉnh thoảng nấu cùng nhau. Minh nhắc những buổi như vậy, không hẹn tuần nào cũng nấu. Linh chọn để trống chiều chủ nhật này."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Linh muốn nói mình cũng có lúc chọn ở nhà, không phải cuối tuần nào cũng đi. Bạn nói giúp cô câu tôi thỉnh thoảng ở nhà nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Linh muốn nói mình cũng có lúc chọn ở nhà, không phải cuối tuần nào cũng đi. Bạn nói giúp cô câu tôi thỉnh thoảng ở nhà nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh cất lịch, nhận lời ăn cùng Minh chủ nhật. Cô tự chọn món, còn Minh nhận phần dọn bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh cất lịch, nhận lời ăn cùng Minh chủ nhật. Cô tự chọn món, còn Minh nhận phần dọn bàn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I sometimes stay at home.\" Tôi thỉnh thoảng ở nhà. Linh cất lịch, nhận lời ăn cùng Minh chủ nhật. Cô tự chọn món, còn Minh nhận phần dọn bàn."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the exhausted companion overwhelmed by excessive social commitments.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the exhausted companion overwhelmed by excessive social commitments. Next causal state: Mascot and yellow-shirt companion talk across the table, closed notebook and a plain glass of water between them. No tea serving or implied therapy."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the first English sentence with sometimes showing an alternative choice.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Model the first English sentence with sometimes showing an alternative choice. Next causal state: Mascot shows one photograph of a previous shared home meal, companion looks from photo to her open planner. Planner has abstract non-legible marks only."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify sometimes as denoting occasional occurrence rather than a rigid rule.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Clarify sometimes as denoting occasional occurrence rather than a rigid rule. Next causal state: The canonical mascot in pale-blue shirt indicates a wicker basket of fresh green herbs on the kitchen counter."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Deliver the second English model sentence with sometimes about shared cooking.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Deliver the second English model sentence with sometimes about shared cooking. Next causal state: The companion in yellow shirt closes the planner notebook with a relaxed gesture, looking forward."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to reproduce the first sentence using sometimes.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to reproduce the first sentence using sometimes. Next causal state: Yellow-shirt companion closes her planner and points to a simple meal photograph, mascot carries two plates toward a cleared table. No cooking instructions or chopping tools."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm target sentence and conclude warmly with peaceful home cooking.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm target sentence and conclude warmly with peaceful home cooking. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18129",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Linh mệt mỏi vì lịch hẹn dày đặc cuối tuần. Minh gợi ý những khoảng nghỉ thỉnh thoảng ở nhà và nấu ăn cùng nhau để lấy lại cân bằng. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "19585",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Linh mệt mỏi vì lịch hẹn dày đặc cuối tuần. Minh gợi ý những khoảng nghỉ thỉnh thoảng ở nhà và nấu ăn cùng nhau để lấy lại cân bằng. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

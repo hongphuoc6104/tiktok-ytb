@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "fdf0499612dc2bcf6d302b348c95e38a26d260edf318c5c4f25e70385ffe8d0d",
+  "topic": "Học từ vựng tiếng Anh PASSPORT (danh từ: hộ chiếu) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ PASSPORT",
+    "Làm rõ nghĩa lõi \"hộ chiếu\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng PASSPORT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại PASSPORT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Anh Lâm",
+      "appearance": "Minimal ink stick figure with a round white head outlined in black, simple black stick limbs.",
+      "outfit": "Single olive green short-sleeve shirt and dark trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Băng ghế sáng sớm",
+      "purpose": "Establish a quiet departure context and introduce the polite request containing the target noun.",
+      "action": "On a long waiting bench in early morning light, the older brother in an olive shirt sits beside the pale-blue shirt mascot, holding out an open palm with a concerned expression.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Băng ghế chờ vắng lặng lúc sớm. Anh Lâm ngồi cạnh tôi, nét mặt đầy âu lo trước chuyến đi xa. Anh sợ tôi quên giấy tờ nên hỏi: \"May I see your passport?\" Anh xem hộ chiếu của em được không?",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "passport",
+          "meaning": "hộ chiếu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "On a long waiting bench in early morning light, the older brother in an olive shirt sits beside the pale-blue shirt mascot, holding out an open palm with a concerned expression. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "On a long waiting bench in early morning light, the older brother in an olive shirt sits beside the pale-blue shirt mascot, holding out an open palm with a concerned expression.",
+          "reason": "Establish a quiet departure context and introduce the polite request containing the target noun.",
+          "visible_text": [
+            {
+              "text": "May I see your passport?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish a quiet departure context and introduce the polite request containing the target noun.",
+          "anchor": {
+            "vi": {
+              "quote": "Băng ghế chờ vắng lặng lúc sớm. Anh Lâm ngồi cạnh tôi, nét mặt đầy âu lo trước chuyến đi xa. Anh sợ tôi quên giấy tờ nên hỏi: \"May I see your passport?\" Anh xem hộ chiếu của em được không?",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish a quiet departure context and introduce the polite request containing the target noun. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Trao cuốn sổ xanh",
+      "purpose": "Present the second model sentence handing over the passport and show brotherly care in smoothing the pages.",
+      "action": "Mascot takes blue passport booklet from plain small crossbody bag and gives it to olive-shirt brother, who gently flattens bent page corner. No readable personal data.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi mở ngăn túi trước ngực, lấy cuốn sổ bìa xanh đưa cho anh: \"Here's my passport.\" Hộ chiếu của em đây. Anh mở từng trang rồi miết phẳng mép giấy bị gập.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "passport",
+          "meaning": "hộ chiếu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot takes blue passport booklet from plain small crossbody bag and gives it to olive-shirt brother, who gently flattens bent page corner. No readable personal data. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot takes blue passport booklet from plain small crossbody bag and gives it to olive-shirt brother, who gently flattens bent page corner. No readable personal data.",
+          "reason": "Present the second model sentence handing over the passport and show brotherly care in smoothing the pages.",
+          "visible_text": [
+            {
+              "text": "passport · hộ chiếu",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Present the second model sentence handing over the passport and show brotherly care in smoothing the pages.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi mở ngăn túi trước ngực, lấy cuốn sổ bìa xanh đưa cho anh: \"Here's my passport.\" Hộ chiếu của em đây. Anh mở từng trang rồi miết phẳng mép giấy bị gập.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Present the second model sentence handing over the passport and show brotherly care in smoothing the pages. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Lời dặn dò",
+      "purpose": "Depict the protective gesture of tucking the boarding pass inside the booklet.",
+      "action": "The brother in the olive shirt inserts a boarding slip between the passport pages and presses the booklet securely back into the mascot's hands.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Anh cẩn thận kẹp tấm vé vào cuốn sổ rồi trao lại. Anh dặn tới nơi nhớ gọi về. Tôi bảo em nhớ rồi, nhưng anh vẫn nhìn ngăn túi, đợi tôi tự cất hộ chiếu vào đúng chỗ.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "passport",
+          "meaning": "hộ chiếu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The brother in the olive shirt inserts a boarding slip between the passport pages and presses the booklet securely back into the mascot's hands. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The brother in the olive shirt inserts a boarding slip between the passport pages and presses the booklet securely back into the mascot's hands.",
+          "reason": "Depict the protective gesture of tucking the boarding pass inside the booklet.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Depict the protective gesture of tucking the boarding pass inside the booklet.",
+          "anchor": {
+            "vi": {
+              "quote": "Anh cẩn thận kẹp tấm vé vào cuốn sổ rồi trao lại. Anh dặn tới nơi nhớ gọi về. Tôi bảo em nhớ rồi, nhưng anh vẫn nhìn ngăn túi, đợi tôi tự cất hộ chiếu vào đúng chỗ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Depict the protective gesture of tucking the boarding pass inside the booklet. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Luyện câu đưa hộ chiếu",
+      "purpose": "Prompt the learner to reproduce the response handing over the passport.",
+      "action": "Medium shot of the pale-blue shirt mascot holding out the blue booklet once more toward the older brother.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn đưa lại cuốn hộ chiếu để anh yên lòng trước giờ chia tay. Bạn nói giúp tôi câu này bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "passport",
+          "meaning": "hộ chiếu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Medium shot of the pale-blue shirt mascot holding out the blue booklet once more toward the older brother. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the pale-blue shirt mascot holding out the blue booklet once more toward the older brother.",
+          "reason": "Prompt the learner to reproduce the response handing over the passport.",
+          "visible_text": [
+            {
+              "text": "Here's my ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to reproduce the response handing over the passport.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn đưa lại cuốn hộ chiếu để anh yên lòng trước giờ chia tay. Bạn nói giúp tôi câu này bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to reproduce the response handing over the passport. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Bước qua cửa khởi hành",
+      "purpose": "Confirm the spoken response and conclude on an affectionate farewell.",
+      "action": "The older brother pats the mascot's shoulder with a reassuring smile as the mascot steps toward the departure corridor holding the passport safely.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Here's my passport.\" Hộ chiếu của em đây. Anh khép cuốn sổ rồi đưa lại cho tôi, không kiểm tra thêm nữa. Tôi tự kéo khóa túi. Anh vỗ nhẹ vai tôi, đứng đợi tới khi tôi đi khuất.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "passport",
+          "meaning": "hộ chiếu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The older brother pats the mascot's shoulder with a reassuring smile as the mascot steps toward the departure corridor holding the passport safely. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The older brother pats the mascot's shoulder with a reassuring smile as the mascot steps toward the departure corridor holding the passport safely.",
+          "reason": "Confirm the spoken response and conclude on an affectionate farewell.",
+          "visible_text": [
+            {
+              "text": "Here's my passport.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm the spoken response and conclude on an affectionate farewell.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Here's my passport.\" Hộ chiếu của em đây. Anh khép cuốn sổ rồi đưa lại cho tôi, không kiểm tra thêm nữa. Tôi tự kéo khóa túi. Anh vỗ nhẹ vai tôi, đứng đợi tới khi tôi đi khuất.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the spoken response and conclude on an affectionate farewell. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Băng ghế chờ vắng lặng lúc sớm. Anh Lâm ngồi cạnh tôi, nét mặt đầy âu lo trước chuyến đi xa. Anh sợ tôi quên giấy tờ nên hỏi: \"May I see your passport?\" Anh xem hộ chiếu của em được không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Băng ghế chờ vắng lặng lúc sớm. Anh Lâm ngồi cạnh tôi, nét mặt đầy âu lo trước chuyến đi xa. Anh sợ tôi quên giấy tờ nên hỏi: \"May I see your passport?\" Anh xem hộ chiếu của em được không?"
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Băng ghế chờ vắng lặng lúc sớm. Anh Lâm ngồi cạnh tôi, nét mặt đầy âu lo trước chuyến đi xa. Anh sợ tôi quên giấy tờ nên hỏi: \"May I see your passport?\" Anh xem hộ chiếu của em được không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi mở ngăn túi trước ngực, lấy cuốn sổ bìa xanh đưa cho anh: \"Here's my passport.\" Hộ chiếu của em đây. Anh mở từng trang rồi miết phẳng mép giấy bị gập."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi mở ngăn túi trước ngực, lấy cuốn sổ bìa xanh đưa cho anh: \"Here's my passport.\" Hộ chiếu của em đây. Anh mở từng trang rồi miết phẳng mép giấy bị gập."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Anh cẩn thận kẹp tấm vé vào cuốn sổ rồi trao lại. Anh dặn tới nơi nhớ gọi về. Tôi bảo em nhớ rồi, nhưng anh vẫn nhìn ngăn túi, đợi tôi tự cất hộ chiếu vào đúng chỗ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn đưa lại cuốn hộ chiếu để anh yên lòng trước giờ chia tay. Bạn nói giúp tôi câu này bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn đưa lại cuốn hộ chiếu để anh yên lòng trước giờ chia tay. Bạn nói giúp tôi câu này bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Here's my passport.\" Hộ chiếu của em đây. Anh khép cuốn sổ rồi đưa lại cho tôi, không kiểm tra thêm nữa. Tôi tự kéo khóa túi. Anh vỗ nhẹ vai tôi, đứng đợi tới khi tôi đi khuất."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Here's my passport.\" Hộ chiếu của em đây. Anh khép cuốn sổ rồi đưa lại cho tôi, không kiểm tra thêm nữa. Tôi tự kéo khóa túi. Anh vỗ nhẹ vai tôi, đứng đợi tới khi tôi đi khuất."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Here's my passport.\" Hộ chiếu của em đây. Anh khép cuốn sổ rồi đưa lại cho tôi, không kiểm tra thêm nữa. Tôi tự kéo khóa túi. Anh vỗ nhẹ vai tôi, đứng đợi tới khi tôi đi khuất."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish a quiet departure context and introduce the polite request containing the target noun.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish a quiet departure context and introduce the polite request containing the target noun. Next causal state: Mascot takes blue passport booklet from plain small crossbody bag and gives it to olive-shirt brother, who gently flattens bent page corner. No readable personal data."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Present the second model sentence handing over the passport and show brotherly care in smoothing the pages.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Present the second model sentence handing over the passport and show brotherly care in smoothing the pages. Next causal state: The brother in the olive shirt inserts a boarding slip between the passport pages and presses the booklet securely back into the mascot's hands."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Depict the protective gesture of tucking the boarding pass inside the booklet.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Depict the protective gesture of tucking the boarding pass inside the booklet. Next causal state: Medium shot of the pale-blue shirt mascot holding out the blue booklet once more toward the older brother."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to reproduce the response handing over the passport.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to reproduce the response handing over the passport. Next causal state: The older brother pats the mascot's shoulder with a reassuring smile as the mascot steps toward the departure corridor holding the passport safely."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm the spoken response and conclude on an affectionate farewell.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the spoken response and conclude on an affectionate farewell. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19326",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Trước chuyến bay xa xứ, người anh cẩn thận kiểm tra lại từng trang hộ chiếu cho đứa em, biến nỗi âu lo thành sự vững tâm nơi ngưỡng cửa khởi hành. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

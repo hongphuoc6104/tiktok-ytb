@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "54857af53e01b8775f5469f20321b7fd5363e26747587bf9b62292991937b97e",
+  "topic": "Học từ vựng tiếng Anh SPEAK (động từ: nói, phát biểu) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SPEAK",
+    "Làm rõ nghĩa lõi \"nói, phát biểu\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SPEAK, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SPEAK, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Tom",
+      "appearance": "Minimal stick figure with a round white navy-outlined head, solid black oval eyes, and minimal stick limbs.",
+      "outfit": "Exactly one plain beige short-sleeve shirt, khaki hat, small backpack and minimal navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Vị khách bối rối",
+      "purpose": "Establish a realistic language barrier in an everyday public transit setting.",
+      "action": "A bus terminal shed. A foreign traveler stick figure wearing a khaki hat and backpack looks around anxiously holding a paper ticket, while Minh watches from the desk.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Khách cầm vé, nhìn hai chiếc xe. Minh đang trực ở bến. Cậu bước tới hỏi: \"Do you speak English?\" Bạn có nói tiếng Anh không?",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "speak",
+          "meaning": "nói, phát biểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "A bus terminal shed. A foreign traveler stick figure wearing a khaki hat and backpack looks around anxiously holding a paper ticket, while Minh watches from the desk. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "A bus terminal shed. A foreign traveler stick figure wearing a khaki hat and backpack looks around anxiously holding a paper ticket, while Minh watches from the desk.",
+          "reason": "Establish a realistic language barrier in an everyday public transit setting.",
+          "visible_text": [
+            {
+              "text": "Do you speak English?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish a realistic language barrier in an everyday public transit setting.",
+          "anchor": {
+            "vi": {
+              "quote": "Khách cầm vé, nhìn hai chiếc xe. Minh đang trực ở bến. Cậu bước tới hỏi: \"Do you speak English?\" Bạn có nói tiếng Anh không?",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish a realistic language barrier in an everyday public transit setting. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời chào hỏi thăm",
+      "purpose": "Introduce the first model sentence inquiring about language capability.",
+      "action": "Minh approaches with a polite, welcoming wave as the traveler looks relieved and gestures back.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Vị khách gật đầu, đưa vé cho Minh. Hai người dùng tiếng Anh để hiểu nhau. Với speak ở đây, Minh đang hỏi người khách có nói được thứ tiếng ấy không.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "speak",
+          "meaning": "nói, phát biểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Minh approaches with a polite, welcoming wave as the traveler looks relieved and gestures back. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Minh approaches with a polite, welcoming wave as the traveler looks relieved and gestures back.",
+          "reason": "Introduce the first model sentence inquiring about language capability.",
+          "visible_text": [
+            {
+              "text": "speak · nói, phát biểu",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first model sentence inquiring about language capability.",
+          "anchor": {
+            "vi": {
+              "quote": "Vị khách gật đầu, đưa vé cho Minh. Hai người dùng tiếng Anh để hiểu nhau. Với speak ở đây, Minh đang hỏi người khách có nói được thứ tiếng ấy không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first model sentence inquiring about language capability. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Cầu nối ngôn ngữ",
+      "purpose": "Explain speak as the active use of a spoken language to establish connection.",
+      "action": "Mascot examines a plain bus ticket with abstract non-letter marks while beige-shirt traveler patiently waits beside him. Both blue and grey buses remain visible through shelter.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Minh chỉ đọc được vài câu đơn giản. Thấy khách chờ, cậu hơi ngập ngừng rồi lấy chiếc vé xem điểm đến. Khách kiên nhẫn đứng cạnh, không giục.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "speak",
+          "meaning": "nói, phát biểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot examines a plain bus ticket with abstract non-letter marks while beige-shirt traveler patiently waits beside him. Both blue and grey buses remain visible through shelter. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot examines a plain bus ticket with abstract non-letter marks while beige-shirt traveler patiently waits beside him. Both blue and grey buses remain visible through shelter.",
+          "reason": "Explain speak as the active use of a spoken language to establish connection.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Explain speak as the active use of a spoken language to establish connection.",
+          "anchor": {
+            "vi": {
+              "quote": "Minh chỉ đọc được vài câu đơn giản. Thấy khách chờ, cậu hơi ngập ngừng rồi lấy chiếc vé xem điểm đến. Khách kiên nhẫn đứng cạnh, không giục.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain speak as the active use of a spoken language to establish connection. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chỉ đường đúng chuyến",
+      "purpose": "Introduce the second model sentence expressing modest language ability.",
+      "action": "Mascot points toward the blue bus beside the grey one, traveler follows the direction. No numbers, destinations or readable bus labels.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I speak a little English.\" Tôi nói được một chút tiếng Anh. Minh báo trước với khách rồi chỉ chiếc xe xanh. Khách nhìn theo, gật đầu xác nhận.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "speak",
+          "meaning": "nói, phát biểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot points toward the blue bus beside the grey one, traveler follows the direction. No numbers, destinations or readable bus labels. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points toward the blue bus beside the grey one, traveler follows the direction. No numbers, destinations or readable bus labels.",
+          "reason": "Introduce the second model sentence expressing modest language ability.",
+          "visible_text": [
+            {
+              "text": "I speak a little English.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Introduce the second model sentence expressing modest language ability.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I speak a little English.\" Tôi nói được một chút tiếng Anh. Minh báo trước với khách rồi chỉ chiếc xe xanh. Khách nhìn theo, gật đầu xác nhận.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second model sentence expressing modest language ability. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Sẵn lòng trợ giúp",
+      "purpose": "Cue learner retrieval of the target verb within the modest self-assessment.",
+      "action": "Minh turns slightly toward the viewer with an open, helpful gesture.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Khách hỏi thêm, Minh muốn nói rõ mình chỉ biết một chút tiếng Anh. Bạn nói giúp cậu câu tôi nói được một chút tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "speak",
+          "meaning": "nói, phát biểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Minh turns slightly toward the viewer with an open, helpful gesture. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Minh turns slightly toward the viewer with an open, helpful gesture.",
+          "reason": "Cue learner retrieval of the target verb within the modest self-assessment.",
+          "visible_text": [
+            {
+              "text": "I ___ a little English.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Cue learner retrieval of the target verb within the modest self-assessment.",
+          "anchor": {
+            "vi": {
+              "quote": "Khách hỏi thêm, Minh muốn nói rõ mình chỉ biết một chút tiếng Anh. Bạn nói giúp cậu câu tôi nói được một chút tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Cue learner retrieval of the target verb within the modest self-assessment. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Chuyến xe khởi hành",
+      "purpose": "Provide feedback and resolve the encounter with successful departure and relief.",
+      "action": "Traveler waits at the open blue bus door, waving thanks toward mascot at the nearby counter. Bus is stationary; no crowd or readable signs.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I speak a little English.\" Tôi nói được một chút tiếng Anh. Khách chậm lại khi hỏi. Minh tìm được chỗ lên xe cho khách, rồi quay về quầy trực.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "speak",
+          "meaning": "nói, phát biểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Traveler waits at the open blue bus door, waving thanks toward mascot at the nearby counter. Bus is stationary; no crowd or readable signs. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Traveler waits at the open blue bus door, waving thanks toward mascot at the nearby counter. Bus is stationary; no crowd or readable signs.",
+          "reason": "Provide feedback and resolve the encounter with successful departure and relief.",
+          "visible_text": [
+            {
+              "text": "I speak a little English.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Provide feedback and resolve the encounter with successful departure and relief.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I speak a little English.\" Tôi nói được một chút tiếng Anh. Khách chậm lại khi hỏi. Minh tìm được chỗ lên xe cho khách, rồi quay về quầy trực.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide feedback and resolve the encounter with successful departure and relief. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Khách cầm vé, nhìn hai chiếc xe. Minh đang trực ở bến. Cậu bước tới hỏi: \"Do you speak English?\" Bạn có nói tiếng Anh không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Khách cầm vé, nhìn hai chiếc xe. Minh đang trực ở bến. Cậu bước tới hỏi: \"Do you speak English?\" Bạn có nói tiếng Anh không?"
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Khách cầm vé, nhìn hai chiếc xe. Minh đang trực ở bến. Cậu bước tới hỏi: \"Do you speak English?\" Bạn có nói tiếng Anh không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Vị khách gật đầu, đưa vé cho Minh. Hai người dùng tiếng Anh để hiểu nhau. Với speak ở đây, Minh đang hỏi người khách có nói được thứ tiếng ấy không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Minh chỉ đọc được vài câu đơn giản. Thấy khách chờ, cậu hơi ngập ngừng rồi lấy chiếc vé xem điểm đến. Khách kiên nhẫn đứng cạnh, không giục."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"I speak a little English.\" Tôi nói được một chút tiếng Anh. Minh báo trước với khách rồi chỉ chiếc xe xanh. Khách nhìn theo, gật đầu xác nhận."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"I speak a little English.\" Tôi nói được một chút tiếng Anh. Minh báo trước với khách rồi chỉ chiếc xe xanh. Khách nhìn theo, gật đầu xác nhận."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Khách hỏi thêm, Minh muốn nói rõ mình chỉ biết một chút tiếng Anh. Bạn nói giúp cậu câu tôi nói được một chút tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Khách hỏi thêm, Minh muốn nói rõ mình chỉ biết một chút tiếng Anh. Bạn nói giúp cậu câu tôi nói được một chút tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"I speak a little English.\" Tôi nói được một chút tiếng Anh. Khách chậm lại khi hỏi. Minh tìm được chỗ lên xe cho khách, rồi quay về quầy trực."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"I speak a little English.\" Tôi nói được một chút tiếng Anh. Khách chậm lại khi hỏi. Minh tìm được chỗ lên xe cho khách, rồi quay về quầy trực."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I speak a little English.\" Tôi nói được một chút tiếng Anh. Khách chậm lại khi hỏi. Minh tìm được chỗ lên xe cho khách, rồi quay về quầy trực."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish a realistic language barrier in an everyday public transit setting.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish a realistic language barrier in an everyday public transit setting. Next causal state: Minh approaches with a polite, welcoming wave as the traveler looks relieved and gestures back."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first model sentence inquiring about language capability.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first model sentence inquiring about language capability. Next causal state: Mascot examines a plain bus ticket with abstract non-letter marks while beige-shirt traveler patiently waits beside him. Both blue and grey buses remain visible through shelter."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Explain speak as the active use of a spoken language to establish connection.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Explain speak as the active use of a spoken language to establish connection. Next causal state: Mascot points toward the blue bus beside the grey one, traveler follows the direction. No numbers, destinations or readable bus labels."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Introduce the second model sentence expressing modest language ability.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second model sentence expressing modest language ability. Next causal state: Minh turns slightly toward the viewer with an open, helpful gesture."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Cue learner retrieval of the target verb within the modest self-assessment.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Cue learner retrieval of the target verb within the modest self-assessment. Next causal state: Traveler waits at the open blue bus door, waving thanks toward mascot at the nearby counter. Bus is stationary; no crowd or readable signs."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Provide feedback and resolve the encounter with successful departure and relief.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Provide feedback and resolve the encounter with successful departure and relief. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18049",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Tại bến xe buýt thị trấn, một vị khách ngoại quốc loay hoay vì không đọc được vé. Minh chủ động bước ra hỏi thăm bằng tiếng Anh và hướng dẫn tận tình, giúp vị khách kịp lên chuyến xe cuối về thành phố. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "19473",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tại bến xe buýt thị trấn, một vị khách ngoại quốc loay hoay vì không đọc được vé. Minh chủ động bước ra hỏi thăm bằng tiếng Anh và hướng dẫn tận tình, giúp vị khách kịp lên chuyến xe cuối về thành phố. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

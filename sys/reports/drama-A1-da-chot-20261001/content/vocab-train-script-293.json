@@ -1,0 +1,505 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "4171a682edd9b198c617f6028c092299761d5975feee929b214d9f0f4c1a34d7",
+  "topic": "Học từ vựng tiếng Anh TRAIN (danh từ: tàu hoả) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TRAIN",
+    "Làm rõ nghĩa lõi \"tàu hoả\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TRAIN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TRAIN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Ông",
+      "appearance": "Minimal ink stick figure with round white navy-outlined head, solid black oval eyes and simple stick limbs. A small plain hair silhouette appropriate to the role.",
+      "outfit": "Exactly one plain mustard-yellow short-sleeve shirt, no logo or layered torso."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều xảy ra trước mắt",
+      "purpose": "Open on immediate personal tension and useful English.",
+      "action": "Quiet platform away from track edge: grandfather gives mascot one travel bag and starts to turn, mascot shows two tickets and asks him to come. No readable ticket data.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Ông đưa túi rồi quay người đi. \"Can we take this train?\" Mình đi chuyến tàu này được không? Tôi giữ túi lại, nói lần này đã hỏi ông đi cùng chứ không chỉ nhờ đưa tới ga.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "train",
+          "meaning": "tàu hoả"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Quiet platform away from track edge: grandfather gives mascot one travel bag and starts to turn, mascot shows two tickets and asks him to come. No readable ticket data. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Quiet platform away from track edge: grandfather gives mascot one travel bag and starts to turn, mascot shows two tickets and asks him to come. No readable ticket data.",
+          "reason": "Open on immediate personal tension and useful English.",
+          "visible_text": [
+            {
+              "text": "Can we take this train?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open on immediate personal tension and useful English.",
+          "anchor": {
+            "vi": {
+              "quote": "Ông đưa túi rồi quay người đi. \"Can we take this train?\" Mình đi chuyến tàu này được không? Tôi giữ túi lại, nói lần này đã hỏi ông đi cùng chứ không chỉ nhờ đưa tới ga.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open on immediate personal tension and useful English. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Điều chưa nói",
+      "purpose": "Reveal the human need and resistance through ordinary action.",
+      "action": "Grandfather looks at two plain tickets while mascot points to generic short-trip diagram. Both remain behind platform safety line.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Ông bảo ngồi lâu sẽ mỏi, rồi hỏi tàu đi có xa không. Tôi cho ông xem chuyến ngắn đã chọn. Ông nhìn hai tấm vé tôi cầm, hỏi sao không bảo sớm để ông mang thêm áo.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "train",
+          "meaning": "tàu hoả"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Grandfather looks at two plain tickets while mascot points to generic short-trip diagram. Both remain behind platform safety line. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Grandfather looks at two plain tickets while mascot points to generic short-trip diagram. Both remain behind platform safety line.",
+          "reason": "Reveal the human need and resistance through ordinary action.",
+          "visible_text": [
+            {
+              "text": "train · tàu hoả",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Reveal the human need and resistance through ordinary action.",
+          "anchor": {
+            "vi": {
+              "quote": "Ông bảo ngồi lâu sẽ mỏi, rồi hỏi tàu đi có xa không. Tôi cho ông xem chuyến ngắn đã chọn. Ông nhìn hai tấm vé tôi cầm, hỏi sao không bảo sớm để ông mang thêm áo.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Reveal the human need and resistance through ordinary action. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Lựa chọn",
+      "purpose": "Make a small consequential choice using the second model.",
+      "action": "Stationary passenger train at platform, grandfather removes light jacket from own bag as mascot gestures toward open door. No crowd or close track-edge pose.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The train is here.\" Tàu hỏa tới rồi. Tôi chỉ đoàn tàu đang dừng ở ga. Ông lấy áo khoác khỏi túi mình, bảo thế đi thôi, lần này ông muốn ngồi cạnh cửa sổ.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "train",
+          "meaning": "tàu hoả"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Stationary passenger train at platform, grandfather removes light jacket from own bag as mascot gestures toward open door. No crowd or close track-edge pose. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Stationary passenger train at platform, grandfather removes light jacket from own bag as mascot gestures toward open door. No crowd or close track-edge pose.",
+          "reason": "Make a small consequential choice using the second model.",
+          "visible_text": [
+            {
+              "text": "The train is here.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Make a small consequential choice using the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The train is here.\" Tàu hỏa tới rồi. Tôi chỉ đoàn tàu đang dừng ở ga. Ông lấy áo khoác khỏi túi mình, bảo thế đi thôi, lần này ông muốn ngồi cạnh cửa sổ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Make a small consequential choice using the second model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần đáp",
+      "purpose": "Invite the same necessary sentence and wait for learner response.",
+      "action": "Hold both behind safety line facing stationary train, supported train question stem only.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn rủ ông cùng đi chuyến tàu trước mặt. Bạn nói giúp tôi câu mình đi chuyến tàu này được không bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "train",
+          "meaning": "tàu hoả"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold both behind safety line facing stationary train, supported train question stem only. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold both behind safety line facing stationary train, supported train question stem only.",
+          "reason": "Invite the same necessary sentence and wait for learner response.",
+          "visible_text": [
+            {
+              "text": "Can we take this ___?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite the same necessary sentence and wait for learner response.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn rủ ông cùng đi chuyến tàu trước mặt. Bạn nói giúp tôi câu mình đi chuyến tàu này được không bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the same necessary sentence and wait for learner response. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện tiếp tục",
+      "purpose": "Return the answer and resolve the initial human tension through a concrete gesture.",
+      "action": "Train carriage: grandfather in window seat, mascot in aisle seat, bags secured beside their feet. No readable outside place names or extra passengers.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Can we take this train?\" Ông gật đầu. Lên toa, tôi để ông ngồi sát cửa sổ, đặt túi xuống cạnh mình. Ông nhìn ra sân ga rồi hỏi lượt về có đổi chỗ cho tôi không.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "train",
+          "meaning": "tàu hoả"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Train carriage: grandfather in window seat, mascot in aisle seat, bags secured beside their feet. No readable outside place names or extra passengers. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Train carriage: grandfather in window seat, mascot in aisle seat, bags secured beside their feet. No readable outside place names or extra passengers.",
+          "reason": "Return the answer and resolve the initial human tension through a concrete gesture.",
+          "visible_text": [
+            {
+              "text": "Can we take this train?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Return the answer and resolve the initial human tension through a concrete gesture.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can we take this train?\" Ông gật đầu. Lên toa, tôi để ông ngồi sát cửa sổ, đặt túi xuống cạnh mình. Ông nhìn ra sân ga rồi hỏi lượt về có đổi chỗ cho tôi không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Return the answer and resolve the initial human tension through a concrete gesture. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Ông đưa túi rồi quay người đi. \"Can we take this train?\" Mình đi chuyến tàu này được không? Tôi giữ túi lại, nói lần này đã hỏi ông đi cùng chứ không chỉ nhờ đưa tới ga."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Ông đưa túi rồi quay người đi. \"Can we take this train?\" Mình đi chuyến tàu này được không? Tôi giữ túi lại, nói lần này đã hỏi ông đi cùng chứ không chỉ nhờ đưa tới ga."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Ông đưa túi rồi quay người đi. \"Can we take this train?\" Mình đi chuyến tàu này được không? Tôi giữ túi lại, nói lần này đã hỏi ông đi cùng chứ không chỉ nhờ đưa tới ga."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Ông bảo ngồi lâu sẽ mỏi, rồi hỏi tàu đi có xa không. Tôi cho ông xem chuyến ngắn đã chọn. Ông nhìn hai tấm vé tôi cầm, hỏi sao không bảo sớm để ông mang thêm áo."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"The train is here.\" Tàu hỏa tới rồi. Tôi chỉ đoàn tàu đang dừng ở ga. Ông lấy áo khoác khỏi túi mình, bảo thế đi thôi, lần này ông muốn ngồi cạnh cửa sổ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"The train is here.\" Tàu hỏa tới rồi. Tôi chỉ đoàn tàu đang dừng ở ga. Ông lấy áo khoác khỏi túi mình, bảo thế đi thôi, lần này ông muốn ngồi cạnh cửa sổ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn rủ ông cùng đi chuyến tàu trước mặt. Bạn nói giúp tôi câu mình đi chuyến tàu này được không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn rủ ông cùng đi chuyến tàu trước mặt. Bạn nói giúp tôi câu mình đi chuyến tàu này được không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Can we take this train?\" Ông gật đầu. Lên toa, tôi để ông ngồi sát cửa sổ, đặt túi xuống cạnh mình. Ông nhìn ra sân ga rồi hỏi lượt về có đổi chỗ cho tôi không."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Can we take this train?\" Ông gật đầu. Lên toa, tôi để ông ngồi sát cửa sổ, đặt túi xuống cạnh mình. Ông nhìn ra sân ga rồi hỏi lượt về có đổi chỗ cho tôi không."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can we take this train?\" Ông gật đầu. Lên toa, tôi để ông ngồi sát cửa sổ, đặt túi xuống cạnh mình. Ông nhìn ra sân ga rồi hỏi lượt về có đổi chỗ cho tôi không."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on immediate personal tension and useful English.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open on immediate personal tension and useful English. Next causal state: Grandfather looks at two plain tickets while mascot points to generic short-trip diagram. Both remain behind platform safety line."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Reveal the human need and resistance through ordinary action.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Reveal the human need and resistance through ordinary action. Next causal state: Stationary passenger train at platform, grandfather removes light jacket from own bag as mascot gestures toward open door. No crowd or close track-edge pose."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Make a small consequential choice using the second model.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Make a small consequential choice using the second model. Next causal state: Hold both behind safety line facing stationary train, supported train question stem only."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite the same necessary sentence and wait for learner response.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite the same necessary sentence and wait for learner response. Next causal state: Train carriage: grandfather in window seat, mascot in aisle seat, bags secured beside their feet. No readable outside place names or extra passengers."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Return the answer and resolve the initial human tension through a concrete gesture.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Return the answer and resolve the initial human tension through a concrete gesture. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19669",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Ông đưa cháu tới ga nhưng định về ngay; cháu muốn ông cùng đi chuyến tàu ngắn và giúp ông chọn chỗ mình thích. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "863996df47cb67498e62ae52af85c25e69dbf4734846864d81089c32825edabe",
+  "topic": "Học từ vựng tiếng Anh BEHIND (giới từ: phía sau) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ BEHIND",
+    "Làm rõ nghĩa lõi \"phía sau\" (giới từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng BEHIND, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại BEHIND, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Nam",
+      "appearance": "Minimal ink stick figure with a round white head outlined in ink line, simple expressive ink eyes, and minimal stick limbs.",
+      "outfit": "Single dark-green short-sleeve shirt and ink trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cuốn sổ khuất sau đèn",
+      "purpose": "Establish the cluttered desk situation and introduce the first model sentence with behind.",
+      "action": "Medium shot of a cluttered wooden desk. The young man in a dark-green shirt searches through loose papers with an anxious posture. The pale-blue shirt mascot stands beside him, pointing toward a blue notebook resting visibly behind a metal desk lamp.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chiếc bàn học bừa bộn giấy tờ. Nam tìm cuốn sổ vẽ để kịp giờ câu lạc bộ. Tôi nhớ ra mình vừa dọn bàn: \"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "behind",
+          "meaning": "phía sau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Medium shot of a cluttered wooden desk. The young man in a dark-green shirt searches through loose papers with an anxious posture. The pale-blue shirt mascot stands beside him, pointing toward a blue notebook resting visibly behind a metal desk lamp. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of a cluttered wooden desk. The young man in a dark-green shirt searches through loose papers with an anxious posture. The pale-blue shirt mascot stands beside him, pointing toward a blue notebook resting visibly behind a metal desk lamp.",
+          "reason": "Establish the cluttered desk situation and introduce the first model sentence with behind.",
+          "visible_text": [
+            {
+              "text": "The notebook is behind the lamp.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the cluttered desk situation and introduce the first model sentence with behind.",
+          "anchor": {
+            "vi": {
+              "quote": "Chiếc bàn học bừa bộn giấy tờ. Nam tìm cuốn sổ vẽ để kịp giờ câu lạc bộ. Tôi nhớ ra mình vừa dọn bàn: \"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the cluttered desk situation and introduce the first model sentence with behind. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Cây bút sau hộp",
+      "purpose": "Advance the story with a second misplaced tool and introduce the contrasting second model sentence.",
+      "action": "Close medium shot of the desk surface. The young man holds the retrieved notebook, looking down in frustration for his drawing pen. The pale-blue shirt mascot gently points to an ink pen lying directly behind a rectangular wooden pencil box.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Nam nhấc sổ lên, nhưng cây bút lại lăn mất. Cậu ấy thở dài nhìn tôi. Tôi chỉ tay: \"The pen is behind the box.\" Cây bút ở phía sau chiếc hộp.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "behind",
+          "meaning": "phía sau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Close medium shot of the desk surface. The young man holds the retrieved notebook, looking down in frustration for his drawing pen. The pale-blue shirt mascot gently points to an ink pen lying directly behind a rectangular wooden pencil box. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close medium shot of the desk surface. The young man holds the retrieved notebook, looking down in frustration for his drawing pen. The pale-blue shirt mascot gently points to an ink pen lying directly behind a rectangular wooden pencil box.",
+          "reason": "Advance the story with a second misplaced tool and introduce the contrasting second model sentence.",
+          "visible_text": [
+            {
+              "text": "behind · phía sau",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Advance the story with a second misplaced tool and introduce the contrasting second model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Nam nhấc sổ lên, nhưng cây bút lại lăn mất. Cậu ấy thở dài nhìn tôi. Tôi chỉ tay: \"The pen is behind the box.\" Cây bút ở phía sau chiếc hộp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Advance the story with a second misplaced tool and introduce the contrasting second model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Đậy nắp bút cẩn thận",
+      "purpose": "Resolve the minor friction through a small gesture of care and tidiness.",
+      "action": "Same desk camera, friend returns notebook behind lamp while fastening satchel, capped pen in pocket. Mascot takes own pencil box off shelf.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Nam nhặt bút rồi đặt sổ lại phía sau đèn để buộc dây túi. Bạn hỏi tôi có tới câu lạc bộ cùng không. Tôi bảo có, lấy hộp bút của mình xuống, lần này muốn thử ngồi vẽ cạnh bạn.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "behind",
+          "meaning": "phía sau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Same desk camera, friend returns notebook behind lamp while fastening satchel, capped pen in pocket. Mascot takes own pencil box off shelf. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same desk camera, friend returns notebook behind lamp while fastening satchel, capped pen in pocket. Mascot takes own pencil box off shelf.",
+          "reason": "Resolve the minor friction through a small gesture of care and tidiness.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Resolve the minor friction through a small gesture of care and tidiness.",
+          "anchor": {
+            "vi": {
+              "quote": "Nam nhặt bút rồi đặt sổ lại phía sau đèn để buộc dây túi. Bạn hỏi tôi có tới câu lạc bộ cùng không. Tôi bảo có, lấy hộp bút của mình xuống, lần này muốn thử ngồi vẽ cạnh bạn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Resolve the minor friction through a small gesture of care and tidiness. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Luyện nói vị trí cuốn sổ",
+      "purpose": "Prompt the learner to recall and produce the full model sentence with behind for an immediate practical need.",
+      "action": "Hold same desk view, notebook still physically behind lamp, friend now ready with satchel. Mascot points behind lamp.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Buộc túi xong, Nam hỏi cuốn sổ vừa đặt ở đâu. Bạn nói giúp tôi câu sổ tay ở phía sau chiếc đèn bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "behind",
+          "meaning": "phía sau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold same desk view, notebook still physically behind lamp, friend now ready with satchel. Mascot points behind lamp. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold same desk view, notebook still physically behind lamp, friend now ready with satchel. Mascot points behind lamp.",
+          "reason": "Prompt the learner to recall and produce the full model sentence with behind for an immediate practical need.",
+          "visible_text": [
+            {
+              "text": "The notebook is ___ the lamp.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to recall and produce the full model sentence with behind for an immediate practical need.",
+          "anchor": {
+            "vi": {
+              "quote": "Buộc túi xong, Nam hỏi cuốn sổ vừa đặt ở đâu. Bạn nói giúp tôi câu sổ tay ở phía sau chiếc đèn bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to recall and produce the full model sentence with behind for an immediate practical need. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Yên tâm lên đường",
+      "purpose": "Provide the spoken correct answer and conclude with an earned modest ending.",
+      "action": "The young man reaches behind the lamp, firmly grips the notebook, hands half an energy bar to the pale-blue shirt mascot with a grateful smile, and steps toward the doorway.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn. Nam cầm chắc cuốn sổ, chia cho tôi nửa phong lương khô rồi bước vội ra cửa.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "behind",
+          "meaning": "phía sau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The young man reaches behind the lamp, firmly grips the notebook, hands half an energy bar to the pale-blue shirt mascot with a grateful smile, and steps toward the doorway. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The young man reaches behind the lamp, firmly grips the notebook, hands half an energy bar to the pale-blue shirt mascot with a grateful smile, and steps toward the doorway.",
+          "reason": "Provide the spoken correct answer and conclude with an earned modest ending.",
+          "visible_text": [
+            {
+              "text": "The notebook is behind the lamp.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the spoken correct answer and conclude with an earned modest ending.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn. Nam cầm chắc cuốn sổ, chia cho tôi nửa phong lương khô rồi bước vội ra cửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide the spoken correct answer and conclude with an earned modest ending. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chiếc bàn học bừa bộn giấy tờ. Nam tìm cuốn sổ vẽ để kịp giờ câu lạc bộ. Tôi nhớ ra mình vừa dọn bàn: \"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chiếc bàn học bừa bộn giấy tờ. Nam tìm cuốn sổ vẽ để kịp giờ câu lạc bộ. Tôi nhớ ra mình vừa dọn bàn: \"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Chiếc bàn học bừa bộn giấy tờ. Nam tìm cuốn sổ vẽ để kịp giờ câu lạc bộ. Tôi nhớ ra mình vừa dọn bàn: \"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Nam nhấc sổ lên, nhưng cây bút lại lăn mất. Cậu ấy thở dài nhìn tôi. Tôi chỉ tay: \"The pen is behind the box.\" Cây bút ở phía sau chiếc hộp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Nam nhấc sổ lên, nhưng cây bút lại lăn mất. Cậu ấy thở dài nhìn tôi. Tôi chỉ tay: \"The pen is behind the box.\" Cây bút ở phía sau chiếc hộp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Nam nhặt bút rồi đặt sổ lại phía sau đèn để buộc dây túi. Bạn hỏi tôi có tới câu lạc bộ cùng không. Tôi bảo có, lấy hộp bút của mình xuống, lần này muốn thử ngồi vẽ cạnh bạn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Buộc túi xong, Nam hỏi cuốn sổ vừa đặt ở đâu. Bạn nói giúp tôi câu sổ tay ở phía sau chiếc đèn bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Buộc túi xong, Nam hỏi cuốn sổ vừa đặt ở đâu. Bạn nói giúp tôi câu sổ tay ở phía sau chiếc đèn bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn. Nam cầm chắc cuốn sổ, chia cho tôi nửa phong lương khô rồi bước vội ra cửa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn. Nam cầm chắc cuốn sổ, chia cho tôi nửa phong lương khô rồi bước vội ra cửa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The notebook is behind the lamp.\" Sổ tay ở phía sau chiếc đèn. Nam cầm chắc cuốn sổ, chia cho tôi nửa phong lương khô rồi bước vội ra cửa."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the cluttered desk situation and introduce the first model sentence with behind.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the cluttered desk situation and introduce the first model sentence with behind. Next causal state: Close medium shot of the desk surface. The young man holds the retrieved notebook, looking down in frustration for his drawing pen. The pale-blue shirt mascot gently points to an ink pen lying directly behind a rectangular wooden pencil box."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Advance the story with a second misplaced tool and introduce the contrasting second model sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Advance the story with a second misplaced tool and introduce the contrasting second model sentence. Next causal state: Same desk camera, friend returns notebook behind lamp while fastening satchel, capped pen in pocket. Mascot takes own pencil box off shelf."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Resolve the minor friction through a small gesture of care and tidiness.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Resolve the minor friction through a small gesture of care and tidiness. Next causal state: Hold same desk view, notebook still physically behind lamp, friend now ready with satchel. Mascot points behind lamp."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to recall and produce the full model sentence with behind for an immediate practical need.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to recall and produce the full model sentence with behind for an immediate practical need. Next causal state: The young man reaches behind the lamp, firmly grips the notebook, hands half an energy bar to the pale-blue shirt mascot with a grateful smile, and steps toward the doorway."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the spoken correct answer and conclude with an earned modest ending.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Provide the spoken correct answer and conclude with an earned modest ending. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19796",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Nam vội vã tìm cuốn sổ vẽ và cây bút trước giờ sinh hoạt nhóm; tôi nhớ ra mình vừa dọn bàn và chỉ vị trí phía sau ngọn đèn. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,491 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "3f62825d13618519f03f710f28780a4bb2f36dffcfe551f18a1c3420776375af",
+  "topic": "Học từ vựng tiếng Anh RULER (danh từ: thước kẻ) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ RULER",
+    "Làm rõ nghĩa lõi \"thước kẻ\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng RULER, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại RULER, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Ông nội",
+      "appearance": "Elderly male minimal ink stick figure, round white face with solid black oval eyes and a small white hair silhouette, modest head tilt.",
+      "outfit": "Exactly one plain green short-sleeve top, minimal stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chi tiết đầu chuyện",
+      "purpose": "Open with a concrete situation and an early usable English line.",
+      "action": "In a simple family room, a crooked plain photo frame rests partly against the wall after grandfather tries hanging it. The pale-blue mascot places it safely on a table and shows a short ruler. The grandfather has one plain green top.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Ông treo bức ảnh, nó cứ nghiêng. \"I have a ruler.\" Cháu có thước kẻ đây. Tôi đặt ảnh xuống, ngồi cạnh ông ở mép bàn.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ruler",
+          "meaning": "thước kẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "In a simple family room, a crooked plain photo frame rests partly against the wall after grandfather tries hanging it. The pale-blue mascot places it safely on a table and shows a short ruler. The grandfather has one plain green top. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "In a simple family room, a crooked plain photo frame rests partly against the wall after grandfather tries hanging it. The pale-blue mascot places it safely on a table and shows a short ruler. The grandfather has one plain green top.",
+          "reason": "Open with a concrete situation and an early usable English line.",
+          "visible_text": [
+            {
+              "text": "I have a ruler.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with a concrete situation and an early usable English line.",
+          "anchor": {
+            "vi": {
+              "quote": "Ông treo bức ảnh, nó cứ nghiêng. \"I have a ruler.\" Cháu có thước kẻ đây. Tôi đặt ảnh xuống, ngồi cạnh ông ở mép bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with a concrete situation and an early usable English line. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Điều cần hiểu",
+      "purpose": "Establish why this small action matters to these people and support the selected meaning.",
+      "action": "At the table, grandfather and mascot try aligning a short ruler with a longer cardboard photo backing. The ruler does not span the required edge, so the newly marked guide lines are inconsistent. No cutting glass or sharp blades.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Đó là ảnh bà chụp ở căn nhà cũ. Ông muốn tự làm một chiếc khung mới. Cây thước ngắn quá; cứ nhấc lên đặt xuống, đường đánh dấu lại lệch.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ruler",
+          "meaning": "thước kẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "At the table, grandfather and mascot try aligning a short ruler with a longer cardboard photo backing. The ruler does not span the required edge, so the newly marked guide lines are inconsistent. No cutting glass or sharp blades. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At the table, grandfather and mascot try aligning a short ruler with a longer cardboard photo backing. The ruler does not span the required edge, so the newly marked guide lines are inconsistent. No cutting glass or sharp blades.",
+          "reason": "Establish why this small action matters to these people and support the selected meaning.",
+          "visible_text": [
+            {
+              "text": "ruler · thước kẻ",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Establish why this small action matters to these people and support the selected meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Đó là ảnh bà chụp ở căn nhà cũ. Ông muốn tự làm một chiếc khung mới. Cây thước ngắn quá; cứ nhấc lên đặt xuống, đường đánh dấu lại lệch.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish why this small action matters to these people and support the selected meaning. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hành động làm đổi chuyện",
+      "purpose": "Use the second English model as a decision or action with a consequence.",
+      "action": "Grandfather holds a long metal straight ruler across the cardboard photo backing while the mascot marks one guide line along its edge. Keep their roles and positions stable, with an old photo beside the backing. Tick marks have no numerals.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi lấy cây thước dài hơn: \"Use this long ruler.\" Ông dùng chiếc thước kẻ dài này nhé. Ông giữ thước, tôi đánh dấu mép bìa. Hai tay ông đã thôi vội.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ruler",
+          "meaning": "thước kẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Grandfather holds a long metal straight ruler across the cardboard photo backing while the mascot marks one guide line along its edge. Keep their roles and positions stable, with an old photo beside the backing. Tick marks have no numerals. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Grandfather holds a long metal straight ruler across the cardboard photo backing while the mascot marks one guide line along its edge. Keep their roles and positions stable, with an old photo beside the backing. Tick marks have no numerals.",
+          "reason": "Use the second English model as a decision or action with a consequence.",
+          "visible_text": [
+            {
+              "text": "Use this long ruler.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model as a decision or action with a consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi lấy cây thước dài hơn: \"Use this long ruler.\" Ông dùng chiếc thước kẻ dài này nhé. Ông giữ thước, tôi đánh dấu mép bìa. Hai tay ông đã thôi vội.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use the second English model as a decision or action with a consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời người xem giúp nói",
+      "purpose": "Invite one manageable full-sentence retrieval tied to the same need; hold before the answer.",
+      "action": "Hold grandfather looking for the long ruler and mascot holding it ready beside the unfinished frame. One plain photo and cardboard backing remain on the table; leave safe space for the sentence stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Giờ ông tìm cây thước để đo nốt. Nếu muốn nói cháu có một chiếc thước kẻ, bạn nói câu nào bằng tiếng Anh?",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ruler",
+          "meaning": "thước kẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold grandfather looking for the long ruler and mascot holding it ready beside the unfinished frame. One plain photo and cardboard backing remain on the table; leave safe space for the sentence stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold grandfather looking for the long ruler and mascot holding it ready beside the unfinished frame. One plain photo and cardboard backing remain on the table; leave safe space for the sentence stem.",
+          "reason": "Invite one manageable full-sentence retrieval tied to the same need; hold before the answer.",
+          "visible_text": [
+            {
+              "text": "I have a ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable full-sentence retrieval tied to the same need; hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Giờ ông tìm cây thước để đo nốt. Nếu muốn nói cháu có một chiếc thước kẻ, bạn nói câu nào bằng tiếng Anh?",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite one manageable full-sentence retrieval tied to the same need; hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả",
+      "purpose": "Give the correct response and close the local story with a visible relationship or consequence.",
+      "action": "The finished simple family photo hangs straight on the wall. Grandfather pulls out the neighboring chair by a small dining table; mascot sets a blank-screen phone aside and moves to sit with him. No writing, logos or extra people.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I have a ruler.\" Đúng rồi. Khung ảnh ngay ngắn trên tường. Ông nhìn một lúc, rồi kéo ghế ra: Ngồi ăn cơm với ông nhé. Tôi cất thước, để điện thoại sang một bên.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ruler",
+          "meaning": "thước kẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The finished simple family photo hangs straight on the wall. Grandfather pulls out the neighboring chair by a small dining table; mascot sets a blank-screen phone aside and moves to sit with him. No writing, logos or extra people. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The finished simple family photo hangs straight on the wall. Grandfather pulls out the neighboring chair by a small dining table; mascot sets a blank-screen phone aside and moves to sit with him. No writing, logos or extra people.",
+          "reason": "Give the correct response and close the local story with a visible relationship or consequence.",
+          "visible_text": [
+            {
+              "text": "I have a ruler.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and close the local story with a visible relationship or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I have a ruler.\" Đúng rồi. Khung ảnh ngay ngắn trên tường. Ông nhìn một lúc, rồi kéo ghế ra: Ngồi ăn cơm với ông nhé. Tôi cất thước, để điện thoại sang một bên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the correct response and close the local story with a visible relationship or consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Ông treo bức ảnh, nó cứ nghiêng. \"I have a ruler.\" Cháu có thước kẻ đây. Tôi đặt ảnh xuống, ngồi cạnh ông ở mép bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Ông treo bức ảnh, nó cứ nghiêng. \"I have a ruler.\" Cháu có thước kẻ đây. Tôi đặt ảnh xuống, ngồi cạnh ông ở mép bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Ông treo bức ảnh, nó cứ nghiêng. \"I have a ruler.\" Cháu có thước kẻ đây. Tôi đặt ảnh xuống, ngồi cạnh ông ở mép bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Đó là ảnh bà chụp ở căn nhà cũ. Ông muốn tự làm một chiếc khung mới. Cây thước ngắn quá; cứ nhấc lên đặt xuống, đường đánh dấu lại lệch."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Đó là ảnh bà chụp ở căn nhà cũ. Ông muốn tự làm một chiếc khung mới. Cây thước ngắn quá; cứ nhấc lên đặt xuống, đường đánh dấu lại lệch."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi lấy cây thước dài hơn: \"Use this long ruler.\" Ông dùng chiếc thước kẻ dài này nhé. Ông giữ thước, tôi đánh dấu mép bìa. Hai tay ông đã thôi vội."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Tôi lấy cây thước dài hơn: \"Use this long ruler.\" Ông dùng chiếc thước kẻ dài này nhé. Ông giữ thước, tôi đánh dấu mép bìa. Hai tay ông đã thôi vội."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Giờ ông tìm cây thước để đo nốt. Nếu muốn nói cháu có một chiếc thước kẻ, bạn nói câu nào bằng tiếng Anh?"
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I have a ruler.\" Đúng rồi. Khung ảnh ngay ngắn trên tường. Ông nhìn một lúc, rồi kéo ghế ra: Ngồi ăn cơm với ông nhé. Tôi cất thước, để điện thoại sang một bên."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with a concrete situation and an early usable English line.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with a concrete situation and an early usable English line. Next causal state: At the table, grandfather and mascot try aligning a short ruler with a longer cardboard photo backing. The ruler does not span the required edge, so the newly marked guide lines are inconsistent. No cutting glass or sharp blades."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Establish why this small action matters to these people and support the selected meaning.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish why this small action matters to these people and support the selected meaning. Next causal state: Grandfather holds a long metal straight ruler across the cardboard photo backing while the mascot marks one guide line along its edge. Keep their roles and positions stable, with an old photo beside the backing. Tick marks have no numerals."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model as a decision or action with a consequence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the second English model as a decision or action with a consequence. Next causal state: Hold grandfather looking for the long ruler and mascot holding it ready beside the unfinished frame. One plain photo and cardboard backing remain on the table; leave safe space for the sentence stem."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable full-sentence retrieval tied to the same need; hold before the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Invite one manageable full-sentence retrieval tied to the same need; hold before the answer. Next causal state: The finished simple family photo hangs straight on the wall. Grandfather pulls out the neighboring chair by a small dining table; mascot sets a blank-screen phone aside and moves to sit with him. No writing, logos or extra people."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and close the local story with a visible relationship or consequence.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Give the correct response and close the local story with a visible relationship or consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18938",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Ông muốn làm lại khung ảnh từ nhà cũ; cháu giúp đo bằng thước dài rồi ở lại ăn cơm, thay vì mải điện thoại. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

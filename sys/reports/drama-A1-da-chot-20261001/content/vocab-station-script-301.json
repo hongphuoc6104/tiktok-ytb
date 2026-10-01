@@ -1,0 +1,505 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "61dd26d75765f2cadc93bdc4cd3bbe46b8519da1aa333e55cf89cd2d845f1967",
+  "topic": "Học từ vựng tiếng Anh STATION (danh từ: nhà ga, bến) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ STATION",
+    "Làm rõ nghĩa lõi \"nhà ga, bến\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng STATION, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại STATION, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Bố",
+      "appearance": "Minimal ink stick figure, round white head outlined dark navy, solid black oval eyes, minimal stick limbs, exactly one torso.",
+      "outfit": "Exactly one plain gray short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều chưa nói",
+      "purpose": "Show immediate personal need.",
+      "action": "Mascot and gray-shirt father at old train station wooden bench under roof, passenger train tracks visible beyond safe platform.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bố dừng trước chiếc ghế gỗ cũ. \"This is the station.\" Đây là nhà ga. Tôi vừa đưa bố tới ga tàu trong bức ảnh ông giữ, nhưng bố nhìn quanh mãi, chưa nhận ra chỗ mình từng đứng.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "station",
+          "meaning": "nhà ga tàu hỏa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and gray-shirt father at old train station wooden bench under roof, passenger train tracks visible beyond safe platform. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and gray-shirt father at old train station wooden bench under roof, passenger train tracks visible beyond safe platform.",
+          "reason": "Show immediate personal need.",
+          "visible_text": [
+            {
+              "text": "This is the station.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show immediate personal need.",
+          "anchor": {
+            "vi": {
+              "quote": "Bố dừng trước chiếc ghế gỗ cũ. \"This is the station.\" Đây là nhà ga. Tôi vừa đưa bố tới ga tàu trong bức ảnh ông giữ, nhưng bố nhìn quanh mãi, chưa nhận ra chỗ mình từng đứng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show immediate personal need. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Vướng mắc",
+      "purpose": "Make resistance and selected sense concrete.",
+      "action": "Mascot shows phone photo of same empty bench and awning to father; no person in old photo.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi mở bức ảnh trên điện thoại cho bố xem. Trong ảnh chỉ có mái che và chiếc ghế ấy. Bố bảo hồi tiễn tôi đi học, bố ngồi đây đợi tàu khuất rồi mới chịu về.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "station",
+          "meaning": "nhà ga tàu hỏa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot shows phone photo of same empty bench and awning to father; no person in old photo. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot shows phone photo of same empty bench and awning to father; no person in old photo.",
+          "reason": "Make resistance and selected sense concrete.",
+          "visible_text": [
+            {
+              "text": "station · nhà ga tàu hỏa",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make resistance and selected sense concrete.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi mở bức ảnh trên điện thoại cho bố xem. Trong ảnh chỉ có mái che và chiếc ghế ấy. Bố bảo hồi tiễn tôi đi học, bố ngồi đây đợi tàu khuất rồi mới chịu về.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Make resistance and selected sense concrete. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Quyết định",
+      "purpose": "Use second English model for a consequential small action.",
+      "action": "Both seated at same bench with bag on ground, passenger train in background, father gestures while telling story.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi ngồi xuống cạnh bố: \"We wait at the station.\" Hai bố con chờ ở nhà ga. Lần này chẳng ai phải đi đâu. Bố đặt túi xuống, nghe tiếng tàu tới rồi kể tiếp chuyện hồi đó.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "station",
+          "meaning": "nhà ga tàu hỏa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both seated at same bench with bag on ground, passenger train in background, father gestures while telling story. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both seated at same bench with bag on ground, passenger train in background, father gestures while telling story.",
+          "reason": "Use second English model for a consequential small action.",
+          "visible_text": [
+            {
+              "text": "We wait at the station.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use second English model for a consequential small action.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi ngồi xuống cạnh bố: \"We wait at the station.\" Hai bố con chờ ở nhà ga. Lần này chẳng ai phải đi đâu. Bố đặt túi xuống, nghe tiếng tàu tới rồi kể tiếp chuyện hồi đó.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use second English model for a consequential small action. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần nói",
+      "purpose": "Retrieve one full story-linked model before answer.",
+      "action": "Hold two people beside same station bench and tracks, mascot holds phone ready for place message.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bố muốn gửi cho mẹ lời báo đây là nhà ga. Bạn nói giúp bố cả câu tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "station",
+          "meaning": "nhà ga tàu hỏa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold two people beside same station bench and tracks, mascot holds phone ready for place message. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold two people beside same station bench and tracks, mascot holds phone ready for place message.",
+          "reason": "Retrieve one full story-linked model before answer.",
+          "visible_text": [
+            {
+              "text": "This is the ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Retrieve one full story-linked model before answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bố muốn gửi cho mẹ lời báo đây là nhà ga. Bạn nói giúp bố cả câu tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Retrieve one full story-linked model before answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện tiếp tục",
+      "purpose": "Give answer and earned physical payoff.",
+      "action": "Both seated close at bench, mascot extends phone to frame them together; same roof and track background.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"This is the station.\" Tôi quay điện thoại về phía ghế gỗ, chụp thêm một tấm. Bố bảo nhớ chụp cả tôi. Trong bức ảnh mới, chỗ ngồi bên cạnh bố không còn trống.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "station",
+          "meaning": "nhà ga tàu hỏa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both seated close at bench, mascot extends phone to frame them together; same roof and track background. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both seated close at bench, mascot extends phone to frame them together; same roof and track background.",
+          "reason": "Give answer and earned physical payoff.",
+          "visible_text": [
+            {
+              "text": "This is the station.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give answer and earned physical payoff.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is the station.\" Tôi quay điện thoại về phía ghế gỗ, chụp thêm một tấm. Bố bảo nhớ chụp cả tôi. Trong bức ảnh mới, chỗ ngồi bên cạnh bố không còn trống.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give answer and earned physical payoff. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bố dừng trước chiếc ghế gỗ cũ. \"This is the station.\" Đây là nhà ga. Tôi vừa đưa bố tới ga tàu trong bức ảnh ông giữ, nhưng bố nhìn quanh mãi, chưa nhận ra chỗ mình từng đứng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bố dừng trước chiếc ghế gỗ cũ. \"This is the station.\" Đây là nhà ga. Tôi vừa đưa bố tới ga tàu trong bức ảnh ông giữ, nhưng bố nhìn quanh mãi, chưa nhận ra chỗ mình từng đứng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Bố dừng trước chiếc ghế gỗ cũ. \"This is the station.\" Đây là nhà ga. Tôi vừa đưa bố tới ga tàu trong bức ảnh ông giữ, nhưng bố nhìn quanh mãi, chưa nhận ra chỗ mình từng đứng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi mở bức ảnh trên điện thoại cho bố xem. Trong ảnh chỉ có mái che và chiếc ghế ấy. Bố bảo hồi tiễn tôi đi học, bố ngồi đây đợi tàu khuất rồi mới chịu về."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi ngồi xuống cạnh bố: \"We wait at the station.\" Hai bố con chờ ở nhà ga. Lần này chẳng ai phải đi đâu. Bố đặt túi xuống, nghe tiếng tàu tới rồi kể tiếp chuyện hồi đó."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Tôi ngồi xuống cạnh bố: \"We wait at the station.\" Hai bố con chờ ở nhà ga. Lần này chẳng ai phải đi đâu. Bố đặt túi xuống, nghe tiếng tàu tới rồi kể tiếp chuyện hồi đó."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Bố muốn gửi cho mẹ lời báo đây là nhà ga. Bạn nói giúp bố cả câu tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bố muốn gửi cho mẹ lời báo đây là nhà ga. Bạn nói giúp bố cả câu tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"This is the station.\" Tôi quay điện thoại về phía ghế gỗ, chụp thêm một tấm. Bố bảo nhớ chụp cả tôi. Trong bức ảnh mới, chỗ ngồi bên cạnh bố không còn trống."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"This is the station.\" Tôi quay điện thoại về phía ghế gỗ, chụp thêm một tấm. Bố bảo nhớ chụp cả tôi. Trong bức ảnh mới, chỗ ngồi bên cạnh bố không còn trống."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is the station.\" Tôi quay điện thoại về phía ghế gỗ, chụp thêm một tấm. Bố bảo nhớ chụp cả tôi. Trong bức ảnh mới, chỗ ngồi bên cạnh bố không còn trống."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show immediate personal need.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Show immediate personal need. Next causal state: Mascot shows phone photo of same empty bench and awning to father; no person in old photo."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make resistance and selected sense concrete.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Make resistance and selected sense concrete. Next causal state: Both seated at same bench with bag on ground, passenger train in background, father gestures while telling story."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use second English model for a consequential small action.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use second English model for a consequential small action. Next causal state: Hold two people beside same station bench and tracks, mascot holds phone ready for place message."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Retrieve one full story-linked model before answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Retrieve one full story-linked model before answer. Next causal state: Both seated close at bench, mascot extends phone to frame them together; same roof and track background."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give answer and earned physical payoff.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give answer and earned physical payoff. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19291",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi đưa bố quay lại ga cũ, ông nhận ra chiếc ghế chờ từng tiễn con đi xa. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

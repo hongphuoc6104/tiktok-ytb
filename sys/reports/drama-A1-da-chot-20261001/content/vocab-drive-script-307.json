@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "b40bc48f3efe358c26028a335ffe40e3b6d328e57fa62ea27d5de09e73d99a89",
+  "topic": "Học từ vựng tiếng Anh DRIVE (động từ: lái xe) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ DRIVE",
+    "Làm rõ nghĩa lõi \"lái xe\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng DRIVE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại DRIVE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Huy",
+      "appearance": "Minimal ink stick figure with a round white head outlined in black, simple black stick limbs.",
+      "outfit": "Single dark teal short-sleeve shirt and beige trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cơn mỏi mệt bên tay lái",
+      "purpose": "Establish driving fatigue on a hillside road and introduce the first model question with the verb drive.",
+      "action": "Inside parked compact car at quiet rest area, teal-shirt friend at steering wheel yawns and asks mascot in passenger seat; no moving vehicle.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy ngáp dài khi xe đã đỗ lại. Bạn hỏi tôi: \"Can you drive?\" Tôi biết lái xe không? Trước giờ đi cùng, tôi luôn ngồi ghế phụ. Tôi nhìn đôi mắt bạn đã mỏi rồi lấy chiếc túi trên đùi xuống.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "drive",
+          "meaning": "lái xe"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Inside parked compact car at quiet rest area, teal-shirt friend at steering wheel yawns and asks mascot in passenger seat; no moving vehicle. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Inside parked compact car at quiet rest area, teal-shirt friend at steering wheel yawns and asks mascot in passenger seat; no moving vehicle.",
+          "reason": "Establish driving fatigue on a hillside road and introduce the first model question with the verb drive.",
+          "visible_text": [
+            {
+              "text": "Can you drive?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish driving fatigue on a hillside road and introduce the first model question with the verb drive.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy ngáp dài khi xe đã đỗ lại. Bạn hỏi tôi: \"Can you drive?\" Tôi biết lái xe không? Trước giờ đi cùng, tôi luôn ngồi ghế phụ. Tôi nhìn đôi mắt bạn đã mỏi rồi lấy chiếc túi trên đùi xuống.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish driving fatigue on a hillside road and introduce the first model question with the verb drive. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Đề nghị cầm lái",
+      "purpose": "Introduce the second model sentence as an offering to take over driving duties.",
+      "action": "Outside the vehicle, the companion steps out rubbing his tired eyes. The pale-blue shirt mascot walks around the front hood and opens the driver-side door with a reassuring nod.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi có bằng lái, nhưng Huy chưa từng ngồi cạnh khi tôi cầm lái. Tôi bước ra khỏi xe rồi đáp: \"I can drive.\" Tôi lái xe được. Huy nhìn chìa khóa, vẫn chưa đưa ngay.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "drive",
+          "meaning": "lái xe"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Outside the vehicle, the companion steps out rubbing his tired eyes. The pale-blue shirt mascot walks around the front hood and opens the driver-side door with a reassuring nod. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Outside the vehicle, the companion steps out rubbing his tired eyes. The pale-blue shirt mascot walks around the front hood and opens the driver-side door with a reassuring nod.",
+          "reason": "Introduce the second model sentence as an offering to take over driving duties.",
+          "visible_text": [
+            {
+              "text": "drive · lái xe",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the second model sentence as an offering to take over driving duties.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi có bằng lái, nhưng Huy chưa từng ngồi cạnh khi tôi cầm lái. Tôi bước ra khỏi xe rồi đáp: \"I can drive.\" Tôi lái xe được. Huy nhìn chìa khóa, vẫn chưa đưa ngay.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second model sentence as an offering to take over driving duties. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Đổi vị trí",
+      "purpose": "Show the companion relinquishing control and relaxing into the passenger seat.",
+      "action": "The companion in the teal shirt settles into the passenger seat and reclines it slightly, while the mascot adjusts the rearview mirror from the driver seat.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy ngập ngừng vì trước giờ bạn luôn là người cầm lái. Thấy tôi kiên nhẫn đứng đợi, bạn thở phào rồi đổi sang ghế phụ ngả lưng.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "drive",
+          "meaning": "lái xe"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The companion in the teal shirt settles into the passenger seat and reclines it slightly, while the mascot adjusts the rearview mirror from the driver seat. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The companion in the teal shirt settles into the passenger seat and reclines it slightly, while the mascot adjusts the rearview mirror from the driver seat.",
+          "reason": "Show the companion relinquishing control and relaxing into the passenger seat.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the companion relinquishing control and relaxing into the passenger seat.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy ngập ngừng vì trước giờ bạn luôn là người cầm lái. Thấy tôi kiên nhẫn đứng đợi, bạn thở phào rồi đổi sang ghế phụ ngả lưng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the companion relinquishing control and relaxing into the passenger seat. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Luyện câu khẳng định lái xe",
+      "purpose": "Prompt the learner to practice the modal sentence using drive.",
+      "action": "Close shot of the pale-blue shirt mascot behind the steering wheel, turning slightly to speak with confidence toward the resting companion.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn khẳng định mình lái xe được để Huy yên tâm chợp mắt. Bạn nói giúp tôi câu này bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "drive",
+          "meaning": "lái xe"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Close shot of the pale-blue shirt mascot behind the steering wheel, turning slightly to speak with confidence toward the resting companion. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close shot of the pale-blue shirt mascot behind the steering wheel, turning slightly to speak with confidence toward the resting companion.",
+          "reason": "Prompt the learner to practice the modal sentence using drive.",
+          "visible_text": [
+            {
+              "text": "I can ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to practice the modal sentence using drive.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn khẳng định mình lái xe được để Huy yên tâm chợp mắt. Bạn nói giúp tôi câu này bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to practice the modal sentence using drive. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyến xe chiều muộn",
+      "purpose": "Confirm the target sentence and show the car gliding safely down the road while the companion sleeps.",
+      "action": "Same stationary car after seat exchange, mascot holds steering wheel in driver seat, friend secured in passenger seat reclines and closes eyes. Both belts fastened.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I can drive.\" Tôi lái xe được mà. Huy đưa chìa khóa rồi ngồi sang ghế phụ. Bạn kéo dây an toàn, tựa đầu vào ghế. Tôi hỏi sẵn sàng chưa, bạn gật đầu rồi nhắm mắt.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "drive",
+          "meaning": "lái xe"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Same stationary car after seat exchange, mascot holds steering wheel in driver seat, friend secured in passenger seat reclines and closes eyes. Both belts fastened. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same stationary car after seat exchange, mascot holds steering wheel in driver seat, friend secured in passenger seat reclines and closes eyes. Both belts fastened.",
+          "reason": "Confirm the target sentence and show the car gliding safely down the road while the companion sleeps.",
+          "visible_text": [
+            {
+              "text": "I can drive.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm the target sentence and show the car gliding safely down the road while the companion sleeps.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I can drive.\" Tôi lái xe được mà. Huy đưa chìa khóa rồi ngồi sang ghế phụ. Bạn kéo dây an toàn, tựa đầu vào ghế. Tôi hỏi sẵn sàng chưa, bạn gật đầu rồi nhắm mắt.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the target sentence and show the car gliding safely down the road while the companion sleeps. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Huy ngáp dài khi xe đã đỗ lại. Bạn hỏi tôi: \"Can you drive?\" Tôi biết lái xe không? Trước giờ đi cùng, tôi luôn ngồi ghế phụ. Tôi nhìn đôi mắt bạn đã mỏi rồi lấy chiếc túi trên đùi xuống."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Huy ngáp dài khi xe đã đỗ lại. Bạn hỏi tôi: \"Can you drive?\" Tôi biết lái xe không? Trước giờ đi cùng, tôi luôn ngồi ghế phụ. Tôi nhìn đôi mắt bạn đã mỏi rồi lấy chiếc túi trên đùi xuống."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Huy ngáp dài khi xe đã đỗ lại. Bạn hỏi tôi: \"Can you drive?\" Tôi biết lái xe không? Trước giờ đi cùng, tôi luôn ngồi ghế phụ. Tôi nhìn đôi mắt bạn đã mỏi rồi lấy chiếc túi trên đùi xuống."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi có bằng lái, nhưng Huy chưa từng ngồi cạnh khi tôi cầm lái. Tôi bước ra khỏi xe rồi đáp: \"I can drive.\" Tôi lái xe được. Huy nhìn chìa khóa, vẫn chưa đưa ngay."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi có bằng lái, nhưng Huy chưa từng ngồi cạnh khi tôi cầm lái. Tôi bước ra khỏi xe rồi đáp: \"I can drive.\" Tôi lái xe được. Huy nhìn chìa khóa, vẫn chưa đưa ngay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Huy ngập ngừng vì trước giờ bạn luôn là người cầm lái. Thấy tôi kiên nhẫn đứng đợi, bạn thở phào rồi đổi sang ghế phụ ngả lưng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn khẳng định mình lái xe được để Huy yên tâm chợp mắt. Bạn nói giúp tôi câu này bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn khẳng định mình lái xe được để Huy yên tâm chợp mắt. Bạn nói giúp tôi câu này bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"I can drive.\" Tôi lái xe được mà. Huy đưa chìa khóa rồi ngồi sang ghế phụ. Bạn kéo dây an toàn, tựa đầu vào ghế. Tôi hỏi sẵn sàng chưa, bạn gật đầu rồi nhắm mắt."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"I can drive.\" Tôi lái xe được mà. Huy đưa chìa khóa rồi ngồi sang ghế phụ. Bạn kéo dây an toàn, tựa đầu vào ghế. Tôi hỏi sẵn sàng chưa, bạn gật đầu rồi nhắm mắt."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I can drive.\" Tôi lái xe được mà. Huy đưa chìa khóa rồi ngồi sang ghế phụ. Bạn kéo dây an toàn, tựa đầu vào ghế. Tôi hỏi sẵn sàng chưa, bạn gật đầu rồi nhắm mắt."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish driving fatigue on a hillside road and introduce the first model question with the verb drive.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish driving fatigue on a hillside road and introduce the first model question with the verb drive. Next causal state: Outside the vehicle, the companion steps out rubbing his tired eyes. The pale-blue shirt mascot walks around the front hood and opens the driver-side door with a reassuring nod."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the second model sentence as an offering to take over driving duties.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second model sentence as an offering to take over driving duties. Next causal state: The companion in the teal shirt settles into the passenger seat and reclines it slightly, while the mascot adjusts the rearview mirror from the driver seat."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the companion relinquishing control and relaxing into the passenger seat.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the companion relinquishing control and relaxing into the passenger seat. Next causal state: Close shot of the pale-blue shirt mascot behind the steering wheel, turning slightly to speak with confidence toward the resting companion."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to practice the modal sentence using drive.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to practice the modal sentence using drive. Next causal state: Same stationary car after seat exchange, mascot holds steering wheel in driver seat, friend secured in passenger seat reclines and closes eyes. Both belts fastened."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm the target sentence and show the car gliding safely down the road while the companion sleeps.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the target sentence and show the car gliding safely down the road while the companion sleeps. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19333",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Trên cung đường đồi chiều muộn, nhận ra người bạn đồng hành đã kiệt sức vì cầm lái suốt chặng dài, nhân vật chính chủ động đề nghị lái thay để bạn được chợp mắt. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

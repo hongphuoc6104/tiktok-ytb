@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "766eeccd2ac4b7b68c6a666249d2ebfcbb7a1a84f1e2b2e9be9a242cbcd38465",
+  "topic": "Học từ vựng tiếng Anh ABOUT (trạng từ: khoảng chừng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ ABOUT",
+    "Làm rõ nghĩa lõi \"khoảng chừng\" (trạng từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng ABOUT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại ABOUT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Bác Năm",
+      "appearance": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "Single plain short-sleeve orange shirt and minimalist navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Nước dâng bên bến đò",
+      "purpose": "Establish urgency at a rural river crossing with rising evening water.",
+      "action": "Older orange-shirt figure holds a home door handle ready to leave while mascot sits folding a card at nearby table. No boat, river or crowd.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bác Năm giữ tay nắm cửa. Bác sợ chờ tôi gấp thiệp sẽ muộn. \"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Tôi xin bác đợi một chút.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "khoảng chừng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Older orange-shirt figure holds a home door handle ready to leave while mascot sits folding a card at nearby table. No boat, river or crowd. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Older orange-shirt figure holds a home door handle ready to leave while mascot sits folding a card at nearby table. No boat, river or crowd.",
+          "reason": "Establish urgency at a rural river crossing with rising evening water.",
+          "visible_text": [
+            {
+              "text": "It takes about ten minutes.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish urgency at a rural river crossing with rising evening water.",
+          "anchor": {
+            "vi": {
+              "quote": "Bác Năm giữ tay nắm cửa. Bác sợ chờ tôi gấp thiệp sẽ muộn. \"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Tôi xin bác đợi một chút.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish urgency at a rural river crossing with rising evening water. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mất khoảng mười phút",
+      "purpose": "Introduce the first English model of about expressing an approximate time.",
+      "action": "Mascot asks older figure to wait, showing one half-folded blank card and a small stack. No visible clock or exact time label.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn đem thiệp tới buổi gặp cùng bác. Khoảng mười phút là ước lượng, có thể hơn hoặc kém một chút. About trước lượng cho biết tôi chưa hứa đúng từng phút.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "khoảng chừng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot asks older figure to wait, showing one half-folded blank card and a small stack. No visible clock or exact time label. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot asks older figure to wait, showing one half-folded blank card and a small stack. No visible clock or exact time label.",
+          "reason": "Introduce the first English model of about expressing an approximate time.",
+          "visible_text": [
+            {
+              "text": "about · khoảng chừng",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first English model of about expressing an approximate time.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn đem thiệp tới buổi gặp cùng bác. Khoảng mười phút là ước lượng, có thể hơn hoặc kém một chút. About trước lượng cho biết tôi chưa hứa đúng từng phút.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first English model of about expressing an approximate time. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Ước lượng số khách",
+      "purpose": "Provide the second English model of about estimating an approximate head count.",
+      "action": "Older figure gestures toward a roughly sized stack of plain cards without count marks or numbers, still beside home table.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bác nhìn chồng thiệp còn trống: \"We have about twenty cards.\" Chúng ta có khoảng hai mươi tấm. Bác chỉ ước lượng chồng giấy, chưa đếm riêng từng chiếc.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "khoảng chừng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Older figure gestures toward a roughly sized stack of plain cards without count marks or numbers, still beside home table. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Older figure gestures toward a roughly sized stack of plain cards without count marks or numbers, still beside home table.",
+          "reason": "Provide the second English model of about estimating an approximate head count.",
+          "visible_text": [
+            {
+              "text": "We have about twenty cards.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Provide the second English model of about estimating an approximate head count.",
+          "anchor": {
+            "vi": {
+              "quote": "Bác nhìn chồng thiệp còn trống: \"We have about twenty cards.\" Chúng ta có khoảng hai mươi tấm. Bác chỉ ước lượng chồng giấy, chưa đếm riêng từng chiếc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide the second English model of about estimating an approximate head count. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Thong thả đẩy mái chèo",
+      "purpose": "Show the boat departing safely under experienced navigation.",
+      "action": "Both figures sit folding a few cards, larger unused pile left aside; no complete count, measurements or labels.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi chọn gấp số đang cần, giữ phần còn lại cho lần sau. Bác ngồi xuống thử gấp cùng. Hai người không còn nghĩ phải làm xong cả chồng mới ra cửa.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "khoảng chừng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both figures sit folding a few cards, larger unused pile left aside; no complete count, measurements or labels. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both figures sit folding a few cards, larger unused pile left aside; no complete count, measurements or labels.",
+          "reason": "Show the boat departing safely under experienced navigation.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Show the boat departing safely under experienced navigation.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi chọn gấp số đang cần, giữ phần còn lại cho lần sau. Bác ngồi xuống thử gấp cùng. Hai người không còn nghĩ phải làm xong cả chồng mới ra cửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the boat departing safely under experienced navigation. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Khua nước giữa dòng",
+      "purpose": "Prompt learner retrieval of about in an estimation sentence.",
+      "action": "Older figure pauses folding and asks mascot about remaining effort, top safe region left for practice stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bác hỏi phần tôi chọn sẽ mất chừng bao lâu. Bạn nói giúp tôi câu việc đó mất khoảng mười phút bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "khoảng chừng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Older figure pauses folding and asks mascot about remaining effort, top safe region left for practice stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Older figure pauses folding and asks mascot about remaining effort, top safe region left for practice stem.",
+          "reason": "Prompt learner retrieval of about in an estimation sentence.",
+          "visible_text": [
+            {
+              "text": "It takes ___ ten minutes.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt learner retrieval of about in an estimation sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Bác hỏi phần tôi chọn sẽ mất chừng bao lâu. Bạn nói giúp tôi câu việc đó mất khoảng mười phút bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt learner retrieval of about in an estimation sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Cập bến kịp phiên chợ",
+      "purpose": "Verify the learner model and resolve the crossing on schedule.",
+      "action": "Mascot hands older figure one finished blank card; older figure tucks it into his bag at the open door while mascot rises to join.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Gấp xong, tôi đưa bác một tấm để mang cùng. Bác cất thiệp vào túi, gọi tôi đi bên cạnh.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "khoảng chừng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Mascot hands older figure one finished blank card; older figure tucks it into his bag at the open door while mascot rises to join. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot hands older figure one finished blank card; older figure tucks it into his bag at the open door while mascot rises to join.",
+          "reason": "Verify the learner model and resolve the crossing on schedule.",
+          "visible_text": [
+            {
+              "text": "It takes about ten minutes.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Verify the learner model and resolve the crossing on schedule.",
+          "anchor": {
+            "vi": {
+              "quote": "\"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Gấp xong, tôi đưa bác một tấm để mang cùng. Bác cất thiệp vào túi, gọi tôi đi bên cạnh.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Verify the learner model and resolve the crossing on schedule. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bác Năm giữ tay nắm cửa. Bác sợ chờ tôi gấp thiệp sẽ muộn. \"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Tôi xin bác đợi một chút."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bác Năm giữ tay nắm cửa. Bác sợ chờ tôi gấp thiệp sẽ muộn. \"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Tôi xin bác đợi một chút."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Bác Năm giữ tay nắm cửa. Bác sợ chờ tôi gấp thiệp sẽ muộn. \"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Tôi xin bác đợi một chút."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi muốn đem thiệp tới buổi gặp cùng bác. Khoảng mười phút là ước lượng, có thể hơn hoặc kém một chút. About trước lượng cho biết tôi chưa hứa đúng từng phút."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Bác nhìn chồng thiệp còn trống: \"We have about twenty cards.\" Chúng ta có khoảng hai mươi tấm. Bác chỉ ước lượng chồng giấy, chưa đếm riêng từng chiếc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bác nhìn chồng thiệp còn trống: \"We have about twenty cards.\" Chúng ta có khoảng hai mươi tấm. Bác chỉ ước lượng chồng giấy, chưa đếm riêng từng chiếc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi chọn gấp số đang cần, giữ phần còn lại cho lần sau. Bác ngồi xuống thử gấp cùng. Hai người không còn nghĩ phải làm xong cả chồng mới ra cửa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Bác hỏi phần tôi chọn sẽ mất chừng bao lâu. Bạn nói giúp tôi câu việc đó mất khoảng mười phút bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bác hỏi phần tôi chọn sẽ mất chừng bao lâu. Bạn nói giúp tôi câu việc đó mất khoảng mười phút bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Gấp xong, tôi đưa bác một tấm để mang cùng. Bác cất thiệp vào túi, gọi tôi đi bên cạnh."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Gấp xong, tôi đưa bác một tấm để mang cùng. Bác cất thiệp vào túi, gọi tôi đi bên cạnh."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"It takes about ten minutes.\" Việc đó mất khoảng mười phút. Gấp xong, tôi đưa bác một tấm để mang cùng. Bác cất thiệp vào túi, gọi tôi đi bên cạnh."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish urgency at a rural river crossing with rising evening water.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish urgency at a rural river crossing with rising evening water. Next causal state: Mascot asks older figure to wait, showing one half-folded blank card and a small stack. No visible clock or exact time label."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first English model of about expressing an approximate time.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first English model of about expressing an approximate time. Next causal state: Older figure gestures toward a roughly sized stack of plain cards without count marks or numbers, still beside home table."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Provide the second English model of about estimating an approximate head count.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Provide the second English model of about estimating an approximate head count. Next causal state: Both figures sit folding a few cards, larger unused pile left aside; no complete count, measurements or labels."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Show the boat departing safely under experienced navigation.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the boat departing safely under experienced navigation. Next causal state: Older figure pauses folding and asks mascot about remaining effort, top safe region left for practice stem."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt learner retrieval of about in an estimation sentence.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt learner retrieval of about in an estimation sentence. Next causal state: Mascot hands older figure one finished blank card; older figure tucks it into his bag at the open door while mascot rises to join."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Verify the learner model and resolve the crossing on schedule.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Verify the learner model and resolve the crossing on schedule. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18184",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Nam xin bác Năm chờ gấp ít thiệp mang cùng. Hai người nói lượng ước chừng, không cố hoàn thành cả chồng rồi cùng rời nhà. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20272",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Nam xin bác Năm chờ gấp ít thiệp mang cùng. Hai người nói lượng ước chừng, không cố hoàn thành cả chồng rồi cùng rời nhà. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

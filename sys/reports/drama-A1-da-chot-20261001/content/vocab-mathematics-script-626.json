@@ -1,0 +1,591 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "fba94ea49394fa171ffe651771d5eaf8b94dd88b424d275617cdbbdd7c553cb3",
+  "topic": "Học từ vựng tiếng Anh MATHEMATICS (danh từ: toán học) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ MATHEMATICS",
+    "Làm rõ nghĩa lõi \"toán học\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng MATHEMATICS, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại MATHEMATICS, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Lan",
+      "appearance": "A minimal stick figure with a round white head and a simple red hair ribbon line.",
+      "outfit": "Exactly one plain dark grey short-sleeve shirt and minimal navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Khoản tiền bị lệch",
+      "purpose": "Set up the frustrating real-life bookkeeping error.",
+      "action": "A stick figure with a small ribbon sits clutching her head over an open ledger beside stacks of second-hand books and cash coins.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lan lật sổ, vẫn thiếu một khoản. Hội chợ sách sắp dọn bàn mà tiền ghi chưa khớp. Minh ngồi xuống: \"Do you like mathematics?\" Bạn có thích toán học không?",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mathematics",
+          "meaning": "toán học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "A stick figure with a small ribbon sits clutching her head over an open ledger beside stacks of second-hand books and cash coins. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "A stick figure with a small ribbon sits clutching her head over an open ledger beside stacks of second-hand books and cash coins.",
+          "reason": "Set up the frustrating real-life bookkeeping error.",
+          "visible_text": [
+            {
+              "text": "Do you like mathematics?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Set up the frustrating real-life bookkeeping error.",
+          "anchor": {
+            "vi": {
+              "quote": "Lan lật sổ, vẫn thiếu một khoản. Hội chợ sách sắp dọn bàn mà tiền ghi chưa khớp. Minh ngồi xuống: \"Do you like mathematics?\" Bạn có thích toán học không?",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Set up the frustrating real-life bookkeeping error. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Hỏi về môn học",
+      "purpose": "Model the first English sentence inquiring about feelings toward mathematics.",
+      "action": "The canonical mascot in pale-blue shirt pulls up a wooden stool beside the seated companion, looking at the abstract non-legible number columns.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lan lắc đầu, ngại những trang đầy số. Minh bảo mình thích, xin cùng kiểm từng phần nhỏ. Hai đứa giữ sách đã bán một bên, giấy ghi tiền một bên.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mathematics",
+          "meaning": "toán học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The canonical mascot in pale-blue shirt pulls up a wooden stool beside the seated companion, looking at the abstract non-legible number columns. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The canonical mascot in pale-blue shirt pulls up a wooden stool beside the seated companion, looking at the abstract non-legible number columns.",
+          "reason": "Model the first English sentence inquiring about feelings toward mathematics.",
+          "visible_text": [
+            {
+              "text": "mathematics · toán học",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model the first English sentence inquiring about feelings toward mathematics.",
+          "anchor": {
+            "vi": {
+              "quote": "Lan lắc đầu, ngại những trang đầy số. Minh bảo mình thích, xin cùng kiểm từng phần nhỏ. Hai đứa giữ sách đã bán một bên, giấy ghi tiền một bên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Model the first English sentence inquiring about feelings toward mathematics. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Trật tự của những con số",
+      "purpose": "Demonstrate that mathematics brings order and clarity to practical life.",
+      "action": "Close view of neat pencil checkmarks next to two balanced columns of non-legible marks in the notebook.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Họ dùng phép cộng của môn toán để kiểm lại số đã ghi. Lan tìm dưới chồng sách, thấy một mẩu giấy mình chưa nhập vào sổ. Minh chờ bạn tự thêm.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mathematics",
+          "meaning": "toán học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Close view of neat pencil checkmarks next to two balanced columns of non-legible marks in the notebook. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close view of neat pencil checkmarks next to two balanced columns of non-legible marks in the notebook.",
+          "reason": "Demonstrate that mathematics brings order and clarity to practical life.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Demonstrate that mathematics brings order and clarity to practical life.",
+          "anchor": {
+            "vi": {
+              "quote": "Họ dùng phép cộng của môn toán để kiểm lại số đã ghi. Lan tìm dưới chồng sách, thấy một mẩu giấy mình chưa nhập vào sổ. Minh chờ bạn tự thêm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Demonstrate that mathematics brings order and clarity to practical life. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Môn học yêu thích",
+      "purpose": "Deliver the second English model sentence stating a personal preference for mathematics.",
+      "action": "The canonical mascot in pale-blue shirt points happily to a small retrieved receipt slip pinned to the page margin.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Mathematics is my favorite subject.\" Toán là môn tôi thích nhất. Minh trả lời khi Lan hỏi sao cậu chịu ngồi giúp. Cô đẩy sổ ra giữa để kiểm cùng.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mathematics",
+          "meaning": "toán học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "The canonical mascot in pale-blue shirt points happily to a small retrieved receipt slip pinned to the page margin. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The canonical mascot in pale-blue shirt points happily to a small retrieved receipt slip pinned to the page margin.",
+          "reason": "Deliver the second English model sentence stating a personal preference for mathematics.",
+          "visible_text": [
+            {
+              "text": "Mathematics is my favorite subject.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Deliver the second English model sentence stating a personal preference for mathematics.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Mathematics is my favorite subject.\" Toán là môn tôi thích nhất. Minh trả lời khi Lan hỏi sao cậu chịu ngồi giúp. Cô đẩy sổ ra giữa để kiểm cùng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the second English model sentence stating a personal preference for mathematics. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hỏi Lan về môn toán",
+      "purpose": "Prompt the learner to ask the question with mathematics.",
+      "action": "The companion looks up from the open ledger with an attentive expression, pen resting on the desk.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lan muốn hỏi lại sở thích của Minh trước khi rủ bạn chuẩn bị hội chợ sau. Bạn nói giúp cô câu bạn có thích toán học không nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mathematics",
+          "meaning": "toán học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The companion looks up from the open ledger with an attentive expression, pen resting on the desk. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The companion looks up from the open ledger with an attentive expression, pen resting on the desk.",
+          "reason": "Prompt the learner to ask the question with mathematics.",
+          "visible_text": [
+            {
+              "text": "Do you like ___?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to ask the question with mathematics.",
+          "anchor": {
+            "vi": {
+              "quote": "Lan muốn hỏi lại sở thích của Minh trước khi rủ bạn chuẩn bị hội chợ sau. Bạn nói giúp cô câu bạn có thích toán học không nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to ask the question with mathematics. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Khớp từng con số",
+      "purpose": "Provide full response confirmation and resolve with balanced books and relief.",
+      "action": "Both figures close the ledger with the loose receipt securely tucked inside; books remain stacked on the same fair table. No readable prices, sums or receipt writing.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Do you like mathematics?\" Bạn có thích toán học không? Minh gật đầu. Lan kẹp mẩu giấy vào sổ, hẹn lần sau giữ mọi ghi chép cùng chỗ ngay từ đầu.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mathematics",
+          "meaning": "toán học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both figures close the ledger with the loose receipt securely tucked inside; books remain stacked on the same fair table. No readable prices, sums or receipt writing. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both figures close the ledger with the loose receipt securely tucked inside; books remain stacked on the same fair table. No readable prices, sums or receipt writing.",
+          "reason": "Provide full response confirmation and resolve with balanced books and relief.",
+          "visible_text": [
+            {
+              "text": "Do you like mathematics?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Provide full response confirmation and resolve with balanced books and relief.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Do you like mathematics?\" Bạn có thích toán học không? Minh gật đầu. Lan kẹp mẩu giấy vào sổ, hẹn lần sau giữ mọi ghi chép cùng chỗ ngay từ đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide full response confirmation and resolve with balanced books and relief. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Lan lật sổ, vẫn thiếu một khoản. Hội chợ sách sắp dọn bàn mà tiền ghi chưa khớp. Minh ngồi xuống: \"Do you like mathematics?\" Bạn có thích toán học không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Lan lật sổ, vẫn thiếu một khoản. Hội chợ sách sắp dọn bàn mà tiền ghi chưa khớp. Minh ngồi xuống: \"Do you like mathematics?\" Bạn có thích toán học không?"
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Lan lật sổ, vẫn thiếu một khoản. Hội chợ sách sắp dọn bàn mà tiền ghi chưa khớp. Minh ngồi xuống: \"Do you like mathematics?\" Bạn có thích toán học không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Lan lắc đầu, ngại những trang đầy số. Minh bảo mình thích, xin cùng kiểm từng phần nhỏ. Hai đứa giữ sách đã bán một bên, giấy ghi tiền một bên."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Họ dùng phép cộng của môn toán để kiểm lại số đã ghi. Lan tìm dưới chồng sách, thấy một mẩu giấy mình chưa nhập vào sổ. Minh chờ bạn tự thêm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"Mathematics is my favorite subject.\" Toán là môn tôi thích nhất. Minh trả lời khi Lan hỏi sao cậu chịu ngồi giúp. Cô đẩy sổ ra giữa để kiểm cùng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"Mathematics is my favorite subject.\" Toán là môn tôi thích nhất. Minh trả lời khi Lan hỏi sao cậu chịu ngồi giúp. Cô đẩy sổ ra giữa để kiểm cùng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Lan muốn hỏi lại sở thích của Minh trước khi rủ bạn chuẩn bị hội chợ sau. Bạn nói giúp cô câu bạn có thích toán học không nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Lan muốn hỏi lại sở thích của Minh trước khi rủ bạn chuẩn bị hội chợ sau. Bạn nói giúp cô câu bạn có thích toán học không nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"Do you like mathematics?\" Bạn có thích toán học không? Minh gật đầu. Lan kẹp mẩu giấy vào sổ, hẹn lần sau giữ mọi ghi chép cùng chỗ ngay từ đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"Do you like mathematics?\" Bạn có thích toán học không? Minh gật đầu. Lan kẹp mẩu giấy vào sổ, hẹn lần sau giữ mọi ghi chép cùng chỗ ngay từ đầu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Do you like mathematics?\" Bạn có thích toán học không? Minh gật đầu. Lan kẹp mẩu giấy vào sổ, hẹn lần sau giữ mọi ghi chép cùng chỗ ngay từ đầu."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Set up the frustrating real-life bookkeeping error.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Set up the frustrating real-life bookkeeping error. Next causal state: The canonical mascot in pale-blue shirt pulls up a wooden stool beside the seated companion, looking at the abstract non-legible number columns."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the first English sentence inquiring about feelings toward mathematics.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Model the first English sentence inquiring about feelings toward mathematics. Next causal state: Close view of neat pencil checkmarks next to two balanced columns of non-legible marks in the notebook."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Demonstrate that mathematics brings order and clarity to practical life.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Demonstrate that mathematics brings order and clarity to practical life. Next causal state: The canonical mascot in pale-blue shirt points happily to a small retrieved receipt slip pinned to the page margin."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Deliver the second English model sentence stating a personal preference for mathematics.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Deliver the second English model sentence stating a personal preference for mathematics. Next causal state: The companion looks up from the open ledger with an attentive expression, pen resting on the desk."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to ask the question with mathematics.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to ask the question with mathematics. Next causal state: Both figures close the ledger with the loose receipt securely tucked inside; books remain stacked on the same fair table. No readable prices, sums or receipt writing."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Provide full response confirmation and resolve with balanced books and relief.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Provide full response confirmation and resolve with balanced books and relief. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18104",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Lan bối rối vì sổ thu chi hội chợ sách cũ bị lệch tiền. Minh cùng bạn sắp xếp lại các con số theo trật tự toán học để giải quyết vấn đề. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "19550",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Lan bối rối vì sổ thu chi hội chợ sách cũ bị lệch tiền. Minh cùng bạn sắp xếp lại các con số theo trật tự toán học để giải quyết vấn đề. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

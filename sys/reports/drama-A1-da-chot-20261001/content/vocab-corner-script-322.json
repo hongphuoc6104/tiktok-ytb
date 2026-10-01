@@ -1,0 +1,511 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "128ca1b35e1f43d90025eec4b222b0e0d22539c4afdc15cb2abe14bd188e0b5b",
+  "topic": "Học từ vựng tiếng Anh CORNER (danh từ: góc phố) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CORNER",
+    "Làm rõ nghĩa lõi \"góc phố\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CORNER, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CORNER, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Bạn hẹn",
+      "appearance": "Minimalist stick figure with round white head outlined in dark navy, solid black oval eyes.",
+      "outfit": "Single beige short-sleeve shirt and dark stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Vướng mắc nhỏ",
+      "purpose": "Establish the immediate personal want and selected sense.",
+      "action": "Street corner view at an open pedestrian crossroads. Dry leaves blow across the sidewalk curb. The mascot glances down at a text message on a phone screen.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Gió thổi bay mấy tờ rơi nơi ngã tư. Tôi nhìn mẩu tin nhắn hẹn của bạn hiện trên màn hình điện thoại: \"Meet me at the corner.\"",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "corner",
+          "meaning": "góc phố"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Street corner view at an open pedestrian crossroads. Dry leaves blow across the sidewalk curb. The mascot glances down at a text message on a phone screen. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Street corner view at an open pedestrian crossroads. Dry leaves blow across the sidewalk curb. The mascot glances down at a text message on a phone screen.",
+          "reason": "Establish the immediate personal want and selected sense.",
+          "visible_text": [
+            {
+              "text": "Meet me at the corner.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the immediate personal want and selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Gió thổi bay mấy tờ rơi nơi ngã tư. Tôi nhìn mẩu tin nhắn hẹn của bạn hiện trên màn hình điện thoại: \"Meet me at the corner.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the immediate personal want and selected sense. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Điều người kia muốn",
+      "purpose": "Advance the same relationship and clarify the sense through a related model.",
+      "action": "Mascot at pedestrian street corner looks across two adjoining shop fronts, beige-shirt friend at corner doorway raises one paper bag; no café interior.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi nhìn hai cửa tiệm giống nhau ở ngã tư, chẳng biết bạn ở phía nào. Bạn nhắn thêm: \"The shop is on the corner.\" Cửa tiệm nằm ở góc phố. Tôi xoay người, cuối cùng thấy bạn giơ chiếc túi giấy lên.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "corner",
+          "meaning": "góc phố"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot at pedestrian street corner looks across two adjoining shop fronts, beige-shirt friend at corner doorway raises one paper bag; no café interior. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot at pedestrian street corner looks across two adjoining shop fronts, beige-shirt friend at corner doorway raises one paper bag; no café interior.",
+          "reason": "Advance the same relationship and clarify the sense through a related model.",
+          "visible_text": [
+            {
+              "text": "corner · góc phố",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Advance the same relationship and clarify the sense through a related model.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi nhìn hai cửa tiệm giống nhau ở ngã tư, chẳng biết bạn ở phía nào. Bạn nhắn thêm: \"The shop is on the corner.\" Cửa tiệm nằm ở góc phố. Tôi xoay người, cuối cùng thấy bạn giơ chiếc túi giấy lên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Advance the same relationship and clarify the sense through a related model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hành động làm đổi chuyện",
+      "purpose": "Show a meaningful small action and consequence.",
+      "action": "Two friends together at same shop street corner, beige friend opens single bag to reveal two wrapped sandwiches, no extreme cold.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi tới gần mới thấy túi đựng hai ổ bánh mì. Bạn bảo đã chọn loại tôi thích, nhưng sợ đứng chờ lâu thì bánh nguội mất. Tôi nhận một ổ, hỏi sao không vào trong ngồi.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "corner",
+          "meaning": "góc phố"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Two friends together at same shop street corner, beige friend opens single bag to reveal two wrapped sandwiches, no extreme cold. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two friends together at same shop street corner, beige friend opens single bag to reveal two wrapped sandwiches, no extreme cold.",
+          "reason": "Show a meaningful small action and consequence.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show a meaningful small action and consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi tới gần mới thấy túi đựng hai ổ bánh mì. Bạn bảo đã chọn loại tôi thích, nhưng sợ đứng chờ lâu thì bánh nguội mất. Tôi nhận một ổ, hỏi sao không vào trong ngồi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show a meaningful small action and consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần nói",
+      "purpose": "Retrieve one full story-linked sentence, then hold before the answer.",
+      "action": "Medium shot. The mascot steps forward onto the corner pavement, looking with sheepish humility at the friend.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lần sau bạn muốn hẹn đúng góc phố này. Bạn nói giúp bạn ấy câu gặp tôi ở góc phố bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "corner",
+          "meaning": "góc phố"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Medium shot. The mascot steps forward onto the corner pavement, looking with sheepish humility at the friend. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot. The mascot steps forward onto the corner pavement, looking with sheepish humility at the friend.",
+          "reason": "Retrieve one full story-linked sentence, then hold before the answer.",
+          "visible_text": [
+            {
+              "text": "Meet me at the ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Retrieve one full story-linked sentence, then hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Lần sau bạn muốn hẹn đúng góc phố này. Bạn nói giúp bạn ấy câu gặp tôi ở góc phố bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Retrieve one full story-linked sentence, then hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả gần",
+      "purpose": "Give the correct response and an earned local physical ending.",
+      "action": "Two friends step under same corner-shop awning with sandwiches, single paper bag held between them. Mascot puts phone away.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Meet me at the corner.\" Tôi lưu lại lời hẹn rồi đứng cạnh bạn ăn bánh. Gió vẫn thổi qua ngã tư. Bạn kéo tôi vào phía trong mái hiên, để hai đứa khỏi phải giữ túi giấy mãi.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "corner",
+          "meaning": "góc phố"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Two friends step under same corner-shop awning with sandwiches, single paper bag held between them. Mascot puts phone away. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two friends step under same corner-shop awning with sandwiches, single paper bag held between them. Mascot puts phone away.",
+          "reason": "Give the correct response and an earned local physical ending.",
+          "visible_text": [
+            {
+              "text": "Meet me at the corner.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and an earned local physical ending.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Meet me at the corner.\" Tôi lưu lại lời hẹn rồi đứng cạnh bạn ăn bánh. Gió vẫn thổi qua ngã tư. Bạn kéo tôi vào phía trong mái hiên, để hai đứa khỏi phải giữ túi giấy mãi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the correct response and an earned local physical ending. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Gió thổi bay mấy tờ rơi nơi ngã tư. Tôi nhìn mẩu tin nhắn hẹn của bạn hiện trên màn hình điện thoại: \"Meet me at the corner.\""
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Gió thổi bay mấy tờ rơi nơi ngã tư. Tôi nhìn mẩu tin nhắn hẹn của bạn hiện trên màn hình điện thoại: \"Meet me at the corner.\""
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Gió thổi bay mấy tờ rơi nơi ngã tư. Tôi nhìn mẩu tin nhắn hẹn của bạn hiện trên màn hình điện thoại: \"Meet me at the corner.\""
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi nhìn hai cửa tiệm giống nhau ở ngã tư, chẳng biết bạn ở phía nào. Bạn nhắn thêm: \"The shop is on the corner.\" Cửa tiệm nằm ở góc phố. Tôi xoay người, cuối cùng thấy bạn giơ chiếc túi giấy lên."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi nhìn hai cửa tiệm giống nhau ở ngã tư, chẳng biết bạn ở phía nào. Bạn nhắn thêm: \"The shop is on the corner.\" Cửa tiệm nằm ở góc phố. Tôi xoay người, cuối cùng thấy bạn giơ chiếc túi giấy lên."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi tới gần mới thấy túi đựng hai ổ bánh mì. Bạn bảo đã chọn loại tôi thích, nhưng sợ đứng chờ lâu thì bánh nguội mất. Tôi nhận một ổ, hỏi sao không vào trong ngồi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Lần sau bạn muốn hẹn đúng góc phố này. Bạn nói giúp bạn ấy câu gặp tôi ở góc phố bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Lần sau bạn muốn hẹn đúng góc phố này. Bạn nói giúp bạn ấy câu gặp tôi ở góc phố bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Meet me at the corner.\" Tôi lưu lại lời hẹn rồi đứng cạnh bạn ăn bánh. Gió vẫn thổi qua ngã tư. Bạn kéo tôi vào phía trong mái hiên, để hai đứa khỏi phải giữ túi giấy mãi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Meet me at the corner.\" Tôi lưu lại lời hẹn rồi đứng cạnh bạn ăn bánh. Gió vẫn thổi qua ngã tư. Bạn kéo tôi vào phía trong mái hiên, để hai đứa khỏi phải giữ túi giấy mãi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Meet me at the corner.\" Tôi lưu lại lời hẹn rồi đứng cạnh bạn ăn bánh. Gió vẫn thổi qua ngã tư. Bạn kéo tôi vào phía trong mái hiên, để hai đứa khỏi phải giữ túi giấy mãi."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the immediate personal want and selected sense.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the immediate personal want and selected sense. Next causal state: Mascot at pedestrian street corner looks across two adjoining shop fronts, beige-shirt friend at corner doorway raises one paper bag; no café interior."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Advance the same relationship and clarify the sense through a related model.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Advance the same relationship and clarify the sense through a related model. Next causal state: Two friends together at same shop street corner, beige friend opens single bag to reveal two wrapped sandwiches, no extreme cold."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show a meaningful small action and consequence.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show a meaningful small action and consequence. Next causal state: Medium shot. The mascot steps forward onto the corner pavement, looking with sheepish humility at the friend."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Retrieve one full story-linked sentence, then hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Retrieve one full story-linked sentence, then hold before the answer. Next causal state: Two friends step under same corner-shop awning with sandwiches, single paper bag held between them. Mascot puts phone away."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and an earned local physical ending.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the correct response and an earned local physical ending. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19438",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Hai cửa tiệm làm tôi nhầm góc hẹn; bạn giơ túi bánh cho tôi nhận ra rồi hai đứa ăn dưới mái hiên. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "19716",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hai cửa tiệm làm tôi nhầm góc hẹn; bạn giơ túi bánh cho tôi nhận ra rồi hai đứa ăn dưới mái hiên. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

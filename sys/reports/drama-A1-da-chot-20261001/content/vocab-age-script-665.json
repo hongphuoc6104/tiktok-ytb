@@ -1,0 +1,613 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "0f972f662d2aca1971808ae3d872a7f7c434b1e859bf91f66f30c578c827e10f",
+  "topic": "Học từ vựng tiếng Anh AGE (danh từ: tuổi) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ AGE",
+    "Làm rõ nghĩa lõi \"tuổi\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng AGE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại AGE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Linh",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "A single plain purple short-sleeve shirt (#B39DDB)."
+    },
+    {
+      "id": "CH03",
+      "name": "Mèo con",
+      "appearance": "Small minimal ink kitten with round simple head, two solid dark oval eyes, simple triangular ears, tiny tail and minimal line paws; no clothing or human torso.",
+      "outfit": "No clothing, plain soft grey coat."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đến trạm thú y",
+      "purpose": "Establish the rescue context and the need for veterinary registration.",
+      "action": "Mascot and purple-shirt friend sit at a home table with a simple kitten in basket and blank pet information card. No clinic or medical chart.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Linh bỏ trống ô tuổi của mèo. Tôi mới nhận nuôi nên chẳng có giấy ghi. \"What is its age?\" Tuổi của nó là bao nhiêu? Bạn hỏi khi làm thẻ cho tôi.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "age",
+          "meaning": "tuổi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and purple-shirt friend sit at a home table with a simple kitten in basket and blank pet information card. No clinic or medical chart. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and purple-shirt friend sit at a home table with a simple kitten in basket and blank pet information card. No clinic or medical chart.",
+          "reason": "Establish the rescue context and the need for veterinary registration.",
+          "visible_text": [
+            {
+              "text": "What is its age?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the rescue context and the need for veterinary registration.",
+          "anchor": {
+            "vi": {
+              "quote": "Linh bỏ trống ô tuổi của mèo. Tôi mới nhận nuôi nên chẳng có giấy ghi. \"What is its age?\" Tuổi của nó là bao nhiêu? Bạn hỏi khi làm thẻ cho tôi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the rescue context and the need for veterinary registration. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Hỏi tuổi chú mèo",
+      "purpose": "Introduce the first English model asking for the age of the animal.",
+      "action": "Friend points to one empty box on blank pet card, mascot holds basket edge looking uncertain. Cat stays inside basket.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi ôm chú mèo, nhớ chỉ biết ngày mình đón nó. Linh bảo ô này hỏi nó bao nhiêu tuổi, không hỏi đã ở nhà tôi bao lâu. Tôi gật, nhìn lại chỗ trống.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "age",
+          "meaning": "tuổi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend points to one empty box on blank pet card, mascot holds basket edge looking uncertain. Cat stays inside basket. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend points to one empty box on blank pet card, mascot holds basket edge looking uncertain. Cat stays inside basket.",
+          "reason": "Introduce the first English model asking for the age of the animal.",
+          "visible_text": [
+            {
+              "text": "age · tuổi",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first English model asking for the age of the animal.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi ôm chú mèo, nhớ chỉ biết ngày mình đón nó. Linh bảo ô này hỏi nó bao nhiêu tuổi, không hỏi đã ở nhà tôi bao lâu. Tôi gật, nhìn lại chỗ trống.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first English model asking for the age of the animal. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Kiểm tra hàm răng sữa",
+      "purpose": "Show the gentle physical examination to estimate the animal's age.",
+      "action": "Mascot stops friend's pencil above blank box before an invented number is entered. Kitten remains in basket, no teeth check.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn định ghi số mình đoán. Tôi giữ bút lại, không muốn thẻ mang một con số sai. Mèo vẫn nằm trong giỏ, hai đứa chưa có thông tin để điền chắc.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "age",
+          "meaning": "tuổi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot stops friend's pencil above blank box before an invented number is entered. Kitten remains in basket, no teeth check. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stops friend's pencil above blank box before an invented number is entered. Kitten remains in basket, no teeth check.",
+          "reason": "Show the gentle physical examination to estimate the animal's age.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the gentle physical examination to estimate the animal's age.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn định ghi số mình đoán. Tôi giữ bút lại, không muốn thẻ mang một con số sai. Mèo vẫn nằm trong giỏ, hai đứa chưa có thông tin để điền chắc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the gentle physical examination to estimate the animal's age. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chưa biết tuổi thật",
+      "purpose": "Introduce the second English model stating lack of information about age.",
+      "action": "Mascot explains uncertainty while friend puts pencil aside. Same blank card, no age diagnosis.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I do not know its age.\" Tôi không biết tuổi của nó. Tôi nói rõ với Linh, xin để trống và hỏi người đã chăm mèo trước. Bạn đặt bút sang bên.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "age",
+          "meaning": "tuổi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot explains uncertainty while friend puts pencil aside. Same blank card, no age diagnosis. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot explains uncertainty while friend puts pencil aside. Same blank card, no age diagnosis.",
+          "reason": "Introduce the second English model stating lack of information about age.",
+          "visible_text": [
+            {
+              "text": "I do not know its age.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Introduce the second English model stating lack of information about age.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I do not know its age.\" Tôi không biết tuổi của nó. Tôi nói rõ với Linh, xin để trống và hỏi người đã chăm mèo trước. Bạn đặt bút sang bên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second English model stating lack of information about age. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Điền vào trang sổ",
+      "purpose": "Prompt the learner to produce the question with 'age' to finalize the entry.",
+      "action": "Friend pauses beside blank card listening to mascot; top safe area for age-gap practice.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Linh cần nghe lại phần tôi chưa biết để khỏi tự điền số. Bạn nói giúp tôi câu tôi không biết tuổi của nó bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "age",
+          "meaning": "tuổi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Friend pauses beside blank card listening to mascot; top safe area for age-gap practice. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend pauses beside blank card listening to mascot; top safe area for age-gap practice.",
+          "reason": "Prompt the learner to produce the question with 'age' to finalize the entry.",
+          "visible_text": [
+            {
+              "text": "I do not know its ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to produce the question with 'age' to finalize the entry.",
+          "anchor": {
+            "vi": {
+              "quote": "Linh cần nghe lại phần tôi chưa biết để khỏi tự điền số. Bạn nói giúp tôi câu tôi không biết tuổi của nó bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to produce the question with 'age' to finalize the entry. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Ba tháng tuổi",
+      "purpose": "Confirm the correct question and resolve the medical visit with an official, caring age estimate.",
+      "action": "Mascot places partly completed card with non-letter marks and one still-empty box beside kitten basket. No age number or medical care scene.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I do not know its age.\" Tôi không biết tuổi của nó. Linh để ô ấy trống, ghi phần còn biết. Tôi mang thẻ về cạnh giỏ mèo, nhớ việc cần hỏi thêm.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "age",
+          "meaning": "tuổi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Mascot places partly completed card with non-letter marks and one still-empty box beside kitten basket. No age number or medical care scene. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot places partly completed card with non-letter marks and one still-empty box beside kitten basket. No age number or medical care scene.",
+          "reason": "Confirm the correct question and resolve the medical visit with an official, caring age estimate.",
+          "visible_text": [
+            {
+              "text": "I do not know its age.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm the correct question and resolve the medical visit with an official, caring age estimate.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I do not know its age.\" Tôi không biết tuổi của nó. Linh để ô ấy trống, ghi phần còn biết. Tôi mang thẻ về cạnh giỏ mèo, nhớ việc cần hỏi thêm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the correct question and resolve the medical visit with an official, caring age estimate. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Linh bỏ trống ô tuổi của mèo. Tôi mới nhận nuôi nên chẳng có giấy ghi. \"What is its age?\" Tuổi của nó là bao nhiêu? Bạn hỏi khi làm thẻ cho tôi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Linh bỏ trống ô tuổi của mèo. Tôi mới nhận nuôi nên chẳng có giấy ghi. \"What is its age?\" Tuổi của nó là bao nhiêu? Bạn hỏi khi làm thẻ cho tôi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Linh bỏ trống ô tuổi của mèo. Tôi mới nhận nuôi nên chẳng có giấy ghi. \"What is its age?\" Tuổi của nó là bao nhiêu? Bạn hỏi khi làm thẻ cho tôi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi ôm chú mèo, nhớ chỉ biết ngày mình đón nó. Linh bảo ô này hỏi nó bao nhiêu tuổi, không hỏi đã ở nhà tôi bao lâu. Tôi gật, nhìn lại chỗ trống."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Bạn định ghi số mình đoán. Tôi giữ bút lại, không muốn thẻ mang một con số sai. Mèo vẫn nằm trong giỏ, hai đứa chưa có thông tin để điền chắc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"I do not know its age.\" Tôi không biết tuổi của nó. Tôi nói rõ với Linh, xin để trống và hỏi người đã chăm mèo trước. Bạn đặt bút sang bên."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"I do not know its age.\" Tôi không biết tuổi của nó. Tôi nói rõ với Linh, xin để trống và hỏi người đã chăm mèo trước. Bạn đặt bút sang bên."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Linh cần nghe lại phần tôi chưa biết để khỏi tự điền số. Bạn nói giúp tôi câu tôi không biết tuổi của nó bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Linh cần nghe lại phần tôi chưa biết để khỏi tự điền số. Bạn nói giúp tôi câu tôi không biết tuổi của nó bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"I do not know its age.\" Tôi không biết tuổi của nó. Linh để ô ấy trống, ghi phần còn biết. Tôi mang thẻ về cạnh giỏ mèo, nhớ việc cần hỏi thêm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"I do not know its age.\" Tôi không biết tuổi của nó. Linh để ô ấy trống, ghi phần còn biết. Tôi mang thẻ về cạnh giỏ mèo, nhớ việc cần hỏi thêm."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I do not know its age.\" Tôi không biết tuổi của nó. Linh để ô ấy trống, ghi phần còn biết. Tôi mang thẻ về cạnh giỏ mèo, nhớ việc cần hỏi thêm."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the rescue context and the need for veterinary registration.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the rescue context and the need for veterinary registration. Next causal state: Friend points to one empty box on blank pet card, mascot holds basket edge looking uncertain. Cat stays inside basket."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first English model asking for the age of the animal.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first English model asking for the age of the animal. Next causal state: Mascot stops friend's pencil above blank box before an invented number is entered. Kitten remains in basket, no teeth check."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the gentle physical examination to estimate the animal's age.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the gentle physical examination to estimate the animal's age. Next causal state: Mascot explains uncertainty while friend puts pencil aside. Same blank card, no age diagnosis."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Introduce the second English model stating lack of information about age.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second English model stating lack of information about age. Next causal state: Friend pauses beside blank card listening to mascot; top safe area for age-gap practice."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to produce the question with 'age' to finalize the entry.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to produce the question with 'age' to finalize the entry. Next causal state: Mascot places partly completed card with non-letter marks and one still-empty box beside kitten basket. No age number or medical care scene."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm the correct question and resolve the medical visit with an official, caring age estimate.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the correct question and resolve the medical visit with an official, caring age estimate. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18309",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Tôi chưa biết tuổi mèo mới nhận nuôi và ngăn bạn ghi số đoán trên thẻ; hai người giữ ô tuổi trống để hỏi lại nguồn biết rõ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20962",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi chưa biết tuổi mèo mới nhận nuôi và ngăn bạn ghi số đoán trên thẻ; hai người giữ ô tuổi trống để hỏi lại nguồn biết rõ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

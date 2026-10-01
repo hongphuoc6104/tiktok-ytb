@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "7604e00054b690e6a2457c130107c120745718602f21a9f14bd6ac7529dc23c9",
+  "topic": "Học từ vựng tiếng Anh WARM (tính từ: ấm) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ WARM",
+    "Làm rõ nghĩa lõi \"ấm\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng WARM, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại WARM, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Chị Hà",
+      "appearance": "Minimal stick figure older sister with a round white head outlined in dark navy and simple facial dots.",
+      "outfit": "Single pale slate purple long-sleeve shirt and dark navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Khói mỏng trên ly gốm",
+      "purpose": "Introduce the gentle, safe temperature of the beverage with the first model sentence.",
+      "action": "Sister places ceramic milk mug on porch table, mascot chooses to take handle himself; single pale-blue shirt, no forced hot touch.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chị Hà đặt ly gốm trước mặt tôi. Tôi vừa đi về, tay còn lạnh, nhưng vẫn chờ sữa nguội. Chị bảo: \"The milk is warm.\" Sữa ấm. Chị để tôi tự cầm quai ly, hỏi có vừa ý không.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "warm",
+          "meaning": "ấm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Sister places ceramic milk mug on porch table, mascot chooses to take handle himself; single pale-blue shirt, no forced hot touch. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Sister places ceramic milk mug on porch table, mascot chooses to take handle himself; single pale-blue shirt, no forced hot touch.",
+          "reason": "Introduce the gentle, safe temperature of the beverage with the first model sentence.",
+          "visible_text": [
+            {
+              "text": "The milk is warm.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce the gentle, safe temperature of the beverage with the first model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Chị Hà đặt ly gốm trước mặt tôi. Tôi vừa đi về, tay còn lạnh, nhưng vẫn chờ sữa nguội. Chị bảo: \"The milk is warm.\" Sữa ấm. Chị để tôi tự cầm quai ly, hỏi có vừa ý không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the gentle, safe temperature of the beverage with the first model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Bàn tay ấm lại",
+      "purpose": "Demonstrate the comfortable soothing sensation of warmth with the second model sentence.",
+      "action": "The mascot cradles the mug, then touches warm palms to cool cheeks with a relaxed posture.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi cầm ly, thấy độ ấm vừa ý với mình. \"My hands are warm.\" Tay tôi ấm rồi. Chị Hà lấy một ly nữa, hỏi hôm nay tôi đã đi đâu mà về muộn thế.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "warm",
+          "meaning": "ấm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The mascot cradles the mug, then touches warm palms to cool cheeks with a relaxed posture. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The mascot cradles the mug, then touches warm palms to cool cheeks with a relaxed posture.",
+          "reason": "Demonstrate the comfortable soothing sensation of warmth with the second model sentence.",
+          "visible_text": [
+            {
+              "text": "warm · ấm",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Demonstrate the comfortable soothing sensation of warmth with the second model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi cầm ly, thấy độ ấm vừa ý với mình. \"My hands are warm.\" Tay tôi ấm rồi. Chị Hà lấy một ly nữa, hỏi hôm nay tôi đã đi đâu mà về muộn thế.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Demonstrate the comfortable soothing sensation of warmth with the second model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Phút lặng bên thềm",
+      "purpose": "Establish a quiet moment of sibling companionship.",
+      "action": "The sister pours herself a matching ceramic mug and sits on the wooden porch step right beside the mascot, watching dew drops on the leaves.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chị Hà rót thêm một ly cho mình, rồi ngồi xuống bên cạnh. Hai chị em lặng nhìn những giọt nước đọng trên bậu cửa.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "warm",
+          "meaning": "ấm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The sister pours herself a matching ceramic mug and sits on the wooden porch step right beside the mascot, watching dew drops on the leaves. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The sister pours herself a matching ceramic mug and sits on the wooden porch step right beside the mascot, watching dew drops on the leaves.",
+          "reason": "Establish a quiet moment of sibling companionship.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Establish a quiet moment of sibling companionship.",
+          "anchor": {
+            "vi": {
+              "quote": "Chị Hà rót thêm một ly cho mình, rồi ngồi xuống bên cạnh. Hai chị em lặng nhìn những giọt nước đọng trên bậu cửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish a quiet moment of sibling companionship. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Mời chị nhấp ngụm đầu",
+      "purpose": "Prompt the learner to utter the model sentence about the warm milk.",
+      "action": "The mascot lifts the mug gently toward the sister, inviting her to drink together.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chị hỏi sữa còn nóng quá không. Bạn nói giúp tôi câu sữa ấm bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "warm",
+          "meaning": "ấm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "The mascot lifts the mug gently toward the sister, inviting her to drink together. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The mascot lifts the mug gently toward the sister, inviting her to drink together.",
+          "reason": "Prompt the learner to utter the model sentence about the warm milk.",
+          "visible_text": [
+            {
+              "text": "The milk is _____.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to utter the model sentence about the warm milk.",
+          "anchor": {
+            "vi": {
+              "quote": "Chị hỏi sữa còn nóng quá không. Bạn nói giúp tôi câu sữa ấm bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to utter the model sentence about the warm milk. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hơi ấm buổi chiều",
+      "purpose": "Deliver the model answer and conclude with the shared comfort of the warm drink.",
+      "action": "The sister takes a gentle sip from her mug, smiling at the mascot as both sit comfortably in the calm dusk.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The milk is warm.\" Sữa ấm. Chị Hà nâng ly, tôi mới bắt đầu kể buổi chiều đi đâu. Chị ngồi sát lại để nghe, hai chiếc ly đặt cạnh nhau trên chiếc bàn nhỏ.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "warm",
+          "meaning": "ấm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The sister takes a gentle sip from her mug, smiling at the mascot as both sit comfortably in the calm dusk. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The sister takes a gentle sip from her mug, smiling at the mascot as both sit comfortably in the calm dusk.",
+          "reason": "Deliver the model answer and conclude with the shared comfort of the warm drink.",
+          "visible_text": [
+            {
+              "text": "The milk is warm.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Deliver the model answer and conclude with the shared comfort of the warm drink.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The milk is warm.\" Sữa ấm. Chị Hà nâng ly, tôi mới bắt đầu kể buổi chiều đi đâu. Chị ngồi sát lại để nghe, hai chiếc ly đặt cạnh nhau trên chiếc bàn nhỏ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the model answer and conclude with the shared comfort of the warm drink. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chị Hà đặt ly gốm trước mặt tôi. Tôi vừa đi về, tay còn lạnh, nhưng vẫn chờ sữa nguội. Chị bảo: \"The milk is warm.\" Sữa ấm. Chị để tôi tự cầm quai ly, hỏi có vừa ý không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chị Hà đặt ly gốm trước mặt tôi. Tôi vừa đi về, tay còn lạnh, nhưng vẫn chờ sữa nguội. Chị bảo: \"The milk is warm.\" Sữa ấm. Chị để tôi tự cầm quai ly, hỏi có vừa ý không."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Chị Hà đặt ly gốm trước mặt tôi. Tôi vừa đi về, tay còn lạnh, nhưng vẫn chờ sữa nguội. Chị bảo: \"The milk is warm.\" Sữa ấm. Chị để tôi tự cầm quai ly, hỏi có vừa ý không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi cầm ly, thấy độ ấm vừa ý với mình. \"My hands are warm.\" Tay tôi ấm rồi. Chị Hà lấy một ly nữa, hỏi hôm nay tôi đã đi đâu mà về muộn thế."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi cầm ly, thấy độ ấm vừa ý với mình. \"My hands are warm.\" Tay tôi ấm rồi. Chị Hà lấy một ly nữa, hỏi hôm nay tôi đã đi đâu mà về muộn thế."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Chị Hà rót thêm một ly cho mình, rồi ngồi xuống bên cạnh. Hai chị em lặng nhìn những giọt nước đọng trên bậu cửa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Chị hỏi sữa còn nóng quá không. Bạn nói giúp tôi câu sữa ấm bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Chị hỏi sữa còn nóng quá không. Bạn nói giúp tôi câu sữa ấm bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"The milk is warm.\" Sữa ấm. Chị Hà nâng ly, tôi mới bắt đầu kể buổi chiều đi đâu. Chị ngồi sát lại để nghe, hai chiếc ly đặt cạnh nhau trên chiếc bàn nhỏ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"The milk is warm.\" Sữa ấm. Chị Hà nâng ly, tôi mới bắt đầu kể buổi chiều đi đâu. Chị ngồi sát lại để nghe, hai chiếc ly đặt cạnh nhau trên chiếc bàn nhỏ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The milk is warm.\" Sữa ấm. Chị Hà nâng ly, tôi mới bắt đầu kể buổi chiều đi đâu. Chị ngồi sát lại để nghe, hai chiếc ly đặt cạnh nhau trên chiếc bàn nhỏ."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce the gentle, safe temperature of the beverage with the first model sentence.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the gentle, safe temperature of the beverage with the first model sentence. Next causal state: The mascot cradles the mug, then touches warm palms to cool cheeks with a relaxed posture."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Demonstrate the comfortable soothing sensation of warmth with the second model sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Demonstrate the comfortable soothing sensation of warmth with the second model sentence. Next causal state: The sister pours herself a matching ceramic mug and sits on the wooden porch step right beside the mascot, watching dew drops on the leaves."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Establish a quiet moment of sibling companionship.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Establish a quiet moment of sibling companionship. Next causal state: The mascot lifts the mug gently toward the sister, inviting her to drink together."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to utter the model sentence about the warm milk.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to utter the model sentence about the warm milk. Next causal state: The sister takes a gentle sip from her mug, smiling at the mascot as both sit comfortably in the calm dusk."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Deliver the model answer and conclude with the shared comfort of the warm drink.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Deliver the model answer and conclude with the shared comfort of the warm drink. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "20574",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi sợ bị bỏng nên rụt tay không dám nhận ly sữa, người chị đặt bàn tay tôi quanh thành gốm để cảm nhận độ ấm vừa vặn xua tan cái lạnh. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

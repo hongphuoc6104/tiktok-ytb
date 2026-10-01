@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "74303e88c7b00adaa4288c155ab2ea57fbe4932437b7a90e81c26bbe0b994e69",
+  "topic": "Học từ vựng tiếng Anh TOP (danh từ: đỉnh, phần trên cùng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TOP",
+    "Làm rõ nghĩa lõi \"đỉnh, phần trên cùng\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TOP, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TOP, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "An",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "A single plain yellow short-sleeve shirt (#F7D070)."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc bánh kem dễ vỡ",
+      "purpose": "Establish the vulnerability of the cake box and the practical need to place it safely.",
+      "action": "Yellow-shirt cousin slips small unevenly wrapped gift beneath three larger boxes on low table, mascot gently stops the action. No tall cabinet or cake.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "An chèn hộp nhỏ xuống dưới cùng. Tôi giữ lại vì thiệp sẽ bị che. \"Put it on top.\" Đặt nó lên trên cùng nhé. Đây là hộp quà em làm cho bà.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Yellow-shirt cousin slips small unevenly wrapped gift beneath three larger boxes on low table, mascot gently stops the action. No tall cabinet or cake. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Yellow-shirt cousin slips small unevenly wrapped gift beneath three larger boxes on low table, mascot gently stops the action. No tall cabinet or cake.",
+          "reason": "Establish the vulnerability of the cake box and the practical need to place it safely.",
+          "visible_text": [
+            {
+              "text": "Put it on top.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the vulnerability of the cake box and the practical need to place it safely.",
+          "anchor": {
+            "vi": {
+              "quote": "An chèn hộp nhỏ xuống dưới cùng. Tôi giữ lại vì thiệp sẽ bị che. \"Put it on top.\" Đặt nó lên trên cùng nhé. Đây là hộp quà em làm cho bà.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the vulnerability of the cake box and the practical need to place it safely. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Đặt lên phần trên cùng",
+      "purpose": "Introduce the first English model with 'top' directing placement at the highest point.",
+      "action": "Cousin holds small crookedly wrapped box uncertainly, mascot indicates free place above larger boxes on the same low table.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "An ngại hộp mình nhỏ và gói còn lệch, muốn giấu dưới những hộp khác. Tôi bảo bà cần thấy phần em đã làm. Em giữ hộp, chưa dám xếp lên ngay.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Cousin holds small crookedly wrapped box uncertainly, mascot indicates free place above larger boxes on the same low table. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Cousin holds small crookedly wrapped box uncertainly, mascot indicates free place above larger boxes on the same low table.",
+          "reason": "Introduce the first English model with 'top' directing placement at the highest point.",
+          "visible_text": [
+            {
+              "text": "top · đỉnh, phần trên cùng",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first English model with 'top' directing placement at the highest point.",
+          "anchor": {
+            "vi": {
+              "quote": "An ngại hộp mình nhỏ và gói còn lệch, muốn giấu dưới những hộp khác. Tôi bảo bà cần thấy phần em đã làm. Em giữ hộp, chưa dám xếp lên ngay.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first English model with 'top' directing placement at the highest point. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Giữ chân tủ",
+      "purpose": "Introduce physical resistance and care to protect the delicate gift.",
+      "action": "Mascot lowers larger boxes into a stable short stack below cousin's chest height; cousin lifts small gift toward uppermost surface.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi đặt những hộp lớn thấp xuống bàn cho em dễ với. An nhìn chỗ cao nhất của chồng hộp, không còn bị hộp nào che. Em đưa món nhỏ lên đó.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot lowers larger boxes into a stable short stack below cousin's chest height; cousin lifts small gift toward uppermost surface. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot lowers larger boxes into a stable short stack below cousin's chest height; cousin lifts small gift toward uppermost surface.",
+          "reason": "Introduce physical resistance and care to protect the delicate gift.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Introduce physical resistance and care to protect the delicate gift.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi đặt những hộp lớn thấp xuống bàn cho em dễ với. An nhìn chỗ cao nhất của chồng hộp, không còn bị hộp nào che. Em đưa món nhỏ lên đó.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce physical resistance and care to protect the delicate gift. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Vị trí trên đỉnh",
+      "purpose": "Introduce the second English model confirming the cake's secure position at the summit.",
+      "action": "Small handmade box now rests uppermost on low short gift stack, both figures look at it. No wobbling or raised platform.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"It is at the top.\" Nó ở phần trên cùng. Tôi chỉ hộp em vừa đặt. An nhìn lại, lấy tấm thiệp để gắn cùng, nhưng chưa biết đặt ở đâu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Small handmade box now rests uppermost on low short gift stack, both figures look at it. No wobbling or raised platform. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Small handmade box now rests uppermost on low short gift stack, both figures look at it. No wobbling or raised platform.",
+          "reason": "Introduce the second English model confirming the cake's secure position at the summit.",
+          "visible_text": [
+            {
+              "text": "It is at the top.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Introduce the second English model confirming the cake's secure position at the summit.",
+          "anchor": {
+            "vi": {
+              "quote": "\"It is at the top.\" Nó ở phần trên cùng. Tôi chỉ hộp em vừa đặt. An nhìn lại, lấy tấm thiệp để gắn cùng, nhưng chưa biết đặt ở đâu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second English model confirming the cake's secure position at the summit. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Tấm thiệp nhỏ",
+      "purpose": "Invite the learner to retrieve the command with 'top' to finish decorating the gift arrangement.",
+      "action": "Cousin holds a plain blank card beside the topmost small gift, looking at mascot to ask placement. Top safe region for stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Em đang cầm thiệp, chờ tôi chỉ chỗ trên cùng của hộp quà. Bạn nói giúp tôi câu đặt nó lên trên cùng nhé bằng tiếng Anh.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Cousin holds a plain blank card beside the topmost small gift, looking at mascot to ask placement. Top safe region for stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Cousin holds a plain blank card beside the topmost small gift, looking at mascot to ask placement. Top safe region for stem.",
+          "reason": "Invite the learner to retrieve the command with 'top' to finish decorating the gift arrangement.",
+          "visible_text": [
+            {
+              "text": "Put it on ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Invite the learner to retrieve the command with 'top' to finish decorating the gift arrangement.",
+          "anchor": {
+            "vi": {
+              "quote": "Em đang cầm thiệp, chờ tôi chỉ chỗ trên cùng của hộp quà. Bạn nói giúp tôi câu đặt nó lên trên cùng nhé bằng tiếng Anh.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the learner to retrieve the command with 'top' to finish decorating the gift arrangement. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Món quà hoàn chỉnh",
+      "purpose": "Confirm the correct usage and resolve the scene with the successful, balanced gift display.",
+      "action": "Blank card lies on top of cousin's small unevenly wrapped gift; both figures step back to inspect the modest low stack. No letters.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Put it on top.\" Đặt nó lên trên cùng nhé. An đặt thiệp lên hộp mình. Tôi lùi lại cho em xem; lần này em giữ món quà ở chỗ dễ thấy, không giấu nữa.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Blank card lies on top of cousin's small unevenly wrapped gift; both figures step back to inspect the modest low stack. No letters. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Blank card lies on top of cousin's small unevenly wrapped gift; both figures step back to inspect the modest low stack. No letters.",
+          "reason": "Confirm the correct usage and resolve the scene with the successful, balanced gift display.",
+          "visible_text": [
+            {
+              "text": "Put it on top.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm the correct usage and resolve the scene with the successful, balanced gift display.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Put it on top.\" Đặt nó lên trên cùng nhé. An đặt thiệp lên hộp mình. Tôi lùi lại cho em xem; lần này em giữ món quà ở chỗ dễ thấy, không giấu nữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the correct usage and resolve the scene with the successful, balanced gift display. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "An chèn hộp nhỏ xuống dưới cùng. Tôi giữ lại vì thiệp sẽ bị che. \"Put it on top.\" Đặt nó lên trên cùng nhé. Đây là hộp quà em làm cho bà."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "An chèn hộp nhỏ xuống dưới cùng. Tôi giữ lại vì thiệp sẽ bị che. \"Put it on top.\" Đặt nó lên trên cùng nhé. Đây là hộp quà em làm cho bà."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "An chèn hộp nhỏ xuống dưới cùng. Tôi giữ lại vì thiệp sẽ bị che. \"Put it on top.\" Đặt nó lên trên cùng nhé. Đây là hộp quà em làm cho bà."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "An ngại hộp mình nhỏ và gói còn lệch, muốn giấu dưới những hộp khác. Tôi bảo bà cần thấy phần em đã làm. Em giữ hộp, chưa dám xếp lên ngay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi đặt những hộp lớn thấp xuống bàn cho em dễ với. An nhìn chỗ cao nhất của chồng hộp, không còn bị hộp nào che. Em đưa món nhỏ lên đó."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"It is at the top.\" Nó ở phần trên cùng. Tôi chỉ hộp em vừa đặt. An nhìn lại, lấy tấm thiệp để gắn cùng, nhưng chưa biết đặt ở đâu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"It is at the top.\" Nó ở phần trên cùng. Tôi chỉ hộp em vừa đặt. An nhìn lại, lấy tấm thiệp để gắn cùng, nhưng chưa biết đặt ở đâu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Em đang cầm thiệp, chờ tôi chỉ chỗ trên cùng của hộp quà. Bạn nói giúp tôi câu đặt nó lên trên cùng nhé bằng tiếng Anh."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Em đang cầm thiệp, chờ tôi chỉ chỗ trên cùng của hộp quà. Bạn nói giúp tôi câu đặt nó lên trên cùng nhé bằng tiếng Anh."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"Put it on top.\" Đặt nó lên trên cùng nhé. An đặt thiệp lên hộp mình. Tôi lùi lại cho em xem; lần này em giữ món quà ở chỗ dễ thấy, không giấu nữa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"Put it on top.\" Đặt nó lên trên cùng nhé. An đặt thiệp lên hộp mình. Tôi lùi lại cho em xem; lần này em giữ món quà ở chỗ dễ thấy, không giấu nữa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Put it on top.\" Đặt nó lên trên cùng nhé. An đặt thiệp lên hộp mình. Tôi lùi lại cho em xem; lần này em giữ món quà ở chỗ dễ thấy, không giấu nữa."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the vulnerability of the cake box and the practical need to place it safely.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the vulnerability of the cake box and the practical need to place it safely. Next causal state: Cousin holds small crookedly wrapped box uncertainly, mascot indicates free place above larger boxes on the same low table."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first English model with 'top' directing placement at the highest point.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first English model with 'top' directing placement at the highest point. Next causal state: Mascot lowers larger boxes into a stable short stack below cousin's chest height; cousin lifts small gift toward uppermost surface."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Introduce physical resistance and care to protect the delicate gift.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce physical resistance and care to protect the delicate gift. Next causal state: Small handmade box now rests uppermost on low short gift stack, both figures look at it. No wobbling or raised platform."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Introduce the second English model confirming the cake's secure position at the summit.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second English model confirming the cake's secure position at the summit. Next causal state: Cousin holds a plain blank card beside the topmost small gift, looking at mascot to ask placement. Top safe region for stem."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Invite the learner to retrieve the command with 'top' to finish decorating the gift arrangement.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite the learner to retrieve the command with 'top' to finish decorating the gift arrangement. Next causal state: Blank card lies on top of cousin's small unevenly wrapped gift; both figures step back to inspect the modest low stack. No letters."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm the correct usage and resolve the scene with the successful, balanced gift display.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the correct usage and resolve the scene with the successful, balanced gift display. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18299",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: An ngại quà tự gói nên muốn giấu dưới chồng hộp; tôi giúp em đặt lên phần trên cùng và giữ thiệp của mình ở đó. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20948",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: An ngại quà tự gói nên muốn giấu dưới chồng hộp; tôi giúp em đặt lên phần trên cùng và giữ thiệp của mình ở đó. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

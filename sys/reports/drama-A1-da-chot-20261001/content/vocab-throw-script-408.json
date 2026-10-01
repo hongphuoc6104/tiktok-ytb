@@ -1,0 +1,497 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "3bec9474a5a33ace8b0f192fe1f97fcc708f1248f7562039341243bfc63ec23b",
+  "topic": "Học từ vựng tiếng Anh THROW (động từ: ném) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ THROW",
+    "Làm rõ nghĩa lõi \"ném\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng THROW, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại THROW, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Mai",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+      "outfit": "Single pale-lilac short-sleeve shirt (#D8B4F8)."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều đang xảy ra",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "action": "Eye-level medium shot in a garden with a bamboo trellis overhead. The cousin holds a yellow felt tennis ball with both hands, glancing upward anxiously. The mascot stands ten feet away with open cupped hands.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Quả bóng nỉ màu vàng nằm trong tay Mai. Mai nhìn giàn cây thấp sau lưng tôi ngập ngừng. Tôi mở hai lòng bàn tay đón: \"Throw the ball to me.\" Ném bóng cho tôi nhé.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "throw",
+          "meaning": "ném"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Eye-level medium shot in a garden with a bamboo trellis overhead. The cousin holds a yellow felt tennis ball with both hands, glancing upward anxiously. The mascot stands ten feet away with open cupped hands. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Eye-level medium shot in a garden with a bamboo trellis overhead. The cousin holds a yellow felt tennis ball with both hands, glancing upward anxiously. The mascot stands ten feet away with open cupped hands.",
+          "reason": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "visible_text": [
+            {
+              "text": "Throw the ball to me.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Quả bóng nỉ màu vàng nằm trong tay Mai. Mai nhìn giàn cây thấp sau lưng tôi ngập ngừng. Tôi mở hai lòng bàn tay đón: \"Throw the ball to me.\" Ném bóng cho tôi nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the concrete personal situation and introduce or prepare an early English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Vướng mắc nhỏ",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "action": "Medium shot of the cousin lowering her throwing elbow to shoulder height, releasing the yellow ball in a flat, gentle arc toward the mascot.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Thấy Mai vung tay hơi mạnh, tôi khẽ nhắc nhở: \"Don't throw it too high.\" Đừng ném nó quá cao. Mai hạ cánh tay xuống ngang ngực, ném một đường thẳng vừa tầm.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "throw",
+          "meaning": "ném"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Medium shot of the cousin lowering her throwing elbow to shoulder height, releasing the yellow ball in a flat, gentle arc toward the mascot. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the cousin lowering her throwing elbow to shoulder height, releasing the yellow ball in a flat, gentle arc toward the mascot.",
+          "reason": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "visible_text": [
+            {
+              "text": "throw · ném",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "anchor": {
+            "vi": {
+              "quote": "Thấy Mai vung tay hơi mạnh, tôi khẽ nhắc nhở: \"Don't throw it too high.\" Đừng ném nó quá cao. Mai hạ cánh tay xuống ngang ngực, ném một đường thẳng vừa tầm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Advance the same situation and clarify the target sense with meaningful English usage. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một hành động cần thiết",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "action": "Mascot hands yellow felt ball back to Mai at stable flat garden spot under trellis, then returns to receiving position a short distance away.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi bắt được bóng, Mai lùi tới chỗ bằng hơn. Tôi đưa bóng lại, hỏi em có muốn đứng gần hơn không. Mai bảo cứ chỗ này, chỉ cần tôi đừng bước đi giữa lúc em ném.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "throw",
+          "meaning": "ném"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot hands yellow felt ball back to Mai at stable flat garden spot under trellis, then returns to receiving position a short distance away. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot hands yellow felt ball back to Mai at stable flat garden spot under trellis, then returns to receiving position a short distance away.",
+          "reason": "Show the small action or consequence that motivates the upcoming response.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the small action or consequence that motivates the upcoming response.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi bắt được bóng, Mai lùi tới chỗ bằng hơn. Tôi đưa bóng lại, hỏi em có muốn đứng gần hơn không. Mai bảo cứ chỗ này, chỉ cần tôi đừng bước đi giữa lúc em ném.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the small action or consequence that motivates the upcoming response. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần nói",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "action": "Medium shot of the mascot holding hands outstretched in front of chest, looking directly forward.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn muốn giục Mai dùng tay ném bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "throw",
+          "meaning": "ném"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Medium shot of the mascot holding hands outstretched in front of chest, looking directly forward. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the mascot holding hands outstretched in front of chest, looking directly forward.",
+          "reason": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "visible_text": [
+            {
+              "text": "______ the ball to me.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn giục Mai dùng tay ném bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask for a complete story-linked sentence, then hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả gần",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "action": "Wide shot under the bamboo garden trellis. The cousin tosses the ball smoothly across the space into the mascot's hands, with dappled green shadows on the ground.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Throw the ball to me.\" Mai ném nhẹ, tôi đứng nguyên chỗ đón. Em hỏi có cao quá không. Tôi lắc đầu, đưa bóng lại. Mai đã thôi nhìn giàn cây, chỉ nhìn bàn tay tôi đang chờ.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "throw",
+          "meaning": "ném"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Wide shot under the bamboo garden trellis. The cousin tosses the ball smoothly across the space into the mascot's hands, with dappled green shadows on the ground. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Wide shot under the bamboo garden trellis. The cousin tosses the ball smoothly across the space into the mascot's hands, with dappled green shadows on the ground.",
+          "reason": "Give the correct answer and close with the earned local consequence.",
+          "visible_text": [
+            {
+              "text": "Throw the ball to me.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct answer and close with the earned local consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Throw the ball to me.\" Mai ném nhẹ, tôi đứng nguyên chỗ đón. Em hỏi có cao quá không. Tôi lắc đầu, đưa bóng lại. Mai đã thôi nhìn giàn cây, chỉ nhìn bàn tay tôi đang chờ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the correct answer and close with the earned local consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Quả bóng nỉ màu vàng nằm trong tay Mai. Mai nhìn giàn cây thấp sau lưng tôi ngập ngừng. Tôi mở hai lòng bàn tay đón: \"Throw the ball to me.\" Ném bóng cho tôi nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Quả bóng nỉ màu vàng nằm trong tay Mai. Mai nhìn giàn cây thấp sau lưng tôi ngập ngừng. Tôi mở hai lòng bàn tay đón: \"Throw the ball to me.\" Ném bóng cho tôi nhé."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Quả bóng nỉ màu vàng nằm trong tay Mai. Mai nhìn giàn cây thấp sau lưng tôi ngập ngừng. Tôi mở hai lòng bàn tay đón: \"Throw the ball to me.\" Ném bóng cho tôi nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Thấy Mai vung tay hơi mạnh, tôi khẽ nhắc nhở: \"Don't throw it too high.\" Đừng ném nó quá cao. Mai hạ cánh tay xuống ngang ngực, ném một đường thẳng vừa tầm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Thấy Mai vung tay hơi mạnh, tôi khẽ nhắc nhở: \"Don't throw it too high.\" Đừng ném nó quá cao. Mai hạ cánh tay xuống ngang ngực, ném một đường thẳng vừa tầm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi bắt được bóng, Mai lùi tới chỗ bằng hơn. Tôi đưa bóng lại, hỏi em có muốn đứng gần hơn không. Mai bảo cứ chỗ này, chỉ cần tôi đừng bước đi giữa lúc em ném."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn giục Mai dùng tay ném bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn giục Mai dùng tay ném bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Throw the ball to me.\" Mai ném nhẹ, tôi đứng nguyên chỗ đón. Em hỏi có cao quá không. Tôi lắc đầu, đưa bóng lại. Mai đã thôi nhìn giàn cây, chỉ nhìn bàn tay tôi đang chờ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Throw the ball to me.\" Mai ném nhẹ, tôi đứng nguyên chỗ đón. Em hỏi có cao quá không. Tôi lắc đầu, đưa bóng lại. Mai đã thôi nhìn giàn cây, chỉ nhìn bàn tay tôi đang chờ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Throw the ball to me.\" Mai ném nhẹ, tôi đứng nguyên chỗ đón. Em hỏi có cao quá không. Tôi lắc đầu, đưa bóng lại. Mai đã thôi nhìn giàn cây, chỉ nhìn bàn tay tôi đang chờ."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the concrete personal situation and introduce or prepare an early English model. Next causal state: Medium shot of the cousin lowering her throwing elbow to shoulder height, releasing the yellow ball in a flat, gentle arc toward the mascot."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Advance the same situation and clarify the target sense with meaningful English usage. Next causal state: Mascot hands yellow felt ball back to Mai at stable flat garden spot under trellis, then returns to receiving position a short distance away."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the small action or consequence that motivates the upcoming response. Next causal state: Medium shot of the mascot holding hands outstretched in front of chest, looking directly forward."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Ask for a complete story-linked sentence, then hold before the answer. Next causal state: Wide shot under the bamboo garden trellis. The cousin tosses the ball smoothly across the space into the mascot's hands, with dappled green shadows on the ground."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the correct answer and close with the earned local consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "21179",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hai chị em chơi chuyền bóng nỉ ở góc vườn có giàn leo thấp; người chị sợ bóng vướng giàn cây, người em hướng dẫn ném ngang tay vừa tầm. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

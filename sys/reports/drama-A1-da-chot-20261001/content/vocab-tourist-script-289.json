@@ -1,0 +1,505 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "427105db39b08e135162beda1aee05eb06d73606521e0fc2d066a62759a99581",
+  "topic": "Học từ vựng tiếng Anh TOURIST (danh từ: khách du lịch) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TOURIST",
+    "Làm rõ nghĩa lõi \"khách du lịch\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TOURIST, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TOURIST, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Lan",
+      "appearance": "Minimal ink stick figure with round white navy-outlined head, solid black oval eyes and simple stick limbs. A small plain hair silhouette appropriate to the role.",
+      "outfit": "Exactly one plain mustard-yellow short-sleeve shirt, no logo or layered torso."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều xảy ra trước mắt",
+      "purpose": "Open on immediate personal tension and useful English.",
+      "action": "Village entrance: mascot holds camera facing old gate while local Lan asks his purpose. Plain gate without inscription.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lan hỏi tôi có phải khách du lịch. \"Are you a tourist?\" Bạn là khách du lịch à? Tôi đang chụp chiếc cổng làng, vừa quay về sau nhiều năm, không biết ngõ mới đi đâu.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Village entrance: mascot holds camera facing old gate while local Lan asks his purpose. Plain gate without inscription. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Village entrance: mascot holds camera facing old gate while local Lan asks his purpose. Plain gate without inscription.",
+          "reason": "Open on immediate personal tension and useful English.",
+          "visible_text": [
+            {
+              "text": "Are you a tourist?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open on immediate personal tension and useful English.",
+          "anchor": {
+            "vi": {
+              "quote": "Lan hỏi tôi có phải khách du lịch. \"Are you a tourist?\" Bạn là khách du lịch à? Tôi đang chụp chiếc cổng làng, vừa quay về sau nhiều năm, không biết ngõ mới đi đâu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open on immediate personal tension and useful English. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Điều chưa nói",
+      "purpose": "Reveal the human need and resistance through ordinary action.",
+      "action": "Lan points along a newly paved lane, mascot admits unfamiliarity. Same gate remains behind; no crowd.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi bảo từng sống ở đây. Lan chỉ con đường lát mới, hỏi còn nhớ chỗ giếng cũ không. Tôi định gật đầu, rồi thôi. Tôi hỏi giếng bây giờ còn ở đó không.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Lan points along a newly paved lane, mascot admits unfamiliarity. Same gate remains behind; no crowd. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Lan points along a newly paved lane, mascot admits unfamiliarity. Same gate remains behind; no crowd.",
+          "reason": "Reveal the human need and resistance through ordinary action.",
+          "visible_text": [
+            {
+              "text": "tourist · khách du lịch",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Reveal the human need and resistance through ordinary action.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi bảo từng sống ở đây. Lan chỉ con đường lát mới, hỏi còn nhớ chỗ giếng cũ không. Tôi định gật đầu, rồi thôi. Tôi hỏi giếng bây giờ còn ở đó không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Reveal the human need and resistance through ordinary action. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Lựa chọn",
+      "purpose": "Make a small consequential choice using the second model.",
+      "action": "Mascot indicates camera as sightseeing visitor, Lan offers to walk beside him. No official tourism claim or named landmark.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I'm a tourist.\" Hôm nay tôi là khách du lịch. Tôi nói vậy vì muốn đi tham quan lại nơi mình từng biết. Lan bật cười, bảo thế để bạn dẫn một vòng, đừng giả vờ thuộc đường.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot indicates camera as sightseeing visitor, Lan offers to walk beside him. No official tourism claim or named landmark. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot indicates camera as sightseeing visitor, Lan offers to walk beside him. No official tourism claim or named landmark.",
+          "reason": "Make a small consequential choice using the second model.",
+          "visible_text": [
+            {
+              "text": "I'm a tourist.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Make a small consequential choice using the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm a tourist.\" Hôm nay tôi là khách du lịch. Tôi nói vậy vì muốn đi tham quan lại nơi mình từng biết. Lan bật cười, bảo thế để bạn dẫn một vòng, đừng giả vờ thuộc đường.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Make a small consequential choice using the second model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần đáp",
+      "purpose": "Invite the same necessary sentence and wait for learner response.",
+      "action": "Hold visitor mascot with camera and local Lan at lane entrance. Supported tourist question stem only.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Nếu muốn hỏi người đang tới tham quan có phải khách du lịch không, bạn nói giúp Lan câu hỏi bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold visitor mascot with camera and local Lan at lane entrance. Supported tourist question stem only. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold visitor mascot with camera and local Lan at lane entrance. Supported tourist question stem only.",
+          "reason": "Invite the same necessary sentence and wait for learner response.",
+          "visible_text": [
+            {
+              "text": "Are you a ___?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite the same necessary sentence and wait for learner response.",
+          "anchor": {
+            "vi": {
+              "quote": "Nếu muốn hỏi người đang tới tham quan có phải khách du lịch không, bạn nói giúp Lan câu hỏi bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the same necessary sentence and wait for learner response. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện tiếp tục",
+      "purpose": "Return the answer and resolve the initial human tension through a concrete gesture.",
+      "action": "At a small old village well with solid low wall, mascot photographs Lan standing safely beside it. No leaning into well, other people or lettering.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Are you a tourist?\" Tôi gật đầu. Lan đi cùng tôi tới giếng cũ, đứng chờ tôi chụp xong. Tôi hỏi bạn có chịu đứng vào ảnh không. Lan bảo nhớ gửi lại cho mình một tấm.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "At a small old village well with solid low wall, mascot photographs Lan standing safely beside it. No leaning into well, other people or lettering. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At a small old village well with solid low wall, mascot photographs Lan standing safely beside it. No leaning into well, other people or lettering.",
+          "reason": "Return the answer and resolve the initial human tension through a concrete gesture.",
+          "visible_text": [
+            {
+              "text": "Are you a tourist?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Return the answer and resolve the initial human tension through a concrete gesture.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Are you a tourist?\" Tôi gật đầu. Lan đi cùng tôi tới giếng cũ, đứng chờ tôi chụp xong. Tôi hỏi bạn có chịu đứng vào ảnh không. Lan bảo nhớ gửi lại cho mình một tấm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Return the answer and resolve the initial human tension through a concrete gesture. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Lan hỏi tôi có phải khách du lịch. \"Are you a tourist?\" Bạn là khách du lịch à? Tôi đang chụp chiếc cổng làng, vừa quay về sau nhiều năm, không biết ngõ mới đi đâu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Lan hỏi tôi có phải khách du lịch. \"Are you a tourist?\" Bạn là khách du lịch à? Tôi đang chụp chiếc cổng làng, vừa quay về sau nhiều năm, không biết ngõ mới đi đâu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Lan hỏi tôi có phải khách du lịch. \"Are you a tourist?\" Bạn là khách du lịch à? Tôi đang chụp chiếc cổng làng, vừa quay về sau nhiều năm, không biết ngõ mới đi đâu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi bảo từng sống ở đây. Lan chỉ con đường lát mới, hỏi còn nhớ chỗ giếng cũ không. Tôi định gật đầu, rồi thôi. Tôi hỏi giếng bây giờ còn ở đó không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"I'm a tourist.\" Hôm nay tôi là khách du lịch. Tôi nói vậy vì muốn đi tham quan lại nơi mình từng biết. Lan bật cười, bảo thế để bạn dẫn một vòng, đừng giả vờ thuộc đường."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"I'm a tourist.\" Hôm nay tôi là khách du lịch. Tôi nói vậy vì muốn đi tham quan lại nơi mình từng biết. Lan bật cười, bảo thế để bạn dẫn một vòng, đừng giả vờ thuộc đường."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Nếu muốn hỏi người đang tới tham quan có phải khách du lịch không, bạn nói giúp Lan câu hỏi bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Nếu muốn hỏi người đang tới tham quan có phải khách du lịch không, bạn nói giúp Lan câu hỏi bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Are you a tourist?\" Tôi gật đầu. Lan đi cùng tôi tới giếng cũ, đứng chờ tôi chụp xong. Tôi hỏi bạn có chịu đứng vào ảnh không. Lan bảo nhớ gửi lại cho mình một tấm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Are you a tourist?\" Tôi gật đầu. Lan đi cùng tôi tới giếng cũ, đứng chờ tôi chụp xong. Tôi hỏi bạn có chịu đứng vào ảnh không. Lan bảo nhớ gửi lại cho mình một tấm."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Are you a tourist?\" Tôi gật đầu. Lan đi cùng tôi tới giếng cũ, đứng chờ tôi chụp xong. Tôi hỏi bạn có chịu đứng vào ảnh không. Lan bảo nhớ gửi lại cho mình một tấm."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on immediate personal tension and useful English.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open on immediate personal tension and useful English. Next causal state: Lan points along a newly paved lane, mascot admits unfamiliarity. Same gate remains behind; no crowd."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Reveal the human need and resistance through ordinary action.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Reveal the human need and resistance through ordinary action. Next causal state: Mascot indicates camera as sightseeing visitor, Lan offers to walk beside him. No official tourism claim or named landmark."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Make a small consequential choice using the second model.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Make a small consequential choice using the second model. Next causal state: Hold visitor mascot with camera and local Lan at lane entrance. Supported tourist question stem only."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite the same necessary sentence and wait for learner response.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite the same necessary sentence and wait for learner response. Next causal state: At a small old village well with solid low wall, mascot photographs Lan standing safely beside it. No leaning into well, other people or lettering."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Return the answer and resolve the initial human tension through a concrete gesture.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Return the answer and resolve the initial human tension through a concrete gesture. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19641",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Nhân vật về làng sau lâu ngày bị hỏi có phải khách du lịch; thay vì giấu chuyện chưa biết ngõ mới, nhân vật nhờ người bạn dẫn xem. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

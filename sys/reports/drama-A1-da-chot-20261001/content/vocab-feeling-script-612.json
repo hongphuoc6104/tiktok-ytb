@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "12abcc87aed2ebc581a30980644867a7a113a09f7a0c79549eb6f72dd7831751",
+  "topic": "Học từ vựng tiếng Anh FEELING (danh từ: cảm giác) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FEELING",
+    "Làm rõ nghĩa lõi \"cảm giác\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FEELING, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FEELING, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Huy",
+      "appearance": "Minimal stick figure with a round white navy-outlined head, solid black oval eyes, and minimal stick limbs.",
+      "outfit": "A simple charcoal-grey short-sleeve shirt and navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Vết sơn cuối cùng",
+      "purpose": "Establish the physical setting and relief of finishing a tiring practical task.",
+      "action": "A quiet workshop room. A pale-blue shirt stick figure sits on the floor setting down a paintbrush, while a grey-shirt stick figure stands beside a newly painted wooden coffee table.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Minh buông cọ xuống sàn. Chiếc bàn cuối cùng cũng sơn xong. Cậu thở phào với Huy: \"It's a great feeling.\" Một cảm giác thật tuyệt.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "feeling",
+          "meaning": "cảm giác"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "A quiet workshop room. A pale-blue shirt stick figure sits on the floor setting down a paintbrush, while a grey-shirt stick figure stands beside a newly painted wooden coffee table. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "A quiet workshop room. A pale-blue shirt stick figure sits on the floor setting down a paintbrush, while a grey-shirt stick figure stands beside a newly painted wooden coffee table.",
+          "reason": "Establish the physical setting and relief of finishing a tiring practical task.",
+          "visible_text": [
+            {
+              "text": "It's a great feeling.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the physical setting and relief of finishing a tiring practical task.",
+          "anchor": {
+            "vi": {
+              "quote": "Minh buông cọ xuống sàn. Chiếc bàn cuối cùng cũng sơn xong. Cậu thở phào với Huy: \"It's a great feeling.\" Một cảm giác thật tuyệt.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the physical setting and relief of finishing a tiring practical task. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Cảm giác thật tuyệt",
+      "purpose": "Introduce the first model sentence naming the pleasant emotion with natural Vietnamese gloss.",
+      "action": "Same workshop, scratched unpainted table in the afternoon, grey-shirt friend holding a furniture catalogue face down while mascot keeps a paintbrush beside the tabletop. No readable print.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lúc chiều, hai đứa suýt bỏ cuộc vì mặt bàn còn xước. Huy muốn mua chiếc khác. Minh xin thử thêm một lần, rồi cả hai cùng làm đến tối.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "feeling",
+          "meaning": "cảm giác"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same workshop, scratched unpainted table in the afternoon, grey-shirt friend holding a furniture catalogue face down while mascot keeps a paintbrush beside the tabletop. No readable print. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same workshop, scratched unpainted table in the afternoon, grey-shirt friend holding a furniture catalogue face down while mascot keeps a paintbrush beside the tabletop. No readable print.",
+          "reason": "Introduce the first model sentence naming the pleasant emotion with natural Vietnamese gloss.",
+          "visible_text": [
+            {
+              "text": "feeling · cảm giác",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first model sentence naming the pleasant emotion with natural Vietnamese gloss.",
+          "anchor": {
+            "vi": {
+              "quote": "Lúc chiều, hai đứa suýt bỏ cuộc vì mặt bàn còn xước. Huy muốn mua chiếc khác. Minh xin thử thêm một lần, rồi cả hai cùng làm đến tối.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first model sentence naming the pleasant emotion with natural Vietnamese gloss. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Niềm vui trong lòng",
+      "purpose": "Clarify the core noun meaning of feeling as an internal emotional state resulting from real effort.",
+      "action": "Same camera in the evening: painted table complete and dry, both minimal figures stand back admiring their own work with relaxed shoulders.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Giờ hai đứa nhìn chiếc bàn ngay ngắn, thấy công sức của mình có kết quả. Minh vui và nhẹ nhõm. Cảm giác ấy vẫn còn dù tay đã mỏi.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "feeling",
+          "meaning": "cảm giác"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Same camera in the evening: painted table complete and dry, both minimal figures stand back admiring their own work with relaxed shoulders. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same camera in the evening: painted table complete and dry, both minimal figures stand back admiring their own work with relaxed shoulders.",
+          "reason": "Clarify the core noun meaning of feeling as an internal emotional state resulting from real effort.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the core noun meaning of feeling as an internal emotional state resulting from real effort.",
+          "anchor": {
+            "vi": {
+              "quote": "Giờ hai đứa nhìn chiếc bàn ngay ngắn, thấy công sức của mình có kết quả. Minh vui và nhẹ nhõm. Cảm giác ấy vẫn còn dù tay đã mỏi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify the core noun meaning of feeling as an internal emotional state resulting from real effort. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Thích cảm giác này",
+      "purpose": "Deliver the second model sentence showing genuine personal appreciation of the state.",
+      "action": "Mascot pulls one stool beside the dry painted table for his grey-shirt friend; a second stool is already beside him.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I like this feeling.\" Tôi thích cảm giác này. Minh nói với Huy khi bạn hỏi có tiếc cả buổi chiều không. Cậu kéo ghế lại, mời bạn ngồi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "feeling",
+          "meaning": "cảm giác"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot pulls one stool beside the dry painted table for his grey-shirt friend; a second stool is already beside him. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot pulls one stool beside the dry painted table for his grey-shirt friend; a second stool is already beside him.",
+          "reason": "Deliver the second model sentence showing genuine personal appreciation of the state.",
+          "visible_text": [
+            {
+              "text": "I like this feeling.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Deliver the second model sentence showing genuine personal appreciation of the state.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I like this feeling.\" Tôi thích cảm giác này. Minh nói với Huy khi bạn hỏi có tiếc cả buổi chiều không. Cậu kéo ghế lại, mời bạn ngồi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the second model sentence showing genuine personal appreciation of the state. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chia sẻ cùng bạn",
+      "purpose": "Cue learner retrieval of the target noun within the full appreciative sentence.",
+      "action": "Both friends remain beside the finished table, grey-shirt friend gestures toward the unused catalogue while mascot gestures toward the table. Hold the practice stem in upper safe space.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy bảo lần sau cứ mua cho nhanh. Minh vẫn muốn tự làm cùng bạn. Bạn nói giúp Minh câu tôi thích cảm giác này bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "feeling",
+          "meaning": "cảm giác"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both friends remain beside the finished table, grey-shirt friend gestures toward the unused catalogue while mascot gestures toward the table. Hold the practice stem in upper safe space. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both friends remain beside the finished table, grey-shirt friend gestures toward the unused catalogue while mascot gestures toward the table. Hold the practice stem in upper safe space.",
+          "reason": "Cue learner retrieval of the target noun within the full appreciative sentence.",
+          "visible_text": [
+            {
+              "text": "I like this ___",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Cue learner retrieval of the target noun within the full appreciative sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy bảo lần sau cứ mua cho nhanh. Minh vẫn muốn tự làm cùng bạn. Bạn nói giúp Minh câu tôi thích cảm giác này bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Cue learner retrieval of the target noun within the full appreciative sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Bữa tối muộn",
+      "purpose": "Confirm learner response and resolve the opening situation with a warm, concrete payoff.",
+      "action": "Both friends sit at the finished dry table sharing one split bread roll. Paintbrush rests on the floor well away from their meal. No printed text.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I like this feeling.\" Tôi thích cảm giác này. Huy chia đôi ổ bánh, đặt lên chiếc bàn đã khô. Hai đứa ăn ngay tại chỗ vừa định bỏ cuộc.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "feeling",
+          "meaning": "cảm giác"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both friends sit at the finished dry table sharing one split bread roll. Paintbrush rests on the floor well away from their meal. No printed text. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both friends sit at the finished dry table sharing one split bread roll. Paintbrush rests on the floor well away from their meal. No printed text.",
+          "reason": "Confirm learner response and resolve the opening situation with a warm, concrete payoff.",
+          "visible_text": [
+            {
+              "text": "I like this feeling.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm learner response and resolve the opening situation with a warm, concrete payoff.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I like this feeling.\" Tôi thích cảm giác này. Huy chia đôi ổ bánh, đặt lên chiếc bàn đã khô. Hai đứa ăn ngay tại chỗ vừa định bỏ cuộc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm learner response and resolve the opening situation with a warm, concrete payoff. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Minh buông cọ xuống sàn. Chiếc bàn cuối cùng cũng sơn xong. Cậu thở phào với Huy: \"It's a great feeling.\" Một cảm giác thật tuyệt."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Minh buông cọ xuống sàn. Chiếc bàn cuối cùng cũng sơn xong. Cậu thở phào với Huy: \"It's a great feeling.\" Một cảm giác thật tuyệt."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Minh buông cọ xuống sàn. Chiếc bàn cuối cùng cũng sơn xong. Cậu thở phào với Huy: \"It's a great feeling.\" Một cảm giác thật tuyệt."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Lúc chiều, hai đứa suýt bỏ cuộc vì mặt bàn còn xước. Huy muốn mua chiếc khác. Minh xin thử thêm một lần, rồi cả hai cùng làm đến tối."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Giờ hai đứa nhìn chiếc bàn ngay ngắn, thấy công sức của mình có kết quả. Minh vui và nhẹ nhõm. Cảm giác ấy vẫn còn dù tay đã mỏi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"I like this feeling.\" Tôi thích cảm giác này. Minh nói với Huy khi bạn hỏi có tiếc cả buổi chiều không. Cậu kéo ghế lại, mời bạn ngồi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"I like this feeling.\" Tôi thích cảm giác này. Minh nói với Huy khi bạn hỏi có tiếc cả buổi chiều không. Cậu kéo ghế lại, mời bạn ngồi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Huy bảo lần sau cứ mua cho nhanh. Minh vẫn muốn tự làm cùng bạn. Bạn nói giúp Minh câu tôi thích cảm giác này bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Huy bảo lần sau cứ mua cho nhanh. Minh vẫn muốn tự làm cùng bạn. Bạn nói giúp Minh câu tôi thích cảm giác này bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"I like this feeling.\" Tôi thích cảm giác này. Huy chia đôi ổ bánh, đặt lên chiếc bàn đã khô. Hai đứa ăn ngay tại chỗ vừa định bỏ cuộc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"I like this feeling.\" Tôi thích cảm giác này. Huy chia đôi ổ bánh, đặt lên chiếc bàn đã khô. Hai đứa ăn ngay tại chỗ vừa định bỏ cuộc."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I like this feeling.\" Tôi thích cảm giác này. Huy chia đôi ổ bánh, đặt lên chiếc bàn đã khô. Hai đứa ăn ngay tại chỗ vừa định bỏ cuộc."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the physical setting and relief of finishing a tiring practical task.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the physical setting and relief of finishing a tiring practical task. Next causal state: Same workshop, scratched unpainted table in the afternoon, grey-shirt friend holding a furniture catalogue face down while mascot keeps a paintbrush beside the tabletop. No readable print."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first model sentence naming the pleasant emotion with natural Vietnamese gloss.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first model sentence naming the pleasant emotion with natural Vietnamese gloss. Next causal state: Same camera in the evening: painted table complete and dry, both minimal figures stand back admiring their own work with relaxed shoulders."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the core noun meaning of feeling as an internal emotional state resulting from real effort.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Clarify the core noun meaning of feeling as an internal emotional state resulting from real effort. Next causal state: Mascot pulls one stool beside the dry painted table for his grey-shirt friend; a second stool is already beside him."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Deliver the second model sentence showing genuine personal appreciation of the state.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Deliver the second model sentence showing genuine personal appreciation of the state. Next causal state: Both friends remain beside the finished table, grey-shirt friend gestures toward the unused catalogue while mascot gestures toward the table. Hold the practice stem in upper safe space."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Cue learner retrieval of the target noun within the full appreciative sentence.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Cue learner retrieval of the target noun within the full appreciative sentence. Next causal state: Both friends sit at the finished dry table sharing one split bread roll. Paintbrush rests on the floor well away from their meal. No printed text."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm learner response and resolve the opening situation with a warm, concrete payoff.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm learner response and resolve the opening situation with a warm, concrete payoff. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18034",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Minh và Huy suýt bỏ việc sơn bàn, cùng thử thêm rồi chia sẻ cảm giác vui nhẹ nhõm khi dùng chính thành quả của mình. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "19452",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Minh và Huy suýt bỏ việc sơn bàn, cùng thử thêm rồi chia sẻ cảm giác vui nhẹ nhõm khi dùng chính thành quả của mình. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

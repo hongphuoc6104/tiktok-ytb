@@ -1,0 +1,497 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "b969795895f33c0a1afa595a1df1c8be7f93f9228e353c50b7024373e3b23892",
+  "topic": "Học từ vựng tiếng Anh RUN (động từ: chạy bằng chân) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ RUN",
+    "Làm rõ nghĩa lõi \"chạy bằng chân\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng RUN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại RUN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Khoa",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+      "outfit": "Single muted-green short-sleeve shirt (#A0C49D)."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều đang xảy ra",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "action": "Two figures in closed flat courtyard with one red practice cone a short distance ahead, mascot gestures along path. No exact meter claim or road traffic.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Khoa đứng cạnh chiếc nón nhựa đỏ. Tôi dời nón tới cuối sân phẳng rồi rủ em: \"Let's run to the cone.\" Cùng chạy tới chiếc cọc nhé. Khoa nhìn đường, hỏi tôi có chạy cùng thật không.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "run",
+          "meaning": "chạy bằng chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Two figures in closed flat courtyard with one red practice cone a short distance ahead, mascot gestures along path. No exact meter claim or road traffic. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two figures in closed flat courtyard with one red practice cone a short distance ahead, mascot gestures along path. No exact meter claim or road traffic.",
+          "reason": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "visible_text": [
+            {
+              "text": "Let's run to the cone.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Khoa đứng cạnh chiếc nón nhựa đỏ. Tôi dời nón tới cuối sân phẳng rồi rủ em: \"Let's run to the cone.\" Cùng chạy tới chiếc cọc nhé. Khoa nhìn đường, hỏi tôi có chạy cùng thật không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the concrete personal situation and introduce or prepare an early English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Vướng mắc nhỏ",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "action": "Side profile medium shot of both figures jogging side by side with easy, measured foot strikes, keeping their shoulders relaxed.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Khoa nhìn theo tay tôi chỉ rồi giảm bớt đà bước. Tôi vỗ nhẹ lưng em, bước những nhịp ngắn đều đặn: \"I can run slowly.\" Tôi có thể chạy chậm.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "run",
+          "meaning": "chạy bằng chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Side profile medium shot of both figures jogging side by side with easy, measured foot strikes, keeping their shoulders relaxed. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Side profile medium shot of both figures jogging side by side with easy, measured foot strikes, keeping their shoulders relaxed.",
+          "reason": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "visible_text": [
+            {
+              "text": "run · chạy bằng chân",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "anchor": {
+            "vi": {
+              "quote": "Khoa nhìn theo tay tôi chỉ rồi giảm bớt đà bước. Tôi vỗ nhẹ lưng em, bước những nhịp ngắn đều đặn: \"I can run slowly.\" Tôi có thể chạy chậm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Advance the same situation and clarify the target sense with meaningful English usage. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một hành động cần thiết",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "action": "Tracking medium shot from slightly ahead. The two figures jog in unison, their sneakers tapping cleanly on the brick lane as the red cone draws closer.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hai anh em chạy song song trên nền gạch sạch, tiếng giày vải gõ nhịp nhàng. Khoa không còn cắm đầu thở dốc mà nhìn về chiếc nón nhựa phía trước.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "run",
+          "meaning": "chạy bằng chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Tracking medium shot from slightly ahead. The two figures jog in unison, their sneakers tapping cleanly on the brick lane as the red cone draws closer. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Tracking medium shot from slightly ahead. The two figures jog in unison, their sneakers tapping cleanly on the brick lane as the red cone draws closer.",
+          "reason": "Show the small action or consequence that motivates the upcoming response.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the small action or consequence that motivates the upcoming response.",
+          "anchor": {
+            "vi": {
+              "quote": "Hai anh em chạy song song trên nền gạch sạch, tiếng giày vải gõ nhịp nhàng. Khoa không còn cắm đầu thở dốc mà nhìn về chiếc nón nhựa phía trước.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the small action or consequence that motivates the upcoming response. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần nói",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "action": "Close-up of the mascot pointing forward along the path toward the visible red cone with a welcoming expression.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn muốn rủ Khoa cùng chạy bước chậm tới chiếc cọc mốc trước mặt. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "run",
+          "meaning": "chạy bằng chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Close-up of the mascot pointing forward along the path toward the visible red cone with a welcoming expression. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close-up of the mascot pointing forward along the path toward the visible red cone with a welcoming expression.",
+          "reason": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "visible_text": [
+            {
+              "text": "Let's ______ to the cone.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn rủ Khoa cùng chạy bước chậm tới chiếc cọc mốc trước mặt. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask for a complete story-linked sentence, then hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả gần",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "action": "Wide shot at the cone marker. Both figures touch the cone with their shoes together, slowing down to a calm walk under a shading banyan tree.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Let's run to the cone.\" Khoa tới cọc trước một chút, quay lại đợi tôi. Tôi hỏi thêm vòng nữa không. Em bảo nghỉ cùng đã, rồi chỉ bậc thềm sát đó. Tôi đi bên em, để chiếc nón ở nguyên chỗ.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "run",
+          "meaning": "chạy bằng chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Wide shot at the cone marker. Both figures touch the cone with their shoes together, slowing down to a calm walk under a shading banyan tree. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Wide shot at the cone marker. Both figures touch the cone with their shoes together, slowing down to a calm walk under a shading banyan tree.",
+          "reason": "Give the correct answer and close with the earned local consequence.",
+          "visible_text": [
+            {
+              "text": "Let's run to the cone.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct answer and close with the earned local consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Let's run to the cone.\" Khoa tới cọc trước một chút, quay lại đợi tôi. Tôi hỏi thêm vòng nữa không. Em bảo nghỉ cùng đã, rồi chỉ bậc thềm sát đó. Tôi đi bên em, để chiếc nón ở nguyên chỗ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the correct answer and close with the earned local consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Khoa đứng cạnh chiếc nón nhựa đỏ. Tôi dời nón tới cuối sân phẳng rồi rủ em: \"Let's run to the cone.\" Cùng chạy tới chiếc cọc nhé. Khoa nhìn đường, hỏi tôi có chạy cùng thật không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Khoa đứng cạnh chiếc nón nhựa đỏ. Tôi dời nón tới cuối sân phẳng rồi rủ em: \"Let's run to the cone.\" Cùng chạy tới chiếc cọc nhé. Khoa nhìn đường, hỏi tôi có chạy cùng thật không."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Khoa đứng cạnh chiếc nón nhựa đỏ. Tôi dời nón tới cuối sân phẳng rồi rủ em: \"Let's run to the cone.\" Cùng chạy tới chiếc cọc nhé. Khoa nhìn đường, hỏi tôi có chạy cùng thật không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Khoa nhìn theo tay tôi chỉ rồi giảm bớt đà bước. Tôi vỗ nhẹ lưng em, bước những nhịp ngắn đều đặn: \"I can run slowly.\" Tôi có thể chạy chậm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Khoa nhìn theo tay tôi chỉ rồi giảm bớt đà bước. Tôi vỗ nhẹ lưng em, bước những nhịp ngắn đều đặn: \"I can run slowly.\" Tôi có thể chạy chậm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Hai anh em chạy song song trên nền gạch sạch, tiếng giày vải gõ nhịp nhàng. Khoa không còn cắm đầu thở dốc mà nhìn về chiếc nón nhựa phía trước."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn rủ Khoa cùng chạy bước chậm tới chiếc cọc mốc trước mặt. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn rủ Khoa cùng chạy bước chậm tới chiếc cọc mốc trước mặt. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Let's run to the cone.\" Khoa tới cọc trước một chút, quay lại đợi tôi. Tôi hỏi thêm vòng nữa không. Em bảo nghỉ cùng đã, rồi chỉ bậc thềm sát đó. Tôi đi bên em, để chiếc nón ở nguyên chỗ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Let's run to the cone.\" Khoa tới cọc trước một chút, quay lại đợi tôi. Tôi hỏi thêm vòng nữa không. Em bảo nghỉ cùng đã, rồi chỉ bậc thềm sát đó. Tôi đi bên em, để chiếc nón ở nguyên chỗ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Let's run to the cone.\" Khoa tới cọc trước một chút, quay lại đợi tôi. Tôi hỏi thêm vòng nữa không. Em bảo nghỉ cùng đã, rồi chỉ bậc thềm sát đó. Tôi đi bên em, để chiếc nón ở nguyên chỗ."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the concrete personal situation and introduce or prepare an early English model. Next causal state: Side profile medium shot of both figures jogging side by side with easy, measured foot strikes, keeping their shoulders relaxed."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Advance the same situation and clarify the target sense with meaningful English usage. Next causal state: Tracking medium shot from slightly ahead. The two figures jog in unison, their sneakers tapping cleanly on the brick lane as the red cone draws closer."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the small action or consequence that motivates the upcoming response. Next causal state: Close-up of the mascot pointing forward along the path toward the visible red cone with a welcoming expression."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Ask for a complete story-linked sentence, then hold before the answer. Next causal state: Wide shot at the cone marker. Both figures touch the cone with their shoes together, slowing down to a calm walk under a shading banyan tree."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the correct answer and close with the earned local consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "21193",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi và Khoa rủ nhau chạy một đoạn ngắn tới cọc; tôi chạy chậm để đi cùng, rồi hai người tự chọn cùng nghỉ ở mốc ấy. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

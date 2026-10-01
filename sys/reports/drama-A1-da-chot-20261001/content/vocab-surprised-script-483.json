@@ -1,0 +1,511 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "9b2e6330887535a2af427e88ea5ad3ab61fd3a250ce3c74d8db5f9add982b145",
+  "topic": "Học từ vựng tiếng Anh SURPRISED (tính từ: ngạc nhiên) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SURPRISED",
+    "Làm rõ nghĩa lõi \"ngạc nhiên\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SURPRISED, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SURPRISED, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Huy",
+      "appearance": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+      "outfit": "One plain amber-yellow short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with concrete personal need and early usable English.",
+      "action": "Front doorway medium shot: mascot opens wooden door and pauses in surprise; Huy stands outside on porch holding wrapped gift box. Clean porch background.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Cửa mở ra, tôi đứng sững lại. Huy đứng ngoài hiên với chiếc hộp quà lớn trên tay. \"I'm surprised!\" Tôi ngạc nhiên quá! Bạn vừa nói đang ở quê sáng nay.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "surprised",
+          "meaning": "ngạc nhiên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Front doorway medium shot: mascot opens wooden door and pauses in surprise; Huy stands outside on porch holding wrapped gift box. Clean porch background. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Front doorway medium shot: mascot opens wooden door and pauses in surprise; Huy stands outside on porch holding wrapped gift box. Clean porch background.",
+          "reason": "Open with concrete personal need and early usable English.",
+          "visible_text": [
+            {
+              "text": "I'm surprised!",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with concrete personal need and early usable English.",
+          "anchor": {
+            "vi": {
+              "quote": "Cửa mở ra, tôi đứng sững lại. Huy đứng ngoài hiên với chiếc hộp quà lớn trên tay. \"I'm surprised!\" Tôi ngạc nhiên quá! Bạn vừa nói đang ở quê sáng nay.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with concrete personal need and early usable English. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify the selected sense in the same relationship and obstacle.",
+      "action": "Living room medium shot: Huy hands gift box across low table and smiles; mascot pulls out wooden chair, train ticket visible in Huy's pocket.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy cười rồi đưa hộp quà cho tôi: \"Are you surprised?\" Bạn ngạc nhiên à? Tôi gật đầu, kéo ghế mời bạn vào nhà; chiếc vé tàu vẫn nằm trong túi áo bạn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "surprised",
+          "meaning": "ngạc nhiên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Living room medium shot: Huy hands gift box across low table and smiles; mascot pulls out wooden chair, train ticket visible in Huy's pocket. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Living room medium shot: Huy hands gift box across low table and smiles; mascot pulls out wooden chair, train ticket visible in Huy's pocket.",
+          "reason": "Clarify the selected sense in the same relationship and obstacle.",
+          "visible_text": [
+            {
+              "text": "surprised · ngạc nhiên",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify the selected sense in the same relationship and obstacle.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy cười rồi đưa hộp quà cho tôi: \"Are you surprised?\" Bạn ngạc nhiên à? Tôi gật đầu, kéo ghế mời bạn vào nhà; chiếc vé tàu vẫn nằm trong túi áo bạn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify the selected sense in the same relationship and obstacle. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+      "action": "Same living room medium shot: mascot places two cups of water beside the gift box on table; Huy sits on wooden chair explaining with simple gestures.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi từng bảo sinh nhật này sẽ ở nhà một mình. Huy vẫn đổi tàu sớm tới, chỉ có một tiếng trước khi phải về. Tôi rót hai cốc nước, mở hộp bánh để bạn kịp ăn cùng, không đợi thêm ai.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "surprised",
+          "meaning": "ngạc nhiên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Same living room medium shot: mascot places two cups of water beside the gift box on table; Huy sits on wooden chair explaining with simple gestures. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same living room medium shot: mascot places two cups of water beside the gift box on table; Huy sits on wooden chair explaining with simple gestures.",
+          "reason": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi từng bảo sinh nhật này sẽ ở nhà một mình. Huy vẫn đổi tàu sớm tới, chỉ có một tiếng trước khi phải về. Tôi rót hai cốc nước, mở hộp bánh để bạn kịp ăn cùng, không đợi thêm ai.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use a deliberate action or decision to change the same story; support the selected target sense. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+      "action": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy hỏi tôi có ngờ bạn tới không. Bạn nói giúp tôi câu tôi ngạc nhiên quá bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "surprised",
+          "meaning": "ngạc nhiên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+          "reason": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+          "visible_text": [
+            {
+              "text": "I'm ___!",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy hỏi tôi có ngờ bạn tới không. Bạn nói giúp tôi câu tôi ngạc nhiên quá bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the viewer to retrieve a full supported sentence; hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give the exact complete retrieval response and close with a small earned consequence.",
+      "action": "Same living room table: mascot opens cardboard pastry box revealing round cake; Huy smiles warmly. No crowded room or incidental text.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I'm surprised!\" Huy bảo phải giấu chuyện đổi tàu suốt tuần. Tôi chia bánh rồi đưa bạn một phần mang về. Ra tới cửa, tôi giữ bạn thêm lúc nữa để hỏi chuyến sau có thể ở lâu hơn không.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "surprised",
+          "meaning": "ngạc nhiên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Same living room table: mascot opens cardboard pastry box revealing round cake; Huy smiles warmly. No crowded room or incidental text. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same living room table: mascot opens cardboard pastry box revealing round cake; Huy smiles warmly. No crowded room or incidental text.",
+          "reason": "Give the exact complete retrieval response and close with a small earned consequence.",
+          "visible_text": [
+            {
+              "text": "I'm surprised!",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the exact complete retrieval response and close with a small earned consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm surprised!\" Huy bảo phải giấu chuyện đổi tàu suốt tuần. Tôi chia bánh rồi đưa bạn một phần mang về. Ra tới cửa, tôi giữ bạn thêm lúc nữa để hỏi chuyến sau có thể ở lâu hơn không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the exact complete retrieval response and close with a small earned consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Cửa mở ra, tôi đứng sững lại. Huy đứng ngoài hiên với chiếc hộp quà lớn trên tay. \"I'm surprised!\" Tôi ngạc nhiên quá! Bạn vừa nói đang ở quê sáng nay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Cửa mở ra, tôi đứng sững lại. Huy đứng ngoài hiên với chiếc hộp quà lớn trên tay. \"I'm surprised!\" Tôi ngạc nhiên quá! Bạn vừa nói đang ở quê sáng nay."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Cửa mở ra, tôi đứng sững lại. Huy đứng ngoài hiên với chiếc hộp quà lớn trên tay. \"I'm surprised!\" Tôi ngạc nhiên quá! Bạn vừa nói đang ở quê sáng nay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Huy cười rồi đưa hộp quà cho tôi: \"Are you surprised?\" Bạn ngạc nhiên à? Tôi gật đầu, kéo ghế mời bạn vào nhà; chiếc vé tàu vẫn nằm trong túi áo bạn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Huy cười rồi đưa hộp quà cho tôi: \"Are you surprised?\" Bạn ngạc nhiên à? Tôi gật đầu, kéo ghế mời bạn vào nhà; chiếc vé tàu vẫn nằm trong túi áo bạn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi từng bảo sinh nhật này sẽ ở nhà một mình. Huy vẫn đổi tàu sớm tới, chỉ có một tiếng trước khi phải về. Tôi rót hai cốc nước, mở hộp bánh để bạn kịp ăn cùng, không đợi thêm ai."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Huy hỏi tôi có ngờ bạn tới không. Bạn nói giúp tôi câu tôi ngạc nhiên quá bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Huy hỏi tôi có ngờ bạn tới không. Bạn nói giúp tôi câu tôi ngạc nhiên quá bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"I'm surprised!\" Huy bảo phải giấu chuyện đổi tàu suốt tuần. Tôi chia bánh rồi đưa bạn một phần mang về. Ra tới cửa, tôi giữ bạn thêm lúc nữa để hỏi chuyến sau có thể ở lâu hơn không."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"I'm surprised!\" Huy bảo phải giấu chuyện đổi tàu suốt tuần. Tôi chia bánh rồi đưa bạn một phần mang về. Ra tới cửa, tôi giữ bạn thêm lúc nữa để hỏi chuyến sau có thể ở lâu hơn không."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I'm surprised!\" Huy bảo phải giấu chuyện đổi tàu suốt tuần. Tôi chia bánh rồi đưa bạn một phần mang về. Ra tới cửa, tôi giữ bạn thêm lúc nữa để hỏi chuyến sau có thể ở lâu hơn không."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with concrete personal need and early usable English.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with concrete personal need and early usable English. Next causal state: Living room medium shot: Huy hands gift box across low table and smiles; mascot pulls out wooden chair, train ticket visible in Huy's pocket."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify the selected sense in the same relationship and obstacle.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Clarify the selected sense in the same relationship and obstacle. Next causal state: Same living room medium shot: mascot places two cups of water beside the gift box on table; Huy sits on wooden chair explaining with simple gestures."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Use a deliberate action or decision to change the same story; support the selected target sense. Next causal state: Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite the viewer to retrieve a full supported sentence; hold before the answer. Next causal state: Same living room table: mascot opens cardboard pastry box revealing round cake; Huy smiles warmly. No crowded room or incidental text."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the exact complete retrieval response and close with a small earned consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the exact complete retrieval response and close with a small earned consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17154",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Cửa mở ra, tôi đứng sững lại. Huy đứng ngoài hiên với chiếc hộp quà lớn trên tay.  Tôi từng bảo sinh nhật này sẽ ở nhà một mình. Huy vẫn đổi tàu sớm tới, chỉ có một tiếng trước khi phải về. Tôi rót hai cốc nước, mở hộp bánh để bạn kịp ăn cùng, không đợi thêm ai.  Huy bảo phải giấu chuyện đổi tàu suốt tuần. Tôi chia bánh rồi đưa bạn một phần mang về. Ra tới cửa, tôi giữ bạn thêm lúc nữa để hỏi chuyến sau có thể ở lâu hơn không. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "20076",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Cửa mở ra, tôi đứng sững lại. Huy đứng ngoài hiên với chiếc hộp quà lớn trên tay.  Tôi từng bảo sinh nhật này sẽ ở nhà một mình. Huy vẫn đổi tàu sớm tới, chỉ có một tiếng trước khi phải về. Tôi rót hai cốc nước, mở hộp bánh để bạn kịp ăn cùng, không đợi thêm ai.  Huy bảo phải giấu chuyện đổi tàu suốt tuần. Tôi chia bánh rồi đưa bạn một phần mang về. Ra tới cửa, tôi giữ bạn thêm lúc nữa để hỏi chuyến sau có thể ở lâu hơn không. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

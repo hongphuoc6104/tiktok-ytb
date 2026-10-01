@@ -1,0 +1,509 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "6412b1e7d65b98a631be7fc12da4531a6f0965ffbe3e75ee38662ec34f0b0cdd",
+  "topic": "Học từ vựng tiếng Anh EAST (danh từ: hướng đông) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ EAST",
+    "Làm rõ nghĩa lõi \"hướng đông\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng EAST, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại EAST, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Việt",
+      "appearance": "Minimal ink stick figure with a round white head outlined in ink line, simple expressive ink eyes, and minimal stick limbs.",
+      "outfit": "Single navy-blue short-sleeve shirt and ink trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Nhà ga ở phía đông",
+      "purpose": "Establish the early departure atmosphere and introduce the first model sentence with east.",
+      "action": "Two friends on safe guarded bridge beside orientation map, station icon right of current-position dot aligned with East arrow. Morning light decorative only.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Trời còn mờ sáng trên cầu. Việt mang ba lô nặng, đứng nhìn ngã ba đường vắng vẻ chưa có ai qua lại. Tôi chỉ tay về phía rạng đông: \"The station is to the east.\" Nhà ga ở phía đông.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "east",
+          "meaning": "hướng đông"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Two friends on safe guarded bridge beside orientation map, station icon right of current-position dot aligned with East arrow. Morning light decorative only. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two friends on safe guarded bridge beside orientation map, station icon right of current-position dot aligned with East arrow. Morning light decorative only.",
+          "reason": "Establish the early departure atmosphere and introduce the first model sentence with east.",
+          "visible_text": [
+            {
+              "text": "The station is to the east.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            },
+            {
+              "text": "East",
+              "placement": "At rightward map orientation arrow",
+              "object": "Bridge area map"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the early departure atmosphere and introduce the first model sentence with east.",
+          "anchor": {
+            "vi": {
+              "quote": "Trời còn mờ sáng trên cầu. Việt mang ba lô nặng, đứng nhìn ngã ba đường vắng vẻ chưa có ai qua lại. Tôi chỉ tay về phía rạng đông: \"The station is to the east.\" Nhà ga ở phía đông.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the early departure atmosphere and introduce the first model sentence with east. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Công viên cũng ở phía đông",
+      "purpose": "Reinforce directional orientation with a second model sentence using east.",
+      "action": "Same map, park and station icons both right of position dot along East direction; mascot indicates both while navy-shirt friend watches.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Việt nhìn theo hướng tay tôi, thở ra một làn hơi mỏng trong gió sớm. Anh sợ nhầm sang lối vườn hoa. Tôi bảo thêm: \"The park is to the east.\" Công viên cũng ở phía đông.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "east",
+          "meaning": "hướng đông"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same map, park and station icons both right of position dot along East direction; mascot indicates both while navy-shirt friend watches. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same map, park and station icons both right of position dot along East direction; mascot indicates both while navy-shirt friend watches.",
+          "reason": "Reinforce directional orientation with a second model sentence using east.",
+          "visible_text": [
+            {
+              "text": "east · hướng đông",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            },
+            {
+              "text": "East",
+              "placement": "At rightward map orientation arrow",
+              "object": "Bridge area map"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Reinforce directional orientation with a second model sentence using east.",
+          "anchor": {
+            "vi": {
+              "quote": "Việt nhìn theo hướng tay tôi, thở ra một làn hơi mỏng trong gió sớm. Anh sợ nhầm sang lối vườn hoa. Tôi bảo thêm: \"The park is to the east.\" Công viên cũng ở phía đông.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Reinforce directional orientation with a second model sentence using east. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Tiếng còi tàu sớm",
+      "purpose": "Show purposeful forward movement in the crisp morning.",
+      "action": "The two walk in sync across the iron bridge deck as a distant train whistle echoes across the river below.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Việt bước cùng tôi qua cầu. Anh hỏi lần sau tôi có tới ga đón không. Tôi bảo có, nhưng anh phải nhớ lối để dẫn tôi về nhé. Anh nhìn lại chỗ rẽ, lần này để nhớ thật.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "east",
+          "meaning": "hướng đông"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The two walk in sync across the iron bridge deck as a distant train whistle echoes across the river below. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The two walk in sync across the iron bridge deck as a distant train whistle echoes across the river below.",
+          "reason": "Show purposeful forward movement in the crisp morning.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show purposeful forward movement in the crisp morning.",
+          "anchor": {
+            "vi": {
+              "quote": "Việt bước cùng tôi qua cầu. Anh hỏi lần sau tôi có tới ga đón không. Tôi bảo có, nhưng anh phải nhớ lối để dẫn tôi về nhé. Anh nhìn lại chỗ rẽ, lần này để nhớ thật.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show purposeful forward movement in the crisp morning. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Luyện nói câu nhà ga ở phía đông",
+      "purpose": "Prompt the learner to speak the sentence with east to send the traveler on the correct path.",
+      "action": "At the bridge ramp intersection, the traveler pauses. The pale-blue shirt mascot faces the viewer with an earnest prompting gesture.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tới ngã rẽ, Việt dừng lại ngập ngừng, muốn tôi nhắc lại hướng của nhà ga để anh rảo bước cho kịp giờ tàu. Bạn nói giúp tôi câu nhà ga ở phía đông nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "east",
+          "meaning": "hướng đông"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "At the bridge ramp intersection, the traveler pauses. The pale-blue shirt mascot faces the viewer with an earnest prompting gesture. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At the bridge ramp intersection, the traveler pauses. The pale-blue shirt mascot faces the viewer with an earnest prompting gesture.",
+          "reason": "Prompt the learner to speak the sentence with east to send the traveler on the correct path.",
+          "visible_text": [
+            {
+              "text": "The station is to the ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to speak the sentence with east to send the traveler on the correct path.",
+          "anchor": {
+            "vi": {
+              "quote": "Tới ngã rẽ, Việt dừng lại ngập ngừng, muốn tôi nhắc lại hướng của nhà ga để anh rảo bước cho kịp giờ tàu. Bạn nói giúp tôi câu nhà ga ở phía đông nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to speak the sentence with east to send the traveler on the correct path. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Bước về phía ánh bình minh",
+      "purpose": "Deliver the model answer and close with a heartfelt, modest farewell.",
+      "action": "The traveler grasps the mascot's shoulder in brief gratitude, smiles, and strides briskly toward the golden rim of sunrise illuminating the train station roof.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The station is to the east.\" Nhà ga ở phía đông. Việt siết nhẹ vai tôi chào tạm biệt rồi bước nhanh về phía ánh mặt trời đang ló dạng.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "east",
+          "meaning": "hướng đông"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The traveler grasps the mascot's shoulder in brief gratitude, smiles, and strides briskly toward the golden rim of sunrise illuminating the train station roof. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The traveler grasps the mascot's shoulder in brief gratitude, smiles, and strides briskly toward the golden rim of sunrise illuminating the train station roof.",
+          "reason": "Deliver the model answer and close with a heartfelt, modest farewell.",
+          "visible_text": [
+            {
+              "text": "The station is to the east.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Deliver the model answer and close with a heartfelt, modest farewell.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The station is to the east.\" Nhà ga ở phía đông. Việt siết nhẹ vai tôi chào tạm biệt rồi bước nhanh về phía ánh mặt trời đang ló dạng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the model answer and close with a heartfelt, modest farewell. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Trời còn mờ sáng trên cầu. Việt mang ba lô nặng, đứng nhìn ngã ba đường vắng vẻ chưa có ai qua lại. Tôi chỉ tay về phía rạng đông: \"The station is to the east.\" Nhà ga ở phía đông."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Trời còn mờ sáng trên cầu. Việt mang ba lô nặng, đứng nhìn ngã ba đường vắng vẻ chưa có ai qua lại. Tôi chỉ tay về phía rạng đông: \"The station is to the east.\" Nhà ga ở phía đông."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Trời còn mờ sáng trên cầu. Việt mang ba lô nặng, đứng nhìn ngã ba đường vắng vẻ chưa có ai qua lại. Tôi chỉ tay về phía rạng đông: \"The station is to the east.\" Nhà ga ở phía đông."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Việt nhìn theo hướng tay tôi, thở ra một làn hơi mỏng trong gió sớm. Anh sợ nhầm sang lối vườn hoa. Tôi bảo thêm: \"The park is to the east.\" Công viên cũng ở phía đông."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Việt nhìn theo hướng tay tôi, thở ra một làn hơi mỏng trong gió sớm. Anh sợ nhầm sang lối vườn hoa. Tôi bảo thêm: \"The park is to the east.\" Công viên cũng ở phía đông."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Việt bước cùng tôi qua cầu. Anh hỏi lần sau tôi có tới ga đón không. Tôi bảo có, nhưng anh phải nhớ lối để dẫn tôi về nhé. Anh nhìn lại chỗ rẽ, lần này để nhớ thật."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tới ngã rẽ, Việt dừng lại ngập ngừng, muốn tôi nhắc lại hướng của nhà ga để anh rảo bước cho kịp giờ tàu. Bạn nói giúp tôi câu nhà ga ở phía đông nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Tới ngã rẽ, Việt dừng lại ngập ngừng, muốn tôi nhắc lại hướng của nhà ga để anh rảo bước cho kịp giờ tàu. Bạn nói giúp tôi câu nhà ga ở phía đông nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"The station is to the east.\" Nhà ga ở phía đông. Việt siết nhẹ vai tôi chào tạm biệt rồi bước nhanh về phía ánh mặt trời đang ló dạng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"The station is to the east.\" Nhà ga ở phía đông. Việt siết nhẹ vai tôi chào tạm biệt rồi bước nhanh về phía ánh mặt trời đang ló dạng."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The station is to the east.\" Nhà ga ở phía đông. Việt siết nhẹ vai tôi chào tạm biệt rồi bước nhanh về phía ánh mặt trời đang ló dạng."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the early departure atmosphere and introduce the first model sentence with east.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the early departure atmosphere and introduce the first model sentence with east. Next causal state: Same map, park and station icons both right of position dot along East direction; mascot indicates both while navy-shirt friend watches."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Reinforce directional orientation with a second model sentence using east.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Reinforce directional orientation with a second model sentence using east. Next causal state: The two walk in sync across the iron bridge deck as a distant train whistle echoes across the river below."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show purposeful forward movement in the crisp morning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show purposeful forward movement in the crisp morning. Next causal state: At the bridge ramp intersection, the traveler pauses. The pale-blue shirt mascot faces the viewer with an earnest prompting gesture."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to speak the sentence with east to send the traveler on the correct path.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to speak the sentence with east to send the traveler on the correct path. Next causal state: The traveler grasps the mascot's shoulder in brief gratitude, smiles, and strides briskly toward the golden rim of sunrise illuminating the train station roof."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Deliver the model answer and close with a heartfelt, modest farewell.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Deliver the model answer and close with a heartfelt, modest farewell. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19859",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Việt mang ba lô chuẩn bị lên chuyến tàu sớm; tôi tiễn anh qua cầu và chỉ hướng đông nơi nhà ga đón ánh mặt trời. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

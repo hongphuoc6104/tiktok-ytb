@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "3ce6a8d8d52b31e4ed350b86d91fa5b0cac9b0067c2b132991e70010c941ce14",
+  "topic": "Học từ vựng tiếng Anh FALL (danh từ: mùa thu (cách gọi ở Mỹ)) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FALL",
+    "Làm rõ nghĩa lõi \"mùa thu (cách gọi ở Mỹ)\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FALL, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FALL, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "David",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "A single plain dark-grey short-sleeve shirt (#78909C)."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Lá phong đỏ rực",
+      "purpose": "Establish the visual atmosphere of autumn through photographs on the tea table.",
+      "action": "Static medium shot of the stick figure in the pale-blue shirt and the friend in the dark-grey shirt leaning over an open photo album on a tea table.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "David đẩy album sang, tôi giữ mép lại. Bạn định cất ảnh quê Mỹ. \"I love the fall.\" Tôi yêu mùa thu. Tôi nói, muốn xem mùa ấy thêm một chút.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fall",
+          "meaning": "mùa thu (cách gọi ở Mỹ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Static medium shot of the stick figure in the pale-blue shirt and the friend in the dark-grey shirt leaning over an open photo album on a tea table. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Static medium shot of the stick figure in the pale-blue shirt and the friend in the dark-grey shirt leaning over an open photo album on a tea table.",
+          "reason": "Establish the visual atmosphere of autumn through photographs on the tea table.",
+          "visible_text": [
+            {
+              "text": "I love the fall.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the visual atmosphere of autumn through photographs on the tea table.",
+          "anchor": {
+            "vi": {
+              "quote": "David đẩy album sang, tôi giữ mép lại. Bạn định cất ảnh quê Mỹ. \"I love the fall.\" Tôi yêu mùa thu. Tôi nói, muốn xem mùa ấy thêm một chút.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the visual atmosphere of autumn through photographs on the tea table. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Tôi yêu mùa thu",
+      "purpose": "Introduce the first English model using 'fall' as the American noun for autumn.",
+      "action": "Mascot points to an unlabeled photograph of orange-leaf trees in album while grey-shirt friend rests hand near page, no extra people.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "David từng rủ tôi về thăm vào mùa thu, tôi cứ tưởng bạn thích mùa nóng. Cậu chỉ hàng cây đổi lá trong ảnh, kể lúc chụp đúng mùa thu ở quê nhà.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fall",
+          "meaning": "mùa thu (cách gọi ở Mỹ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to an unlabeled photograph of orange-leaf trees in album while grey-shirt friend rests hand near page, no extra people. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to an unlabeled photograph of orange-leaf trees in album while grey-shirt friend rests hand near page, no extra people.",
+          "reason": "Introduce the first English model using 'fall' as the American noun for autumn.",
+          "visible_text": [
+            {
+              "text": "fall · mùa thu (cách gọi ở Mỹ)",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first English model using 'fall' as the American noun for autumn.",
+          "anchor": {
+            "vi": {
+              "quote": "David từng rủ tôi về thăm vào mùa thu, tôi cứ tưởng bạn thích mùa nóng. Cậu chỉ hàng cây đổi lá trong ảnh, kể lúc chụp đúng mùa thu ở quê nhà.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first English model using 'fall' as the American noun for autumn. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hơi lạnh se se",
+      "purpose": "Evoke the sensory experience of the season through clothing and golden lighting.",
+      "action": "Album photograph contains the same pale-blue mascot and grey-shirt friend under orange-leaf trees; these are same two registered figures, no family group or third person.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Người Mỹ gọi mùa thu bằng fall như câu tôi vừa nói. Tôi nhìn lại ảnh hai đứa đứng dưới hàng cây, nhận ra lần đầu đến đó mình còn mượn khăn của David.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fall",
+          "meaning": "mùa thu (cách gọi ở Mỹ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Album photograph contains the same pale-blue mascot and grey-shirt friend under orange-leaf trees; these are same two registered figures, no family group or third person. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Album photograph contains the same pale-blue mascot and grey-shirt friend under orange-leaf trees; these are same two registered figures, no family group or third person.",
+          "reason": "Evoke the sensory experience of the season through clothing and golden lighting.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Evoke the sensory experience of the season through clothing and golden lighting.",
+          "anchor": {
+            "vi": {
+              "quote": "Người Mỹ gọi mùa thu bằng fall như câu tôi vừa nói. Tôi nhìn lại ảnh hai đứa đứng dưới hàng cây, nhận ra lần đầu đến đó mình còn mượn khăn của David.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Evoke the sensory experience of the season through clothing and golden lighting. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Hẹn gặp mùa thu",
+      "purpose": "Introduce the second English model establishing seasonal time with 'fall'.",
+      "action": "Medium shot of the stick figure in the pale-blue shirt looking up from the album with a warm, appreciative smile.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"We met in the fall.\" Chúng tôi gặp nhau vào mùa thu. Tôi nhắc thời điểm hai đứa quen nhau, David dừng tay cất album. Bạn cũng giữ tấm ảnh ấy lâu nhất.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fall",
+          "meaning": "mùa thu (cách gọi ở Mỹ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Medium shot of the stick figure in the pale-blue shirt looking up from the album with a warm, appreciative smile. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the stick figure in the pale-blue shirt looking up from the album with a warm, appreciative smile.",
+          "reason": "Introduce the second English model establishing seasonal time with 'fall'.",
+          "visible_text": [
+            {
+              "text": "We met in the fall.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Introduce the second English model establishing seasonal time with 'fall'.",
+          "anchor": {
+            "vi": {
+              "quote": "\"We met in the fall.\" Chúng tôi gặp nhau vào mùa thu. Tôi nhắc thời điểm hai đứa quen nhau, David dừng tay cất album. Bạn cũng giữ tấm ảnh ấy lâu nhất.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second English model establishing seasonal time with 'fall'. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Bày tỏ cảm xúc",
+      "purpose": "Prompt the learner to express affection for the season using 'fall'.",
+      "action": "Medium shot of the friend in the dark-grey shirt looking warmly across the tea table, waiting for the learner's response.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "David hỏi tôi có còn thích mùa trong ảnh không. Bạn nói giúp tôi câu tôi yêu mùa thu bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fall",
+          "meaning": "mùa thu (cách gọi ở Mỹ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Medium shot of the friend in the dark-grey shirt looking warmly across the tea table, waiting for the learner's response. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the friend in the dark-grey shirt looking warmly across the tea table, waiting for the learner's response.",
+          "reason": "Prompt the learner to express affection for the season using 'fall'.",
+          "visible_text": [
+            {
+              "text": "I love the ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to express affection for the season using 'fall'.",
+          "anchor": {
+            "vi": {
+              "quote": "David hỏi tôi có còn thích mùa trong ảnh không. Bạn nói giúp tôi câu tôi yêu mùa thu bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to express affection for the season using 'fall'. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Món quà lá phong",
+      "purpose": "Confirm the correct utterance and conclude with a tangible, modest gift of friendship.",
+      "action": "Grey-shirt friend places pressed maple leaf inside the same album page while mascot keeps album open to continue listening. No leaf transfer as gift or extra people.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I love the fall.\" Tôi yêu mùa thu. David kẹp chiếc lá khô vào đúng trang ảnh hai đứa. Tôi giữ album mở, nhờ bạn kể nốt chuyện của buổi ấy.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fall",
+          "meaning": "mùa thu (cách gọi ở Mỹ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Grey-shirt friend places pressed maple leaf inside the same album page while mascot keeps album open to continue listening. No leaf transfer as gift or extra people. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Grey-shirt friend places pressed maple leaf inside the same album page while mascot keeps album open to continue listening. No leaf transfer as gift or extra people.",
+          "reason": "Confirm the correct utterance and conclude with a tangible, modest gift of friendship.",
+          "visible_text": [
+            {
+              "text": "I love the fall.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm the correct utterance and conclude with a tangible, modest gift of friendship.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I love the fall.\" Tôi yêu mùa thu. David kẹp chiếc lá khô vào đúng trang ảnh hai đứa. Tôi giữ album mở, nhờ bạn kể nốt chuyện của buổi ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the correct utterance and conclude with a tangible, modest gift of friendship. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "David đẩy album sang, tôi giữ mép lại. Bạn định cất ảnh quê Mỹ. \"I love the fall.\" Tôi yêu mùa thu. Tôi nói, muốn xem mùa ấy thêm một chút."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "David đẩy album sang, tôi giữ mép lại. Bạn định cất ảnh quê Mỹ. \"I love the fall.\" Tôi yêu mùa thu. Tôi nói, muốn xem mùa ấy thêm một chút."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "David đẩy album sang, tôi giữ mép lại. Bạn định cất ảnh quê Mỹ. \"I love the fall.\" Tôi yêu mùa thu. Tôi nói, muốn xem mùa ấy thêm một chút."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "David từng rủ tôi về thăm vào mùa thu, tôi cứ tưởng bạn thích mùa nóng. Cậu chỉ hàng cây đổi lá trong ảnh, kể lúc chụp đúng mùa thu ở quê nhà."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Người Mỹ gọi mùa thu bằng fall như câu tôi vừa nói. Tôi nhìn lại ảnh hai đứa đứng dưới hàng cây, nhận ra lần đầu đến đó mình còn mượn khăn của David."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"We met in the fall.\" Chúng tôi gặp nhau vào mùa thu. Tôi nhắc thời điểm hai đứa quen nhau, David dừng tay cất album. Bạn cũng giữ tấm ảnh ấy lâu nhất."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"We met in the fall.\" Chúng tôi gặp nhau vào mùa thu. Tôi nhắc thời điểm hai đứa quen nhau, David dừng tay cất album. Bạn cũng giữ tấm ảnh ấy lâu nhất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "David hỏi tôi có còn thích mùa trong ảnh không. Bạn nói giúp tôi câu tôi yêu mùa thu bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "David hỏi tôi có còn thích mùa trong ảnh không. Bạn nói giúp tôi câu tôi yêu mùa thu bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"I love the fall.\" Tôi yêu mùa thu. David kẹp chiếc lá khô vào đúng trang ảnh hai đứa. Tôi giữ album mở, nhờ bạn kể nốt chuyện của buổi ấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"I love the fall.\" Tôi yêu mùa thu. David kẹp chiếc lá khô vào đúng trang ảnh hai đứa. Tôi giữ album mở, nhờ bạn kể nốt chuyện của buổi ấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I love the fall.\" Tôi yêu mùa thu. David kẹp chiếc lá khô vào đúng trang ảnh hai đứa. Tôi giữ album mở, nhờ bạn kể nốt chuyện của buổi ấy."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the visual atmosphere of autumn through photographs on the tea table.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the visual atmosphere of autumn through photographs on the tea table. Next causal state: Mascot points to an unlabeled photograph of orange-leaf trees in album while grey-shirt friend rests hand near page, no extra people."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first English model using 'fall' as the American noun for autumn.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first English model using 'fall' as the American noun for autumn. Next causal state: Album photograph contains the same pale-blue mascot and grey-shirt friend under orange-leaf trees; these are same two registered figures, no family group or third person."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Evoke the sensory experience of the season through clothing and golden lighting.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Evoke the sensory experience of the season through clothing and golden lighting. Next causal state: Medium shot of the stick figure in the pale-blue shirt looking up from the album with a warm, appreciative smile."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Introduce the second English model establishing seasonal time with 'fall'.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second English model establishing seasonal time with 'fall'. Next causal state: Medium shot of the friend in the dark-grey shirt looking warmly across the tea table, waiting for the learner's response."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to express affection for the season using 'fall'.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to express affection for the season using 'fall'. Next causal state: Grey-shirt friend places pressed maple leaf inside the same album page while mascot keeps album open to continue listening. No leaf transfer as gift or extra people."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm the correct utterance and conclude with a tangible, modest gift of friendship.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the correct utterance and conclude with a tangible, modest gift of friendship. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18319",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Tôi muốn xem thêm trang thu ở quê Mỹ của David, nhớ hai người gặp nhau vào mùa ấy và giữ buổi chuyện bên album. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20976",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi muốn xem thêm trang thu ở quê Mỹ của David, nhớ hai người gặp nhau vào mùa ấy và giữ buổi chuyện bên album. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

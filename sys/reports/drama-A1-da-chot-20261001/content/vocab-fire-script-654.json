@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "127e980e9c31393dce55e651187070622a734e08b810f699f7aa1f1948c292cc",
+  "topic": "Học từ vựng tiếng Anh FIRE (danh từ: lửa) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FIRE",
+    "Làm rõ nghĩa lõi \"lửa\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FIRE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FIRE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "An",
+      "appearance": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "outfit": "A single plain pale brown short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Gió lạnh bờ rào",
+      "purpose": "Establish the cold outdoor evening and gathering dry twigs into a small garden stove.",
+      "action": "Mascot holds plain phone beside brown-shirt sibling seated at birthday table with one small uneven cake and one lit candle. No stove, fuel or printed name.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "An đưa miệng sát nến, định thổi luôn. Tôi giữ điện thoại: \"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi còn chưa chụp bánh sinh nhật cho em.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fire",
+          "meaning": "lửa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds plain phone beside brown-shirt sibling seated at birthday table with one small uneven cake and one lit candle. No stove, fuel or printed name. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds plain phone beside brown-shirt sibling seated at birthday table with one small uneven cake and one lit candle. No stove, fuel or printed name.",
+          "reason": "Establish the cold outdoor evening and gathering dry twigs into a small garden stove.",
+          "visible_text": [
+            {
+              "text": "Look at the fire.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the cold outdoor evening and gathering dry twigs into a small garden stove.",
+          "anchor": {
+            "vi": {
+              "quote": "An đưa miệng sát nến, định thổi luôn. Tôi giữ điện thoại: \"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi còn chưa chụp bánh sinh nhật cho em.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the cold outdoor evening and gathering dry twigs into a small garden stove. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Ánh lửa bùng lên",
+      "purpose": "Notice the ignition of the flame and speak the first English model sentence.",
+      "action": "Sibling waits beside same uneven cake, mascot holds phone low hesitating; only one small candle flame.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi làm chiếc bánh nhỏ, viết tên em không được đẹp nên cứ chậm chụp. An đã chờ từ chiều, chỉ muốn ăn cùng tôi. Em nhìn nến, đợi tôi đặt máy xuống.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fire",
+          "meaning": "lửa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Sibling waits beside same uneven cake, mascot holds phone low hesitating; only one small candle flame. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Sibling waits beside same uneven cake, mascot holds phone low hesitating; only one small candle flame.",
+          "reason": "Notice the ignition of the flame and speak the first English model sentence.",
+          "visible_text": [
+            {
+              "text": "fire · lửa",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Notice the ignition of the flame and speak the first English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi làm chiếc bánh nhỏ, viết tên em không được đẹp nên cứ chậm chụp. An đã chờ từ chiều, chỉ muốn ăn cùng tôi. Em nhìn nến, đợi tôi đặt máy xuống.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Notice the ignition of the flame and speak the first English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hơi ấm lan tỏa",
+      "purpose": "Experience the warmth of the fire and introduce the second English model sentence.",
+      "action": "Close view of single small candle flame on plain uneven cake, both figures look at it from seated distance. No match lighting or hands near flame.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The fire is small.\" Ngọn lửa nhỏ. Tôi nhìn đốm sáng trên cây nến duy nhất, nghe em bảo chụp bây giờ được rồi. Lửa ở đó là ngọn đang cháy, không phải hình trang trí.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fire",
+          "meaning": "lửa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Close view of single small candle flame on plain uneven cake, both figures look at it from seated distance. No match lighting or hands near flame. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close view of single small candle flame on plain uneven cake, both figures look at it from seated distance. No match lighting or hands near flame.",
+          "reason": "Experience the warmth of the fire and introduce the second English model sentence.",
+          "visible_text": [
+            {
+              "text": "The fire is small.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Experience the warmth of the fire and introduce the second English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The fire is small.\" Ngọn lửa nhỏ. Tôi nhìn đốm sáng trên cây nến duy nhất, nghe em bảo chụp bây giờ được rồi. Lửa ở đó là ngọn đang cháy, không phải hình trang trí.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Experience the warmth of the fire and introduce the second English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Ấm nước trên lò",
+      "purpose": "Show domestic comfort placing a kettle over the flame.",
+      "action": "Mascot shows phone framing to sibling, screen away from viewer, cake and candle unchanged.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi thôi chỉnh bánh, đưa máy cho An xem góc hình. Em gật, ngồi lại cạnh tôi. Bức ảnh sẽ có cả chiếc bánh hơi lệch mà tôi đã tự làm.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fire",
+          "meaning": "lửa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot shows phone framing to sibling, screen away from viewer, cake and candle unchanged. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot shows phone framing to sibling, screen away from viewer, cake and candle unchanged.",
+          "reason": "Show domestic comfort placing a kettle over the flame.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Show domestic comfort placing a kettle over the flame.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi thôi chỉnh bánh, đưa máy cho An xem góc hình. Em gật, ngồi lại cạnh tôi. Bức ảnh sẽ có cả chiếc bánh hơi lệch mà tôi đã tự làm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show domestic comfort placing a kettle over the flame. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chỉ vào ngọn lửa",
+      "purpose": "Invite the learner to retrieve the first model sentence to point out the glowing flame.",
+      "action": "Mascot asks sibling to look toward single candle, phone prepared at side, top safe area for stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "An chưa chú ý vào cây nến trong lúc tôi chuẩn bị chụp. Bạn nói giúp tôi câu nhìn ngọn lửa bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fire",
+          "meaning": "lửa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot asks sibling to look toward single candle, phone prepared at side, top safe area for stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot asks sibling to look toward single candle, phone prepared at side, top safe area for stem.",
+          "reason": "Invite the learner to retrieve the first model sentence to point out the glowing flame.",
+          "visible_text": [
+            {
+              "text": "Look at the ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Invite the learner to retrieve the first model sentence to point out the glowing flame.",
+          "anchor": {
+            "vi": {
+              "quote": "An chưa chú ý vào cây nến trong lúc tôi chuẩn bị chụp. Bạn nói giúp tôi câu nhìn ngọn lửa bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the learner to retrieve the first model sentence to point out the glowing flame. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Tách trà ấm",
+      "purpose": "Confirm the correct model sentence and conclude the peaceful evening scene.",
+      "action": "Candle extinguished after photo, sibling offers mascot first cake slice beside whole uneven cake. Phone lies face down, no written music or labels.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi chụp xong, An mới thổi nến. Em đưa tôi miếng bánh đầu tiên, giữ lại tấm ảnh tôi cứ ngại chụp.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fire",
+          "meaning": "lửa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Candle extinguished after photo, sibling offers mascot first cake slice beside whole uneven cake. Phone lies face down, no written music or labels. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Candle extinguished after photo, sibling offers mascot first cake slice beside whole uneven cake. Phone lies face down, no written music or labels.",
+          "reason": "Confirm the correct model sentence and conclude the peaceful evening scene.",
+          "visible_text": [
+            {
+              "text": "Look at the fire.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm the correct model sentence and conclude the peaceful evening scene.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi chụp xong, An mới thổi nến. Em đưa tôi miếng bánh đầu tiên, giữ lại tấm ảnh tôi cứ ngại chụp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the correct model sentence and conclude the peaceful evening scene. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "An đưa miệng sát nến, định thổi luôn. Tôi giữ điện thoại: \"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi còn chưa chụp bánh sinh nhật cho em."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "An đưa miệng sát nến, định thổi luôn. Tôi giữ điện thoại: \"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi còn chưa chụp bánh sinh nhật cho em."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "An đưa miệng sát nến, định thổi luôn. Tôi giữ điện thoại: \"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi còn chưa chụp bánh sinh nhật cho em."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi làm chiếc bánh nhỏ, viết tên em không được đẹp nên cứ chậm chụp. An đã chờ từ chiều, chỉ muốn ăn cùng tôi. Em nhìn nến, đợi tôi đặt máy xuống."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"The fire is small.\" Ngọn lửa nhỏ. Tôi nhìn đốm sáng trên cây nến duy nhất, nghe em bảo chụp bây giờ được rồi. Lửa ở đó là ngọn đang cháy, không phải hình trang trí."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"The fire is small.\" Ngọn lửa nhỏ. Tôi nhìn đốm sáng trên cây nến duy nhất, nghe em bảo chụp bây giờ được rồi. Lửa ở đó là ngọn đang cháy, không phải hình trang trí."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi thôi chỉnh bánh, đưa máy cho An xem góc hình. Em gật, ngồi lại cạnh tôi. Bức ảnh sẽ có cả chiếc bánh hơi lệch mà tôi đã tự làm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "An chưa chú ý vào cây nến trong lúc tôi chuẩn bị chụp. Bạn nói giúp tôi câu nhìn ngọn lửa bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "An chưa chú ý vào cây nến trong lúc tôi chuẩn bị chụp. Bạn nói giúp tôi câu nhìn ngọn lửa bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi chụp xong, An mới thổi nến. Em đưa tôi miếng bánh đầu tiên, giữ lại tấm ảnh tôi cứ ngại chụp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi chụp xong, An mới thổi nến. Em đưa tôi miếng bánh đầu tiên, giữ lại tấm ảnh tôi cứ ngại chụp."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Look at the fire.\" Nhìn ngọn lửa nhé. Tôi chụp xong, An mới thổi nến. Em đưa tôi miếng bánh đầu tiên, giữ lại tấm ảnh tôi cứ ngại chụp."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the cold outdoor evening and gathering dry twigs into a small garden stove.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the cold outdoor evening and gathering dry twigs into a small garden stove. Next causal state: Sibling waits beside same uneven cake, mascot holds phone low hesitating; only one small candle flame."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Notice the ignition of the flame and speak the first English model sentence.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Notice the ignition of the flame and speak the first English model sentence. Next causal state: Close view of single small candle flame on plain uneven cake, both figures look at it from seated distance. No match lighting or hands near flame."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Experience the warmth of the fire and introduce the second English model sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Experience the warmth of the fire and introduce the second English model sentence. Next causal state: Mascot shows phone framing to sibling, screen away from viewer, cake and candle unchanged."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Show domestic comfort placing a kettle over the flame.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show domestic comfort placing a kettle over the flame. Next causal state: Mascot asks sibling to look toward single candle, phone prepared at side, top safe area for stem."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Invite the learner to retrieve the first model sentence to point out the glowing flame.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite the learner to retrieve the first model sentence to point out the glowing flame. Next causal state: Candle extinguished after photo, sibling offers mascot first cake slice beside whole uneven cake. Phone lies face down, no written music or labels."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm the correct model sentence and conclude the peaceful evening scene.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the correct model sentence and conclude the peaceful evening scene. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18254",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Tôi ngại chụp bánh tự làm chưa đẹp; An chờ bên ngọn nến nhỏ, giúp tôi giữ cả kết quả chưa hoàn hảo trong ảnh. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20595",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi ngại chụp bánh tự làm chưa đẹp; An chờ bên ngọn nến nhỏ, giúp tôi giữ cả kết quả chưa hoàn hảo trong ảnh. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

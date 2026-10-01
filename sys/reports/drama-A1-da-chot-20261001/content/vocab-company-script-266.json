@@ -1,0 +1,507 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "faa44e7e9061a734a2317ef636343c8c4d7682475efbb7ed7cd35ea4c441f874",
+  "topic": "Học từ vựng tiếng Anh COMPANY (danh từ: công ty) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ COMPANY",
+    "Làm rõ nghĩa lõi \"công ty\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng COMPANY, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại COMPANY, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Anh Khoa",
+      "appearance": "A minimal ink stick figure, adult male colleague with simple short hair, round white face, solid dark oval eyes and ordinary simple proportions. No realistic muscles or detailed fingers.",
+      "outfit": "Exactly one plain mustard-yellow short-sleeve top and minimal stick limbs. Only the explicitly needed small plain role accessory."
+    },
+    {
+      "id": "CH03",
+      "name": "Người đồng nghiệp",
+      "appearance": "A minimal ink stick figure, adult female colleague with a simple bob, round white face, solid dark oval eyes and ordinary simple proportions. No realistic muscles or detailed fingers.",
+      "outfit": "Exactly one plain lavender short-sleeve top and minimal stick limbs. Only the explicitly needed small plain role accessory."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chi tiết đầu chuyện",
+      "purpose": "Open with a consequential detail, then provide an early English model.",
+      "action": "At a modest office after a group picture, mascot stands behind a plain camera looking at a photo that includes colleagues but omits himself. Mustard-shirted Khoa notices the gap. No company logo or text.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Ảnh chụp xong, vẫn thiếu một người. \"I work for this company.\" Tôi làm cho công ty này. Tôi đứng sau máy, nhìn mọi người đang chuẩn bị ra về.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "company",
+          "meaning": "công ty"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "At a modest office after a group picture, mascot stands behind a plain camera looking at a photo that includes colleagues but omits himself. Mustard-shirted Khoa notices the gap. No company logo or text. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At a modest office after a group picture, mascot stands behind a plain camera looking at a photo that includes colleagues but omits himself. Mustard-shirted Khoa notices the gap. No company logo or text.",
+          "reason": "Open with a consequential detail, then provide an early English model.",
+          "visible_text": [
+            {
+              "text": "I work for this company.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with a consequential detail, then provide an early English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Ảnh chụp xong, vẫn thiếu một người. \"I work for this company.\" Tôi làm cho công ty này. Tôi đứng sau máy, nhìn mọi người đang chuẩn bị ra về.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with a consequential detail, then provide an early English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Điều cần hiểu",
+      "purpose": "Show a believable personal reason and resistance in the same situation.",
+      "action": "Khoa points out the missing photographer in the simple photo while mascot shrugs and gets ready to put the camera away. One lavender-shirted coworker is still nearby, no anonymous crowd.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Công ty tôi nhỏ, việc chụp ảnh thường tới lượt tôi. Tấm nào tôi cũng chụp giúp rồi lưu lại. Anh Khoa nhìn ảnh mới, hỏi sao lần nào cũng thiếu tôi. Tôi bảo vậy cũng được mà.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "company",
+          "meaning": "công ty"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Khoa points out the missing photographer in the simple photo while mascot shrugs and gets ready to put the camera away. One lavender-shirted coworker is still nearby, no anonymous crowd. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Khoa points out the missing photographer in the simple photo while mascot shrugs and gets ready to put the camera away. One lavender-shirted coworker is still nearby, no anonymous crowd.",
+          "reason": "Show a believable personal reason and resistance in the same situation.",
+          "visible_text": [
+            {
+              "text": "company · công ty",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Show a believable personal reason and resistance in the same situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Công ty tôi nhỏ, việc chụp ảnh thường tới lượt tôi. Tấm nào tôi cũng chụp giúp rồi lưu lại. Anh Khoa nhìn ảnh mới, hỏi sao lần nào cũng thiếu tôi. Tôi bảo vậy cũng được mà.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show a believable personal reason and resistance in the same situation. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hành động làm đổi chuyện",
+      "purpose": "Use another English model as a useful utterance, not a general technical/moral claim.",
+      "action": "Khoa gently pulls mascot toward the empty photo position and sets the camera on a table. The third coworker waits; no head count or clock needed.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Our company is small.\" Công ty chúng tôi nhỏ. Anh nhìn mấy gương mặt trong ảnh, kéo tôi đứng vào khoảng trống rồi đặt máy lên bàn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "company",
+          "meaning": "công ty"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Khoa gently pulls mascot toward the empty photo position and sets the camera on a table. The third coworker waits; no head count or clock needed. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Khoa gently pulls mascot toward the empty photo position and sets the camera on a table. The third coworker waits; no head count or clock needed.",
+          "reason": "Use another English model as a useful utterance, not a general technical/moral claim.",
+          "visible_text": [
+            {
+              "text": "Our company is small.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use another English model as a useful utterance, not a general technical/moral claim.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Our company is small.\" Công ty chúng tôi nhỏ. Anh nhìn mấy gương mặt trong ảnh, kéo tôi đứng vào khoảng trống rồi đặt máy lên bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use another English model as a useful utterance, not a general technical/moral claim. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời người xem giúp nói",
+      "purpose": "Ask for one supported sentence for the same need; wait before feedback.",
+      "action": "Hold mascot, Khoa and one coworker in the small office, ready for a supported line about working for this company. Only the stem appears as writing.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Có người hỏi bạn làm cho nơi nào. Bạn giúp tôi nói câu tôi làm cho công ty này bằng tiếng Anh nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "company",
+          "meaning": "công ty"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold mascot, Khoa and one coworker in the small office, ready for a supported line about working for this company. Only the stem appears as writing. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold mascot, Khoa and one coworker in the small office, ready for a supported line about working for this company. Only the stem appears as writing.",
+          "reason": "Ask for one supported sentence for the same need; wait before feedback.",
+          "visible_text": [
+            {
+              "text": "I work for this ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Ask for one supported sentence for the same need; wait before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Có người hỏi bạn làm cho nơi nào. Bạn giúp tôi nói câu tôi làm cho công ty này bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask for one supported sentence for the same need; wait before feedback. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả",
+      "purpose": "Give the answer and show a modest concrete consequence, without miraculous success or a generic CTA.",
+      "action": "A new simple photograph includes mascot, Khoa and the coworker together. Mascot keeps both old and new photos on a plain device, showing the personal inclusion without an anniversary banner.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I work for this company.\" Đúng rồi. Cả nhóm chụp lại. Tôi lưu tấm có đủ người, không xóa tấm cũ. Lần này, tôi biết mình sẽ muốn mở lại ảnh nào.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "company",
+          "meaning": "công ty"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "A new simple photograph includes mascot, Khoa and the coworker together. Mascot keeps both old and new photos on a plain device, showing the personal inclusion without an anniversary banner. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "A new simple photograph includes mascot, Khoa and the coworker together. Mascot keeps both old and new photos on a plain device, showing the personal inclusion without an anniversary banner.",
+          "reason": "Give the answer and show a modest concrete consequence, without miraculous success or a generic CTA.",
+          "visible_text": [
+            {
+              "text": "I work for this company.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the answer and show a modest concrete consequence, without miraculous success or a generic CTA.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I work for this company.\" Đúng rồi. Cả nhóm chụp lại. Tôi lưu tấm có đủ người, không xóa tấm cũ. Lần này, tôi biết mình sẽ muốn mở lại ảnh nào.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the answer and show a modest concrete consequence, without miraculous success or a generic CTA. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Ảnh chụp xong, vẫn thiếu một người. \"I work for this company.\" Tôi làm cho công ty này. Tôi đứng sau máy, nhìn mọi người đang chuẩn bị ra về."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Ảnh chụp xong, vẫn thiếu một người. \"I work for this company.\" Tôi làm cho công ty này. Tôi đứng sau máy, nhìn mọi người đang chuẩn bị ra về."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Ảnh chụp xong, vẫn thiếu một người. \"I work for this company.\" Tôi làm cho công ty này. Tôi đứng sau máy, nhìn mọi người đang chuẩn bị ra về."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Công ty tôi nhỏ, việc chụp ảnh thường tới lượt tôi. Tấm nào tôi cũng chụp giúp rồi lưu lại. Anh Khoa nhìn ảnh mới, hỏi sao lần nào cũng thiếu tôi. Tôi bảo vậy cũng được mà."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Công ty tôi nhỏ, việc chụp ảnh thường tới lượt tôi. Tấm nào tôi cũng chụp giúp rồi lưu lại. Anh Khoa nhìn ảnh mới, hỏi sao lần nào cũng thiếu tôi. Tôi bảo vậy cũng được mà."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"Our company is small.\" Công ty chúng tôi nhỏ. Anh nhìn mấy gương mặt trong ảnh, kéo tôi đứng vào khoảng trống rồi đặt máy lên bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"Our company is small.\" Công ty chúng tôi nhỏ. Anh nhìn mấy gương mặt trong ảnh, kéo tôi đứng vào khoảng trống rồi đặt máy lên bàn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Có người hỏi bạn làm cho nơi nào. Bạn giúp tôi nói câu tôi làm cho công ty này bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I work for this company.\" Đúng rồi. Cả nhóm chụp lại. Tôi lưu tấm có đủ người, không xóa tấm cũ. Lần này, tôi biết mình sẽ muốn mở lại ảnh nào."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with a consequential detail, then provide an early English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with a consequential detail, then provide an early English model. Next causal state: Khoa points out the missing photographer in the simple photo while mascot shrugs and gets ready to put the camera away. One lavender-shirted coworker is still nearby, no anonymous crowd."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Show a believable personal reason and resistance in the same situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Show a believable personal reason and resistance in the same situation. Next causal state: Khoa gently pulls mascot toward the empty photo position and sets the camera on a table. The third coworker waits; no head count or clock needed."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use another English model as a useful utterance, not a general technical/moral claim.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use another English model as a useful utterance, not a general technical/moral claim. Next causal state: Hold mascot, Khoa and one coworker in the small office, ready for a supported line about working for this company. Only the stem appears as writing."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask for one supported sentence for the same need; wait before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Ask for one supported sentence for the same need; wait before feedback. Next causal state: A new simple photograph includes mascot, Khoa and the coworker together. Mascot keeps both old and new photos on a plain device, showing the personal inclusion without an anniversary banner."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the answer and show a modest concrete consequence, without miraculous success or a generic CTA.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Give the answer and show a modest concrete consequence, without miraculous success or a generic CTA. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19090",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Một công ty nhỏ chụp ảnh cùng nhau; đồng nghiệp nhận ra người chụp luôn vắng trong ảnh và nhường chỗ để người ấy cũng được giữ một kỷ niệm. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

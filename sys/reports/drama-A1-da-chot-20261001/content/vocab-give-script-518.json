@@ -1,0 +1,517 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "5940a9ad30271672e9e7c25dfd71512d3aa8adcb19e8ef7d41d80920a2711bf9",
+  "topic": "Học từ vựng tiếng Anh GIVE (động từ: cho, đưa) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ GIVE",
+    "Làm rõ nghĩa lõi \"cho, đưa\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng GIVE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại GIVE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Chi",
+      "appearance": "Minimal ink stick figure with a round white face, solid dark oval eyes, ordinary simple proportions, minimal stick limbs.",
+      "outfit": "Single plain maroon short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with personal need and early accurate English.",
+      "action": "Book-exchange counter: mascot as volunteer picks up Chi’s plain ticket near her feet and hands it back. Only mascot and Chi, no crowd or extra librarian.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chi quay lại, tôi đã nhặt vé. Bạn tới quầy đổi sách tôi đang phụ trách: \"Please give me the ticket.\" Đưa vé cho tôi nhé. Tôi đưa lại tấm vé vừa rơi cạnh chân bạn, giữ nó khỏi bị gập.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "give",
+          "meaning": "cho, đưa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Book-exchange counter: mascot as volunteer picks up Chi’s plain ticket near her feet and hands it back. Only mascot and Chi, no crowd or extra librarian. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Book-exchange counter: mascot as volunteer picks up Chi’s plain ticket near her feet and hands it back. Only mascot and Chi, no crowd or extra librarian.",
+          "reason": "Open with personal need and early accurate English.",
+          "visible_text": [
+            {
+              "text": "Please give me the ticket.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with personal need and early accurate English.",
+          "anchor": {
+            "vi": {
+              "quote": "Chi quay lại, tôi đã nhặt vé. Bạn tới quầy đổi sách tôi đang phụ trách: \"Please give me the ticket.\" Đưa vé cho tôi nhé. Tôi đưa lại tấm vé vừa rơi cạnh chân bạn, giữ nó khỏi bị gập.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with personal need and early accurate English. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify selected sense with resistance inside same relationship.",
+      "action": "Close view of the mascot handing the small yellow ticket directly into the declared friend's open palm. In the background on the booth counter rests an embroidered cloth book.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chi giữ vé, nhìn cuốn bìa vải sau quầy. Bạn bảo đã tìm cuốn ấy ở buổi đổi trước nhưng tới muộn. Tôi đang xếp sách, nghe bạn nói thì đặt chồng xuống, chưa để cuốn bạn cần lẫn vào trong.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "give",
+          "meaning": "cho, đưa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Close view of the mascot handing the small yellow ticket directly into the declared friend's open palm. In the background on the booth counter rests an embroidered cloth book. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close view of the mascot handing the small yellow ticket directly into the declared friend's open palm. In the background on the booth counter rests an embroidered cloth book.",
+          "reason": "Clarify selected sense with resistance inside same relationship.",
+          "visible_text": [
+            {
+              "text": "give · cho, đưa",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify selected sense with resistance inside same relationship.",
+          "anchor": {
+            "vi": {
+              "quote": "Chi giữ vé, nhìn cuốn bìa vải sau quầy. Bạn bảo đã tìm cuốn ấy ở buổi đổi trước nhưng tới muộn. Tôi đang xếp sách, nghe bạn nói thì đặt chồng xuống, chưa để cuốn bạn cần lẫn vào trong.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify selected sense with resistance inside same relationship. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Use deliberate action and second correct English model to develop story.",
+      "action": "Same counter: Chi opens plain ticket and points toward cloth-covered book behind mascot; mascot takes that book to show it. No unlisted staff or printed ticket serial.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Can you give me that book?\" Bạn đưa tôi cuốn sách đó được không? Chi chỉ cuốn bìa vải, mở vé trên bàn. Tôi kiểm phần đổi sách rồi lấy cuốn ấy ra, để bạn xem trước khi nhận.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "give",
+          "meaning": "cho, đưa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Same counter: Chi opens plain ticket and points toward cloth-covered book behind mascot; mascot takes that book to show it. No unlisted staff or printed ticket serial. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same counter: Chi opens plain ticket and points toward cloth-covered book behind mascot; mascot takes that book to show it. No unlisted staff or printed ticket serial.",
+          "reason": "Use deliberate action and second correct English model to develop story.",
+          "visible_text": [
+            {
+              "text": "Can you give me that book?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use deliberate action and second correct English model to develop story.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can you give me that book?\" Bạn đưa tôi cuốn sách đó được không? Chi chỉ cuốn bìa vải, mở vé trên bàn. Tôi kiểm phần đổi sách rồi lấy cuốn ấy ra, để bạn xem trước khi nhận.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use deliberate action and second correct English model to develop story. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Ask viewer to retrieve complete supported target sentence then wait.",
+      "action": "Hold the counter framing. The girl awaits the handover eagerly. The mascot turns toward the viewer to invite the line. Leave upper safe space for the stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chi muốn người quản quầy chuyển cuốn sách sang tay mình. Bạn nói giúp Chi câu bạn đưa tôi cuốn sách đó được không bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "give",
+          "meaning": "cho, đưa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the counter framing. The girl awaits the handover eagerly. The mascot turns toward the viewer to invite the line. Leave upper safe space for the stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the counter framing. The girl awaits the handover eagerly. The mascot turns toward the viewer to invite the line. Leave upper safe space for the stem.",
+          "reason": "Ask viewer to retrieve complete supported target sentence then wait.",
+          "visible_text": [
+            {
+              "text": "Can you ___ me that book?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Ask viewer to retrieve complete supported target sentence then wait.",
+          "anchor": {
+            "vi": {
+              "quote": "Chi muốn người quản quầy chuyển cuốn sách sang tay mình. Bạn nói giúp Chi câu bạn đưa tôi cuốn sách đó được không bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask viewer to retrieve complete supported target sentence then wait. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give exact answer and small consequence, no guaranteed outcome.",
+      "action": "Same counter: mascot passes cloth-covered book to Chi’s minimal stick hands; she checks first page while mascot resumes sorting books. No separate transfer hands.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Can you give me that book?\" Tôi đưa cuốn bìa vải qua quầy cho Chi. Bạn giữ sách, cất vé vào túi có khóa. Tôi xếp tiếp chồng còn lại; Chi đứng ở cạnh đọc thêm trang đầu.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "give",
+          "meaning": "cho, đưa"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Same counter: mascot passes cloth-covered book to Chi’s minimal stick hands; she checks first page while mascot resumes sorting books. No separate transfer hands. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same counter: mascot passes cloth-covered book to Chi’s minimal stick hands; she checks first page while mascot resumes sorting books. No separate transfer hands.",
+          "reason": "Give exact answer and small consequence, no guaranteed outcome.",
+          "visible_text": [
+            {
+              "text": "Can you give me that book?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give exact answer and small consequence, no guaranteed outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can you give me that book?\" Tôi đưa cuốn bìa vải qua quầy cho Chi. Bạn giữ sách, cất vé vào túi có khóa. Tôi xếp tiếp chồng còn lại; Chi đứng ở cạnh đọc thêm trang đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give exact answer and small consequence, no guaranteed outcome. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chi quay lại, tôi đã nhặt vé. Bạn tới quầy đổi sách tôi đang phụ trách: \"Please give me the ticket.\" Đưa vé cho tôi nhé. Tôi đưa lại tấm vé vừa rơi cạnh chân bạn, giữ nó khỏi bị gập."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chi quay lại, tôi đã nhặt vé. Bạn tới quầy đổi sách tôi đang phụ trách: \"Please give me the ticket.\" Đưa vé cho tôi nhé. Tôi đưa lại tấm vé vừa rơi cạnh chân bạn, giữ nó khỏi bị gập."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Chi quay lại, tôi đã nhặt vé. Bạn tới quầy đổi sách tôi đang phụ trách: \"Please give me the ticket.\" Đưa vé cho tôi nhé. Tôi đưa lại tấm vé vừa rơi cạnh chân bạn, giữ nó khỏi bị gập."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Chi giữ vé, nhìn cuốn bìa vải sau quầy. Bạn bảo đã tìm cuốn ấy ở buổi đổi trước nhưng tới muộn. Tôi đang xếp sách, nghe bạn nói thì đặt chồng xuống, chưa để cuốn bạn cần lẫn vào trong."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"Can you give me that book?\" Bạn đưa tôi cuốn sách đó được không? Chi chỉ cuốn bìa vải, mở vé trên bàn. Tôi kiểm phần đổi sách rồi lấy cuốn ấy ra, để bạn xem trước khi nhận."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"Can you give me that book?\" Bạn đưa tôi cuốn sách đó được không? Chi chỉ cuốn bìa vải, mở vé trên bàn. Tôi kiểm phần đổi sách rồi lấy cuốn ấy ra, để bạn xem trước khi nhận."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Chi muốn người quản quầy chuyển cuốn sách sang tay mình. Bạn nói giúp Chi câu bạn đưa tôi cuốn sách đó được không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Chi muốn người quản quầy chuyển cuốn sách sang tay mình. Bạn nói giúp Chi câu bạn đưa tôi cuốn sách đó được không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Can you give me that book?\" Tôi đưa cuốn bìa vải qua quầy cho Chi. Bạn giữ sách, cất vé vào túi có khóa. Tôi xếp tiếp chồng còn lại; Chi đứng ở cạnh đọc thêm trang đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Can you give me that book?\" Tôi đưa cuốn bìa vải qua quầy cho Chi. Bạn giữ sách, cất vé vào túi có khóa. Tôi xếp tiếp chồng còn lại; Chi đứng ở cạnh đọc thêm trang đầu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can you give me that book?\" Tôi đưa cuốn bìa vải qua quầy cho Chi. Bạn giữ sách, cất vé vào túi có khóa. Tôi xếp tiếp chồng còn lại; Chi đứng ở cạnh đọc thêm trang đầu."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with personal need and early accurate English.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with personal need and early accurate English. Next causal state: Close view of the mascot handing the small yellow ticket directly into the declared friend's open palm. In the background on the booth counter rests an embroidered cloth book."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify selected sense with resistance inside same relationship.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Clarify selected sense with resistance inside same relationship. Next causal state: Same counter: Chi opens plain ticket and points toward cloth-covered book behind mascot; mascot takes that book to show it. No unlisted staff or printed ticket serial."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use deliberate action and second correct English model to develop story.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use deliberate action and second correct English model to develop story. Next causal state: Hold the counter framing. The girl awaits the handover eagerly. The mascot turns toward the viewer to invite the line. Leave upper safe space for the stem."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask viewer to retrieve complete supported target sentence then wait.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Ask viewer to retrieve complete supported target sentence then wait. Next causal state: Same counter: mascot passes cloth-covered book to Chi’s minimal stick hands; she checks first page while mascot resumes sorting books. No separate transfer hands."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give exact answer and small consequence, no guaranteed outcome.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give exact answer and small consequence, no guaranteed outcome. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17329",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Chi quay lại, tôi đã nhặt vé. Bạn tới quầy đổi sách tôi đang phụ trách:  \"Can you give me that book?\" Bạn đưa tôi cuốn sách đó được không? Chi chỉ cuốn bìa vải, mở vé trên bàn. Tôi kiểm phần đổi sách rồi lấy cuốn ấy ra, để bạn xem trước khi nhận.  Tôi đưa cuốn bìa vải qua quầy cho Chi. Bạn giữ sách, cất vé vào túi có khóa. Tôi xếp tiếp chồng còn lại; Chi đứng ở cạnh đọc thêm trang đầu. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "20836",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Chi quay lại, tôi đã nhặt vé. Bạn tới quầy đổi sách tôi đang phụ trách:  \"Can you give me that book?\" Bạn đưa tôi cuốn sách đó được không? Chi chỉ cuốn bìa vải, mở vé trên bàn. Tôi kiểm phần đổi sách rồi lấy cuốn ấy ra, để bạn xem trước khi nhận.  Tôi đưa cuốn bìa vải qua quầy cho Chi. Bạn giữ sách, cất vé vào túi có khóa. Tôi xếp tiếp chồng còn lại; Chi đứng ở cạnh đọc thêm trang đầu. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

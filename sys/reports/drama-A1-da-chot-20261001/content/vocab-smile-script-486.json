@@ -1,0 +1,511 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "c563f1b8d53c5551d75bfe59d46822968c62e92c8c501274dec393faf0eb9d55",
+  "topic": "Học từ vựng tiếng Anh SMILE (động từ: mỉm cười) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SMILE",
+    "Làm rõ nghĩa lõi \"mỉm cười\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SMILE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SMILE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Trúc",
+      "appearance": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+      "outfit": "One plain coral-red short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with concrete personal need and early usable English.",
+      "action": "Outdoor garden medium shot: Trúc holds compact camera at eye level; mascot stands stiffly against green shrub background before lowering shoulders.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Trúc giơ máy ảnh lên bấm. Tôi đứng nghiêm nghị, hai tay khép chặt bên hông. Bạn hạ máy xuống nhắc: \"Please smile.\" Hãy mỉm cười nhé. Tôi thả lỏng vai, nhìn về ống kính.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "smile",
+          "meaning": "mỉm cười"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Outdoor garden medium shot: Trúc holds compact camera at eye level; mascot stands stiffly against green shrub background before lowering shoulders. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Outdoor garden medium shot: Trúc holds compact camera at eye level; mascot stands stiffly against green shrub background before lowering shoulders.",
+          "reason": "Open with concrete personal need and early usable English.",
+          "visible_text": [
+            {
+              "text": "Please smile.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with concrete personal need and early usable English.",
+          "anchor": {
+            "vi": {
+              "quote": "Trúc giơ máy ảnh lên bấm. Tôi đứng nghiêm nghị, hai tay khép chặt bên hông. Bạn hạ máy xuống nhắc: \"Please smile.\" Hãy mỉm cười nhé. Tôi thả lỏng vai, nhìn về ống kính.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with concrete personal need and early usable English. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify the selected sense in the same relationship and obstacle.",
+      "action": "Same garden medium shot: Trúc angles rear camera screen toward mascot; screen shows mascot's gentle curved mouth line.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Trúc bấm tách một cái rồi vẫy tôi lại xem màn hình: \"You're smiling in this photo.\" Bạn đang mỉm cười trong ảnh này. Khóe miệng tôi đã cong nhẹ, trông tự nhiên hơn hẳn lúc đầu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "smile",
+          "meaning": "mỉm cười"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same garden medium shot: Trúc angles rear camera screen toward mascot; screen shows mascot's gentle curved mouth line. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same garden medium shot: Trúc angles rear camera screen toward mascot; screen shows mascot's gentle curved mouth line.",
+          "reason": "Clarify the selected sense in the same relationship and obstacle.",
+          "visible_text": [
+            {
+              "text": "smile · mỉm cười",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify the selected sense in the same relationship and obstacle.",
+          "anchor": {
+            "vi": {
+              "quote": "Trúc bấm tách một cái rồi vẫy tôi lại xem màn hình: \"You're smiling in this photo.\" Bạn đang mỉm cười trong ảnh này. Khóe miệng tôi đã cong nhẹ, trông tự nhiên hơn hẳn lúc đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify the selected sense in the same relationship and obstacle. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+      "action": "Same garden medium shot: Trúc hands strap and camera body to mascot; mascot takes camera securely.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi bảo trước giờ đứng trước máy ảnh tôi hay bị căng thẳng. Trúc kể bạn cũng từng như vậy trước khi tập chụp cho mọi người. Bạn đưa máy cho tôi, muốn chụp lại một tấm cho bạn.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "smile",
+          "meaning": "mỉm cười"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Same garden medium shot: Trúc hands strap and camera body to mascot; mascot takes camera securely. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same garden medium shot: Trúc hands strap and camera body to mascot; mascot takes camera securely.",
+          "reason": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi bảo trước giờ đứng trước máy ảnh tôi hay bị căng thẳng. Trúc kể bạn cũng từng như vậy trước khi tập chụp cho mọi người. Bạn đưa máy cho tôi, muốn chụp lại một tấm cho bạn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use a deliberate action or decision to change the same story; support the selected target sense. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+      "action": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Trúc đứng vào góc vườn nhưng mặt còn gượng. Bạn nhắc giúp tôi câu hãy mỉm cười nhé bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "smile",
+          "meaning": "mỉm cười"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+          "reason": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+          "visible_text": [
+            {
+              "text": "Please ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Trúc đứng vào góc vườn nhưng mặt còn gượng. Bạn nhắc giúp tôi câu hãy mỉm cười nhé bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the viewer to retrieve a full supported sentence; hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give the exact complete retrieval response and close with a small earned consequence.",
+      "action": "Same garden angle: Trúc shows relaxed smile by tree trunk; mascot clicks shutter on camera. No crowd.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Please smile.\" Trúc thả lỏng vai, tôi bấm máy. Bạn xem tấm vừa chụp rồi chọn giữ cả tấm đầu còn gượng. Tôi cũng giữ tấm đầu của mình, để hai đứa nhớ đã bắt đầu thế nào.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "smile",
+          "meaning": "mỉm cười"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Same garden angle: Trúc shows relaxed smile by tree trunk; mascot clicks shutter on camera. No crowd. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same garden angle: Trúc shows relaxed smile by tree trunk; mascot clicks shutter on camera. No crowd.",
+          "reason": "Give the exact complete retrieval response and close with a small earned consequence.",
+          "visible_text": [
+            {
+              "text": "Please smile.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the exact complete retrieval response and close with a small earned consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Please smile.\" Trúc thả lỏng vai, tôi bấm máy. Bạn xem tấm vừa chụp rồi chọn giữ cả tấm đầu còn gượng. Tôi cũng giữ tấm đầu của mình, để hai đứa nhớ đã bắt đầu thế nào.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the exact complete retrieval response and close with a small earned consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Trúc giơ máy ảnh lên bấm. Tôi đứng nghiêm nghị, hai tay khép chặt bên hông. Bạn hạ máy xuống nhắc: \"Please smile.\" Hãy mỉm cười nhé. Tôi thả lỏng vai, nhìn về ống kính."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Trúc giơ máy ảnh lên bấm. Tôi đứng nghiêm nghị, hai tay khép chặt bên hông. Bạn hạ máy xuống nhắc: \"Please smile.\" Hãy mỉm cười nhé. Tôi thả lỏng vai, nhìn về ống kính."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Trúc giơ máy ảnh lên bấm. Tôi đứng nghiêm nghị, hai tay khép chặt bên hông. Bạn hạ máy xuống nhắc: \"Please smile.\" Hãy mỉm cười nhé. Tôi thả lỏng vai, nhìn về ống kính."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Trúc bấm tách một cái rồi vẫy tôi lại xem màn hình: \"You're smiling in this photo.\" Bạn đang mỉm cười trong ảnh này. Khóe miệng tôi đã cong nhẹ, trông tự nhiên hơn hẳn lúc đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Trúc bấm tách một cái rồi vẫy tôi lại xem màn hình: \"You're smiling in this photo.\" Bạn đang mỉm cười trong ảnh này. Khóe miệng tôi đã cong nhẹ, trông tự nhiên hơn hẳn lúc đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi bảo trước giờ đứng trước máy ảnh tôi hay bị căng thẳng. Trúc kể bạn cũng từng như vậy trước khi tập chụp cho mọi người. Bạn đưa máy cho tôi, muốn chụp lại một tấm cho bạn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Trúc đứng vào góc vườn nhưng mặt còn gượng. Bạn nhắc giúp tôi câu hãy mỉm cười nhé bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Trúc đứng vào góc vườn nhưng mặt còn gượng. Bạn nhắc giúp tôi câu hãy mỉm cười nhé bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Please smile.\" Trúc thả lỏng vai, tôi bấm máy. Bạn xem tấm vừa chụp rồi chọn giữ cả tấm đầu còn gượng. Tôi cũng giữ tấm đầu của mình, để hai đứa nhớ đã bắt đầu thế nào."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Please smile.\" Trúc thả lỏng vai, tôi bấm máy. Bạn xem tấm vừa chụp rồi chọn giữ cả tấm đầu còn gượng. Tôi cũng giữ tấm đầu của mình, để hai đứa nhớ đã bắt đầu thế nào."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Please smile.\" Trúc thả lỏng vai, tôi bấm máy. Bạn xem tấm vừa chụp rồi chọn giữ cả tấm đầu còn gượng. Tôi cũng giữ tấm đầu của mình, để hai đứa nhớ đã bắt đầu thế nào."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with concrete personal need and early usable English.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with concrete personal need and early usable English. Next causal state: Same garden medium shot: Trúc angles rear camera screen toward mascot; screen shows mascot's gentle curved mouth line."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify the selected sense in the same relationship and obstacle.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Clarify the selected sense in the same relationship and obstacle. Next causal state: Same garden medium shot: Trúc hands strap and camera body to mascot; mascot takes camera securely."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Use a deliberate action or decision to change the same story; support the selected target sense. Next causal state: Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite the viewer to retrieve a full supported sentence; hold before the answer. Next causal state: Same garden angle: Trúc shows relaxed smile by tree trunk; mascot clicks shutter on camera. No crowd."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the exact complete retrieval response and close with a small earned consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the exact complete retrieval response and close with a small earned consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17179",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Trúc giơ máy ảnh lên bấm. Tôi đứng nghiêm nghị, hai tay khép chặt bên hông. Bạn hạ máy xuống nhắc:  Tôi bảo trước giờ đứng trước máy ảnh tôi hay bị căng thẳng. Trúc kể bạn cũng từng như vậy trước khi tập chụp cho mọi người. Bạn đưa máy cho tôi, muốn chụp lại một tấm cho bạn.  Trúc thả lỏng vai, tôi bấm máy. Bạn xem tấm vừa chụp rồi chọn giữ cả tấm đầu còn gượng. Tôi cũng giữ tấm đầu của mình, để hai đứa nhớ đã bắt đầu thế nào. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "20097",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Trúc giơ máy ảnh lên bấm. Tôi đứng nghiêm nghị, hai tay khép chặt bên hông. Bạn hạ máy xuống nhắc:  Tôi bảo trước giờ đứng trước máy ảnh tôi hay bị căng thẳng. Trúc kể bạn cũng từng như vậy trước khi tập chụp cho mọi người. Bạn đưa máy cho tôi, muốn chụp lại một tấm cho bạn.  Trúc thả lỏng vai, tôi bấm máy. Bạn xem tấm vừa chụp rồi chọn giữ cả tấm đầu còn gượng. Tôi cũng giữ tấm đầu của mình, để hai đứa nhớ đã bắt đầu thế nào. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

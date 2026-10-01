@@ -1,0 +1,520 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "d7bfee32bc2a212a3110f7e43c6ed5658d1ebafd6cf4336f3b0a08f2eaa314a9",
+  "topic": "Học từ vựng tiếng Anh FLIGHT (danh từ: chuyến bay) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FLIGHT",
+    "Làm rõ nghĩa lõi \"chuyến bay\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FLIGHT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FLIGHT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Bạn",
+      "appearance": "Minimal ink stick figure, round white head outlined dark navy, solid black oval eyes, minimal stick limbs, exactly one torso.",
+      "outfit": "Exactly one plain green short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều chưa nói",
+      "purpose": "Show immediate personal need.",
+      "action": "Mascot seated with green-shirt travel companion in airport waiting area, phone shows simple image of two bowls; departure status datum authorized separately.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn đã hâm cơm lần thứ hai. Tôi nhìn tin nhắn rồi nhìn bảng báo giờ ở sân bay. \"Our flight is late.\" Chuyến bay của chúng tôi bị trễ. Bữa cơm bạn nấu chắc phải chờ thêm một lúc.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "flight",
+          "meaning": "chuyến bay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot seated with green-shirt travel companion in airport waiting area, phone shows simple image of two bowls; departure status datum authorized separately. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot seated with green-shirt travel companion in airport waiting area, phone shows simple image of two bowls; departure status datum authorized separately.",
+          "reason": "Show immediate personal need.",
+          "visible_text": [
+            {
+              "text": "Our flight is late.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            },
+            {
+              "text": "Delayed",
+              "placement": "Departure information area above seats",
+              "object": "Airport departure display"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show immediate personal need.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đã hâm cơm lần thứ hai. Tôi nhìn tin nhắn rồi nhìn bảng báo giờ ở sân bay. \"Our flight is late.\" Chuyến bay của chúng tôi bị trễ. Bữa cơm bạn nấu chắc phải chờ thêm một lúc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show immediate personal need. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Vướng mắc",
+      "purpose": "Make resistance and selected sense concrete.",
+      "action": "Same airport chairs, mascot shows phone image of two bowls to companion. No remote person depicted.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi nhắn bảo bạn cứ ăn trước. Bạn gửi lại ảnh hai cái bát, nói không sao, món canh còn nóng. Người đi cùng hỏi tôi sao cứ nhìn điện thoại mãi. Tôi đưa ảnh cho bạn ấy xem.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "flight",
+          "meaning": "chuyến bay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same airport chairs, mascot shows phone image of two bowls to companion. No remote person depicted. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same airport chairs, mascot shows phone image of two bowls to companion. No remote person depicted.",
+          "reason": "Make resistance and selected sense concrete.",
+          "visible_text": [
+            {
+              "text": "flight · chuyến bay",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make resistance and selected sense concrete.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi nhắn bảo bạn cứ ăn trước. Bạn gửi lại ảnh hai cái bát, nói không sao, món canh còn nóng. Người đi cùng hỏi tôi sao cứ nhìn điện thoại mãi. Tôi đưa ảnh cho bạn ấy xem.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Make resistance and selected sense concrete. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Quyết định",
+      "purpose": "Use second English model for a consequential small action.",
+      "action": "Same chairs, companion leans closer as mascot checks updated departure time and holds phone to ear; essential delay data only.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn ấy kéo ghế sát lại: \"What time is our flight?\" Chuyến bay của chúng ta lúc mấy giờ? Tôi kiểm tra giờ mới rồi gọi cho người đang chờ, lần này nói rõ còn phải đợi bao lâu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "flight",
+          "meaning": "chuyến bay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Same chairs, companion leans closer as mascot checks updated departure time and holds phone to ear; essential delay data only. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same chairs, companion leans closer as mascot checks updated departure time and holds phone to ear; essential delay data only.",
+          "reason": "Use second English model for a consequential small action.",
+          "visible_text": [
+            {
+              "text": "What time is our flight?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            },
+            {
+              "text": "Delayed",
+              "placement": "Departure information area above seats",
+              "object": "Airport departure display"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use second English model for a consequential small action.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn ấy kéo ghế sát lại: \"What time is our flight?\" Chuyến bay của chúng ta lúc mấy giờ? Tôi kiểm tra giờ mới rồi gọi cho người đang chờ, lần này nói rõ còn phải đợi bao lâu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use second English model for a consequential small action. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần nói",
+      "purpose": "Retrieve one full story-linked model before answer.",
+      "action": "Hold seated mascot on phone beside companion, departure display with exact allowed datum, no aircraft need be visible.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn ở nhà chưa nghe rõ lý do. Bạn nói giúp tôi rằng chuyến bay của chúng tôi bị trễ bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "flight",
+          "meaning": "chuyến bay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold seated mascot on phone beside companion, departure display with exact allowed datum, no aircraft need be visible. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold seated mascot on phone beside companion, departure display with exact allowed datum, no aircraft need be visible.",
+          "reason": "Retrieve one full story-linked model before answer.",
+          "visible_text": [
+            {
+              "text": "Our ___ is late.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            },
+            {
+              "text": "Delayed",
+              "placement": "Departure information area above seats",
+              "object": "Airport departure display"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Retrieve one full story-linked model before answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn ở nhà chưa nghe rõ lý do. Bạn nói giúp tôi rằng chuyến bay của chúng tôi bị trễ bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Retrieve one full story-linked model before answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện tiếp tục",
+      "purpose": "Give answer and earned physical payoff.",
+      "action": "Companion offers part of small bread roll to mascot in same airport seats, phone put away; they continue waiting together.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Our flight is late.\" Tôi nói lại, đầu dây bên kia bảo cứ tới đã rồi tính. Tôi cất điện thoại. Người đi cùng đưa tôi phần bánh còn lại, bảo ăn một chút cho đỡ đói.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "flight",
+          "meaning": "chuyến bay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Companion offers part of small bread roll to mascot in same airport seats, phone put away; they continue waiting together. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion offers part of small bread roll to mascot in same airport seats, phone put away; they continue waiting together.",
+          "reason": "Give answer and earned physical payoff.",
+          "visible_text": [
+            {
+              "text": "Our flight is late.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give answer and earned physical payoff.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Our flight is late.\" Tôi nói lại, đầu dây bên kia bảo cứ tới đã rồi tính. Tôi cất điện thoại. Người đi cùng đưa tôi phần bánh còn lại, bảo ăn một chút cho đỡ đói.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give answer and earned physical payoff. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn đã hâm cơm lần thứ hai. Tôi nhìn tin nhắn rồi nhìn bảng báo giờ ở sân bay. \"Our flight is late.\" Chuyến bay của chúng tôi bị trễ. Bữa cơm bạn nấu chắc phải chờ thêm một lúc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn đã hâm cơm lần thứ hai. Tôi nhìn tin nhắn rồi nhìn bảng báo giờ ở sân bay. \"Our flight is late.\" Chuyến bay của chúng tôi bị trễ. Bữa cơm bạn nấu chắc phải chờ thêm một lúc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Bạn đã hâm cơm lần thứ hai. Tôi nhìn tin nhắn rồi nhìn bảng báo giờ ở sân bay. \"Our flight is late.\" Chuyến bay của chúng tôi bị trễ. Bữa cơm bạn nấu chắc phải chờ thêm một lúc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi nhắn bảo bạn cứ ăn trước. Bạn gửi lại ảnh hai cái bát, nói không sao, món canh còn nóng. Người đi cùng hỏi tôi sao cứ nhìn điện thoại mãi. Tôi đưa ảnh cho bạn ấy xem."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Bạn ấy kéo ghế sát lại: \"What time is our flight?\" Chuyến bay của chúng ta lúc mấy giờ? Tôi kiểm tra giờ mới rồi gọi cho người đang chờ, lần này nói rõ còn phải đợi bao lâu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn ấy kéo ghế sát lại: \"What time is our flight?\" Chuyến bay của chúng ta lúc mấy giờ? Tôi kiểm tra giờ mới rồi gọi cho người đang chờ, lần này nói rõ còn phải đợi bao lâu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Bạn ở nhà chưa nghe rõ lý do. Bạn nói giúp tôi rằng chuyến bay của chúng tôi bị trễ bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn ở nhà chưa nghe rõ lý do. Bạn nói giúp tôi rằng chuyến bay của chúng tôi bị trễ bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Our flight is late.\" Tôi nói lại, đầu dây bên kia bảo cứ tới đã rồi tính. Tôi cất điện thoại. Người đi cùng đưa tôi phần bánh còn lại, bảo ăn một chút cho đỡ đói."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Our flight is late.\" Tôi nói lại, đầu dây bên kia bảo cứ tới đã rồi tính. Tôi cất điện thoại. Người đi cùng đưa tôi phần bánh còn lại, bảo ăn một chút cho đỡ đói."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Our flight is late.\" Tôi nói lại, đầu dây bên kia bảo cứ tới đã rồi tính. Tôi cất điện thoại. Người đi cùng đưa tôi phần bánh còn lại, bảo ăn một chút cho đỡ đói."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show immediate personal need.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Show immediate personal need. Next causal state: Same airport chairs, mascot shows phone image of two bowls to companion. No remote person depicted."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make resistance and selected sense concrete.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Make resistance and selected sense concrete. Next causal state: Same chairs, companion leans closer as mascot checks updated departure time and holds phone to ear; essential delay data only."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use second English model for a consequential small action.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use second English model for a consequential small action. Next causal state: Hold seated mascot on phone beside companion, departure display with exact allowed datum, no aircraft need be visible."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Retrieve one full story-linked model before answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Retrieve one full story-linked model before answer. Next causal state: Companion offers part of small bread roll to mascot in same airport seats, phone put away; they continue waiting together."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give answer and earned physical payoff.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give answer and earned physical payoff. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19277",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Chuyến bay trễ làm tôi lỡ bữa cơm với bạn; tôi gọi báo thay vì giấu sự thất vọng. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

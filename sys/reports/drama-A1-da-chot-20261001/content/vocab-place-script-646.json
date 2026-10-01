@@ -1,0 +1,589 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "75fbf8e10d97d7e956e1e130a23bc6bb93ac3fee7b951acd1f6530a62157d29c",
+  "topic": "Học từ vựng tiếng Anh PLACE (danh từ: nơi chốn, địa điểm) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ PLACE",
+    "Làm rõ nghĩa lõi \"nơi chốn, địa điểm\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng PLACE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại PLACE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Chú Hùng",
+      "appearance": "A minimalist stick figure with a round white head outlined in navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "A plain green short-sleeve shirt and dark trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cây kéo thất lạc",
+      "purpose": "Establish the everyday nuisance of lost sewing shears in a busy workshop.",
+      "action": "Green-shirt tailor searches fabric scraps on table; mascot holds plain empty tray beside newly found scissors.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chú Hùng lục bàn lần thứ ba. Kéo lại nằm dưới vải. Tôi đưa khay trống: \"This is the right place.\" Đây là chỗ phù hợp, mình để kéo ở đây nhé.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "place",
+          "meaning": "nơi chốn, địa điểm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Green-shirt tailor searches fabric scraps on table; mascot holds plain empty tray beside newly found scissors. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Green-shirt tailor searches fabric scraps on table; mascot holds plain empty tray beside newly found scissors.",
+          "reason": "Establish the everyday nuisance of lost sewing shears in a busy workshop.",
+          "visible_text": [
+            {
+              "text": "This is the right place.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the everyday nuisance of lost sewing shears in a busy workshop.",
+          "anchor": {
+            "vi": {
+              "quote": "Chú Hùng lục bàn lần thứ ba. Kéo lại nằm dưới vải. Tôi đưa khay trống: \"This is the right place.\" Đây là chỗ phù hợp, mình để kéo ở đây nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the everyday nuisance of lost sewing shears in a busy workshop. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Một chỗ cố định",
+      "purpose": "Introduce the first model describing a designated place for the tool.",
+      "action": "Mascot places tray at table corner near both workers; scissors lie separately on fabric, no wall hooks.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chú hay đặt đồ xuống bất cứ góc nào còn trống. Tôi cũng vậy nên hai người cứ tìm. Khay ở ngay cạnh bàn, không cần mở ngăn hoặc với lên kệ.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "place",
+          "meaning": "nơi chốn, địa điểm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot places tray at table corner near both workers; scissors lie separately on fabric, no wall hooks. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot places tray at table corner near both workers; scissors lie separately on fabric, no wall hooks.",
+          "reason": "Introduce the first model describing a designated place for the tool.",
+          "visible_text": [
+            {
+              "text": "place · nơi chốn, địa điểm",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first model describing a designated place for the tool.",
+          "anchor": {
+            "vi": {
+              "quote": "Chú hay đặt đồ xuống bất cứ góc nào còn trống. Tôi cũng vậy nên hai người cứ tìm. Khay ở ngay cạnh bàn, không cần mở ngăn hoặc với lên kệ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first model describing a designated place for the tool. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chỗ treo an toàn",
+      "purpose": "Model place in an imperative sentence aimed at workplace safety.",
+      "action": "Older figure moves the empty tray farther inside the table edge away from walkway, mascot agrees. No mounting or tool safety instructions.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Let's find a safe place.\" Hãy tìm chỗ an toàn. Chú đề nghị đưa khay vào phía trong, khỏi vướng lối đi. Tôi nhìn chỗ mới, gật đầu cùng chú.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "place",
+          "meaning": "nơi chốn, địa điểm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Older figure moves the empty tray farther inside the table edge away from walkway, mascot agrees. No mounting or tool safety instructions. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Older figure moves the empty tray farther inside the table edge away from walkway, mascot agrees. No mounting or tool safety instructions.",
+          "reason": "Model place in an imperative sentence aimed at workplace safety.",
+          "visible_text": [
+            {
+              "text": "Let's find a safe place.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Model place in an imperative sentence aimed at workplace safety.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Let's find a safe place.\" Hãy tìm chỗ an toàn. Chú đề nghị đưa khay vào phía trong, khỏi vướng lối đi. Tôi nhìn chỗ mới, gật đầu cùng chú.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Model place in an imperative sentence aimed at workplace safety. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Khách bấm chuông",
+      "purpose": "Heighten urgency as a customer arrives for an immediate fitting.",
+      "action": "Older tailor searches fabric with one hand while mascot slides scissors tray into his sight. Same unfinished garment on table.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chúng tôi làm nốt áo đã nhận sửa. Chú đưa tay tìm kéo dưới vải theo thói quen; tôi đặt khay sát lại, để chú nhìn thấy ngay. Chú bật cười, nhận kéo.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "place",
+          "meaning": "nơi chốn, địa điểm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Older tailor searches fabric with one hand while mascot slides scissors tray into his sight. Same unfinished garment on table. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Older tailor searches fabric with one hand while mascot slides scissors tray into his sight. Same unfinished garment on table.",
+          "reason": "Heighten urgency as a customer arrives for an immediate fitting.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Heighten urgency as a customer arrives for an immediate fitting.",
+          "anchor": {
+            "vi": {
+              "quote": "Chúng tôi làm nốt áo đã nhận sửa. Chú đưa tay tìm kéo dưới vải theo thói quen; tôi đặt khay sát lại, để chú nhìn thấy ngay. Chú bật cười, nhận kéo.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Heighten urgency as a customer arrives for an immediate fitting. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chỉ đúng chỗ",
+      "purpose": "Invite the viewer to help guide the tailor to the proper place.",
+      "action": "Older tailor holds scissors after work, looking at mascot for where to put them. Upper safe region for stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chú hỏi để xong thì cất đâu, sợ lát nữa lại quên. Bạn nói giúp tôi câu đây là chỗ phù hợp bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "place",
+          "meaning": "nơi chốn, địa điểm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Older tailor holds scissors after work, looking at mascot for where to put them. Upper safe region for stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Older tailor holds scissors after work, looking at mascot for where to put them. Upper safe region for stem.",
+          "reason": "Invite the viewer to help guide the tailor to the proper place.",
+          "visible_text": [
+            {
+              "text": "This is the right ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Invite the viewer to help guide the tailor to the proper place.",
+          "anchor": {
+            "vi": {
+              "quote": "Chú hỏi để xong thì cất đâu, sợ lát nữa lại quên. Bạn nói giúp tôi câu đây là chỗ phù hợp bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the viewer to help guide the tailor to the proper place. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Chiếc áo hoàn thành",
+      "purpose": "Reinforce the retrieval word place and resolve the opening clutter issue.",
+      "action": "Scissors and ruler rest together in the shared tray at inner table corner; mascot adds his pencil, older figure lowers empty hand.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"This is the right place.\" Đây là chỗ phù hợp. Chú đặt kéo vào khay rồi đưa luôn thước cạnh nó. Tôi cất phần của mình cùng chỗ, khỏi phải hỏi tìm lần nữa.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "place",
+          "meaning": "nơi chốn, địa điểm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Scissors and ruler rest together in the shared tray at inner table corner; mascot adds his pencil, older figure lowers empty hand. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Scissors and ruler rest together in the shared tray at inner table corner; mascot adds his pencil, older figure lowers empty hand.",
+          "reason": "Reinforce the retrieval word place and resolve the opening clutter issue.",
+          "visible_text": [
+            {
+              "text": "This is the right place.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Reinforce the retrieval word place and resolve the opening clutter issue.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is the right place.\" Đây là chỗ phù hợp. Chú đặt kéo vào khay rồi đưa luôn thước cạnh nó. Tôi cất phần của mình cùng chỗ, khỏi phải hỏi tìm lần nữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Reinforce the retrieval word place and resolve the opening clutter issue. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chú Hùng lục bàn lần thứ ba. Kéo lại nằm dưới vải. Tôi đưa khay trống: \"This is the right place.\" Đây là chỗ phù hợp, mình để kéo ở đây nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chú Hùng lục bàn lần thứ ba. Kéo lại nằm dưới vải. Tôi đưa khay trống: \"This is the right place.\" Đây là chỗ phù hợp, mình để kéo ở đây nhé."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Chú Hùng lục bàn lần thứ ba. Kéo lại nằm dưới vải. Tôi đưa khay trống: \"This is the right place.\" Đây là chỗ phù hợp, mình để kéo ở đây nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Chú hay đặt đồ xuống bất cứ góc nào còn trống. Tôi cũng vậy nên hai người cứ tìm. Khay ở ngay cạnh bàn, không cần mở ngăn hoặc với lên kệ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"Let's find a safe place.\" Hãy tìm chỗ an toàn. Chú đề nghị đưa khay vào phía trong, khỏi vướng lối đi. Tôi nhìn chỗ mới, gật đầu cùng chú."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"Let's find a safe place.\" Hãy tìm chỗ an toàn. Chú đề nghị đưa khay vào phía trong, khỏi vướng lối đi. Tôi nhìn chỗ mới, gật đầu cùng chú."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Chúng tôi làm nốt áo đã nhận sửa. Chú đưa tay tìm kéo dưới vải theo thói quen; tôi đặt khay sát lại, để chú nhìn thấy ngay. Chú bật cười, nhận kéo."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Chú hỏi để xong thì cất đâu, sợ lát nữa lại quên. Bạn nói giúp tôi câu đây là chỗ phù hợp bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Chú hỏi để xong thì cất đâu, sợ lát nữa lại quên. Bạn nói giúp tôi câu đây là chỗ phù hợp bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"This is the right place.\" Đây là chỗ phù hợp. Chú đặt kéo vào khay rồi đưa luôn thước cạnh nó. Tôi cất phần của mình cùng chỗ, khỏi phải hỏi tìm lần nữa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"This is the right place.\" Đây là chỗ phù hợp. Chú đặt kéo vào khay rồi đưa luôn thước cạnh nó. Tôi cất phần của mình cùng chỗ, khỏi phải hỏi tìm lần nữa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"This is the right place.\" Đây là chỗ phù hợp. Chú đặt kéo vào khay rồi đưa luôn thước cạnh nó. Tôi cất phần của mình cùng chỗ, khỏi phải hỏi tìm lần nữa."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the everyday nuisance of lost sewing shears in a busy workshop.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the everyday nuisance of lost sewing shears in a busy workshop. Next causal state: Mascot places tray at table corner near both workers; scissors lie separately on fabric, no wall hooks."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first model describing a designated place for the tool.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first model describing a designated place for the tool. Next causal state: Older figure moves the empty tray farther inside the table edge away from walkway, mascot agrees. No mounting or tool safety instructions."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model place in an imperative sentence aimed at workplace safety.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Model place in an imperative sentence aimed at workplace safety. Next causal state: Older tailor searches fabric with one hand while mascot slides scissors tray into his sight. Same unfinished garment on table."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Heighten urgency as a customer arrives for an immediate fitting.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Heighten urgency as a customer arrives for an immediate fitting. Next causal state: Older tailor holds scissors after work, looking at mascot for where to put them. Upper safe region for stem."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Invite the viewer to help guide the tailor to the proper place.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite the viewer to help guide the tailor to the proper place. Next causal state: Scissors and ruler rest together in the shared tray at inner table corner; mascot adds his pencil, older figure lowers empty hand."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Reinforce the retrieval word place and resolve the opening clutter issue.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Reinforce the retrieval word place and resolve the opening clutter issue. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18214",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Tuấn và chú Hùng thống nhất chỗ cất đồ ở khay trong góc bàn; sau khi quên một lần, cả hai cùng thực hiện. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20314",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tuấn và chú Hùng thống nhất chỗ cất đồ ở khay trong góc bàn; sau khi quên một lần, cả hai cùng thực hiện. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

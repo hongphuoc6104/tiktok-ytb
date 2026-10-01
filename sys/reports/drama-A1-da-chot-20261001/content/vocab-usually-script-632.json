@@ -1,0 +1,593 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "bd376840c9e4e1a1a7347fe33af7bfa70aa218f4a8306847f96887ecf6ec9eea",
+  "topic": "Học từ vựng tiếng Anh USUALLY (trạng từ: thường thì) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ USUALLY",
+    "Làm rõ nghĩa lõi \"thường thì\" (trạng từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng USUALLY, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại USUALLY, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Huy",
+      "appearance": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "Single plain short-sleeve grey shirt and minimalist navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc xe dừng lại",
+      "purpose": "Establish the morning routine disruption when a coworker offers a ride in light rain.",
+      "action": "Mascot stands beside a stationary motorbike outside a home gate in dry morning weather. Grey-shirt coworker offers a spare helmet; no traffic or rain.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy giục tôi lên xe máy. Bạn sợ tôi đi bộ sẽ tới xưởng muộn. Tôi lắc đầu: \"I usually walk to work.\" Tôi thường đi bộ đi làm.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "usually",
+          "meaning": "thường thì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot stands beside a stationary motorbike outside a home gate in dry morning weather. Grey-shirt coworker offers a spare helmet; no traffic or rain. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stands beside a stationary motorbike outside a home gate in dry morning weather. Grey-shirt coworker offers a spare helmet; no traffic or rain.",
+          "reason": "Establish the morning routine disruption when a coworker offers a ride in light rain.",
+          "visible_text": [
+            {
+              "text": "I usually walk to work.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the morning routine disruption when a coworker offers a ride in light rain.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy giục tôi lên xe máy. Bạn sợ tôi đi bộ sẽ tới xưởng muộn. Tôi lắc đầu: \"I usually walk to work.\" Tôi thường đi bộ đi làm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the morning routine disruption when a coworker offers a ride in light rain. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Thói quen quen thuộc",
+      "purpose": "Introduce the first English model of usually to define the character's regular habit.",
+      "action": "The stick figure in a pale-blue shirt gestures calmly toward the park lane while explaining his daily routine to his coworker.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi thích đi qua công viên sáng sớm. Thường thì tôi chọn đi bộ, dù có hôm đi xe khi cần. Usually trong lời kể ấy vẫn để chỗ cho ngày khác thói quen.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "usually",
+          "meaning": "thường thì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The stick figure in a pale-blue shirt gestures calmly toward the park lane while explaining his daily routine to his coworker. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in a pale-blue shirt gestures calmly toward the park lane while explaining his daily routine to his coworker.",
+          "reason": "Introduce the first English model of usually to define the character's regular habit.",
+          "visible_text": [
+            {
+              "text": "usually · thường thì",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first English model of usually to define the character's regular habit.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi thích đi qua công viên sáng sớm. Thường thì tôi chọn đi bộ, dù có hôm đi xe khi cần. Usually trong lời kể ấy vẫn để chỗ cho ngày khác thói quen.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first English model of usually to define the character's regular habit. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Câu hỏi bất ngờ",
+      "purpose": "Provide the second English model through the coworker's natural question about routine.",
+      "action": "The coworker in a plain grey shirt sits on his parked motorbike, looking with curious amusement at the walking shoes.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy tắt máy, hỏi: \"Do you usually arrive early?\" Bạn thường đến sớm không? Tôi gật đầu, kể mình thường đi trước giờ hẹn một chút để không phải vội.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "usually",
+          "meaning": "thường thì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The coworker in a plain grey shirt sits on his parked motorbike, looking with curious amusement at the walking shoes. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The coworker in a plain grey shirt sits on his parked motorbike, looking with curious amusement at the walking shoes.",
+          "reason": "Provide the second English model through the coworker's natural question about routine.",
+          "visible_text": [
+            {
+              "text": "Do you usually arrive early?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Provide the second English model through the coworker's natural question about routine.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy tắt máy, hỏi: \"Do you usually arrive early?\" Bạn thường đến sớm không? Tôi gật đầu, kể mình thường đi trước giờ hẹn một chút để không phải vội.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide the second English model through the coworker's natural question about routine. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lý do giản dị",
+      "purpose": "Reinforce the practical motivation behind the habit and show causal reasoning.",
+      "action": "Mascot points toward a nearby park bench; grey-shirt friend removes his helmet beside the stationary bike outside the home gate.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi chỉ chiếc ghế đá hai đứa hay ngồi hồi mới vào xưởng. Huy chưa ghé lại lâu rồi. Bạn tháo mũ, bảo hôm nay cũng muốn đi qua chỗ đó.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "usually",
+          "meaning": "thường thì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot points toward a nearby park bench; grey-shirt friend removes his helmet beside the stationary bike outside the home gate. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points toward a nearby park bench; grey-shirt friend removes his helmet beside the stationary bike outside the home gate.",
+          "reason": "Reinforce the practical motivation behind the habit and show causal reasoning.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Reinforce the practical motivation behind the habit and show causal reasoning.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi chỉ chiếc ghế đá hai đứa hay ngồi hồi mới vào xưởng. Huy chưa ghé lại lâu rồi. Bạn tháo mũ, bảo hôm nay cũng muốn đi qua chỗ đó.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Reinforce the practical motivation behind the habit and show causal reasoning. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Cùng tập nói",
+      "purpose": "Prompt the learner to produce the target sentence before the coworker rides away.",
+      "action": "The coworker fastens his helmet strap while the stick figure in a pale-blue shirt looks toward the viewer waiting for the phrase.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy hỏi tôi có đi xe cùng bạn lần này không. Bạn nói giúp tôi câu tôi thường đi bộ đi làm bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "usually",
+          "meaning": "thường thì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The coworker fastens his helmet strap while the stick figure in a pale-blue shirt looks toward the viewer waiting for the phrase. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The coworker fastens his helmet strap while the stick figure in a pale-blue shirt looks toward the viewer waiting for the phrase.",
+          "reason": "Prompt the learner to produce the target sentence before the coworker rides away.",
+          "visible_text": [
+            {
+              "text": "I ___ walk to work.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to produce the target sentence before the coworker rides away.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy hỏi tôi có đi xe cùng bạn lần này không. Bạn nói giúp tôi câu tôi thường đi bộ đi làm bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to produce the target sentence before the coworker rides away. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Cùng nhau bước tiếp",
+      "purpose": "Provide immediate feedback on the model and conclude with a concrete relational resolution.",
+      "action": "Both minimal figures stand together by the old park bench; bike and helmets absent because left safely at home. Workshop visible beyond path, no crowd.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I usually walk to work.\" Tôi thường đi bộ đi làm. Huy gửi xe lại nhà, đi cạnh tôi. Tới ghế đá, hai đứa dừng một chút rồi mới vào xưởng.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "usually",
+          "meaning": "thường thì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both minimal figures stand together by the old park bench; bike and helmets absent because left safely at home. Workshop visible beyond path, no crowd. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both minimal figures stand together by the old park bench; bike and helmets absent because left safely at home. Workshop visible beyond path, no crowd.",
+          "reason": "Provide immediate feedback on the model and conclude with a concrete relational resolution.",
+          "visible_text": [
+            {
+              "text": "I usually walk to work.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Provide immediate feedback on the model and conclude with a concrete relational resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I usually walk to work.\" Tôi thường đi bộ đi làm. Huy gửi xe lại nhà, đi cạnh tôi. Tới ghế đá, hai đứa dừng một chút rồi mới vào xưởng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide immediate feedback on the model and conclude with a concrete relational resolution. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Huy giục tôi lên xe máy. Bạn sợ tôi đi bộ sẽ tới xưởng muộn. Tôi lắc đầu: \"I usually walk to work.\" Tôi thường đi bộ đi làm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Huy giục tôi lên xe máy. Bạn sợ tôi đi bộ sẽ tới xưởng muộn. Tôi lắc đầu: \"I usually walk to work.\" Tôi thường đi bộ đi làm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Huy giục tôi lên xe máy. Bạn sợ tôi đi bộ sẽ tới xưởng muộn. Tôi lắc đầu: \"I usually walk to work.\" Tôi thường đi bộ đi làm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi thích đi qua công viên sáng sớm. Thường thì tôi chọn đi bộ, dù có hôm đi xe khi cần. Usually trong lời kể ấy vẫn để chỗ cho ngày khác thói quen."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Huy tắt máy, hỏi: \"Do you usually arrive early?\" Bạn thường đến sớm không? Tôi gật đầu, kể mình thường đi trước giờ hẹn một chút để không phải vội."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Huy tắt máy, hỏi: \"Do you usually arrive early?\" Bạn thường đến sớm không? Tôi gật đầu, kể mình thường đi trước giờ hẹn một chút để không phải vội."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi chỉ chiếc ghế đá hai đứa hay ngồi hồi mới vào xưởng. Huy chưa ghé lại lâu rồi. Bạn tháo mũ, bảo hôm nay cũng muốn đi qua chỗ đó."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Huy hỏi tôi có đi xe cùng bạn lần này không. Bạn nói giúp tôi câu tôi thường đi bộ đi làm bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Huy hỏi tôi có đi xe cùng bạn lần này không. Bạn nói giúp tôi câu tôi thường đi bộ đi làm bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"I usually walk to work.\" Tôi thường đi bộ đi làm. Huy gửi xe lại nhà, đi cạnh tôi. Tới ghế đá, hai đứa dừng một chút rồi mới vào xưởng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"I usually walk to work.\" Tôi thường đi bộ đi làm. Huy gửi xe lại nhà, đi cạnh tôi. Tới ghế đá, hai đứa dừng một chút rồi mới vào xưởng."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I usually walk to work.\" Tôi thường đi bộ đi làm. Huy gửi xe lại nhà, đi cạnh tôi. Tới ghế đá, hai đứa dừng một chút rồi mới vào xưởng."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the morning routine disruption when a coworker offers a ride in light rain.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the morning routine disruption when a coworker offers a ride in light rain. Next causal state: The stick figure in a pale-blue shirt gestures calmly toward the park lane while explaining his daily routine to his coworker."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first English model of usually to define the character's regular habit.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first English model of usually to define the character's regular habit. Next causal state: The coworker in a plain grey shirt sits on his parked motorbike, looking with curious amusement at the walking shoes."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Provide the second English model through the coworker's natural question about routine.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Provide the second English model through the coworker's natural question about routine. Next causal state: Mascot points toward a nearby park bench; grey-shirt friend removes his helmet beside the stationary bike outside the home gate."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Reinforce the practical motivation behind the habit and show causal reasoning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Reinforce the practical motivation behind the habit and show causal reasoning. Next causal state: The coworker fastens his helmet strap while the stick figure in a pale-blue shirt looks toward the viewer waiting for the phrase."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to produce the target sentence before the coworker rides away.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to produce the target sentence before the coworker rides away. Next causal state: Both minimal figures stand together by the old park bench; bike and helmets absent because left safely at home. Workshop visible beyond path, no crowd."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Provide immediate feedback on the model and conclude with a concrete relational resolution.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Provide immediate feedback on the model and conclude with a concrete relational resolution. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18134",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Huy muốn chở bạn đi làm, nhưng nghe về thói quen đi bộ qua công viên nên cùng bạn ghé lại ghế đá quen. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20216",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Huy muốn chở bạn đi làm, nhưng nghe về thói quen đi bộ qua công viên nên cùng bạn ghé lại ghế đá quen. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

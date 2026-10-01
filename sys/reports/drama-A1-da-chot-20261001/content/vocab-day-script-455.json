@@ -1,0 +1,511 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "a691000fbd73d25a36180eeee966d4d6517b3a4b766b3ec4807058ad949f13a6",
+  "topic": "Học từ vựng tiếng Anh DAY (danh từ: ngày) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ DAY",
+    "Làm rõ nghĩa lõi \"ngày\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng DAY, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại DAY, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Hải",
+      "appearance": "Stick figure with a round white head, dark-navy outline, two solid black oval eyes, and minimal stick limbs.",
+      "outfit": "Single pale-orange short-sleeve torso."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with the concrete personal need and early usable English model.",
+      "action": "Workshop medium shot: mascot sits beside an unfinished gift stool with a loose last leg, while Hải lowers his phone. Only simple wood props, no saw action.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hải đã gọi xe, tôi chưa xong. Chiếc ghế đóng tặng em vẫn thiếu chân cuối. \"I need one day.\" Tôi cần một ngày. Hải bỏ điện thoại xuống, nhìn đống gỗ bên chân tôi.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "day",
+          "meaning": "ngày"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Workshop medium shot: mascot sits beside an unfinished gift stool with a loose last leg, while Hải lowers his phone. Only simple wood props, no saw action. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Workshop medium shot: mascot sits beside an unfinished gift stool with a loose last leg, while Hải lowers his phone. Only simple wood props, no saw action.",
+          "reason": "Open with the concrete personal need and early usable English model.",
+          "visible_text": [
+            {
+              "text": "I need one day.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with the concrete personal need and early usable English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Hải đã gọi xe, tôi chưa xong. Chiếc ghế đóng tặng em vẫn thiếu chân cuối. \"I need one day.\" Tôi cần một ngày. Hải bỏ điện thoại xuống, nhìn đống gỗ bên chân tôi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with the concrete personal need and early usable English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+      "action": "Same workbench angle: Hải holds a blank planner and listens to mascot ask which day he can return. Stool remains unfinished.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi hứa mang ghế sang hôm nay, nhưng chiều qua đo nhầm một đoạn. Hải không trách, chỉ hỏi lúc nào quay lại được. \"What day can you come?\" Bạn có thể tới vào ngày nào?",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "day",
+          "meaning": "ngày"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same workbench angle: Hải holds a blank planner and listens to mascot ask which day he can return. Stool remains unfinished. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same workbench angle: Hải holds a blank planner and listens to mascot ask which day he can return. Stool remains unfinished.",
+          "reason": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+          "visible_text": [
+            {
+              "text": "day · ngày",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi hứa mang ghế sang hôm nay, nhưng chiều qua đo nhầm một đoạn. Hải không trách, chỉ hỏi lúc nào quay lại được. \"What day can you come?\" Bạn có thể tới vào ngày nào?",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+      "action": "Medium shot: mascot measures a loose wooden leg while Hải holds it steady. Calendar has today and the next day as adjacent marked blank cells, no letters.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hải chọn ngày mai. Tôi gạch việc giao ghế khỏi ô hôm nay, đánh dấu ô kế tiếp trên lịch. Bạn giữ thanh gỗ để tôi đo lại; lần này, tôi đọc số đo cho bạn nghe.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "day",
+          "meaning": "ngày"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Medium shot: mascot measures a loose wooden leg while Hải holds it steady. Calendar has today and the next day as adjacent marked blank cells, no letters. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot: mascot measures a loose wooden leg while Hải holds it steady. Calendar has today and the next day as adjacent marked blank cells, no letters.",
+          "reason": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Hải chọn ngày mai. Tôi gạch việc giao ghế khỏi ô hôm nay, đánh dấu ô kế tiếp trên lịch. Bạn giữ thanh gỗ để tôi đo lại; lần này, tôi đọc số đo cho bạn nghe.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+      "action": "Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn nhắc giúp tôi câu tôi cần một ngày bằng tiếng Anh nhé. Tôi muốn nói rõ với Hải.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "day",
+          "meaning": "ngày"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below.",
+          "reason": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+          "visible_text": [
+            {
+              "text": "I need one ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhắc giúp tôi câu tôi cần một ngày bằng tiếng Anh nhé. Tôi muốn nói rõ với Hải.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+      "action": "At Hải’s room doorway, mascot presents the finished stool. Hải sits on it to try, then pulls another plain chair over for mascot. The same ruler remains in Hải’s pocket; no extra people.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I need one day.\" Hôm sau, tôi mang chiếc ghế tới đúng hẹn. Hải ngồi thử, rồi kéo thêm ghế cho tôi. Bạn vẫn giữ chiếc thước trong túi áo.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "day",
+          "meaning": "ngày"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "At Hải’s room doorway, mascot presents the finished stool. Hải sits on it to try, then pulls another plain chair over for mascot. The same ruler remains in Hải’s pocket; no extra people. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At Hải’s room doorway, mascot presents the finished stool. Hải sits on it to try, then pulls another plain chair over for mascot. The same ruler remains in Hải’s pocket; no extra people.",
+          "reason": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+          "visible_text": [
+            {
+              "text": "I need one day.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need one day.\" Hôm sau, tôi mang chiếc ghế tới đúng hẹn. Hải ngồi thử, rồi kéo thêm ghế cho tôi. Bạn vẫn giữ chiếc thước trong túi áo.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Hải đã gọi xe, tôi chưa xong. Chiếc ghế đóng tặng em vẫn thiếu chân cuối. \"I need one day.\" Tôi cần một ngày. Hải bỏ điện thoại xuống, nhìn đống gỗ bên chân tôi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Hải đã gọi xe, tôi chưa xong. Chiếc ghế đóng tặng em vẫn thiếu chân cuối. \"I need one day.\" Tôi cần một ngày. Hải bỏ điện thoại xuống, nhìn đống gỗ bên chân tôi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Hải đã gọi xe, tôi chưa xong. Chiếc ghế đóng tặng em vẫn thiếu chân cuối. \"I need one day.\" Tôi cần một ngày. Hải bỏ điện thoại xuống, nhìn đống gỗ bên chân tôi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi hứa mang ghế sang hôm nay, nhưng chiều qua đo nhầm một đoạn. Hải không trách, chỉ hỏi lúc nào quay lại được. \"What day can you come?\" Bạn có thể tới vào ngày nào?"
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi hứa mang ghế sang hôm nay, nhưng chiều qua đo nhầm một đoạn. Hải không trách, chỉ hỏi lúc nào quay lại được. \"What day can you come?\" Bạn có thể tới vào ngày nào?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Hải chọn ngày mai. Tôi gạch việc giao ghế khỏi ô hôm nay, đánh dấu ô kế tiếp trên lịch. Bạn giữ thanh gỗ để tôi đo lại; lần này, tôi đọc số đo cho bạn nghe."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Bạn nhắc giúp tôi câu tôi cần một ngày bằng tiếng Anh nhé. Tôi muốn nói rõ với Hải."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn nhắc giúp tôi câu tôi cần một ngày bằng tiếng Anh nhé. Tôi muốn nói rõ với Hải."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"I need one day.\" Hôm sau, tôi mang chiếc ghế tới đúng hẹn. Hải ngồi thử, rồi kéo thêm ghế cho tôi. Bạn vẫn giữ chiếc thước trong túi áo."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"I need one day.\" Hôm sau, tôi mang chiếc ghế tới đúng hẹn. Hải ngồi thử, rồi kéo thêm ghế cho tôi. Bạn vẫn giữ chiếc thước trong túi áo."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I need one day.\" Hôm sau, tôi mang chiếc ghế tới đúng hẹn. Hải ngồi thử, rồi kéo thêm ghế cho tôi. Bạn vẫn giữ chiếc thước trong túi áo."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with the concrete personal need and early usable English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with the concrete personal need and early usable English model. Next causal state: Same workbench angle: Hải holds a blank planner and listens to mascot ask which day he can return. Stool remains unfinished."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate. Next causal state: Medium shot: mascot measures a loose wooden leg while Hải holds it steady. Calendar has today and the next day as adjacent marked blank cells, no letters."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning. Next causal state: Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer. Next causal state: At Hải’s room doorway, mascot presents the finished stool. Hải sits on it to try, then pulls another plain chair over for mascot. The same ruler remains in Hải’s pocket; no extra people."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "16977",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Tâm cần thêm một ngày để sửa chân ghế đo nhầm; Hải giúp đo lại và nhận ghế hôm sau. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "19880",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tâm cần thêm một ngày để sửa chân ghế đo nhầm; Hải giúp đo lại và nhận ghế hôm sau. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

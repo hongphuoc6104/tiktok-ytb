@@ -1,0 +1,511 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "d0175456d3440d69ec48e5052b54c49f603ee7af1da5a03bbbd79e370313a259",
+  "topic": "Học từ vựng tiếng Anh CIRCLE (danh từ: hình tròn) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CIRCLE",
+    "Làm rõ nghĩa lõi \"hình tròn\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CIRCLE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CIRCLE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Mai",
+      "appearance": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+      "outfit": "One plain lavender short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with the concrete personal need and early usable English model.",
+      "action": "Craft desk medium shot: mascot has just drawn a closed circle with compass; Mai compares with older irregular round outline. Paper hands ready nearby.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Mai chê mặt đồng hồ của tôi méo. Tôi định cất tấm bìa, rồi thử lại bằng com-pa. \"I drew a circle.\" Tôi đã vẽ một hình tròn. Mai đặt tấm mới cạnh hình cũ, nhìn tôi cười.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "circle",
+          "meaning": "hình tròn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Craft desk medium shot: mascot has just drawn a closed circle with compass; Mai compares with older irregular round outline. Paper hands ready nearby. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Craft desk medium shot: mascot has just drawn a closed circle with compass; Mai compares with older irregular round outline. Paper hands ready nearby.",
+          "reason": "Open with the concrete personal need and early usable English model.",
+          "visible_text": [
+            {
+              "text": "I drew a circle.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with the concrete personal need and early usable English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Mai chê mặt đồng hồ của tôi méo. Tôi định cất tấm bìa, rồi thử lại bằng com-pa. \"I drew a circle.\" Tôi đã vẽ một hình tròn. Mai đặt tấm mới cạnh hình cũ, nhìn tôi cười.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with the concrete personal need and early usable English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+      "action": "Same camera: mascot offers blunt craft scissors to Mai and points to drawn circle.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn làm đồng hồ giấy cho góc học, nhưng cứ cắt lệch nét. \"Cut out this circle.\" Cắt hình tròn này ra nhé. Tôi đưa kéo cho Mai, xin bạn giúp phần vừa làm hỏng.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "circle",
+          "meaning": "hình tròn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same camera: mascot offers blunt craft scissors to Mai and points to drawn circle. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same camera: mascot offers blunt craft scissors to Mai and points to drawn circle.",
+          "reason": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+          "visible_text": [
+            {
+              "text": "circle · hình tròn",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn làm đồng hồ giấy cho góc học, nhưng cứ cắt lệch nét. \"Cut out this circle.\" Cắt hình tròn này ra nhé. Tôi đưa kéo cho Mai, xin bạn giúp phần vừa làm hỏng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+      "action": "Close shot: Mai cuts along circle while mascot steadies outer scrap. Detached circular yellow card and two paper clock hands on desk.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Mai giữ tấm bìa, cắt chậm theo đường tròn khép kín. Tôi giữ phần giấy thừa để nó khỏi kéo lệch. Hai đứa đặt mảnh tròn lên bàn; lần này nó vừa với hai kim giấy đã chuẩn bị.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "circle",
+          "meaning": "hình tròn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Close shot: Mai cuts along circle while mascot steadies outer scrap. Detached circular yellow card and two paper clock hands on desk. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close shot: Mai cuts along circle while mascot steadies outer scrap. Detached circular yellow card and two paper clock hands on desk.",
+          "reason": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Mai giữ tấm bìa, cắt chậm theo đường tròn khép kín. Tôi giữ phần giấy thừa để nó khỏi kéo lệch. Hai đứa đặt mảnh tròn lên bàn; lần này nó vừa với hai kim giấy đã chuẩn bị.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+      "action": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Mai còn cầm kéo. Bạn nhờ giúp tôi câu cắt hình tròn này ra bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "circle",
+          "meaning": "hình tròn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+          "reason": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+          "visible_text": [
+            {
+              "text": "Cut out this ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Mai còn cầm kéo. Bạn nhờ giúp tôi câu cắt hình tròn này ra bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+      "action": "Medium shot: they pin paper hands into centre of the circular card and hang the static handmade clock outline on wall. Old irregular drawing retained in notebook. No mechanical moving clock claim.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Cut out this circle.\" Tôi đặt hai kim giấy lên hình tròn, Mai ghim lại ở giữa. Đồng hồ chưa chạy được, nhưng đã có chỗ trên tường. Hình méo đầu tiên, tôi giữ trong sổ.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "circle",
+          "meaning": "hình tròn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Medium shot: they pin paper hands into centre of the circular card and hang the static handmade clock outline on wall. Old irregular drawing retained in notebook. No mechanical moving clock claim. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot: they pin paper hands into centre of the circular card and hang the static handmade clock outline on wall. Old irregular drawing retained in notebook. No mechanical moving clock claim.",
+          "reason": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+          "visible_text": [
+            {
+              "text": "Cut out this circle.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Cut out this circle.\" Tôi đặt hai kim giấy lên hình tròn, Mai ghim lại ở giữa. Đồng hồ chưa chạy được, nhưng đã có chỗ trên tường. Hình méo đầu tiên, tôi giữ trong sổ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mai chê mặt đồng hồ của tôi méo. Tôi định cất tấm bìa, rồi thử lại bằng com-pa. \"I drew a circle.\" Tôi đã vẽ một hình tròn. Mai đặt tấm mới cạnh hình cũ, nhìn tôi cười."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mai chê mặt đồng hồ của tôi méo. Tôi định cất tấm bìa, rồi thử lại bằng com-pa. \"I drew a circle.\" Tôi đã vẽ một hình tròn. Mai đặt tấm mới cạnh hình cũ, nhìn tôi cười."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Mai chê mặt đồng hồ của tôi méo. Tôi định cất tấm bìa, rồi thử lại bằng com-pa. \"I drew a circle.\" Tôi đã vẽ một hình tròn. Mai đặt tấm mới cạnh hình cũ, nhìn tôi cười."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi muốn làm đồng hồ giấy cho góc học, nhưng cứ cắt lệch nét. \"Cut out this circle.\" Cắt hình tròn này ra nhé. Tôi đưa kéo cho Mai, xin bạn giúp phần vừa làm hỏng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi muốn làm đồng hồ giấy cho góc học, nhưng cứ cắt lệch nét. \"Cut out this circle.\" Cắt hình tròn này ra nhé. Tôi đưa kéo cho Mai, xin bạn giúp phần vừa làm hỏng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Mai giữ tấm bìa, cắt chậm theo đường tròn khép kín. Tôi giữ phần giấy thừa để nó khỏi kéo lệch. Hai đứa đặt mảnh tròn lên bàn; lần này nó vừa với hai kim giấy đã chuẩn bị."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Mai còn cầm kéo. Bạn nhờ giúp tôi câu cắt hình tròn này ra bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Mai còn cầm kéo. Bạn nhờ giúp tôi câu cắt hình tròn này ra bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Cut out this circle.\" Tôi đặt hai kim giấy lên hình tròn, Mai ghim lại ở giữa. Đồng hồ chưa chạy được, nhưng đã có chỗ trên tường. Hình méo đầu tiên, tôi giữ trong sổ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Cut out this circle.\" Tôi đặt hai kim giấy lên hình tròn, Mai ghim lại ở giữa. Đồng hồ chưa chạy được, nhưng đã có chỗ trên tường. Hình méo đầu tiên, tôi giữ trong sổ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Cut out this circle.\" Tôi đặt hai kim giấy lên hình tròn, Mai ghim lại ở giữa. Đồng hồ chưa chạy được, nhưng đã có chỗ trên tường. Hình méo đầu tiên, tôi giữ trong sổ."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with the concrete personal need and early usable English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with the concrete personal need and early usable English model. Next causal state: Same camera: mascot offers blunt craft scissors to Mai and points to drawn circle."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate. Next causal state: Close shot: Mai cuts along circle while mascot steadies outer scrap. Detached circular yellow card and two paper clock hands on desk."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning. Next causal state: Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer. Next causal state: Medium shot: they pin paper hands into centre of the circular card and hang the static handmade clock outline on wall. Old irregular drawing retained in notebook. No mechanical moving clock claim."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17053",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: An làm mặt đồng hồ giấy méo; nhờ Mai cắt hình tròn vừa vẽ, hai người ghim kim giấy và giữ cả bản làm hỏng. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "19957",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: An làm mặt đồng hồ giấy méo; nhờ Mai cắt hình tròn vừa vẽ, hai người ghim kim giấy và giữ cả bản làm hỏng. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

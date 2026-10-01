@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "3b88915961eb1b9677a0d15db0b07c0ce8c7999c444832a1973e1b704c1372a5",
+  "topic": "Học từ vựng tiếng Anh SUITCASE (danh từ: va li) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SUITCASE",
+    "Làm rõ nghĩa lõi \"va li\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SUITCASE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SUITCASE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Huy",
+      "appearance": "Minimal ink stick figure with a round white head outlined in black, simple black stick limbs.",
+      "outfit": "Single ochre yellow short-sleeve shirt and dark grey trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Hai chiếc va li giống nhau",
+      "purpose": "Hook the viewer with a packing scene and present the first model sentence identifying the luggage.",
+      "action": "Inside a small rented room, two identical grey fabric suitcases sit side by side near the doorway. The companion in the yellow shirt reaches for one handle while the pale-blue shirt mascot steps forward with a questioning gesture.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Góc phòng trọ bừa bộn đồ đạc. Huy thu dọn để về quê, hai chiếc va li cũ đặt sát cửa. Thấy bạn kéo nhầm chiếc của mình, tôi vội hỏi: \"Is this your suitcase?\" Đây là va li của bạn à?",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "suitcase",
+          "meaning": "va li"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Inside a small rented room, two identical grey fabric suitcases sit side by side near the doorway. The companion in the yellow shirt reaches for one handle while the pale-blue shirt mascot steps forward with a questioning gesture. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Inside a small rented room, two identical grey fabric suitcases sit side by side near the doorway. The companion in the yellow shirt reaches for one handle while the pale-blue shirt mascot steps forward with a questioning gesture.",
+          "reason": "Hook the viewer with a packing scene and present the first model sentence identifying the luggage.",
+          "visible_text": [
+            {
+              "text": "Is this your suitcase?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Hook the viewer with a packing scene and present the first model sentence identifying the luggage.",
+          "anchor": {
+            "vi": {
+              "quote": "Góc phòng trọ bừa bộn đồ đạc. Huy thu dọn để về quê, hai chiếc va li cũ đặt sát cửa. Thấy bạn kéo nhầm chiếc của mình, tôi vội hỏi: \"Is this your suitcase?\" Đây là va li của bạn à?",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Hook the viewer with a packing scene and present the first model sentence identifying the luggage. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Độ nặng khác biệt",
+      "purpose": "Introduce the second model sentence contrasting weight to distinguish the two pieces of luggage.",
+      "action": "The companion in the yellow shirt lifts the grey suitcase by its top handle, testing its weight with a slight head shake before pointing to the second suitcase beside it.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy buông tay kéo, nhấc thử quai xách rồi lắc đầu: \"My suitcase is heavy.\" Va li của tôi nặng lắm. Chiếc này nhẹ bẫng vì bên trong chỉ có vài bộ quần áo của tôi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "suitcase",
+          "meaning": "va li"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The companion in the yellow shirt lifts the grey suitcase by its top handle, testing its weight with a slight head shake before pointing to the second suitcase beside it. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The companion in the yellow shirt lifts the grey suitcase by its top handle, testing its weight with a slight head shake before pointing to the second suitcase beside it.",
+          "reason": "Introduce the second model sentence contrasting weight to distinguish the two pieces of luggage.",
+          "visible_text": [
+            {
+              "text": "suitcase · va li",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the second model sentence contrasting weight to distinguish the two pieces of luggage.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy buông tay kéo, nhấc thử quai xách rồi lắc đầu: \"My suitcase is heavy.\" Va li của tôi nặng lắm. Chiếc này nhẹ bẫng vì bên trong chỉ có vài bộ quần áo của tôi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second model sentence contrasting weight to distinguish the two pieces of luggage. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Dải ruy băng đỏ",
+      "purpose": "Show a thoughtful action that solves the confusion and cements the shared bond.",
+      "action": "The pale-blue shirt mascot ties a thin red ribbon around the handle of the heavier suitcase, then both friends grip the sides to carry it past the threshold.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi lấy dải ruy băng đỏ buộc vào tay cầm va li của Huy. Bạn hỏi có phải dải tôi vẫn buộc túi sách không. Tôi gật đầu, bảo cứ giữ nó, lần sau về sẽ nhận ra ngay.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "suitcase",
+          "meaning": "va li"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The pale-blue shirt mascot ties a thin red ribbon around the handle of the heavier suitcase, then both friends grip the sides to carry it past the threshold. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The pale-blue shirt mascot ties a thin red ribbon around the handle of the heavier suitcase, then both friends grip the sides to carry it past the threshold.",
+          "reason": "Show a thoughtful action that solves the confusion and cements the shared bond.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show a thoughtful action that solves the confusion and cements the shared bond.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi lấy dải ruy băng đỏ buộc vào tay cầm va li của Huy. Bạn hỏi có phải dải tôi vẫn buộc túi sách không. Tôi gật đầu, bảo cứ giữ nó, lần sau về sẽ nhận ra ngay.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show a thoughtful action that solves the confusion and cements the shared bond. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Luyện câu hỏi xác nhận",
+      "purpose": "Prompt the learner to speak the confirmation question with the target noun before the pause.",
+      "action": "The pale-blue shirt mascot points directly at the suitcase marked with the red ribbon, looking up at the companion.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn hỏi lại xem chiếc va li buộc ruy băng đỏ đã đúng là của Huy chưa. Bạn nói giúp tôi câu hỏi bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "suitcase",
+          "meaning": "va li"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "The pale-blue shirt mascot points directly at the suitcase marked with the red ribbon, looking up at the companion. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The pale-blue shirt mascot points directly at the suitcase marked with the red ribbon, looking up at the companion.",
+          "reason": "Prompt the learner to speak the confirmation question with the target noun before the pause.",
+          "visible_text": [
+            {
+              "text": "Is this your ___?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to speak the confirmation question with the target noun before the pause.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn hỏi lại xem chiếc va li buộc ruy băng đỏ đã đúng là của Huy chưa. Bạn nói giúp tôi câu hỏi bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to speak the confirmation question with the target noun before the pause. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Lên đường về quê",
+      "purpose": "Deliver the correct sentence and close on a warm parting gesture.",
+      "action": "The companion in the yellow shirt nods with a smile, gripping the ribbon-tied handle, and rolls the suitcase down the narrow alley alongside the mascot.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Is this your suitcase?\" Huy nhìn dải ruy băng rồi gật đầu. Hai đứa kéo đồ ra ngõ đón xe. Trước khi đi, bạn buộc lại chiếc nơ một lần nữa, còn tôi giữ cửa.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "suitcase",
+          "meaning": "va li"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The companion in the yellow shirt nods with a smile, gripping the ribbon-tied handle, and rolls the suitcase down the narrow alley alongside the mascot. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The companion in the yellow shirt nods with a smile, gripping the ribbon-tied handle, and rolls the suitcase down the narrow alley alongside the mascot.",
+          "reason": "Deliver the correct sentence and close on a warm parting gesture.",
+          "visible_text": [
+            {
+              "text": "Is this your suitcase?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Deliver the correct sentence and close on a warm parting gesture.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is this your suitcase?\" Huy nhìn dải ruy băng rồi gật đầu. Hai đứa kéo đồ ra ngõ đón xe. Trước khi đi, bạn buộc lại chiếc nơ một lần nữa, còn tôi giữ cửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the correct sentence and close on a warm parting gesture. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Góc phòng trọ bừa bộn đồ đạc. Huy thu dọn để về quê, hai chiếc va li cũ đặt sát cửa. Thấy bạn kéo nhầm chiếc của mình, tôi vội hỏi: \"Is this your suitcase?\" Đây là va li của bạn à?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Góc phòng trọ bừa bộn đồ đạc. Huy thu dọn để về quê, hai chiếc va li cũ đặt sát cửa. Thấy bạn kéo nhầm chiếc của mình, tôi vội hỏi: \"Is this your suitcase?\" Đây là va li của bạn à?"
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Góc phòng trọ bừa bộn đồ đạc. Huy thu dọn để về quê, hai chiếc va li cũ đặt sát cửa. Thấy bạn kéo nhầm chiếc của mình, tôi vội hỏi: \"Is this your suitcase?\" Đây là va li của bạn à?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Huy buông tay kéo, nhấc thử quai xách rồi lắc đầu: \"My suitcase is heavy.\" Va li của tôi nặng lắm. Chiếc này nhẹ bẫng vì bên trong chỉ có vài bộ quần áo của tôi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Huy buông tay kéo, nhấc thử quai xách rồi lắc đầu: \"My suitcase is heavy.\" Va li của tôi nặng lắm. Chiếc này nhẹ bẫng vì bên trong chỉ có vài bộ quần áo của tôi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi lấy dải ruy băng đỏ buộc vào tay cầm va li của Huy. Bạn hỏi có phải dải tôi vẫn buộc túi sách không. Tôi gật đầu, bảo cứ giữ nó, lần sau về sẽ nhận ra ngay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn hỏi lại xem chiếc va li buộc ruy băng đỏ đã đúng là của Huy chưa. Bạn nói giúp tôi câu hỏi bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn hỏi lại xem chiếc va li buộc ruy băng đỏ đã đúng là của Huy chưa. Bạn nói giúp tôi câu hỏi bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Is this your suitcase?\" Huy nhìn dải ruy băng rồi gật đầu. Hai đứa kéo đồ ra ngõ đón xe. Trước khi đi, bạn buộc lại chiếc nơ một lần nữa, còn tôi giữ cửa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Is this your suitcase?\" Huy nhìn dải ruy băng rồi gật đầu. Hai đứa kéo đồ ra ngõ đón xe. Trước khi đi, bạn buộc lại chiếc nơ một lần nữa, còn tôi giữ cửa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Is this your suitcase?\" Huy nhìn dải ruy băng rồi gật đầu. Hai đứa kéo đồ ra ngõ đón xe. Trước khi đi, bạn buộc lại chiếc nơ một lần nữa, còn tôi giữ cửa."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Hook the viewer with a packing scene and present the first model sentence identifying the luggage.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Hook the viewer with a packing scene and present the first model sentence identifying the luggage. Next causal state: The companion in the yellow shirt lifts the grey suitcase by its top handle, testing its weight with a slight head shake before pointing to the second suitcase beside it."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the second model sentence contrasting weight to distinguish the two pieces of luggage.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second model sentence contrasting weight to distinguish the two pieces of luggage. Next causal state: The pale-blue shirt mascot ties a thin red ribbon around the handle of the heavier suitcase, then both friends grip the sides to carry it past the threshold."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show a thoughtful action that solves the confusion and cements the shared bond.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show a thoughtful action that solves the confusion and cements the shared bond. Next causal state: The pale-blue shirt mascot points directly at the suitcase marked with the red ribbon, looking up at the companion."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to speak the confirmation question with the target noun before the pause.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to speak the confirmation question with the target noun before the pause. Next causal state: The companion in the yellow shirt nods with a smile, gripping the ribbon-tied handle, and rolls the suitcase down the narrow alley alongside the mascot."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Deliver the correct sentence and close on a warm parting gesture.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Deliver the correct sentence and close on a warm parting gesture. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19319",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hai người bạn cùng phòng chuẩn bị chia tay sau kỳ học, suýt nhầm lẫn hai chiếc va li cũ giống hệt nhau nếu không nhờ một dải ruy băng đỏ và câu hỏi kịp thời. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

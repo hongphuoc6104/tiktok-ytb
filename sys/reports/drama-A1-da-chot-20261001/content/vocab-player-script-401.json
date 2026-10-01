@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "0a216e8e9454303c718f14d69aa4bd6ada62fd567cc731649b92b419bc425944",
+  "topic": "Học từ vựng tiếng Anh PLAYER (danh từ: cầu thủ, vận động viên) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ PLAYER",
+    "Làm rõ nghĩa lõi \"cầu thủ, vận động viên\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng PLAYER, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại PLAYER, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Quang",
+      "appearance": "Minimal stick figure with simple ink line limbs, observant friendly posture.",
+      "outfit": "Dark-green short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều đang xảy ra",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "action": "Only two listed figures: green-shirt Quang practices with soccer ball on court, mascot watches from sideline fence. No third player.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Quang đặt bóng ở đường biên lần nữa. Bạn cùng lớp ít nói, hôm nay rủ tôi tới xem tập. \"He is a football player.\" Bạn ấy là một cầu thủ bóng đá. Tôi đứng cạnh rào, chưa biết bạn muốn tôi làm gì.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Only two listed figures: green-shirt Quang practices with soccer ball on court, mascot watches from sideline fence. No third player. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Only two listed figures: green-shirt Quang practices with soccer ball on court, mascot watches from sideline fence. No third player.",
+          "reason": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "visible_text": [
+            {
+              "text": "He is a football player.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Quang đặt bóng ở đường biên lần nữa. Bạn cùng lớp ít nói, hôm nay rủ tôi tới xem tập. \"He is a football player.\" Bạn ấy là một cầu thủ bóng đá. Tôi đứng cạnh rào, chưa biết bạn muốn tôi làm gì.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the concrete personal situation and introduce or prepare an early English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Vướng mắc nhỏ",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "action": "Same green-shirt Quang moves ball past three cones, mascot watches at same sideline. Only listed two people.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Quang dẫn bóng qua ba nón nhựa rồi quay lại. \"That player is fast.\" Cầu thủ kia rất nhanh. Tôi vừa nói thì Quang ra hiệu đứng đợi, muốn làm lại lượt vừa chưa đúng ý.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same green-shirt Quang moves ball past three cones, mascot watches at same sideline. Only listed two people. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same green-shirt Quang moves ball past three cones, mascot watches at same sideline. Only listed two people.",
+          "reason": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "visible_text": [
+            {
+              "text": "player · cầu thủ, vận động viên",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "anchor": {
+            "vi": {
+              "quote": "Quang dẫn bóng qua ba nón nhựa rồi quay lại. \"That player is fast.\" Cầu thủ kia rất nhanh. Tôi vừa nói thì Quang ra hiệu đứng đợi, muốn làm lại lượt vừa chưa đúng ý.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Advance the same situation and clarify the target sense with meaningful English usage. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một hành động cần thiết",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "action": "Mascot puts clean towel by green-player water bottle. Quang finishes same cone drill and sits at sideline, no third person.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi lấy chiếc khăn sạch, để bên chai nước của bạn. Quang tập thêm một lượt rồi mới ngồi xuống. Bạn hỏi tôi có thấy khác lượt trước không. Tôi bảo có, lần này bạn không dừng ở nón cuối.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot puts clean towel by green-player water bottle. Quang finishes same cone drill and sits at sideline, no third person. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot puts clean towel by green-player water bottle. Quang finishes same cone drill and sits at sideline, no third person.",
+          "reason": "Show the small action or consequence that motivates the upcoming response.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the small action or consequence that motivates the upcoming response.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi lấy chiếc khăn sạch, để bên chai nước của bạn. Quang tập thêm một lượt rồi mới ngồi xuống. Bạn hỏi tôi có thấy khác lượt trước không. Tôi bảo có, lần này bạn không dừng ở nón cuối.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the small action or consequence that motivates the upcoming response. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần nói",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "action": "Hold mascot at sideline gesturing toward listed green-shirt player Quang and same cones, two people only.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Quang hỏi tôi thấy người tập ngoài sân thế nào. Bạn nói giúp tôi câu cầu thủ kia rất nhanh bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold mascot at sideline gesturing toward listed green-shirt player Quang and same cones, two people only. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold mascot at sideline gesturing toward listed green-shirt player Quang and same cones, two people only.",
+          "reason": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "visible_text": [
+            {
+              "text": "That _____ is fast.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Quang hỏi tôi thấy người tập ngoài sân thế nào. Bạn nói giúp tôi câu cầu thủ kia rất nhanh bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask for a complete story-linked sentence, then hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả gần",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "action": "Only mascot and green-shirt Quang seated at sideline, Quang takes offered white towel and talks, ball and cones remain nearby.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"That player is fast.\" Quang nhận chiếc khăn, bảo mai sẽ tập tiếp. Tôi hỏi có muốn tôi tới xem nữa không. Bạn gật đầu, rồi bắt đầu kể vì sao hôm nay cứ phải làm lại lượt ấy.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Only mascot and green-shirt Quang seated at sideline, Quang takes offered white towel and talks, ball and cones remain nearby. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Only mascot and green-shirt Quang seated at sideline, Quang takes offered white towel and talks, ball and cones remain nearby.",
+          "reason": "Give the correct answer and close with the earned local consequence.",
+          "visible_text": [
+            {
+              "text": "That player is fast.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct answer and close with the earned local consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"That player is fast.\" Quang nhận chiếc khăn, bảo mai sẽ tập tiếp. Tôi hỏi có muốn tôi tới xem nữa không. Bạn gật đầu, rồi bắt đầu kể vì sao hôm nay cứ phải làm lại lượt ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the correct answer and close with the earned local consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Quang đặt bóng ở đường biên lần nữa. Bạn cùng lớp ít nói, hôm nay rủ tôi tới xem tập. \"He is a football player.\" Bạn ấy là một cầu thủ bóng đá. Tôi đứng cạnh rào, chưa biết bạn muốn tôi làm gì."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Quang đặt bóng ở đường biên lần nữa. Bạn cùng lớp ít nói, hôm nay rủ tôi tới xem tập. \"He is a football player.\" Bạn ấy là một cầu thủ bóng đá. Tôi đứng cạnh rào, chưa biết bạn muốn tôi làm gì."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Quang đặt bóng ở đường biên lần nữa. Bạn cùng lớp ít nói, hôm nay rủ tôi tới xem tập. \"He is a football player.\" Bạn ấy là một cầu thủ bóng đá. Tôi đứng cạnh rào, chưa biết bạn muốn tôi làm gì."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Quang dẫn bóng qua ba nón nhựa rồi quay lại. \"That player is fast.\" Cầu thủ kia rất nhanh. Tôi vừa nói thì Quang ra hiệu đứng đợi, muốn làm lại lượt vừa chưa đúng ý."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Quang dẫn bóng qua ba nón nhựa rồi quay lại. \"That player is fast.\" Cầu thủ kia rất nhanh. Tôi vừa nói thì Quang ra hiệu đứng đợi, muốn làm lại lượt vừa chưa đúng ý."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi lấy chiếc khăn sạch, để bên chai nước của bạn. Quang tập thêm một lượt rồi mới ngồi xuống. Bạn hỏi tôi có thấy khác lượt trước không. Tôi bảo có, lần này bạn không dừng ở nón cuối."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Quang hỏi tôi thấy người tập ngoài sân thế nào. Bạn nói giúp tôi câu cầu thủ kia rất nhanh bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Quang hỏi tôi thấy người tập ngoài sân thế nào. Bạn nói giúp tôi câu cầu thủ kia rất nhanh bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"That player is fast.\" Quang nhận chiếc khăn, bảo mai sẽ tập tiếp. Tôi hỏi có muốn tôi tới xem nữa không. Bạn gật đầu, rồi bắt đầu kể vì sao hôm nay cứ phải làm lại lượt ấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"That player is fast.\" Quang nhận chiếc khăn, bảo mai sẽ tập tiếp. Tôi hỏi có muốn tôi tới xem nữa không. Bạn gật đầu, rồi bắt đầu kể vì sao hôm nay cứ phải làm lại lượt ấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"That player is fast.\" Quang nhận chiếc khăn, bảo mai sẽ tập tiếp. Tôi hỏi có muốn tôi tới xem nữa không. Bạn gật đầu, rồi bắt đầu kể vì sao hôm nay cứ phải làm lại lượt ấy."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the concrete personal situation and introduce or prepare an early English model. Next causal state: Same green-shirt Quang moves ball past three cones, mascot watches at same sideline. Only listed two people."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Advance the same situation and clarify the target sense with meaningful English usage. Next causal state: Mascot puts clean towel by green-player water bottle. Quang finishes same cone drill and sits at sideline, no third person."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the small action or consequence that motivates the upcoming response. Next causal state: Hold mascot at sideline gesturing toward listed green-shirt player Quang and same cones, two people only."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Ask for a complete story-linked sentence, then hold before the answer. Next causal state: Only mascot and green-shirt Quang seated at sideline, Quang takes offered white towel and talks, ball and cones remain nearby."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the correct answer and close with the earned local consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "21130",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi tới xem Quang tập bóng, nhận ra bạn ít nói nhưng kiên trì trên sân; tôi đợi bạn tập xong và nghe bạn kể về buổi tập. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

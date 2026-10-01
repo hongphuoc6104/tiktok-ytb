@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "341e8b92fdd37364a3f5c6665e3e97d989b6ac1645b14847386bde4c2e7ad136",
+  "topic": "Học từ vựng tiếng Anh BETWEEN (giới từ: ở giữa hai) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ BETWEEN",
+    "Làm rõ nghĩa lõi \"ở giữa hai\" (giới từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng BETWEEN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại BETWEEN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Lan",
+      "appearance": "Minimal ink stick figure with a round white head outlined in ink line, simple expressive ink eyes, and minimal stick limbs.",
+      "outfit": "Single pale-yellow short-sleeve shirt and ink trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Bức ảnh kỷ niệm",
+      "purpose": "Establish the scene of table arrangement and introduce the first model sentence with between.",
+      "action": "Same desk with exactly two upright books framing small photograph of the listed two friends. Mascot places photo centered between books, yellow friend watches.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lan cầm bức ảnh mà chưa đặt xuống. Bàn đầy sách, cô ấy bảo thôi cất vào ngăn kéo. Tôi dọn chỗ rồi đặt ảnh: \"The photo is between the two books.\" Bức ảnh ở giữa hai cuốn sách.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "between",
+          "meaning": "ở giữa hai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Same desk with exactly two upright books framing small photograph of the listed two friends. Mascot places photo centered between books, yellow friend watches. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same desk with exactly two upright books framing small photograph of the listed two friends. Mascot places photo centered between books, yellow friend watches.",
+          "reason": "Establish the scene of table arrangement and introduce the first model sentence with between.",
+          "visible_text": [
+            {
+              "text": "The photo is between the two books.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the scene of table arrangement and introduce the first model sentence with between.",
+          "anchor": {
+            "vi": {
+              "quote": "Lan cầm bức ảnh mà chưa đặt xuống. Bàn đầy sách, cô ấy bảo thôi cất vào ngăn kéo. Tôi dọn chỗ rồi đặt ảnh: \"The photo is between the two books.\" Bức ảnh ở giữa hai cuốn sách.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the scene of table arrangement and introduce the first model sentence with between. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chiếc hộp giữa hai cây đèn",
+      "purpose": "Introduce the second model sentence showing another clear spatial application of between.",
+      "action": "Same desk, photo stays between two books, small box now between exactly two lamps on separate clear portion. Yellow friend sits beside mascot.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lan muốn góc bàn còn chỗ để dùng. Tôi dời hộp ghim sang bên: \"The box is between the two lamps.\" Chiếc hộp ở giữa hai cây đèn. Lan ngồi xuống, nhìn lại tấm ảnh hai đứa hồi mới tới đây.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "between",
+          "meaning": "ở giữa hai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same desk, photo stays between two books, small box now between exactly two lamps on separate clear portion. Yellow friend sits beside mascot. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same desk, photo stays between two books, small box now between exactly two lamps on separate clear portion. Yellow friend sits beside mascot.",
+          "reason": "Introduce the second model sentence showing another clear spatial application of between.",
+          "visible_text": [
+            {
+              "text": "between · ở giữa hai",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the second model sentence showing another clear spatial application of between.",
+          "anchor": {
+            "vi": {
+              "quote": "Lan muốn góc bàn còn chỗ để dùng. Tôi dời hộp ghim sang bên: \"The box is between the two lamps.\" Chiếc hộp ở giữa hai cây đèn. Lan ngồi xuống, nhìn lại tấm ảnh hai đứa hồi mới tới đây.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second model sentence showing another clear spatial application of between. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Ánh sáng ấm cúng",
+      "purpose": "Depict a calm shared moment of cooperative work.",
+      "action": "The young woman slides the small tin box between the two lamps. Yellow light illuminates the uncluttered center. She lightly smooths the wooden frame edge of the photograph and takes a seat.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lan đặt hộp ghim vào giữa hai chụp đèn nhỏ, vừa tầm tay của cả hai. Ánh đèn vàng soi rõ mặt bàn. Cô ấy khẽ vuốt mép bức ảnh rồi ngồi xuống.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "between",
+          "meaning": "ở giữa hai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The young woman slides the small tin box between the two lamps. Yellow light illuminates the uncluttered center. She lightly smooths the wooden frame edge of the photograph and takes a seat. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The young woman slides the small tin box between the two lamps. Yellow light illuminates the uncluttered center. She lightly smooths the wooden frame edge of the photograph and takes a seat.",
+          "reason": "Depict a calm shared moment of cooperative work.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Depict a calm shared moment of cooperative work.",
+          "anchor": {
+            "vi": {
+              "quote": "Lan đặt hộp ghim vào giữa hai chụp đèn nhỏ, vừa tầm tay của cả hai. Ánh đèn vàng soi rõ mặt bàn. Cô ấy khẽ vuốt mép bức ảnh rồi ngồi xuống.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Depict a calm shared moment of cooperative work. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Luyện nói câu bức ảnh ở giữa",
+      "purpose": "Prompt the learner to produce the sentence with between to confirm the photo's placement.",
+      "action": "The young woman tilts her head, inspecting the arrangement. The pale-blue shirt mascot turns to face the audience with a welcoming gesture, prompting speech.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lan ngắm lại mặt bàn, băn khoăn không biết bức ảnh đã nằm đúng chỗ chưa. Bạn nói giúp tôi câu bức ảnh ở giữa hai cuốn sách bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "between",
+          "meaning": "ở giữa hai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "The young woman tilts her head, inspecting the arrangement. The pale-blue shirt mascot turns to face the audience with a welcoming gesture, prompting speech. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The young woman tilts her head, inspecting the arrangement. The pale-blue shirt mascot turns to face the audience with a welcoming gesture, prompting speech.",
+          "reason": "Prompt the learner to produce the sentence with between to confirm the photo's placement.",
+          "visible_text": [
+            {
+              "text": "The photo is ___ the two books.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to produce the sentence with between to confirm the photo's placement.",
+          "anchor": {
+            "vi": {
+              "quote": "Lan ngắm lại mặt bàn, băn khoăn không biết bức ảnh đã nằm đúng chỗ chưa. Bạn nói giúp tôi câu bức ảnh ở giữa hai cuốn sách bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to produce the sentence with between to confirm the photo's placement. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Góc bàn ngăn nắp",
+      "purpose": "Deliver the correct sentence and close with an earned modest ending.",
+      "action": "The young woman nods contentedly, straightens the photo standing securely between the two books, and starts sorting envelopes with the pale-blue shirt mascot.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The photo is between the two books.\" Lan chỉnh khung ảnh cho ngay rồi kéo ghế của tôi lại. Bạn bảo góc bàn trông giống hồi trước rồi. Tôi mở cuốn sổ, để tấm ảnh ở nguyên chỗ ấy.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "between",
+          "meaning": "ở giữa hai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The young woman nods contentedly, straightens the photo standing securely between the two books, and starts sorting envelopes with the pale-blue shirt mascot. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The young woman nods contentedly, straightens the photo standing securely between the two books, and starts sorting envelopes with the pale-blue shirt mascot.",
+          "reason": "Deliver the correct sentence and close with an earned modest ending.",
+          "visible_text": [
+            {
+              "text": "The photo is between the two books.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Deliver the correct sentence and close with an earned modest ending.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The photo is between the two books.\" Lan chỉnh khung ảnh cho ngay rồi kéo ghế của tôi lại. Bạn bảo góc bàn trông giống hồi trước rồi. Tôi mở cuốn sổ, để tấm ảnh ở nguyên chỗ ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the correct sentence and close with an earned modest ending. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Lan cầm bức ảnh mà chưa đặt xuống. Bàn đầy sách, cô ấy bảo thôi cất vào ngăn kéo. Tôi dọn chỗ rồi đặt ảnh: \"The photo is between the two books.\" Bức ảnh ở giữa hai cuốn sách."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Lan cầm bức ảnh mà chưa đặt xuống. Bàn đầy sách, cô ấy bảo thôi cất vào ngăn kéo. Tôi dọn chỗ rồi đặt ảnh: \"The photo is between the two books.\" Bức ảnh ở giữa hai cuốn sách."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Lan cầm bức ảnh mà chưa đặt xuống. Bàn đầy sách, cô ấy bảo thôi cất vào ngăn kéo. Tôi dọn chỗ rồi đặt ảnh: \"The photo is between the two books.\" Bức ảnh ở giữa hai cuốn sách."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Lan muốn góc bàn còn chỗ để dùng. Tôi dời hộp ghim sang bên: \"The box is between the two lamps.\" Chiếc hộp ở giữa hai cây đèn. Lan ngồi xuống, nhìn lại tấm ảnh hai đứa hồi mới tới đây."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Lan muốn góc bàn còn chỗ để dùng. Tôi dời hộp ghim sang bên: \"The box is between the two lamps.\" Chiếc hộp ở giữa hai cây đèn. Lan ngồi xuống, nhìn lại tấm ảnh hai đứa hồi mới tới đây."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Lan đặt hộp ghim vào giữa hai chụp đèn nhỏ, vừa tầm tay của cả hai. Ánh đèn vàng soi rõ mặt bàn. Cô ấy khẽ vuốt mép bức ảnh rồi ngồi xuống."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Lan ngắm lại mặt bàn, băn khoăn không biết bức ảnh đã nằm đúng chỗ chưa. Bạn nói giúp tôi câu bức ảnh ở giữa hai cuốn sách bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Lan ngắm lại mặt bàn, băn khoăn không biết bức ảnh đã nằm đúng chỗ chưa. Bạn nói giúp tôi câu bức ảnh ở giữa hai cuốn sách bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"The photo is between the two books.\" Lan chỉnh khung ảnh cho ngay rồi kéo ghế của tôi lại. Bạn bảo góc bàn trông giống hồi trước rồi. Tôi mở cuốn sổ, để tấm ảnh ở nguyên chỗ ấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"The photo is between the two books.\" Lan chỉnh khung ảnh cho ngay rồi kéo ghế của tôi lại. Bạn bảo góc bàn trông giống hồi trước rồi. Tôi mở cuốn sổ, để tấm ảnh ở nguyên chỗ ấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The photo is between the two books.\" Lan chỉnh khung ảnh cho ngay rồi kéo ghế của tôi lại. Bạn bảo góc bàn trông giống hồi trước rồi. Tôi mở cuốn sổ, để tấm ảnh ở nguyên chỗ ấy."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the scene of table arrangement and introduce the first model sentence with between.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the scene of table arrangement and introduce the first model sentence with between. Next causal state: Same desk, photo stays between two books, small box now between exactly two lamps on separate clear portion. Yellow friend sits beside mascot."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the second model sentence showing another clear spatial application of between.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second model sentence showing another clear spatial application of between. Next causal state: The young woman slides the small tin box between the two lamps. Yellow light illuminates the uncluttered center. She lightly smooths the wooden frame edge of the photograph and takes a seat."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Depict a calm shared moment of cooperative work.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Depict a calm shared moment of cooperative work. Next causal state: The young woman tilts her head, inspecting the arrangement. The pale-blue shirt mascot turns to face the audience with a welcoming gesture, prompting speech."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to produce the sentence with between to confirm the photo's placement.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to produce the sentence with between to confirm the photo's placement. Next causal state: The young woman nods contentedly, straightens the photo standing securely between the two books, and starts sorting envelopes with the pale-blue shirt mascot."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Deliver the correct sentence and close with an earned modest ending.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Deliver the correct sentence and close with an earned modest ending. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19810",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Lan sắp xếp góc trưng bày kỷ niệm trên bàn nhưng sợ chật chội; tôi giúp cô ấy đặt bức ảnh ngay ngắn vào khoảng trống giữa hai chồng sách. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

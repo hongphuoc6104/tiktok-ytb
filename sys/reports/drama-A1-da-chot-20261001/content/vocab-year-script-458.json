@@ -1,0 +1,537 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "6b269268f32507fbbc426c3e6459e1bb2f291b0103ddafc9a1daf49560e23bb3",
+  "topic": "Học từ vựng tiếng Anh YEAR (danh từ: năm) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ YEAR",
+    "Làm rõ nghĩa lõi \"năm\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng YEAR, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại YEAR, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Hưng",
+      "appearance": "Stick figure with a round white head, dark-navy outline, two solid black oval eyes, and minimal stick limbs.",
+      "outfit": "Single pale-slate short-sleeve torso."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with the concrete personal need and early usable English model.",
+      "action": "Workshop medium shot: Hưng holds an old photograph behind his back; a lopsided toy sailboat rests on workbench. Mascot recognizes it with a mild amused pose.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hưng giấu tấm ảnh vào sau lưng. Tôi vẫn nhận ra chiếc thuyền hai đứa làm méo. \"What year was this?\" Tấm này chụp năm nào? Bạn cười, bảo đừng nhắc lần thuyền vừa thả đã nghiêng.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Workshop medium shot: Hưng holds an old photograph behind his back; a lopsided toy sailboat rests on workbench. Mascot recognizes it with a mild amused pose. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Workshop medium shot: Hưng holds an old photograph behind his back; a lopsided toy sailboat rests on workbench. Mascot recognizes it with a mild amused pose.",
+          "reason": "Open with the concrete personal need and early usable English model.",
+          "visible_text": [
+            {
+              "text": "What year was this?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with the concrete personal need and early usable English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Hưng giấu tấm ảnh vào sau lưng. Tôi vẫn nhận ra chiếc thuyền hai đứa làm méo. \"What year was this?\" Tấm này chụp năm nào? Bạn cười, bảo đừng nhắc lần thuyền vừa thả đã nghiêng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with the concrete personal need and early usable English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+      "action": "Same desk angle: old photo back displays 2025; mascot offers an instant camera. A new model sailboat is beside the old lopsided one.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Mặt sau ảnh ghi năm hai nghìn không trăm hai mươi lăm. Năm nay, thuyền mới còn nằm trên bàn. \"Let's take a photo every year.\" Mỗi năm cùng chụp một tấm nhé. Tôi đặt máy bên cạnh.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same desk angle: old photo back displays 2025; mascot offers an instant camera. A new model sailboat is beside the old lopsided one. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same desk angle: old photo back displays 2025; mascot offers an instant camera. A new model sailboat is beside the old lopsided one.",
+          "reason": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+          "visible_text": [
+            {
+              "text": "year · năm",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            },
+            {
+              "text": "2025",
+              "placement": "photo back center",
+              "object": "old photo"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+          "anchor": {
+            "vi": {
+              "quote": "Mặt sau ảnh ghi năm hai nghìn không trăm hai mươi lăm. Năm nay, thuyền mới còn nằm trên bàn. \"Let's take a photo every year.\" Mỗi năm cùng chụp một tấm nhé. Tôi đặt máy bên cạnh.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+      "action": "Overhead album close-up: one old sailboat photo in slot 2025, empty slot 2026 and empty slot 2027. Hưng positions new and old boats side by side.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hưng lấy tấm cũ ra, dán vào album. Tôi chừa ô cho ảnh năm nay và ô kế tiếp, mỗi năm một chỗ. Bạn dựng thuyền mới cạnh thuyền cũ, sửa lại cánh buồm rồi gọi tôi tới.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Overhead album close-up: one old sailboat photo in slot 2025, empty slot 2026 and empty slot 2027. Hưng positions new and old boats side by side. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Overhead album close-up: one old sailboat photo in slot 2025, empty slot 2026 and empty slot 2027. Hưng positions new and old boats side by side.",
+          "reason": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+          "visible_text": [
+            {
+              "text": "2025",
+              "placement": "under first slot",
+              "object": "album"
+            },
+            {
+              "text": "2026",
+              "placement": "under second slot",
+              "object": "album"
+            },
+            {
+              "text": "2027",
+              "placement": "under third slot",
+              "object": "album"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Hưng lấy tấm cũ ra, dán vào album. Tôi chừa ô cho ảnh năm nay và ô kế tiếp, mỗi năm một chỗ. Bạn dựng thuyền mới cạnh thuyền cũ, sửa lại cánh buồm rồi gọi tôi tới.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+      "action": "Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn hỏi giúp tôi câu tấm này chụp năm nào bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below.",
+          "reason": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+          "visible_text": [
+            {
+              "text": "What ___ was this?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi giúp tôi câu tấm này chụp năm nào bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+      "action": "Workshop medium shot: Hưng shows photo back labelled 2025, then stands beside mascot and the two boats to take this year’s picture. Preserve actual boats and album.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"What year was this?\" Hưng lật ảnh cho tôi xem con số. Hai đứa đứng cạnh thuyền để chụp tấm mới. Tôi giữ cả tấm bạn nhắm mắt, chờ năm sau trêu lại.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Workshop medium shot: Hưng shows photo back labelled 2025, then stands beside mascot and the two boats to take this year’s picture. Preserve actual boats and album. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Workshop medium shot: Hưng shows photo back labelled 2025, then stands beside mascot and the two boats to take this year’s picture. Preserve actual boats and album.",
+          "reason": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+          "visible_text": [
+            {
+              "text": "What year was this?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            },
+            {
+              "text": "2025",
+              "placement": "photo back center",
+              "object": "old photo"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+          "anchor": {
+            "vi": {
+              "quote": "\"What year was this?\" Hưng lật ảnh cho tôi xem con số. Hai đứa đứng cạnh thuyền để chụp tấm mới. Tôi giữ cả tấm bạn nhắm mắt, chờ năm sau trêu lại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Hưng giấu tấm ảnh vào sau lưng. Tôi vẫn nhận ra chiếc thuyền hai đứa làm méo. \"What year was this?\" Tấm này chụp năm nào? Bạn cười, bảo đừng nhắc lần thuyền vừa thả đã nghiêng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Hưng giấu tấm ảnh vào sau lưng. Tôi vẫn nhận ra chiếc thuyền hai đứa làm méo. \"What year was this?\" Tấm này chụp năm nào? Bạn cười, bảo đừng nhắc lần thuyền vừa thả đã nghiêng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Hưng giấu tấm ảnh vào sau lưng. Tôi vẫn nhận ra chiếc thuyền hai đứa làm méo. \"What year was this?\" Tấm này chụp năm nào? Bạn cười, bảo đừng nhắc lần thuyền vừa thả đã nghiêng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Mặt sau ảnh ghi năm hai nghìn không trăm hai mươi lăm. Năm nay, thuyền mới còn nằm trên bàn. \"Let's take a photo every year.\" Mỗi năm cùng chụp một tấm nhé. Tôi đặt máy bên cạnh."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Mặt sau ảnh ghi năm hai nghìn không trăm hai mươi lăm. Năm nay, thuyền mới còn nằm trên bàn. \"Let's take a photo every year.\" Mỗi năm cùng chụp một tấm nhé. Tôi đặt máy bên cạnh."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Hưng lấy tấm cũ ra, dán vào album. Tôi chừa ô cho ảnh năm nay và ô kế tiếp, mỗi năm một chỗ. Bạn dựng thuyền mới cạnh thuyền cũ, sửa lại cánh buồm rồi gọi tôi tới."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Bạn hỏi giúp tôi câu tấm này chụp năm nào bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn hỏi giúp tôi câu tấm này chụp năm nào bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"What year was this?\" Hưng lật ảnh cho tôi xem con số. Hai đứa đứng cạnh thuyền để chụp tấm mới. Tôi giữ cả tấm bạn nhắm mắt, chờ năm sau trêu lại."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"What year was this?\" Hưng lật ảnh cho tôi xem con số. Hai đứa đứng cạnh thuyền để chụp tấm mới. Tôi giữ cả tấm bạn nhắm mắt, chờ năm sau trêu lại."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"What year was this?\" Hưng lật ảnh cho tôi xem con số. Hai đứa đứng cạnh thuyền để chụp tấm mới. Tôi giữ cả tấm bạn nhắm mắt, chờ năm sau trêu lại."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with the concrete personal need and early usable English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with the concrete personal need and early usable English model. Next causal state: Same desk angle: old photo back displays 2025; mascot offers an instant camera. A new model sailboat is beside the old lopsided one."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate. Next causal state: Overhead album close-up: one old sailboat photo in slot 2025, empty slot 2026 and empty slot 2027. Hưng positions new and old boats side by side."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning. Next causal state: Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer. Next causal state: Workshop medium shot: Hưng shows photo back labelled 2025, then stands beside mascot and the two boats to take this year’s picture. Preserve actual boats and album."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17002",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Bách và Hưng tìm ảnh chiếc thuyền cũ có ghi năm, quyết định mỗi năm chụp một tấm để nhớ các lần cùng làm. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "19901",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Bách và Hưng tìm ảnh chiếc thuyền cũ có ghi năm, quyết định mỗi năm chụp một tấm để nhớ các lần cùng làm. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

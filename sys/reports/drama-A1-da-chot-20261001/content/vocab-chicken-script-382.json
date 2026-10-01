@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "64c7b5873ef87448e04e5830a2eb11df7d9c6e1b5c668316d01cb0e931b21860",
+  "topic": "Học từ vựng tiếng Anh CHICKEN (danh từ: con gà) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CHICKEN",
+    "Làm rõ nghĩa lõi \"con gà\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CHICKEN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CHICKEN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Bà",
+      "appearance": "Minimalist ink stick figure, slight stoop, round white head outlined in dark navy, minimal stick limbs.",
+      "outfit": "Single simple grey long-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều đang xảy ra",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "action": "In a brick courtyard spread with golden grain, an elderly figure in grey pauses her winnowing basket. A speckled hen darts out from behind a firewood stack near the protagonist.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Sân gạch rải đầy thóc vàng. Dưới đống củi khô, một con vật lông hoa mơ vội vã chạy ra. \"I see a chicken.\" Tôi thấy một con gà. Bà dừng tay sàng, lo lắng nhìn quanh vì sợ có thứ gì phá thóc.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "chicken",
+          "meaning": "con gà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "In a brick courtyard spread with golden grain, an elderly figure in grey pauses her winnowing basket. A speckled hen darts out from behind a firewood stack near the protagonist. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "In a brick courtyard spread with golden grain, an elderly figure in grey pauses her winnowing basket. A speckled hen darts out from behind a firewood stack near the protagonist.",
+          "reason": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "visible_text": [
+            {
+              "text": "I see a chicken.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Sân gạch rải đầy thóc vàng. Dưới đống củi khô, một con vật lông hoa mơ vội vã chạy ra. \"I see a chicken.\" Tôi thấy một con gà. Bà dừng tay sàng, lo lắng nhìn quanh vì sợ có thứ gì phá thóc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the concrete personal situation and introduce or prepare an early English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Vướng mắc nhỏ",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "action": "The protagonist holds the basket and points downward. A living hen with a bright red comb and feathered tail diligently pecks grains on the red brick floor.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi đỡ rổ thóc trên tay bà, chỉ xuống thềm gạch. Chú gà mái hoa mơ đang chăm chỉ mổ từng hạt lúa. \"The chicken is eating.\" Con gà đang ăn thóc. Chiếc mào đỏ tươi rung rinh theo từng nhịp mổ.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "chicken",
+          "meaning": "con gà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The protagonist holds the basket and points downward. A living hen with a bright red comb and feathered tail diligently pecks grains on the red brick floor. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The protagonist holds the basket and points downward. A living hen with a bright red comb and feathered tail diligently pecks grains on the red brick floor.",
+          "reason": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "visible_text": [
+            {
+              "text": "chicken · con gà",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi đỡ rổ thóc trên tay bà, chỉ xuống thềm gạch. Chú gà mái hoa mơ đang chăm chỉ mổ từng hạt lúa. \"The chicken is eating.\" Con gà đang ăn thóc. Chiếc mào đỏ tươi rung rinh theo từng nhịp mổ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Advance the same situation and clarify the target sense with meaningful English usage. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một hành động cần thiết",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "action": "The grandmother scatters a handful of rice grains onto the yard with a soft relieved smile. The hen tilts its head curiously before continuing to feed.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bà nhờ tôi giữ rổ thóc còn lại. Bà bảo con gà này cứ tới giờ là chạy ra, hôm nay tôi có ở lại xem không. Tôi đặt rổ lên bàn, ngồi xuống chiếc ghế bà vừa kéo ra.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "chicken",
+          "meaning": "con gà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The grandmother scatters a handful of rice grains onto the yard with a soft relieved smile. The hen tilts its head curiously before continuing to feed. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The grandmother scatters a handful of rice grains onto the yard with a soft relieved smile. The hen tilts its head curiously before continuing to feed.",
+          "reason": "Show the small action or consequence that motivates the upcoming response.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the small action or consequence that motivates the upcoming response.",
+          "anchor": {
+            "vi": {
+              "quote": "Bà nhờ tôi giữ rổ thóc còn lại. Bà bảo con gà này cứ tới giờ là chạy ra, hôm nay tôi có ở lại xem không. Tôi đặt rổ lên bàn, ngồi xuống chiếc ghế bà vừa kéo ra.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the small action or consequence that motivates the upcoming response. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần nói",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "action": "The grandmother gestures toward the busy pecking hen on the courtyard bricks, looking warmly at the protagonist.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bà muốn nói với tôi rằng con gà đang ăn thóc ngoài sân. Bạn nói giúp câu con gà đang ăn thóc bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "chicken",
+          "meaning": "con gà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "The grandmother gestures toward the busy pecking hen on the courtyard bricks, looking warmly at the protagonist. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The grandmother gestures toward the busy pecking hen on the courtyard bricks, looking warmly at the protagonist.",
+          "reason": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "visible_text": [
+            {
+              "text": "The ___ is eating.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bà muốn nói với tôi rằng con gà đang ăn thóc ngoài sân. Bạn nói giúp câu con gà đang ăn thóc bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask for a complete story-linked sentence, then hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả gần",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "action": "The protagonist and grandmother sit side by side on the veranda step, watching the content speckled hen peck peacefully in the soft afternoon light.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The chicken is eating.\" Hai bà cháu nhìn nó mổ hết chỗ thóc rơi. Tôi hỏi sáng mai bà có cho ăn nữa không. Bà gật đầu. Tôi nói mai cháu sẽ mang ghế ra ngồi cùng bà.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "chicken",
+          "meaning": "con gà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The protagonist and grandmother sit side by side on the veranda step, watching the content speckled hen peck peacefully in the soft afternoon light. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The protagonist and grandmother sit side by side on the veranda step, watching the content speckled hen peck peacefully in the soft afternoon light.",
+          "reason": "Give the correct answer and close with the earned local consequence.",
+          "visible_text": [
+            {
+              "text": "The chicken is eating.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct answer and close with the earned local consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The chicken is eating.\" Hai bà cháu nhìn nó mổ hết chỗ thóc rơi. Tôi hỏi sáng mai bà có cho ăn nữa không. Bà gật đầu. Tôi nói mai cháu sẽ mang ghế ra ngồi cùng bà.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the correct answer and close with the earned local consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Sân gạch rải đầy thóc vàng. Dưới đống củi khô, một con vật lông hoa mơ vội vã chạy ra. \"I see a chicken.\" Tôi thấy một con gà. Bà dừng tay sàng, lo lắng nhìn quanh vì sợ có thứ gì phá thóc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Sân gạch rải đầy thóc vàng. Dưới đống củi khô, một con vật lông hoa mơ vội vã chạy ra. \"I see a chicken.\" Tôi thấy một con gà. Bà dừng tay sàng, lo lắng nhìn quanh vì sợ có thứ gì phá thóc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Sân gạch rải đầy thóc vàng. Dưới đống củi khô, một con vật lông hoa mơ vội vã chạy ra. \"I see a chicken.\" Tôi thấy một con gà. Bà dừng tay sàng, lo lắng nhìn quanh vì sợ có thứ gì phá thóc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi đỡ rổ thóc trên tay bà, chỉ xuống thềm gạch. Chú gà mái hoa mơ đang chăm chỉ mổ từng hạt lúa. \"The chicken is eating.\" Con gà đang ăn thóc. Chiếc mào đỏ tươi rung rinh theo từng nhịp mổ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi đỡ rổ thóc trên tay bà, chỉ xuống thềm gạch. Chú gà mái hoa mơ đang chăm chỉ mổ từng hạt lúa. \"The chicken is eating.\" Con gà đang ăn thóc. Chiếc mào đỏ tươi rung rinh theo từng nhịp mổ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Bà nhờ tôi giữ rổ thóc còn lại. Bà bảo con gà này cứ tới giờ là chạy ra, hôm nay tôi có ở lại xem không. Tôi đặt rổ lên bàn, ngồi xuống chiếc ghế bà vừa kéo ra."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Bà muốn nói với tôi rằng con gà đang ăn thóc ngoài sân. Bạn nói giúp câu con gà đang ăn thóc bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bà muốn nói với tôi rằng con gà đang ăn thóc ngoài sân. Bạn nói giúp câu con gà đang ăn thóc bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"The chicken is eating.\" Hai bà cháu nhìn nó mổ hết chỗ thóc rơi. Tôi hỏi sáng mai bà có cho ăn nữa không. Bà gật đầu. Tôi nói mai cháu sẽ mang ghế ra ngồi cùng bà."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"The chicken is eating.\" Hai bà cháu nhìn nó mổ hết chỗ thóc rơi. Tôi hỏi sáng mai bà có cho ăn nữa không. Bà gật đầu. Tôi nói mai cháu sẽ mang ghế ra ngồi cùng bà."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The chicken is eating.\" Hai bà cháu nhìn nó mổ hết chỗ thóc rơi. Tôi hỏi sáng mai bà có cho ăn nữa không. Bà gật đầu. Tôi nói mai cháu sẽ mang ghế ra ngồi cùng bà."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the concrete personal situation and introduce or prepare an early English model. Next causal state: The protagonist holds the basket and points downward. A living hen with a bright red comb and feathered tail diligently pecks grains on the red brick floor."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Advance the same situation and clarify the target sense with meaningful English usage. Next causal state: The grandmother scatters a handful of rice grains onto the yard with a soft relieved smile. The hen tilts its head curiously before continuing to feed."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the small action or consequence that motivates the upcoming response. Next causal state: The grandmother gestures toward the busy pecking hen on the courtyard bricks, looking warmly at the protagonist."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Ask for a complete story-linked sentence, then hold before the answer. Next causal state: The protagonist and grandmother sit side by side on the veranda step, watching the content speckled hen peck peacefully in the soft afternoon light."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the correct answer and close with the earned local consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "20777",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Bà lo lắng tưởng chuột phá bồ thóc ngoài sân, nhưng tôi nhận ra đó là một chú gà mái hoa mơ đang cần mẫn nhặt từng hạt rơi vãi. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

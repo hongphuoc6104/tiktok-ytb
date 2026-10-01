@@ -1,0 +1,511 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "7b046fcb18e2d340c2311073958c23c04641308255a1b97a5b0bd78bc693ae23",
+  "topic": "Học từ vựng tiếng Anh ASK (động từ: hỏi) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ ASK",
+    "Làm rõ nghĩa lõi \"hỏi\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng ASK, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại ASK, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Anh Vũ",
+      "appearance": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+      "outfit": "One plain dark-teal short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with concrete personal need and early usable English.",
+      "action": "Exhibition lobby medium shot: mascot holds unfolded floor map looking bewildered; information counter visible ahead with a guide standing behind it.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi lạc đường trong nhà triển lãm. Lối đi rẽ nhiều nhánh khiến tôi cầm sơ đồ mà vẫn lúng túng. \"Can I ask you a question?\" Tôi hỏi bạn một câu được không? Tôi bước tới quầy thông tin.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ask",
+          "meaning": "hỏi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Exhibition lobby medium shot: mascot holds unfolded floor map looking bewildered; information counter visible ahead with a guide standing behind it. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Exhibition lobby medium shot: mascot holds unfolded floor map looking bewildered; information counter visible ahead with a guide standing behind it.",
+          "reason": "Open with concrete personal need and early usable English.",
+          "visible_text": [
+            {
+              "text": "Can I ask you a question?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with concrete personal need and early usable English.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi lạc đường trong nhà triển lãm. Lối đi rẽ nhiều nhánh khiến tôi cầm sơ đồ mà vẫn lúng túng. \"Can I ask you a question?\" Tôi hỏi bạn một câu được không? Tôi bước tới quầy thông tin.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with concrete personal need and early usable English. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify the selected sense in the same relationship and obstacle.",
+      "action": "Information desk medium shot: only guide Vũ and mascot, guide points to his simple guide pictogram card then waits for question. No third friend, no lettering.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi đã đi qua quầy hai lần, ngại hỏi vì tưởng câu này quá dễ. Anh Vũ chỉ tấm thẻ hướng dẫn trên bàn: \"You can ask the guide.\" Bạn có thể hỏi người hướng dẫn. Tôi đặt sơ đồ xuống, thôi tự đoán.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ask",
+          "meaning": "hỏi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Information desk medium shot: only guide Vũ and mascot, guide points to his simple guide pictogram card then waits for question. No third friend, no lettering. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Information desk medium shot: only guide Vũ and mascot, guide points to his simple guide pictogram card then waits for question. No third friend, no lettering.",
+          "reason": "Clarify the selected sense in the same relationship and obstacle.",
+          "visible_text": [
+            {
+              "text": "ask · hỏi",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify the selected sense in the same relationship and obstacle.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi đã đi qua quầy hai lần, ngại hỏi vì tưởng câu này quá dễ. Anh Vũ chỉ tấm thẻ hướng dẫn trên bàn: \"You can ask the guide.\" Bạn có thể hỏi người hướng dẫn. Tôi đặt sơ đồ xuống, thôi tự đoán.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify the selected sense in the same relationship and obstacle. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+      "action": "Overhead map close-up: guide draws route from present desk dot to pot icon, mascot indicates one wrong fork before guide corrects it. No room names or written directions.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi chỉ hình chiếc bình gốm, hỏi phòng ấy ở đâu. Anh Vũ dùng bút đánh dấu lối tới phòng, rồi chờ tôi chỉ lại ngã rẽ. Tôi chỉ nhầm lần đầu; anh giữ sơ đồ, sửa cho tôi trước khi đi.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ask",
+          "meaning": "hỏi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Overhead map close-up: guide draws route from present desk dot to pot icon, mascot indicates one wrong fork before guide corrects it. No room names or written directions. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Overhead map close-up: guide draws route from present desk dot to pot icon, mascot indicates one wrong fork before guide corrects it. No room names or written directions.",
+          "reason": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi chỉ hình chiếc bình gốm, hỏi phòng ấy ở đâu. Anh Vũ dùng bút đánh dấu lối tới phòng, rồi chờ tôi chỉ lại ngã rẽ. Tôi chỉ nhầm lần đầu; anh giữ sơ đồ, sửa cho tôi trước khi đi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use a deliberate action or decision to change the same story; support the selected target sense. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+      "action": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn mở lời hỏi anh trực quầy. Bạn nói giúp tôi câu tôi hỏi bạn một câu được không bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ask",
+          "meaning": "hỏi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+          "reason": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+          "visible_text": [
+            {
+              "text": "Can I ___ you a question?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn mở lời hỏi anh trực quầy. Bạn nói giúp tôi câu tôi hỏi bạn một câu được không bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the viewer to retrieve a full supported sentence; hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give the exact complete retrieval response and close with a small earned consequence.",
+      "action": "Exhibition hallway medium shot: mascot follows corrected map toward visible ceramic room with pot display; guide remains at desk behind. No second traveller.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Can I ask you a question?\" Anh Vũ gật, nghe nốt câu tôi chưa hiểu. Tôi gấp sơ đồ đã sửa, đi tới phòng gốm. Lúc về, tôi ghé quầy trả bút và cảm ơn anh thêm một lần.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ask",
+          "meaning": "hỏi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Exhibition hallway medium shot: mascot follows corrected map toward visible ceramic room with pot display; guide remains at desk behind. No second traveller. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Exhibition hallway medium shot: mascot follows corrected map toward visible ceramic room with pot display; guide remains at desk behind. No second traveller.",
+          "reason": "Give the exact complete retrieval response and close with a small earned consequence.",
+          "visible_text": [
+            {
+              "text": "Can I ask you a question?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the exact complete retrieval response and close with a small earned consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I ask you a question?\" Anh Vũ gật, nghe nốt câu tôi chưa hiểu. Tôi gấp sơ đồ đã sửa, đi tới phòng gốm. Lúc về, tôi ghé quầy trả bút và cảm ơn anh thêm một lần.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the exact complete retrieval response and close with a small earned consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Tôi lạc đường trong nhà triển lãm. Lối đi rẽ nhiều nhánh khiến tôi cầm sơ đồ mà vẫn lúng túng. \"Can I ask you a question?\" Tôi hỏi bạn một câu được không? Tôi bước tới quầy thông tin."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Tôi lạc đường trong nhà triển lãm. Lối đi rẽ nhiều nhánh khiến tôi cầm sơ đồ mà vẫn lúng túng. \"Can I ask you a question?\" Tôi hỏi bạn một câu được không? Tôi bước tới quầy thông tin."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Tôi lạc đường trong nhà triển lãm. Lối đi rẽ nhiều nhánh khiến tôi cầm sơ đồ mà vẫn lúng túng. \"Can I ask you a question?\" Tôi hỏi bạn một câu được không? Tôi bước tới quầy thông tin."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi đã đi qua quầy hai lần, ngại hỏi vì tưởng câu này quá dễ. Anh Vũ chỉ tấm thẻ hướng dẫn trên bàn: \"You can ask the guide.\" Bạn có thể hỏi người hướng dẫn. Tôi đặt sơ đồ xuống, thôi tự đoán."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi đã đi qua quầy hai lần, ngại hỏi vì tưởng câu này quá dễ. Anh Vũ chỉ tấm thẻ hướng dẫn trên bàn: \"You can ask the guide.\" Bạn có thể hỏi người hướng dẫn. Tôi đặt sơ đồ xuống, thôi tự đoán."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi chỉ hình chiếc bình gốm, hỏi phòng ấy ở đâu. Anh Vũ dùng bút đánh dấu lối tới phòng, rồi chờ tôi chỉ lại ngã rẽ. Tôi chỉ nhầm lần đầu; anh giữ sơ đồ, sửa cho tôi trước khi đi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn mở lời hỏi anh trực quầy. Bạn nói giúp tôi câu tôi hỏi bạn một câu được không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn mở lời hỏi anh trực quầy. Bạn nói giúp tôi câu tôi hỏi bạn một câu được không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Can I ask you a question?\" Anh Vũ gật, nghe nốt câu tôi chưa hiểu. Tôi gấp sơ đồ đã sửa, đi tới phòng gốm. Lúc về, tôi ghé quầy trả bút và cảm ơn anh thêm một lần."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Can I ask you a question?\" Anh Vũ gật, nghe nốt câu tôi chưa hiểu. Tôi gấp sơ đồ đã sửa, đi tới phòng gốm. Lúc về, tôi ghé quầy trả bút và cảm ơn anh thêm một lần."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can I ask you a question?\" Anh Vũ gật, nghe nốt câu tôi chưa hiểu. Tôi gấp sơ đồ đã sửa, đi tới phòng gốm. Lúc về, tôi ghé quầy trả bút và cảm ơn anh thêm một lần."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with concrete personal need and early usable English.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with concrete personal need and early usable English. Next causal state: Information desk medium shot: only guide Vũ and mascot, guide points to his simple guide pictogram card then waits for question. No third friend, no lettering."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify the selected sense in the same relationship and obstacle.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Clarify the selected sense in the same relationship and obstacle. Next causal state: Overhead map close-up: guide draws route from present desk dot to pot icon, mascot indicates one wrong fork before guide corrects it. No room names or written directions."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a deliberate action or decision to change the same story; support the selected target sense.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Use a deliberate action or decision to change the same story; support the selected target sense. Next causal state: Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite the viewer to retrieve a full supported sentence; hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite the viewer to retrieve a full supported sentence; hold before the answer. Next causal state: Exhibition hallway medium shot: mascot follows corrected map toward visible ceramic room with pot display; guide remains at desk behind. No second traveller."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the exact complete retrieval response and close with a small earned consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the exact complete retrieval response and close with a small earned consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17209",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Tôi lạc đường trong nhà triển lãm. Lối đi rẽ nhiều nhánh khiến tôi cầm sơ đồ mà vẫn lúng túng.  Tôi chỉ hình chiếc bình gốm, hỏi phòng ấy ở đâu. Anh Vũ dùng bút đánh dấu lối tới phòng, rồi chờ tôi chỉ lại ngã rẽ. Tôi chỉ nhầm lần đầu; anh giữ sơ đồ, sửa cho tôi trước khi đi.  Anh Vũ gật, nghe nốt câu tôi chưa hiểu. Tôi gấp sơ đồ đã sửa, đi tới phòng gốm. Lúc về, tôi ghé quầy trả bút và cảm ơn anh thêm một lần. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "20139",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi lạc đường trong nhà triển lãm. Lối đi rẽ nhiều nhánh khiến tôi cầm sơ đồ mà vẫn lúng túng.  Tôi chỉ hình chiếc bình gốm, hỏi phòng ấy ở đâu. Anh Vũ dùng bút đánh dấu lối tới phòng, rồi chờ tôi chỉ lại ngã rẽ. Tôi chỉ nhầm lần đầu; anh giữ sơ đồ, sửa cho tôi trước khi đi.  Anh Vũ gật, nghe nốt câu tôi chưa hiểu. Tôi gấp sơ đồ đã sửa, đi tới phòng gốm. Lúc về, tôi ghé quầy trả bút và cảm ơn anh thêm một lần. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,551 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 4,
+  "brief_hash": "97c193360afbda51e6a33aed0becd147752646ce4d2fbc8c02ce26aa1e309a1d",
+  "topic": "Học từ vựng tiếng Anh BE (động từ: là (dùng để đồng nhất, mô tả)) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ BE",
+    "Làm rõ nghĩa lõi \"là (dùng để đồng nhất, mô tả)\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng BE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại BE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Khang",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, solid black oval eyes, ordinary stick limbs.",
+      "outfit": "Single plain pale-green short-sleeve top."
+    },
+    {
+      "id": "CH03",
+      "name": "Chị Mai",
+      "appearance": "Minimal ink stick figure with round white navy-outlined head, two solid black oval eyes, small short-hair cue and minimal stick limbs.",
+      "outfit": "Exactly one plain mustard short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with personal need and early correct English model.",
+      "action": "At the entrance of a quiet art studio with wooden easels in the background, the visitor in pale-green top stands hesitantly by the door holding an umbrella. The pale-blue mascot steps forward with an open welcoming gesture. No crowds, no readable posters.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Khách đứng ngập ngừng trước cửa phòng tranh. Tôi bước tới mỉm cười: \"I am your guide.\" Tôi là người hướng dẫn của bạn hôm nay. Khang thở phào, cất chiếc ô ướt vào góc.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "be (am / is / are)",
+          "meaning": "là (dùng để đồng nhất, mô tả)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "At the entrance of a quiet art studio with wooden easels in the background, the visitor in pale-green top stands hesitantly by the door holding an umbrella. The pale-blue mascot steps forward with an open welcoming gesture. No crowds, no readable posters. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At the entrance of a quiet art studio with wooden easels in the background, the visitor in pale-green top stands hesitantly by the door holding an umbrella. The pale-blue mascot steps forward with an open welcoming gesture. No crowds, no readable posters.",
+          "reason": "Open with personal need and early correct English model.",
+          "visible_text": [
+            {
+              "text": "I am your guide.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with personal need and early correct English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Khách đứng ngập ngừng trước cửa phòng tranh. Tôi bước tới mỉm cười: \"I am your guide.\" Tôi là người hướng dẫn của bạn hôm nay. Khang thở phào, cất chiếc ô ướt vào góc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with personal need and early correct English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify selected sense and obstacle within same relationship.",
+      "action": "Same studio entrance angle: the mascot hands a plain blank clipboard to the visitor and points toward an orderly row of blank wooden easels. The visitor steps inside, leaning the umbrella neatly against the wall.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Khang sợ tới nhầm lớp nên cứ đứng ở cửa. Tôi chỉ dãy giá vẽ đã chuẩn bị, nói mình sẽ đưa bạn tới đúng bàn. Khang cất ô, hỏi lát nữa có ai ngồi cùng người mới không.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "be (am / is / are)",
+          "meaning": "là (dùng để đồng nhất, mô tả)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same studio entrance angle: the mascot hands a plain blank clipboard to the visitor and points toward an orderly row of blank wooden easels. The visitor steps inside, leaning the umbrella neatly against the wall. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same studio entrance angle: the mascot hands a plain blank clipboard to the visitor and points toward an orderly row of blank wooden easels. The visitor steps inside, leaning the umbrella neatly against the wall.",
+          "reason": "Clarify selected sense and obstacle within same relationship.",
+          "visible_text": [
+            {
+              "text": "be (am / is / are) · là (dùng để đồng nhất, mô tả)",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify selected sense and obstacle within same relationship.",
+          "anchor": {
+            "vi": {
+              "quote": "Khang sợ tới nhầm lớp nên cứ đứng ở cửa. Tôi chỉ dãy giá vẽ đã chuẩn bị, nói mình sẽ đưa bạn tới đúng bàn. Khang cất ô, hỏi lát nữa có ai ngồi cùng người mới không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify selected sense and obstacle within same relationship. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Show deliberate action or change with second usable English model.",
+      "action": "Studio medium shot: mascot introduces newcomer Khang to Mai, the single essential host in mustard top, who comes from brush table and offers blank paint tray. Khang sits beside mascot. No fourth person.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Chị Mai dừng việc xếp cọ, tới đón Khang. Tôi nói: \"This is my friend.\" Đây là bạn của tôi. Khang nhìn lại tôi, cười rồi chọn chiếc ghế cạnh bàn pha màu; chị Mai đưa bạn một khay.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "be (am / is / are)",
+          "meaning": "là (dùng để đồng nhất, mô tả)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Studio medium shot: mascot introduces newcomer Khang to Mai, the single essential host in mustard top, who comes from brush table and offers blank paint tray. Khang sits beside mascot. No fourth person. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Studio medium shot: mascot introduces newcomer Khang to Mai, the single essential host in mustard top, who comes from brush table and offers blank paint tray. Khang sits beside mascot. No fourth person.",
+          "reason": "Show deliberate action or change with second usable English model.",
+          "visible_text": [
+            {
+              "text": "This is my friend.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show deliberate action or change with second usable English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Chị Mai dừng việc xếp cọ, tới đón Khang. Tôi nói: \"This is my friend.\" Đây là bạn của tôi. Khang nhìn lại tôi, cười rồi chọn chiếc ghế cạnh bàn pha màu; chị Mai đưa bạn một khay.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show deliberate action or change with second usable English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite full-sentence target retrieval and hold before feedback.",
+      "action": "Studio setting: the mascot faces the viewer with an inviting open hand, keeping the visitor and wooden easels in the frame. Upper safe area reserved for the sentence stem, caption zone clear below.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Để bạn mới yên tâm nhận ra người phụ trách, bạn nói câu tôi là người hướng dẫn của bạn bằng tiếng Anh giúp tôi nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "be (am / is / are)",
+          "meaning": "là (dùng để đồng nhất, mô tả)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Studio setting: the mascot faces the viewer with an inviting open hand, keeping the visitor and wooden easels in the frame. Upper safe area reserved for the sentence stem, caption zone clear below. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Studio setting: the mascot faces the viewer with an inviting open hand, keeping the visitor and wooden easels in the frame. Upper safe area reserved for the sentence stem, caption zone clear below.",
+          "reason": "Invite full-sentence target retrieval and hold before feedback.",
+          "visible_text": [
+            {
+              "text": "I ___ your guide.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite full-sentence target retrieval and hold before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Để bạn mới yên tâm nhận ra người phụ trách, bạn nói câu tôi là người hướng dẫn của bạn bằng tiếng Anh giúp tôi nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite full-sentence target retrieval and hold before feedback. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give complete answer and small earned consequence.",
+      "action": "Same studio desk: Mai holds stool for Khang while mascot guides him to blank canvas and hands tray. Exactly three cast members, no crowd or text.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I am your guide.\" Khang gật, đi cùng tôi tới bàn còn trống. Chị Mai giữ ghế cho bạn. Tôi đưa khay màu, hỏi Khang muốn thử nét nào trước; bạn đã thôi đứng ở cửa.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "be (am / is / are)",
+          "meaning": "là (dùng để đồng nhất, mô tả)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Same studio desk: Mai holds stool for Khang while mascot guides him to blank canvas and hands tray. Exactly three cast members, no crowd or text. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same studio desk: Mai holds stool for Khang while mascot guides him to blank canvas and hands tray. Exactly three cast members, no crowd or text.",
+          "reason": "Give complete answer and small earned consequence.",
+          "visible_text": [
+            {
+              "text": "I am your guide.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give complete answer and small earned consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I am your guide.\" Khang gật, đi cùng tôi tới bàn còn trống. Chị Mai giữ ghế cho bạn. Tôi đưa khay màu, hỏi Khang muốn thử nét nào trước; bạn đã thôi đứng ở cửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give complete answer and small earned consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Khách đứng ngập ngừng trước cửa phòng tranh. Tôi bước tới mỉm cười: \"I am your guide.\" Tôi là người hướng dẫn của bạn hôm nay. Khang thở phào, cất chiếc ô ướt vào góc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Khách đứng ngập ngừng trước cửa phòng tranh. Tôi bước tới mỉm cười: \"I am your guide.\" Tôi là người hướng dẫn của bạn hôm nay. Khang thở phào, cất chiếc ô ướt vào góc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Khách đứng ngập ngừng trước cửa phòng tranh. Tôi bước tới mỉm cười: \"I am your guide.\" Tôi là người hướng dẫn của bạn hôm nay. Khang thở phào, cất chiếc ô ướt vào góc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Khang sợ tới nhầm lớp nên cứ đứng ở cửa. Tôi chỉ dãy giá vẽ đã chuẩn bị, nói mình sẽ đưa bạn tới đúng bàn. Khang cất ô, hỏi lát nữa có ai ngồi cùng người mới không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Chị Mai dừng việc xếp cọ, tới đón Khang. Tôi nói: \"This is my friend.\" Đây là bạn của tôi. Khang nhìn lại tôi, cười rồi chọn chiếc ghế cạnh bàn pha màu; chị Mai đưa bạn một khay."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Chị Mai dừng việc xếp cọ, tới đón Khang. Tôi nói: \"This is my friend.\" Đây là bạn của tôi. Khang nhìn lại tôi, cười rồi chọn chiếc ghế cạnh bàn pha màu; chị Mai đưa bạn một khay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Để bạn mới yên tâm nhận ra người phụ trách, bạn nói câu tôi là người hướng dẫn của bạn bằng tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Để bạn mới yên tâm nhận ra người phụ trách, bạn nói câu tôi là người hướng dẫn của bạn bằng tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"I am your guide.\" Khang gật, đi cùng tôi tới bàn còn trống. Chị Mai giữ ghế cho bạn. Tôi đưa khay màu, hỏi Khang muốn thử nét nào trước; bạn đã thôi đứng ở cửa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"I am your guide.\" Khang gật, đi cùng tôi tới bàn còn trống. Chị Mai giữ ghế cho bạn. Tôi đưa khay màu, hỏi Khang muốn thử nét nào trước; bạn đã thôi đứng ở cửa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I am your guide.\" Khang gật, đi cùng tôi tới bàn còn trống. Chị Mai giữ ghế cho bạn. Tôi đưa khay màu, hỏi Khang muốn thử nét nào trước; bạn đã thôi đứng ở cửa."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with personal need and early correct English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with personal need and early correct English model. Next causal state: Same studio entrance angle: the mascot hands a plain blank clipboard to the visitor and points toward an orderly row of blank wooden easels. The visitor steps inside, leaning the umbrella neatly against the wall."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify selected sense and obstacle within same relationship.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Clarify selected sense and obstacle within same relationship. Next causal state: Studio medium shot: mascot introduces newcomer Khang to Mai, the single essential host in mustard top, who comes from brush table and offers blank paint tray. Khang sits beside mascot. No fourth person."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show deliberate action or change with second usable English model.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Show deliberate action or change with second usable English model. Next causal state: Studio setting: the mascot faces the viewer with an inviting open hand, keeping the visitor and wooden easels in the frame. Upper safe area reserved for the sentence stem, caption zone clear below."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite full-sentence target retrieval and hold before feedback.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite full-sentence target retrieval and hold before feedback. Next causal state: Same studio desk: Mai holds stool for Khang while mascot guides him to blank canvas and hands tray. Exactly three cast members, no crowd or text."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give complete answer and small earned consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give complete answer and small earned consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17259",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Khách đứng ngập ngừng trước cửa phòng tranh. Tôi bước tới mỉm cười:  Chị Mai dừng việc xếp cọ, tới đón Khang. Tôi nói: \"This is my friend.\" Đây là bạn của tôi. Khang nhìn lại tôi, cười rồi chọn chiếc ghế cạnh bàn pha màu; chị Mai đưa bạn một khay.  Khang gật, đi cùng tôi tới bàn còn trống. Chị Mai giữ ghế cho bạn. Tôi đưa khay màu, hỏi Khang muốn thử nét nào trước; bạn đã thôi đứng ở cửa. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "20441",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Khách đứng ngập ngừng trước cửa phòng tranh. Tôi bước tới mỉm cười:  Chị Mai dừng việc xếp cọ, tới đón Khang. Tôi nói: \"This is my friend.\" Đây là bạn của tôi. Khang nhìn lại tôi, cười rồi chọn chiếc ghế cạnh bàn pha màu; chị Mai đưa bạn một khay.  Khang gật, đi cùng tôi tới bàn còn trống. Chị Mai giữ ghế cho bạn. Tôi đưa khay màu, hỏi Khang muốn thử nét nào trước; bạn đã thôi đứng ở cửa. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "20791",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Khách đứng ngập ngừng trước cửa phòng tranh. Tôi bước tới mỉm cười:  Chị Mai dừng việc xếp cọ, tới đón Khang. Tôi nói: \"This is my friend.\" Đây là bạn của tôi. Khang nhìn lại tôi, cười rồi chọn chiếc ghế cạnh bàn pha màu; chị Mai đưa bạn một khay.  Khang gật, đi cùng tôi tới bàn còn trống. Chị Mai giữ ghế cho bạn. Tôi đưa khay màu, hỏi Khang muốn thử nét nào trước; bạn đã thôi đứng ở cửa. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "21221",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Khách đứng ngập ngừng trước cửa phòng tranh. Tôi bước tới mỉm cười:  Chị Mai dừng việc xếp cọ, tới đón Khang. Tôi nói: \"This is my friend.\" Đây là bạn của tôi. Khang nhìn lại tôi, cười rồi chọn chiếc ghế cạnh bàn pha màu; chị Mai đưa bạn một khay.  Khang gật, đi cùng tôi tới bàn còn trống. Chị Mai giữ ghế cho bạn. Tôi đưa khay màu, hỏi Khang muốn thử nét nào trước; bạn đã thôi đứng ở cửa. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

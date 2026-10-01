@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "94777288ba010f66b177dc30e20650218653ab0bda01301519ce57baf8b87638",
+  "topic": "Học từ vựng tiếng Anh WORD (danh từ: từ) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ WORD",
+    "Làm rõ nghĩa lõi \"từ\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng WORD, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại WORD, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "An",
+      "appearance": "Minimal stick figure with a round white navy-outlined head, solid black oval eyes, and minimal stick limbs.",
+      "outfit": "A bright orange short-sleeve shirt and navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Dòng chữ trên nắp hộp",
+      "purpose": "Introduce curiosity about an isolated printed foreign term in an everyday home setting.",
+      "action": "A living room table. An orange-shirt stick figure tilts a round tin box under a lamp with a puzzled look beside Minh.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "An giữ nắp hộp trong tay. Cậu chỉ một chữ, hỏi Minh: \"What does this word mean?\" Từ này nghĩa là gì? Hộp bánh chưa mở được.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "A living room table. An orange-shirt stick figure tilts a round tin box under a lamp with a puzzled look beside Minh. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "A living room table. An orange-shirt stick figure tilts a round tin box under a lamp with a puzzled look beside Minh.",
+          "reason": "Introduce curiosity about an isolated printed foreign term in an everyday home setting.",
+          "visible_text": [
+            {
+              "text": "What does this word mean?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce curiosity about an isolated printed foreign term in an everyday home setting.",
+          "anchor": {
+            "vi": {
+              "quote": "An giữ nắp hộp trong tay. Cậu chỉ một chữ, hỏi Minh: \"What does this word mean?\" Từ này nghĩa là gì? Hộp bánh chưa mở được.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce curiosity about an isolated printed foreign term in an everyday home setting. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Hỏi nghĩa của từ",
+      "purpose": "Introduce the first model sentence asking for the meaning of a specific word.",
+      "action": "The orange-shirt stick figure points directly at a single printed English word on the tin lid.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Minh nhìn chỗ em chỉ. An đã biết hình bánh trên hộp, nhưng chưa hiểu phần chữ. Cậu muốn hỏi đúng một từ ấy, chứ không hỏi tên cả hộp.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The orange-shirt stick figure points directly at a single printed English word on the tin lid. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The orange-shirt stick figure points directly at a single printed English word on the tin lid.",
+          "reason": "Introduce the first model sentence asking for the meaning of a specific word.",
+          "visible_text": [
+            {
+              "text": "word · từ",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first model sentence asking for the meaning of a specific word.",
+          "anchor": {
+            "vi": {
+              "quote": "Minh nhìn chỗ em chỉ. An đã biết hình bánh trên hộp, nhưng chưa hiểu phần chữ. Cậu muốn hỏi đúng một từ ấy, chứ không hỏi tên cả hộp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first model sentence asking for the meaning of a specific word. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Đơn vị mang ý nghĩa",
+      "purpose": "Define word as an atomic unit of linguistic meaning naming things or actions.",
+      "action": "Close view of the tin opening tab beside the permitted word OPEN; mascot points to the tab, younger orange-shirt figure watches. No icon labels or other readable lettering.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Minh đọc chữ trên nắp rồi thử kéo đúng mép mở. Một từ có thể mang điều cần hiểu trong tình huống; ở đây nó giúp hai anh em tìm chỗ mở hộp.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Close view of the tin opening tab beside the permitted word OPEN; mascot points to the tab, younger orange-shirt figure watches. No icon labels or other readable lettering. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close view of the tin opening tab beside the permitted word OPEN; mascot points to the tab, younger orange-shirt figure watches. No icon labels or other readable lettering.",
+          "reason": "Define word as an atomic unit of linguistic meaning naming things or actions.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Define word as an atomic unit of linguistic meaning naming things or actions.",
+          "anchor": {
+            "vi": {
+              "quote": "Minh đọc chữ trên nắp rồi thử kéo đúng mép mở. Một từ có thể mang điều cần hiểu trong tình huống; ở đây nó giúp hai anh em tìm chỗ mở hộp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Define word as an atomic unit of linguistic meaning naming things or actions. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nhận ra điều quen thuộc",
+      "purpose": "Present the second model sentence recognizing the familiar word.",
+      "action": "Minh taps the tin playfully, smiling as he identifies the familiar vocabulary.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I know this word.\" Anh biết từ này. Minh chỉ cho An mép nắp cần kéo. An thử, nhưng dưới đáy còn một từ khác cậu chưa từng đọc.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Minh taps the tin playfully, smiling as he identifies the familiar vocabulary. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Minh taps the tin playfully, smiling as he identifies the familiar vocabulary.",
+          "reason": "Present the second model sentence recognizing the familiar word.",
+          "visible_text": [
+            {
+              "text": "I know this word.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Present the second model sentence recognizing the familiar word.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I know this word.\" Anh biết từ này. Minh chỉ cho An mép nắp cần kéo. An thử, nhưng dưới đáy còn một từ khác cậu chưa từng đọc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Present the second model sentence recognizing the familiar word. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Tiếp tục tìm hiểu",
+      "purpose": "Cue learner retrieval of the question formula targeting the noun word.",
+      "action": "Orange-shirt learner holds the tin turned to show its underside with abstract non-letter marks and looks toward mascot. Keep upper safe area clear for practice stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "An muốn hỏi tiếp phần chữ vừa thấy, để lần sau tự mở hộp. Bạn nói giúp em câu từ này nghĩa là gì bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Orange-shirt learner holds the tin turned to show its underside with abstract non-letter marks and looks toward mascot. Keep upper safe area clear for practice stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Orange-shirt learner holds the tin turned to show its underside with abstract non-letter marks and looks toward mascot. Keep upper safe area clear for practice stem.",
+          "reason": "Cue learner retrieval of the question formula targeting the noun word.",
+          "visible_text": [
+            {
+              "text": "What does this ___ mean?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Cue learner retrieval of the question formula targeting the noun word.",
+          "anchor": {
+            "vi": {
+              "quote": "An muốn hỏi tiếp phần chữ vừa thấy, để lần sau tự mở hộp. Bạn nói giúp em câu từ này nghĩa là gì bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Cue learner retrieval of the question formula targeting the noun word. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Hộp bánh thơm lừng",
+      "purpose": "Confirm response and resolve with the concrete reward of sharing the treat.",
+      "action": "The tin lid is removed, revealing golden cookies inside as both stick figures share a treat contentedly.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"What does this word mean?\" Từ này nghĩa là gì? Minh ngồi xuống xem cùng An. Hai anh em mở được hộp; An giữ lại nắp để lần sau hỏi tiếp.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "The tin lid is removed, revealing golden cookies inside as both stick figures share a treat contentedly. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The tin lid is removed, revealing golden cookies inside as both stick figures share a treat contentedly.",
+          "reason": "Confirm response and resolve with the concrete reward of sharing the treat.",
+          "visible_text": [
+            {
+              "text": "What does this word mean?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm response and resolve with the concrete reward of sharing the treat.",
+          "anchor": {
+            "vi": {
+              "quote": "\"What does this word mean?\" Từ này nghĩa là gì? Minh ngồi xuống xem cùng An. Hai anh em mở được hộp; An giữ lại nắp để lần sau hỏi tiếp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm response and resolve with the concrete reward of sharing the treat. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "An giữ nắp hộp trong tay. Cậu chỉ một chữ, hỏi Minh: \"What does this word mean?\" Từ này nghĩa là gì? Hộp bánh chưa mở được."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "An giữ nắp hộp trong tay. Cậu chỉ một chữ, hỏi Minh: \"What does this word mean?\" Từ này nghĩa là gì? Hộp bánh chưa mở được."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "An giữ nắp hộp trong tay. Cậu chỉ một chữ, hỏi Minh: \"What does this word mean?\" Từ này nghĩa là gì? Hộp bánh chưa mở được."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Minh nhìn chỗ em chỉ. An đã biết hình bánh trên hộp, nhưng chưa hiểu phần chữ. Cậu muốn hỏi đúng một từ ấy, chứ không hỏi tên cả hộp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Minh đọc chữ trên nắp rồi thử kéo đúng mép mở. Một từ có thể mang điều cần hiểu trong tình huống; ở đây nó giúp hai anh em tìm chỗ mở hộp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"I know this word.\" Anh biết từ này. Minh chỉ cho An mép nắp cần kéo. An thử, nhưng dưới đáy còn một từ khác cậu chưa từng đọc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"I know this word.\" Anh biết từ này. Minh chỉ cho An mép nắp cần kéo. An thử, nhưng dưới đáy còn một từ khác cậu chưa từng đọc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "An muốn hỏi tiếp phần chữ vừa thấy, để lần sau tự mở hộp. Bạn nói giúp em câu từ này nghĩa là gì bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "An muốn hỏi tiếp phần chữ vừa thấy, để lần sau tự mở hộp. Bạn nói giúp em câu từ này nghĩa là gì bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"What does this word mean?\" Từ này nghĩa là gì? Minh ngồi xuống xem cùng An. Hai anh em mở được hộp; An giữ lại nắp để lần sau hỏi tiếp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"What does this word mean?\" Từ này nghĩa là gì? Minh ngồi xuống xem cùng An. Hai anh em mở được hộp; An giữ lại nắp để lần sau hỏi tiếp."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"What does this word mean?\" Từ này nghĩa là gì? Minh ngồi xuống xem cùng An. Hai anh em mở được hộp; An giữ lại nắp để lần sau hỏi tiếp."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce curiosity about an isolated printed foreign term in an everyday home setting.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce curiosity about an isolated printed foreign term in an everyday home setting. Next causal state: The orange-shirt stick figure points directly at a single printed English word on the tin lid."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first model sentence asking for the meaning of a specific word.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first model sentence asking for the meaning of a specific word. Next causal state: Close view of the tin opening tab beside the permitted word OPEN; mascot points to the tab, younger orange-shirt figure watches. No icon labels or other readable lettering."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Define word as an atomic unit of linguistic meaning naming things or actions.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Define word as an atomic unit of linguistic meaning naming things or actions. Next causal state: Minh taps the tin playfully, smiling as he identifies the familiar vocabulary."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Present the second model sentence recognizing the familiar word.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Present the second model sentence recognizing the familiar word. Next causal state: Orange-shirt learner holds the tin turned to show its underside with abstract non-letter marks and looks toward mascot. Keep upper safe area clear for practice stem."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Cue learner retrieval of the question formula targeting the noun word.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Cue learner retrieval of the question formula targeting the noun word. Next causal state: The tin lid is removed, revealing golden cookies inside as both stick figures share a treat contentedly."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm response and resolve with the concrete reward of sharing the treat.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm response and resolve with the concrete reward of sharing the treat. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18069",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: An muốn tự mở hộp bánh nhưng chưa hiểu phần chữ. Em hỏi Minh một từ cụ thể, thử chỗ mở rồi tiếp tục hỏi khi thấy từ khác. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "19501",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: An muốn tự mở hộp bánh nhưng chưa hiểu phần chữ. Em hỏi Minh một từ cụ thể, thử chỗ mở rồi tiếp tục hỏi khi thấy từ khác. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,593 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "296c69cf46f4ff28598333be2829f0a7b405d26fff9bf108942370136aa3069b",
+  "topic": "Học từ vựng tiếng Anh MORE (từ hạn định: nhiều hơn) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ MORE",
+    "Làm rõ nghĩa lõi \"nhiều hơn\" (từ hạn định) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng MORE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại MORE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Bác Ba",
+      "appearance": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "Single plain short-sleeve white shirt and minimalist navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Quán cơm giờ tan tầm",
+      "purpose": "Show an unexpected rush of hungry customers at a community diner.",
+      "action": "Mascot and older white-shirt host stand at a home dining table with four chairs but only two plain bowls. No guests or crowd visible.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bác Ba bày bàn, thiếu hai bát. Tôi nhìn chỗ ngồi mới thêm: \"We need more bowls.\" Chúng ta cần thêm bát. Hôm nay bác muốn mời cả hàng xóm.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "more",
+          "meaning": "thêm, nhiều hơn lượng đang có"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and older white-shirt host stand at a home dining table with four chairs but only two plain bowls. No guests or crowd visible. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and older white-shirt host stand at a home dining table with four chairs but only two plain bowls. No guests or crowd visible.",
+          "reason": "Show an unexpected rush of hungry customers at a community diner.",
+          "visible_text": [
+            {
+              "text": "We need more bowls.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an unexpected rush of hungry customers at a community diner.",
+          "anchor": {
+            "vi": {
+              "quote": "Bác Ba bày bàn, thiếu hai bát. Tôi nhìn chỗ ngồi mới thêm: \"We need more bowls.\" Chúng ta cần thêm bát. Hôm nay bác muốn mời cả hàng xóm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show an unexpected rush of hungry customers at a community diner. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chồng bát sắp cạn",
+      "purpose": "Deliver the first English model of more requesting additional supplies.",
+      "action": "Older host starts to pull one unserved chair away while mascot points toward bowl shelf inside kitchen. Same four chairs and two bowls.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bát đang có chỉ đủ phần ban đầu. More trong lời tôi là thêm so với số đó. Bác định cất bớt ghế, tôi xin lấy bát trong bếp để giữ lời mời.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "more",
+          "meaning": "thêm, nhiều hơn lượng đang có"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Older host starts to pull one unserved chair away while mascot points toward bowl shelf inside kitchen. Same four chairs and two bowls. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Older host starts to pull one unserved chair away while mascot points toward bowl shelf inside kitchen. Same four chairs and two bowls.",
+          "reason": "Deliver the first English model of more requesting additional supplies.",
+          "visible_text": [
+            {
+              "text": "more · thêm, nhiều hơn lượng đang có",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Deliver the first English model of more requesting additional supplies.",
+          "anchor": {
+            "vi": {
+              "quote": "Bát đang có chỉ đủ phần ban đầu. More trong lời tôi là thêm so với số đó. Bác định cất bớt ghế, tôi xin lấy bát trong bếp để giữ lời mời.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the first English model of more requesting additional supplies. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Xin thêm ly nước mát",
+      "purpose": "Deliver the second English model of more in a customer request.",
+      "action": "Mascot holds a partly filled glass toward host beside a partly empty water jug, two extra bowls rest on tray near him.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi mang bát ra, thấy bình nước cạnh bác vơi. \"Can I have more water?\" Cháu xin thêm nước được không? Cốc đã có một ít, tôi muốn thêm để mang ra bàn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "more",
+          "meaning": "thêm, nhiều hơn lượng đang có"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot holds a partly filled glass toward host beside a partly empty water jug, two extra bowls rest on tray near him. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds a partly filled glass toward host beside a partly empty water jug, two extra bowls rest on tray near him.",
+          "reason": "Deliver the second English model of more in a customer request.",
+          "visible_text": [
+            {
+              "text": "Can I have more water?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Deliver the second English model of more in a customer request.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi mang bát ra, thấy bình nước cạnh bác vơi. \"Can I have more water?\" Cháu xin thêm nước được không? Cốc đã có một ít, tôi muốn thêm để mang ra bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the second English model of more in a customer request. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Khay bát sạch từ bếp",
+      "purpose": "Illustrate the practical action solving the shortage.",
+      "action": "Host lays a plain cloth across table while mascot holds two clean bowls ready to add, all four chairs remain.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bác rót tiếp rồi nhìn những ghế đã đủ bát. Tôi bảo mình sẽ dọn sau bữa, bác không cần ngại có người tới. Bác lấy khăn trải ngay chỗ vừa định bỏ.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "more",
+          "meaning": "thêm, nhiều hơn lượng đang có"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Host lays a plain cloth across table while mascot holds two clean bowls ready to add, all four chairs remain. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Host lays a plain cloth across table while mascot holds two clean bowls ready to add, all four chairs remain.",
+          "reason": "Illustrate the practical action solving the shortage.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Illustrate the practical action solving the shortage.",
+          "anchor": {
+            "vi": {
+              "quote": "Bác rót tiếp rồi nhìn những ghế đã đủ bát. Tôi bảo mình sẽ dọn sau bữa, bác không cần ngại có người tới. Bác lấy khăn trải ngay chỗ vừa định bỏ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Illustrate the practical action solving the shortage. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Tay múc cơm đợi bát",
+      "purpose": "Prompt learner retrieval of more in an urgent serving task.",
+      "action": "Two figures remain beside the incomplete dining setting, host asks mascot; extra bowls still on tray. No answer word printed on props.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bác hỏi tôi lúc nãy còn thiếu đồ gì cho bàn. Bạn nói giúp tôi câu chúng ta cần thêm bát bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "more",
+          "meaning": "thêm, nhiều hơn lượng đang có"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Two figures remain beside the incomplete dining setting, host asks mascot; extra bowls still on tray. No answer word printed on props. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two figures remain beside the incomplete dining setting, host asks mascot; extra bowls still on tray. No answer word printed on props.",
+          "reason": "Prompt learner retrieval of more in an urgent serving task.",
+          "visible_text": [
+            {
+              "text": "We need ___ bowls.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt learner retrieval of more in an urgent serving task.",
+          "anchor": {
+            "vi": {
+              "quote": "Bác hỏi tôi lúc nãy còn thiếu đồ gì cho bàn. Bạn nói giúp tôi câu chúng ta cần thêm bát bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt learner retrieval of more in an urgent serving task. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Những suất cơm trưa nóng hổi",
+      "purpose": "Confirm the correct target sentence and resolve with everyone fed.",
+      "action": "Mascot sets the two extra bowls on the two previously empty places while host aligns all four chairs. No dinner guests shown.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"We need more bowls.\" Chúng ta cần thêm bát. Tôi đặt hai chiếc vừa lấy lên bàn. Bác Ba kéo thẳng các ghế, giữ cả những chỗ bác định cất đi.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "more",
+          "meaning": "thêm, nhiều hơn lượng đang có"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Mascot sets the two extra bowls on the two previously empty places while host aligns all four chairs. No dinner guests shown. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sets the two extra bowls on the two previously empty places while host aligns all four chairs. No dinner guests shown.",
+          "reason": "Confirm the correct target sentence and resolve with everyone fed.",
+          "visible_text": [
+            {
+              "text": "We need more bowls.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm the correct target sentence and resolve with everyone fed.",
+          "anchor": {
+            "vi": {
+              "quote": "\"We need more bowls.\" Chúng ta cần thêm bát. Tôi đặt hai chiếc vừa lấy lên bàn. Bác Ba kéo thẳng các ghế, giữ cả những chỗ bác định cất đi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the correct target sentence and resolve with everyone fed. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bác Ba bày bàn, thiếu hai bát. Tôi nhìn chỗ ngồi mới thêm: \"We need more bowls.\" Chúng ta cần thêm bát. Hôm nay bác muốn mời cả hàng xóm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bác Ba bày bàn, thiếu hai bát. Tôi nhìn chỗ ngồi mới thêm: \"We need more bowls.\" Chúng ta cần thêm bát. Hôm nay bác muốn mời cả hàng xóm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Bác Ba bày bàn, thiếu hai bát. Tôi nhìn chỗ ngồi mới thêm: \"We need more bowls.\" Chúng ta cần thêm bát. Hôm nay bác muốn mời cả hàng xóm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bát đang có chỉ đủ phần ban đầu. More trong lời tôi là thêm so với số đó. Bác định cất bớt ghế, tôi xin lấy bát trong bếp để giữ lời mời."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi mang bát ra, thấy bình nước cạnh bác vơi. \"Can I have more water?\" Cháu xin thêm nước được không? Cốc đã có một ít, tôi muốn thêm để mang ra bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Tôi mang bát ra, thấy bình nước cạnh bác vơi. \"Can I have more water?\" Cháu xin thêm nước được không? Cốc đã có một ít, tôi muốn thêm để mang ra bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Bác rót tiếp rồi nhìn những ghế đã đủ bát. Tôi bảo mình sẽ dọn sau bữa, bác không cần ngại có người tới. Bác lấy khăn trải ngay chỗ vừa định bỏ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Bác hỏi tôi lúc nãy còn thiếu đồ gì cho bàn. Bạn nói giúp tôi câu chúng ta cần thêm bát bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bác hỏi tôi lúc nãy còn thiếu đồ gì cho bàn. Bạn nói giúp tôi câu chúng ta cần thêm bát bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"We need more bowls.\" Chúng ta cần thêm bát. Tôi đặt hai chiếc vừa lấy lên bàn. Bác Ba kéo thẳng các ghế, giữ cả những chỗ bác định cất đi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"We need more bowls.\" Chúng ta cần thêm bát. Tôi đặt hai chiếc vừa lấy lên bàn. Bác Ba kéo thẳng các ghế, giữ cả những chỗ bác định cất đi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"We need more bowls.\" Chúng ta cần thêm bát. Tôi đặt hai chiếc vừa lấy lên bàn. Bác Ba kéo thẳng các ghế, giữ cả những chỗ bác định cất đi."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an unexpected rush of hungry customers at a community diner.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Show an unexpected rush of hungry customers at a community diner. Next causal state: Older host starts to pull one unserved chair away while mascot points toward bowl shelf inside kitchen. Same four chairs and two bowls."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Deliver the first English model of more requesting additional supplies.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Deliver the first English model of more requesting additional supplies. Next causal state: Mascot holds a partly filled glass toward host beside a partly empty water jug, two extra bowls rest on tray near him."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Deliver the second English model of more in a customer request.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Deliver the second English model of more in a customer request. Next causal state: Host lays a plain cloth across table while mascot holds two clean bowls ready to add, all four chairs remain."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Illustrate the practical action solving the shortage.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Illustrate the practical action solving the shortage. Next causal state: Two figures remain beside the incomplete dining setting, host asks mascot; extra bowls still on tray. No answer word printed on props."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt learner retrieval of more in an urgent serving task.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt learner retrieval of more in an urgent serving task. Next causal state: Mascot sets the two extra bowls on the two previously empty places while host aligns all four chairs. No dinner guests shown."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm the correct target sentence and resolve with everyone fed.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the correct target sentence and resolve with everyone fed. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18179",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Bác Ba muốn bày bữa mời hàng xóm nhưng thiếu bát nên định bớt ghế. Nam lấy thêm bát và nước, giúp bác giữ trọn lời mời. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20265",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Bác Ba muốn bày bữa mời hàng xóm nhưng thiếu bát nên định bớt ghế. Nam lấy thêm bát và nước, giúp bác giữ trọn lời mời. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

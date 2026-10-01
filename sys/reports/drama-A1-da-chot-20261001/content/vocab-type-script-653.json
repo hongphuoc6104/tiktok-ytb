@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "91c947b3465631a1b8931177efd540b18ad1d39d0237acf716accb86c7c0615e",
+  "topic": "Học từ vựng tiếng Anh TYPE (danh từ: loại, kiểu) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TYPE",
+    "Làm rõ nghĩa lõi \"loại, kiểu\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TYPE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TYPE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Bình",
+      "appearance": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "outfit": "A single plain light green short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Hai tệp giấy",
+      "purpose": "Establish the shopping dilemma comparing two different paper pads.",
+      "action": "Mascot holds two unlabelled paper pads at art shelf, green-shirt friend watches. Closed small coin purse beside mascot, no prices.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi chỉ đủ tiền mua một tệp giấy. Bình lại muốn tôi chọn cùng cậu. \"What type of paper do you need?\" Bạn cần loại giấy nào? Tôi đưa hai tệp ra.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "type",
+          "meaning": "loại, kiểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds two unlabelled paper pads at art shelf, green-shirt friend watches. Closed small coin purse beside mascot, no prices. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds two unlabelled paper pads at art shelf, green-shirt friend watches. Closed small coin purse beside mascot, no prices.",
+          "reason": "Establish the shopping dilemma comparing two different paper pads.",
+          "visible_text": [
+            {
+              "text": "What type of paper do you need?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the shopping dilemma comparing two different paper pads.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi chỉ đủ tiền mua một tệp giấy. Bình lại muốn tôi chọn cùng cậu. \"What type of paper do you need?\" Bạn cần loại giấy nào? Tôi đưa hai tệp ra.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the shopping dilemma comparing two different paper pads. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Hỏi đúng nhu cầu",
+      "purpose": "Ask the companion about the specific category needed with the first English model.",
+      "action": "The stick figure in the light sky blue shirt presents the two pads forward while the friend in the light green shirt examines them.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Một tệp mặt nhám, một tệp mặt láng. Bình muốn vẽ chung ngoài trời cuối tuần. Tôi thích giấy láng, nhưng cậu đưa tay giữ tệp nhám lâu hơn.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "type",
+          "meaning": "loại, kiểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The stick figure in the light sky blue shirt presents the two pads forward while the friend in the light green shirt examines them. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the light sky blue shirt presents the two pads forward while the friend in the light green shirt examines them.",
+          "reason": "Ask the companion about the specific category needed with the first English model.",
+          "visible_text": [
+            {
+              "text": "type · loại, kiểu",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Ask the companion about the specific category needed with the first English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Một tệp mặt nhám, một tệp mặt láng. Bình muốn vẽ chung ngoài trời cuối tuần. Tôi thích giấy láng, nhưng cậu đưa tay giữ tệp nhám lâu hơn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the companion about the specific category needed with the first English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Loại giấy phù hợp",
+      "purpose": "The companion confirms their selection using the second English model sentence.",
+      "action": "Green-shirt friend touches rough surface of one unlabelled paper pad, mascot holds the smooth pad separately. No claims printed on labels.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I need this type of paper.\" Tôi cần loại giấy này. Bình chỉ tệp nhám, kể mình đã quen dùng nó trong buổi học. Cậu chưa yêu cầu tôi phải mua theo.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "type",
+          "meaning": "loại, kiểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Green-shirt friend touches rough surface of one unlabelled paper pad, mascot holds the smooth pad separately. No claims printed on labels. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Green-shirt friend touches rough surface of one unlabelled paper pad, mascot holds the smooth pad separately. No claims printed on labels.",
+          "reason": "The companion confirms their selection using the second English model sentence.",
+          "visible_text": [
+            {
+              "text": "I need this type of paper.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "The companion confirms their selection using the second English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need this type of paper.\" Tôi cần loại giấy này. Bình chỉ tệp nhám, kể mình đã quen dùng nó trong buổi học. Cậu chưa yêu cầu tôi phải mua theo.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "The companion confirms their selection using the second English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lựa chọn dứt khoát",
+      "purpose": "Show the decision finalized as the unwanted pad is returned to the shelf.",
+      "action": "Mascot puts smooth pad back on shelf while rough pad remains held between both friends, shopping basket empty.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi nhớ đã hẹn mang giấy để cả hai cùng vẽ. Tôi đặt tệp láng trở lại, nhưng vẫn chờ Bình nói rõ trước khi chọn. Cậu nhìn tôi, hỏi có muốn đổi ý không.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "type",
+          "meaning": "loại, kiểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot puts smooth pad back on shelf while rough pad remains held between both friends, shopping basket empty. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot puts smooth pad back on shelf while rough pad remains held between both friends, shopping basket empty.",
+          "reason": "Show the decision finalized as the unwanted pad is returned to the shelf.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Show the decision finalized as the unwanted pad is returned to the shelf.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi nhớ đã hẹn mang giấy để cả hai cùng vẽ. Tôi đặt tệp láng trở lại, nhưng vẫn chờ Bình nói rõ trước khi chọn. Cậu nhìn tôi, hỏi có muốn đổi ý không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the decision finalized as the unwanted pad is returned to the shelf. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Nhắc lại câu hỏi",
+      "purpose": "Prompt the learner to recall the first model question for selecting art tools.",
+      "action": "Both friends remain at paper shelf choosing between the same unlabelled pads, no brush aisle; upper safe region for practice stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn nghe loại giấy Bình cần thêm một lần cho chắc. Bạn nói giúp tôi câu bạn cần loại giấy nào bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "type",
+          "meaning": "loại, kiểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both friends remain at paper shelf choosing between the same unlabelled pads, no brush aisle; upper safe region for practice stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both friends remain at paper shelf choosing between the same unlabelled pads, no brush aisle; upper safe region for practice stem.",
+          "reason": "Prompt the learner to recall the first model question for selecting art tools.",
+          "visible_text": [
+            {
+              "text": "What ___ of paper do you need?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to recall the first model question for selecting art tools.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn nghe loại giấy Bình cần thêm một lần cho chắc. Bạn nói giúp tôi câu bạn cần loại giấy nào bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to recall the first model question for selecting art tools. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Rời tiệm họa cụ",
+      "purpose": "Provide model feedback and conclude the shopping trip successfully.",
+      "action": "Mascot places rough pad inside basket while green-shirt friend smiles and keeps one plain pencil ready for their shared drawing plan. No cashier.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"What type of paper do you need?\" Bạn cần loại giấy nào? Bình chỉ lại tệp nhám. Tôi đặt nó vào giỏ, bảo cuối tuần cậu phải ngồi vẽ cùng tôi đấy.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "type",
+          "meaning": "loại, kiểu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Mascot places rough pad inside basket while green-shirt friend smiles and keeps one plain pencil ready for their shared drawing plan. No cashier. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot places rough pad inside basket while green-shirt friend smiles and keeps one plain pencil ready for their shared drawing plan. No cashier.",
+          "reason": "Provide model feedback and conclude the shopping trip successfully.",
+          "visible_text": [
+            {
+              "text": "What type of paper do you need?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Provide model feedback and conclude the shopping trip successfully.",
+          "anchor": {
+            "vi": {
+              "quote": "\"What type of paper do you need?\" Bạn cần loại giấy nào? Bình chỉ lại tệp nhám. Tôi đặt nó vào giỏ, bảo cuối tuần cậu phải ngồi vẽ cùng tôi đấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide model feedback and conclude the shopping trip successfully. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Tôi chỉ đủ tiền mua một tệp giấy. Bình lại muốn tôi chọn cùng cậu. \"What type of paper do you need?\" Bạn cần loại giấy nào? Tôi đưa hai tệp ra."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Tôi chỉ đủ tiền mua một tệp giấy. Bình lại muốn tôi chọn cùng cậu. \"What type of paper do you need?\" Bạn cần loại giấy nào? Tôi đưa hai tệp ra."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Tôi chỉ đủ tiền mua một tệp giấy. Bình lại muốn tôi chọn cùng cậu. \"What type of paper do you need?\" Bạn cần loại giấy nào? Tôi đưa hai tệp ra."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Một tệp mặt nhám, một tệp mặt láng. Bình muốn vẽ chung ngoài trời cuối tuần. Tôi thích giấy láng, nhưng cậu đưa tay giữ tệp nhám lâu hơn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"I need this type of paper.\" Tôi cần loại giấy này. Bình chỉ tệp nhám, kể mình đã quen dùng nó trong buổi học. Cậu chưa yêu cầu tôi phải mua theo."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"I need this type of paper.\" Tôi cần loại giấy này. Bình chỉ tệp nhám, kể mình đã quen dùng nó trong buổi học. Cậu chưa yêu cầu tôi phải mua theo."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi nhớ đã hẹn mang giấy để cả hai cùng vẽ. Tôi đặt tệp láng trở lại, nhưng vẫn chờ Bình nói rõ trước khi chọn. Cậu nhìn tôi, hỏi có muốn đổi ý không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Tôi muốn nghe loại giấy Bình cần thêm một lần cho chắc. Bạn nói giúp tôi câu bạn cần loại giấy nào bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Tôi muốn nghe loại giấy Bình cần thêm một lần cho chắc. Bạn nói giúp tôi câu bạn cần loại giấy nào bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"What type of paper do you need?\" Bạn cần loại giấy nào? Bình chỉ lại tệp nhám. Tôi đặt nó vào giỏ, bảo cuối tuần cậu phải ngồi vẽ cùng tôi đấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"What type of paper do you need?\" Bạn cần loại giấy nào? Bình chỉ lại tệp nhám. Tôi đặt nó vào giỏ, bảo cuối tuần cậu phải ngồi vẽ cùng tôi đấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"What type of paper do you need?\" Bạn cần loại giấy nào? Bình chỉ lại tệp nhám. Tôi đặt nó vào giỏ, bảo cuối tuần cậu phải ngồi vẽ cùng tôi đấy."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the shopping dilemma comparing two different paper pads.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the shopping dilemma comparing two different paper pads. Next causal state: The stick figure in the light sky blue shirt presents the two pads forward while the friend in the light green shirt examines them."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Ask the companion about the specific category needed with the first English model.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Ask the companion about the specific category needed with the first English model. Next causal state: Green-shirt friend touches rough surface of one unlabelled paper pad, mascot holds the smooth pad separately. No claims printed on labels."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "The companion confirms their selection using the second English model sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "The companion confirms their selection using the second English model sentence. Next causal state: Mascot puts smooth pad back on shelf while rough pad remains held between both friends, shopping basket empty."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Show the decision finalized as the unwanted pad is returned to the shelf.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the decision finalized as the unwanted pad is returned to the shelf. Next causal state: Both friends remain at paper shelf choosing between the same unlabelled pads, no brush aisle; upper safe region for practice stem."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to recall the first model question for selecting art tools.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to recall the first model question for selecting art tools. Next causal state: Mascot places rough pad inside basket while green-shirt friend smiles and keeps one plain pencil ready for their shared drawing plan. No cashier."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Provide model feedback and conclude the shopping trip successfully.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Provide model feedback and conclude the shopping trip successfully. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18249",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Tôi chỉ mua được một tệp giấy để hai bạn vẽ chung; hỏi loại Bình cần, tôi chọn theo bạn và giữ lời hẹn cùng vẽ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20588",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi chỉ mua được một tệp giấy để hai bạn vẽ chung; hỏi loại Bình cần, tôi chọn theo bạn và giữ lời hẹn cùng vẽ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

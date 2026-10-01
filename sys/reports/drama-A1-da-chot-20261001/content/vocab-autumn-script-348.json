@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "0ad8d2f31f563e71f7dedfe043f8cf249f53a28fed4eb0a0ce9385724c67d416",
+  "topic": "Học từ vựng tiếng Anh AUTUMN (danh từ: mùa thu) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ AUTUMN",
+    "Làm rõ nghĩa lõi \"mùa thu\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng AUTUMN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại AUTUMN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Hải",
+      "appearance": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "Plain purple short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc lá rơi",
+      "purpose": "Hook viewer with the physical object of a pressed autumn leaf and introduce model sentence one.",
+      "action": "Overhead shot of a rustic wooden table; a hardcover book lies open, and a dried golden leaf flutters flat onto the page between the two seated stick figures.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Trang sách mở ra tiếng sột soạt. Chiếc lá vàng khô rơi khẽ xuống mặt bàn gỗ. Hải nhìn chiếc lá rồi khẽ bảo tôi: \"Leaves fall in autumn.\" Lá rụng vào mùa thu.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "autumn",
+          "meaning": "mùa thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Overhead shot of a rustic wooden table; a hardcover book lies open, and a dried golden leaf flutters flat onto the page between the two seated stick figures. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Overhead shot of a rustic wooden table; a hardcover book lies open, and a dried golden leaf flutters flat onto the page between the two seated stick figures.",
+          "reason": "Hook viewer with the physical object of a pressed autumn leaf and introduce model sentence one.",
+          "visible_text": [
+            {
+              "text": "Leaves fall in autumn.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Hook viewer with the physical object of a pressed autumn leaf and introduce model sentence one.",
+          "anchor": {
+            "vi": {
+              "quote": "Trang sách mở ra tiếng sột soạt. Chiếc lá vàng khô rơi khẽ xuống mặt bàn gỗ. Hải nhìn chiếc lá rồi khẽ bảo tôi: \"Leaves fall in autumn.\" Lá rụng vào mùa thu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Hook viewer with the physical object of a pressed autumn leaf and introduce model sentence one. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nhớ lại chuyện cũ",
+      "purpose": "Explain past relational tension and introduce model sentence two with emotional grounding.",
+      "action": "The blue-shirt stickman gently touches the brittle edge of the pressed leaf, looking across the table at the purple-shirt friend whose posture softens into a warm smile.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hải bảo chiếc lá này nhặt hồi hai đứa còn đi học chung. Tôi cứ tưởng bạn đã bỏ cuốn sách cũ. \"I like autumn.\" Tôi thích mùa thu. Tôi vuốt mép lá, nhớ lại sân trường hồi ấy.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "autumn",
+          "meaning": "mùa thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The blue-shirt stickman gently touches the brittle edge of the pressed leaf, looking across the table at the purple-shirt friend whose posture softens into a warm smile. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The blue-shirt stickman gently touches the brittle edge of the pressed leaf, looking across the table at the purple-shirt friend whose posture softens into a warm smile.",
+          "reason": "Explain past relational tension and introduce model sentence two with emotional grounding.",
+          "visible_text": [
+            {
+              "text": "autumn · mùa thu",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Explain past relational tension and introduce model sentence two with emotional grounding.",
+          "anchor": {
+            "vi": {
+              "quote": "Hải bảo chiếc lá này nhặt hồi hai đứa còn đi học chung. Tôi cứ tưởng bạn đã bỏ cuốn sách cũ. \"I like autumn.\" Tôi thích mùa thu. Tôi vuốt mép lá, nhớ lại sân trường hồi ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain past relational tension and introduce model sentence two with emotional grounding. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Tách trà ấm",
+      "purpose": "Show simple hospitable gesture that confirms reconciliation.",
+      "action": "The blue-shirt stickman lifts a ceramic teapot to pour steaming tea into the friend's chip-rimmed cup beside the open book.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi rót thêm nước vào tách của Hải. Bạn hỏi tôi còn giữ cuốn sổ hồi đi học không. Tôi bảo vẫn còn, hứa lần sau mang tới. Bạn lấy chỗ đánh dấu để kẹp chiếc lá lại.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "autumn",
+          "meaning": "mùa thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The blue-shirt stickman lifts a ceramic teapot to pour steaming tea into the friend's chip-rimmed cup beside the open book. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The blue-shirt stickman lifts a ceramic teapot to pour steaming tea into the friend's chip-rimmed cup beside the open book.",
+          "reason": "Show simple hospitable gesture that confirms reconciliation.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show simple hospitable gesture that confirms reconciliation.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi rót thêm nước vào tách của Hải. Bạn hỏi tôi còn giữ cuốn sổ hồi đi học không. Tôi bảo vẫn còn, hứa lần sau mang tới. Bạn lấy chỗ đánh dấu để kẹp chiếc lá lại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show simple hospitable gesture that confirms reconciliation. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu hỏi nối lại",
+      "purpose": "Elicit the learner's response using autumn to answer the friend's question.",
+      "action": "The purple-shirt friend cradles the warm tea cup with both stick hands, gazing attentively at the blue-shirt stickman.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hải hỏi tôi còn thích khoảng thời gian lá đổi màu như ngày xưa không. Bạn nói giúp tôi câu tôi thích mùa thu bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "autumn",
+          "meaning": "mùa thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "The purple-shirt friend cradles the warm tea cup with both stick hands, gazing attentively at the blue-shirt stickman. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The purple-shirt friend cradles the warm tea cup with both stick hands, gazing attentively at the blue-shirt stickman.",
+          "reason": "Elicit the learner's response using autumn to answer the friend's question.",
+          "visible_text": [
+            {
+              "text": "I like ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit the learner's response using autumn to answer the friend's question.",
+          "anchor": {
+            "vi": {
+              "quote": "Hải hỏi tôi còn thích khoảng thời gian lá đổi màu như ngày xưa không. Bạn nói giúp tôi câu tôi thích mùa thu bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Elicit the learner's response using autumn to answer the friend's question. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kẹp lại trang kỷ niệm",
+      "purpose": "Present target answer model and conclude with a quiet, satisfying personal close.",
+      "action": "The purple-shirt friend carefully nests the dry golden leaf back into the middle fold of the book and shuts it gently, smiling at the blue-shirt stickman.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I like autumn.\" Tôi thích mùa thu. Hải kẹp lá vào sách, để cuốn sách trên bàn rồi hỏi tôi có muốn mượn không. Tôi nhận, dặn bạn đừng đòi lại sớm, còn bạn bảo tôi cứ đọc đi.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "autumn",
+          "meaning": "mùa thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The purple-shirt friend carefully nests the dry golden leaf back into the middle fold of the book and shuts it gently, smiling at the blue-shirt stickman. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The purple-shirt friend carefully nests the dry golden leaf back into the middle fold of the book and shuts it gently, smiling at the blue-shirt stickman.",
+          "reason": "Present target answer model and conclude with a quiet, satisfying personal close.",
+          "visible_text": [
+            {
+              "text": "I like autumn.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Present target answer model and conclude with a quiet, satisfying personal close.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I like autumn.\" Tôi thích mùa thu. Hải kẹp lá vào sách, để cuốn sách trên bàn rồi hỏi tôi có muốn mượn không. Tôi nhận, dặn bạn đừng đòi lại sớm, còn bạn bảo tôi cứ đọc đi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Present target answer model and conclude with a quiet, satisfying personal close. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Trang sách mở ra tiếng sột soạt. Chiếc lá vàng khô rơi khẽ xuống mặt bàn gỗ. Hải nhìn chiếc lá rồi khẽ bảo tôi: \"Leaves fall in autumn.\" Lá rụng vào mùa thu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Trang sách mở ra tiếng sột soạt. Chiếc lá vàng khô rơi khẽ xuống mặt bàn gỗ. Hải nhìn chiếc lá rồi khẽ bảo tôi: \"Leaves fall in autumn.\" Lá rụng vào mùa thu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Trang sách mở ra tiếng sột soạt. Chiếc lá vàng khô rơi khẽ xuống mặt bàn gỗ. Hải nhìn chiếc lá rồi khẽ bảo tôi: \"Leaves fall in autumn.\" Lá rụng vào mùa thu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Hải bảo chiếc lá này nhặt hồi hai đứa còn đi học chung. Tôi cứ tưởng bạn đã bỏ cuốn sách cũ. \"I like autumn.\" Tôi thích mùa thu. Tôi vuốt mép lá, nhớ lại sân trường hồi ấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Hải bảo chiếc lá này nhặt hồi hai đứa còn đi học chung. Tôi cứ tưởng bạn đã bỏ cuốn sách cũ. \"I like autumn.\" Tôi thích mùa thu. Tôi vuốt mép lá, nhớ lại sân trường hồi ấy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi rót thêm nước vào tách của Hải. Bạn hỏi tôi còn giữ cuốn sổ hồi đi học không. Tôi bảo vẫn còn, hứa lần sau mang tới. Bạn lấy chỗ đánh dấu để kẹp chiếc lá lại."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Hải hỏi tôi còn thích khoảng thời gian lá đổi màu như ngày xưa không. Bạn nói giúp tôi câu tôi thích mùa thu bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Hải hỏi tôi còn thích khoảng thời gian lá đổi màu như ngày xưa không. Bạn nói giúp tôi câu tôi thích mùa thu bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"I like autumn.\" Tôi thích mùa thu. Hải kẹp lá vào sách, để cuốn sách trên bàn rồi hỏi tôi có muốn mượn không. Tôi nhận, dặn bạn đừng đòi lại sớm, còn bạn bảo tôi cứ đọc đi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"I like autumn.\" Tôi thích mùa thu. Hải kẹp lá vào sách, để cuốn sách trên bàn rồi hỏi tôi có muốn mượn không. Tôi nhận, dặn bạn đừng đòi lại sớm, còn bạn bảo tôi cứ đọc đi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I like autumn.\" Tôi thích mùa thu. Hải kẹp lá vào sách, để cuốn sách trên bàn rồi hỏi tôi có muốn mượn không. Tôi nhận, dặn bạn đừng đòi lại sớm, còn bạn bảo tôi cứ đọc đi."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Hook viewer with the physical object of a pressed autumn leaf and introduce model sentence one.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Hook viewer with the physical object of a pressed autumn leaf and introduce model sentence one. Next causal state: The blue-shirt stickman gently touches the brittle edge of the pressed leaf, looking across the table at the purple-shirt friend whose posture softens into a warm smile."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Explain past relational tension and introduce model sentence two with emotional grounding.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Explain past relational tension and introduce model sentence two with emotional grounding. Next causal state: The blue-shirt stickman lifts a ceramic teapot to pour steaming tea into the friend's chip-rimmed cup beside the open book."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show simple hospitable gesture that confirms reconciliation.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show simple hospitable gesture that confirms reconciliation. Next causal state: The purple-shirt friend cradles the warm tea cup with both stick hands, gazing attentively at the blue-shirt stickman."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit the learner's response using autumn to answer the friend's question.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Elicit the learner's response using autumn to answer the friend's question. Next causal state: The purple-shirt friend carefully nests the dry golden leaf back into the middle fold of the book and shuts it gently, smiling at the blue-shirt stickman."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Present target answer model and conclude with a quiet, satisfying personal close.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Present target answer model and conclude with a quiet, satisfying personal close. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "20399",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hai người bạn cũ gặp lại sau một năm xa cách; chiếc lá ép khô kẹp giữa trang sách giúp xóa tan khoảng cách ngượng ngùng. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

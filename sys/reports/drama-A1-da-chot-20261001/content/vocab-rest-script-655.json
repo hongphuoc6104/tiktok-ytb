@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "3ecdc8e036a529c66e9e616bd08bbd77fa970d55146256944f8bcc2551f01698",
+  "topic": "Học từ vựng tiếng Anh REST (danh từ: sự nghỉ ngơi) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ REST",
+    "Làm rõ nghĩa lõi \"sự nghỉ ngơi\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng REST, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại REST, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Huy",
+      "appearance": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "outfit": "A single plain pale yellow short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đôi tay mỏi",
+      "purpose": "Establish physical tiredness after carrying heavy plant pots.",
+      "action": "The stick figure in the light sky blue shirt stands with drooping arms next to several large flower pots on a paved yard.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy đưa thêm chậu, tôi vẫn giữ tay. Chúng tôi đã dọn gần xong sân. \"I need a rest.\" Tôi cần nghỉ một chút. Cậu ngạc nhiên vì tôi ít khi dừng trước.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rest",
+          "meaning": "sự nghỉ ngơi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "The stick figure in the light sky blue shirt stands with drooping arms next to several large flower pots on a paved yard. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the light sky blue shirt stands with drooping arms next to several large flower pots on a paved yard.",
+          "reason": "Establish physical tiredness after carrying heavy plant pots.",
+          "visible_text": [
+            {
+              "text": "I need a rest.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish physical tiredness after carrying heavy plant pots.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy đưa thêm chậu, tôi vẫn giữ tay. Chúng tôi đã dọn gần xong sân. \"I need a rest.\" Tôi cần nghỉ một chút. Cậu ngạc nhiên vì tôi ít khi dừng trước.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish physical tiredness after carrying heavy plant pots. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Cần được nghỉ",
+      "purpose": "Express the need for a break using the first English model sentence.",
+      "action": "Mascot puts down watering can and indicates the stool under porch, yellow-shirt friend holds one remaining pot with puzzled posture.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn giúp Huy xếp vườn trước khi mẹ cậu về. Nhưng tay đã mỏi, tôi cần ngồi xuống. Một quãng nghỉ ở đây là lúc dừng làm để nghỉ ngơi, chưa bỏ việc chung.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rest",
+          "meaning": "sự nghỉ ngơi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot puts down watering can and indicates the stool under porch, yellow-shirt friend holds one remaining pot with puzzled posture. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot puts down watering can and indicates the stool under porch, yellow-shirt friend holds one remaining pot with puzzled posture.",
+          "reason": "Express the need for a break using the first English model sentence.",
+          "visible_text": [
+            {
+              "text": "rest · sự nghỉ ngơi",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Express the need for a break using the first English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn giúp Huy xếp vườn trước khi mẹ cậu về. Nhưng tay đã mỏi, tôi cần ngồi xuống. Một quãng nghỉ ở đây là lúc dừng làm để nghỉ ngơi, chưa bỏ việc chung.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Express the need for a break using the first English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Rủ nhau ngồi nghỉ",
+      "purpose": "The companion invites a shared break with the second English model sentence.",
+      "action": "The stick figure in the pale yellow shirt pulls two wooden stools into the shade under a porch awning.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy định làm nốt một mình. Tôi giữ hai chiếc ghế: \"Let's have a rest.\" Chúng ta nghỉ một chút nhé. Cậu nhìn chậu cuối, rồi đặt nó xuống cạnh sân.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rest",
+          "meaning": "sự nghỉ ngơi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The stick figure in the pale yellow shirt pulls two wooden stools into the shade under a porch awning. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the pale yellow shirt pulls two wooden stools into the shade under a porch awning.",
+          "reason": "The companion invites a shared break with the second English model sentence.",
+          "visible_text": [
+            {
+              "text": "Let's have a rest.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "The companion invites a shared break with the second English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy định làm nốt một mình. Tôi giữ hai chiếc ghế: \"Let's have a rest.\" Chúng ta nghỉ một chút nhé. Cậu nhìn chậu cuối, rồi đặt nó xuống cạnh sân.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "The companion invites a shared break with the second English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Bóng râm dưới hiên",
+      "purpose": "Show the peaceful enjoyment of resting while appreciating the finished chore.",
+      "action": "Both figures sit on stools under porch with glasses of water; one final unplaced pot waits on courtyard edge, no claim all work done.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hai đứa ngồi dưới hiên, uống nước. Huy bảo mình sợ tôi chờ lâu sẽ bực. Tôi lắc đầu, rủ cậu ngắm hàng cây vừa xếp, chưa cần đi đâu.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rest",
+          "meaning": "sự nghỉ ngơi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both figures sit on stools under porch with glasses of water; one final unplaced pot waits on courtyard edge, no claim all work done. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both figures sit on stools under porch with glasses of water; one final unplaced pot waits on courtyard edge, no claim all work done.",
+          "reason": "Show the peaceful enjoyment of resting while appreciating the finished chore.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Show the peaceful enjoyment of resting while appreciating the finished chore.",
+          "anchor": {
+            "vi": {
+              "quote": "Hai đứa ngồi dưới hiên, uống nước. Huy bảo mình sợ tôi chờ lâu sẽ bực. Tôi lắc đầu, rủ cậu ngắm hàng cây vừa xếp, chưa cần đi đâu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the peaceful enjoyment of resting while appreciating the finished chore. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Nhắc lại nhu cầu",
+      "purpose": "Prompt the learner to produce the first model sentence expressing the need for a rest.",
+      "action": "The stick figure in the light sky blue shirt looks forward calmly while seated on the stool.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Huy đưa bình tưới, hỏi tôi có muốn làm tiếp ngay không. Bạn nói giúp tôi câu tôi cần nghỉ một chút bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rest",
+          "meaning": "sự nghỉ ngơi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The stick figure in the light sky blue shirt looks forward calmly while seated on the stool. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the light sky blue shirt looks forward calmly while seated on the stool.",
+          "reason": "Prompt the learner to produce the first model sentence expressing the need for a rest.",
+          "visible_text": [
+            {
+              "text": "I need a ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to produce the first model sentence expressing the need for a rest.",
+          "anchor": {
+            "vi": {
+              "quote": "Huy đưa bình tưới, hỏi tôi có muốn làm tiếp ngay không. Bạn nói giúp tôi câu tôi cần nghỉ một chút bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to produce the first model sentence expressing the need for a rest. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Lấy lại sức lực",
+      "purpose": "Reinforce the model sentence and conclude the restful domestic scene.",
+      "action": "Yellow-shirt friend has put watering can aside and sits again beside mascot; remaining pot still waits on ground. No fan needed.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I need a rest.\" Tôi cần nghỉ một chút. Huy để bình xuống, ngồi lại cạnh tôi. Chậu cuối vẫn đợi, còn chiếc ghế tôi kéo cho cậu đã có người ngồi.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rest",
+          "meaning": "sự nghỉ ngơi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Yellow-shirt friend has put watering can aside and sits again beside mascot; remaining pot still waits on ground. No fan needed. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Yellow-shirt friend has put watering can aside and sits again beside mascot; remaining pot still waits on ground. No fan needed.",
+          "reason": "Reinforce the model sentence and conclude the restful domestic scene.",
+          "visible_text": [
+            {
+              "text": "I need a rest.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Reinforce the model sentence and conclude the restful domestic scene.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need a rest.\" Tôi cần nghỉ một chút. Huy để bình xuống, ngồi lại cạnh tôi. Chậu cuối vẫn đợi, còn chiếc ghế tôi kéo cho cậu đã có người ngồi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Reinforce the model sentence and conclude the restful domestic scene. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Huy đưa thêm chậu, tôi vẫn giữ tay. Chúng tôi đã dọn gần xong sân. \"I need a rest.\" Tôi cần nghỉ một chút. Cậu ngạc nhiên vì tôi ít khi dừng trước."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Huy đưa thêm chậu, tôi vẫn giữ tay. Chúng tôi đã dọn gần xong sân. \"I need a rest.\" Tôi cần nghỉ một chút. Cậu ngạc nhiên vì tôi ít khi dừng trước."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Huy đưa thêm chậu, tôi vẫn giữ tay. Chúng tôi đã dọn gần xong sân. \"I need a rest.\" Tôi cần nghỉ một chút. Cậu ngạc nhiên vì tôi ít khi dừng trước."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi muốn giúp Huy xếp vườn trước khi mẹ cậu về. Nhưng tay đã mỏi, tôi cần ngồi xuống. Một quãng nghỉ ở đây là lúc dừng làm để nghỉ ngơi, chưa bỏ việc chung."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Huy định làm nốt một mình. Tôi giữ hai chiếc ghế: \"Let's have a rest.\" Chúng ta nghỉ một chút nhé. Cậu nhìn chậu cuối, rồi đặt nó xuống cạnh sân."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Huy định làm nốt một mình. Tôi giữ hai chiếc ghế: \"Let's have a rest.\" Chúng ta nghỉ một chút nhé. Cậu nhìn chậu cuối, rồi đặt nó xuống cạnh sân."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Hai đứa ngồi dưới hiên, uống nước. Huy bảo mình sợ tôi chờ lâu sẽ bực. Tôi lắc đầu, rủ cậu ngắm hàng cây vừa xếp, chưa cần đi đâu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Huy đưa bình tưới, hỏi tôi có muốn làm tiếp ngay không. Bạn nói giúp tôi câu tôi cần nghỉ một chút bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Huy đưa bình tưới, hỏi tôi có muốn làm tiếp ngay không. Bạn nói giúp tôi câu tôi cần nghỉ một chút bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"I need a rest.\" Tôi cần nghỉ một chút. Huy để bình xuống, ngồi lại cạnh tôi. Chậu cuối vẫn đợi, còn chiếc ghế tôi kéo cho cậu đã có người ngồi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"I need a rest.\" Tôi cần nghỉ một chút. Huy để bình xuống, ngồi lại cạnh tôi. Chậu cuối vẫn đợi, còn chiếc ghế tôi kéo cho cậu đã có người ngồi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I need a rest.\" Tôi cần nghỉ một chút. Huy để bình xuống, ngồi lại cạnh tôi. Chậu cuối vẫn đợi, còn chiếc ghế tôi kéo cho cậu đã có người ngồi."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish physical tiredness after carrying heavy plant pots.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish physical tiredness after carrying heavy plant pots. Next causal state: Mascot puts down watering can and indicates the stool under porch, yellow-shirt friend holds one remaining pot with puzzled posture."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Express the need for a break using the first English model sentence.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Express the need for a break using the first English model sentence. Next causal state: The stick figure in the pale yellow shirt pulls two wooden stools into the shade under a porch awning."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "The companion invites a shared break with the second English model sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "The companion invites a shared break with the second English model sentence. Next causal state: Both figures sit on stools under porch with glasses of water; one final unplaced pot waits on courtyard edge, no claim all work done."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Show the peaceful enjoyment of resting while appreciating the finished chore.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the peaceful enjoyment of resting while appreciating the finished chore. Next causal state: The stick figure in the light sky blue shirt looks forward calmly while seated on the stool."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to produce the first model sentence expressing the need for a rest.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to produce the first model sentence expressing the need for a rest. Next causal state: Yellow-shirt friend has put watering can aside and sits again beside mascot; remaining pot still waits on ground. No fan needed."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Reinforce the model sentence and conclude the restful domestic scene.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Reinforce the model sentence and conclude the restful domestic scene. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18259",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Huy muốn hoàn thành vườn ngay, còn tôi cần một quãng nghỉ và rủ cậu dừng cùng thay vì làm nốt một mình. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20602",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Huy muốn hoàn thành vườn ngay, còn tôi cần một quãng nghỉ và rủ cậu dừng cùng thay vì làm nốt một mình. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

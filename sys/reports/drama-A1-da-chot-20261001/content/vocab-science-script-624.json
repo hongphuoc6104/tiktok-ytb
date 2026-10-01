@@ -1,0 +1,591 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "4408c01a5d275b43d5fa595c153a959116e6d1ed6156ca30de6d90411899e21d",
+  "topic": "Học từ vựng tiếng Anh SCIENCE (danh từ: khoa học) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SCIENCE",
+    "Làm rõ nghĩa lõi \"khoa học\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SCIENCE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SCIENCE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Hải",
+      "appearance": "A minimal stick figure with a round white head and a simple olive-toned vest.",
+      "outfit": "Exactly one plain olive green short-sleeve shirt and minimal navy stick limbs."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Lá cây héo rũ",
+      "purpose": "Establish the sudden gardening problem and caution against guessing.",
+      "action": "At a study table, olive-shirt learner holds an eraser above an illustrated question page; mascot keeps the page flat with one stick hand. Two plant photographs nearby, no readable text.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hải định xóa câu hỏi về cây. Bạn bảo đoán chắc do thiếu nước rồi. Minh giữ trang vở: \"We study science at school.\" Chúng mình học khoa học ở trường.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "science",
+          "meaning": "khoa học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "At a study table, olive-shirt learner holds an eraser above an illustrated question page; mascot keeps the page flat with one stick hand. Two plant photographs nearby, no readable text. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At a study table, olive-shirt learner holds an eraser above an illustrated question page; mascot keeps the page flat with one stick hand. Two plant photographs nearby, no readable text.",
+          "reason": "Establish the sudden gardening problem and caution against guessing.",
+          "visible_text": [
+            {
+              "text": "We study science at school.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the sudden gardening problem and caution against guessing.",
+          "anchor": {
+            "vi": {
+              "quote": "Hải định xóa câu hỏi về cây. Bạn bảo đoán chắc do thiếu nước rồi. Minh giữ trang vở: \"We study science at school.\" Chúng mình học khoa học ở trường.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the sudden gardening problem and caution against guessing. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Bài học từ trường",
+      "purpose": "Introduce the first target model sentence naming science as a school subject.",
+      "action": "Mascot opens a school science notebook with simple tree and leaf diagrams, olive-shirt learner listens. No readable labels.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Cậu muốn mang câu hỏi tới tiết học thay vì xóa. Môn khoa học giúp hai bạn tìm hiểu tự nhiên và kiểm thông tin. Hai chậu cây nhìn khác nhau chưa đủ biết nguyên nhân.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "science",
+          "meaning": "khoa học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot opens a school science notebook with simple tree and leaf diagrams, olive-shirt learner listens. No readable labels. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot opens a school science notebook with simple tree and leaf diagrams, olive-shirt learner listens. No readable labels.",
+          "reason": "Introduce the first target model sentence naming science as a school subject.",
+          "visible_text": [
+            {
+              "text": "science · khoa học",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first target model sentence naming science as a school subject.",
+          "anchor": {
+            "vi": {
+              "quote": "Cậu muốn mang câu hỏi tới tiết học thay vì xóa. Môn khoa học giúp hai bạn tìm hiểu tự nhiên và kiểm thông tin. Hai chậu cây nhìn khác nhau chưa đủ biết nguyên nhân.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first target model sentence naming science as a school subject. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nguyên nhân thật sự",
+      "purpose": "Demonstrate the scientific explanation contrasting assumption with evidence.",
+      "action": "Both plant photographs rest beside the preserved question page; the eraser is set aside, pencil lies between the two learners.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hải đặt bút xuống. Minh lấy ảnh chậu cây cả hai đã chụp, giữ câu hỏi bên cạnh. Họ chưa bón gì hoặc nhận suy đoán ấy là kết quả.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "science",
+          "meaning": "khoa học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both plant photographs rest beside the preserved question page; the eraser is set aside, pencil lies between the two learners. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both plant photographs rest beside the preserved question page; the eraser is set aside, pencil lies between the two learners.",
+          "reason": "Demonstrate the scientific explanation contrasting assumption with evidence.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Demonstrate the scientific explanation contrasting assumption with evidence.",
+          "anchor": {
+            "vi": {
+              "quote": "Hải đặt bút xuống. Minh lấy ảnh chậu cây cả hai đã chụp, giữ câu hỏi bên cạnh. Họ chưa bón gì hoặc nhận suy đoán ấy là kết quả.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Demonstrate the scientific explanation contrasting assumption with evidence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Sở thích mới",
+      "purpose": "Deliver the second English model sentence asking about interest in science.",
+      "action": "Olive-shirt learner asks mascot across the same study table; mascot offers the notebook toward the shared center.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Do you like science?\" Bạn có thích khoa học không? Hải hỏi khi Minh đề nghị cùng tìm tài liệu của lớp. Minh gật đầu, đưa vở về giữa bàn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "science",
+          "meaning": "khoa học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Olive-shirt learner asks mascot across the same study table; mascot offers the notebook toward the shared center. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Olive-shirt learner asks mascot across the same study table; mascot offers the notebook toward the shared center.",
+          "reason": "Deliver the second English model sentence asking about interest in science.",
+          "visible_text": [
+            {
+              "text": "Do you like science?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Deliver the second English model sentence asking about interest in science.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Do you like science?\" Bạn có thích khoa học không? Hải hỏi khi Minh đề nghị cùng tìm tài liệu của lớp. Minh gật đầu, đưa vở về giữa bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver the second English model sentence asking about interest in science. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hỏi bạn về môn học",
+      "purpose": "Prompt learner retrieval of the question with science.",
+      "action": "Both learners remain at the same table with notebook and two photos, no findings or treatment instructions. Hold upper safe space for practice.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hải muốn rủ Minh học cùng nhưng cần hỏi cậu thích môn này không. Bạn nói giúp Hải câu bạn có thích khoa học không bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "science",
+          "meaning": "khoa học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both learners remain at the same table with notebook and two photos, no findings or treatment instructions. Hold upper safe space for practice. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both learners remain at the same table with notebook and two photos, no findings or treatment instructions. Hold upper safe space for practice.",
+          "reason": "Prompt learner retrieval of the question with science.",
+          "visible_text": [
+            {
+              "text": "Do you like ___?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt learner retrieval of the question with science.",
+          "anchor": {
+            "vi": {
+              "quote": "Hải muốn rủ Minh học cùng nhưng cần hỏi cậu thích môn này không. Bạn nói giúp Hải câu bạn có thích khoa học không bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt learner retrieval of the question with science. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Đất ráo mầm xanh",
+      "purpose": "Confirm target sentence and resolve the scene with practical outdoor success.",
+      "action": "Olive-shirt learner places the two photographs inside the notebook while mascot closes his own school bag beside him.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Do you like science?\" Bạn có thích khoa học không? Minh nhận lời. Hải viết lại câu hỏi vừa định xóa, kẹp ảnh vào vở để mai mang tới lớp.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "science",
+          "meaning": "khoa học"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Olive-shirt learner places the two photographs inside the notebook while mascot closes his own school bag beside him. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Olive-shirt learner places the two photographs inside the notebook while mascot closes his own school bag beside him.",
+          "reason": "Confirm target sentence and resolve the scene with practical outdoor success.",
+          "visible_text": [
+            {
+              "text": "Do you like science?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm target sentence and resolve the scene with practical outdoor success.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Do you like science?\" Bạn có thích khoa học không? Minh nhận lời. Hải viết lại câu hỏi vừa định xóa, kẹp ảnh vào vở để mai mang tới lớp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm target sentence and resolve the scene with practical outdoor success. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Hải định xóa câu hỏi về cây. Bạn bảo đoán chắc do thiếu nước rồi. Minh giữ trang vở: \"We study science at school.\" Chúng mình học khoa học ở trường."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Hải định xóa câu hỏi về cây. Bạn bảo đoán chắc do thiếu nước rồi. Minh giữ trang vở: \"We study science at school.\" Chúng mình học khoa học ở trường."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Hải định xóa câu hỏi về cây. Bạn bảo đoán chắc do thiếu nước rồi. Minh giữ trang vở: \"We study science at school.\" Chúng mình học khoa học ở trường."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Cậu muốn mang câu hỏi tới tiết học thay vì xóa. Môn khoa học giúp hai bạn tìm hiểu tự nhiên và kiểm thông tin. Hai chậu cây nhìn khác nhau chưa đủ biết nguyên nhân."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Hải đặt bút xuống. Minh lấy ảnh chậu cây cả hai đã chụp, giữ câu hỏi bên cạnh. Họ chưa bón gì hoặc nhận suy đoán ấy là kết quả."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"Do you like science?\" Bạn có thích khoa học không? Hải hỏi khi Minh đề nghị cùng tìm tài liệu của lớp. Minh gật đầu, đưa vở về giữa bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"Do you like science?\" Bạn có thích khoa học không? Hải hỏi khi Minh đề nghị cùng tìm tài liệu của lớp. Minh gật đầu, đưa vở về giữa bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Hải muốn rủ Minh học cùng nhưng cần hỏi cậu thích môn này không. Bạn nói giúp Hải câu bạn có thích khoa học không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Hải muốn rủ Minh học cùng nhưng cần hỏi cậu thích môn này không. Bạn nói giúp Hải câu bạn có thích khoa học không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"Do you like science?\" Bạn có thích khoa học không? Minh nhận lời. Hải viết lại câu hỏi vừa định xóa, kẹp ảnh vào vở để mai mang tới lớp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"Do you like science?\" Bạn có thích khoa học không? Minh nhận lời. Hải viết lại câu hỏi vừa định xóa, kẹp ảnh vào vở để mai mang tới lớp."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Do you like science?\" Bạn có thích khoa học không? Minh nhận lời. Hải viết lại câu hỏi vừa định xóa, kẹp ảnh vào vở để mai mang tới lớp."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the sudden gardening problem and caution against guessing.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the sudden gardening problem and caution against guessing. Next causal state: Mascot opens a school science notebook with simple tree and leaf diagrams, olive-shirt learner listens. No readable labels."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first target model sentence naming science as a school subject.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first target model sentence naming science as a school subject. Next causal state: Both plant photographs rest beside the preserved question page; the eraser is set aside, pencil lies between the two learners."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Demonstrate the scientific explanation contrasting assumption with evidence.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Demonstrate the scientific explanation contrasting assumption with evidence. Next causal state: Olive-shirt learner asks mascot across the same study table; mascot offers the notebook toward the shared center."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Deliver the second English model sentence asking about interest in science.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Deliver the second English model sentence asking about interest in science. Next causal state: Both learners remain at the same table with notebook and two photos, no findings or treatment instructions. Hold upper safe space for practice."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt learner retrieval of the question with science.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt learner retrieval of the question with science. Next causal state: Olive-shirt learner places the two photographs inside the notebook while mascot closes his own school bag beside him."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm target sentence and resolve the scene with practical outdoor success.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm target sentence and resolve the scene with practical outdoor success. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18094",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Hải định bỏ câu hỏi vì đã đoán nguyên nhân cây héo. Minh giữ câu hỏi và cùng bạn chuẩn bị tìm hiểu trong môn khoa học. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "19536",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hải định bỏ câu hỏi vì đã đoán nguyên nhân cây héo. Minh giữ câu hỏi và cùng bạn chuẩn bị tìm hiểu trong môn khoa học. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

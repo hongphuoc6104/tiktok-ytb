@@ -1,0 +1,491 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "f32885d541bbcec7f38679300432cc64f88701b7e818673ca7b511a55b45f852",
+  "topic": "Học từ vựng tiếng Anh WEBSITE (danh từ: trang web) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ WEBSITE",
+    "Làm rõ nghĩa lõi \"trang web\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng WEBSITE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại WEBSITE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Bác Hùng",
+      "appearance": "Minimal ink stick figure, older basket maker with simple short gray hair, a round white face and solid black oval eyes. Simple proportions and modest expressions, no realistic muscles or fingers.",
+      "outfit": "Exactly one plain mustard-yellow short-sleeve top and minimal stick limbs; no layered shirt or printed logo."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chi tiết đầu chuyện",
+      "purpose": "Open with the visible human need and an early usable English utterance.",
+      "action": "At a craft room table, the older basket maker places a real small woven basket beside mascot's laptop and hesitates to ask if it appears in the communal website. No real URL.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bác đặt chiếc rổ cạnh máy, chưa dám hỏi. \"Visit the website.\" Mở trang web nhé. Tôi kéo màn hình lại gần, hỏi bác muốn tìm mẫu nào trước.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "website",
+          "meaning": "trang web"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "At a craft room table, the older basket maker places a real small woven basket beside mascot's laptop and hesitates to ask if it appears in the communal website. No real URL. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At a craft room table, the older basket maker places a real small woven basket beside mascot's laptop and hesitates to ask if it appears in the communal website. No real URL.",
+          "reason": "Open with the visible human need and an early usable English utterance.",
+          "visible_text": [
+            {
+              "text": "Visit the website.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with the visible human need and an early usable English utterance.",
+          "anchor": {
+            "vi": {
+              "quote": "Bác đặt chiếc rổ cạnh máy, chưa dám hỏi. \"Visit the website.\" Mở trang web nhé. Tôi kéo màn hình lại gần, hỏi bác muốn tìm mẫu nào trước.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with the visible human need and an early usable English utterance. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Điều cần hiểu",
+      "purpose": "Show the relationship and resistance without a procedural lecture.",
+      "action": "Mascot opens a generic website gallery of baskets while the older man points to one distinctive handle. No names, promotional claims or specific village information.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Làng nghề có trang giới thiệu chung, bác chưa xem lần nào. Tôi mở từng ảnh rổ, bác cứ nói đẹp quá mà. Đến tấm ảnh ở cuối, bác chỉ tay vào một chiếc quai.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "website",
+          "meaning": "trang web"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot opens a generic website gallery of baskets while the older man points to one distinctive handle. No names, promotional claims or specific village information. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot opens a generic website gallery of baskets while the older man points to one distinctive handle. No names, promotional claims or specific village information.",
+          "reason": "Show the relationship and resistance without a procedural lecture.",
+          "visible_text": [
+            {
+              "text": "website · trang web",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Show the relationship and resistance without a procedural lecture.",
+          "anchor": {
+            "vi": {
+              "quote": "Làng nghề có trang giới thiệu chung, bác chưa xem lần nào. Tôi mở từng ảnh rổ, bác cứ nói đẹp quá mà. Đến tấm ảnh ở cuối, bác chỉ tay vào một chiếc quai.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the relationship and resistance without a procedural lecture. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hành động làm đổi chuyện",
+      "purpose": "Use the second English model with correct time/reference and a meaningful visible action.",
+      "action": "The maker recognizes the handle he rewove in a gallery image and tells mascot about it. Mascot pauses the pointer over that thumbnail instead of rushing to another page.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I like this website.\" Bác thích trang web này. Bác nhận ra chiếc quai mình đã đan lại, kể vì sao nó khác bản đầu. Tôi dừng chuột ở đúng ảnh ấy.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "website",
+          "meaning": "trang web"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The maker recognizes the handle he rewove in a gallery image and tells mascot about it. Mascot pauses the pointer over that thumbnail instead of rushing to another page. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The maker recognizes the handle he rewove in a gallery image and tells mascot about it. Mascot pauses the pointer over that thumbnail instead of rushing to another page.",
+          "reason": "Use the second English model with correct time/reference and a meaningful visible action.",
+          "visible_text": [
+            {
+              "text": "I like this website.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model with correct time/reference and a meaningful visible action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I like this website.\" Bác thích trang web này. Bác nhận ra chiếc quai mình đã đan lại, kể vì sao nó khác bản đầu. Tôi dừng chuột ở đúng ảnh ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use the second English model with correct time/reference and a meaningful visible action. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời người xem giúp nói",
+      "purpose": "Invite one supported sentence for the same need; wait before revealing the answer.",
+      "action": "Hold the two beside the same generic website gallery and real basket, supported stem above. No full answer or readable navigation labels.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn nhắc giúp tôi câu mở trang web bằng tiếng Anh nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "website",
+          "meaning": "trang web"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the two beside the same generic website gallery and real basket, supported stem above. No full answer or readable navigation labels. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the two beside the same generic website gallery and real basket, supported stem above. No full answer or readable navigation labels.",
+          "reason": "Invite one supported sentence for the same need; wait before revealing the answer.",
+          "visible_text": [
+            {
+              "text": "Visit the ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one supported sentence for the same need; wait before revealing the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhắc giúp tôi câu mở trang web bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite one supported sentence for the same need; wait before revealing the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả",
+      "purpose": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+      "action": "The maker brings the real basket forward on the table for a future picture while mascot moves the laptop aside to make room. Show the craft itself taking space, no automatic online publication.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Visit the website.\" Đúng rồi. Bác xem thêm một lúc, rồi đặt chiếc rổ thật lên bàn: Lần sau chụp cái này nhé. Tôi dịch máy sang bên, để chiếc rổ có chỗ đứng.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "website",
+          "meaning": "trang web"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The maker brings the real basket forward on the table for a future picture while mascot moves the laptop aside to make room. Show the craft itself taking space, no automatic online publication. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The maker brings the real basket forward on the table for a future picture while mascot moves the laptop aside to make room. Show the craft itself taking space, no automatic online publication.",
+          "reason": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+          "visible_text": [
+            {
+              "text": "Visit the website.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Visit the website.\" Đúng rồi. Bác xem thêm một lúc, rồi đặt chiếc rổ thật lên bàn: Lần sau chụp cái này nhé. Tôi dịch máy sang bên, để chiếc rổ có chỗ đứng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bác đặt chiếc rổ cạnh máy, chưa dám hỏi. \"Visit the website.\" Mở trang web nhé. Tôi kéo màn hình lại gần, hỏi bác muốn tìm mẫu nào trước."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bác đặt chiếc rổ cạnh máy, chưa dám hỏi. \"Visit the website.\" Mở trang web nhé. Tôi kéo màn hình lại gần, hỏi bác muốn tìm mẫu nào trước."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Bác đặt chiếc rổ cạnh máy, chưa dám hỏi. \"Visit the website.\" Mở trang web nhé. Tôi kéo màn hình lại gần, hỏi bác muốn tìm mẫu nào trước."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Làng nghề có trang giới thiệu chung, bác chưa xem lần nào. Tôi mở từng ảnh rổ, bác cứ nói đẹp quá mà. Đến tấm ảnh ở cuối, bác chỉ tay vào một chiếc quai."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Làng nghề có trang giới thiệu chung, bác chưa xem lần nào. Tôi mở từng ảnh rổ, bác cứ nói đẹp quá mà. Đến tấm ảnh ở cuối, bác chỉ tay vào một chiếc quai."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"I like this website.\" Bác thích trang web này. Bác nhận ra chiếc quai mình đã đan lại, kể vì sao nó khác bản đầu. Tôi dừng chuột ở đúng ảnh ấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"I like this website.\" Bác thích trang web này. Bác nhận ra chiếc quai mình đã đan lại, kể vì sao nó khác bản đầu. Tôi dừng chuột ở đúng ảnh ấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn nhắc giúp tôi câu mở trang web bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Visit the website.\" Đúng rồi. Bác xem thêm một lúc, rồi đặt chiếc rổ thật lên bàn: Lần sau chụp cái này nhé. Tôi dịch máy sang bên, để chiếc rổ có chỗ đứng."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with the visible human need and an early usable English utterance.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with the visible human need and an early usable English utterance. Next causal state: Mascot opens a generic website gallery of baskets while the older man points to one distinctive handle. No names, promotional claims or specific village information."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Show the relationship and resistance without a procedural lecture.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Show the relationship and resistance without a procedural lecture. Next causal state: The maker recognizes the handle he rewove in a gallery image and tells mascot about it. Mascot pauses the pointer over that thumbnail instead of rushing to another page."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model with correct time/reference and a meaningful visible action.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the second English model with correct time/reference and a meaningful visible action. Next causal state: Hold the two beside the same generic website gallery and real basket, supported stem above. No full answer or readable navigation labels."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one supported sentence for the same need; wait before revealing the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Invite one supported sentence for the same need; wait before revealing the answer. Next causal state: The maker brings the real basket forward on the table for a future picture while mascot moves the laptop aside to make room. Show the craft itself taking space, no automatic online publication."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19195",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Bác muốn biết sản phẩm mình làm có xuất hiện trên trang web chung hay không; được xem ảnh rồi chỉ ra chi tiết tay mình đã sửa. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

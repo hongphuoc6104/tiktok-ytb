@@ -1,0 +1,589 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "b74c3612a72c37258c437a84bedbf084fcc815978672469109ab938b829ef28f",
+  "topic": "Học từ vựng tiếng Anh BACK (danh từ: phía sau, mặt sau (của vật)) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ BACK",
+    "Làm rõ nghĩa lõi \"phía sau, mặt sau (của vật)\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng BACK, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại BACK, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Cô Mai",
+      "appearance": "A minimalist stick figure with a round white head outlined in navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "A plain yellow short-sleeve shirt and dark trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Khung ảnh cũ",
+      "purpose": "Introduce the mystery of an undated family photograph.",
+      "action": "Mascot and yellow-shirt aunt hold framed abstract landscape photograph front-facing under a lamp. No family faces or third person.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Cô Mai giữ ảnh, chẳng nhớ ngày chụp. Tôi đề nghị: \"Look at the back.\" Nhìn mặt sau nhé cô. Mặt trước có ảnh, chỗ cần tìm có thể ở phía đối diện.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "back",
+          "meaning": "mặt sau của đồ vật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and yellow-shirt aunt hold framed abstract landscape photograph front-facing under a lamp. No family faces or third person. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and yellow-shirt aunt hold framed abstract landscape photograph front-facing under a lamp. No family faces or third person.",
+          "reason": "Introduce the mystery of an undated family photograph.",
+          "visible_text": [
+            {
+              "text": "Look at the back.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce the mystery of an undated family photograph.",
+          "anchor": {
+            "vi": {
+              "quote": "Cô Mai giữ ảnh, chẳng nhớ ngày chụp. Tôi đề nghị: \"Look at the back.\" Nhìn mặt sau nhé cô. Mặt trước có ảnh, chỗ cần tìm có thể ở phía đối diện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the mystery of an undated family photograph. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lật mặt sau",
+      "purpose": "Present the first model directing attention to the back of the object.",
+      "action": "Frame rests on plain cloth, both figures gently support opposite edges while turning it toward reverse side.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Cô sợ lật mạnh sẽ làm rơi ảnh. Tôi đặt khung lên khăn mềm, đỡ cả hai mép rồi cùng cô xoay. Mặt sau vẫn nguyên, có một mẩu giấy ông đã dán.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "back",
+          "meaning": "mặt sau của đồ vật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Frame rests on plain cloth, both figures gently support opposite edges while turning it toward reverse side. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Frame rests on plain cloth, both figures gently support opposite edges while turning it toward reverse side.",
+          "reason": "Present the first model directing attention to the back of the object.",
+          "visible_text": [
+            {
+              "text": "back · mặt sau của đồ vật",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Present the first model directing attention to the back of the object.",
+          "anchor": {
+            "vi": {
+              "quote": "Cô sợ lật mạnh sẽ làm rơi ảnh. Tôi đặt khung lên khăn mềm, đỡ cả hai mép rồi cùng cô xoay. Mặt sau vẫn nguyên, có một mẩu giấy ông đã dán.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Present the first model directing attention to the back of the object. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nét chữ của ông",
+      "purpose": "Provide the second model showing the date located on the back of the frame.",
+      "action": "Close view of frame reverse with one attached note bearing permitted date; yellow-shirt aunt looks at it beside mascot.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The date is on the back.\" Ngày tháng ở mặt sau. Tôi chỉ dòng ông viết, cô cúi xuống đọc. Lâu rồi cô chỉ xem mặt ảnh, chưa nhìn phía này.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "back",
+          "meaning": "mặt sau của đồ vật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Close view of frame reverse with one attached note bearing permitted date; yellow-shirt aunt looks at it beside mascot. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close view of frame reverse with one attached note bearing permitted date; yellow-shirt aunt looks at it beside mascot.",
+          "reason": "Provide the second model showing the date located on the back of the frame.",
+          "visible_text": [
+            {
+              "text": "The date is on the back.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Provide the second model showing the date located on the back of the frame.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The date is on the back.\" Ngày tháng ở mặt sau. Tôi chỉ dòng ông viết, cô cúi xuống đọc. Lâu rồi cô chỉ xem mặt ảnh, chưa nhìn phía này.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide the second model showing the date located on the back of the frame. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Gia cố khung gỗ",
+      "purpose": "Show the careful physical maintenance needed to protect the heirloom.",
+      "action": "Mascot holds frame front-facing while aunt places plain phone on table ready to photograph its reverse again.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Cô muốn chụp lại ngày ấy để nhớ, nhưng tôi đã quay khung về phía ảnh. Cô đặt điện thoại sang bên, xin tôi xoay lại. Tôi giữ khung, đợi cô chuẩn bị.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "back",
+          "meaning": "mặt sau của đồ vật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot holds frame front-facing while aunt places plain phone on table ready to photograph its reverse again. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds frame front-facing while aunt places plain phone on table ready to photograph its reverse again.",
+          "reason": "Show the careful physical maintenance needed to protect the heirloom.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Show the careful physical maintenance needed to protect the heirloom.",
+          "anchor": {
+            "vi": {
+              "quote": "Cô muốn chụp lại ngày ấy để nhớ, nhưng tôi đã quay khung về phía ảnh. Cô đặt điện thoại sang bên, xin tôi xoay lại. Tôi giữ khung, đợi cô chuẩn bị.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the careful physical maintenance needed to protect the heirloom. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kiểm tra lần cuối",
+      "purpose": "Engage the learner to produce the instruction to look at the back.",
+      "action": "Aunt asks mascot to turn frame, phone waiting on table. Upper safe region for stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Cô cần nhờ tôi nhìn mặt sau thêm một lần nữa. Bạn nói giúp cô câu nhìn mặt sau bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "back",
+          "meaning": "mặt sau của đồ vật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Aunt asks mascot to turn frame, phone waiting on table. Upper safe region for stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Aunt asks mascot to turn frame, phone waiting on table. Upper safe region for stem.",
+          "reason": "Engage the learner to produce the instruction to look at the back.",
+          "visible_text": [
+            {
+              "text": "Look at the ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Engage the learner to produce the instruction to look at the back.",
+          "anchor": {
+            "vi": {
+              "quote": "Cô cần nhờ tôi nhìn mặt sau thêm một lần nữa. Bạn nói giúp cô câu nhìn mặt sau bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Engage the learner to produce the instruction to look at the back. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Treo lại kỷ niệm",
+      "purpose": "Confirm the target word and conclude with the restored family photograph.",
+      "action": "Aunt photographs reverse of frame with phone screen facing away; beside it open album contains a blank pocket for copy. No repair tools or nails.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Look at the back.\" Nhìn mặt sau nhé. Tôi xoay khung lại. Cô chụp xong, đặt ảnh lên bàn; lần này còn giữ cả mẩu giấy ghi ngày trong tập ảnh của mình.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "back",
+          "meaning": "mặt sau của đồ vật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Aunt photographs reverse of frame with phone screen facing away; beside it open album contains a blank pocket for copy. No repair tools or nails. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Aunt photographs reverse of frame with phone screen facing away; beside it open album contains a blank pocket for copy. No repair tools or nails.",
+          "reason": "Confirm the target word and conclude with the restored family photograph.",
+          "visible_text": [
+            {
+              "text": "Look at the back.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm the target word and conclude with the restored family photograph.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Look at the back.\" Nhìn mặt sau nhé. Tôi xoay khung lại. Cô chụp xong, đặt ảnh lên bàn; lần này còn giữ cả mẩu giấy ghi ngày trong tập ảnh của mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the target word and conclude with the restored family photograph. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Cô Mai giữ ảnh, chẳng nhớ ngày chụp. Tôi đề nghị: \"Look at the back.\" Nhìn mặt sau nhé cô. Mặt trước có ảnh, chỗ cần tìm có thể ở phía đối diện."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Cô Mai giữ ảnh, chẳng nhớ ngày chụp. Tôi đề nghị: \"Look at the back.\" Nhìn mặt sau nhé cô. Mặt trước có ảnh, chỗ cần tìm có thể ở phía đối diện."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Cô Mai giữ ảnh, chẳng nhớ ngày chụp. Tôi đề nghị: \"Look at the back.\" Nhìn mặt sau nhé cô. Mặt trước có ảnh, chỗ cần tìm có thể ở phía đối diện."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Cô sợ lật mạnh sẽ làm rơi ảnh. Tôi đặt khung lên khăn mềm, đỡ cả hai mép rồi cùng cô xoay. Mặt sau vẫn nguyên, có một mẩu giấy ông đã dán."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"The date is on the back.\" Ngày tháng ở mặt sau. Tôi chỉ dòng ông viết, cô cúi xuống đọc. Lâu rồi cô chỉ xem mặt ảnh, chưa nhìn phía này."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"The date is on the back.\" Ngày tháng ở mặt sau. Tôi chỉ dòng ông viết, cô cúi xuống đọc. Lâu rồi cô chỉ xem mặt ảnh, chưa nhìn phía này."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Cô muốn chụp lại ngày ấy để nhớ, nhưng tôi đã quay khung về phía ảnh. Cô đặt điện thoại sang bên, xin tôi xoay lại. Tôi giữ khung, đợi cô chuẩn bị."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Cô cần nhờ tôi nhìn mặt sau thêm một lần nữa. Bạn nói giúp cô câu nhìn mặt sau bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Cô cần nhờ tôi nhìn mặt sau thêm một lần nữa. Bạn nói giúp cô câu nhìn mặt sau bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"Look at the back.\" Nhìn mặt sau nhé. Tôi xoay khung lại. Cô chụp xong, đặt ảnh lên bàn; lần này còn giữ cả mẩu giấy ghi ngày trong tập ảnh của mình."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"Look at the back.\" Nhìn mặt sau nhé. Tôi xoay khung lại. Cô chụp xong, đặt ảnh lên bàn; lần này còn giữ cả mẩu giấy ghi ngày trong tập ảnh của mình."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Look at the back.\" Nhìn mặt sau nhé. Tôi xoay khung lại. Cô chụp xong, đặt ảnh lên bàn; lần này còn giữ cả mẩu giấy ghi ngày trong tập ảnh của mình."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce the mystery of an undated family photograph.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the mystery of an undated family photograph. Next causal state: Frame rests on plain cloth, both figures gently support opposite edges while turning it toward reverse side."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Present the first model directing attention to the back of the object.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Present the first model directing attention to the back of the object. Next causal state: Close view of frame reverse with one attached note bearing permitted date; yellow-shirt aunt looks at it beside mascot."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Provide the second model showing the date located on the back of the frame.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Provide the second model showing the date located on the back of the frame. Next causal state: Mascot holds frame front-facing while aunt places plain phone on table ready to photograph its reverse again."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Show the careful physical maintenance needed to protect the heirloom.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the careful physical maintenance needed to protect the heirloom. Next causal state: Aunt asks mascot to turn frame, phone waiting on table. Upper safe region for stem."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Engage the learner to produce the instruction to look at the back.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Engage the learner to produce the instruction to look at the back. Next causal state: Aunt photographs reverse of frame with phone screen facing away; beside it open album contains a blank pocket for copy. No repair tools or nails."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm the target word and conclude with the restored family photograph.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the target word and conclude with the restored family photograph. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18209",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Nam cùng cô Mai lật khung ảnh cẩn thận và tìm ngày chụp ở mặt sau; cô giữ thêm bản chụp mẩu ghi chú cũ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20307",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Nam cùng cô Mai lật khung ảnh cẩn thận và tìm ngày chụp ở mặt sau; cô giữ thêm bản chụp mẩu ghi chú cũ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,491 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "88c8d6ba43209c2b664ea5b1cff0ba3409943ed117fb639a575e950aa648b786",
+  "topic": "Học từ vựng tiếng Anh INTERNET (danh từ: mạng Internet) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ INTERNET",
+    "Làm rõ nghĩa lõi \"mạng Internet\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng INTERNET, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại INTERNET, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn",
+      "appearance": "Minimal ink stick figure, adult friend with simple short hair, a round white face and solid black oval eyes. Simple proportions and modest expressions, no realistic muscles or fingers.",
+      "outfit": "Exactly one plain mustard-yellow short-sleeve top and minimal stick limbs; no layered shirt or printed logo."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chi tiết đầu chuyện",
+      "purpose": "Open with the visible human need and an early usable English utterance.",
+      "action": "At a small birthday table, mascot and friend wait by a disconnected generic video-call window with a simple cake nearby. No flame, thunder, emergency warning or real internet troubleshooting.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Cả bàn im, cuộc gọi vẫn không nối. \"There is no internet here.\" Ở đây không có mạng Internet. Tôi nhìn chiếc bánh đã đặt sẵn trước máy.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "internet",
+          "meaning": "mạng Internet"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "At a small birthday table, mascot and friend wait by a disconnected generic video-call window with a simple cake nearby. No flame, thunder, emergency warning or real internet troubleshooting. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At a small birthday table, mascot and friend wait by a disconnected generic video-call window with a simple cake nearby. No flame, thunder, emergency warning or real internet troubleshooting.",
+          "reason": "Open with the visible human need and an early usable English utterance.",
+          "visible_text": [
+            {
+              "text": "There is no internet here.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with the visible human need and an early usable English utterance.",
+          "anchor": {
+            "vi": {
+              "quote": "Cả bàn im, cuộc gọi vẫn không nối. \"There is no internet here.\" Ở đây không có mạng Internet. Tôi nhìn chiếc bánh đã đặt sẵn trước máy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with the visible human need and an early usable English utterance. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Điều cần hiểu",
+      "purpose": "Show the relationship and resistance without a procedural lecture.",
+      "action": "Friend holds a plain handwritten card without readable writing while mascot looks for another available room to connect. Cake and closed laptop stay together, no active candle carrying.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi hẹn chúc sinh nhật em qua máy tính. Em đang đợi ở xa, còn người bạn ngồi cạnh đã viết xong chiếc thiệp. Bạn hỏi mình có chỗ nào khác để nối mạng không.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "internet",
+          "meaning": "mạng Internet"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend holds a plain handwritten card without readable writing while mascot looks for another available room to connect. Cake and closed laptop stay together, no active candle carrying. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend holds a plain handwritten card without readable writing while mascot looks for another available room to connect. Cake and closed laptop stay together, no active candle carrying.",
+          "reason": "Show the relationship and resistance without a procedural lecture.",
+          "visible_text": [
+            {
+              "text": "internet · mạng Internet",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Show the relationship and resistance without a procedural lecture.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi hẹn chúc sinh nhật em qua máy tính. Em đang đợi ở xa, còn người bạn ngồi cạnh đã viết xong chiếc thiệp. Bạn hỏi mình có chỗ nào khác để nối mạng không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the relationship and resistance without a procedural lecture. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hành động làm đổi chuyện",
+      "purpose": "Use the second English model with correct time/reference and a meaningful visible action.",
+      "action": "In friend's room, mascot reopens the laptop by an available generic connection icon while friend puts the same cake back on the table. No router/antenna or electrical repair.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I need the internet.\" Tôi cần mạng Internet. Tôi mượn phòng của bạn, nơi có kết nối. Bạn mang hộp bánh theo, đặt lại lên bàn. Hai đứa ngồi chờ máy nối lại.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "internet",
+          "meaning": "mạng Internet"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "In friend's room, mascot reopens the laptop by an available generic connection icon while friend puts the same cake back on the table. No router/antenna or electrical repair. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "In friend's room, mascot reopens the laptop by an available generic connection icon while friend puts the same cake back on the table. No router/antenna or electrical repair.",
+          "reason": "Use the second English model with correct time/reference and a meaningful visible action.",
+          "visible_text": [
+            {
+              "text": "I need the internet.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model with correct time/reference and a meaningful visible action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need the internet.\" Tôi cần mạng Internet. Tôi mượn phòng của bạn, nơi có kết nối. Bạn mang hộp bánh theo, đặt lại lên bàn. Hai đứa ngồi chờ máy nối lại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use the second English model with correct time/reference and a meaningful visible action. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời người xem giúp nói",
+      "purpose": "Invite one supported sentence for the same need; wait before revealing the answer.",
+      "action": "Hold mascot and friend waiting to connect the birthday call, supported stem above and no exact network address or credentials.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Nếu cần mạng Internet để gọi cho em, bạn nói giúp tôi câu tôi cần mạng Internet bằng tiếng Anh nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "internet",
+          "meaning": "mạng Internet"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold mascot and friend waiting to connect the birthday call, supported stem above and no exact network address or credentials. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold mascot and friend waiting to connect the birthday call, supported stem above and no exact network address or credentials.",
+          "reason": "Invite one supported sentence for the same need; wait before revealing the answer.",
+          "visible_text": [
+            {
+              "text": "I need the ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one supported sentence for the same need; wait before revealing the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Nếu cần mạng Internet để gọi cho em, bạn nói giúp tôi câu tôi cần mạng Internet bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite one supported sentence for the same need; wait before revealing the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả",
+      "purpose": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+      "action": "The generic birthday video call is connected, with a small abstract distant-family thumbnail. Mascot gestures toward the friend who joined the greeting; cake and laptop unchanged, no extra flame or identity detail.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I need the internet.\" Đúng rồi. Cuộc gọi nối được. Em hỏi sao hôm nay có thêm một người. Tôi nhìn người bạn đứng cạnh, bật cười: Vì có thêm một người chúc em.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "internet",
+          "meaning": "mạng Internet"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The generic birthday video call is connected, with a small abstract distant-family thumbnail. Mascot gestures toward the friend who joined the greeting; cake and laptop unchanged, no extra flame or identity detail. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The generic birthday video call is connected, with a small abstract distant-family thumbnail. Mascot gestures toward the friend who joined the greeting; cake and laptop unchanged, no extra flame or identity detail.",
+          "reason": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+          "visible_text": [
+            {
+              "text": "I need the internet.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need the internet.\" Đúng rồi. Cuộc gọi nối được. Em hỏi sao hôm nay có thêm một người. Tôi nhìn người bạn đứng cạnh, bật cười: Vì có thêm một người chúc em.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Cả bàn im, cuộc gọi vẫn không nối. \"There is no internet here.\" Ở đây không có mạng Internet. Tôi nhìn chiếc bánh đã đặt sẵn trước máy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Cả bàn im, cuộc gọi vẫn không nối. \"There is no internet here.\" Ở đây không có mạng Internet. Tôi nhìn chiếc bánh đã đặt sẵn trước máy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Cả bàn im, cuộc gọi vẫn không nối. \"There is no internet here.\" Ở đây không có mạng Internet. Tôi nhìn chiếc bánh đã đặt sẵn trước máy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi hẹn chúc sinh nhật em qua máy tính. Em đang đợi ở xa, còn người bạn ngồi cạnh đã viết xong chiếc thiệp. Bạn hỏi mình có chỗ nào khác để nối mạng không."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi hẹn chúc sinh nhật em qua máy tính. Em đang đợi ở xa, còn người bạn ngồi cạnh đã viết xong chiếc thiệp. Bạn hỏi mình có chỗ nào khác để nối mạng không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"I need the internet.\" Tôi cần mạng Internet. Tôi mượn phòng của bạn, nơi có kết nối. Bạn mang hộp bánh theo, đặt lại lên bàn. Hai đứa ngồi chờ máy nối lại."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"I need the internet.\" Tôi cần mạng Internet. Tôi mượn phòng của bạn, nơi có kết nối. Bạn mang hộp bánh theo, đặt lại lên bàn. Hai đứa ngồi chờ máy nối lại."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Nếu cần mạng Internet để gọi cho em, bạn nói giúp tôi câu tôi cần mạng Internet bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I need the internet.\" Đúng rồi. Cuộc gọi nối được. Em hỏi sao hôm nay có thêm một người. Tôi nhìn người bạn đứng cạnh, bật cười: Vì có thêm một người chúc em."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with the visible human need and an early usable English utterance.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with the visible human need and an early usable English utterance. Next causal state: Friend holds a plain handwritten card without readable writing while mascot looks for another available room to connect. Cake and closed laptop stay together, no active candle carrying."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Show the relationship and resistance without a procedural lecture.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Show the relationship and resistance without a procedural lecture. Next causal state: In friend's room, mascot reopens the laptop by an available generic connection icon while friend puts the same cake back on the table. No router/antenna or electrical repair."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model with correct time/reference and a meaningful visible action.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the second English model with correct time/reference and a meaningful visible action. Next causal state: Hold mascot and friend waiting to connect the birthday call, supported stem above and no exact network address or credentials."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one supported sentence for the same need; wait before revealing the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Invite one supported sentence for the same need; wait before revealing the answer. Next causal state: The generic birthday video call is connected, with a small abstract distant-family thumbnail. Mascot gestures toward the friend who joined the greeting; cake and laptop unchanged, no extra flame or identity detail."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19188",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Cuộc gọi sinh nhật không nối vì thiếu mạng; hai bạn chuyển tới chỗ có kết nối và cùng gửi lời chúc thay vì để một người chờ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,483 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "60647660be3c45ebf110ddb02506946577bf505b1c93ff13ed68b53cc8ad833b",
+  "topic": "Học từ vựng tiếng Anh ANSWER (danh từ: câu trả lời) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ ANSWER",
+    "Làm rõ nghĩa lõi \"câu trả lời\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng ANSWER, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại ANSWER, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Anh quản lý",
+      "appearance": "Minimal ink stick figure with a round white face, solid dark oval eyes, simple hair silhouette and ordinary proportions. Express emotion through posture and a modest facial change; no realistic muscles or fingers.",
+      "outfit": "Exactly one plain mustard-yellow short-sleeve top and minimal stick limbs; use only the small accessory needed for this role."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chi tiết đầu chuyện",
+      "purpose": "Open on a specific visible need or contradiction and an early English utterance.",
+      "action": "Mascot reads a message on a plain phone with blank screen, then lowers it face down beside a simple work schedule grid with no writing. Mother remains offscreen; no mother portrait or message text.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Mẹ hỏi con có về ăn không. \"I need an answer.\" Mẹ cần câu trả lời. Tôi đọc tin nhắn, rồi úp điện thoại xuống. Tôi còn chưa xin nghỉ được.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "answer",
+          "meaning": "câu trả lời"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot reads a message on a plain phone with blank screen, then lowers it face down beside a simple work schedule grid with no writing. Mother remains offscreen; no mother portrait or message text. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot reads a message on a plain phone with blank screen, then lowers it face down beside a simple work schedule grid with no writing. Mother remains offscreen; no mother portrait or message text.",
+          "reason": "Open on a specific visible need or contradiction and an early English utterance.",
+          "visible_text": [
+            {
+              "text": "I need an answer.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open on a specific visible need or contradiction and an early English utterance.",
+          "anchor": {
+            "vi": {
+              "quote": "Mẹ hỏi con có về ăn không. \"I need an answer.\" Mẹ cần câu trả lời. Tôi đọc tin nhắn, rồi úp điện thoại xuống. Tôi còn chưa xin nghỉ được.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open on a specific visible need or contradiction and an early English utterance. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Điều cần hiểu",
+      "purpose": "Show the relationship, resistance or prior choice that gives the target meaning a purpose.",
+      "action": "At the workplace desk, mascot asks the mustard-shirted male manager for a shift change, pointing to a plain blank grid. Manager listens; no dates, employee names or numbers visible.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tháng này, mẹ nhắc chuyện về nhà ba lần. Tôi cứ nói để con xem. Hôm nay, tôi nhìn lịch làm rồi tới hỏi anh quản lý, thay vì lại để mẹ chờ.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "answer",
+          "meaning": "câu trả lời"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "At the workplace desk, mascot asks the mustard-shirted male manager for a shift change, pointing to a plain blank grid. Manager listens; no dates, employee names or numbers visible. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At the workplace desk, mascot asks the mustard-shirted male manager for a shift change, pointing to a plain blank grid. Manager listens; no dates, employee names or numbers visible.",
+          "reason": "Show the relationship, resistance or prior choice that gives the target meaning a purpose.",
+          "visible_text": [
+            {
+              "text": "answer · câu trả lời",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Show the relationship, resistance or prior choice that gives the target meaning a purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Tháng này, mẹ nhắc chuyện về nhà ba lần. Tôi cứ nói để con xem. Hôm nay, tôi nhìn lịch làm rồi tới hỏi anh quản lý, thay vì lại để mẹ chờ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the relationship, resistance or prior choice that gives the target meaning a purpose. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hành động làm đổi chuyện",
+      "purpose": "Use the second English model to change the same situation through a meaningful action or decision.",
+      "action": "Mascot alone holds the phone before making the call, rehearsing a clear answer with a small determined head tilt. No caller portrait or written message.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Anh đổi giúp tôi một ca. Tôi cầm điện thoại, tập câu sẽ nói: \"My answer is yes.\" Câu trả lời của con là có. Lần này, tôi không định nói để con xem nữa.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "answer",
+          "meaning": "câu trả lời"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot alone holds the phone before making the call, rehearsing a clear answer with a small determined head tilt. No caller portrait or written message. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot alone holds the phone before making the call, rehearsing a clear answer with a small determined head tilt. No caller portrait or written message.",
+          "reason": "Use the second English model to change the same situation through a meaningful action or decision.",
+          "visible_text": [
+            {
+              "text": "My answer is yes.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model to change the same situation through a meaningful action or decision.",
+          "anchor": {
+            "vi": {
+              "quote": "Anh đổi giúp tôi một ca. Tôi cầm điện thoại, tập câu sẽ nói: \"My answer is yes.\" Câu trả lời của con là có. Lần này, tôi không định nói để con xem nữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Use the second English model to change the same situation through a meaningful action or decision. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời người xem giúp nói",
+      "purpose": "Invite one manageable full-sentence retrieval for the character's need; wait quietly before feedback.",
+      "action": "Hold mascot alone with his phone ready to call his mother, facing the viewer for the supported response. Only the sentence stem is written.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Trước khi gọi mẹ, bạn nói giúp tôi câu câu trả lời của tôi là có bằng tiếng Anh nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "answer",
+          "meaning": "câu trả lời"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold mascot alone with his phone ready to call his mother, facing the viewer for the supported response. Only the sentence stem is written. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold mascot alone with his phone ready to call his mother, facing the viewer for the supported response. Only the sentence stem is written.",
+          "reason": "Invite one manageable full-sentence retrieval for the character's need; wait quietly before feedback.",
+          "visible_text": [
+            {
+              "text": "My ___ is yes.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable full-sentence retrieval for the character's need; wait quietly before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Trước khi gọi mẹ, bạn nói giúp tôi câu câu trả lời của tôi là có bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite one manageable full-sentence retrieval for the character's need; wait quietly before feedback. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả",
+      "purpose": "Provide the correct answer, then show the local consequence and ordinary emotional payoff.",
+      "action": "Mascot smiles gently on the phone and places a plain overnight bag beside the door. Mother's reply is heard in narration but she is not depicted. No shopping or extra characters.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"My answer is yes.\" Đúng rồi. Mẹ bảo vậy mẹ đi chợ. Tôi mới nhớ, mình đã để một câu trả lời nhỏ kéo dài cả tháng.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "answer",
+          "meaning": "câu trả lời"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot smiles gently on the phone and places a plain overnight bag beside the door. Mother's reply is heard in narration but she is not depicted. No shopping or extra characters. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot smiles gently on the phone and places a plain overnight bag beside the door. Mother's reply is heard in narration but she is not depicted. No shopping or extra characters.",
+          "reason": "Provide the correct answer, then show the local consequence and ordinary emotional payoff.",
+          "visible_text": [
+            {
+              "text": "My answer is yes.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct answer, then show the local consequence and ordinary emotional payoff.",
+          "anchor": {
+            "vi": {
+              "quote": "\"My answer is yes.\" Đúng rồi. Mẹ bảo vậy mẹ đi chợ. Tôi mới nhớ, mình đã để một câu trả lời nhỏ kéo dài cả tháng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide the correct answer, then show the local consequence and ordinary emotional payoff. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mẹ hỏi con có về ăn không. \"I need an answer.\" Mẹ cần câu trả lời. Tôi đọc tin nhắn, rồi úp điện thoại xuống. Tôi còn chưa xin nghỉ được."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mẹ hỏi con có về ăn không. \"I need an answer.\" Mẹ cần câu trả lời. Tôi đọc tin nhắn, rồi úp điện thoại xuống. Tôi còn chưa xin nghỉ được."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Mẹ hỏi con có về ăn không. \"I need an answer.\" Mẹ cần câu trả lời. Tôi đọc tin nhắn, rồi úp điện thoại xuống. Tôi còn chưa xin nghỉ được."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tháng này, mẹ nhắc chuyện về nhà ba lần. Tôi cứ nói để con xem. Hôm nay, tôi nhìn lịch làm rồi tới hỏi anh quản lý, thay vì lại để mẹ chờ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tháng này, mẹ nhắc chuyện về nhà ba lần. Tôi cứ nói để con xem. Hôm nay, tôi nhìn lịch làm rồi tới hỏi anh quản lý, thay vì lại để mẹ chờ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Anh đổi giúp tôi một ca. Tôi cầm điện thoại, tập câu sẽ nói: \"My answer is yes.\" Câu trả lời của con là có. Lần này, tôi không định nói để con xem nữa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Anh đổi giúp tôi một ca. Tôi cầm điện thoại, tập câu sẽ nói: \"My answer is yes.\" Câu trả lời của con là có. Lần này, tôi không định nói để con xem nữa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Trước khi gọi mẹ, bạn nói giúp tôi câu câu trả lời của tôi là có bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"My answer is yes.\" Đúng rồi. Mẹ bảo vậy mẹ đi chợ. Tôi mới nhớ, mình đã để một câu trả lời nhỏ kéo dài cả tháng."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on a specific visible need or contradiction and an early English utterance.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open on a specific visible need or contradiction and an early English utterance. Next causal state: At the workplace desk, mascot asks the mustard-shirted male manager for a shift change, pointing to a plain blank grid. Manager listens; no dates, employee names or numbers visible."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Show the relationship, resistance or prior choice that gives the target meaning a purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Show the relationship, resistance or prior choice that gives the target meaning a purpose. Next causal state: Mascot alone holds the phone before making the call, rehearsing a clear answer with a small determined head tilt. No caller portrait or written message."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model to change the same situation through a meaningful action or decision.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the second English model to change the same situation through a meaningful action or decision. Next causal state: Hold mascot alone with his phone ready to call his mother, facing the viewer for the supported response. Only the sentence stem is written."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable full-sentence retrieval for the character's need; wait quietly before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Invite one manageable full-sentence retrieval for the character's need; wait quietly before feedback. Next causal state: Mascot smiles gently on the phone and places a plain overnight bag beside the door. Mother's reply is heard in narration but she is not depicted. No shopping or extra characters."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct answer, then show the local consequence and ordinary emotional payoff.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Provide the correct answer, then show the local consequence and ordinary emotional payoff. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18959",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Nhân vật lần lữa trả lời về nhà ăn cơm; chủ động đổi ca rồi nói rõ có, để mẹ thôi phải chờ một câu chưa thành. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

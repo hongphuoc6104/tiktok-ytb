@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "e8e2575a953847708c33c03027b26a39b3fb412d507dd4476819d86136463acb",
+  "topic": "Học từ vựng tiếng Anh PLAN (danh từ: kế hoạch) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ PLAN",
+    "Làm rõ nghĩa lõi \"kế hoạch\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng PLAN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại PLAN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Thảo",
+      "appearance": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "outfit": "A single plain pale pink short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Gạch dòng việc cũ",
+      "purpose": "Establish the overwhelmed feeling of having too many Saturday chores.",
+      "action": "The stick figure in the light sky blue shirt writes with a pen in a notebook while the friend in the pale pink shirt rests its chin on its hand.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Thảo gạch lịch, tôi giữ trang lại. Bạn đã xếp cả ngày kín việc. \"What is our plan?\" Kế hoạch của chúng ta là gì? Tôi muốn nghe trước khi nhận lời.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "plan",
+          "meaning": "kế hoạch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "The stick figure in the light sky blue shirt writes with a pen in a notebook while the friend in the pale pink shirt rests its chin on its hand. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the light sky blue shirt writes with a pen in a notebook while the friend in the pale pink shirt rests its chin on its hand.",
+          "reason": "Establish the overwhelmed feeling of having too many Saturday chores.",
+          "visible_text": [
+            {
+              "text": "What is our plan?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the overwhelmed feeling of having too many Saturday chores.",
+          "anchor": {
+            "vi": {
+              "quote": "Thảo gạch lịch, tôi giữ trang lại. Bạn đã xếp cả ngày kín việc. \"What is our plan?\" Kế hoạch của chúng ta là gì? Tôi muốn nghe trước khi nhận lời.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the overwhelmed feeling of having too many Saturday chores. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Hỏi về kế hoạch",
+      "purpose": "Ask for the organized scheme with the first English model sentence.",
+      "action": "The stick figure in the pale pink shirt leans over to look at the open notebook pages.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Thảo kể muốn trả sách rồi cùng đi bảo tàng. Tôi nhắc đã hẹn giúp bác dọn một góc nhà. Nếu giữ tất cả, hai đứa chẳng còn buổi ngồi chơi như đã hứa.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "plan",
+          "meaning": "kế hoạch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The stick figure in the pale pink shirt leans over to look at the open notebook pages. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the pale pink shirt leans over to look at the open notebook pages.",
+          "reason": "Ask for the organized scheme with the first English model sentence.",
+          "visible_text": [
+            {
+              "text": "plan · kế hoạch",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Ask for the organized scheme with the first English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Thảo kể muốn trả sách rồi cùng đi bảo tàng. Tôi nhắc đã hẹn giúp bác dọn một góc nhà. Nếu giữ tất cả, hai đứa chẳng còn buổi ngồi chơi như đã hứa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask for the organized scheme with the first English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Ba việc chính",
+      "purpose": "Outline the refined plan and hear approval with the second English model sentence.",
+      "action": "Pink-shirt friend puts pen down and asks mascot over a planner with abstract non-legible marks, no numbers or bullet list of three claimed actions.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Thảo đặt bút xuống, hỏi tôi muốn giữ việc nào. Tôi rủ trả sách trước, giúp bác rồi để bảo tàng sang dịp khác. Bạn khoanh lại ít việc hơn.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "plan",
+          "meaning": "kế hoạch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Pink-shirt friend puts pen down and asks mascot over a planner with abstract non-legible marks, no numbers or bullet list of three claimed actions. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Pink-shirt friend puts pen down and asks mascot over a planner with abstract non-legible marks, no numbers or bullet list of three claimed actions.",
+          "reason": "Outline the refined plan and hear approval with the second English model sentence.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Outline the refined plan and hear approval with the second English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Thảo đặt bút xuống, hỏi tôi muốn giữ việc nào. Tôi rủ trả sách trước, giúp bác rồi để bảo tàng sang dịp khác. Bạn khoanh lại ít việc hơn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Outline the refined plan and hear approval with the second English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giờ xe buýt chạy",
+      "purpose": "Add bus timings to finalize the schedule calmly.",
+      "action": "Both figures look at planner with fewer abstract marks and one visible blank region, mascot nods to the shared choice. No timetable text.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"This is a good plan.\" Đây là một kế hoạch tốt. Tôi nhìn thứ tự vừa chọn. Thảo cũng giữ một khoảng trống để hai đứa ăn cùng, không thêm giờ xe vào ngay.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "plan",
+          "meaning": "kế hoạch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both figures look at planner with fewer abstract marks and one visible blank region, mascot nods to the shared choice. No timetable text. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both figures look at planner with fewer abstract marks and one visible blank region, mascot nods to the shared choice. No timetable text.",
+          "reason": "Add bus timings to finalize the schedule calmly.",
+          "visible_text": [
+            {
+              "text": "This is a good plan.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Add bus timings to finalize the schedule calmly.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is a good plan.\" Đây là một kế hoạch tốt. Tôi nhìn thứ tự vừa chọn. Thảo cũng giữ một khoảng trống để hai đứa ăn cùng, không thêm giờ xe vào ngay.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Add bus timings to finalize the schedule calmly. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Nhắc lại câu hỏi",
+      "purpose": "Prompt the learner to retrieve the first question model sentence.",
+      "action": "The stick figure in the light sky blue shirt looks toward the learner with a questioning hand gesture.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn gấp sổ rồi hỏi tôi có nhớ phần hai người vừa thống nhất không. Bạn nói giúp tôi câu kế hoạch của chúng ta là gì bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "plan",
+          "meaning": "kế hoạch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The stick figure in the light sky blue shirt looks toward the learner with a questioning hand gesture. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the light sky blue shirt looks toward the learner with a questioning hand gesture.",
+          "reason": "Prompt the learner to retrieve the first question model sentence.",
+          "visible_text": [
+            {
+              "text": "What is our ___?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to retrieve the first question model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn gấp sổ rồi hỏi tôi có nhớ phần hai người vừa thống nhất không. Bạn nói giúp tôi câu kế hoạch của chúng ta là gì bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to retrieve the first question model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Lịch trình rõ ràng",
+      "purpose": "Confirm the model sentence and conclude with clarity and peace of mind.",
+      "action": "Both stick figures stand up smiling beside the closed notebook on the desk.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"What is our plan?\" Kế hoạch của chúng ta là gì? Thảo nhắc những việc đã giữ lại. Tôi cất sổ cùng sách phải trả, để hôm sau không tự thêm một cuộc hẹn khác.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "plan",
+          "meaning": "kế hoạch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both stick figures stand up smiling beside the closed notebook on the desk. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both stick figures stand up smiling beside the closed notebook on the desk.",
+          "reason": "Confirm the model sentence and conclude with clarity and peace of mind.",
+          "visible_text": [
+            {
+              "text": "What is our plan?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm the model sentence and conclude with clarity and peace of mind.",
+          "anchor": {
+            "vi": {
+              "quote": "\"What is our plan?\" Kế hoạch của chúng ta là gì? Thảo nhắc những việc đã giữ lại. Tôi cất sổ cùng sách phải trả, để hôm sau không tự thêm một cuộc hẹn khác.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the model sentence and conclude with clarity and peace of mind. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Thảo gạch lịch, tôi giữ trang lại. Bạn đã xếp cả ngày kín việc. \"What is our plan?\" Kế hoạch của chúng ta là gì? Tôi muốn nghe trước khi nhận lời."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Thảo gạch lịch, tôi giữ trang lại. Bạn đã xếp cả ngày kín việc. \"What is our plan?\" Kế hoạch của chúng ta là gì? Tôi muốn nghe trước khi nhận lời."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Thảo gạch lịch, tôi giữ trang lại. Bạn đã xếp cả ngày kín việc. \"What is our plan?\" Kế hoạch của chúng ta là gì? Tôi muốn nghe trước khi nhận lời."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Thảo kể muốn trả sách rồi cùng đi bảo tàng. Tôi nhắc đã hẹn giúp bác dọn một góc nhà. Nếu giữ tất cả, hai đứa chẳng còn buổi ngồi chơi như đã hứa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Thảo đặt bút xuống, hỏi tôi muốn giữ việc nào. Tôi rủ trả sách trước, giúp bác rồi để bảo tàng sang dịp khác. Bạn khoanh lại ít việc hơn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"This is a good plan.\" Đây là một kế hoạch tốt. Tôi nhìn thứ tự vừa chọn. Thảo cũng giữ một khoảng trống để hai đứa ăn cùng, không thêm giờ xe vào ngay."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"This is a good plan.\" Đây là một kế hoạch tốt. Tôi nhìn thứ tự vừa chọn. Thảo cũng giữ một khoảng trống để hai đứa ăn cùng, không thêm giờ xe vào ngay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Bạn gấp sổ rồi hỏi tôi có nhớ phần hai người vừa thống nhất không. Bạn nói giúp tôi câu kế hoạch của chúng ta là gì bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn gấp sổ rồi hỏi tôi có nhớ phần hai người vừa thống nhất không. Bạn nói giúp tôi câu kế hoạch của chúng ta là gì bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"What is our plan?\" Kế hoạch của chúng ta là gì? Thảo nhắc những việc đã giữ lại. Tôi cất sổ cùng sách phải trả, để hôm sau không tự thêm một cuộc hẹn khác."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"What is our plan?\" Kế hoạch của chúng ta là gì? Thảo nhắc những việc đã giữ lại. Tôi cất sổ cùng sách phải trả, để hôm sau không tự thêm một cuộc hẹn khác."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"What is our plan?\" Kế hoạch của chúng ta là gì? Thảo nhắc những việc đã giữ lại. Tôi cất sổ cùng sách phải trả, để hôm sau không tự thêm một cuộc hẹn khác."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the overwhelmed feeling of having too many Saturday chores.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the overwhelmed feeling of having too many Saturday chores. Next causal state: The stick figure in the pale pink shirt leans over to look at the open notebook pages."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Ask for the organized scheme with the first English model sentence.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Ask for the organized scheme with the first English model sentence. Next causal state: Pink-shirt friend puts pen down and asks mascot over a planner with abstract non-legible marks, no numbers or bullet list of three claimed actions."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Outline the refined plan and hear approval with the second English model sentence.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Outline the refined plan and hear approval with the second English model sentence. Next causal state: Both figures look at planner with fewer abstract marks and one visible blank region, mascot nods to the shared choice. No timetable text."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Add bus timings to finalize the schedule calmly.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Add bus timings to finalize the schedule calmly. Next causal state: The stick figure in the light sky blue shirt looks toward the learner with a questioning hand gesture."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to retrieve the first question model sentence.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to retrieve the first question model sentence. Next causal state: Both stick figures stand up smiling beside the closed notebook on the desk."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm the model sentence and conclude with clarity and peace of mind.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the model sentence and conclude with clarity and peace of mind. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18284",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Thảo muốn làm quá nhiều việc trong ngày cùng tôi. Hai người nói rõ nhu cầu, bỏ bớt một nơi để giữ lời giúp bác và buổi ăn chung. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20637",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Thảo muốn làm quá nhiều việc trong ngày cùng tôi. Hai người nói rõ nhu cầu, bỏ bớt một nơi để giữ lời giúp bác và buổi ăn chung. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

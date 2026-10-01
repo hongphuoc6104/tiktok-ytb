@@ -1,0 +1,517 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "bf18d685c0bd4d6361a165957dd03ccae8d455f9fbf7d0541c61cfe191338381",
+  "topic": "Học từ vựng tiếng Anh KEEP (động từ: giữ lại) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ KEEP",
+    "Làm rõ nghĩa lõi \"giữ lại\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng KEEP, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại KEEP, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Tân",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, solid black oval eyes, ordinary stick limbs.",
+      "outfit": "Single plain pale-purple short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with personal need and early correct English model.",
+      "action": "Table at a quiet room: the pale-blue mascot holds up a single blank-backed illustrated card. Across the table, the friend in pale-purple top packs game tokens into a cardboard box.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bàn cờ đã dọn xong, còn một thẻ. Tấm thẻ hình vẽ tay rất đẹp, tôi hỏi Tân: \"Can I keep this card?\" Tôi giữ lại thẻ này được không? Tôi muốn kẹp vào sổ làm kỷ niệm.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Table at a quiet room: the pale-blue mascot holds up a single blank-backed illustrated card. Across the table, the friend in pale-purple top packs game tokens into a cardboard box. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Table at a quiet room: the pale-blue mascot holds up a single blank-backed illustrated card. Across the table, the friend in pale-purple top packs game tokens into a cardboard box.",
+          "reason": "Open with personal need and early correct English model.",
+          "visible_text": [
+            {
+              "text": "Can I keep this card?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with personal need and early correct English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bàn cờ đã dọn xong, còn một thẻ. Tấm thẻ hình vẽ tay rất đẹp, tôi hỏi Tân: \"Can I keep this card?\" Tôi giữ lại thẻ này được không? Tôi muốn kẹp vào sổ làm kỷ niệm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with personal need and early correct English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify selected sense and obstacle within same relationship.",
+      "action": "The friend pauses his hands and looks at the card thoughtfully. The mascot holds it gently with both hands, respecting its sentimental value.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tân nhìn lá thẻ rồi im một lúc: bạn đã tự vẽ từ năm ngoái, trong bộ chỉ có một lá thế này. Tôi định trả lại, nói mình có thể xin bản khác. Tân giữ hộp, nghĩ thêm rồi lấy bao thẻ ra.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The friend pauses his hands and looks at the card thoughtfully. The mascot holds it gently with both hands, respecting its sentimental value. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The friend pauses his hands and looks at the card thoughtfully. The mascot holds it gently with both hands, respecting its sentimental value.",
+          "reason": "Clarify selected sense and obstacle within same relationship.",
+          "visible_text": [
+            {
+              "text": "keep · giữ lại",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify selected sense and obstacle within same relationship.",
+          "anchor": {
+            "vi": {
+              "quote": "Tân nhìn lá thẻ rồi im một lúc: bạn đã tự vẽ từ năm ngoái, trong bộ chỉ có một lá thế này. Tôi định trả lại, nói mình có thể xin bản khác. Tân giữ hộp, nghĩ thêm rồi lấy bao thẻ ra.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify selected sense and obstacle within same relationship. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Show deliberate action or change with second usable English model.",
+      "action": "The friend slides a clear protective sleeve across the table toward the mascot with a warm nodding gesture.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tân mỉm cười gật đầu, đưa cả bao bảo vệ: \"You can keep it.\" Bạn có thể giữ nó. Tân bảo coi như quà kỷ niệm buổi đấu cờ đầu tiên của hai đứa.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The friend slides a clear protective sleeve across the table toward the mascot with a warm nodding gesture. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The friend slides a clear protective sleeve across the table toward the mascot with a warm nodding gesture.",
+          "reason": "Show deliberate action or change with second usable English model.",
+          "visible_text": [
+            {
+              "text": "You can keep it.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show deliberate action or change with second usable English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Tân mỉm cười gật đầu, đưa cả bao bảo vệ: \"You can keep it.\" Bạn có thể giữ nó. Tân bảo coi như quà kỷ niệm buổi đấu cờ đầu tiên của hai đứa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show deliberate action or change with second usable English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite full-sentence target retrieval and hold before feedback.",
+      "action": "Same table setup: the mascot holds the card in hand and turns to the viewer, prompting the request. Upper region reserved for stem text.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Muốn xin phép bạn cho mình giữ lại tấm thẻ kỷ niệm, bạn nói câu tôi giữ lại thẻ này được không bằng tiếng Anh giúp tôi nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Same table setup: the mascot holds the card in hand and turns to the viewer, prompting the request. Upper region reserved for stem text. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same table setup: the mascot holds the card in hand and turns to the viewer, prompting the request. Upper region reserved for stem text.",
+          "reason": "Invite full-sentence target retrieval and hold before feedback.",
+          "visible_text": [
+            {
+              "text": "Can I ___ this card?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite full-sentence target retrieval and hold before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Muốn xin phép bạn cho mình giữ lại tấm thẻ kỷ niệm, bạn nói câu tôi giữ lại thẻ này được không bằng tiếng Anh giúp tôi nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite full-sentence target retrieval and hold before feedback. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give complete answer and small earned consequence.",
+      "action": "The friend pats the mascot's shoulder while closing his backpack. The mascot places the sleeved card safely between the pages of a small notebook.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Can I keep this card?\" Tân gật, tự đặt thẻ vào bao rồi đưa tôi. Tôi kẹp nó trong sổ, hẹn sẽ mang lại buổi chơi sau. Tân đóng hộp, còn tôi mở sổ nhìn thêm một lần.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The friend pats the mascot's shoulder while closing his backpack. The mascot places the sleeved card safely between the pages of a small notebook. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The friend pats the mascot's shoulder while closing his backpack. The mascot places the sleeved card safely between the pages of a small notebook.",
+          "reason": "Give complete answer and small earned consequence.",
+          "visible_text": [
+            {
+              "text": "Can I keep this card?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give complete answer and small earned consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I keep this card?\" Tân gật, tự đặt thẻ vào bao rồi đưa tôi. Tôi kẹp nó trong sổ, hẹn sẽ mang lại buổi chơi sau. Tân đóng hộp, còn tôi mở sổ nhìn thêm một lần.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give complete answer and small earned consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bàn cờ đã dọn xong, còn một thẻ. Tấm thẻ hình vẽ tay rất đẹp, tôi hỏi Tân: \"Can I keep this card?\" Tôi giữ lại thẻ này được không? Tôi muốn kẹp vào sổ làm kỷ niệm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bàn cờ đã dọn xong, còn một thẻ. Tấm thẻ hình vẽ tay rất đẹp, tôi hỏi Tân: \"Can I keep this card?\" Tôi giữ lại thẻ này được không? Tôi muốn kẹp vào sổ làm kỷ niệm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Bàn cờ đã dọn xong, còn một thẻ. Tấm thẻ hình vẽ tay rất đẹp, tôi hỏi Tân: \"Can I keep this card?\" Tôi giữ lại thẻ này được không? Tôi muốn kẹp vào sổ làm kỷ niệm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tân nhìn lá thẻ rồi im một lúc: bạn đã tự vẽ từ năm ngoái, trong bộ chỉ có một lá thế này. Tôi định trả lại, nói mình có thể xin bản khác. Tân giữ hộp, nghĩ thêm rồi lấy bao thẻ ra."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tân mỉm cười gật đầu, đưa cả bao bảo vệ: \"You can keep it.\" Bạn có thể giữ nó. Tân bảo coi như quà kỷ niệm buổi đấu cờ đầu tiên của hai đứa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Tân mỉm cười gật đầu, đưa cả bao bảo vệ: \"You can keep it.\" Bạn có thể giữ nó. Tân bảo coi như quà kỷ niệm buổi đấu cờ đầu tiên của hai đứa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Muốn xin phép bạn cho mình giữ lại tấm thẻ kỷ niệm, bạn nói câu tôi giữ lại thẻ này được không bằng tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Muốn xin phép bạn cho mình giữ lại tấm thẻ kỷ niệm, bạn nói câu tôi giữ lại thẻ này được không bằng tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Can I keep this card?\" Tân gật, tự đặt thẻ vào bao rồi đưa tôi. Tôi kẹp nó trong sổ, hẹn sẽ mang lại buổi chơi sau. Tân đóng hộp, còn tôi mở sổ nhìn thêm một lần."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Can I keep this card?\" Tân gật, tự đặt thẻ vào bao rồi đưa tôi. Tôi kẹp nó trong sổ, hẹn sẽ mang lại buổi chơi sau. Tân đóng hộp, còn tôi mở sổ nhìn thêm một lần."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can I keep this card?\" Tân gật, tự đặt thẻ vào bao rồi đưa tôi. Tôi kẹp nó trong sổ, hẹn sẽ mang lại buổi chơi sau. Tân đóng hộp, còn tôi mở sổ nhìn thêm một lần."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with personal need and early correct English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with personal need and early correct English model. Next causal state: The friend pauses his hands and looks at the card thoughtfully. The mascot holds it gently with both hands, respecting its sentimental value."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify selected sense and obstacle within same relationship.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Clarify selected sense and obstacle within same relationship. Next causal state: The friend slides a clear protective sleeve across the table toward the mascot with a warm nodding gesture."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show deliberate action or change with second usable English model.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Show deliberate action or change with second usable English model. Next causal state: Same table setup: the mascot holds the card in hand and turns to the viewer, prompting the request. Upper region reserved for stem text."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite full-sentence target retrieval and hold before feedback.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite full-sentence target retrieval and hold before feedback. Next causal state: The friend pats the mascot's shoulder while closing his backpack. The mascot places the sleeved card safely between the pages of a small notebook."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give complete answer and small earned consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give complete answer and small earned consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17284",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Bàn cờ đã dọn xong, còn một thẻ. Tấm thẻ hình vẽ tay rất đẹp, tôi hỏi Tân:  Tân mỉm cười gật đầu, đưa cả bao bảo vệ: \"You can keep it.\" Bạn có thể giữ nó. Tân bảo coi như quà kỷ niệm buổi đấu cờ đầu tiên của hai đứa.  Tân gật, tự đặt thẻ vào bao rồi đưa tôi. Tôi kẹp nó trong sổ, hẹn sẽ mang lại buổi chơi sau. Tân đóng hộp, còn tôi mở sổ nhìn thêm một lần. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "20476",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Bàn cờ đã dọn xong, còn một thẻ. Tấm thẻ hình vẽ tay rất đẹp, tôi hỏi Tân:  Tân mỉm cười gật đầu, đưa cả bao bảo vệ: \"You can keep it.\" Bạn có thể giữ nó. Tân bảo coi như quà kỷ niệm buổi đấu cờ đầu tiên của hai đứa.  Tân gật, tự đặt thẻ vào bao rồi đưa tôi. Tôi kẹp nó trong sổ, hẹn sẽ mang lại buổi chơi sau. Tân đóng hộp, còn tôi mở sổ nhìn thêm một lần. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

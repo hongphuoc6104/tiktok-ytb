@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "1d770a017f43830139da72c98249e0297baa7235539b9c1e1dde4bd5c7c86087",
+  "topic": "Học từ vựng tiếng Anh BOOK (danh từ: quyển sách) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ BOOK",
+    "Làm rõ nghĩa lõi \"quyển sách\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng BOOK, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại BOOK, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Mai",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "A single plain pink short-sleeve shirt (#F48FB1)."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Góc tiệm sách cũ",
+      "purpose": "Establish the quiet setting and the focused personal quest for a specific poetry book.",
+      "action": "Pink-shirt friend holds back one worn cloth-bound book beside a home bookshelf, mascot pauses with bag over shoulder. No bookstore labels.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Mai giữ cuốn sách tôi định mượn. Gáy đã sờn, cô không muốn mang ra ngoài nữa. \"This is a good book.\" Đây là một quyển sách hay, cô nhắc trước khi cất.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "book",
+          "meaning": "quyển sách"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Pink-shirt friend holds back one worn cloth-bound book beside a home bookshelf, mascot pauses with bag over shoulder. No bookstore labels. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Pink-shirt friend holds back one worn cloth-bound book beside a home bookshelf, mascot pauses with bag over shoulder. No bookstore labels.",
+          "reason": "Establish the quiet setting and the focused personal quest for a specific poetry book.",
+          "visible_text": [
+            {
+              "text": "This is a good book.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the quiet setting and the focused personal quest for a specific poetry book.",
+          "anchor": {
+            "vi": {
+              "quote": "Mai giữ cuốn sách tôi định mượn. Gáy đã sờn, cô không muốn mang ra ngoài nữa. \"This is a good book.\" Đây là một quyển sách hay, cô nhắc trước khi cất.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the quiet setting and the focused personal quest for a specific poetry book. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Một quyển sách hay",
+      "purpose": "Introduce the first English model recommending a printed literary work.",
+      "action": "Medium shot of the friend in the pink shirt handing a worn cloth-bound book to the stick figure in the pale-blue shirt.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi tìm tập thơ Mai giới thiệu từ tuần trước. Cô cho tôi xem nhưng lo những trang cũ bị gập trong túi. Tôi đặt túi xuống, kéo ghế cạnh giá sách nhà cô.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "book",
+          "meaning": "quyển sách"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Medium shot of the friend in the pink shirt handing a worn cloth-bound book to the stick figure in the pale-blue shirt. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the friend in the pink shirt handing a worn cloth-bound book to the stick figure in the pale-blue shirt.",
+          "reason": "Introduce the first English model recommending a printed literary work.",
+          "visible_text": [
+            {
+              "text": "book · quyển sách",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first English model recommending a printed literary work.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi tìm tập thơ Mai giới thiệu từ tuần trước. Cô cho tôi xem nhưng lo những trang cũ bị gập trong túi. Tôi đặt túi xuống, kéo ghế cạnh giá sách nhà cô.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first English model recommending a printed literary work. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Lật mở từng trang",
+      "purpose": "Show intimate physical interaction with the book object, emphasizing its material reality.",
+      "action": "Close view of open book with non-legible printed strokes and small pencil marks, friend holds fragile page corners with simple stick hands. No readable verses.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Mai mở vài trang, giữ mép nhẹ bằng tay. Tôi thấy cô còn ghi dấu những đoạn mình thích. Cuốn sách này mang cả việc đọc của bạn, không chỉ phần tôi đang tìm.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "book",
+          "meaning": "quyển sách"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Close view of open book with non-legible printed strokes and small pencil marks, friend holds fragile page corners with simple stick hands. No readable verses. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close view of open book with non-legible printed strokes and small pencil marks, friend holds fragile page corners with simple stick hands. No readable verses.",
+          "reason": "Show intimate physical interaction with the book object, emphasizing its material reality.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show intimate physical interaction with the book object, emphasizing its material reality.",
+          "anchor": {
+            "vi": {
+              "quote": "Mai mở vài trang, giữ mép nhẹ bằng tay. Tôi thấy cô còn ghi dấu những đoạn mình thích. Cuốn sách này mang cả việc đọc của bạn, không chỉ phần tôi đang tìm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show intimate physical interaction with the book object, emphasizing its material reality. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Xin mượn về đọc",
+      "purpose": "Introduce the second English model making a polite request to read the book.",
+      "action": "Medium shot of the stick figure in the pale-blue shirt holding the book reverently while the friend smiles and nods with open hands.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Can I read this book?\" Tôi đọc quyển sách này được không? Tôi xin ngồi đọc ngay đây, không mượn về. Mai nhìn chiếc túi đã đặt xuống, đưa sách sang.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "book",
+          "meaning": "quyển sách"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Medium shot of the stick figure in the pale-blue shirt holding the book reverently while the friend smiles and nods with open hands. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the stick figure in the pale-blue shirt holding the book reverently while the friend smiles and nods with open hands.",
+          "reason": "Introduce the second English model making a polite request to read the book.",
+          "visible_text": [
+            {
+              "text": "Can I read this book?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Introduce the second English model making a polite request to read the book.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I read this book?\" Tôi đọc quyển sách này được không? Tôi xin ngồi đọc ngay đây, không mượn về. Mai nhìn chiếc túi đã đặt xuống, đưa sách sang.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second English model making a polite request to read the book. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Lời khen dành cho sách",
+      "purpose": "Invite the learner to affirm the value of the literature using 'book'.",
+      "action": "Medium shot of the friend standing by the wooden reading counter, waiting expectantly.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Mai hỏi tôi muốn làm gì với quyển sách khi không mang đi. Bạn nói giúp tôi câu tôi đọc quyển sách này được không bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "book",
+          "meaning": "quyển sách"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Medium shot of the friend standing by the wooden reading counter, waiting expectantly. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the friend standing by the wooden reading counter, waiting expectantly.",
+          "reason": "Invite the learner to affirm the value of the literature using 'book'.",
+          "visible_text": [
+            {
+              "text": "Can I read this ___?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Invite the learner to affirm the value of the literature using 'book'.",
+          "anchor": {
+            "vi": {
+              "quote": "Mai hỏi tôi muốn làm gì với quyển sách khi không mang đi. Bạn nói giúp tôi câu tôi đọc quyển sách này được không bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the learner to affirm the value of the literature using 'book'. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Gói ghém kỷ niệm",
+      "purpose": "Confirm the correct production and conclude with a warm, concrete departure.",
+      "action": "Two friends sit reading same worn book at home table; mascot's bag remains closed under stool. No book wrapping or leaving store.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Can I read this book?\" Tôi đọc quyển sách này được không? Mai gật đầu. Tôi mở đoạn cô đánh dấu, đọc cùng bạn; chiếc túi vẫn ở dưới ghế, chưa cần mang sách đi.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "book",
+          "meaning": "quyển sách"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Two friends sit reading same worn book at home table; mascot's bag remains closed under stool. No book wrapping or leaving store. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two friends sit reading same worn book at home table; mascot's bag remains closed under stool. No book wrapping or leaving store.",
+          "reason": "Confirm the correct production and conclude with a warm, concrete departure.",
+          "visible_text": [
+            {
+              "text": "Can I read this book?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm the correct production and conclude with a warm, concrete departure.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I read this book?\" Tôi đọc quyển sách này được không? Mai gật đầu. Tôi mở đoạn cô đánh dấu, đọc cùng bạn; chiếc túi vẫn ở dưới ghế, chưa cần mang sách đi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the correct production and conclude with a warm, concrete departure. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mai giữ cuốn sách tôi định mượn. Gáy đã sờn, cô không muốn mang ra ngoài nữa. \"This is a good book.\" Đây là một quyển sách hay, cô nhắc trước khi cất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mai giữ cuốn sách tôi định mượn. Gáy đã sờn, cô không muốn mang ra ngoài nữa. \"This is a good book.\" Đây là một quyển sách hay, cô nhắc trước khi cất."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Mai giữ cuốn sách tôi định mượn. Gáy đã sờn, cô không muốn mang ra ngoài nữa. \"This is a good book.\" Đây là một quyển sách hay, cô nhắc trước khi cất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi tìm tập thơ Mai giới thiệu từ tuần trước. Cô cho tôi xem nhưng lo những trang cũ bị gập trong túi. Tôi đặt túi xuống, kéo ghế cạnh giá sách nhà cô."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Mai mở vài trang, giữ mép nhẹ bằng tay. Tôi thấy cô còn ghi dấu những đoạn mình thích. Cuốn sách này mang cả việc đọc của bạn, không chỉ phần tôi đang tìm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "\"Can I read this book?\" Tôi đọc quyển sách này được không? Tôi xin ngồi đọc ngay đây, không mượn về. Mai nhìn chiếc túi đã đặt xuống, đưa sách sang."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "\"Can I read this book?\" Tôi đọc quyển sách này được không? Tôi xin ngồi đọc ngay đây, không mượn về. Mai nhìn chiếc túi đã đặt xuống, đưa sách sang."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Mai hỏi tôi muốn làm gì với quyển sách khi không mang đi. Bạn nói giúp tôi câu tôi đọc quyển sách này được không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Mai hỏi tôi muốn làm gì với quyển sách khi không mang đi. Bạn nói giúp tôi câu tôi đọc quyển sách này được không bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"Can I read this book?\" Tôi đọc quyển sách này được không? Mai gật đầu. Tôi mở đoạn cô đánh dấu, đọc cùng bạn; chiếc túi vẫn ở dưới ghế, chưa cần mang sách đi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"Can I read this book?\" Tôi đọc quyển sách này được không? Mai gật đầu. Tôi mở đoạn cô đánh dấu, đọc cùng bạn; chiếc túi vẫn ở dưới ghế, chưa cần mang sách đi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Can I read this book?\" Tôi đọc quyển sách này được không? Mai gật đầu. Tôi mở đoạn cô đánh dấu, đọc cùng bạn; chiếc túi vẫn ở dưới ghế, chưa cần mang sách đi."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the quiet setting and the focused personal quest for a specific poetry book.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the quiet setting and the focused personal quest for a specific poetry book. Next causal state: Medium shot of the friend in the pink shirt handing a worn cloth-bound book to the stick figure in the pale-blue shirt."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first English model recommending a printed literary work.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first English model recommending a printed literary work. Next causal state: Close view of open book with non-legible printed strokes and small pencil marks, friend holds fragile page corners with simple stick hands. No readable verses."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show intimate physical interaction with the book object, emphasizing its material reality.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show intimate physical interaction with the book object, emphasizing its material reality. Next causal state: Medium shot of the stick figure in the pale-blue shirt holding the book reverently while the friend smiles and nods with open hands."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Introduce the second English model making a polite request to read the book.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second English model making a polite request to read the book. Next causal state: Medium shot of the friend standing by the wooden reading counter, waiting expectantly."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Invite the learner to affirm the value of the literature using 'book'.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite the learner to affirm the value of the literature using 'book'. Next causal state: Two friends sit reading same worn book at home table; mascot's bag remains closed under stool. No book wrapping or leaving store."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm the correct production and conclude with a warm, concrete departure.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the correct production and conclude with a warm, concrete departure. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18314",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Mai không muốn cho mượn sách cũ dễ gập trang; tôi chọn ngồi đọc ở nhà bạn để giữ cuốn sách và buổi đọc chung. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20969",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Mai không muốn cho mượn sách cũ dễ gập trang; tôi chọn ngồi đọc ở nhà bạn để giữ cuốn sách và buổi đọc chung. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "d766840726e67f3e880acd0014b4f9404d7da8810c20f23aff504a4217367500",
+  "topic": "Học từ vựng tiếng Anh PRESENT (danh từ: quà tặng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ PRESENT",
+    "Làm rõ nghĩa lõi \"quà tặng\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng PRESENT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại PRESENT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Linh",
+      "appearance": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "outfit": "A single plain pale orange short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc bàn dọn sạch",
+      "purpose": "Establish the departure setting and the narrator holding a hidden gift behind their back.",
+      "action": "Mascot stands holding small tied gift box behind back near nearly empty office desk, orange-shirt coworker packs a closed notebook.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi giấu chiếc hộp sau lưng. Linh chuyển nhóm hôm nay, đang dọn nốt bàn. \"I have a present for you.\" Tôi có một món quà cho bạn.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "present",
+          "meaning": "quà tặng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot stands holding small tied gift box behind back near nearly empty office desk, orange-shirt coworker packs a closed notebook. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stands holding small tied gift box behind back near nearly empty office desk, orange-shirt coworker packs a closed notebook.",
+          "reason": "Establish the departure setting and the narrator holding a hidden gift behind their back.",
+          "visible_text": [
+            {
+              "text": "I have a present for you.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the departure setting and the narrator holding a hidden gift behind their back.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi giấu chiếc hộp sau lưng. Linh chuyển nhóm hôm nay, đang dọn nốt bàn. \"I have a present for you.\" Tôi có một món quà cho bạn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the departure setting and the narrator holding a hidden gift behind their back. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Món quà bất ngờ",
+      "purpose": "Present the wrapped gift to the colleague with the first English model sentence.",
+      "action": "Coworker gently pushes gift box back with a hesitant gesture while mascot opens it to reveal one plain wooden pen.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Linh bảo đừng tốn tiền vì mình, định đẩy hộp lại. Tôi mở nắp, cho cô thấy cây bút cô từng nhắc. Tôi đã chọn nó khi biết bạn sắp chuyển chỗ.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "present",
+          "meaning": "quà tặng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Coworker gently pushes gift box back with a hesitant gesture while mascot opens it to reveal one plain wooden pen. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Coworker gently pushes gift box back with a hesitant gesture while mascot opens it to reveal one plain wooden pen.",
+          "reason": "Present the wrapped gift to the colleague with the first English model sentence.",
+          "visible_text": [
+            {
+              "text": "present · quà tặng",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Present the wrapped gift to the colleague with the first English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Linh bảo đừng tốn tiền vì mình, định đẩy hộp lại. Tôi mở nắp, cho cô thấy cây bút cô từng nhắc. Tôi đã chọn nó khi biết bạn sắp chuyển chỗ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Present the wrapped gift to the colleague with the first English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hồi hộp chờ đợi",
+      "purpose": "Show the opened gift and introduce the second English model sentence.",
+      "action": "The stick figure in the pale orange shirt holds an unwrapped wooden pen with an appreciative expression beside the open box.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Do you like the present?\" Bạn có thích món quà không? Tôi hỏi, hơi ngập ngừng. Linh cầm bút, thử đặt vào gáy sổ đang mang theo.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "present",
+          "meaning": "quà tặng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The stick figure in the pale orange shirt holds an unwrapped wooden pen with an appreciative expression beside the open box. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the pale orange shirt holds an unwrapped wooden pen with an appreciative expression beside the open box.",
+          "reason": "Show the opened gift and introduce the second English model sentence.",
+          "visible_text": [
+            {
+              "text": "Do you like the present?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the opened gift and introduce the second English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Do you like the present?\" Bạn có thích món quà không? Tôi hỏi, hơi ngập ngừng. Linh cầm bút, thử đặt vào gáy sổ đang mang theo.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the opened gift and introduce the second English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chiếc bút cài áo",
+      "purpose": "Demonstrate the recipient's gratitude and the positive resolution of the gift giving.",
+      "action": "Coworker holds pen by closed notebook hesitantly, mascot speaks with an open reassuring gesture; no shirt pocket or printed labels.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Cô bảo sợ nhận rồi không còn dịp giúp tôi việc chung. Tôi nói món quà chỉ để cô nhớ mình từng làm cùng, đâu phải lời hẹn trả lại thứ gì.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "present",
+          "meaning": "quà tặng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Coworker holds pen by closed notebook hesitantly, mascot speaks with an open reassuring gesture; no shirt pocket or printed labels. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Coworker holds pen by closed notebook hesitantly, mascot speaks with an open reassuring gesture; no shirt pocket or printed labels.",
+          "reason": "Demonstrate the recipient's gratitude and the positive resolution of the gift giving.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Demonstrate the recipient's gratitude and the positive resolution of the gift giving.",
+          "anchor": {
+            "vi": {
+              "quote": "Cô bảo sợ nhận rồi không còn dịp giúp tôi việc chung. Tôi nói món quà chỉ để cô nhớ mình từng làm cùng, đâu phải lời hẹn trả lại thứ gì.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Demonstrate the recipient's gratitude and the positive resolution of the gift giving. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Lời chào trao tặng",
+      "purpose": "Prompt the learner to recall the first model sentence to say goodbye.",
+      "action": "The stick figure in the light sky blue shirt raises one hand gently toward the colleague standing near the door.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Linh hỏi tôi chắc muốn tặng cô chứ. Bạn giúp tôi nói câu tôi có một món quà cho bạn bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "present",
+          "meaning": "quà tặng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The stick figure in the light sky blue shirt raises one hand gently toward the colleague standing near the door. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the light sky blue shirt raises one hand gently toward the colleague standing near the door.",
+          "reason": "Prompt the learner to recall the first model sentence to say goodbye.",
+          "visible_text": [
+            {
+              "text": "I have a ___ for you.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to recall the first model sentence to say goodbye.",
+          "anchor": {
+            "vi": {
+              "quote": "Linh hỏi tôi chắc muốn tặng cô chứ. Bạn giúp tôi nói câu tôi có một món quà cho bạn bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to recall the first model sentence to say goodbye. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Thang máy khép lại",
+      "purpose": "Provide immediate answer feedback and conclude the departure scene on a peaceful note.",
+      "action": "At office doorway, coworker opens notebook and writes non-letter strokes with gifted pen to share her new location; mascot stands beside her. No readable address or extra person.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I have a present for you.\" Tôi có một món quà cho bạn. Linh cất bút vào sổ. Ra đến cửa, cô mở lại sổ, ghi chỗ mới để tuần sau tôi ghé chơi.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "present",
+          "meaning": "quà tặng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "At office doorway, coworker opens notebook and writes non-letter strokes with gifted pen to share her new location; mascot stands beside her. No readable address or extra person. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "At office doorway, coworker opens notebook and writes non-letter strokes with gifted pen to share her new location; mascot stands beside her. No readable address or extra person.",
+          "reason": "Provide immediate answer feedback and conclude the departure scene on a peaceful note.",
+          "visible_text": [
+            {
+              "text": "I have a present for you.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Provide immediate answer feedback and conclude the departure scene on a peaceful note.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I have a present for you.\" Tôi có một món quà cho bạn. Linh cất bút vào sổ. Ra đến cửa, cô mở lại sổ, ghi chỗ mới để tuần sau tôi ghé chơi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide immediate answer feedback and conclude the departure scene on a peaceful note. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Tôi giấu chiếc hộp sau lưng. Linh chuyển nhóm hôm nay, đang dọn nốt bàn. \"I have a present for you.\" Tôi có một món quà cho bạn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Tôi giấu chiếc hộp sau lưng. Linh chuyển nhóm hôm nay, đang dọn nốt bàn. \"I have a present for you.\" Tôi có một món quà cho bạn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Tôi giấu chiếc hộp sau lưng. Linh chuyển nhóm hôm nay, đang dọn nốt bàn. \"I have a present for you.\" Tôi có một món quà cho bạn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Linh bảo đừng tốn tiền vì mình, định đẩy hộp lại. Tôi mở nắp, cho cô thấy cây bút cô từng nhắc. Tôi đã chọn nó khi biết bạn sắp chuyển chỗ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"Do you like the present?\" Bạn có thích món quà không? Tôi hỏi, hơi ngập ngừng. Linh cầm bút, thử đặt vào gáy sổ đang mang theo."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"Do you like the present?\" Bạn có thích món quà không? Tôi hỏi, hơi ngập ngừng. Linh cầm bút, thử đặt vào gáy sổ đang mang theo."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Cô bảo sợ nhận rồi không còn dịp giúp tôi việc chung. Tôi nói món quà chỉ để cô nhớ mình từng làm cùng, đâu phải lời hẹn trả lại thứ gì."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Linh hỏi tôi chắc muốn tặng cô chứ. Bạn giúp tôi nói câu tôi có một món quà cho bạn bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Linh hỏi tôi chắc muốn tặng cô chứ. Bạn giúp tôi nói câu tôi có một món quà cho bạn bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"I have a present for you.\" Tôi có một món quà cho bạn. Linh cất bút vào sổ. Ra đến cửa, cô mở lại sổ, ghi chỗ mới để tuần sau tôi ghé chơi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"I have a present for you.\" Tôi có một món quà cho bạn. Linh cất bút vào sổ. Ra đến cửa, cô mở lại sổ, ghi chỗ mới để tuần sau tôi ghé chơi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I have a present for you.\" Tôi có một món quà cho bạn. Linh cất bút vào sổ. Ra đến cửa, cô mở lại sổ, ghi chỗ mới để tuần sau tôi ghé chơi."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the departure setting and the narrator holding a hidden gift behind their back.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the departure setting and the narrator holding a hidden gift behind their back. Next causal state: Coworker gently pushes gift box back with a hesitant gesture while mascot opens it to reveal one plain wooden pen."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Present the wrapped gift to the colleague with the first English model sentence.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Present the wrapped gift to the colleague with the first English model sentence. Next causal state: The stick figure in the pale orange shirt holds an unwrapped wooden pen with an appreciative expression beside the open box."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the opened gift and introduce the second English model sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Show the opened gift and introduce the second English model sentence. Next causal state: Coworker holds pen by closed notebook hesitantly, mascot speaks with an open reassuring gesture; no shirt pocket or printed labels."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Demonstrate the recipient's gratitude and the positive resolution of the gift giving.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Demonstrate the recipient's gratitude and the positive resolution of the gift giving. Next causal state: The stick figure in the light sky blue shirt raises one hand gently toward the colleague standing near the door."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to recall the first model sentence to say goodbye.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to recall the first model sentence to say goodbye. Next causal state: At office doorway, coworker opens notebook and writes non-letter strokes with gifted pen to share her new location; mascot stands beside her. No readable address or extra person."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Provide immediate answer feedback and conclude the departure scene on a peaceful note.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Provide immediate answer feedback and conclude the departure scene on a peaceful note. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18244",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Linh ngại nhận quà trước khi chuyển nhóm; tôi giải thích món quà là kỷ niệm, cô nhận và ghi chỗ mới để tôi ghé. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20581",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Linh ngại nhận quà trước khi chuyển nhóm; tôi giải thích món quà là kỷ niệm, cô nhận và ghi chỗ mới để tôi ghé. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

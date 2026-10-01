@@ -1,0 +1,511 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "68514ec0c74b4f8d7166ccec56a32fbd09dff6cb4dc1a215097c1b60bbd47f9b",
+  "topic": "Học từ vựng tiếng Anh LOUD (tính từ: to, ồn) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ LOUD",
+    "Làm rõ nghĩa lõi \"to, ồn\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng LOUD, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại LOUD, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Phong",
+      "appearance": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+      "outfit": "One plain teal-blue short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with the concrete personal need and early usable English model.",
+      "action": "Study desk medium shot: tabletop speaker has wide sound-wave lines, mascot closes book while Phong notices.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Phong bật nhạc, tôi đóng cuốn sách. \"The music is loud.\" Nhạc đang to. Tôi đã nhắc hai lần mà bạn vẫn tưởng tôi chỉ muốn đổi bài. Phong nhìn cuốn sách úp xuống trước mặt tôi.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Study desk medium shot: tabletop speaker has wide sound-wave lines, mascot closes book while Phong notices. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Study desk medium shot: tabletop speaker has wide sound-wave lines, mascot closes book while Phong notices.",
+          "reason": "Open with the concrete personal need and early usable English model.",
+          "visible_text": [
+            {
+              "text": "The music is loud.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with the concrete personal need and early usable English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Phong bật nhạc, tôi đóng cuốn sách. \"The music is loud.\" Nhạc đang to. Tôi đã nhắc hai lần mà bạn vẫn tưởng tôi chỉ muốn đổi bài. Phong nhìn cuốn sách úp xuống trước mặt tôi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with the concrete personal need and early usable English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+      "action": "Same angle: Phong turns speaker volume knob down, checks with mascot, who opens book.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bạn vặn nhỏ núm loa, rồi hỏi: \"Is this too loud?\" Mức này có quá to không? Tôi lắc đầu rồi mở sách lại. Phong kéo ghế sát bàn, chờ tôi nói tiếp câu đang đọc dở.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Same angle: Phong turns speaker volume knob down, checks with mascot, who opens book. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same angle: Phong turns speaker volume knob down, checks with mascot, who opens book.",
+          "reason": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+          "visible_text": [
+            {
+              "text": "loud · to, ồn",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn vặn nhỏ núm loa, rồi hỏi: \"Is this too loud?\" Mức này có quá to không? Tôi lắc đầu rồi mở sách lại. Phong kéo ghế sát bàn, chờ tôi nói tiếp câu đang đọc dở.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+      "action": "Same camera: speaker waves now small; both can face each other with shared book between them, no lip demonstration.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi kể mình cần nghe câu bạn hỏi để cùng ôn bài, không muốn cứ nhìn môi đoán. Phong đặt tay cạnh núm loa nhưng không bật lớn nữa. Hai đứa thử đọc cho nhau một đoạn ngắn.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Same camera: speaker waves now small; both can face each other with shared book between them, no lip demonstration. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same camera: speaker waves now small; both can face each other with shared book between them, no lip demonstration.",
+          "reason": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi kể mình cần nghe câu bạn hỏi để cùng ôn bài, không muốn cứ nhìn môi đoán. Phong đặt tay cạnh núm loa nhưng không bật lớn nữa. Hai đứa thử đọc cho nhau một đoạn ngắn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+      "action": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Nếu muốn kiểm tra mức loa có quá to không, bạn hỏi cả câu tiếng Anh giúp tôi nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions.",
+          "reason": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+          "visible_text": [
+            {
+              "text": "Is this too ___?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Nếu muốn kiểm tra mức loa có quá to không, bạn hỏi cả câu tiếng Anh giúp tôi nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+      "action": "Same desk: Phong switches off speaker, both examine unfinished page of shared book. Book remains central; no extra musical text.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Is this too loud?\" Tôi nghe rõ câu hỏi nên trả lời được ngay. Phong cười, đặt sách giữa bàn. Hết buổi, bạn tự tắt loa, để hai đứa xem lại câu còn chưa hiểu.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Same desk: Phong switches off speaker, both examine unfinished page of shared book. Book remains central; no extra musical text. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same desk: Phong switches off speaker, both examine unfinished page of shared book. Book remains central; no extra musical text.",
+          "reason": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+          "visible_text": [
+            {
+              "text": "Is this too loud?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is this too loud?\" Tôi nghe rõ câu hỏi nên trả lời được ngay. Phong cười, đặt sách giữa bàn. Hết buổi, bạn tự tắt loa, để hai đứa xem lại câu còn chưa hiểu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Phong bật nhạc, tôi đóng cuốn sách. \"The music is loud.\" Nhạc đang to. Tôi đã nhắc hai lần mà bạn vẫn tưởng tôi chỉ muốn đổi bài. Phong nhìn cuốn sách úp xuống trước mặt tôi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Phong bật nhạc, tôi đóng cuốn sách. \"The music is loud.\" Nhạc đang to. Tôi đã nhắc hai lần mà bạn vẫn tưởng tôi chỉ muốn đổi bài. Phong nhìn cuốn sách úp xuống trước mặt tôi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Phong bật nhạc, tôi đóng cuốn sách. \"The music is loud.\" Nhạc đang to. Tôi đã nhắc hai lần mà bạn vẫn tưởng tôi chỉ muốn đổi bài. Phong nhìn cuốn sách úp xuống trước mặt tôi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn vặn nhỏ núm loa, rồi hỏi: \"Is this too loud?\" Mức này có quá to không? Tôi lắc đầu rồi mở sách lại. Phong kéo ghế sát bàn, chờ tôi nói tiếp câu đang đọc dở."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn vặn nhỏ núm loa, rồi hỏi: \"Is this too loud?\" Mức này có quá to không? Tôi lắc đầu rồi mở sách lại. Phong kéo ghế sát bàn, chờ tôi nói tiếp câu đang đọc dở."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi kể mình cần nghe câu bạn hỏi để cùng ôn bài, không muốn cứ nhìn môi đoán. Phong đặt tay cạnh núm loa nhưng không bật lớn nữa. Hai đứa thử đọc cho nhau một đoạn ngắn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Nếu muốn kiểm tra mức loa có quá to không, bạn hỏi cả câu tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Nếu muốn kiểm tra mức loa có quá to không, bạn hỏi cả câu tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Is this too loud?\" Tôi nghe rõ câu hỏi nên trả lời được ngay. Phong cười, đặt sách giữa bàn. Hết buổi, bạn tự tắt loa, để hai đứa xem lại câu còn chưa hiểu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Is this too loud?\" Tôi nghe rõ câu hỏi nên trả lời được ngay. Phong cười, đặt sách giữa bàn. Hết buổi, bạn tự tắt loa, để hai đứa xem lại câu còn chưa hiểu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Is this too loud?\" Tôi nghe rõ câu hỏi nên trả lời được ngay. Phong cười, đặt sách giữa bàn. Hết buổi, bạn tự tắt loa, để hai đứa xem lại câu còn chưa hiểu."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with the concrete personal need and early usable English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with the concrete personal need and early usable English model. Next causal state: Same angle: Phong turns speaker volume knob down, checks with mascot, who opens book."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate. Next causal state: Same camera: speaker waves now small; both can face each other with shared book between them, no lip demonstration."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning. Next causal state: Hold the same camera, people and relevant props from previous scene; show only the supplied sentence stem in upper safe region. Mascot asks viewer for full sentence; answer remains hidden; lower region clear for captions."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer. Next causal state: Same desk: Phong switches off speaker, both examine unfinished page of shared book. Book remains central; no extra musical text."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17094",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Tùng không nghe rõ Phong vì nhạc to; Phong giảm loa, kiểm lại mức rồi cả hai ôn bài với nhau. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "19992",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tùng không nghe rõ Phong vì nhạc to; Phong giảm loa, kiểm lại mức rồi cả hai ôn bài với nhau. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

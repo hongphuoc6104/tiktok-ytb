@@ -1,0 +1,509 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "b1c1c08641f2aefa62c0a8c915f58421cc8bffdf8ce180ea21485326a8260629",
+  "topic": "Học từ vựng tiếng Anh WEST (danh từ: hướng tây) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ WEST",
+    "Làm rõ nghĩa lõi \"hướng tây\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng WEST, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại WEST, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Lâm",
+      "appearance": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "Plain yellow short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Ngã ba lúc chiều tà",
+      "purpose": "Establish setting, show the torn map dilemma, and introduce the first model question asking for west.",
+      "action": "Two friends at quiet fork road hold worn map and phone compass, West arrow left of current position and station icon aligned left. Sunset is atmosphere only.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Bóng chúng tôi đổ dài về trước. Tờ bản đồ rách mép khiến tôi lúng túng giữa ngã ba vắng. Lâm nhìn vệt nắng chiều rồi hỏi tôi: \"Which way is west?\" Hướng nào là hướng tây?",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "west",
+          "meaning": "hướng tây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Two friends at quiet fork road hold worn map and phone compass, West arrow left of current position and station icon aligned left. Sunset is atmosphere only. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two friends at quiet fork road hold worn map and phone compass, West arrow left of current position and station icon aligned left. Sunset is atmosphere only.",
+          "reason": "Establish setting, show the torn map dilemma, and introduce the first model question asking for west.",
+          "visible_text": [
+            {
+              "text": "Which way is west?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            },
+            {
+              "text": "West",
+              "placement": "Leftward map arrow and matching compass direction",
+              "object": "Paper map and phone compass"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish setting, show the torn map dilemma, and introduce the first model question asking for west.",
+          "anchor": {
+            "vi": {
+              "quote": "Bóng chúng tôi đổ dài về trước. Tờ bản đồ rách mép khiến tôi lúng túng giữa ngã ba vắng. Lâm nhìn vệt nắng chiều rồi hỏi tôi: \"Which way is west?\" Hướng nào là hướng tây?",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish setting, show the torn map dilemma, and introduce the first model question asking for west. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nhìn theo vạt nắng",
+      "purpose": "Clarify core meaning of west as a cardinal direction and provide the second model sentence.",
+      "action": "Shared map clearly marks station icon west of their position, mascot indicates same physical road with free hand. Yellow friend offers to carry bag.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi đối chiếu mũi tên trên bản đồ với la bàn điện thoại. Tôi chỉ về phía lối dốc: \"The station is in the west.\" Nhà ga ở hướng tây. Lâm cất chai nước, bảo để cậu ấy xách giúp túi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "west",
+          "meaning": "hướng tây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Shared map clearly marks station icon west of their position, mascot indicates same physical road with free hand. Yellow friend offers to carry bag. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Shared map clearly marks station icon west of their position, mascot indicates same physical road with free hand. Yellow friend offers to carry bag.",
+          "reason": "Clarify core meaning of west as a cardinal direction and provide the second model sentence.",
+          "visible_text": [
+            {
+              "text": "west · hướng tây",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            },
+            {
+              "text": "West",
+              "placement": "Leftward map orientation arrow",
+              "object": "Paper map"
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify core meaning of west as a cardinal direction and provide the second model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi đối chiếu mũi tên trên bản đồ với la bàn điện thoại. Tôi chỉ về phía lối dốc: \"The station is in the west.\" Nhà ga ở hướng tây. Lâm cất chai nước, bảo để cậu ấy xách giúp túi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify core meaning of west as a cardinal direction and provide the second model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Bước chân cùng nhịp",
+      "purpose": "Develop personal connection and ease the tension between the two travelers through shared walking.",
+      "action": "Side profile of both stick figures walking side by side along the gravel path, their long shadows trailing ahead under the gentle breeze swaying tall grass.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Gió thổi mát rượi qua bãi cỏ ven đường. Lâm bước chậm lại để đi ngang hàng với tôi, không còn cằn nhằn về ngã rẽ bị trễ hồi trưa.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "west",
+          "meaning": "hướng tây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Side profile of both stick figures walking side by side along the gravel path, their long shadows trailing ahead under the gentle breeze swaying tall grass. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Side profile of both stick figures walking side by side along the gravel path, their long shadows trailing ahead under the gentle breeze swaying tall grass.",
+          "reason": "Develop personal connection and ease the tension between the two travelers through shared walking.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Develop personal connection and ease the tension between the two travelers through shared walking.",
+          "anchor": {
+            "vi": {
+              "quote": "Gió thổi mát rượi qua bãi cỏ ven đường. Lâm bước chậm lại để đi ngang hàng với tôi, không còn cằn nhằn về ngã rẽ bị trễ hồi trưa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Develop personal connection and ease the tension between the two travelers through shared walking. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Xác nhận hướng đi",
+      "purpose": "Prompt the learner to speak the second model sentence to reassure the friend.",
+      "action": "Close-up on the yellow-shirt friend looking back over his shoulder hesitantly, while the blue-shirt stickman waits with an open supportive hand gesture.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lâm vẫn liếc nhìn ngã ba phía sau. Bạn nói giúp tôi câu nhà ga ở hướng tây bằng tiếng Anh để bạn tôi yên tâm bước tiếp nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "west",
+          "meaning": "hướng tây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Close-up on the yellow-shirt friend looking back over his shoulder hesitantly, while the blue-shirt stickman waits with an open supportive hand gesture. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close-up on the yellow-shirt friend looking back over his shoulder hesitantly, while the blue-shirt stickman waits with an open supportive hand gesture.",
+          "reason": "Prompt the learner to speak the second model sentence to reassure the friend.",
+          "visible_text": [
+            {
+              "text": "The station is in the ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to speak the second model sentence to reassure the friend.",
+          "anchor": {
+            "vi": {
+              "quote": "Lâm vẫn liếc nhìn ngã ba phía sau. Bạn nói giúp tôi câu nhà ga ở hướng tây bằng tiếng Anh để bạn tôi yên tâm bước tiếp nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to speak the second model sentence to reassure the friend. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mái ga cuối đường",
+      "purpose": "Deliver spoken answer model and show local emotional resolution as the station appears.",
+      "action": "The two stick figures reach the crest of the dirt path, where the small station roof is visible ahead bathed in sunset light; the friend reaches over to share the weight of the duffel bag.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The station is in the west.\" Nhà ga ở hướng tây. Vừa qua khúc quanh, mái tôn nhà ga hiện ra thật. Lâm khẽ cười, đưa tay xách đỡ tôi chiếc túi nặng.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "west",
+          "meaning": "hướng tây"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The two stick figures reach the crest of the dirt path, where the small station roof is visible ahead bathed in sunset light; the friend reaches over to share the weight of the duffel bag. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The two stick figures reach the crest of the dirt path, where the small station roof is visible ahead bathed in sunset light; the friend reaches over to share the weight of the duffel bag.",
+          "reason": "Deliver spoken answer model and show local emotional resolution as the station appears.",
+          "visible_text": [
+            {
+              "text": "The station is in the west.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Deliver spoken answer model and show local emotional resolution as the station appears.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The station is in the west.\" Nhà ga ở hướng tây. Vừa qua khúc quanh, mái tôn nhà ga hiện ra thật. Lâm khẽ cười, đưa tay xách đỡ tôi chiếc túi nặng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deliver spoken answer model and show local emotional resolution as the station appears. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bóng chúng tôi đổ dài về trước. Tờ bản đồ rách mép khiến tôi lúng túng giữa ngã ba vắng. Lâm nhìn vệt nắng chiều rồi hỏi tôi: \"Which way is west?\" Hướng nào là hướng tây?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bóng chúng tôi đổ dài về trước. Tờ bản đồ rách mép khiến tôi lúng túng giữa ngã ba vắng. Lâm nhìn vệt nắng chiều rồi hỏi tôi: \"Which way is west?\" Hướng nào là hướng tây?"
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Bóng chúng tôi đổ dài về trước. Tờ bản đồ rách mép khiến tôi lúng túng giữa ngã ba vắng. Lâm nhìn vệt nắng chiều rồi hỏi tôi: \"Which way is west?\" Hướng nào là hướng tây?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi đối chiếu mũi tên trên bản đồ với la bàn điện thoại. Tôi chỉ về phía lối dốc: \"The station is in the west.\" Nhà ga ở hướng tây. Lâm cất chai nước, bảo để cậu ấy xách giúp túi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi đối chiếu mũi tên trên bản đồ với la bàn điện thoại. Tôi chỉ về phía lối dốc: \"The station is in the west.\" Nhà ga ở hướng tây. Lâm cất chai nước, bảo để cậu ấy xách giúp túi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Gió thổi mát rượi qua bãi cỏ ven đường. Lâm bước chậm lại để đi ngang hàng với tôi, không còn cằn nhằn về ngã rẽ bị trễ hồi trưa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Lâm vẫn liếc nhìn ngã ba phía sau. Bạn nói giúp tôi câu nhà ga ở hướng tây bằng tiếng Anh để bạn tôi yên tâm bước tiếp nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Lâm vẫn liếc nhìn ngã ba phía sau. Bạn nói giúp tôi câu nhà ga ở hướng tây bằng tiếng Anh để bạn tôi yên tâm bước tiếp nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"The station is in the west.\" Nhà ga ở hướng tây. Vừa qua khúc quanh, mái tôn nhà ga hiện ra thật. Lâm khẽ cười, đưa tay xách đỡ tôi chiếc túi nặng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"The station is in the west.\" Nhà ga ở hướng tây. Vừa qua khúc quanh, mái tôn nhà ga hiện ra thật. Lâm khẽ cười, đưa tay xách đỡ tôi chiếc túi nặng."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The station is in the west.\" Nhà ga ở hướng tây. Vừa qua khúc quanh, mái tôn nhà ga hiện ra thật. Lâm khẽ cười, đưa tay xách đỡ tôi chiếc túi nặng."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish setting, show the torn map dilemma, and introduce the first model question asking for west.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish setting, show the torn map dilemma, and introduce the first model question asking for west. Next causal state: Shared map clearly marks station icon west of their position, mascot indicates same physical road with free hand. Yellow friend offers to carry bag."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify core meaning of west as a cardinal direction and provide the second model sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Clarify core meaning of west as a cardinal direction and provide the second model sentence. Next causal state: Side profile of both stick figures walking side by side along the gravel path, their long shadows trailing ahead under the gentle breeze swaying tall grass."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Develop personal connection and ease the tension between the two travelers through shared walking.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Develop personal connection and ease the tension between the two travelers through shared walking. Next causal state: Close-up on the yellow-shirt friend looking back over his shoulder hesitantly, while the blue-shirt stickman waits with an open supportive hand gesture."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to speak the second model sentence to reassure the friend.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to speak the second model sentence to reassure the friend. Next causal state: The two stick figures reach the crest of the dirt path, where the small station roof is visible ahead bathed in sunset light; the friend reaches over to share the weight of the duffel bag."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Deliver spoken answer model and show local emotional resolution as the station appears.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Deliver spoken answer model and show local emotional resolution as the station appears. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "20371",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hai người bạn lạc đường lúc chiều muộn ở ngã ba vắng; một người nản lòng vì bản đồ rách, người kia nhìn hướng mặt trời lặn để cùng tìm ra lối về nhà ga. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

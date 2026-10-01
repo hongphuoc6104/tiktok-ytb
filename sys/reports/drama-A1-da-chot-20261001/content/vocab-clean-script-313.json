@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "f099105b713094fa373682b62852c1859ad081d29a2d8e85b31becc86799e28f",
+  "topic": "Học từ vựng tiếng Anh CLEAN (tính từ: sạch sẽ) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CLEAN",
+    "Làm rõ nghĩa lõi \"sạch sẽ\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CLEAN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CLEAN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Hà",
+      "appearance": "Minimal ink stick figure with a round white head outlined in black, simple black stick limbs.",
+      "outfit": "Single lemon yellow short-sleeve shirt and dark trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Gian bếp lúc đêm muộn",
+      "purpose": "Establish a quiet late-night kitchen scene and introduce the inquiry checking if the cup is clean.",
+      "action": "In a dim, modest kitchen late at night, the roommate in a yellow shirt sits with slumped shoulders at the wooden table. The pale-blue shirt mascot lifts a clear glass cup from a drying rack and looks over with an inquiring glance.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Gian bếp nhỏ bám đầy bụi mờ. Hà đi làm về muộn, mệt mỏi ngồi tựa vào mép bàn ăn. Tôi muốn rót cho bạn cốc nước ấm, liền cầm chiếc cốc thủy tinh lên hỏi: \"Is this cup clean?\" Chiếc cốc này sạch không bạn?",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "clean",
+          "meaning": "sạch sẽ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "In a dim, modest kitchen late at night, the roommate in a yellow shirt sits with slumped shoulders at the wooden table. The pale-blue shirt mascot lifts a clear glass cup from a drying rack and looks over with an inquiring glance. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "In a dim, modest kitchen late at night, the roommate in a yellow shirt sits with slumped shoulders at the wooden table. The pale-blue shirt mascot lifts a clear glass cup from a drying rack and looks over with an inquiring glance.",
+          "reason": "Establish a quiet late-night kitchen scene and introduce the inquiry checking if the cup is clean.",
+          "visible_text": [
+            {
+              "text": "Is this cup clean?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish a quiet late-night kitchen scene and introduce the inquiry checking if the cup is clean.",
+          "anchor": {
+            "vi": {
+              "quote": "Gian bếp nhỏ bám đầy bụi mờ. Hà đi làm về muộn, mệt mỏi ngồi tựa vào mép bàn ăn. Tôi muốn rót cho bạn cốc nước ấm, liền cầm chiếc cốc thủy tinh lên hỏi: \"Is this cup clean?\" Chiếc cốc này sạch không bạn?",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish a quiet late-night kitchen scene and introduce the inquiry checking if the cup is clean. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời bảo đảm",
+      "purpose": "Introduce the second model sentence affirming the cleanliness of the cup.",
+      "action": "The roommate in the yellow shirt raises her head slightly, nodding toward the glass cup and speaking with a tired but reassuring expression.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hà ngước lên rồi gật đầu: \"The cup is clean.\" Chiếc cốc sạch đấy. Bạn nói vừa rửa trước khi đi làm. Tôi nhìn chiếc cốc khô, không còn vết nước trà như tối hôm qua.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "clean",
+          "meaning": "sạch sẽ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The roommate in the yellow shirt raises her head slightly, nodding toward the glass cup and speaking with a tired but reassuring expression. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The roommate in the yellow shirt raises her head slightly, nodding toward the glass cup and speaking with a tired but reassuring expression.",
+          "reason": "Introduce the second model sentence affirming the cleanliness of the cup.",
+          "visible_text": [
+            {
+              "text": "clean · sạch sẽ",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the second model sentence affirming the cleanliness of the cup.",
+          "anchor": {
+            "vi": {
+              "quote": "Hà ngước lên rồi gật đầu: \"The cup is clean.\" Chiếc cốc sạch đấy. Bạn nói vừa rửa trước khi đi làm. Tôi nhìn chiếc cốc khô, không còn vết nước trà như tối hôm qua.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second model sentence affirming the cleanliness of the cup. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Khăn lau cẩn thận",
+      "purpose": "Show an extra attentive gesture of gently wiping the rim before pouring water.",
+      "action": "Mascot pours warm water from plain non-electric insulated flask into clean transparent cup, places it near tired roommate at same kitchen table.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi rót nước ấm mang tới bàn. Hà định đứng lên lấy rồi lại ngồi xuống. Tôi đặt chiếc cốc ngay trước tay bạn, kéo ghế của mình lại gần, không hỏi thêm chuyện ở chỗ làm.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "clean",
+          "meaning": "sạch sẽ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot pours warm water from plain non-electric insulated flask into clean transparent cup, places it near tired roommate at same kitchen table. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot pours warm water from plain non-electric insulated flask into clean transparent cup, places it near tired roommate at same kitchen table.",
+          "reason": "Show an extra attentive gesture of gently wiping the rim before pouring water.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show an extra attentive gesture of gently wiping the rim before pouring water.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi rót nước ấm mang tới bàn. Hà định đứng lên lấy rồi lại ngồi xuống. Tôi đặt chiếc cốc ngay trước tay bạn, kéo ghế của mình lại gần, không hỏi thêm chuyện ở chỗ làm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show an extra attentive gesture of gently wiping the rim before pouring water. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Luyện câu khẳng định sạch sẽ",
+      "purpose": "Prompt the learner to say the sentence using the adjective clean.",
+      "action": "The pale-blue shirt mascot holds the cup with both hands, stepping toward the table and speaking warmly to the roommate.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hà vẫn hỏi tôi cầm đúng chiếc cốc vừa rửa chưa. Bạn nói giúp tôi câu chiếc cốc sạch bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "clean",
+          "meaning": "sạch sẽ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "The pale-blue shirt mascot holds the cup with both hands, stepping toward the table and speaking warmly to the roommate. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The pale-blue shirt mascot holds the cup with both hands, stepping toward the table and speaking warmly to the roommate.",
+          "reason": "Prompt the learner to say the sentence using the adjective clean.",
+          "visible_text": [
+            {
+              "text": "The cup is ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to say the sentence using the adjective clean.",
+          "anchor": {
+            "vi": {
+              "quote": "Hà vẫn hỏi tôi cầm đúng chiếc cốc vừa rửa chưa. Bạn nói giúp tôi câu chiếc cốc sạch bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to say the sentence using the adjective clean. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Ngụm nước ấm",
+      "purpose": "Provide the model answer and close on a serene, comforting interaction.",
+      "action": "The roommate takes the warm glass with both hands and drinks a slow sip, a gentle smile appearing on her face in the quiet kitchen.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The cup is clean.\" Chiếc cốc sạch đấy. Hà cầm cốc bằng hai tay, uống một ngụm nhỏ. Tôi ngồi xuống cạnh bạn. Một lúc sau, bạn mới bắt đầu kể hôm nay phải đứng lâu thế nào.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "clean",
+          "meaning": "sạch sẽ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The roommate takes the warm glass with both hands and drinks a slow sip, a gentle smile appearing on her face in the quiet kitchen. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The roommate takes the warm glass with both hands and drinks a slow sip, a gentle smile appearing on her face in the quiet kitchen.",
+          "reason": "Provide the model answer and close on a serene, comforting interaction.",
+          "visible_text": [
+            {
+              "text": "The cup is clean.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the model answer and close on a serene, comforting interaction.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The cup is clean.\" Chiếc cốc sạch đấy. Hà cầm cốc bằng hai tay, uống một ngụm nhỏ. Tôi ngồi xuống cạnh bạn. Một lúc sau, bạn mới bắt đầu kể hôm nay phải đứng lâu thế nào.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide the model answer and close on a serene, comforting interaction. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Gian bếp nhỏ bám đầy bụi mờ. Hà đi làm về muộn, mệt mỏi ngồi tựa vào mép bàn ăn. Tôi muốn rót cho bạn cốc nước ấm, liền cầm chiếc cốc thủy tinh lên hỏi: \"Is this cup clean?\" Chiếc cốc này sạch không bạn?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Gian bếp nhỏ bám đầy bụi mờ. Hà đi làm về muộn, mệt mỏi ngồi tựa vào mép bàn ăn. Tôi muốn rót cho bạn cốc nước ấm, liền cầm chiếc cốc thủy tinh lên hỏi: \"Is this cup clean?\" Chiếc cốc này sạch không bạn?"
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Gian bếp nhỏ bám đầy bụi mờ. Hà đi làm về muộn, mệt mỏi ngồi tựa vào mép bàn ăn. Tôi muốn rót cho bạn cốc nước ấm, liền cầm chiếc cốc thủy tinh lên hỏi: \"Is this cup clean?\" Chiếc cốc này sạch không bạn?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Hà ngước lên rồi gật đầu: \"The cup is clean.\" Chiếc cốc sạch đấy. Bạn nói vừa rửa trước khi đi làm. Tôi nhìn chiếc cốc khô, không còn vết nước trà như tối hôm qua."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Hà ngước lên rồi gật đầu: \"The cup is clean.\" Chiếc cốc sạch đấy. Bạn nói vừa rửa trước khi đi làm. Tôi nhìn chiếc cốc khô, không còn vết nước trà như tối hôm qua."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Tôi rót nước ấm mang tới bàn. Hà định đứng lên lấy rồi lại ngồi xuống. Tôi đặt chiếc cốc ngay trước tay bạn, kéo ghế của mình lại gần, không hỏi thêm chuyện ở chỗ làm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Hà vẫn hỏi tôi cầm đúng chiếc cốc vừa rửa chưa. Bạn nói giúp tôi câu chiếc cốc sạch bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Hà vẫn hỏi tôi cầm đúng chiếc cốc vừa rửa chưa. Bạn nói giúp tôi câu chiếc cốc sạch bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"The cup is clean.\" Chiếc cốc sạch đấy. Hà cầm cốc bằng hai tay, uống một ngụm nhỏ. Tôi ngồi xuống cạnh bạn. Một lúc sau, bạn mới bắt đầu kể hôm nay phải đứng lâu thế nào."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"The cup is clean.\" Chiếc cốc sạch đấy. Hà cầm cốc bằng hai tay, uống một ngụm nhỏ. Tôi ngồi xuống cạnh bạn. Một lúc sau, bạn mới bắt đầu kể hôm nay phải đứng lâu thế nào."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The cup is clean.\" Chiếc cốc sạch đấy. Hà cầm cốc bằng hai tay, uống một ngụm nhỏ. Tôi ngồi xuống cạnh bạn. Một lúc sau, bạn mới bắt đầu kể hôm nay phải đứng lâu thế nào."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish a quiet late-night kitchen scene and introduce the inquiry checking if the cup is clean.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish a quiet late-night kitchen scene and introduce the inquiry checking if the cup is clean. Next causal state: The roommate in the yellow shirt raises her head slightly, nodding toward the glass cup and speaking with a tired but reassuring expression."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the second model sentence affirming the cleanliness of the cup.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second model sentence affirming the cleanliness of the cup. Next causal state: Mascot pours warm water from plain non-electric insulated flask into clean transparent cup, places it near tired roommate at same kitchen table."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show an extra attentive gesture of gently wiping the rim before pouring water.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show an extra attentive gesture of gently wiping the rim before pouring water. Next causal state: The pale-blue shirt mascot holds the cup with both hands, stepping toward the table and speaking warmly to the roommate."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to say the sentence using the adjective clean.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to say the sentence using the adjective clean. Next causal state: The roommate takes the warm glass with both hands and drinks a slow sip, a gentle smile appearing on her face in the quiet kitchen."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the model answer and close on a serene, comforting interaction.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Provide the model answer and close on a serene, comforting interaction. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19375",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Trở về sau ca làm khuya mệt mỏi, người bạn cùng phòng được đón nhận sự chăm sóc tỉ mỉ qua một chiếc cốc sạch và ngụm nước ấm thanh thản. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "52a11115fab4957803e4b2cc7cf316ada9fc830d44173bbc42fd64b270a7e747",
+  "topic": "Học từ vựng tiếng Anh PET (danh từ: thú cưng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ PET",
+    "Làm rõ nghĩa lõi \"thú cưng\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng PET, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại PET, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Kiên",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, simple dot eyes.",
+      "outfit": "Single simple brown short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều đang xảy ra",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "action": "Medium low-angle shot by a woodpile. A companion in a brown shirt hastily hides a bowl of fish scraps behind his back, looking nervous. The pale-blue-shirted protagonist kneels down beside a bamboo screen with a gentle expression.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tiếng mèo con kêu khẽ sau đống củi. Kiên giật mình giấu vội bát cá vụn sau lưng, lúng túng nhìn tôi như sợ bị mắng. Tôi ngồi xổm xuống cạnh tấm phên tre, mỉm cười chia sẻ: \"I have a pet.\" Tôi cũng có nuôi một con thú cưng ở nhà đấy.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pet",
+          "meaning": "thú cưng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Medium low-angle shot by a woodpile. A companion in a brown shirt hastily hides a bowl of fish scraps behind his back, looking nervous. The pale-blue-shirted protagonist kneels down beside a bamboo screen with a gentle expression. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium low-angle shot by a woodpile. A companion in a brown shirt hastily hides a bowl of fish scraps behind his back, looking nervous. The pale-blue-shirted protagonist kneels down beside a bamboo screen with a gentle expression.",
+          "reason": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "visible_text": [
+            {
+              "text": "I have a pet.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Tiếng mèo con kêu khẽ sau đống củi. Kiên giật mình giấu vội bát cá vụn sau lưng, lúng túng nhìn tôi như sợ bị mắng. Tôi ngồi xổm xuống cạnh tấm phên tre, mỉm cười chia sẻ: \"I have a pet.\" Tôi cũng có nuôi một con thú cưng ở nhà đấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the concrete personal situation and introduce or prepare an early English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Vướng mắc nhỏ",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "action": "Brown-shirt Kiên presents own small calico kitten in cardboard bed and says it is his pet; mascot listens. Plain pet-food bowl, no nutritional claim.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Kiên đặt bát đồ ăn trước chiếc hộp, chú mèo thò đầu ra. Bạn khẽ nói: \"My pet is cute.\" Thú cưng của tôi dễ thương. Tôi ngồi cạnh bạn, hỏi tên chú mèo là gì.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pet",
+          "meaning": "thú cưng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Brown-shirt Kiên presents own small calico kitten in cardboard bed and says it is his pet; mascot listens. Plain pet-food bowl, no nutritional claim. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Brown-shirt Kiên presents own small calico kitten in cardboard bed and says it is his pet; mascot listens. Plain pet-food bowl, no nutritional claim.",
+          "reason": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "visible_text": [
+            {
+              "text": "pet · thú cưng",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "anchor": {
+            "vi": {
+              "quote": "Kiên đặt bát đồ ăn trước chiếc hộp, chú mèo thò đầu ra. Bạn khẽ nói: \"My pet is cute.\" Thú cưng của tôi dễ thương. Tôi ngồi cạnh bạn, hỏi tên chú mèo là gì.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Advance the same situation and clarify the target sense with meaningful English usage. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một hành động cần thiết",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "action": "Medium shot. The companion strokes the kitten's head, his face brightening, and shows the protagonist a cozy scrap-cloth bed inside the box.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Kiên xoa đầu chú mèo nhỏ, ánh mắt rạng rỡ hẳn lên. Cậu kéo tôi ngồi lại gần chiếc hộp các-tông lót vải vụn mà cậu đã tự tay làm từ tối qua.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pet",
+          "meaning": "thú cưng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Medium shot. The companion strokes the kitten's head, his face brightening, and shows the protagonist a cozy scrap-cloth bed inside the box. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot. The companion strokes the kitten's head, his face brightening, and shows the protagonist a cozy scrap-cloth bed inside the box.",
+          "reason": "Show the small action or consequence that motivates the upcoming response.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the small action or consequence that motivates the upcoming response.",
+          "anchor": {
+            "vi": {
+              "quote": "Kiên xoa đầu chú mèo nhỏ, ánh mắt rạng rỡ hẳn lên. Cậu kéo tôi ngồi lại gần chiếc hộp các-tông lót vải vụn mà cậu đã tự tay làm từ tối qua.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the small action or consequence that motivates the upcoming response. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần nói",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "action": "Medium two-shot. The protagonist leans in with hands resting on knees, eager to share about having a companion animal at home.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi muốn kể với Kiên về chú cún nhỏ của mình để hai đứa cùng chia sẻ chuyện nuôi nấng. Bạn nói giúp tôi câu tôi có một con thú cưng bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pet",
+          "meaning": "thú cưng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Medium two-shot. The protagonist leans in with hands resting on knees, eager to share about having a companion animal at home. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium two-shot. The protagonist leans in with hands resting on knees, eager to share about having a companion animal at home.",
+          "reason": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "visible_text": [
+            {
+              "text": "I have a _____.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi muốn kể với Kiên về chú cún nhỏ của mình để hai đứa cùng chia sẻ chuyện nuôi nấng. Bạn nói giúp tôi câu tôi có một con thú cưng bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask for a complete story-linked sentence, then hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả gần",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "action": "Medium wide shot. Both companions sit side by side on low stools by the woodpile, watching the kitten curl up peacefully on the soft cloth.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I have a pet.\" Tôi có một con thú cưng. Kiên gật gù lắng nghe rồi hứa chiều mai sẽ cùng tôi mang ít vải ấm sang lót ổ cho chú mèo con.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pet",
+          "meaning": "thú cưng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Medium wide shot. Both companions sit side by side on low stools by the woodpile, watching the kitten curl up peacefully on the soft cloth. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium wide shot. Both companions sit side by side on low stools by the woodpile, watching the kitten curl up peacefully on the soft cloth.",
+          "reason": "Give the correct answer and close with the earned local consequence.",
+          "visible_text": [
+            {
+              "text": "I have a pet.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct answer and close with the earned local consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I have a pet.\" Tôi có một con thú cưng. Kiên gật gù lắng nghe rồi hứa chiều mai sẽ cùng tôi mang ít vải ấm sang lót ổ cho chú mèo con.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the correct answer and close with the earned local consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Tiếng mèo con kêu khẽ sau đống củi. Kiên giật mình giấu vội bát cá vụn sau lưng, lúng túng nhìn tôi như sợ bị mắng. Tôi ngồi xổm xuống cạnh tấm phên tre, mỉm cười chia sẻ: \"I have a pet.\" Tôi cũng có nuôi một con thú cưng ở nhà đấy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Tiếng mèo con kêu khẽ sau đống củi. Kiên giật mình giấu vội bát cá vụn sau lưng, lúng túng nhìn tôi như sợ bị mắng. Tôi ngồi xổm xuống cạnh tấm phên tre, mỉm cười chia sẻ: \"I have a pet.\" Tôi cũng có nuôi một con thú cưng ở nhà đấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Tiếng mèo con kêu khẽ sau đống củi. Kiên giật mình giấu vội bát cá vụn sau lưng, lúng túng nhìn tôi như sợ bị mắng. Tôi ngồi xổm xuống cạnh tấm phên tre, mỉm cười chia sẻ: \"I have a pet.\" Tôi cũng có nuôi một con thú cưng ở nhà đấy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Kiên đặt bát đồ ăn trước chiếc hộp, chú mèo thò đầu ra. Bạn khẽ nói: \"My pet is cute.\" Thú cưng của tôi dễ thương. Tôi ngồi cạnh bạn, hỏi tên chú mèo là gì."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Kiên đặt bát đồ ăn trước chiếc hộp, chú mèo thò đầu ra. Bạn khẽ nói: \"My pet is cute.\" Thú cưng của tôi dễ thương. Tôi ngồi cạnh bạn, hỏi tên chú mèo là gì."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Kiên xoa đầu chú mèo nhỏ, ánh mắt rạng rỡ hẳn lên. Cậu kéo tôi ngồi lại gần chiếc hộp các-tông lót vải vụn mà cậu đã tự tay làm từ tối qua."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn kể với Kiên về chú cún nhỏ của mình để hai đứa cùng chia sẻ chuyện nuôi nấng. Bạn nói giúp tôi câu tôi có một con thú cưng bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Tôi muốn kể với Kiên về chú cún nhỏ của mình để hai đứa cùng chia sẻ chuyện nuôi nấng. Bạn nói giúp tôi câu tôi có một con thú cưng bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"I have a pet.\" Tôi có một con thú cưng. Kiên gật gù lắng nghe rồi hứa chiều mai sẽ cùng tôi mang ít vải ấm sang lót ổ cho chú mèo con."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"I have a pet.\" Tôi có một con thú cưng. Kiên gật gù lắng nghe rồi hứa chiều mai sẽ cùng tôi mang ít vải ấm sang lót ổ cho chú mèo con."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I have a pet.\" Tôi có một con thú cưng. Kiên gật gù lắng nghe rồi hứa chiều mai sẽ cùng tôi mang ít vải ấm sang lót ổ cho chú mèo con."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the concrete personal situation and introduce or prepare an early English model. Next causal state: Brown-shirt Kiên presents own small calico kitten in cardboard bed and says it is his pet; mascot listens. Plain pet-food bowl, no nutritional claim."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Advance the same situation and clarify the target sense with meaningful English usage. Next causal state: Medium shot. The companion strokes the kitten's head, his face brightening, and shows the protagonist a cozy scrap-cloth bed inside the box."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the small action or consequence that motivates the upcoming response. Next causal state: Medium two-shot. The protagonist leans in with hands resting on knees, eager to share about having a companion animal at home."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Ask for a complete story-linked sentence, then hold before the answer. Next causal state: Medium wide shot. Both companions sit side by side on low stools by the woodpile, watching the kitten curl up peacefully on the soft cloth."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the correct answer and close with the earned local consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "20714",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Kiên giấu giếm bát cá vụn vì sợ bị trêu khi lén nuôi một chú mèo con sau đống củi. Tôi chia sẻ việc mình cũng nuôi thú cưng ở nhà để bạn bớt ngại ngùng và cùng nhau chăm sóc con vật nhỏ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

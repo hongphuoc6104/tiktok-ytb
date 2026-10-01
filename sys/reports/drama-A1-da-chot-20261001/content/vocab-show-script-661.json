@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "48899a26a182df60cd2f9f30a254f105e9aa102d15956e3331be33f2ae892602",
+  "topic": "Học từ vựng tiếng Anh SHOW (danh từ: chương trình biểu diễn) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SHOW",
+    "Làm rõ nghĩa lõi \"chương trình biểu diễn\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SHOW, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SHOW, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Phong",
+      "appearance": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "outfit": "A single plain pale slate short-sleeve shirt."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Tấm biển gỗ",
+      "purpose": "Establish arrival at an open-air theater checking the entrance sign and tickets.",
+      "action": "Slate-shirt friend closes ticket wallet and starts to turn away from a curtained small stage; mascot stops beside him with an asking gesture. Two people only.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Phong cất vé, định kéo tôi về. Cậu tưởng tới sai buổi vì sân khấu còn đóng. \"When does the show start?\" Chương trình biểu diễn bắt đầu khi nào? Tôi hỏi.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "show",
+          "meaning": "chương trình biểu diễn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Slate-shirt friend closes ticket wallet and starts to turn away from a curtained small stage; mascot stops beside him with an asking gesture. Two people only. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Slate-shirt friend closes ticket wallet and starts to turn away from a curtained small stage; mascot stops beside him with an asking gesture. Two people only.",
+          "reason": "Establish arrival at an open-air theater checking the entrance sign and tickets.",
+          "visible_text": [
+            {
+              "text": "When does the show start?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish arrival at an open-air theater checking the entrance sign and tickets.",
+          "anchor": {
+            "vi": {
+              "quote": "Phong cất vé, định kéo tôi về. Cậu tưởng tới sai buổi vì sân khấu còn đóng. \"When does the show start?\" Chương trình biểu diễn bắt đầu khi nào? Tôi hỏi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish arrival at an open-air theater checking the entrance sign and tickets. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Hỏi giờ bắt đầu",
+      "purpose": "Ask about the performance start time with the first English model sentence.",
+      "action": "The stick figure in the pale slate shirt holds two tickets looking toward the narrator with an inquiring expression.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Phong mua vé để tôi nghe cùng, nhưng giờ ngại mình nhớ nhầm. Tôi xin xem lại vé. Chương trình biểu diễn có giờ bắt đầu, chưa thấy diễn không có nghĩa đã lỡ mất.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "show",
+          "meaning": "chương trình biểu diễn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The stick figure in the pale slate shirt holds two tickets looking toward the narrator with an inquiring expression. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the pale slate shirt holds two tickets looking toward the narrator with an inquiring expression.",
+          "reason": "Ask about the performance start time with the first English model sentence.",
+          "visible_text": [
+            {
+              "text": "show · chương trình biểu diễn",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Ask about the performance start time with the first English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Phong mua vé để tôi nghe cùng, nhưng giờ ngại mình nhớ nhầm. Tôi xin xem lại vé. Chương trình biểu diễn có giờ bắt đầu, chưa thấy diễn không có nghĩa đã lỡ mất.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask about the performance start time with the first English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Bảy giờ mở màn",
+      "purpose": "Confirm the starting time using the second English model sentence.",
+      "action": "Mascot points to permitted 7:00 printed in ticket corner, slate-shirt friend reads alongside; blank stage curtain behind them.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Tôi đọc cho bạn nghe. Hai người tới sớm một chút; Phong nhìn sân khấu, chưa yên tâm ngồi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "show",
+          "meaning": "chương trình biểu diễn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot points to permitted 7:00 printed in ticket corner, slate-shirt friend reads alongside; blank stage curtain behind them. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to permitted 7:00 printed in ticket corner, slate-shirt friend reads alongside; blank stage curtain behind them.",
+          "reason": "Confirm the starting time using the second English model sentence.",
+          "visible_text": [
+            {
+              "text": "The show starts at seven.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Confirm the starting time using the second English model sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Tôi đọc cho bạn nghe. Hai người tới sớm một chút; Phong nhìn sân khấu, chưa yên tâm ngồi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the starting time using the second English model sentence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Hàng ghế thứ ba",
+      "purpose": "Find seats quietly as the stage lights warm up.",
+      "action": "Both stick figures sit side by side on a wooden bench facing the lit stage curtain.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi kéo ghế cạnh bạn, đưa vé lại. Tôi muốn ở lại nghe cùng, đâu cần hôm nay mọi thứ đúng như cậu đoán. Phong ngồi xuống, giữ cho tôi chiếc ghế sát bên.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "show",
+          "meaning": "chương trình biểu diễn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both stick figures sit side by side on a wooden bench facing the lit stage curtain. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both stick figures sit side by side on a wooden bench facing the lit stage curtain.",
+          "reason": "Find seats quietly as the stage lights warm up.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Find seats quietly as the stage lights warm up.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi kéo ghế cạnh bạn, đưa vé lại. Tôi muốn ở lại nghe cùng, đâu cần hôm nay mọi thứ đúng như cậu đoán. Phong ngồi xuống, giữ cho tôi chiếc ghế sát bên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Find seats quietly as the stage lights warm up. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Nhắc lại câu hỏi",
+      "purpose": "Prompt the learner to recall the first model question about the show's start time.",
+      "action": "The stick figure in the light sky blue shirt gestures toward the learner while seated.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Phong hỏi liệu giờ mình vừa đọc có đúng không. Bạn nói giúp tôi câu chương trình bắt đầu lúc bảy giờ bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "show",
+          "meaning": "chương trình biểu diễn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "The stick figure in the light sky blue shirt gestures toward the learner while seated. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The stick figure in the light sky blue shirt gestures toward the learner while seated.",
+          "reason": "Prompt the learner to recall the first model question about the show's start time.",
+          "visible_text": [
+            {
+              "text": "The ___ starts at seven.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to recall the first model question about the show's start time.",
+          "anchor": {
+            "vi": {
+              "quote": "Phong hỏi liệu giờ mình vừa đọc có đúng không. Bạn nói giúp tôi câu chương trình bắt đầu lúc bảy giờ bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to recall the first model question about the show's start time. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Tiếng nhạc hòa tấu",
+      "purpose": "Provide model feedback as the performance begins.",
+      "action": "Two friends sit next to each other facing closed red stage curtain as stage lights turn on; no performers or audience extras visible.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Đèn sân khấu bật, Phong cất vé. Tôi ngồi ngay chỗ bạn giữ, cùng chờ phần mở màn sau tấm rèm.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "show",
+          "meaning": "chương trình biểu diễn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Two friends sit next to each other facing closed red stage curtain as stage lights turn on; no performers or audience extras visible. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two friends sit next to each other facing closed red stage curtain as stage lights turn on; no performers or audience extras visible.",
+          "reason": "Provide model feedback as the performance begins.",
+          "visible_text": [
+            {
+              "text": "The show starts at seven.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Provide model feedback as the performance begins.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Đèn sân khấu bật, Phong cất vé. Tôi ngồi ngay chỗ bạn giữ, cùng chờ phần mở màn sau tấm rèm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide model feedback as the performance begins. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Phong cất vé, định kéo tôi về. Cậu tưởng tới sai buổi vì sân khấu còn đóng. \"When does the show start?\" Chương trình biểu diễn bắt đầu khi nào? Tôi hỏi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Phong cất vé, định kéo tôi về. Cậu tưởng tới sai buổi vì sân khấu còn đóng. \"When does the show start?\" Chương trình biểu diễn bắt đầu khi nào? Tôi hỏi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Phong cất vé, định kéo tôi về. Cậu tưởng tới sai buổi vì sân khấu còn đóng. \"When does the show start?\" Chương trình biểu diễn bắt đầu khi nào? Tôi hỏi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Phong mua vé để tôi nghe cùng, nhưng giờ ngại mình nhớ nhầm. Tôi xin xem lại vé. Chương trình biểu diễn có giờ bắt đầu, chưa thấy diễn không có nghĩa đã lỡ mất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Tôi đọc cho bạn nghe. Hai người tới sớm một chút; Phong nhìn sân khấu, chưa yên tâm ngồi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Tôi đọc cho bạn nghe. Hai người tới sớm một chút; Phong nhìn sân khấu, chưa yên tâm ngồi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi kéo ghế cạnh bạn, đưa vé lại. Tôi muốn ở lại nghe cùng, đâu cần hôm nay mọi thứ đúng như cậu đoán. Phong ngồi xuống, giữ cho tôi chiếc ghế sát bên."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Phong hỏi liệu giờ mình vừa đọc có đúng không. Bạn nói giúp tôi câu chương trình bắt đầu lúc bảy giờ bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Phong hỏi liệu giờ mình vừa đọc có đúng không. Bạn nói giúp tôi câu chương trình bắt đầu lúc bảy giờ bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Đèn sân khấu bật, Phong cất vé. Tôi ngồi ngay chỗ bạn giữ, cùng chờ phần mở màn sau tấm rèm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Đèn sân khấu bật, Phong cất vé. Tôi ngồi ngay chỗ bạn giữ, cùng chờ phần mở màn sau tấm rèm."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Đèn sân khấu bật, Phong cất vé. Tôi ngồi ngay chỗ bạn giữ, cùng chờ phần mở màn sau tấm rèm."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish arrival at an open-air theater checking the entrance sign and tickets.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish arrival at an open-air theater checking the entrance sign and tickets. Next causal state: The stick figure in the pale slate shirt holds two tickets looking toward the narrator with an inquiring expression."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Ask about the performance start time with the first English model sentence.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Ask about the performance start time with the first English model sentence. Next causal state: Mascot points to permitted 7:00 printed in ticket corner, slate-shirt friend reads alongside; blank stage curtain behind them."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Confirm the starting time using the second English model sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Confirm the starting time using the second English model sentence. Next causal state: Both stick figures sit side by side on a wooden bench facing the lit stage curtain."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Find seats quietly as the stage lights warm up.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Find seats quietly as the stage lights warm up. Next causal state: The stick figure in the light sky blue shirt gestures toward the learner while seated."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to recall the first model question about the show's start time.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to recall the first model question about the show's start time. Next causal state: Two friends sit next to each other facing closed red stage curtain as stage lights turn on; no performers or audience extras visible."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Provide model feedback as the performance begins.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Provide model feedback as the performance begins. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18289",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Phong ngại mua nhầm buổi và muốn về khi sân khấu đóng; tôi kiểm giờ bảy giờ, chọn ngồi lại bên bạn để cùng chờ mở màn. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20644",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Phong ngại mua nhầm buổi và muốn về khi sân khấu đóng; tôi kiểm giờ bảy giờ, chọn ngồi lại bên bạn để cùng chờ mở màn. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

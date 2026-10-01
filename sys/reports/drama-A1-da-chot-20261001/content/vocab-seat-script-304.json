@@ -1,0 +1,499 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "eff3bf2d73705d401b0dcfca2a5de3e247b49ad9905c28eeb1e800f63a35173d",
+  "topic": "Học từ vựng tiếng Anh SEAT (danh từ: chỗ ngồi) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SEAT",
+    "Làm rõ nghĩa lõi \"chỗ ngồi\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SEAT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SEAT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Nam",
+      "appearance": "Minimal ink stick figure with a round white head outlined in black, simple black stick limbs.",
+      "outfit": "Single muted orange short-sleeve shirt and dark trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Trạm xe vắng",
+      "purpose": "Establish fatigue after a long walk and introduce the first model sentence asking if the seat is available.",
+      "action": "Medium shot of a quiet roadside bus shelter in the evening. The pale-blue shirt mascot stands beside an exhausted friend in an orange shirt. A worn wooden bench has a single dry spot, and the mascot gestures toward the empty space.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Trạm xe ven đường vắng tanh. Tôi và Nam đi bộ suốt buổi chiều, chân mỏi rã. Ghế dài còn một chỗ khô ráo, tôi hỏi bạn: \"Is this seat free?\" Chỗ này còn ngồi được không?",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "seat",
+          "meaning": "chỗ ngồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Medium shot of a quiet roadside bus shelter in the evening. The pale-blue shirt mascot stands beside an exhausted friend in an orange shirt. A worn wooden bench has a single dry spot, and the mascot gestures toward the empty space. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of a quiet roadside bus shelter in the evening. The pale-blue shirt mascot stands beside an exhausted friend in an orange shirt. A worn wooden bench has a single dry spot, and the mascot gestures toward the empty space.",
+          "reason": "Establish fatigue after a long walk and introduce the first model sentence asking if the seat is available.",
+          "visible_text": [
+            {
+              "text": "Is this seat free?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish fatigue after a long walk and introduce the first model sentence asking if the seat is available.",
+          "anchor": {
+            "vi": {
+              "quote": "Trạm xe ven đường vắng tanh. Tôi và Nam đi bộ suốt buổi chiều, chân mỏi rã. Ghế dài còn một chỗ khô ráo, tôi hỏi bạn: \"Is this seat free?\" Chỗ này còn ngồi được không?",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish fatigue after a long walk and introduce the first model sentence asking if the seat is available. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời mời ngồi",
+      "purpose": "Introduce the second model sentence as an earnest gesture of care, offering the dry seat to the tired companion.",
+      "action": "The companion in the orange shirt leans wearily against a metal pole. The pale-blue shirt mascot gently takes his arm and points downward to the dry wooden plank of the bench.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Nam bảo tôi cứ ngồi trước vì ba lô tôi nặng. Nhưng thấy bạn phải dựa vào cột sắt vì mỏi, tôi kéo bạn lại: \"Please take a seat.\" Bạn ngồi xuống đây đi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "seat",
+          "meaning": "chỗ ngồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The companion in the orange shirt leans wearily against a metal pole. The pale-blue shirt mascot gently takes his arm and points downward to the dry wooden plank of the bench. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The companion in the orange shirt leans wearily against a metal pole. The pale-blue shirt mascot gently takes his arm and points downward to the dry wooden plank of the bench.",
+          "reason": "Introduce the second model sentence as an earnest gesture of care, offering the dry seat to the tired companion.",
+          "visible_text": [
+            {
+              "text": "seat · chỗ ngồi",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the second model sentence as an earnest gesture of care, offering the dry seat to the tired companion.",
+          "anchor": {
+            "vi": {
+              "quote": "Nam bảo tôi cứ ngồi trước vì ba lô tôi nặng. Nhưng thấy bạn phải dựa vào cột sắt vì mỏi, tôi kéo bạn lại: \"Please take a seat.\" Bạn ngồi xuống đây đi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second model sentence as an earnest gesture of care, offering the dry seat to the tired companion. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chia sẻ khoảng trống",
+      "purpose": "Show the practical choice of shifting luggage to share the small dry space together.",
+      "action": "Mascot sits on one end of dry bench spot and wipes adjoining edge with small cloth, orange friend still standing. Backpack rests on ground.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Nam còn đứng nhìn chỗ khô duy nhất. Tôi đặt ba lô xuống đất, dịch sang một bên rồi lấy khăn lau mép ghế. Nam hỏi tôi có mỏi không. Tôi bảo mỏi, ngồi sát chút là đủ cho cả hai.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "seat",
+          "meaning": "chỗ ngồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot sits on one end of dry bench spot and wipes adjoining edge with small cloth, orange friend still standing. Backpack rests on ground. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sits on one end of dry bench spot and wipes adjoining edge with small cloth, orange friend still standing. Backpack rests on ground.",
+          "reason": "Show the practical choice of shifting luggage to share the small dry space together.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the practical choice of shifting luggage to share the small dry space together.",
+          "anchor": {
+            "vi": {
+              "quote": "Nam còn đứng nhìn chỗ khô duy nhất. Tôi đặt ba lô xuống đất, dịch sang một bên rồi lấy khăn lau mép ghế. Nam hỏi tôi có mỏi không. Tôi bảo mỏi, ngồi sát chút là đủ cho cả hai.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the practical choice of shifting luggage to share the small dry space together. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Luyện nói câu mời",
+      "purpose": "Prompt the learner to produce the target sentence offering a seat before the four-second pause.",
+      "action": "Close shot of the pale-blue shirt mascot looking warmly at the hesitant companion, extending an open hand toward the bench surface.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Thấy Nam còn ngại ngần, tôi muốn giục bạn ngồi xuống nghỉ chân. Bạn nói giúp tôi câu này bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "seat",
+          "meaning": "chỗ ngồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Close shot of the pale-blue shirt mascot looking warmly at the hesitant companion, extending an open hand toward the bench surface. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close shot of the pale-blue shirt mascot looking warmly at the hesitant companion, extending an open hand toward the bench surface.",
+          "reason": "Prompt the learner to produce the target sentence offering a seat before the four-second pause.",
+          "visible_text": [
+            {
+              "text": "Please take a ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the learner to produce the target sentence offering a seat before the four-second pause.",
+          "anchor": {
+            "vi": {
+              "quote": "Thấy Nam còn ngại ngần, tôi muốn giục bạn ngồi xuống nghỉ chân. Bạn nói giúp tôi câu này bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to produce the target sentence offering a seat before the four-second pause. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Bữa tối dưới mái hiên",
+      "purpose": "Provide the model answer and close on a quiet, shared moment of relief.",
+      "action": "Both the pale-blue shirt mascot and the companion in the orange shirt sit together on the wooden bench under the shelter roof, breaking a dry piece of bread to share.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Please take a seat.\" Bạn ngồi xuống đây đi. Nam mỉm cười rồi ngồi xuống cạnh tôi. Hai đứa chia nhau mẩu bánh mì khô dưới mái hiên.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "seat",
+          "meaning": "chỗ ngồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both the pale-blue shirt mascot and the companion in the orange shirt sit together on the wooden bench under the shelter roof, breaking a dry piece of bread to share. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both the pale-blue shirt mascot and the companion in the orange shirt sit together on the wooden bench under the shelter roof, breaking a dry piece of bread to share.",
+          "reason": "Provide the model answer and close on a quiet, shared moment of relief.",
+          "visible_text": [
+            {
+              "text": "Please take a seat.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the model answer and close on a quiet, shared moment of relief.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Please take a seat.\" Bạn ngồi xuống đây đi. Nam mỉm cười rồi ngồi xuống cạnh tôi. Hai đứa chia nhau mẩu bánh mì khô dưới mái hiên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Provide the model answer and close on a quiet, shared moment of relief. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Trạm xe ven đường vắng tanh. Tôi và Nam đi bộ suốt buổi chiều, chân mỏi rã. Ghế dài còn một chỗ khô ráo, tôi hỏi bạn: \"Is this seat free?\" Chỗ này còn ngồi được không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Trạm xe ven đường vắng tanh. Tôi và Nam đi bộ suốt buổi chiều, chân mỏi rã. Ghế dài còn một chỗ khô ráo, tôi hỏi bạn: \"Is this seat free?\" Chỗ này còn ngồi được không?"
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Trạm xe ven đường vắng tanh. Tôi và Nam đi bộ suốt buổi chiều, chân mỏi rã. Ghế dài còn một chỗ khô ráo, tôi hỏi bạn: \"Is this seat free?\" Chỗ này còn ngồi được không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Nam bảo tôi cứ ngồi trước vì ba lô tôi nặng. Nhưng thấy bạn phải dựa vào cột sắt vì mỏi, tôi kéo bạn lại: \"Please take a seat.\" Bạn ngồi xuống đây đi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Nam bảo tôi cứ ngồi trước vì ba lô tôi nặng. Nhưng thấy bạn phải dựa vào cột sắt vì mỏi, tôi kéo bạn lại: \"Please take a seat.\" Bạn ngồi xuống đây đi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Nam còn đứng nhìn chỗ khô duy nhất. Tôi đặt ba lô xuống đất, dịch sang một bên rồi lấy khăn lau mép ghế. Nam hỏi tôi có mỏi không. Tôi bảo mỏi, ngồi sát chút là đủ cho cả hai."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Thấy Nam còn ngại ngần, tôi muốn giục bạn ngồi xuống nghỉ chân. Bạn nói giúp tôi câu này bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Thấy Nam còn ngại ngần, tôi muốn giục bạn ngồi xuống nghỉ chân. Bạn nói giúp tôi câu này bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Please take a seat.\" Bạn ngồi xuống đây đi. Nam mỉm cười rồi ngồi xuống cạnh tôi. Hai đứa chia nhau mẩu bánh mì khô dưới mái hiên."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Please take a seat.\" Bạn ngồi xuống đây đi. Nam mỉm cười rồi ngồi xuống cạnh tôi. Hai đứa chia nhau mẩu bánh mì khô dưới mái hiên."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Please take a seat.\" Bạn ngồi xuống đây đi. Nam mỉm cười rồi ngồi xuống cạnh tôi. Hai đứa chia nhau mẩu bánh mì khô dưới mái hiên."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish fatigue after a long walk and introduce the first model sentence asking if the seat is available.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish fatigue after a long walk and introduce the first model sentence asking if the seat is available. Next causal state: The companion in the orange shirt leans wearily against a metal pole. The pale-blue shirt mascot gently takes his arm and points downward to the dry wooden plank of the bench."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the second model sentence as an earnest gesture of care, offering the dry seat to the tired companion.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Introduce the second model sentence as an earnest gesture of care, offering the dry seat to the tired companion. Next causal state: Mascot sits on one end of dry bench spot and wipes adjoining edge with small cloth, orange friend still standing. Backpack rests on ground."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the practical choice of shifting luggage to share the small dry space together.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the practical choice of shifting luggage to share the small dry space together. Next causal state: Close shot of the pale-blue shirt mascot looking warmly at the hesitant companion, extending an open hand toward the bench surface."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to produce the target sentence offering a seat before the four-second pause.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to produce the target sentence offering a seat before the four-second pause. Next causal state: Both the pale-blue shirt mascot and the companion in the orange shirt sit together on the wooden bench under the shelter roof, breaking a dry piece of bread to share."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the model answer and close on a quiet, shared moment of relief.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Provide the model answer and close on a quiet, shared moment of relief. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "19312",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hai người bạn mỏi mệt sau ca làm dài tìm thấy một chiếc ghế khô ráo ở trạm xe vắng, nơi sự ngập ngừng nhường nhịn biến thành chỗ dựa ấm áp cho cả hai. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

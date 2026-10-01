@@ -1,0 +1,517 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "a41078924a1f3cd798fd19c6e632f0a87f076c97bfa67f2bb583554c684a297e",
+  "topic": "Học từ vựng tiếng Anh HOLD (động từ: cầm, giữ) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ HOLD",
+    "Làm rõ nghĩa lõi \"cầm, giữ\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng HOLD, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại HOLD, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Sơn",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, solid black oval eyes, ordinary stick limbs.",
+      "outfit": "Single plain pale-yellow short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều vừa xảy ra",
+      "purpose": "Open with personal need and early correct English model.",
+      "action": "Work table: a plain cardboard gift box has a springing lid. The pale-blue mascot tries to wrap a ribbon around it, calling over the friend in pale-yellow top.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Dây dù trơn tuột khỏi nắp hộp quà. Nắp hộp carton cứ phồng lên, tôi gọi Sơn: \"Hold this box.\" Giữ chiếc hộp này nhé. Cần hai tay đè chặt thì tôi mới luồn được ruy băng.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hold",
+          "meaning": "cầm, giữ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Work table: a plain cardboard gift box has a springing lid. The pale-blue mascot tries to wrap a ribbon around it, calling over the friend in pale-yellow top. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Work table: a plain cardboard gift box has a springing lid. The pale-blue mascot tries to wrap a ribbon around it, calling over the friend in pale-yellow top.",
+          "reason": "Open with personal need and early correct English model.",
+          "visible_text": [
+            {
+              "text": "Hold this box.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Open with personal need and early correct English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Dây dù trơn tuột khỏi nắp hộp quà. Nắp hộp carton cứ phồng lên, tôi gọi Sơn: \"Hold this box.\" Giữ chiếc hộp này nhé. Cần hai tay đè chặt thì tôi mới luồn được ruy băng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Open with personal need and early correct English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lời cần nói",
+      "purpose": "Clarify selected sense and obstacle within same relationship.",
+      "action": "The friend presses both hands firmly down on the cardboard lid. The mascot pulls the red ribbon under and across the corners of the box.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Sơn giữ mép nắp, tôi kéo dây dưới đáy. Tôi muốn tự gói quà cho buổi gặp nhưng làm mãi không được. Sơn chờ tôi buộc rồi mới đổi tay, không vội giành phần vì thấy tôi còn lóng ngóng.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hold",
+          "meaning": "cầm, giữ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "The friend presses both hands firmly down on the cardboard lid. The mascot pulls the red ribbon under and across the corners of the box. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The friend presses both hands firmly down on the cardboard lid. The mascot pulls the red ribbon under and across the corners of the box.",
+          "reason": "Clarify selected sense and obstacle within same relationship.",
+          "visible_text": [
+            {
+              "text": "hold · cầm, giữ",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Clarify selected sense and obstacle within same relationship.",
+          "anchor": {
+            "vi": {
+              "quote": "Sơn giữ mép nắp, tôi kéo dây dưới đáy. Tôi muốn tự gói quà cho buổi gặp nhưng làm mãi không được. Sơn chờ tôi buộc rồi mới đổi tay, không vội giành phần vì thấy tôi còn lóng ngóng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Clarify selected sense and obstacle within same relationship. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thử làm cùng nhau",
+      "purpose": "Show deliberate action or change with second usable English model.",
+      "action": "The mascot adjusts the crossing ribbon. The friend shifts his grip, pressing a minimal stick hand firmly onto the crossed ribbon knot to keep it from slipping.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Nút cuối lại tuột, tôi hỏi thêm: \"Can you hold this box?\" Bạn giữ chiếc hộp này được không? Sơn giữ hộp đúng chỗ tôi chỉ. Tôi thử buộc lại, để hai đầu dây ở gần nhau hơn lần đầu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hold",
+          "meaning": "cầm, giữ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The mascot adjusts the crossing ribbon. The friend shifts his grip, pressing a minimal stick hand firmly onto the crossed ribbon knot to keep it from slipping. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The mascot adjusts the crossing ribbon. The friend shifts his grip, pressing a minimal stick hand firmly onto the crossed ribbon knot to keep it from slipping.",
+          "reason": "Show deliberate action or change with second usable English model.",
+          "visible_text": [
+            {
+              "text": "Can you hold this box?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show deliberate action or change with second usable English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Nút cuối lại tuột, tôi hỏi thêm: \"Can you hold this box?\" Bạn giữ chiếc hộp này được không? Sơn giữ hộp đúng chỗ tôi chỉ. Tôi thử buộc lại, để hai đầu dây ở gần nhau hơn lần đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show deliberate action or change with second usable English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu bạn giúp nói",
+      "purpose": "Invite full-sentence target retrieval and hold before feedback.",
+      "action": "Same packaging table: the mascot pauses with the ribbon ends in hand and looks to the viewer. Upper safe area reserved for stem.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Muốn nhờ bạn giữ chiếc hộp để mình thắt dây, bạn nói câu bạn giữ chiếc hộp này được không bằng tiếng Anh giúp tôi nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hold",
+          "meaning": "cầm, giữ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Same packaging table: the mascot pauses with the ribbon ends in hand and looks to the viewer. Upper safe area reserved for stem. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same packaging table: the mascot pauses with the ribbon ends in hand and looks to the viewer. Upper safe area reserved for stem.",
+          "reason": "Invite full-sentence target retrieval and hold before feedback.",
+          "visible_text": [
+            {
+              "text": "Can you ___ this box?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite full-sentence target retrieval and hold before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Muốn nhờ bạn giữ chiếc hộp để mình thắt dây, bạn nói câu bạn giữ chiếc hộp này được không bằng tiếng Anh giúp tôi nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite full-sentence target retrieval and hold before feedback. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chuyện đi tiếp",
+      "purpose": "Give complete answer and small earned consequence.",
+      "action": "Same gift desk: Sơn steadies plain box while mascot finishes a slightly uneven ribbon bow; both accept handmade result. No orphan recipient or charitable claim.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"Can you hold this box?\" Sơn giữ, tôi buộc xong chiếc nơ còn hơi lệch. Bạn hỏi có sửa nữa không. Tôi lắc đầu, nhận hộp; lần này tôi sẽ mang món quà đã tự gói cùng bạn.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hold",
+          "meaning": "cầm, giữ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Same gift desk: Sơn steadies plain box while mascot finishes a slightly uneven ribbon bow; both accept handmade result. No orphan recipient or charitable claim. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same gift desk: Sơn steadies plain box while mascot finishes a slightly uneven ribbon bow; both accept handmade result. No orphan recipient or charitable claim.",
+          "reason": "Give complete answer and small earned consequence.",
+          "visible_text": [
+            {
+              "text": "Can you hold this box?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give complete answer and small earned consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can you hold this box?\" Sơn giữ, tôi buộc xong chiếc nơ còn hơi lệch. Bạn hỏi có sửa nữa không. Tôi lắc đầu, nhận hộp; lần này tôi sẽ mang món quà đã tự gói cùng bạn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give complete answer and small earned consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Dây dù trơn tuột khỏi nắp hộp quà. Nắp hộp carton cứ phồng lên, tôi gọi Sơn: \"Hold this box.\" Giữ chiếc hộp này nhé. Cần hai tay đè chặt thì tôi mới luồn được ruy băng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Dây dù trơn tuột khỏi nắp hộp quà. Nắp hộp carton cứ phồng lên, tôi gọi Sơn: \"Hold this box.\" Giữ chiếc hộp này nhé. Cần hai tay đè chặt thì tôi mới luồn được ruy băng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Dây dù trơn tuột khỏi nắp hộp quà. Nắp hộp carton cứ phồng lên, tôi gọi Sơn: \"Hold this box.\" Giữ chiếc hộp này nhé. Cần hai tay đè chặt thì tôi mới luồn được ruy băng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Sơn giữ mép nắp, tôi kéo dây dưới đáy. Tôi muốn tự gói quà cho buổi gặp nhưng làm mãi không được. Sơn chờ tôi buộc rồi mới đổi tay, không vội giành phần vì thấy tôi còn lóng ngóng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Nút cuối lại tuột, tôi hỏi thêm: \"Can you hold this box?\" Bạn giữ chiếc hộp này được không? Sơn giữ hộp đúng chỗ tôi chỉ. Tôi thử buộc lại, để hai đầu dây ở gần nhau hơn lần đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Nút cuối lại tuột, tôi hỏi thêm: \"Can you hold this box?\" Bạn giữ chiếc hộp này được không? Sơn giữ hộp đúng chỗ tôi chỉ. Tôi thử buộc lại, để hai đầu dây ở gần nhau hơn lần đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Muốn nhờ bạn giữ chiếc hộp để mình thắt dây, bạn nói câu bạn giữ chiếc hộp này được không bằng tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Muốn nhờ bạn giữ chiếc hộp để mình thắt dây, bạn nói câu bạn giữ chiếc hộp này được không bằng tiếng Anh giúp tôi nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"Can you hold this box?\" Sơn giữ, tôi buộc xong chiếc nơ còn hơi lệch. Bạn hỏi có sửa nữa không. Tôi lắc đầu, nhận hộp; lần này tôi sẽ mang món quà đã tự gói cùng bạn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"Can you hold this box?\" Sơn giữ, tôi buộc xong chiếc nơ còn hơi lệch. Bạn hỏi có sửa nữa không. Tôi lắc đầu, nhận hộp; lần này tôi sẽ mang món quà đã tự gói cùng bạn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can you hold this box?\" Sơn giữ, tôi buộc xong chiếc nơ còn hơi lệch. Bạn hỏi có sửa nữa không. Tôi lắc đầu, nhận hộp; lần này tôi sẽ mang món quà đã tự gói cùng bạn."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with personal need and early correct English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Open with personal need and early correct English model. Next causal state: The friend presses both hands firmly down on the cardboard lid. The mascot pulls the red ribbon under and across the corners of the box."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Clarify selected sense and obstacle within same relationship.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Clarify selected sense and obstacle within same relationship. Next causal state: The mascot adjusts the crossing ribbon. The friend shifts his grip, pressing a minimal stick hand firmly onto the crossed ribbon knot to keep it from slipping."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show deliberate action or change with second usable English model.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Show deliberate action or change with second usable English model. Next causal state: Same packaging table: the mascot pauses with the ribbon ends in hand and looks to the viewer. Upper safe area reserved for stem."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite full-sentence target retrieval and hold before feedback.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Invite full-sentence target retrieval and hold before feedback. Next causal state: Same gift desk: Sơn steadies plain box while mascot finishes a slightly uneven ribbon bow; both accept handmade result. No orphan recipient or charitable claim."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give complete answer and small earned consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give complete answer and small earned consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17294",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Dây dù trơn tuột khỏi nắp hộp quà. Nắp hộp carton cứ phồng lên, tôi gọi Sơn:  Nút cuối lại tuột, tôi hỏi thêm: \"Can you hold this box?\" Bạn giữ chiếc hộp này được không? Sơn giữ hộp đúng chỗ tôi chỉ. Tôi thử buộc lại, để hai đầu dây ở gần nhau hơn lần đầu.  Sơn giữ, tôi buộc xong chiếc nơ còn hơi lệch. Bạn hỏi có sửa nữa không. Tôi lắc đầu, nhận hộp; lần này tôi sẽ mang món quà đã tự gói cùng bạn. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "20497",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Dây dù trơn tuột khỏi nắp hộp quà. Nắp hộp carton cứ phồng lên, tôi gọi Sơn:  Nút cuối lại tuột, tôi hỏi thêm: \"Can you hold this box?\" Bạn giữ chiếc hộp này được không? Sơn giữ hộp đúng chỗ tôi chỉ. Tôi thử buộc lại, để hai đầu dây ở gần nhau hơn lần đầu.  Sơn giữ, tôi buộc xong chiếc nơ còn hơi lệch. Bạn hỏi có sửa nữa không. Tôi lắc đầu, nhận hộp; lần này tôi sẽ mang món quà đã tự gói cùng bạn. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

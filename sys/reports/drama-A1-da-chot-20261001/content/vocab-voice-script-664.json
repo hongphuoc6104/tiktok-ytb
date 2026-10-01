@@ -1,0 +1,595 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "184c2815f9185207c3515fecf45dbbe38d56d3a35f3e6a80487a5e457f578ba9",
+  "topic": "Học từ vựng tiếng Anh VOICE (danh từ: giọng nói) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ VOICE",
+    "Làm rõ nghĩa lõi \"giọng nói\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng VOICE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại VOICE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Lâm",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "outfit": "A single plain orange short-sleeve shirt (#FFA07A)."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cổ họng còn rát",
+      "purpose": "Set up the vulnerable vocal condition and the high personal stakes for the evening rehearsal.",
+      "action": "Orange-shirt learner begins placing small recorder into bag beside a script with abstract non-legible lines; mascot gestures to keep it out. No throat pain or illness.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lâm kéo máy thu âm vào túi. Bạn ngại giọng mình nhỏ quá. \"I hear your voice.\" Tôi nghe thấy giọng cậu. Tôi xin Lâm đừng cất máy ngay.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "voice",
+          "meaning": "giọng nói"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Orange-shirt learner begins placing small recorder into bag beside a script with abstract non-legible lines; mascot gestures to keep it out. No throat pain or illness. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Orange-shirt learner begins placing small recorder into bag beside a script with abstract non-legible lines; mascot gestures to keep it out. No throat pain or illness.",
+          "reason": "Set up the vulnerable vocal condition and the high personal stakes for the evening rehearsal.",
+          "visible_text": [
+            {
+              "text": "I hear your voice.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Set up the vulnerable vocal condition and the high personal stakes for the evening rehearsal.",
+          "anchor": {
+            "vi": {
+              "quote": "Lâm kéo máy thu âm vào túi. Bạn ngại giọng mình nhỏ quá. \"I hear your voice.\" Tôi nghe thấy giọng cậu. Tôi xin Lâm đừng cất máy ngay.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Set up the vulnerable vocal condition and the high personal stakes for the evening rehearsal. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nghe thấy tiếng thì thầm",
+      "purpose": "Introduce the first English model confirming perception of the speaker's vocal sound.",
+      "action": "Medium shot of the friend whispering into a small desk microphone while the stick figure in the pale-blue shirt listens intently and nods encouragingly.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hai đứa phải gửi đoạn đọc để xin thử vai. Lâm cứ muốn nói lớn như tôi, nhưng càng cố càng mất nhịp. Tôi để bản kịch trước bạn, nghe một câu bình thường.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "voice",
+          "meaning": "giọng nói"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Medium shot of the friend whispering into a small desk microphone while the stick figure in the pale-blue shirt listens intently and nods encouragingly. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the friend whispering into a small desk microphone while the stick figure in the pale-blue shirt listens intently and nods encouragingly.",
+          "reason": "Introduce the first English model confirming perception of the speaker's vocal sound.",
+          "visible_text": [
+            {
+              "text": "voice · giọng nói",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Introduce the first English model confirming perception of the speaker's vocal sound.",
+          "anchor": {
+            "vi": {
+              "quote": "Hai đứa phải gửi đoạn đọc để xin thử vai. Lâm cứ muốn nói lớn như tôi, nhưng càng cố càng mất nhịp. Tôi để bản kịch trước bạn, nghe một câu bình thường.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the first English model confirming perception of the speaker's vocal sound. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Ngụm nước ấm",
+      "purpose": "Deepen the emotional tension through a small physical action of seeking relief.",
+      "action": "Orange-shirt learner sits relaxed at table and speaks toward small recorder, mascot listens; no mug, medication or physical trembling.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"You have a soft voice.\" Cậu có giọng nói nhẹ nhàng. Tôi nói về giọng của chính Lâm, không bảo cậu đổi thành người khác. Bạn ngồi lại, thử câu mình thích.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "voice",
+          "meaning": "giọng nói"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Orange-shirt learner sits relaxed at table and speaks toward small recorder, mascot listens; no mug, medication or physical trembling. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Orange-shirt learner sits relaxed at table and speaks toward small recorder, mascot listens; no mug, medication or physical trembling.",
+          "reason": "Deepen the emotional tension through a small physical action of seeking relief.",
+          "visible_text": [
+            {
+              "text": "You have a soft voice.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Deepen the emotional tension through a small physical action of seeking relief.",
+          "anchor": {
+            "vi": {
+              "quote": "\"You have a soft voice.\" Cậu có giọng nói nhẹ nhàng. Tôi nói về giọng của chính Lâm, không bảo cậu đổi thành người khác. Bạn ngồi lại, thử câu mình thích.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Deepen the emotional tension through a small physical action of seeking relief. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Đọc câu thoại mẫu",
+      "purpose": "Introduce the second English model describing the quality of a voice in the script.",
+      "action": "Medium shot of the friend sitting up straighter, reading aloud from the script with more clarity and focus.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi ngồi xa hơn để Lâm biết âm giọng ấy vẫn nghe được ở chỗ này. Bạn thôi che mặt máy, đọc như lúc nói với tôi. Tôi không đọc hộ, chờ bạn xong câu.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "voice",
+          "meaning": "giọng nói"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Medium shot of the friend sitting up straighter, reading aloud from the script with more clarity and focus. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the friend sitting up straighter, reading aloud from the script with more clarity and focus.",
+          "reason": "Introduce the second English model describing the quality of a voice in the script.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Introduce the second English model describing the quality of a voice in the script.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi ngồi xa hơn để Lâm biết âm giọng ấy vẫn nghe được ở chỗ này. Bạn thôi che mặt máy, đọc như lúc nói với tôi. Tôi không đọc hộ, chờ bạn xong câu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Introduce the second English model describing the quality of a voice in the script. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Thử lại từ xa",
+      "purpose": "Prompt the learner to reassure the speaker using 'voice' across the distance of the room.",
+      "action": "Wide shot of the friend standing by the window speaking softly, while the stick figure in the pale-blue shirt cups an ear attentively at the desk.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Lâm hỏi từ góc phòng tôi còn nghe giọng cậu không. Bạn nói giúp tôi câu tôi nghe thấy giọng cậu bằng tiếng Anh nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "voice",
+          "meaning": "giọng nói"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Wide shot of the friend standing by the window speaking softly, while the stick figure in the pale-blue shirt cups an ear attentively at the desk. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Wide shot of the friend standing by the window speaking softly, while the stick figure in the pale-blue shirt cups an ear attentively at the desk.",
+          "reason": "Prompt the learner to reassure the speaker using 'voice' across the distance of the room.",
+          "visible_text": [
+            {
+              "text": "I hear your ___.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Prompt the learner to reassure the speaker using 'voice' across the distance of the room.",
+          "anchor": {
+            "vi": {
+              "quote": "Lâm hỏi từ góc phòng tôi còn nghe giọng cậu không. Bạn nói giúp tôi câu tôi nghe thấy giọng cậu bằng tiếng Anh nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Prompt the learner to reassure the speaker using 'voice' across the distance of the room. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Sẵn sàng cho buổi diễn",
+      "purpose": "Confirm the correct utterance, resolving the vocal doubt with warm mutual reassurance.",
+      "action": "Orange-shirt learner takes recorder out of bag and places it between both friends next to script, inviting mascot to record too. No audio waveform or success certificate.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I hear your voice.\" Tôi nghe thấy giọng cậu. Lâm lấy máy khỏi túi, giữ lại đoạn vừa đọc. Cậu hỏi tôi có muốn ghi phần của mình ngay bên cạnh không.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "voice",
+          "meaning": "giọng nói"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Orange-shirt learner takes recorder out of bag and places it between both friends next to script, inviting mascot to record too. No audio waveform or success certificate. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Orange-shirt learner takes recorder out of bag and places it between both friends next to script, inviting mascot to record too. No audio waveform or success certificate.",
+          "reason": "Confirm the correct utterance, resolving the vocal doubt with warm mutual reassurance.",
+          "visible_text": [
+            {
+              "text": "I hear your voice.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Confirm the correct utterance, resolving the vocal doubt with warm mutual reassurance.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I hear your voice.\" Tôi nghe thấy giọng cậu. Lâm lấy máy khỏi túi, giữ lại đoạn vừa đọc. Cậu hỏi tôi có muốn ghi phần của mình ngay bên cạnh không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the correct utterance, resolving the vocal doubt with warm mutual reassurance. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Lâm kéo máy thu âm vào túi. Bạn ngại giọng mình nhỏ quá. \"I hear your voice.\" Tôi nghe thấy giọng cậu. Tôi xin Lâm đừng cất máy ngay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Lâm kéo máy thu âm vào túi. Bạn ngại giọng mình nhỏ quá. \"I hear your voice.\" Tôi nghe thấy giọng cậu. Tôi xin Lâm đừng cất máy ngay."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Lâm kéo máy thu âm vào túi. Bạn ngại giọng mình nhỏ quá. \"I hear your voice.\" Tôi nghe thấy giọng cậu. Tôi xin Lâm đừng cất máy ngay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Hai đứa phải gửi đoạn đọc để xin thử vai. Lâm cứ muốn nói lớn như tôi, nhưng càng cố càng mất nhịp. Tôi để bản kịch trước bạn, nghe một câu bình thường."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "\"You have a soft voice.\" Cậu có giọng nói nhẹ nhàng. Tôi nói về giọng của chính Lâm, không bảo cậu đổi thành người khác. Bạn ngồi lại, thử câu mình thích."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "\"You have a soft voice.\" Cậu có giọng nói nhẹ nhàng. Tôi nói về giọng của chính Lâm, không bảo cậu đổi thành người khác. Bạn ngồi lại, thử câu mình thích."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Tôi ngồi xa hơn để Lâm biết âm giọng ấy vẫn nghe được ở chỗ này. Bạn thôi che mặt máy, đọc như lúc nói với tôi. Tôi không đọc hộ, chờ bạn xong câu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Lâm hỏi từ góc phòng tôi còn nghe giọng cậu không. Bạn nói giúp tôi câu tôi nghe thấy giọng cậu bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Lâm hỏi từ góc phòng tôi còn nghe giọng cậu không. Bạn nói giúp tôi câu tôi nghe thấy giọng cậu bằng tiếng Anh nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC06",
+      "quote": "\"I hear your voice.\" Tôi nghe thấy giọng cậu. Lâm lấy máy khỏi túi, giữ lại đoạn vừa đọc. Cậu hỏi tôi có muốn ghi phần của mình ngay bên cạnh không."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC06",
+      "quote": "\"I hear your voice.\" Tôi nghe thấy giọng cậu. Lâm lấy máy khỏi túi, giữ lại đoạn vừa đọc. Cậu hỏi tôi có muốn ghi phần của mình ngay bên cạnh không."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I hear your voice.\" Tôi nghe thấy giọng cậu. Lâm lấy máy khỏi túi, giữ lại đoạn vừa đọc. Cậu hỏi tôi có muốn ghi phần của mình ngay bên cạnh không."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Set up the vulnerable vocal condition and the high personal stakes for the evening rehearsal.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Set up the vulnerable vocal condition and the high personal stakes for the evening rehearsal. Next causal state: Medium shot of the friend whispering into a small desk microphone while the stick figure in the pale-blue shirt listens intently and nods encouragingly."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Introduce the first English model confirming perception of the speaker's vocal sound.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the first English model confirming perception of the speaker's vocal sound. Next causal state: Orange-shirt learner sits relaxed at table and speaks toward small recorder, mascot listens; no mug, medication or physical trembling."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Deepen the emotional tension through a small physical action of seeking relief.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Deepen the emotional tension through a small physical action of seeking relief. Next causal state: Medium shot of the friend sitting up straighter, reading aloud from the script with more clarity and focus."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Introduce the second English model describing the quality of a voice in the script.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Introduce the second English model describing the quality of a voice in the script. Next causal state: Wide shot of the friend standing by the window speaking softly, while the stick figure in the pale-blue shirt cups an ear attentively at the desk."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Prompt the learner to reassure the speaker using 'voice' across the distance of the room.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Prompt the learner to reassure the speaker using 'voice' across the distance of the room. Next causal state: Orange-shirt learner takes recorder out of bag and places it between both friends next to script, inviting mascot to record too. No audio waveform or success certificate."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Confirm the correct utterance, resolving the vocal doubt with warm mutual reassurance.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Confirm the correct utterance, resolving the vocal doubt with warm mutual reassurance. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18304",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Lâm ngại giọng nhỏ nên định bỏ ghi thử vai; tôi nghe và chấp nhận giọng riêng của bạn, cậu giữ lại đoạn vừa đọc. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "20955",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Lâm ngại giọng nhỏ nên định bỏ ghi thử vai; tôi nghe và chấp nhận giọng riêng của bạn, cậu giữ lại đoạn vừa đọc. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ],
+  "open_questions": []
+}

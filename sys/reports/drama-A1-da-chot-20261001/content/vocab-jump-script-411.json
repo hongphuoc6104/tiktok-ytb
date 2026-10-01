@@ -1,0 +1,497 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "1f51af5d01225cbcbb35a4985dd61282ab3fc3cde155198757866a2e26efee9c",
+  "topic": "Học từ vựng tiếng Anh JUMP (động từ: nhảy) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ JUMP",
+    "Làm rõ nghĩa lõi \"nhảy\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng JUMP, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại JUMP, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Đức",
+      "appearance": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+      "outfit": "Single soft-brown short-sleeve shirt (#C4A484)."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều đang xảy ra",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "action": "Eye-level medium shot of an empty brick schoolyard. A straight white chalk line divides the foreground from the background. The friend stands on the far side with folded arms, while the mascot looks down at the line.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Vạch phấn trắng nằm ngang mặt sân gạch. Đức đứng bên kia vạch, hơi nghiêng đầu nhìn tôi thách thức: \"Can you jump over the line?\" Bạn nhảy qua vạch được không?",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "jump",
+          "meaning": "nhảy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Eye-level medium shot of an empty brick schoolyard. A straight white chalk line divides the foreground from the background. The friend stands on the far side with folded arms, while the mascot looks down at the line. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Eye-level medium shot of an empty brick schoolyard. A straight white chalk line divides the foreground from the background. The friend stands on the far side with folded arms, while the mascot looks down at the line.",
+          "reason": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "visible_text": [
+            {
+              "text": "Can you jump over the line?",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+          "anchor": {
+            "vi": {
+              "quote": "Vạch phấn trắng nằm ngang mặt sân gạch. Đức đứng bên kia vạch, hơi nghiêng đầu nhìn tôi thách thức: \"Can you jump over the line?\" Bạn nhảy qua vạch được không?",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Establish the concrete personal situation and introduce or prepare an early English model. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Vướng mắc nhỏ",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "action": "Side view capturing the mascot in mid-air, knees bent and feet airborne clear above the white chalk mark drawn on the brick ground.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Tôi cúi xuống buộc lại dây giày cho chặt. Lấy đà hai bước, tôi nhún chân bật người qua vạch: \"I can jump over it.\" Tôi có thể nhảy qua nó.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "jump",
+          "meaning": "nhảy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Side view capturing the mascot in mid-air, knees bent and feet airborne clear above the white chalk mark drawn on the brick ground. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Side view capturing the mascot in mid-air, knees bent and feet airborne clear above the white chalk mark drawn on the brick ground.",
+          "reason": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "visible_text": [
+            {
+              "text": "jump · nhảy",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+          "anchor": {
+            "vi": {
+              "quote": "Tôi cúi xuống buộc lại dây giày cho chặt. Lấy đà hai bước, tôi nhún chân bật người qua vạch: \"I can jump over it.\" Tôi có thể nhảy qua nó.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Advance the same situation and clarify the target sense with meaningful English usage. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một hành động cần thiết",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "action": "Close shot of the mascot's shoes landing cleanly on red bricks two inches past the intact, unbroken white chalk line. The friend bends down to inspect.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Hai bàn chân tôi tiếp đất gọn gàng phía bên kia, không hề chạm vào bụi phấn trắng. Đức cúi nhìn vạch kẻ rồi khẽ gật đầu đồng ý.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "jump",
+          "meaning": "nhảy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Close shot of the mascot's shoes landing cleanly on red bricks two inches past the intact, unbroken white chalk line. The friend bends down to inspect. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close shot of the mascot's shoes landing cleanly on red bricks two inches past the intact, unbroken white chalk line. The friend bends down to inspect.",
+          "reason": "Show the small action or consequence that motivates the upcoming response.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the small action or consequence that motivates the upcoming response.",
+          "anchor": {
+            "vi": {
+              "quote": "Hai bàn chân tôi tiếp đất gọn gàng phía bên kia, không hề chạm vào bụi phấn trắng. Đức cúi nhìn vạch kẻ rồi khẽ gật đầu đồng ý.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Show the small action or consequence that motivates the upcoming response. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lời cần nói",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "action": "Medium shot of the mascot standing tall on the other side of the chalk line, facing forward with a steady posture.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "Đứng bên kia vạch rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình nhảy qua được để Đức nghe nhé.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "jump",
+          "meaning": "nhảy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Medium shot of the mascot standing tall on the other side of the chalk line, facing forward with a steady posture. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Medium shot of the mascot standing tall on the other side of the chalk line, facing forward with a steady posture.",
+          "reason": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "visible_text": [
+            {
+              "text": "I can ______ over it.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Đứng bên kia vạch rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình nhảy qua được để Đức nghe nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask for a complete story-linked sentence, then hold before the answer. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kết quả gần",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "action": "Wide shot of the yard. The friend picks up the chalk stub, smiling as he steps back to draw a second line for his own turn.",
+      "setting": "The established setting and props of this episode, kept continuous.",
+      "camera": "Frame the single dominant action/referent. Hold during learner response; cut only when the narrative state changes. Keep caption and upper teaching text regions separate.",
+      "narration": "\"I can jump over it.\" Đức cầm mẩu phấn, hỏi có cần vẽ vạch khác không. Tôi bảo tới lượt bạn thử trước đi. Bạn đứng lại ở bên kia, nhìn tôi, lúc nãy tôi do dự thế nào thì giờ bạn giống vậy.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "jump",
+          "meaning": "nhảy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Wide shot of the yard. The friend picks up the chalk stub, smiling as he steps back to draw a second line for his own turn. Keep the canonical mascot identity: one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Attach canonical Character reference. Maintain outfits, prop ownership and screen direction. Show only the listed people. Clear outer ten percent and bottom twenty-two percent for captions/UI. No writing except visible_text; no logos, incidental numbers or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Wide shot of the yard. The friend picks up the chalk stub, smiling as he steps back to draw a second line for his own turn.",
+          "reason": "Give the correct answer and close with the earned local consequence.",
+          "visible_text": [
+            {
+              "text": "I can jump over it.",
+              "placement": "Upper third inside safe area, separate from faces and the bottom subtitle region; readable at phone size.",
+              "object": "Quiet flat learning caption; no other wording."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct answer and close with the earned local consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I can jump over it.\" Đức cầm mẩu phấn, hỏi có cần vẽ vạch khác không. Tôi bảo tới lượt bạn thử trước đi. Bạn đứng lại ở bên kia, nhìn tôi, lúc nãy tôi do dự thế nào thì giờ bạn giống vậy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the correct answer and close with the earned local consequence. Tell the concrete personal situation without a lecture voice. These are listening directions, not engine controls.",
+          "pronunciation_notes": "Keep English I and spelling. Listen to actual WAV for the English models, language switches, restrained emotion and learner interval; no vocal quality is claimed from text.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Vạch phấn trắng nằm ngang mặt sân gạch. Đức đứng bên kia vạch, hơi nghiêng đầu nhìn tôi thách thức: \"Can you jump over the line?\" Bạn nhảy qua vạch được không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Vạch phấn trắng nằm ngang mặt sân gạch. Đức đứng bên kia vạch, hơi nghiêng đầu nhìn tôi thách thức: \"Can you jump over the line?\" Bạn nhảy qua vạch được không?"
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC01",
+      "quote": "Vạch phấn trắng nằm ngang mặt sân gạch. Đức đứng bên kia vạch, hơi nghiêng đầu nhìn tôi thách thức: \"Can you jump over the line?\" Bạn nhảy qua vạch được không?"
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Tôi cúi xuống buộc lại dây giày cho chặt. Lấy đà hai bước, tôi nhún chân bật người qua vạch: \"I can jump over it.\" Tôi có thể nhảy qua nó."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Tôi cúi xuống buộc lại dây giày cho chặt. Lấy đà hai bước, tôi nhún chân bật người qua vạch: \"I can jump over it.\" Tôi có thể nhảy qua nó."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Hai bàn chân tôi tiếp đất gọn gàng phía bên kia, không hề chạm vào bụi phấn trắng. Đức cúi nhìn vạch kẻ rồi khẽ gật đầu đồng ý."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC04",
+      "quote": "Đứng bên kia vạch rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình nhảy qua được để Đức nghe nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Đứng bên kia vạch rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình nhảy qua được để Đức nghe nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "\"I can jump over it.\" Đức cầm mẩu phấn, hỏi có cần vẽ vạch khác không. Tôi bảo tới lượt bạn thử trước đi. Bạn đứng lại ở bên kia, nhìn tôi, lúc nãy tôi do dự thế nào thì giờ bạn giống vậy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC05",
+      "quote": "\"I can jump over it.\" Đức cầm mẩu phấn, hỏi có cần vẽ vạch khác không. Tôi bảo tới lượt bạn thử trước đi. Bạn đứng lại ở bên kia, nhìn tôi, lúc nãy tôi do dự thế nào thì giờ bạn giống vậy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I can jump over it.\" Đức cầm mẩu phấn, hỏi có cần vẽ vạch khác không. Tôi bảo tới lượt bạn thử trước đi. Bạn đứng lại ở bên kia, nhìn tôi, lúc nãy tôi do dự thế nào thì giờ bạn giống vậy."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the concrete personal situation and introduce or prepare an early English model.",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "transition": "Establish the concrete personal situation and introduce or prepare an early English model. Next causal state: Side view capturing the mascot in mid-air, knees bent and feet airborne clear above the white chalk mark drawn on the brick ground."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Advance the same situation and clarify the target sense with meaningful English usage.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Advance the same situation and clarify the target sense with meaningful English usage. Next causal state: Close shot of the mascot's shoes landing cleanly on red bricks two inches past the intact, unbroken white chalk line. The friend bends down to inspect."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the small action or consequence that motivates the upcoming response.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Show the small action or consequence that motivates the upcoming response. Next causal state: Medium shot of the mascot standing tall on the other side of the chalk line, facing forward with a steady posture."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask for a complete story-linked sentence, then hold before the answer.",
+      "requirements": [
+        "R2",
+        "R4"
+      ],
+      "transition": "Ask for a complete story-linked sentence, then hold before the answer. Next causal state: Wide shot of the yard. The friend picks up the chalk stub, smiling as he steps back to draw a second line for his own turn."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct answer and close with the earned local consequence.",
+      "requirements": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "transition": "Give the correct answer and close with the earned local consequence. Next causal state: Hold the resolved consequence of this episode."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "21200",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hai bạn học vẽ vạch phấn thử tài bật nhảy trên sân trường vắng; sau chút do dự vì sợ trượt chân, nhân vật chính dứt khoát nhảy qua an toàn. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}
