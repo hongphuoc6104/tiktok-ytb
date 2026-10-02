@@ -1,35 +1,35 @@
 {
-  "version": 2,
-  "note": "Mặc định của kênh khi sinh brief từ kho từ vựng. Sửa ở đây thay vì sửa vocab/bank.py.",
-  "video_type": "explainer",
+  "version": 3,
+  "note": "Mặc định của kênh theo công thức Micro-Drama 4 hồi (15-20s), giọng Adam bựa, Foley SFX và Remotion Motion Engine.",
+  "video_type": "micro_drama",
   "aspect_ratio": "9:16",
-  "scene_count": 5,
+  "scene_count": 4,
   "duration": {
-    "min_seconds": 35.0,
-    "max_seconds": 75.0
+    "min_seconds": 15.0,
+    "max_seconds": 20.0
   },
   "language": "vi",
-  "tone": "hài hước, gần gũi, truyền cảm hứng",
-  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
-  "audience": "Người Việt học tiếng Anh ở mức độ của mục kho, muốn dùng đúng một nghĩa từ trong tình huống đời thường",
-  "prior_knowledge": "Tiếng Anh cơ bản, đã quen bảng chữ cái và câu đơn giản",
-  "pacing": "Mở rõ tình huống và lợi ích học; tăng nhịp khi có biến chuyển, giữ đủ thời gian đọc câu và đáp lại mẫu nghe; số hình theo chức năng kể chuyện",
+  "voice": "Adam bựa",
+  "speed": 1.08,
+  "tone": "Hài hước, tếu táo đời thường, kịch tính ngắn (Micro-Drama Comic), kết thúc bằng cú twist meme",
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines and exaggerated cartoon expressions",
+  "audience": "Người xem Shorts / TikTok muốn giải trí nhanh và nhớ ngay 1 từ vựng tiếng Anh qua tình huống hài hước đời thường",
+  "prior_knowledge": "Tiếng Anh cơ bản, học từ vựng tự nhiên qua ngữ cảnh",
+  "pacing": "Nhanh, dồn dập, cuốn hút ngay giây đầu tiên; kết thúc bất ngờ lật kèo",
   "avoid": [
+    "Mở bài kiểu giảng dạy trên lớp ('Hôm nay chúng ta cùng học từ...')",
     "Dịch nghĩa sáo rỗng kiểu từ điển",
-    "Nhồi quá nhiều từ mới ngoài từ khoá chính",
-    "Nhân vật quá phức tạp gây rối mắt"
+    "Khung header badge giả lập UI trên đỉnh video",
+    "Ghép 2 giọng trong 1 video ngắn",
+    "Nhân vật quá phức tạp hoặc người thật cơ bắp vi phạm nhận diện CH01"
   ],
   "domain_requirements": [
-    "Nhân vật chính CH01 dùng đúng mascot chuẩn assets/characters/channel-mascot/reference-v1.png; giữ cấu trúc mặt, một thân, áo và độ dày nét qua mọi hình",
-    "Một video phục vụ một kết quả học quan sát được: nhận ra nghĩa đã chọn và dùng được từ trong câu đơn giản phù hợp mức học",
-    "Các ví dụ thuộc một micro-story có nguyên nhân, hành động và hậu quả hoặc một đối chiếu có mục đích; số cảnh trong brief là kế hoạch sản xuất, không phải năm mục giảng cố định",
-    "Hook cho thấy một tình huống hoặc câu hỏi cụ thể; từ khóa/cách dùng xuất hiện đủ sớm để người xem hiểu lợi ích, kết thúc trả lời được lời hứa mở đầu",
-    "Có một lượt luyện nói hoặc nhớ lại với mẫu đúng, khoảng chờ thật và phản hồi; khai báo audio_direction cho cảnh luyện tập khi cần khoảng chờ cuối cảnh",
-    "Phát âm, IPA, nối âm, đối chiếu từ dễ nhầm và gốc từ chỉ dùng khi hữu ích và có căn cứ; không bắt buộc nhồi đủ mọi mục",
-    "Từ khóa/câu học hiển thị rõ gần hành động, ưu tiên 1/3 phía trên và tránh vùng phụ đề/UI; giữ đúng chính tả tiếng Anh, I không biến thành Ai",
-    "Mỗi hình/beat có chức năng học hoặc kể chuyện; đủ ảnh cho thay đổi cần thấy, giữ liên tục trạng thái trước khi tối ưu hàng đợi",
-    "Không hứa xem khẩu hình với ảnh tĩnh; phân biệt shadowing với nghe-dừng-nhắc lại; không dùng nhãn chuẩn Tây làm tiêu chí phát âm",
-    "Phụ đề chia theo cụm nghĩa, tối đa hai dòng, không dấu câu đứng riêng; nhận xét đồng bộ phải căn cứ âm thanh/video thật"
+    "Nhân vật chính CH01 dùng đúng mascot chuẩn assets/characters/channel-mascot/reference-v1.png (áo xanh biển nhạt #8CCFE8, đầu tròn trắng viền navy, tay chân que). Áp dụng quy tắc dung sai 80/20: chấp nhận biểu cảm cường điệu như rớt cằm shock, mắt cún con năn nỉ, mồ hôi văng tung tóe.",
+    "Cấu trúc Micro-Drama 4 hồi chuẩn: (1) 0-4s: Tình huống rắc rối đời thường của Mascot -> (2) 4-8s: Từ vựng tiếng Anh là chìa khóa gỡ rối -> (3) 8-13s: Luyện nói phản xạ ngắn kèm đếm nhịp 3-2-1 -> (4) 13-17s: Cú twist meme hài hước kết màn.",
+    "Giọng đọc solo duy nhất: Adam bựa (Vieneu GPU, tốc độ 1.05x-1.1x), tếu táo, nhập vai trực tiếp vào Mascot ở ngôi thứ nhất ('tui').",
+    "Tích hợp bộ 6 Foley SFX khớp nhịp hành động: click/pop (thao tác), whoosh (lia cảnh), ding (sáng từ vựng), tick (đếm nhịp), crunch (nhai bánh/twist).",
+    "Hiệu ứng Remotion Motion: Cú giật punch-in ở frame đầu, screen_shake khi có va chạm/shock, phụ đề 1-2 dòng chữ to rõ highlight từ khóa tiếng Anh màu vàng #FACC15, không dùng header badge.",
+    "Thời lượng xuất xưởng nghiêm ngặt trong khoảng 15.0 - 20.0 giây."
   ],
   "character": {
     "id": "channel-mascot",
@@ -43,8 +43,8 @@
     "font": "Inter, sans-serif",
     "color": "#172033",
     "outline": "Nền sáng tương phản",
-    "size": "Lớn, dễ đọc trên màn hình điện thoại",
-    "placement": "Trung tâm hoặc 1/3 phía trên, tránh vùng viền mép"
+    "size": "Lớn, dễ đọc trên màn hình điện thoại (tối đa 2 dòng ngắn)",
+    "placement": "Trung tâm phía dưới, không che mặt nhân vật, không dùng hộp badge"
   },
-  "example_count": 2
+  "example_count": 1
 }

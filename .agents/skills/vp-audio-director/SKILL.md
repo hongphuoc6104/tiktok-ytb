@@ -11,6 +11,10 @@ Read [the direction contract](../vp-content/references/director-contract.md) and
 
 For a spoken scene specify who is being addressed, what the speaker wants to do (tease, warn, reassure, explain, invite), the important words, the pause needed and any pronunciation risk. Avoid vague “energetic/natural” direction without a behavior to listen for.
 
+**Solo Voice Standard**:
+- Use solo Vieneu GPU voice: **Adam bựa** (rate ~1.08x - 1.12x), highly engaging, humorous, spoken in first-person ("tui") as the mascot. Never mix 2 different voices in short-form micro-drama videos.
+- Integrate 6 Foley SFX synced with motion: click/pop (UI/action), whoosh (pan/transition), ding (vocab reveal), tick (countdown hold), crunch (comic impact/twist).
+
 In content-v3 use `audio_direction.vi` and, when applicable, `.en`, each with `intent`, `pronunciation_notes`, `learner_pause_seconds`. The first two are reviewer/retake instructions, not supported TTS controls; do not claim the engine honored them without listening. A zero pause means no additional learner hold. A positive value requests at least that much quiet at the end of the scene and is included in the total duration. Put the model utterance/question at the scene end if the learner should answer there. For an internal practice turn, plan a scene boundary before anchoring narration; do not insert untracked silence into approved media.
 
 ## Spoken English

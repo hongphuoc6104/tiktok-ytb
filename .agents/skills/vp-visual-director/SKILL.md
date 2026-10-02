@@ -15,6 +15,11 @@ Show the target action, not merely its theme or aftermath. For a verb meaning le
 
 Use shot scale and angle to guide attention, not cinematic adjectives. Keep one main semantic task per frame. Reserve space for captions and platform UI, checking actual delivery size. Stable screen position for key learning text reduces unnecessary searching.
 
+**UI & Motion Cleanliness**:
+- **No Header Badge**: Eliminate clunky simulated UI badges or permanent category banners at the top of the video; maximize immersion for the narrative and artwork.
+- **Subtitles & Highlighting**: Modern rounded box at the bottom safe zone, 1-2 lines maximum. English target vocabulary must be prominently highlighted in bright yellow `#FACC15`.
+- **Dynamic Camera Moves**: Frame 1 punch-in hook, subtle screen shake on comic impact, and smooth zoom-in on the vocab reveal.
+
 ## Continuity and performance
 
 The canonical mascot reference at `assets/characters/channel-mascot/reference-v1.png` is authoritative. Apply the 80/20 Brand Tolerance Policy: generated images do not need to match the script 100% or be pixel-perfect. 80% is the non-negotiable core brand identity: single torso, pale-blue short-sleeve shirt (#8CCFE8), round white head with dark navy outline, solid black oval eyes, and minimal stick limbs. Reject severe brand violations: doubled shirts, realistic human muscles/fingers, wrong shirt colors, or cartoon/anime eyes with huge whites and pupils.
