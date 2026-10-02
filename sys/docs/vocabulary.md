@@ -148,3 +148,32 @@ Kiểm tra kho: `.venv/bin/python -m pytest vocab/test_bank.py -q`.
 ## Không tạo job trùng
 
 `bank.py start` từ chối bốc một từ đang có job chưa `mark`. Chỉ người dùng được thay job cũ bằng `--supersede JOB_CŨ --reason "..."`; lý do được ghi trong ledger (`superseded`). `release` giữ lịch sử `previous/superseded`.
+
+## Kế hoạch độ khó và ngôn ngữ A1–A2 — bản 2 (30/09/2026)
+
+Trước khi tạo brief/kịch bản mới, đọc `vocab/learning-plan.json` và tra đúng mã nghĩa. Bản 2 thay thế đề xuất ban đầu. Người dùng đã đồng ý ba nhóm thời lượng linh hoạt:
+
+| Nhóm | A1: khoảng / mục tiêu | A2: khoảng / mục tiêu |
+|---|---|---|
+| short — nghĩa dễ minh họa | 45–65 / 60 giây | 50–75 / 60 giây |
+| medium — thêm ngữ cảnh/cách dùng | 65–90 / 80 giây | 75–100 / 90 giây |
+| long — đối chiếu khó/trừu tượng | 80–110 / 100 giây | 90–120 / 100 giây |
+
+`extended=true` chỉ còn chỉ nhóm long; `needs_more_context=true` gồm medium và long. Không kéo dài chỉ vì nhiều nghĩa hoặc vì là từ A2. Tính cả khoảng chờ thật. Phần tăng thêm phục vụ tình huống, thực hành và phản hồi, không thêm lời lặp hay nghĩa khác để đủ giây. Rà lại nhu cầu từng nghĩa khi chốt brief; đây là đề xuất biên tập, chưa kiểm nghiệm với người học.
+
+Mức tiếng Anh độc lập với thời lượng/độ khó. Tỷ lệ tính trên phần giải thích, không tính câu mẫu tiếng Anh, không phải ngưỡng chấm máy:
+
+| Hồ sơ người học | Khoảng tiếng Anh | Mục tiêu tham khảo |
+|---|---|---|
+| Đầu A1 | 20–35% | 30% |
+| Cuối A1 | 35–50% | 45% |
+| Đầu A2 | 50–65% | 55% |
+| Cuối A2 | 60–75% | 70% |
+
+Nếu brief chưa xác định năng lực, mặc định đầu cấp. Chỉ chuyển dần sang cuối cấp khi người học hiểu chỉ dẫn và câu mẫu; không suy năng lực từ rank của từ. Dùng tiếng Anh ngắn, quen thuộc và hình hỗ trợ; tiếng Việt chốt chỗ khó. Bài khó có thể cần thêm tiếng Việt. Câu mẫu và lượt luyện dùng tiếng Anh ngay từ đầu A1.
+
+Rank của các mục A1–A2 còn todo được sắp theo độ khó 1–5, giữ thứ tự nguồn cũ trong cùng nhóm. Các mục reserved/done giữ nguyên rank và hợp đồng job; gợi ý trong kế hoạch chỉ dùng nếu sau này tạo bài mới hợp lệ. Mức CEFR giữ nhãn kho, chưa kiểm định lại. `next/start --order level` dùng rank mới; `--order topic` vẫn ưu tiên chủ đề.
+
+**Giới hạn tích hợp:** CLI hiện lấy thời lượng từ `channel.json`, chưa tự đọc kế hoạch theo mục. Agent phải tra kế hoạch và đặt thời lượng/định hướng qua đường sửa brief hợp lệ trước khi viết; không sửa tay brief của job đã có và không viết lại revision. Chưa coi nhãn là tự động thay thời lượng của CLI. `build` sẽ tái tạo rank theo nguồn: sau build cần áp lại kế hoạch cho các mục còn todo, giữ reserved/done. Tự động hóa cần lượt phát triển mã riêng theo quy tắc bảo vệ job.
+
+Danh sách hiện hành: `reports/vocab-learning-plan-v2-20260930/A1-A2-ke-hoach.csv`. Danh sách v1 tại thư mục không có v2 chỉ là lịch sử, không dùng cho bài mới.
