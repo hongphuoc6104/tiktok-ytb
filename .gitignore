@@ -109,19 +109,39 @@ vocab/.ledger.lock
 sys/vocab/queue.json
 .ledger.lock
 
-# --- 10. Runtime Logs & Loose Media in Root ---
-*.log
-logs/
+# --- 10. Audio & Video Media Files (Exclude All Except assets/) ---
+*.wav
+*.mp3
+*.ogg
+*.m4a
+*.flac
+*.mp4
+!sys/assets/**
+!assets/**
+
+# Loose images in root and debug flow screenshots
 /*.png
 /*.jpg
 /*.jpeg
 /*.webp
-/*.mp4
-/*.wav
-/*.mp3
+flow_*.png
+sys/flow_*.png
+*.png.tmp
 
-# Runtime bytecode redirected by the root launcher
+# --- 11. Ephemeral Reports & Audio Batch Samples ---
+sys/reports/audio_samples/
+sys/reports/audio_samples*/
+sys/reports/audio_batch*
+
+# --- 12. Agent Session Ephemeral Files ---
+.agents/sentinel*/
+.agents/ORIGINAL_REQUEST.md
+
+# --- 13. System Logs & Runtime Cache ---
+*.log
+logs/
 /sys/.cache/
 
 # Per-machine Flow identity; never sync another machine profile.
 /sys/experiments/b2_illustrator/machine.local.json
+
