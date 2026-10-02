@@ -1,0 +1,544 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "d129c1cccd930a12a56054d19bebf3f2c6202fe08da5f156cfce4c7190f7687f",
+  "topic": "Học từ vựng tiếng Anh LOOK (động từ: nhìn) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ LOOK",
+    "Làm rõ nghĩa lõi \"nhìn\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng LOOK, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại LOOK, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Nhìn vào đúng tờ đang được hỏi — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Mascot points to right-side drawing while companion studies left-side drawing, mismatch visible in gazes.",
+      "setting": "Bàn hai bản vẽ hư cấu.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Mình hỏi tờ này, bạn nhìn tờ kia! Look trong bài này là nhìn. \"Direct your eyes towards this object.\" Hai người xem bản vẽ hư cấu, cần giữ đúng thứ đang nói để lời nhận xét không lệch nhau.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "look",
+          "meaning": "nhìn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot points to right-side drawing while companion studies left-side drawing, mismatch visible in gazes. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to right-side drawing while companion studies left-side drawing, mismatch visible in gazes.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "look",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Mình hỏi tờ này, bạn nhìn tờ kia! Look trong bài này là nhìn. \"Direct your eyes towards this object.\" Hai người xem bản vẽ hư cấu, cần giữ đúng thứ đang nói để lời nhận xét không lệch nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nhìn vào đúng tờ đang được hỏi — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Companion indicates correct drawing and mascot directs attention to it.",
+      "setting": "Bàn hai bản vẽ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Người bạn nhắc: \"Look at this drawing.\" Nhìn bản vẽ này nhé. \"This is the page I am asking about.\" Bạn quay về tờ đã được chỉ, đặt phần đang cầm xuống để không che hình của người bạn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "look",
+          "meaning": "nhìn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Companion indicates correct drawing and mascot directs attention to it. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion indicates correct drawing and mascot directs attention to it.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "Look at this drawing.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nhắc: \"Look at this drawing.\" Nhìn bản vẽ này nhé. \"This is the page I am asking about.\" Bạn quay về tờ đã được chỉ, đặt phần đang cầm xuống để không che hình của người bạn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nhìn vào đúng tờ đang được hỏi — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both focus on one indicated drawing rather than all table materials.",
+      "setting": "Bàn hai bản vẽ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Mẫu look at nối việc nhìn với đối tượng sau at. \"Keep the object clear in this request.\" Hai người đang gọi một hành động chú ý nhìn, chưa tự kết luận đã đọc hết hay hiểu mọi chi tiết của cả hai tờ trên bàn.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "look",
+          "meaning": "nhìn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both focus on one indicated drawing rather than all table materials. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both focus on one indicated drawing rather than all table materials.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "look",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Mẫu look at nối việc nhìn với đối tượng sau at. \"Keep the object clear in this request.\" Hai người đang gọi một hành động chú ý nhìn, chưa tự kết luận đã đọc hết hay hiểu mọi chi tiết của cả hai tờ trên bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nhìn vào đúng tờ đang được hỏi — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Both position chosen drawing centrally and examine shared detail.",
+      "setting": "Bàn hai bản vẽ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"Let's look at it together.\" Cùng nhìn nó nhé. \"We can share the same view.\" Người bạn đặt giấy giữa bàn, bạn chỉ phần muốn hỏi để cả hai cùng trao đổi trên tờ đã chọn.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "look",
+          "meaning": "nhìn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both position chosen drawing centrally and examine shared detail. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both position chosen drawing centrally and examine shared detail.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "Let's look at it together.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"Let's look at it together.\" Cùng nhìn nó nhé. \"We can share the same view.\" Người bạn đặt giấy giữa bàn, bạn chỉ phần muốn hỏi để cả hai cùng trao đổi trên tờ đã chọn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Nhìn vào đúng tờ đang được hỏi — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold indicated drawing and full learner instruction.",
+      "setting": "Bàn hai bản vẽ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn nhờ người bạn nhìn bản vẽ đang chỉ. \"Name the object in your request.\" Hãy nói: \"Look at this drawing.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "look",
+          "meaning": "nhìn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold indicated drawing and full learner instruction. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold indicated drawing and full learner instruction.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Look at this drawing.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nhờ người bạn nhìn bản vẽ đang chỉ. \"Name the object in your request.\" Hãy nói: \"Look at this drawing.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Nhìn vào đúng tờ đang được hỏi — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both discuss same fictional drawing, other page set aside.",
+      "setting": "Bàn hai bản vẽ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Look at this drawing.\" Nhìn bản vẽ này nhé. \"The talk now has one clear page.\" Hai người đã thống nhất thứ cần nhìn, kể và hỏi tiếp từ cùng bản vẽ của câu chuyện.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "look",
+          "meaning": "nhìn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both discuss same fictional drawing, other page set aside. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both discuss same fictional drawing, other page set aside.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "Look at this drawing.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Look at this drawing.\" Nhìn bản vẽ này nhé. \"The talk now has one clear page.\" Hai người đã thống nhất thứ cần nhìn, kể và hỏi tiếp từ cùng bản vẽ của câu chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mình hỏi tờ này, bạn nhìn tờ kia! Look trong bài này là nhìn. \"Direct your eyes towards this object.\" Hai người xem bản vẽ hư cấu, cần giữ đúng thứ đang nói để lời nhận xét không lệch nhau."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mình hỏi tờ này, bạn nhìn tờ kia! Look trong bài này là nhìn. \"Direct your eyes towards this object.\" Hai người xem bản vẽ hư cấu, cần giữ đúng thứ đang nói để lời nhận xét không lệch nhau."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người bạn nhắc: \"Look at this drawing.\" Nhìn bản vẽ này nhé. \"This is the page I am asking about.\" Bạn quay về tờ đã được chỉ, đặt phần đang cầm xuống để không che hình của người bạn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người bạn nhắc: \"Look at this drawing.\" Nhìn bản vẽ này nhé. \"This is the page I am asking about.\" Bạn quay về tờ đã được chỉ, đặt phần đang cầm xuống để không che hình của người bạn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Mẫu look at nối việc nhìn với đối tượng sau at. \"Keep the object clear in this request.\" Hai người đang gọi một hành động chú ý nhìn, chưa tự kết luận đã đọc hết hay hiểu mọi chi tiết của cả hai tờ trên bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn nói: \"Let's look at it together.\" Cùng nhìn nó nhé. \"We can share the same view.\" Người bạn đặt giấy giữa bàn, bạn chỉ phần muốn hỏi để cả hai cùng trao đổi trên tờ đã chọn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn nhờ người bạn nhìn bản vẽ đang chỉ. \"Name the object in your request.\" Hãy nói: \"Look at this drawing.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Look at this drawing.\" Nhìn bản vẽ này nhé. \"The talk now has one clear page.\" Hai người đã thống nhất thứ cần nhìn, kể và hỏi tiếp từ cùng bản vẽ của câu chuyện."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Mascot points to right-side drawing while companion studies left-side drawing, mismatch visible in gazes. Continue with the existing connected model: Companion indicates correct drawing and mascot directs attention to it."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Bạn nhìn nhầm tờ → nhờ nhìn đây → chỉ bản vẽ → xem.. Next event: Both focus on one indicated drawing rather than all table materials."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Bạn nhìn nhầm tờ → nhờ nhìn đây → chỉ bản vẽ → xem.. Next event: Both position chosen drawing centrally and examine shared detail."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Bạn nhìn nhầm tờ → nhờ nhìn đây → chỉ bản vẽ → xem.. Next event: Hold indicated drawing and full learner instruction."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bạn nhìn nhầm tờ → nhờ nhìn đây → chỉ bản vẽ → xem.. Next event: Both discuss same fictional drawing, other page set aside."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bạn nhìn nhầm tờ → nhờ nhìn đây → chỉ bản vẽ → xem.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

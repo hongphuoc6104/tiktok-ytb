@@ -1,0 +1,462 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "cfe60f3f80a7e96d141251edb7fd0663dd28f50dee7ebcd0765f7cf3e11f7d45",
+  "topic": "Học từ vựng tiếng Anh SUMMER (danh từ: mùa hè) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SUMMER",
+    "Làm rõ nghĩa lõi \"mùa hè\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SUMMER, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SUMMER, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành trong tình huống",
+      "appearance": "Adult friend or companion. Minimal flat ink style. Maintain age, gender, clothing and identity across all scenes; use mustard top and only explicitly needed accessory. Distinct from canonical mascot.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Kế hoạch cho mùa hè — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot opens empty travel bag as friend lays seaside photo on table.",
+      "setting": "Bàn lên kế hoạch nghỉ và bãi biển trong ảnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Mùa hè tới, chiếc túi này đi đâu cùng bạn? Summer là mùa hè. Bạn lấy túi du lịch ra, người bạn tưởng mình đã có kế hoạch; thật ra cả hai còn đang chọn một việc muốn làm cùng nhau.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "summer",
+          "meaning": "mùa hè"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot opens empty travel bag as friend lays seaside photo on table. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot opens empty travel bag as friend lays seaside photo on table.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "summer",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Mùa hè tới, chiếc túi này đi đâu cùng bạn? Summer là mùa hè. Bạn lấy túi du lịch ra, người bạn tưởng mình đã có kế hoạch; thật ra cả hai còn đang chọn một việc muốn làm cùng nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Kế hoạch cho mùa hè — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Friend shows family seaside photo while mascot listens beside empty bag.",
+      "setting": "Bàn lên kế hoạch nghỉ và bãi biển trong ảnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn hỏi: \"What do you do in summer?\" Bạn làm gì vào mùa hè? In summer đặt hoạt động vào mùa đó; người bạn kể thường tới biển thăm người thân, chứ không phải chuyến nào cũng giống nhau.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "summer",
+          "meaning": "mùa hè"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend shows family seaside photo while mascot listens beside empty bag. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend shows family seaside photo while mascot listens beside empty bag.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "What do you do in summer?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"What do you do in summer?\" Bạn làm gì vào mùa hè? In summer đặt hoạt động vào mùa đó; người bạn kể thường tới biển thăm người thân, chứ không phải chuyến nào cũng giống nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Kế hoạch cho mùa hè — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Both mark a blank calendar page with a simple meeting icon, no actual date claims.",
+      "setting": "Bàn lên kế hoạch nghỉ và bãi biển trong ảnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn nói: \"Let's meet this summer.\" Mùa hè này mình gặp nhau nhé. This summer chỉ mùa hè sắp nói tới trong kế hoạch hiện tại; hai người còn cần thống nhất ngày sau.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "summer",
+          "meaning": "mùa hè"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both mark a blank calendar page with a simple meeting icon, no actual date claims. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both mark a blank calendar page with a simple meeting icon, no actual date claims.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "Let's meet this summer.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"Let's meet this summer.\" Mùa hè này mình gặp nhau nhé. This summer chỉ mùa hè sắp nói tới trong kế hoạch hiện tại; hai người còn cần thống nhất ngày sau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Kế hoạch cho mùa hè — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold travel bag and full invitation on steady frame for repetition.",
+      "setting": "Bàn lên kế hoạch nghỉ và bãi biển trong ảnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn muốn hẹn người bạn gặp trong mùa hè này. Nói lại \"Let's meet this summer.\" như một lời hẹn ngắn; thử nhấn rõ summer để người nghe biết mùa nào.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "summer",
+          "meaning": "mùa hè"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold travel bag and full invitation on steady frame for repetition. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold travel bag and full invitation on steady frame for repetition.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "Let's meet this summer.",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hẹn người bạn gặp trong mùa hè này. Nói lại \"Let's meet this summer.\" như một lời hẹn ngắn; thử nhấn rõ summer để người nghe biết mùa nào.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Kế hoạch cho mùa hè — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot folds empty bag beside meeting calendar and friend's photo.",
+      "setting": "Bàn lên kế hoạch nghỉ và bãi biển trong ảnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Let's meet this summer.\" Mùa hè này mình gặp nhau nhé. Túi vẫn trống, nhưng đã có người để lên kế hoạch cùng. Một lời hẹn là điểm bắt đầu trước lúc xếp đồ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "summer",
+          "meaning": "mùa hè"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot folds empty bag beside meeting calendar and friend's photo. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot folds empty bag beside meeting calendar and friend's photo.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "Let's meet this summer.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Let's meet this summer.\" Mùa hè này mình gặp nhau nhé. Túi vẫn trống, nhưng đã có người để lên kế hoạch cùng. Một lời hẹn là điểm bắt đầu trước lúc xếp đồ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mùa hè tới, chiếc túi này đi đâu cùng bạn? Summer là mùa hè. Bạn lấy túi du lịch ra, người bạn tưởng mình đã có kế hoạch; thật ra cả hai còn đang chọn một việc muốn làm cùng nhau."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mùa hè tới, chiếc túi này đi đâu cùng bạn? Summer là mùa hè. Bạn lấy túi du lịch ra, người bạn tưởng mình đã có kế hoạch; thật ra cả hai còn đang chọn một việc muốn làm cùng nhau."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"What do you do in summer?\" Bạn làm gì vào mùa hè? In summer đặt hoạt động vào mùa đó; người bạn kể thường tới biển thăm người thân, chứ không phải chuyến nào cũng giống nhau."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"What do you do in summer?\" Bạn làm gì vào mùa hè? In summer đặt hoạt động vào mùa đó; người bạn kể thường tới biển thăm người thân, chứ không phải chuyến nào cũng giống nhau."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nói: \"Let's meet this summer.\" Mùa hè này mình gặp nhau nhé. This summer chỉ mùa hè sắp nói tới trong kế hoạch hiện tại; hai người còn cần thống nhất ngày sau."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn hẹn người bạn gặp trong mùa hè này. Nói lại \"Let's meet this summer.\" như một lời hẹn ngắn; thử nhấn rõ summer để người nghe biết mùa nào."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Let's meet this summer.\" Mùa hè này mình gặp nhau nhé. Túi vẫn trống, nhưng đã có người để lên kế hoạch cùng. Một lời hẹn là điểm bắt đầu trước lúc xếp đồ."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Muốn gặp bạn → hỏi mùa hè → chọn hoạt động → hẹn.. Next visible event: Friend shows family seaside photo while mascot listens beside empty bag."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn gặp bạn → hỏi mùa hè → chọn hoạt động → hẹn.. Next visible event: Both mark a blank calendar page with a simple meeting icon, no actual date claims."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn gặp bạn → hỏi mùa hè → chọn hoạt động → hẹn.. Next visible event: Hold travel bag and full invitation on steady frame for repetition."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn gặp bạn → hỏi mùa hè → chọn hoạt động → hẹn.. Next visible event: Mascot folds empty bag beside meeting calendar and friend's photo."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn gặp bạn → hỏi mùa hè → chọn hoạt động → hẹn.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

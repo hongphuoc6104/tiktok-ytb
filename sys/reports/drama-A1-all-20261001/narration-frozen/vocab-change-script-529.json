@@ -1,0 +1,119 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+      "id": "CH01",
+      "name_vi": "Hải",
+      "outfit_en": "Single pale-blue #8CCFE8 short-sleeve torso."
+    },
+    {
+      "appearance_en": "Minimal ink stick figure, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+      "id": "CH02",
+      "name_vi": "Mai",
+      "outfit_en": "Single pale-rose short-sleeve torso."
+    }
+  ],
+  "job": "vocab-change-script-529",
+  "learner_outcome_vi": "Hiểu rõ nghĩa động từ change là thay đổi (điều chỉnh lịch, thông tin) và nói được câu đề nghị Can we change the time?",
+  "opening_function_vi": "Bảng phấn ghi nhầm giờ họp.",
+  "plot_vi": "Bảng phấn ghi nhầm giờ họp. Mai định viết thêm thông báo nhưng tôi ngăn lại. Tôi chỉ vào dòng số bốn giờ chiều:  \"Let's change it to five.\" Chúng mình đổi sang năm giờ nhé. Mai đồng ý xem giờ mới, tôi lau dòng bốn giờ rồi viết năm giờ vào chỗ ấy. Hai đứa chụp bảng để gửi lại thông báo sửa.  Mai gật, kiểm lại dòng năm giờ rồi giữ ảnh bảng. Việc đổi đã được ghi rõ, còn phải báo tới các bạn. Tôi nhận phần gửi lời nhắc, không để Mai giải thích một mình.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "custom_visible_text": [
+        {
+          "object": "blackboard notice",
+          "placement": "center of blackboard",
+          "text": "4:00 PM"
+        }
+      ],
+      "narration": "Bảng phấn ghi nhầm giờ họp. Mai định viết thêm thông báo nhưng tôi ngăn lại. Tôi chỉ vào dòng số bốn giờ chiều: \"Can we change the time?\" Chúng mình thay đổi giờ được không?",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Open with personal need and early accurate English.",
+      "scene_id": "SC01",
+      "title_vi": "Điều vừa xảy ra",
+      "visual_en": "In a club room, a small blackboard on the wall shows the chalk text '4:00 PM'. Mai in pale rose holds a piece of chalk. The pale-blue mascot points to the chalk text, questioning the timing."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Mai đã báo giờ cũ, sợ đổi thêm làm người khác khó theo. Tôi chỉ lịch trực của hai đứa trùng bốn giờ, xin bạn cùng xem giờ khác. Nếu cứ im cho xong, tôi lại phải bỏ dở phần mình đang phụ.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Clarify selected sense with resistance inside same relationship.",
+      "scene_id": "SC02",
+      "title_vi": "Lời cần nói",
+      "visual_en": "Mai checks an open pocket planner, realizing the schedule overlap. The mascot picks up a felt blackboard eraser from the chalk ledge."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "custom_visible_text": [
+        {
+          "text": "4:00 PM",
+          "placement": "old chalk line before erased",
+          "object": "board"
+        },
+        {
+          "text": "5:00 PM",
+          "placement": "same chalk line after rewritten",
+          "object": "board"
+        }
+      ],
+      "extra_visual_states": [
+        {
+          "quote": "rồi viết năm giờ vào chỗ ấy.",
+          "visual_en": "Preserve camera and board position: old4:00PM removed, same position now shows5:00PM, Mai holds phone to photograph.",
+          "purpose_en": "Show change as replacement of a prior value by a new one."
+        }
+      ],
+      "narration": "\"Let's change it to five.\" Chúng mình đổi sang năm giờ nhé. Mai đồng ý xem giờ mới, tôi lau dòng bốn giờ rồi viết năm giờ vào chỗ ấy. Hai đứa chụp bảng để gửi lại thông báo sửa.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Use deliberate action and second correct English model to develop story.",
+      "scene_id": "SC03",
+      "title_vi": "Thử làm cùng nhau",
+      "visual_en": "Same club board angle: mascot erases4:00PM then writes5:00PM while Mai agrees to record updated proposed meeting time. No guaranteed all-attendance."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bạn nói giúp tôi câu chúng mình thay đổi giờ được không bằng tiếng Anh nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Ask viewer to retrieve complete supported target sentence then wait.",
+      "scene_id": "SC04",
+      "stem": "Can we ___ the time?",
+      "title_vi": "Câu bạn giúp nói",
+      "visual_en": "Two-shot beside the blackboard: mascot gestures toward the board while Mai nods attentively. Upper space reserved for the prompt stem."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"Can we change the time?\" Mai gật, kiểm lại dòng năm giờ rồi giữ ảnh bảng. Việc đổi đã được ghi rõ, còn phải báo tới các bạn. Tôi nhận phần gửi lời nhắc, không để Mai giải thích một mình.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Give exact answer and small consequence, no guaranteed outcome.",
+      "scene_id": "SC05",
+      "title_vi": "Chuyện đi tiếp",
+      "visual_en": "Same club room: board clearly shows5:00PM, Mai checks photo while mascot takes responsibility for notifying friends. No unlisted crowd.",
+      "custom_visible_text": [
+        {
+          "text": "5:00 PM",
+          "placement": "board middle",
+          "object": "updated meeting time"
+        }
+      ]
+    }
+  ],
+  "title": "Giờ hẹn trên bảng phấn",
+  "editorial_review": "Reviewed and rewritten by an authorized writing agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

@@ -1,0 +1,628 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "2273af2b470795fcfbfec79641ea311ba9675900fd305e32234d97cf1fd7dd78",
+  "topic": "Học từ vựng tiếng Anh brother — anh hoặc em trai qua câu chuyện “Cao hơn chưa chắc là anh”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới brother; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “anh hoặc em trai” của brother; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng brother chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng brother, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Anh trai",
+      "appearance": "Adult male sibling, simple flat illustration, slightly taller than mascot; relation established in narration.",
+      "outfit": "Plain sage top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Anh hay em đều một từ?",
+      "purpose": "Introduce a kinship distinction absent from the basic English noun.",
+      "action": "Mascot and male sibling stand beside board game, sibling a little taller but both adult-sized.",
+      "setting": "Home board-game table with mascot and male sibling in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nhìn hai anh em rồi hỏi: tiếng Anh gọi anh trai và em trai khác nhau thế nào? Brother dùng được cho cả hai. Riêng từ brother chưa cho biết người ấy lớn tuổi hay nhỏ tuổi hơn bạn. Hai người cùng nhà chưa chắc đã là anh em trai. Trong bài, lời giới thiệu và quan hệ gia đình xác nhận điều đó; chiều cao chỉ tạo câu hỏi mở đầu.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "brother",
+          "meaning": "anh hoặc em trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and male sibling stand beside board game, sibling a little taller but both adult-sized. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and male sibling stand beside board game, sibling a little taller but both adult-sized.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "brother",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Show an explicit sibling relation card between mascot and declared male sibling. Use an unlabeled age-order arrow, distinct from a height comparison. An illustrative height reversal does not change the declared older sibling relation. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show an explicit sibling relation card between mascot and declared male sibling. Use an unlabeled age-order arrow, distinct from a height comparison. An illustrative height reversal does not change the declared older sibling relation.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "brother",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhìn hai anh em rồi hỏi:",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Hai người cùng nhà chưa chắc đã",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Giới thiệu trước đã",
+      "purpose": "Model the basic relationship.",
+      "action": "Mascot gestures toward male sibling sitting at game table.",
+      "setting": "Home board-game table with mascot and male sibling in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn có thể nói: \"This is my brother.\" Đây là anh hoặc em trai tôi. Quan hệ trong gia đình đã rõ. Nếu người nghe chưa cần biết ai lớn tuổi hơn, câu ấy đã đủ để giới thiệu. Older nói lớn tuổi hơn, không nói cao hơn. Người em vẫn có thể cao hơn người anh. Hãy nhìn thông tin tuổi trước khi chọn cách dịch anh trai hay em trai.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "brother",
+          "meaning": "anh hoặc em trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot gestures toward male sibling sitting at game table. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot gestures toward male sibling sitting at game table.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Mascot gestures toward male sibling sitting at game table. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC02_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot gestures toward male sibling sitting at game table. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "This is my brother.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC02_I3",
+          "description": "Show an explicit sibling relation card between mascot and declared male sibling. Use an unlabeled age-order arrow, distinct from a height comparison. An illustrative height reversal does not change the declared older sibling relation. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show an explicit sibling relation card between mascot and declared male sibling. Use an unlabeled age-order arrow, distinct from a height comparison. An illustrative height reversal does not change the declared older sibling relation.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "brother",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn có thể nói: \"This is my",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my brother.\" Đây là anh",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B3",
+          "image_id": "SC02_I3",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Older nói lớn tuổi hơn, không nói",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thêm thông tin khi cần",
+      "purpose": "Model one age-qualified use without teaching a new target.",
+      "action": "Mascot hands a game piece to the older sibling, who is not merely distinguished by height.",
+      "setting": "Home board-game table with mascot and male sibling in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Trong câu chuyện này, người kia lớn tuổi hơn bạn. \"He is my older brother.\" Anh ấy là anh trai tôi. Older bổ sung ý lớn tuổi hơn. Mình xác định bằng tuổi, chứ không chỉ đo xem ai cao hơn.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "brother",
+          "meaning": "anh hoặc em trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot hands a game piece to the older sibling, who is not merely distinguished by height. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot hands a game piece to the older sibling, who is not merely distinguished by height.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot hands a game piece to the older sibling, who is not merely distinguished by height. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot hands a game piece to the older sibling, who is not merely distinguished by height. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "He is my older brother.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong câu chuyện này, người kia lớn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"He is my older brother.\" Anh ấy",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Đọc đúng quan hệ",
+      "purpose": "Prompt target retrieval from the modeled qualifier.",
+      "action": "Mascot points to the sibling with an age-order arrow on a simple family diagram, no numbers.",
+      "setting": "Home board-game table with mascot and male sibling in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn muốn giới thiệu anh trai mình. Hãy hoàn thành \"He is my older...\" bằng từ vừa học. Older đã cho biết ai lớn tuổi hơn.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "brother",
+          "meaning": "anh hoặc em trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot points to the sibling with an age-order arrow on a simple family diagram, no numbers. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to the sibling with an age-order arrow on a simple family diagram, no numbers.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot points to the sibling with an age-order arrow on a simple family diagram, no numbers. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot points to the sibling with an age-order arrow on a simple family diagram, no numbers. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "He is my older...",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn giới thiệu anh trai mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"He is my older...\" bằng từ vừa",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Ván chơi không tính tuổi",
+      "purpose": "Confirm and return to the board-game setting.",
+      "action": "Mascot and older brother laugh over board game, mascot has just moved a winning piece.",
+      "setting": "Home board-game table with mascot and male sibling in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"He is my older brother.\" Từ còn thiếu là brother. Anh lớn tuổi hơn, nhưng ván chơi này bạn lại thắng. Từ chỉ quan hệ không quyết định ai giỏi trò chơi hơn, nó chỉ giúp bạn giới thiệu đúng người.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "brother",
+          "meaning": "anh hoặc em trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and older brother laugh over board game, mascot has just moved a winning piece. Home board-game table with mascot and male sibling in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and older brother laugh over board game, mascot has just moved a winning piece.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"He is my older brother.\" Từ còn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a kinship distinction absent from the basic English noun.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model the basic relationship."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the basic relationship.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Model one age-qualified use without teaching a new target."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model one age-qualified use without teaching a new target.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt target retrieval from the modeled qualifier."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt target retrieval from the modeled qualifier.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and return to the board-game setting."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and return to the board-game setting.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn nhìn hai anh em rồi hỏi: tiếng Anh gọi anh trai và em trai khác nhau thế nào? Brother dùng được cho cả hai. Riêng từ brother chưa cho biết người ấy lớn tuổi hay nhỏ tuổi hơn bạn. Hai người cùng nhà chưa chắc đã là anh em trai. Trong bài, lời giới thiệu và quan hệ gia đình xác nhận điều đó; chiều cao chỉ tạo câu hỏi mở đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn nhìn hai anh em rồi hỏi: tiếng Anh gọi anh trai và em trai khác nhau thế nào? Brother dùng được cho cả hai. Riêng từ brother chưa cho biết người ấy lớn tuổi hay nhỏ tuổi hơn bạn. Hai người cùng nhà chưa chắc đã là anh em trai. Trong bài, lời giới thiệu và quan hệ gia đình xác nhận điều đó; chiều cao chỉ tạo câu hỏi mở đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn có thể nói: \"This is my brother.\" Đây là anh hoặc em trai tôi. Quan hệ trong gia đình đã rõ. Nếu người nghe chưa cần biết ai lớn tuổi hơn, câu ấy đã đủ để giới thiệu. Older nói lớn tuổi hơn, không nói cao hơn. Người em vẫn có thể cao hơn người anh. Hãy nhìn thông tin tuổi trước khi chọn cách dịch anh trai hay em trai."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn có thể nói: \"This is my brother.\" Đây là anh hoặc em trai tôi. Quan hệ trong gia đình đã rõ. Nếu người nghe chưa cần biết ai lớn tuổi hơn, câu ấy đã đủ để giới thiệu. Older nói lớn tuổi hơn, không nói cao hơn. Người em vẫn có thể cao hơn người anh. Hãy nhìn thông tin tuổi trước khi chọn cách dịch anh trai hay em trai."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Trong câu chuyện này, người kia lớn tuổi hơn bạn. \"He is my older brother.\" Anh ấy là anh trai tôi. Older bổ sung ý lớn tuổi hơn. Mình xác định bằng tuổi, chứ không chỉ đo xem ai cao hơn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn giới thiệu anh trai mình. Hãy hoàn thành \"He is my older...\" bằng từ vừa học. Older đã cho biết ai lớn tuổi hơn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"He is my older brother.\" Từ còn thiếu là brother. Anh lớn tuổi hơn, nhưng ván chơi này bạn lại thắng. Từ chỉ quan hệ không quyết định ai giỏi trò chơi hơn, nó chỉ giúp bạn giới thiệu đúng người."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13754",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

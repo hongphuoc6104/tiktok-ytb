@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 39,
+            "seconds": 12.03,
+            "min": 9.03,
+            "max": 15.04
+          },
+          {
+            "scene_id": "SC02",
+            "units": 37,
+            "seconds": 11.18,
+            "min": 8.38,
+            "max": 13.97
+          },
+          {
+            "scene_id": "SC03",
+            "units": 38,
+            "seconds": 11.61,
+            "min": 8.7,
+            "max": 14.51
+          },
+          {
+            "scene_id": "SC04",
+            "units": 20,
+            "seconds": 10.16,
+            "min": 7.62,
+            "max": 12.69
+          },
+          {
+            "scene_id": "SC05",
+            "units": 34,
+            "seconds": 10.64,
+            "min": 7.98,
+            "max": 13.31
+          }
+        ],
+        "min": 41.71,
+        "max": 69.52,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "19291",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi đưa bố quay lại ga cũ, ông nhận ra chiếc ghế chờ từng tiễn con đi xa. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

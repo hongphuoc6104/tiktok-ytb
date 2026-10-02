@@ -1,0 +1,526 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "1459dda1bb189437d08834be327f558a79b2637e99c38aa1570142d6f1c4a652",
+  "topic": "Học từ vựng tiếng Anh busy — bận qua câu chuyện “Muốn gọi lại, nhưng việc còn dở”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới busy; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “bận” của busy; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng busy chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng busy, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điện thoại chọn đúng lúc",
+      "purpose": "Make being occupied visible through one coherent task.",
+      "action": "Mascot holds bread in one hand and serving tongs in the other while phone lights up on counter.",
+      "setting": "Kitchen counter with sandwich ingredients, timer icon and ringing phone.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Đúng lúc hai tay đang làm bánh, điện thoại reo. Busy nghĩa là bận. Bạn đang làm dở một việc và chưa tiện nói chuyện. Chiếc điện thoại hình như luôn chọn khoảnh khắc khó nhấc máy nhất.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "busy",
+          "meaning": "bận"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds bread in one hand and serving tongs in the other while phone lights up on counter. Kitchen counter with sandwich ingredients, timer icon and ringing phone. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds bread in one hand and serving tongs in the other while phone lights up on counter.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "busy",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot holds bread in one hand and serving tongs in the other while phone lights up on counter. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Kitchen counter with sandwich ingredients, timer icon and ringing phone. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot holds bread in one hand and serving tongs in the other while phone lights up on counter. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "busy",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Đúng lúc hai tay đang làm bánh,",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đang làm dở một việc và",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of busy and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Trả lời ngắn gọn",
+      "purpose": "Model being busy now without implying rejection.",
+      "action": "Mascot sets utensils safely down and looks toward phone; unfinished sandwiches remain visible.",
+      "setting": "Kitchen counter with sandwich ingredients, timer icon and ringing phone.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nhắn: \"I'm busy right now.\" Bây giờ tôi đang bận. Right now nói rõ là ngay lúc này. Câu ấy giải thích bạn chưa trả lời được, không có nghĩa bạn muốn tránh người đang gọi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "busy",
+          "meaning": "bận"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot sets utensils safely down and looks toward phone; unfinished sandwiches remain visible. Kitchen counter with sandwich ingredients, timer icon and ringing phone. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sets utensils safely down and looks toward phone; unfinished sandwiches remain visible.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhắn: \"I'm busy right now.\" Bây",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of busy and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hỏi trước khi nhờ",
+      "purpose": "Model a considerate question linked to the call.",
+      "action": "Mascot sees a simple incoming call icon and pauses beside the same sandwich tray.",
+      "setting": "Kitchen counter with sandwich ingredients, timer icon and ringing phone.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Nếu là người gọi, bạn có thể hỏi: \"Are you busy?\" Bạn có đang bận không? Một câu hỏi trước khi nhờ việc giúp người kia nói rõ họ có thể dành thời gian cho bạn lúc này hay chưa.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "busy",
+          "meaning": "bận"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot sees a simple incoming call icon and pauses beside the same sandwich tray. Kitchen counter with sandwich ingredients, timer icon and ringing phone. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sees a simple incoming call icon and pauses beside the same sandwich tray.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot sees a simple incoming call icon and pauses beside the same sandwich tray. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Kitchen counter with sandwich ingredients, timer icon and ringing phone. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot sees a simple incoming call icon and pauses beside the same sandwich tray. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Are you busy?",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Nếu là người gọi, bạn có thể",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Are you busy?\" Bạn có đang bận",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of busy and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Người gọi là bạn",
+      "purpose": "Prompt the availability question from memory.",
+      "action": "Mascot gestures toward phone with empty screen; upper text only gives the start of the question.",
+      "setting": "Kitchen counter with sandwich ingredients, timer icon and ringing phone.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Trước khi gọi nhờ mình xem một tấm ảnh, hãy hỏi tôi có đang bận không: \"Are you...?\" Thử nói hết câu nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "busy",
+          "meaning": "bận"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot gestures toward phone with empty screen; upper text only gives the start of the question. Kitchen counter with sandwich ingredients, timer icon and ringing phone. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot gestures toward phone with empty screen; upper text only gives the start of the question.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot gestures toward phone with empty screen; upper text only gives the start of the question. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Kitchen counter with sandwich ingredients, timer icon and ringing phone. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot gestures toward phone with empty screen; upper text only gives the start of the question. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Are you...?",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Trước khi gọi nhờ mình xem một",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Are you...?\" Thử nói hết câu nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of busy and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Gọi lại sau khay bánh",
+      "purpose": "Give feedback and resolve the competing demands.",
+      "action": "Mascot puts finished sandwiches on table and picks up phone with a free hand.",
+      "setting": "Kitchen counter with sandwich ingredients, timer icon and ringing phone.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"Are you busy?\" Đó là câu hỏi cần dùng. Khay bánh đã xong, nhân vật có thể gọi lại rồi. Việc bận lúc nãy không kéo dài cả ngày; chỉ cần hai bên hiểu đúng thời điểm thôi.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "busy",
+          "meaning": "bận"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot puts finished sandwiches on table and picks up phone with a free hand. Kitchen counter with sandwich ingredients, timer icon and ringing phone. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot puts finished sandwiches on table and picks up phone with a free hand.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Are you busy?\" Đó là câu hỏi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of busy and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make being occupied visible through one coherent task.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model being busy now without implying rejection."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model being busy now without implying rejection.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Model a considerate question linked to the call."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model a considerate question linked to the call.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt the availability question from memory."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the availability question from memory.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Give feedback and resolve the competing demands."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give feedback and resolve the competing demands.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Đúng lúc hai tay đang làm bánh, điện thoại reo. Busy nghĩa là bận. Bạn đang làm dở một việc và chưa tiện nói chuyện. Chiếc điện thoại hình như luôn chọn khoảnh khắc khó nhấc máy nhất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Đúng lúc hai tay đang làm bánh, điện thoại reo. Busy nghĩa là bận. Bạn đang làm dở một việc và chưa tiện nói chuyện. Chiếc điện thoại hình như luôn chọn khoảnh khắc khó nhấc máy nhất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nhắn: \"I'm busy right now.\" Bây giờ tôi đang bận. Right now nói rõ là ngay lúc này. Câu ấy giải thích bạn chưa trả lời được, không có nghĩa bạn muốn tránh người đang gọi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nhắn: \"I'm busy right now.\" Bây giờ tôi đang bận. Right now nói rõ là ngay lúc này. Câu ấy giải thích bạn chưa trả lời được, không có nghĩa bạn muốn tránh người đang gọi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Nếu là người gọi, bạn có thể hỏi: \"Are you busy?\" Bạn có đang bận không? Một câu hỏi trước khi nhờ việc giúp người kia nói rõ họ có thể dành thời gian cho bạn lúc này hay chưa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Trước khi gọi nhờ mình xem một tấm ảnh, hãy hỏi tôi có đang bận không: \"Are you...?\" Thử nói hết câu nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Are you busy?\" Đó là câu hỏi cần dùng. Khay bánh đã xong, nhân vật có thể gọi lại rồi. Việc bận lúc nãy không kéo dài cả ngày; chỉ cần hai bên hiểu đúng thời điểm thôi."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

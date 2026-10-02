@@ -1,0 +1,996 @@
+{
+  "conversation_id": "5d1e5c32-264d-4c86-8ac0-15a0a1e2cd13",
+  "status": "SUCCESS",
+  "response": "[\n  {\n    \"job\": \"vocab-gram-script-463\",\n    \"title\": \"Một trăm gam bột làm bánh\",\n    \"plot_vi\": \"An và Huy cùng cân bột làm một mẻ bánh nướng nhỏ, nhưng nếu lấy sai lượng bột thì bánh sẽ hỏng. Cả hai cẩn thận đong đúng một trăm gam để bánh nở xốp hoàn hảo.\",\n    \"opening_function_vi\": \"Khởi đầu bằng sự cố cân đo bột làm bánh tạo mâu thuẫn hành động trực tiếp.\",\n    \"learner_outcome_vi\": \"Người học nhận diện và nói được đơn vị gram trong câu chỉ định lượng nguyên liệu cụ thể.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"An\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Huy\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain light-orange short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Đọc công thức làm bánh\",\n        \"narration\": \"Cân bột này sai là hỏng bánh ngay. Tôi mở cuốn công thức làm bánh rồi bảo Huy: \\\"We need a hundred grams.\\\" Chúng ta cần đúng một trăm gam bột.\",\n        \"purpose_en\": \"Introduce target noun gram in model sentence 1 within the baking situation.\",\n        \"visual_en\": \"Eye-level medium shot. CH01 stands beside a kitchen counter holding an open recipe notepad, speaking to CH02 who stands near a digital kitchen scale and a bag of flour.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"Kiểm tra lượng bột còn lại\",\n        \"narration\": \"Huy đổ từng muỗng bột trắng vào thố rồi nhìn đáy túi còn dở: \\\"How many grams are left?\\\" Còn lại bao nhiêu gam vậy? Tôi cúi nhìn vạch cân kiểm tra.\",\n        \"purpose_en\": \"Introduce model sentence 2 with question form checking grams.\",\n        \"visual_en\": \"Medium close-up. CH02 gently tilts a flour scoop over a mixing bowl resting on the scale, turning toward CH01 with an inquiring expression as CH01 leans down to check the scale readout.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Cân chỉnh từng chút một\",\n        \"narration\": \"Nhìn kim cân nhích dần từng chút một, tôi nín thở gạt bớt muỗng bột thừa ra đĩa để phần bánh nướng không bị khô cứng hay quá ngọt.\",\n        \"purpose_en\": \"Show resistance and careful action adjusting weight before finalizing.\",\n        \"visual_en\": \"Close-up on the scale platform. CH01 uses a wooden flat stick to skim off excess flour into a side dish while CH02 watches the scale digits settle.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"gạt bớt muỗng bột thừa ra đĩa\",\n            \"visual_en\": \"Same-camera view: the wooden stick scrapes excess flour off the scoop into a ceramic plate, leaving exactly a level scoop.\",\n            \"purpose_en\": \"Show the deliberate action of reducing weight to reach the exact measurement.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Thử tài nhắc lượng bột\",\n        \"narration\": \"Huy cầm muỗng bột mới toanh trên tay, chuẩn bị xúc thêm. Bạn hãy nhắc Huy lượng bột hai đứa cần lấy bằng một câu tiếng Anh xem nào.\",\n        \"purpose_en\": \"Invite learner retrieval of the target word in a full sentence with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. CH02 holds a flour scoop ready over the bowl, waiting attentively. CH01 points toward a clean prompt card floating slightly above the counter.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"We need a hundred ___.\",\n            \"placement\": \"center overlay\",\n            \"object\": \"recipe challenge card\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Mẻ bánh nướng hoàn hảo\",\n        \"narration\": \"\\\"We need a hundred grams.\\\" Đúng một trăm gam bột rồi, mẻ bánh nướng chín vàng ươm, thơm lừng và xốp mềm trên khay sứ.\",\n        \"purpose_en\": \"Provide the full correct answer and show the satisfying payoff.\",\n        \"visual_en\": \"Eye-level medium shot. CH01 and CH02 smile happily beside the table as CH01 presents a ceramic tray with freshly baked, golden fluffy muffins.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  },\n  {\n    \"job\": \"vocab-kilogram-script-464\",\n    \"title\": \"Chia lại ba lô hai kilôgam\",\n    \"plot_vi\": \"Chiếc ba lô nặng kéo trĩu vai Bình trong chuyến dã ngoại. Bình và Khoa chia bớt đồ sang túi kia để đưa trọng lượng về mức một kilôgam vừa vặn.\",\n    \"opening_function_vi\": \"Mở đầu bằng sức nặng đè lên vai tạo động lực phân chia đồ đạc.\",\n    \"learner_outcome_vi\": \"Người học sử dụng thành thạo từ kilogram để hỏi và nói về số cân nặng cụ thể.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"Bình\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Khoa\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain lime-green short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Chiếc túi nặng trĩu vai\",\n        \"narration\": \"Quai túi kéo trĩu cả vai tôi. Tôi nhấc chiếc túi du lịch đặt lên bàn cân rồi bảo Khoa: \\\"This bag weighs two kilograms.\\\" Túi này nặng hai kilôgam.\",\n        \"purpose_en\": \"Introduce kilogram in model sentence 1 stating current heavy weight.\",\n        \"visual_en\": \"Eye-level medium shot. CH01 shoulders a bulging dark-grey travel bag with a slight slouch, then sets it onto a luggage hanging scale while CH02 watches.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"San sẻ bớt đồ sang túi bạn\",\n        \"narration\": \"Khoa vội đỡ lấy quai xách rồi mở ngăn kéo, lấy bớt hai chai nước chia sang ba lô của mình cho hai vai bớt nặng nề.\",\n        \"purpose_en\": \"Depict concrete action to reduce weight and balance load.\",\n        \"visual_en\": \"Medium shot. CH02 unzips the main compartment of the grey bag on the table and transfers two reusable water bottles into an open blue backpack.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"lấy bớt hai chai nước chia sang ba lô của mình\",\n            \"visual_en\": \"Same-camera view: CH02 lifts two water bottles out of the grey bag and sets them securely inside the blue backpack beside it.\",\n            \"purpose_en\": \"Illustrate transferring items between bags to lower bag weight.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Cân lại lần thứ hai\",\n        \"narration\": \"Tôi nhấc chiếc túi vải đặt lại lên đĩa cân lò xo trước mặt để kiểm tra: \\\"Is it one kilogram now?\\\" Bây giờ nó nặng một kilôgam chưa Khoa?\",\n        \"purpose_en\": \"Introduce model sentence 2 questioning whether target weight of one kilogram is reached.\",\n        \"visual_en\": \"Close-up on the dial scale. CH01 hooks the grey bag handle back onto the scale hook while CH02 leans in to observe the needle.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Kiểm tra đúng một kilôgam\",\n        \"narration\": \"Kim cân dừng lại ngay sát vạch chia ở giữa mặt số. Hãy hỏi bạn xem chiếc túi đã nặng một kilôgam chưa bằng một câu tiếng Anh nhé.\",\n        \"purpose_en\": \"Prompt learner to retrieve model sentence 2 with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. The scale needle trembles right near the target marker. CH01 turns to the viewer, gesturing to a prompt card displaying the sentence frame.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"Is it one ___ now?\",\n            \"placement\": \"center overlay\",\n            \"object\": \"scale prompt card\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Nhẹ bước lên đường dã ngoại\",\n        \"narration\": \"\\\"Is it one kilogram now?\\\" Đúng tròn một kilôgam rồi, hai chiếc túi chia đều sức nặng giúp hai đứa nhẹ bước trên đường đèo dốc.\",\n        \"purpose_en\": \"Deliver full correct answer and wrap up with an earned relief payoff.\",\n        \"visual_en\": \"Wide eye-level shot. CH01 and CH02 both wear their comfortably balanced backpacks, walking side by side briskly along an outdoor trail.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  },\n  {\n    \"job\": \"vocab-litre-script-465\",\n    \"title\": \"Hai lít nước cho luống rau\",\n    \"plot_vi\": \"Minh và Lâm tưới rau trong ngày nắng gắt nhưng không biết chiếc bình nhựa chứa được bao nhiêu. Cả hai đong đủ hai lít nước để tưới mát cả luống rau xanh.\",\n    \"opening_function_vi\": \"Bắt đầu bằng nhu cầu tưới vườn giữa trưa nắng gắt.\",\n    \"learner_outcome_vi\": \"Người học hiểu và sử dụng từ litre để chỉ dung tích chất lỏng trong hoạt động hàng ngày.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"Minh\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Lâm\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain sunny-yellow short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Bình nước trong góc vườn\",\n        \"narration\": \"Mấy luống rau héo rũ vì khát. Tôi cầm chiếc bình nhựa rỗng giơ lên hỏi Lâm: \\\"Does this bottle hold one litre?\\\" Bình này chứa được một lít không?\",\n        \"purpose_en\": \"Introduce model sentence 1 testing capacity of a bottle using litre.\",\n        \"visual_en\": \"Medium shot. CH01 stands beside garden vegetable beds with drooping green leaves, lifting a transparent plastic jug to examine it and speaking to CH02.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"Đo lượng nước cần tưới\",\n        \"narration\": \"Lâm nhìn kỹ vạch đo trên thân bình rồi bảo mấy luống rau cần nhiều hơn: \\\"We need two litres of water.\\\" Chúng ta cần hai lít nước.\",\n        \"purpose_en\": \"Introduce model sentence 2 stating required amount in litres.\",\n        \"visual_en\": \"Close-up. CH02 points at the measurement ridges embossed on the jug while speaking clearly, indicating that more water is needed.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Hứng nước đầy miệng bình\",\n        \"narration\": \"Tôi xách bình ra góc vườn vặn vòi, nhìn dòng nước mát lành chảy đầy tràn miệng bình để sẵn sàng mang tưới cho vườn rau đang khô hạn.\",\n        \"purpose_en\": \"Show the physical action of gathering the water to satisfy the narrative need.\",\n        \"visual_en\": \"Medium shot at the garden tap. CH01 holds the jug steady beneath the brass outdoor faucet as clean water rushes in.\",\n        \"character_ids\": [\"CH01\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"dòng nước mát lành chảy đầy tràn miệng bình\",\n            \"visual_en\": \"Same-camera view: the clear water rises from the bottom of the jug up to the top brim under the active water stream.\",\n            \"purpose_en\": \"Show the container filling up to maximum liquid capacity.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Cùng nhắc lượng nước tưới\",\n        \"narration\": \"Lâm đã chuẩn bị sẵn các khay ươm cây bên luống cải. Bạn hãy nhắc Lâm lượng nước hai đứa cần chuẩn bị bằng một câu tiếng Anh xem nào.\",\n        \"purpose_en\": \"Prompt learner to produce the target sentence with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. CH02 stands near seedling trays holding a small watering rose. A prompt card floats near center showing the incomplete stem.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"We need two ___ of water.\",\n            \"placement\": \"center overlay\",\n            \"object\": \"watering note banner\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Vườn rau xanh mướt hồi sinh\",\n        \"narration\": \"\\\"We need two litres of water.\\\" Có đủ hai lít nước mát rồi, từng luống cải xanh mướt ngẩng đầu đón ánh nắng ban mai thật tươi tắn.\",\n        \"purpose_en\": \"State the full answer and show the revitalized vegetable garden payoff.\",\n        \"visual_en\": \"Wide eye-level shot. CH01 and CH02 water the garden together; the green vegetable leaves stand tall, refreshed and glistening with droplets.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  },\n  {\n    \"job\": \"vocab-circle-script-466\",\n    \"title\": \"Cắt hình tròn cho mặt đồng hồ\",\n    \"plot_vi\": \"An làm một chiếc đồng hồ thủ công nhưng mặt số bìa cứng chưa có hình dáng chuẩn. Mai hỗ trợ An vẽ com-pa và cắt rời một hình tròn vừa khít.\",\n    \"opening_function_vi\": \"Bắt đầu bằng sự thiếu hụt chi tiết tròn cho mô hình đồng hồ thủ công.\",\n    \"learner_outcome_vi\": \"Người học nhận biết và diễn đạt danh từ circle để chỉ hình tròn trong hoạt động tạo hình.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"An\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Mai\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain lavender short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Vẽ đường cong bằng com-pa\",\n        \"narration\": \"Miếng bìa này thiếu mặt đồng hồ. Tôi dùng com-pa quay một vòng tròn khép kín trên giấy màu: \\\"I drew a circle.\\\" Tôi đã vẽ một hình tròn.\",\n        \"purpose_en\": \"Introduce circle in model sentence 1 as an outcome of drawing a round shape.\",\n        \"visual_en\": \"Eye-level medium shot. CH01 sits at a wooden craft table holding a compass tool, rotating it smoothly on yellow construction paper as CH02 looks on.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"Nhờ bạn cắt theo nét vẽ\",\n        \"narration\": \"Đường nét tròn xoe liền mạch không hề gợn mép, tôi đưa kéo cho Mai nhờ cậy: \\\"Cut out this circle.\\\" Cắt hình tròn này ra giúp mình nhé.\",\n        \"purpose_en\": \"Introduce model sentence 2 requesting the partner to cut the circle.\",\n        \"visual_en\": \"Medium close-up. CH01 hands a pair of safety craft scissors across the desk to CH02, pointing down at the crisp circular pencil outline on paper.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Lượn kéo theo viền cong\",\n        \"narration\": \"Mai cẩn thận lượn mũi kéo theo nét bút chì, giữ cho mép giấy tròn đều tăm tắp mà không bị phạm vào khoảng trống bên trong mặt số.\",\n        \"purpose_en\": \"Highlight the careful manual process of following the round contour.\",\n        \"visual_en\": \"Close-up on hands and paper. CH02 holds the scissors steady, trimming smoothly along the pencil curvature without leaving any jagged corners.\",\n        \"character_ids\": [\"CH02\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"cẩn thận lượn mũi kéo theo nét bút chì\",\n            \"visual_en\": \"Same-camera view: the scissors blade glides along the graphite circle line, separating the circular piece from the outer scrap sheet.\",\n            \"purpose_en\": \"Show the physical transformation from a flat sheet into an isolated round shape.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Nhắc bạn cắt đúng hình\",\n        \"narration\": \"Mảnh giấy vàng đã vẽ sẵn nét tròn đang nằm ngay ngắn trên bàn. Bạn hãy nhờ Mai cắt hình tròn ấy ra bằng một câu tiếng Anh xem nào.\",\n        \"purpose_en\": \"Invite learner retrieval of the target instruction with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. CH02 holds the craft scissors ready beside the paper. CH01 gestures toward a prompt card displaying the fill-in stem.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"Cut out this ___.\",\n            \"placement\": \"center overlay\",\n            \"object\": \"craft instruction tag\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Mặt đồng hồ tròn xoe\",\n        \"narration\": \"\\\"Cut out this circle.\\\" Mảnh bìa hình tròn vừa khít khung gỗ, chiếc đồng hồ thủ công gắn kim quay tích tắc trông thật đáng yêu.\",\n        \"purpose_en\": \"Provide the full model sentence and conclude with the completed craft clock payoff.\",\n        \"visual_en\": \"Medium shot. CH01 and CH02 proudly hold up the finished cardboard clock: the round dial sits perfectly centered with two neat paper hands pointing to the hour.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  },\n  {\n    \"job\": \"vocab-way-script-467\",\n    \"title\": \"Hỏi lối đi tới nhà ga\",\n    \"plot_vi\": \"Nam và Việt đứng trước ngã rẽ vắng người trong lúc sắp đến giờ tàu chạy. Cả hai xem bản đồ để xác định đúng con đường dẫn tới sân ga.\",\n    \"opening_function_vi\": \"Mở đầu bằng ngã rẽ gây phân vân trước giờ tàu khởi hành.\",\n    \"learner_outcome_vi\": \"Người học hiểu và sử dụng từ way mang nghĩa lối đi, con đường để hỏi và chỉ hướng.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"Nam\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Việt\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain red-orange short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Đứng trước hai ngã rẽ\",\n        \"narration\": \"Hai ngã rẽ làm tôi bối rối. Chuyến tàu sắp khởi hành, tôi cuống quýt hỏi Việt: \\\"Which way is the station?\\\" Nhà ga đi đường nào vậy Việt?\",\n        \"purpose_en\": \"Introduce model sentence 1 asking for the route to a specific place.\",\n        \"visual_en\": \"Eye-level medium wide shot. CH01 and CH02 stand at a fork in a stone pathway. CH01 checks a wristwatch with an anxious gesture and speaks to CH02.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"Xác định trên bản đồ\",\n        \"narration\": \"Việt mở tấm bản đồ cầm tay ra đối chiếu, chỉ vào con đường lát gạch bên trái: \\\"This is the way to the station.\\\" Đây là đường tới nhà ga.\",\n        \"purpose_en\": \"Introduce model sentence 2 confirming the correct route.\",\n        \"visual_en\": \"Medium shot. CH02 unfolds a pocket tourist map and points a finger decisively toward the brick-paved left route.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"chỉ vào con đường lát gạch bên trái\",\n            \"visual_en\": \"Same-camera view: CH02's finger taps the left route marked on the map, then gestures straight toward the actual left pathway ahead.\",\n            \"purpose_en\": \"Connect the map route directly to the physical pathway in front of them.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Thấy cột mốc chỉ dẫn\",\n        \"narration\": \"Tôi nhìn theo lối đi rợp bóng mát phía trước, thấy biển chỉ dẫn bằng sắt gắn hình đầu tàu lấp ló sau những rặng thông xanh rì.\",\n        \"purpose_en\": \"Reinforce visual verification of the route path.\",\n        \"visual_en\": \"Point-of-view perspective looking down the left path. A small cast-iron pole sign with a miniature train silhouette is visible beside green pine branches.\",\n        \"character_ids\": [\"CH01\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Hỏi lại đúng đường đi\",\n        \"narration\": \"Đứng trước ngã ba đường chưa rõ hướng đi, bạn hãy hỏi Việt lối đi tới ga xe lửa bằng một câu tiếng Anh xem nào.\",\n        \"purpose_en\": \"Prompt full-sentence question retrieval with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. CH01 stands beside CH02 at the fork, looking toward the viewer with an inviting gesture as a prompt banner appears.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"Which ___ is the station?\",\n            \"placement\": \"center overlay\",\n            \"object\": \"route inquiry board\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Kịp chuyến tàu khởi hành\",\n        \"narration\": \"\\\"Which way is the station?\\\" Đi đúng con đường bên trái, hai đứa thảnh thơi bước chân lên toa tàu vừa kịp giờ khởi hành êm ái.\",\n        \"purpose_en\": \"Provide the full correct answer and show the timely arrival payoff.\",\n        \"visual_en\": \"Wide shot at the train platform. CH01 and CH02 step comfortably onto the passenger carriage doorway just as the train bell dings softly.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  },\n  {\n    \"job\": \"vocab-right-script-468\",\n    \"title\": \"Cửa hàng ở phía bên phải\",\n    \"plot_vi\": \"Huy và Tuấn cùng tìm tiệm sách và cửa thoát hiểm trong sảnh thương mại rộng lớn. Cả hai thống nhất dùng mốc phía bên phải để không bị nhầm phương hướng.\",\n    \"opening_function_vi\": \"Bắt đầu bằng sự hoang mang giữa sảnh lớn nhiều dãy cửa hàng.\",\n    \"learner_outcome_vi\": \"Người học nắm vững danh từ right trong cụm on the right để diễn đạt vị trí phía bên phải.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"Huy\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Tuấn\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain emerald-green short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Nhìn theo cùng một hướng\",\n        \"narration\": \"Sảnh lớn này nhiều lối rẽ quá. Tuấn đứng cùng hướng nhìn với tôi rồi giơ tay chỉ: \\\"The shop is on the right.\\\" Cửa hàng ở phía bên phải.\",\n        \"purpose_en\": \"Introduce model sentence 1 using right as a direction noun in on the right.\",\n        \"visual_en\": \"Eye-level medium wide shot. In a spacious minimalist lobby, CH01 and CH02 stand shoulder-to-shoulder facing the same direction. CH02 extends an arm pointing toward the right wing.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"Hỏi về vị trí lối ra\",\n        \"narration\": \"Tôi thấy tấm biển hiệu bán sách sáng đèn ở dãy hành lang bên phải, liền hỏi tiếp: \\\"Is the exit on the right too?\\\" Lối ra cũng ở phía bên phải à?\",\n        \"purpose_en\": \"Introduce model sentence 2 confirming if the exit is also on the right.\",\n        \"visual_en\": \"Medium shot. CH01 gazes along the right-hand wall at an illuminated bookstore sign, then turns slightly to ask CH02 about the nearby glass doors.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Xác nhận mốc cửa kính\",\n        \"narration\": \"Tuấn mỉm cười gật đầu, chỉ cánh cửa kính thoát hiểm nằm ngay cạnh gian hàng sách, giúp cả hai yên tâm chọn đồ mà không sợ lạc đường.\",\n        \"purpose_en\": \"Confirm spatial orientation so both characters stay oriented.\",\n        \"visual_en\": \"Medium shot. CH02 points at a clear double-glass exit doorway positioned directly adjacent to the bookstore entrance on the right side.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"chỉ cánh cửa kính thoát hiểm nằm ngay cạnh gian hàng sách\",\n            \"visual_en\": \"Same-camera view: CH02's outstretched hand shifts focus from the bookstore window to the clear glass emergency door right beside it.\",\n            \"purpose_en\": \"Demonstrate that both landmarks share the exact same right-hand side of the corridor.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Chỉ phía bên phải cho bạn\",\n        \"narration\": \"Người bạn đang ngó nghiêng tìm vị trí tiệm sách trong sảnh. Bạn hãy nói cho bạn biết cửa hàng nằm ở phía bên phải bằng tiếng Anh nhé.\",\n        \"purpose_en\": \"Prompt full-sentence retrieval of the location statement with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. CH01 gestures toward the right corridor while presenting an onscreen prompt card displaying the fill-in sentence.\",\n        \"character_ids\": [\"CH01\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"The shop is on the ___.\",\n            \"placement\": \"center overlay\",\n            \"object\": \"directory guidance card\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Mua được sách và ra về\",\n        \"narration\": \"\\\"The shop is on the right.\\\" Đi về phía bên phải, hai đứa nhanh chóng mua được tập sổ tay ưng ý rồi thong thả rảo bước ra cửa.\",\n        \"purpose_en\": \"Give full correct answer and close with a smooth shopping payoff.\",\n        \"visual_en\": \"Eye-level medium shot. CH01 and CH02 walk side by side holding a newly purchased notebook paper bag, exiting effortlessly through the right-side glass doors.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  },\n  {\n    \"job\": \"vocab-login-script-469\",\n    \"title\": \"Đăng nhập nộp bài tập\",\n    \"plot_vi\": \"Bảo loay hoay không nộp được đồ án vì tài khoản lớp học trực tuyến bị khóa. Đức hướng dẫn Bảo thực hiện bước đăng nhập trước khi gửi bài.\",\n    \"opening_function_vi\": \"Mở đầu bằng màn hình báo khóa tài khoản gây trở ngại nộp bài tập.\",\n    \"learner_outcome_vi\": \"Người học phân biệt và sử dụng đúng động từ hai từ log in trong giao tiếp thao tác máy tính.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"Bảo\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Đức\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain royal-blue short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Vướng ô khóa trên màn hình\",\n        \"narration\": \"Màn hình hiện ô khóa màu đỏ. Tôi gõ tài khoản mà trang web không mở, liền bảo Đức: \\\"I can't log in.\\\" Tôi không đăng nhập được.\",\n        \"purpose_en\": \"Introduce verb log in in model sentence 1 expressing inability to access.\",\n        \"visual_en\": \"Eye-level medium shot. CH01 sits in front of a desktop monitor displaying a simple webpage with a red lock icon, typing on the keyboard and speaking to CH02.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"gõ tài khoản mà trang web không mở\",\n            \"visual_en\": \"Same-camera view: CH01 taps keys on the keyboard, but the red padlock icon on the computer monitor pulses without opening.\",\n            \"purpose_en\": \"Depict the blocked attempt to access the learning system.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"Nhắc nhở làm bước đầu tiên\",\n        \"narration\": \"Đức nhìn kỹ dòng nhắc nhở màu xanh bên dưới thanh menu rồi chỉ tay: \\\"Please log in first.\\\" Xin hãy đăng nhập trước nhé.\",\n        \"purpose_en\": \"Introduce model sentence 2 instructing the essential prerequisite action.\",\n        \"visual_en\": \"Medium close-up. CH02 leans over the desk, pointing a finger to the top right corner of the screen where an authentication banner appears.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Điền lại thông tin chính xác\",\n        \"narration\": \"Tôi phát hiện mình gõ nhầm tên lớp nhóm, liền nhập lại thông tin tài khoản cá nhân từng ký tự thật cẩn thận để hệ thống duyệt qua.\",\n        \"purpose_en\": \"Show corrective action solving the friction.\",\n        \"visual_en\": \"Close-up on CH01's hands typing steadily on the keyboard; the input field on the screen now displays green checkmarks beside the username box.\",\n        \"character_ids\": [\"CH01\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Nhắc bạn đăng nhập trước\",\n        \"narration\": \"Đức đứng bên cạnh nhắc tôi hoàn thành bước truy cập tài khoản trước lúc nộp bài. Hãy nhắc bạn bằng một câu tiếng Anh xem nào.\",\n        \"purpose_en\": \"Prompt retrieval of the polite instruction using verb log in with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. CH02 stands encouragingly by the desk. A prompt modal appears over the monitor showing the incomplete sentence stem.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"Please ___ first.\",\n            \"placement\": \"center overlay\",\n            \"object\": \"login prompt dialog\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Nộp bài thành công\",\n        \"narration\": \"\\\"Please log in first.\\\" Đăng nhập tài khoản thành công, thư mục bài làm mở ra và tệp đồ án của hai đứa được gửi đi đúng hạn.\",\n        \"purpose_en\": \"Provide full answer and deliver timely submission payoff.\",\n        \"visual_en\": \"Medium shot. The monitor screen displays a bright green checkmark over the words 'Uploaded'. CH01 and CH02 give a high-five in relief.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  },\n  {\n    \"job\": \"vocab-play-script-470\",\n    \"title\": \"Chơi đàn cho buổi hòa nhạc\",\n    \"plot_vi\": \"Khánh và Vinh chuẩn bị tiết mục âm nhạc cho lớp. Khánh phụ trách chơi piano và hỏi Vinh khả năng chơi đàn ghi-ta để tạo nên bản song tấu mộc mạc.\",\n    \"opening_function_vi\": \"Bắt đầu trong phòng tập vắng lặng cần chia vai nhạc cụ.\",\n    \"learner_outcome_vi\": \"Người học áp dụng từ play để nói về khả năng chơi một loại nhạc cụ cụ thể.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"Khánh\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Vinh\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain plum-purple short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Ngồi vào đàn piano\",\n        \"narration\": \"Phòng hòa nhạc chỉ còn hai đứa. Tôi ngồi xuống trước hàng phím đen trắng của cây đàn dương cầm: \\\"I play the piano.\\\" Tôi chơi đàn piano.\",\n        \"purpose_en\": \"Introduce play (musical instrument) in model sentence 1.\",\n        \"visual_en\": \"Eye-level medium shot. CH01 sits on a wooden bench in front of an upright piano, resting fingers gently on the ivory keys while speaking to CH02.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"Hỏi bạn về cây đàn ghi-ta\",\n        \"narration\": \"Thấy cây đàn sáu dây bằng gỗ dựng ở góc sân khấu, tôi quay sang hỏi Vinh: \\\"Can you play the guitar?\\\" Bạn có chơi đàn ghi-ta được không?\",\n        \"purpose_en\": \"Introduce model sentence 2 inquiring about playing the guitar.\",\n        \"visual_en\": \"Medium shot. CH01 gestures toward an acoustic wooden guitar resting on a floor stand near the edge of the stage, turning to ask CH02.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Thử phím đàn và dây đàn\",\n        \"narration\": \"Vinh vui vẻ gảy thử một hợp âm ấm áp hòa cùng tiếng dương cầm ngân vang, tạo nên giai điệu mộc mạc làm sáng bừng cả căn phòng.\",\n        \"purpose_en\": \"Depict the immediate trial and harmonious musical cooperation.\",\n        \"visual_en\": \"Medium shot. CH02 holds the acoustic guitar across lap, strumming the nylon strings with fingers as CH01 plays gentle chords on the piano keys.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"gảy thử một hợp âm ấm áp hòa cùng tiếng dương cầm\",\n            \"visual_en\": \"Same-camera view: CH02's hand plucks a clear acoustic chord on the guitar while CH01 presses three adjacent piano keys in unison.\",\n            \"purpose_en\": \"Show the visual synchrony of two distinct instruments playing together.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Thử hỏi khả năng đệm đàn\",\n        \"narration\": \"Buổi biểu diễn văn nghệ đang cần một người đệm đàn ghi-ta. Bạn hãy hỏi Vinh khả năng chơi nhạc cụ này bằng một câu tiếng Anh nhé.\",\n        \"purpose_en\": \"Prompt learner retrieval of the target question with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. CH02 stands holding the guitar ready, smiling. CH01 points toward a musical banner showing the sentence stem.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"Can you ___ the guitar?\",\n            \"placement\": \"center overlay\",\n            \"object\": \"music recruitment card\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Bản song tấu rộn rã\",\n        \"narration\": \"\\\"Can you play the guitar?\\\" Tiếng đàn ghi-ta hòa cùng phím piano rộn rã, bản song tấu mộc mạc nhận được tràng pháo tay giòn giã của cả lớp.\",\n        \"purpose_en\": \"Give full correct answer and deliver a joyous musical performance payoff.\",\n        \"visual_en\": \"Wide shot on stage. CH01 plays the piano and CH02 strums the guitar in joyful sync, with musical note symbols floating in the air.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  },\n  {\n    \"job\": \"vocab-loud-script-471\",\n    \"title\": \"Chỉnh bớt tiếng loa quá to\",\n    \"plot_vi\": \"Tùng và Phong đang ôn bài nhưng tiếng loa nghe nhạc quá to làm rung cả mặt bàn. Phong vặn nhỏ núm loa để cả hai trò chuyện rõ ràng hơn.\",\n    \"opening_function_vi\": \"Bắt đầu bằng sự khó chịu do âm lượng loa bật quá to làm rung bàn học.\",\n    \"learner_outcome_vi\": \"Người học hiểu và sử dụng tính từ loud để mô tả mức độ âm thanh lớn, to trong đời sống.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"Tùng\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Phong\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain teal-blue short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Âm thanh dội buốt tai\",\n        \"narration\": \"Tiếng loa rung cả mặt bàn. Tiếng nhạc dội vào tai buốt rát, tôi phải ghé sát tai Phong nói to: \\\"The music is loud.\\\" Nhạc đang to quá.\",\n        \"purpose_en\": \"Introduce loud in model sentence 1 describing excessive acoustic sound.\",\n        \"visual_en\": \"Eye-level medium shot. On a study desk, a black tabletop speaker vibrates with visible motion marks. CH01 leans toward CH02, cupping a hand near mouth to speak.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"Vặn nhỏ núm xoay âm lượng\",\n        \"narration\": \"Phong vội vặn núm âm lượng xuống một nấc nhỏ rồi quay đầu lại hỏi tôi: \\\"Is this too loud?\\\" Âm thanh thế này có quá to không?\",\n        \"purpose_en\": \"Introduce model sentence 2 asking whether the sound level is still excessively loud.\",\n        \"visual_en\": \"Medium close-up. CH02 rotates the circular volume knob on the front face of the speaker counter-clockwise, looking back at CH01 to check.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"vặn núm âm lượng xuống một nấc nhỏ\",\n            \"visual_en\": \"Same-camera view: CH02's fingers turn the rotary dial knob down, causing the speaker vibration lines to shrink significantly.\",\n            \"purpose_en\": \"Show the direct manual adjustment reducing sound intensity.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Màng loa rung nhẹ lại\",\n        \"narration\": \"Màng loa rung nhẹ dần, giai điệu trở nên êm dịu giúp hai đứa có thể ngồi trò chuyện ôn bài mà không phải hét to từng câu nữa.\",\n        \"purpose_en\": \"Depict the positive change in auditory environment.\",\n        \"visual_en\": \"Medium shot. Both CH01 and CH02 sit back comfortably on their chairs beside the desk, notebooks open, chatting at a normal speaking distance.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Hỏi mức âm lượng thích hợp\",\n        \"narration\": \"Phong chỉnh lại núm xoay âm lượng thêm một chút rồi muốn hỏi ý kiến bạn. Bạn hãy hỏi mức loa có quá to không bằng tiếng Anh nhé.\",\n        \"purpose_en\": \"Prompt retrieval of the inquiry with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. CH02 rests a finger lightly on the volume knob, waiting. CH01 gestures toward a sound check card hovering in the center.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"Is this too ___?\",\n            \"placement\": \"center overlay\",\n            \"object\": \"audio check badge\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Giai điệu êm ái vừa vặn\",\n        \"narration\": \"\\\"Is this too loud?\\\" Mức âm lượng dịu êm vừa vặn cho căn phòng, hai đứa thoải mái trao đổi bài học mà tiếng nhạc nền vẫn du dương.\",\n        \"purpose_en\": \"Provide full correct answer and deliver comfortable study atmosphere payoff.\",\n        \"visual_en\": \"Medium wide shot. CH01 and CH02 comfortably discuss an open textbook together; subtle smooth sound curves float softly from the quiet speaker.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  },\n  {\n    \"job\": \"vocab-draw-script-472\",\n    \"title\": \"Vẽ sơ đồ chỉ đường đi\",\n    \"plot_vi\": \"Quân và Hải hẹn nhau đến điểm sinh hoạt mới nhưng chỉ đường bằng lời rất khó hình dung. Quân rút bút vẽ một sơ đồ trực quan giúp cả hai không bị lạc.\",\n    \"opening_function_vi\": \"Mở đầu bằng sự bối rối khi chỉ đường bằng lời nói miệng.\",\n    \"learner_outcome_vi\": \"Người học sử dụng thành thạo động từ draw mang nghĩa vẽ đường nét bằng bút trên giấy.\",\n    \"characters\": [\n      {\n        \"id\": \"CH01\",\n        \"name_vi\": \"Quân\",\n        \"appearance_en\": \"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"\n      },\n      {\n        \"id\": \"CH02\",\n        \"name_vi\": \"Hải\",\n        \"appearance_en\": \"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\n        \"outfit_en\": \"One plain chocolate-brown short-sleeve top.\"\n      }\n    ],\n    \"scenes\": [\n      {\n        \"scene_id\": \"s1\",\n        \"title_vi\": \"Rút bút vẽ sơ đồ\",\n        \"narration\": \"Chỉ đường bằng lời thật khó hiểu. Tôi mở quyển sổ tay rồi rút cây bút mực ra bảo Hải: \\\"I can draw a map.\\\" Tôi có thể vẽ một sơ đồ.\",\n        \"purpose_en\": \"Introduce draw (with pen/lines) in model sentence 1.\",\n        \"visual_en\": \"Eye-level medium shot. CH01 sits at a desk with an open blank notebook, taking out a black felt-tip pen and speaking confidently to CH02.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s2\",\n        \"title_vi\": \"Chỉ điểm hẹn trên giấy\",\n        \"narration\": \"Hải mỉm cười gật đầu, đưa ngón tay trỏ chấm vào khoảng giấy trắng: \\\"Draw the park here.\\\" Hãy vẽ công viên ở ngay góc này nhé.\",\n        \"purpose_en\": \"Introduce model sentence 2 instructing where to draw the park.\",\n        \"visual_en\": \"Medium close-up. CH02 leans forward over the notebook, tapping a finger at the upper right corner of the blank page.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      },\n      {\n        \"scene_id\": \"s3\",\n        \"title_vi\": \"Từng nét mực hiện rõ\",\n        \"narration\": \"Dưới ngòi bút mực sắc nét, từng nét mực đen vạch rõ ngã tư và bãi cỏ xanh, biến lối đi quanh co thành hình vẽ trực quan rõ ràng.\",\n        \"purpose_en\": \"Depict the physical process of drawing lines and landmarks on paper.\",\n        \"visual_en\": \"Close-up on notebook page. CH01's hand guides the pen steadily, forming two intersecting street lines and a neat square tree icon for the park.\",\n        \"character_ids\": [\"CH01\"],\n        \"practice_pause_seconds\": 0,\n        \"extra_visual_states\": [\n          {\n            \"quote\": \"từng nét mực đen vạch rõ ngã tư và bãi cỏ xanh\",\n            \"visual_en\": \"Same-camera view: the felt-tip pen draws crisp black lines connecting a crossroad directly to a bordered green square.\",\n            \"purpose_en\": \"Illustrate concrete visual lines forming an easily readable map.\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s4\",\n        \"title_vi\": \"Đề nghị vẽ sơ đồ\",\n        \"narration\": \"Hải đang băn khoăn tìm đường đến điểm hẹn mới. Bạn hãy đề nghị vẽ một tấm sơ đồ cho bạn bằng một câu tiếng Anh xem nào.\",\n        \"purpose_en\": \"Prompt learner retrieval of the target verb draw with 4 seconds quiet hold.\",\n        \"visual_en\": \"Medium shot. CH02 looks down thoughtfully at the blank paper. CH01 holds the pen poised, pointing toward a prompt card with the missing verb.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 4,\n        \"custom_visible_text\": [\n          {\n            \"text\": \"I can ___ a map.\",\n            \"placement\": \"center overlay\",\n            \"object\": \"sketch offer card\"\n          }\n        ]\n      },\n      {\n        \"scene_id\": \"s5\",\n        \"title_vi\": \"Tự tin bước lên đường\",\n        \"narration\": \"\\\"I can draw a map.\\\" Nhìn vào tấm sơ đồ vẽ tay chi tiết, Hải nhận ra ngay hướng rẽ và hai đứa tự tin cất bước lên đường.\",\n        \"purpose_en\": \"Provide full correct answer and deliver a confident journey payoff.\",\n        \"visual_en\": \"Medium wide shot outdoors. CH02 holds the folded hand-drawn map sheet, nodding with a clear smile as CH01 and CH02 walk briskly forward together.\",\n        \"character_ids\": [\"CH01\", \"CH02\"],\n        \"practice_pause_seconds\": 0\n      }\n    ]\n  }\n]\n{\"episodes\":[{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"An\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Huy\",\"outfit_en\":\"One plain light-orange short-sleeve top.\"}],\"job\":\"vocab-gram-script-463\",\"learner_outcome_vi\":\"Người học nhận diện và nói được đơn vị gram trong câu chỉ định lượng nguyên liệu cụ thể.\",\"opening_function_vi\":\"Khởi đầu bằng sự cố cân đo bột làm bánh tạo mâu thuẫn hành động trực tiếp.\",\"plot_vi\":\"An và Huy cùng cân bột làm một mẻ bánh nướng nhỏ, nhưng nếu lấy sai lượng bột thì bánh sẽ hỏng. Cả hai cẩn thận đong đúng một trăm gam để bánh nở xốp hoàn hảo.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Cân bột này sai là hỏng bánh ngay. Tôi mở cuốn công thức làm bánh rồi bảo Huy: \\\"We need a hundred grams.\\\" Chúng ta cần đúng một trăm gam bột.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce target noun gram in model sentence 1 within the baking situation.\",\"scene_id\":\"s1\",\"title_vi\":\"Đọc công thức làm bánh\",\"visual_en\":\"Eye-level medium shot. CH01 stands beside a kitchen counter holding an open recipe notepad, speaking to CH02 who stands near a digital kitchen scale and a bag of flour.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Huy đổ từng muỗng bột trắng vào thố rồi nhìn đáy túi còn dở: \\\"How many grams are left?\\\" Còn lại bao nhiêu gam vậy? Tôi cúi nhìn vạch cân kiểm tra.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 with question form checking grams.\",\"scene_id\":\"s2\",\"title_vi\":\"Kiểm tra lượng bột còn lại\",\"visual_en\":\"Medium close-up. CH02 gently tilts a flour scoop over a mixing bowl resting on the scale, turning toward CH01 with an inquiring expression as CH01 leans down to check the scale readout.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"extra_visual_states\":[{\"purpose_en\":\"Show the deliberate action of reducing weight to reach the exact measurement.\",\"quote\":\"gạt bớt muỗng bột thừa ra đĩa\",\"visual_en\":\"Same-camera view: the wooden stick scrapes excess flour off the scoop into a ceramic plate, leaving exactly a level scoop.\"}],\"narration\":\"Nhìn kim cân nhích dần từng chút một, tôi nín thở gạt bớt muỗng bột thừa ra đĩa để phần bánh nướng không bị khô cứng hay quá ngọt.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show resistance and careful action adjusting weight before finalizing.\",\"scene_id\":\"s3\",\"title_vi\":\"Cân chỉnh từng chút một\",\"visual_en\":\"Close-up on the scale platform. CH01 uses a wooden flat stick to skim off excess flour into a side dish while CH02 watches the scale digits settle.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"custom_visible_text\":[{\"object\":\"recipe challenge card\",\"placement\":\"center overlay\",\"text\":\"We need a hundred ___.\"}],\"narration\":\"Huy cầm muỗng bột mới toanh trên tay, chuẩn bị xúc thêm. Bạn hãy nhắc Huy lượng bột hai đứa cần lấy bằng một câu tiếng Anh xem nào.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Invite learner retrieval of the target word in a full sentence with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Thử tài nhắc lượng bột\",\"visual_en\":\"Medium shot. CH02 holds a flour scoop ready over the bowl, waiting attentively. CH01 points toward a clean prompt card floating slightly above the counter.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"We need a hundred grams.\\\" Đúng một trăm gam bột rồi, mẻ bánh nướng chín vàng ươm, thơm lừng và xốp mềm trên khay sứ.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide the full correct answer and show the satisfying payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Mẻ bánh nướng hoàn hảo\",\"visual_en\":\"Eye-level medium shot. CH01 and CH02 smile happily beside the table as CH01 presents a ceramic tray with freshly baked, golden fluffy muffins.\"}],\"title\":\"Một trăm gam bột làm bánh\"},{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Bình\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Khoa\",\"outfit_en\":\"One plain lime-green short-sleeve top.\"}],\"job\":\"vocab-kilogram-script-464\",\"learner_outcome_vi\":\"Người học sử dụng thành thạo từ kilogram để hỏi và nói về số cân nặng cụ thể.\",\"opening_function_vi\":\"Mở đầu bằng sức nặng đè lên vai tạo động lực phân chia đồ đạc.\",\"plot_vi\":\"Chiếc ba lô nặng kéo trĩu vai Bình trong chuyến dã ngoại. Bình và Khoa chia bớt đồ sang túi kia để đưa trọng lượng về mức một kilôgam vừa vặn.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Quai túi kéo trĩu cả vai tôi. Tôi nhấc chiếc túi du lịch đặt lên bàn cân rồi bảo Khoa: \\\"This bag weighs two kilograms.\\\" Túi này nặng hai kilôgam.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce kilogram in model sentence 1 stating current heavy weight.\",\"scene_id\":\"s1\",\"title_vi\":\"Chiếc túi nặng trĩu vai\",\"visual_en\":\"Eye-level medium shot. CH01 shoulders a bulging dark-grey travel bag with a slight slouch, then sets it onto a luggage hanging scale while CH02 watches.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"extra_visual_states\":[{\"purpose_en\":\"Illustrate transferring items between bags to lower bag weight.\",\"quote\":\"lấy bớt hai chai nước chia sang ba lô của mình\",\"visual_en\":\"Same-camera view: CH02 lifts two water bottles out of the grey bag and sets them securely inside the blue backpack beside it.\"}],\"narration\":\"Khoa vội đỡ lấy quai xách rồi mở ngăn kéo, lấy bớt hai chai nước chia sang ba lô của mình cho hai vai bớt nặng nề.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Depict concrete action to reduce weight and balance load.\",\"scene_id\":\"s2\",\"title_vi\":\"San sẻ bớt đồ sang túi bạn\",\"visual_en\":\"Medium shot. CH02 unzips the main compartment of the grey bag on the table and transfers two reusable water bottles into an open blue backpack.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi nhấc chiếc túi vải đặt lại lên đĩa cân lò xo trước mặt để kiểm tra: \\\"Is it one kilogram now?\\\" Bây giờ nó nặng một kilôgam chưa Khoa?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 questioning whether target weight of one kilogram is reached.\",\"scene_id\":\"s3\",\"title_vi\":\"Cân lại lần thứ hai\",\"visual_en\":\"Close-up on the dial scale. CH01 hooks the grey bag handle back onto the scale hook while CH02 leans in to observe the needle.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"custom_visible_text\":[{\"object\":\"scale prompt card\",\"placement\":\"center overlay\",\"text\":\"Is it one ___ now?\"}],\"narration\":\"Kim cân dừng lại ngay sát vạch chia ở giữa mặt số. Hãy hỏi bạn xem chiếc túi đã nặng một kilôgam chưa bằng một câu tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt learner to retrieve model sentence 2 with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Kiểm tra đúng một kilôgam\",\"visual_en\":\"Medium shot. The scale needle trembles right near the target marker. CH01 turns to the viewer, gesturing to a prompt card displaying the sentence frame.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Is it one kilogram now?\\\" Đúng tròn một kilôgam rồi, hai chiếc túi chia đều sức nặng giúp hai đứa nhẹ bước trên đường đèo dốc.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver full correct answer and wrap up with an earned relief payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Nhẹ bước lên đường dã ngoại\",\"visual_en\":\"Wide eye-level shot. CH01 and CH02 both wear their comfortably balanced backpacks, walking side by side briskly along an outdoor trail.\"}],\"title\":\"Chia lại ba lô hai kilôgam\"},{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Minh\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Lâm\",\"outfit_en\":\"One plain sunny-yellow short-sleeve top.\"}],\"job\":\"vocab-litre-script-465\",\"learner_outcome_vi\":\"Người học hiểu và sử dụng từ litre để chỉ dung tích chất lỏng trong hoạt động hàng ngày.\",\"opening_function_vi\":\"Bắt đầu bằng nhu cầu tưới vườn giữa trưa nắng gắt.\",\"plot_vi\":\"Minh và Lâm tưới rau trong ngày nắng gắt nhưng không biết chiếc bình nhựa chứa được bao nhiêu. Cả hai đong đủ hai lít nước để tưới mát cả luống rau xanh.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Mấy luống rau héo rũ vì khát. Tôi cầm chiếc bình nhựa rỗng giơ lên hỏi Lâm: \\\"Does this bottle hold one litre?\\\" Bình này chứa được một lít không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 1 testing capacity of a bottle using litre.\",\"scene_id\":\"s1\",\"title_vi\":\"Bình nước trong góc vườn\",\"visual_en\":\"Medium shot. CH01 stands beside garden vegetable beds with drooping green leaves, lifting a transparent plastic jug to examine it and speaking to CH02.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Lâm nhìn kỹ vạch đo trên thân bình rồi bảo mấy luống rau cần nhiều hơn: \\\"We need two litres of water.\\\" Chúng ta cần hai lít nước.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 stating required amount in litres.\",\"scene_id\":\"s2\",\"title_vi\":\"Đo lượng nước cần tưới\",\"visual_en\":\"Close-up. CH02 points at the measurement ridges embossed on the jug while speaking clearly, indicating that more water is needed.\"},{\"character_ids\":[\"CH01\"],\"extra_visual_states\":[{\"purpose_en\":\"Show the container filling up to maximum liquid capacity.\",\"quote\":\"dòng nước mát lành chảy đầy tràn miệng bình\",\"visual_en\":\"Same-camera view: the clear water rises from the bottom of the jug up to the top brim under the active water stream.\"}],\"narration\":\"Tôi xách bình ra góc vườn vặn vòi, nhìn dòng nước mát lành chảy đầy tràn miệng bình để sẵn sàng mang tưới cho vườn rau đang khô hạn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show the physical action of gathering the water to satisfy the narrative need.\",\"scene_id\":\"s3\",\"title_vi\":\"Hứng nước đầy miệng bình\",\"visual_en\":\"Medium shot at the garden tap. CH01 holds the jug steady beneath the brass outdoor faucet as clean water rushes in.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"custom_visible_text\":[{\"object\":\"watering note banner\",\"placement\":\"center overlay\",\"text\":\"We need two ___ of water.\"}],\"narration\":\"Lâm đã chuẩn bị sẵn các khay ươm cây bên luống cải. Bạn hãy nhắc Lâm lượng nước hai đứa cần chuẩn bị bằng một câu tiếng Anh xem nào.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt learner to produce the target sentence with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Cùng nhắc lượng nước tưới\",\"visual_en\":\"Medium shot. CH02 stands near seedling trays holding a small watering rose. A prompt card floats near center showing the incomplete stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"We need two litres of water.\\\" Có đủ hai lít nước mát rồi, từng luống cải xanh mướt ngẩng đầu đón ánh nắng ban mai thật tươi tắn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"State the full answer and show the revitalized vegetable garden payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Vườn rau xanh mướt hồi sinh\",\"visual_en\":\"Wide eye-level shot. CH01 and CH02 water the garden together; the green vegetable leaves stand tall, refreshed and glistening with droplets.\"}],\"title\":\"Hai lít nước cho luống rau\"},{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"An\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Mai\",\"outfit_en\":\"One plain lavender short-sleeve top.\"}],\"job\":\"vocab-circle-script-466\",\"learner_outcome_vi\":\"Người học nhận biết và diễn đạt danh từ circle để chỉ hình tròn trong hoạt động tạo hình.\",\"opening_function_vi\":\"Bắt đầu bằng sự thiếu hụt chi tiết tròn cho mô hình đồng hồ thủ công.\",\"plot_vi\":\"An làm một chiếc đồng hồ thủ công nhưng mặt số bìa cứng chưa có hình dáng chuẩn. Mai hỗ trợ An vẽ com-pa và cắt rời một hình tròn vừa khít.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Miếng bìa này thiếu mặt đồng hồ. Tôi dùng com-pa quay một vòng tròn khép kín trên giấy màu: \\\"I drew a circle.\\\" Tôi đã vẽ một hình tròn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce circle in model sentence 1 as an outcome of drawing a round shape.\",\"scene_id\":\"s1\",\"title_vi\":\"Vẽ đường cong bằng com-pa\",\"visual_en\":\"Eye-level medium shot. CH01 sits at a wooden craft table holding a compass tool, rotating it smoothly on yellow construction paper as CH02 looks on.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Đường nét tròn xoe liền mạch không hề gợn mép, tôi đưa kéo cho Mai nhờ cậy: \\\"Cut out this circle.\\\" Cắt hình tròn này ra giúp mình nhé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 requesting the partner to cut the circle.\",\"scene_id\":\"s2\",\"title_vi\":\"Nhờ bạn cắt theo nét vẽ\",\"visual_en\":\"Medium close-up. CH01 hands a pair of safety craft scissors across the desk to CH02, pointing down at the crisp circular pencil outline on paper.\"},{\"character_ids\":[\"CH02\"],\"extra_visual_states\":[{\"purpose_en\":\"Show the physical transformation from a flat sheet into an isolated round shape.\",\"quote\":\"cẩn thận lượn mũi kéo theo nét bút chì\",\"visual_en\":\"Same-camera view: the scissors blade glides along the graphite circle line, separating the circular piece from the outer scrap sheet.\"}],\"narration\":\"Mai cẩn thận lượn mũi kéo theo nét bút chì, giữ cho mép giấy tròn đều tăm tắp mà không bị phạm vào khoảng trống bên trong mặt số.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Highlight the careful manual process of following the round contour.\",\"scene_id\":\"s3\",\"title_vi\":\"Lượn kéo theo viền cong\",\"visual_en\":\"Close-up on hands and paper. CH02 holds the scissors steady, trimming smoothly along the pencil curvature without leaving any jagged corners.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"custom_visible_text\":[{\"object\":\"craft instruction tag\",\"placement\":\"center overlay\",\"text\":\"Cut out this ___.\"}],\"narration\":\"Mảnh giấy vàng đã vẽ sẵn nét tròn đang nằm ngay ngắn trên bàn. Bạn hãy nhờ Mai cắt hình tròn ấy ra bằng một câu tiếng Anh xem nào.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Invite learner retrieval of the target instruction with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Nhắc bạn cắt đúng hình\",\"visual_en\":\"Medium shot. CH02 holds the craft scissors ready beside the paper. CH01 gestures toward a prompt card displaying the fill-in stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Cut out this circle.\\\" Mảnh bìa hình tròn vừa khít khung gỗ, chiếc đồng hồ thủ công gắn kim quay tích tắc trông thật đáng yêu.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide the full model sentence and conclude with the completed craft clock payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Mặt đồng hồ tròn xoe\",\"visual_en\":\"Medium shot. CH01 and CH02 proudly hold up the finished cardboard clock: the round dial sits perfectly centered with two neat paper hands pointing to the hour.\"}],\"title\":\"Cắt hình tròn cho mặt đồng hồ\"},{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Nam\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Việt\",\"outfit_en\":\"One plain red-orange short-sleeve top.\"}],\"job\":\"vocab-way-script-467\",\"learner_outcome_vi\":\"Người học hiểu và sử dụng từ way mang nghĩa lối đi, con đường để hỏi và chỉ hướng.\",\"opening_function_vi\":\"Mở đầu bằng ngã rẽ gây phân vân trước giờ tàu khởi hành.\",\"plot_vi\":\"Nam và Việt đứng trước ngã rẽ vắng người trong lúc sắp đến giờ tàu chạy. Cả hai xem bản đồ để xác định đúng con đường dẫn tới sân ga.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hai ngã rẽ làm tôi bối rối. Chuyến tàu sắp khởi hành, tôi cuống quýt hỏi Việt: \\\"Which way is the station?\\\" Nhà ga đi đường nào vậy Việt?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 1 asking for the route to a specific place.\",\"scene_id\":\"s1\",\"title_vi\":\"Đứng trước hai ngã rẽ\",\"visual_en\":\"Eye-level medium wide shot. CH01 and CH02 stand at a fork in a stone pathway. CH01 checks a wristwatch with an anxious gesture and speaks to CH02.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"extra_visual_states\":[{\"purpose_en\":\"Connect the map route directly to the physical pathway in front of them.\",\"quote\":\"chỉ vào con đường lát gạch bên trái\",\"visual_en\":\"Same-camera view: CH02's finger taps the left route marked on the map, then gestures straight toward the actual left pathway ahead.\"}],\"narration\":\"Việt mở tấm bản đồ cầm tay ra đối chiếu, chỉ vào con đường lát gạch bên trái: \\\"This is the way to the station.\\\" Đây là đường tới nhà ga.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 confirming the correct route.\",\"scene_id\":\"s2\",\"title_vi\":\"Xác định trên bản đồ\",\"visual_en\":\"Medium shot. CH02 unfolds a pocket tourist map and points a finger decisively toward the brick-paved left route.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Tôi nhìn theo lối đi rợp bóng mát phía trước, thấy biển chỉ dẫn bằng sắt gắn hình đầu tàu lấp ló sau những rặng thông xanh rì.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Reinforce visual verification of the route path.\",\"scene_id\":\"s3\",\"title_vi\":\"Thấy cột mốc chỉ dẫn\",\"visual_en\":\"Point-of-view perspective looking down the left path. A small cast-iron pole sign with a miniature train silhouette is visible beside green pine branches.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"custom_visible_text\":[{\"object\":\"route inquiry board\",\"placement\":\"center overlay\",\"text\":\"Which ___ is the station?\"}],\"narration\":\"Đứng trước ngã ba đường chưa rõ hướng đi, bạn hãy hỏi Việt lối đi tới ga xe lửa bằng một câu tiếng Anh xem nào.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt full-sentence question retrieval with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Hỏi lại đúng đường đi\",\"visual_en\":\"Medium shot. CH01 stands beside CH02 at the fork, looking toward the viewer with an inviting gesture as a prompt banner appears.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Which way is the station?\\\" Đi đúng con đường bên trái, hai đứa thảnh thơi bước chân lên toa tàu vừa kịp giờ khởi hành êm ái.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide the full correct answer and show the timely arrival payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Kịp chuyến tàu khởi hành\",\"visual_en\":\"Wide shot at the train platform. CH01 and CH02 step comfortably onto the passenger carriage doorway just as the train bell dings softly.\"}],\"title\":\"Hỏi lối đi tới nhà ga\"},{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Huy\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Tuấn\",\"outfit_en\":\"One plain emerald-green short-sleeve top.\"}],\"job\":\"vocab-right-script-468\",\"learner_outcome_vi\":\"Người học nắm vững danh từ right trong cụm on the right để diễn đạt vị trí phía bên phải.\",\"opening_function_vi\":\"Bắt đầu bằng sự hoang mang giữa sảnh lớn nhiều dãy cửa hàng.\",\"plot_vi\":\"Huy và Tuấn cùng tìm tiệm sách và cửa thoát hiểm trong sảnh thương mại rộng lớn. Cả hai thống nhất dùng mốc phía bên phải để không bị nhầm phương hướng.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Sảnh lớn này nhiều lối rẽ quá. Tuấn đứng cùng hướng nhìn với tôi rồi giơ tay chỉ: \\\"The shop is on the right.\\\" Cửa hàng ở phía bên phải.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 1 using right as a direction noun in on the right.\",\"scene_id\":\"s1\",\"title_vi\":\"Nhìn theo cùng một hướng\",\"visual_en\":\"Eye-level medium wide shot. In a spacious minimalist lobby, CH01 and CH02 stand shoulder-to-shoulder facing the same direction. CH02 extends an arm pointing toward the right wing.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi thấy tấm biển hiệu bán sách sáng đèn ở dãy hành lang bên phải, liền hỏi tiếp: \\\"Is the exit on the right too?\\\" Lối ra cũng ở phía bên phải à?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 confirming if the exit is also on the right.\",\"scene_id\":\"s2\",\"title_vi\":\"Hỏi về vị trí lối ra\",\"visual_en\":\"Medium shot. CH01 gazes along the right-hand wall at an illuminated bookstore sign, then turns slightly to ask CH02 about the nearby glass doors.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"extra_visual_states\":[{\"purpose_en\":\"Demonstrate that both landmarks share the exact same right-hand side of the corridor.\",\"quote\":\"chỉ cánh cửa kính thoát hiểm nằm ngay cạnh gian hàng sách\",\"visual_en\":\"Same-camera view: CH02's outstretched hand shifts focus from the bookstore window to the clear glass emergency door right beside it.\"}],\"narration\":\"Tuấn mỉm cười gật đầu, chỉ cánh cửa kính thoát hiểm nằm ngay cạnh gian hàng sách, giúp cả hai yên tâm chọn đồ mà không sợ lạc đường.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm spatial orientation so both characters stay oriented.\",\"scene_id\":\"s3\",\"title_vi\":\"Xác nhận mốc cửa kính\",\"visual_en\":\"Medium shot. CH02 points at a clear double-glass exit doorway positioned directly adjacent to the bookstore entrance on the right side.\"},{\"character_ids\":[\"CH01\"],\"custom_visible_text\":[{\"object\":\"directory guidance card\",\"placement\":\"center overlay\",\"text\":\"The shop is on the ___.\"}],\"narration\":\"Người bạn đang ngó nghiêng tìm vị trí tiệm sách trong sảnh. Bạn hãy nói cho bạn biết cửa hàng nằm ở phía bên phải bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt full-sentence retrieval of the location statement with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Chỉ phía bên phải cho bạn\",\"visual_en\":\"Medium shot. CH01 gestures toward the right corridor while presenting an onscreen prompt card displaying the fill-in sentence.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"The shop is on the right.\\\" Đi về phía bên phải, hai đứa nhanh chóng mua được tập sổ tay ưng ý rồi thong thả rảo bước ra cửa.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Give full correct answer and close with a smooth shopping payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Mua được sách và ra về\",\"visual_en\":\"Eye-level medium shot. CH01 and CH02 walk side by side holding a newly purchased notebook paper bag, exiting effortlessly through the right-side glass doors.\"}],\"title\":\"Cửa hàng ở phía bên phải\"},{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Bảo\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Đức\",\"outfit_en\":\"One plain royal-blue short-sleeve top.\"}],\"job\":\"vocab-login-script-469\",\"learner_outcome_vi\":\"Người học phân biệt và sử dụng đúng động từ hai từ log in trong giao tiếp thao tác máy tính.\",\"opening_function_vi\":\"Mở đầu bằng màn hình báo khóa tài khoản gây trở ngại nộp bài tập.\",\"plot_vi\":\"Bảo loay hoay không nộp được đồ án vì tài khoản lớp học trực tuyến bị khóa. Đức hướng dẫn Bảo thực hiện bước đăng nhập trước khi gửi bài.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"extra_visual_states\":[{\"purpose_en\":\"Depict the blocked attempt to access the learning system.\",\"quote\":\"gõ tài khoản mà trang web không mở\",\"visual_en\":\"Same-camera view: CH01 taps keys on the keyboard, but the red padlock icon on the computer monitor pulses without opening.\"}],\"narration\":\"Màn hình hiện ô khóa màu đỏ. Tôi gõ tài khoản mà trang web không mở, liền bảo Đức: \\\"I can't log in.\\\" Tôi không đăng nhập được.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce verb log in in model sentence 1 expressing inability to access.\",\"scene_id\":\"s1\",\"title_vi\":\"Vướng ô khóa trên màn hình\",\"visual_en\":\"Eye-level medium shot. CH01 sits in front of a desktop monitor displaying a simple webpage with a red lock icon, typing on the keyboard and speaking to CH02.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Đức nhìn kỹ dòng nhắc nhở màu xanh bên dưới thanh menu rồi chỉ tay: \\\"Please log in first.\\\" Xin hãy đăng nhập trước nhé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 instructing the essential prerequisite action.\",\"scene_id\":\"s2\",\"title_vi\":\"Nhắc nhở làm bước đầu tiên\",\"visual_en\":\"Medium close-up. CH02 leans over the desk, pointing a finger to the top right corner of the screen where an authentication banner appears.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Tôi phát hiện mình gõ nhầm tên lớp nhóm, liền nhập lại thông tin tài khoản cá nhân từng ký tự thật cẩn thận để hệ thống duyệt qua.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show corrective action solving the friction.\",\"scene_id\":\"s3\",\"title_vi\":\"Điền lại thông tin chính xác\",\"visual_en\":\"Close-up on CH01's hands typing steadily on the keyboard; the input field on the screen now displays green checkmarks beside the username box.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"custom_visible_text\":[{\"object\":\"login prompt dialog\",\"placement\":\"center overlay\",\"text\":\"Please ___ first.\"}],\"narration\":\"Đức đứng bên cạnh nhắc tôi hoàn thành bước truy cập tài khoản trước lúc nộp bài. Hãy nhắc bạn bằng một câu tiếng Anh xem nào.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt retrieval of the polite instruction using verb log in with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Nhắc bạn đăng nhập trước\",\"visual_en\":\"Medium shot. CH02 stands encouragingly by the desk. A prompt modal appears over the monitor showing the incomplete sentence stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Please log in first.\\\" Đăng nhập tài khoản thành công, thư mục bài làm mở ra và tệp đồ án của hai đứa được gửi đi đúng hạn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide full answer and deliver timely submission payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Nộp bài thành công\",\"visual_en\":\"Medium shot. The monitor screen displays a bright green checkmark over the words 'Uploaded'. CH01 and CH02 give a high-five in relief.\"}],\"title\":\"Đăng nhập nộp bài tập\"},{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Khánh\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Vinh\",\"outfit_en\":\"One plain plum-purple short-sleeve top.\"}],\"job\":\"vocab-play-script-470\",\"learner_outcome_vi\":\"Người học áp dụng từ play để nói về khả năng chơi một loại nhạc cụ cụ thể.\",\"opening_function_vi\":\"Bắt đầu trong phòng tập vắng lặng cần chia vai nhạc cụ.\",\"plot_vi\":\"Khánh và Vinh chuẩn bị tiết mục âm nhạc cho lớp. Khánh phụ trách chơi piano và hỏi Vinh khả năng chơi đàn ghi-ta để tạo nên bản song tấu mộc mạc.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Phòng hòa nhạc chỉ còn hai đứa. Tôi ngồi xuống trước hàng phím đen trắng của cây đàn dương cầm: \\\"I play the piano.\\\" Tôi chơi đàn piano.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce play (musical instrument) in model sentence 1.\",\"scene_id\":\"s1\",\"title_vi\":\"Ngồi vào đàn piano\",\"visual_en\":\"Eye-level medium shot. CH01 sits on a wooden bench in front of an upright piano, resting fingers gently on the ivory keys while speaking to CH02.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Thấy cây đàn sáu dây bằng gỗ dựng ở góc sân khấu, tôi quay sang hỏi Vinh: \\\"Can you play the guitar?\\\" Bạn có chơi đàn ghi-ta được không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 inquiring about playing the guitar.\",\"scene_id\":\"s2\",\"title_vi\":\"Hỏi bạn về cây đàn ghi-ta\",\"visual_en\":\"Medium shot. CH01 gestures toward an acoustic wooden guitar resting on a floor stand near the edge of the stage, turning to ask CH02.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"extra_visual_states\":[{\"purpose_en\":\"Show the visual synchrony of two distinct instruments playing together.\",\"quote\":\"gảy thử một hợp âm ấm áp hòa cùng tiếng dương cầm\",\"visual_en\":\"Same-camera view: CH02's hand plucks a clear acoustic chord on the guitar while CH01 presses three adjacent piano keys in unison.\"}],\"narration\":\"Vinh vui vẻ gảy thử một hợp âm ấm áp hòa cùng tiếng dương cầm ngân vang, tạo nên giai điệu mộc mạc làm sáng bừng cả căn phòng.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Depict the immediate trial and harmonious musical cooperation.\",\"scene_id\":\"s3\",\"title_vi\":\"Thử phím đàn và dây đàn\",\"visual_en\":\"Medium shot. CH02 holds the acoustic guitar across lap, strumming the nylon strings with fingers as CH01 plays gentle chords on the piano keys.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"custom_visible_text\":[{\"object\":\"music recruitment card\",\"placement\":\"center overlay\",\"text\":\"Can you ___ the guitar?\"}],\"narration\":\"Buổi biểu diễn văn nghệ đang cần một người đệm đàn ghi-ta. Bạn hãy hỏi Vinh khả năng chơi nhạc cụ này bằng một câu tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt learner retrieval of the target question with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Thử hỏi khả năng đệm đàn\",\"visual_en\":\"Medium shot. CH02 stands holding the guitar ready, smiling. CH01 points toward a musical banner showing the sentence stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Can you play the guitar?\\\" Tiếng đàn ghi-ta hòa cùng phím piano rộn rã, bản song tấu mộc mạc nhận được tràng pháo tay giòn giã của cả lớp.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Give full correct answer and deliver a joyous musical performance payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Bản song tấu rộn rã\",\"visual_en\":\"Wide shot on stage. CH01 plays the piano and CH02 strums the guitar in joyful sync, with musical note symbols floating in the air.\"}],\"title\":\"Chơi đàn cho buổi hòa nhạc\"},{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tùng\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Phong\",\"outfit_en\":\"One plain teal-blue short-sleeve top.\"}],\"job\":\"vocab-loud-script-471\",\"learner_outcome_vi\":\"Người học hiểu và sử dụng tính từ loud để mô tả mức độ âm thanh lớn, to trong đời sống.\",\"opening_function_vi\":\"Bắt đầu bằng sự khó chịu do âm lượng loa bật quá to làm rung bàn học.\",\"plot_vi\":\"Tùng và Phong đang ôn bài nhưng tiếng loa nghe nhạc quá to làm rung cả mặt bàn. Phong vặn nhỏ núm loa để cả hai trò chuyện rõ ràng hơn.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tiếng loa rung cả mặt bàn. Tiếng nhạc dội vào tai buốt rát, tôi phải ghé sát tai Phong nói to: \\\"The music is loud.\\\" Nhạc đang to quá.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce loud in model sentence 1 describing excessive acoustic sound.\",\"scene_id\":\"s1\",\"title_vi\":\"Âm thanh dội buốt tai\",\"visual_en\":\"Eye-level medium shot. On a study desk, a black tabletop speaker vibrates with visible motion marks. CH01 leans toward CH02, cupping a hand near mouth to speak.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"extra_visual_states\":[{\"purpose_en\":\"Show the direct manual adjustment reducing sound intensity.\",\"quote\":\"vặn núm âm lượng xuống một nấc nhỏ\",\"visual_en\":\"Same-camera view: CH02's fingers turn the rotary dial knob down, causing the speaker vibration lines to shrink significantly.\"}],\"narration\":\"Phong vội vặn núm âm lượng xuống một nấc nhỏ rồi quay đầu lại hỏi tôi: \\\"Is this too loud?\\\" Âm thanh thế này có quá to không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 asking whether the sound level is still excessively loud.\",\"scene_id\":\"s2\",\"title_vi\":\"Vặn nhỏ núm xoay âm lượng\",\"visual_en\":\"Medium close-up. CH02 rotates the circular volume knob on the front face of the speaker counter-clockwise, looking back at CH01 to check.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Màng loa rung nhẹ dần, giai điệu trở nên êm dịu giúp hai đứa có thể ngồi trò chuyện ôn bài mà không phải hét to từng câu nữa.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Depict the positive change in auditory environment.\",\"scene_id\":\"s3\",\"title_vi\":\"Màng loa rung nhẹ lại\",\"visual_en\":\"Medium shot. Both CH01 and CH02 sit back comfortably on their chairs beside the desk, notebooks open, chatting at a normal speaking distance.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"custom_visible_text\":[{\"object\":\"audio check badge\",\"placement\":\"center overlay\",\"text\":\"Is this too ___?\"}],\"narration\":\"Phong chỉnh lại núm xoay âm lượng thêm một chút rồi muốn hỏi ý kiến bạn. Bạn hãy hỏi mức loa có quá to không bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt retrieval of the inquiry with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Hỏi mức âm lượng thích hợp\",\"visual_en\":\"Medium shot. CH02 rests a finger lightly on the volume knob, waiting. CH01 gestures toward a sound check card hovering in the center.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Is this too loud?\\\" Mức âm lượng dịu êm vừa vặn cho căn phòng, hai đứa thoải mái trao đổi bài học mà tiếng nhạc nền vẫn du dương.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide full correct answer and deliver comfortable study atmosphere payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Giai điệu êm ái vừa vặn\",\"visual_en\":\"Medium wide shot. CH01 and CH02 comfortably discuss an open textbook together; subtle smooth sound curves float softly from the quiet speaker.\"}],\"title\":\"Chỉnh bớt tiếng loa quá to\"},{\"characters\":[{\"appearance_en\":\"Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Quân\",\"outfit_en\":\"Exactly one single pale-blue #8CCFE8 short-sleeve torso.\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Hải\",\"outfit_en\":\"One plain chocolate-brown short-sleeve top.\"}],\"job\":\"vocab-draw-script-472\",\"learner_outcome_vi\":\"Người học sử dụng thành thạo động từ draw mang nghĩa vẽ đường nét bằng bút trên giấy.\",\"opening_function_vi\":\"Mở đầu bằng sự bối rối khi chỉ đường bằng lời nói miệng.\",\"plot_vi\":\"Quân và Hải hẹn nhau đến điểm sinh hoạt mới nhưng chỉ đường bằng lời rất khó hình dung. Quân rút bút vẽ một sơ đồ trực quan giúp cả hai không bị lạc.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chỉ đường bằng lời thật khó hiểu. Tôi mở quyển sổ tay rồi rút cây bút mực ra bảo Hải: \\\"I can draw a map.\\\" Tôi có thể vẽ một sơ đồ.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce draw (with pen/lines) in model sentence 1.\",\"scene_id\":\"s1\",\"title_vi\":\"Rút bút vẽ sơ đồ\",\"visual_en\":\"Eye-level medium shot. CH01 sits at a desk with an open blank notebook, taking out a black felt-tip pen and speaking confidently to CH02.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hải mỉm cười gật đầu, đưa ngón tay trỏ chấm vào khoảng giấy trắng: \\\"Draw the park here.\\\" Hãy vẽ công viên ở ngay góc này nhé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce model sentence 2 instructing where to draw the park.\",\"scene_id\":\"s2\",\"title_vi\":\"Chỉ điểm hẹn trên giấy\",\"visual_en\":\"Medium close-up. CH02 leans forward over the notebook, tapping a finger at the upper right corner of the blank page.\"},{\"character_ids\":[\"CH01\"],\"extra_visual_states\":[{\"purpose_en\":\"Illustrate concrete visual lines forming an easily readable map.\",\"quote\":\"từng nét mực đen vạch rõ ngã tư và bãi cỏ xanh\",\"visual_en\":\"Same-camera view: the felt-tip pen draws crisp black lines connecting a crossroad directly to a bordered green square.\"}],\"narration\":\"Dưới ngòi bút mực sắc nét, từng nét mực đen vạch rõ ngã tư và bãi cỏ xanh, biến lối đi quanh co thành hình vẽ trực quan rõ ràng.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Depict the physical process of drawing lines and landmarks on paper.\",\"scene_id\":\"s3\",\"title_vi\":\"Từng nét mực hiện rõ\",\"visual_en\":\"Close-up on notebook page. CH01's hand guides the pen steadily, forming two intersecting street lines and a neat square tree icon for the park.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"custom_visible_text\":[{\"object\":\"sketch offer card\",\"placement\":\"center overlay\",\"text\":\"I can ___ a map.\"}],\"narration\":\"Hải đang băn khoăn tìm đường đến điểm hẹn mới. Bạn hãy đề nghị vẽ một tấm sơ đồ cho bạn bằng một câu tiếng Anh xem nào.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt learner retrieval of the target verb draw with 4 seconds quiet hold.\",\"scene_id\":\"s4\",\"title_vi\":\"Đề nghị vẽ sơ đồ\",\"visual_en\":\"Medium shot. CH02 looks down thoughtfully at the blank paper. CH01 holds the pen poised, pointing toward a prompt card with the missing verb.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"I can draw a map.\\\" Nhìn vào tấm sơ đồ vẽ tay chi tiết, Hải nhận ra ngay hướng rẽ và hai đứa tự tin cất bước lên đường.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide full correct answer and deliver a confident journey payoff.\",\"scene_id\":\"s5\",\"title_vi\":\"Tự tin bước lên đường\",\"visual_en\":\"Medium wide shot outdoors. CH02 holds the folded hand-drawn map sheet, nodding with a clear smile as CH01 and CH02 walk briskly forward together.\"}],\"title\":\"Vẽ sơ đồ chỉ đường đi\"}],\"toolAction\":\"Finishing vocabulary episodes\",\"toolSummary\":\"Vocabulary episodes completion\"}\n",
+  "duration_seconds": 185.773521126,
+  "num_turns": 2,
+  "structured_output": {
+    "episodes": [
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "An",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Huy",
+            "outfit_en": "One plain light-orange short-sleeve top."
+          }
+        ],
+        "job": "vocab-gram-script-463",
+        "learner_outcome_vi": "Người học nhận diện và nói được đơn vị gram trong câu chỉ định lượng nguyên liệu cụ thể.",
+        "opening_function_vi": "Khởi đầu bằng sự cố cân đo bột làm bánh tạo mâu thuẫn hành động trực tiếp.",
+        "plot_vi": "An và Huy cùng cân bột làm một mẻ bánh nướng nhỏ, nhưng nếu lấy sai lượng bột thì bánh sẽ hỏng. Cả hai cẩn thận đong đúng một trăm gam để bánh nở xốp hoàn hảo.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Cân bột này sai là hỏng bánh ngay. Tôi mở cuốn công thức làm bánh rồi bảo Huy: \"We need a hundred grams.\" Chúng ta cần đúng một trăm gam bột.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce target noun gram in model sentence 1 within the baking situation.",
+            "scene_id": "s1",
+            "title_vi": "Đọc công thức làm bánh",
+            "visual_en": "Eye-level medium shot. CH01 stands beside a kitchen counter holding an open recipe notepad, speaking to CH02 who stands near a digital kitchen scale and a bag of flour."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Huy đổ từng muỗng bột trắng vào thố rồi nhìn đáy túi còn dở: \"How many grams are left?\" Còn lại bao nhiêu gam vậy? Tôi cúi nhìn vạch cân kiểm tra.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 with question form checking grams.",
+            "scene_id": "s2",
+            "title_vi": "Kiểm tra lượng bột còn lại",
+            "visual_en": "Medium close-up. CH02 gently tilts a flour scoop over a mixing bowl resting on the scale, turning toward CH01 with an inquiring expression as CH01 leans down to check the scale readout."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Show the deliberate action of reducing weight to reach the exact measurement.",
+                "quote": "gạt bớt muỗng bột thừa ra đĩa",
+                "visual_en": "Same-camera view: the wooden stick scrapes excess flour off the scoop into a ceramic plate, leaving exactly a level scoop."
+              }
+            ],
+            "narration": "Nhìn kim cân nhích dần từng chút một, tôi nín thở gạt bớt muỗng bột thừa ra đĩa để phần bánh nướng không bị khô cứng hay quá ngọt.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show resistance and careful action adjusting weight before finalizing.",
+            "scene_id": "s3",
+            "title_vi": "Cân chỉnh từng chút một",
+            "visual_en": "Close-up on the scale platform. CH01 uses a wooden flat stick to skim off excess flour into a side dish while CH02 watches the scale digits settle."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "recipe challenge card",
+                "placement": "center overlay",
+                "text": "We need a hundred ___."
+              }
+            ],
+            "narration": "Huy cầm muỗng bột mới toanh trên tay, chuẩn bị xúc thêm. Bạn hãy nhắc Huy lượng bột hai đứa cần lấy bằng một câu tiếng Anh xem nào.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Invite learner retrieval of the target word in a full sentence with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Thử tài nhắc lượng bột",
+            "visual_en": "Medium shot. CH02 holds a flour scoop ready over the bowl, waiting attentively. CH01 points toward a clean prompt card floating slightly above the counter."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"We need a hundred grams.\" Đúng một trăm gam bột rồi, mẻ bánh nướng chín vàng ươm, thơm lừng và xốp mềm trên khay sứ.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide the full correct answer and show the satisfying payoff.",
+            "scene_id": "s5",
+            "title_vi": "Mẻ bánh nướng hoàn hảo",
+            "visual_en": "Eye-level medium shot. CH01 and CH02 smile happily beside the table as CH01 presents a ceramic tray with freshly baked, golden fluffy muffins."
+          }
+        ],
+        "title": "Một trăm gam bột làm bánh"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Bình",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Khoa",
+            "outfit_en": "One plain lime-green short-sleeve top."
+          }
+        ],
+        "job": "vocab-kilogram-script-464",
+        "learner_outcome_vi": "Người học sử dụng thành thạo từ kilogram để hỏi và nói về số cân nặng cụ thể.",
+        "opening_function_vi": "Mở đầu bằng sức nặng đè lên vai tạo động lực phân chia đồ đạc.",
+        "plot_vi": "Chiếc ba lô nặng kéo trĩu vai Bình trong chuyến dã ngoại. Bình và Khoa chia bớt đồ sang túi kia để đưa trọng lượng về mức một kilôgam vừa vặn.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Quai túi kéo trĩu cả vai tôi. Tôi nhấc chiếc túi du lịch đặt lên bàn cân rồi bảo Khoa: \"This bag weighs two kilograms.\" Túi này nặng hai kilôgam.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce kilogram in model sentence 1 stating current heavy weight.",
+            "scene_id": "s1",
+            "title_vi": "Chiếc túi nặng trĩu vai",
+            "visual_en": "Eye-level medium shot. CH01 shoulders a bulging dark-grey travel bag with a slight slouch, then sets it onto a luggage hanging scale while CH02 watches."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Illustrate transferring items between bags to lower bag weight.",
+                "quote": "lấy bớt hai chai nước chia sang ba lô của mình",
+                "visual_en": "Same-camera view: CH02 lifts two water bottles out of the grey bag and sets them securely inside the blue backpack beside it."
+              }
+            ],
+            "narration": "Khoa vội đỡ lấy quai xách rồi mở ngăn kéo, lấy bớt hai chai nước chia sang ba lô của mình cho hai vai bớt nặng nề.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Depict concrete action to reduce weight and balance load.",
+            "scene_id": "s2",
+            "title_vi": "San sẻ bớt đồ sang túi bạn",
+            "visual_en": "Medium shot. CH02 unzips the main compartment of the grey bag on the table and transfers two reusable water bottles into an open blue backpack."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi nhấc chiếc túi vải đặt lại lên đĩa cân lò xo trước mặt để kiểm tra: \"Is it one kilogram now?\" Bây giờ nó nặng một kilôgam chưa Khoa?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 questioning whether target weight of one kilogram is reached.",
+            "scene_id": "s3",
+            "title_vi": "Cân lại lần thứ hai",
+            "visual_en": "Close-up on the dial scale. CH01 hooks the grey bag handle back onto the scale hook while CH02 leans in to observe the needle."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "scale prompt card",
+                "placement": "center overlay",
+                "text": "Is it one ___ now?"
+              }
+            ],
+            "narration": "Kim cân dừng lại ngay sát vạch chia ở giữa mặt số. Hãy hỏi bạn xem chiếc túi đã nặng một kilôgam chưa bằng một câu tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt learner to retrieve model sentence 2 with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Kiểm tra đúng một kilôgam",
+            "visual_en": "Medium shot. The scale needle trembles right near the target marker. CH01 turns to the viewer, gesturing to a prompt card displaying the sentence frame."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Is it one kilogram now?\" Đúng tròn một kilôgam rồi, hai chiếc túi chia đều sức nặng giúp hai đứa nhẹ bước trên đường đèo dốc.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver full correct answer and wrap up with an earned relief payoff.",
+            "scene_id": "s5",
+            "title_vi": "Nhẹ bước lên đường dã ngoại",
+            "visual_en": "Wide eye-level shot. CH01 and CH02 both wear their comfortably balanced backpacks, walking side by side briskly along an outdoor trail."
+          }
+        ],
+        "title": "Chia lại ba lô hai kilôgam"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Minh",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Lâm",
+            "outfit_en": "One plain sunny-yellow short-sleeve top."
+          }
+        ],
+        "job": "vocab-litre-script-465",
+        "learner_outcome_vi": "Người học hiểu và sử dụng từ litre để chỉ dung tích chất lỏng trong hoạt động hàng ngày.",
+        "opening_function_vi": "Bắt đầu bằng nhu cầu tưới vườn giữa trưa nắng gắt.",
+        "plot_vi": "Minh và Lâm tưới rau trong ngày nắng gắt nhưng không biết chiếc bình nhựa chứa được bao nhiêu. Cả hai đong đủ hai lít nước để tưới mát cả luống rau xanh.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Mấy luống rau héo rũ vì khát. Tôi cầm chiếc bình nhựa rỗng giơ lên hỏi Lâm: \"Does this bottle hold one litre?\" Bình này chứa được một lít không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 1 testing capacity of a bottle using litre.",
+            "scene_id": "s1",
+            "title_vi": "Bình nước trong góc vườn",
+            "visual_en": "Medium shot. CH01 stands beside garden vegetable beds with drooping green leaves, lifting a transparent plastic jug to examine it and speaking to CH02."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Lâm nhìn kỹ vạch đo trên thân bình rồi bảo mấy luống rau cần nhiều hơn: \"We need two litres of water.\" Chúng ta cần hai lít nước.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 stating required amount in litres.",
+            "scene_id": "s2",
+            "title_vi": "Đo lượng nước cần tưới",
+            "visual_en": "Close-up. CH02 points at the measurement ridges embossed on the jug while speaking clearly, indicating that more water is needed."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Show the container filling up to maximum liquid capacity.",
+                "quote": "dòng nước mát lành chảy đầy tràn miệng bình",
+                "visual_en": "Same-camera view: the clear water rises from the bottom of the jug up to the top brim under the active water stream."
+              }
+            ],
+            "narration": "Tôi xách bình ra góc vườn vặn vòi, nhìn dòng nước mát lành chảy đầy tràn miệng bình để sẵn sàng mang tưới cho vườn rau đang khô hạn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show the physical action of gathering the water to satisfy the narrative need.",
+            "scene_id": "s3",
+            "title_vi": "Hứng nước đầy miệng bình",
+            "visual_en": "Medium shot at the garden tap. CH01 holds the jug steady beneath the brass outdoor faucet as clean water rushes in."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "watering note banner",
+                "placement": "center overlay",
+                "text": "We need two ___ of water."
+              }
+            ],
+            "narration": "Lâm đã chuẩn bị sẵn các khay ươm cây bên luống cải. Bạn hãy nhắc Lâm lượng nước hai đứa cần chuẩn bị bằng một câu tiếng Anh xem nào.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt learner to produce the target sentence with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Cùng nhắc lượng nước tưới",
+            "visual_en": "Medium shot. CH02 stands near seedling trays holding a small watering rose. A prompt card floats near center showing the incomplete stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"We need two litres of water.\" Có đủ hai lít nước mát rồi, từng luống cải xanh mướt ngẩng đầu đón ánh nắng ban mai thật tươi tắn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "State the full answer and show the revitalized vegetable garden payoff.",
+            "scene_id": "s5",
+            "title_vi": "Vườn rau xanh mướt hồi sinh",
+            "visual_en": "Wide eye-level shot. CH01 and CH02 water the garden together; the green vegetable leaves stand tall, refreshed and glistening with droplets."
+          }
+        ],
+        "title": "Hai lít nước cho luống rau"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "An",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Mai",
+            "outfit_en": "One plain lavender short-sleeve top."
+          }
+        ],
+        "job": "vocab-circle-script-466",
+        "learner_outcome_vi": "Người học nhận biết và diễn đạt danh từ circle để chỉ hình tròn trong hoạt động tạo hình.",
+        "opening_function_vi": "Bắt đầu bằng sự thiếu hụt chi tiết tròn cho mô hình đồng hồ thủ công.",
+        "plot_vi": "An làm một chiếc đồng hồ thủ công nhưng mặt số bìa cứng chưa có hình dáng chuẩn. Mai hỗ trợ An vẽ com-pa và cắt rời một hình tròn vừa khít.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Miếng bìa này thiếu mặt đồng hồ. Tôi dùng com-pa quay một vòng tròn khép kín trên giấy màu: \"I drew a circle.\" Tôi đã vẽ một hình tròn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce circle in model sentence 1 as an outcome of drawing a round shape.",
+            "scene_id": "s1",
+            "title_vi": "Vẽ đường cong bằng com-pa",
+            "visual_en": "Eye-level medium shot. CH01 sits at a wooden craft table holding a compass tool, rotating it smoothly on yellow construction paper as CH02 looks on."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Đường nét tròn xoe liền mạch không hề gợn mép, tôi đưa kéo cho Mai nhờ cậy: \"Cut out this circle.\" Cắt hình tròn này ra giúp mình nhé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 requesting the partner to cut the circle.",
+            "scene_id": "s2",
+            "title_vi": "Nhờ bạn cắt theo nét vẽ",
+            "visual_en": "Medium close-up. CH01 hands a pair of safety craft scissors across the desk to CH02, pointing down at the crisp circular pencil outline on paper."
+          },
+          {
+            "character_ids": [
+              "CH02"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Show the physical transformation from a flat sheet into an isolated round shape.",
+                "quote": "cẩn thận lượn mũi kéo theo nét bút chì",
+                "visual_en": "Same-camera view: the scissors blade glides along the graphite circle line, separating the circular piece from the outer scrap sheet."
+              }
+            ],
+            "narration": "Mai cẩn thận lượn mũi kéo theo nét bút chì, giữ cho mép giấy tròn đều tăm tắp mà không bị phạm vào khoảng trống bên trong mặt số.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Highlight the careful manual process of following the round contour.",
+            "scene_id": "s3",
+            "title_vi": "Lượn kéo theo viền cong",
+            "visual_en": "Close-up on hands and paper. CH02 holds the scissors steady, trimming smoothly along the pencil curvature without leaving any jagged corners."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "craft instruction tag",
+                "placement": "center overlay",
+                "text": "Cut out this ___."
+              }
+            ],
+            "narration": "Mảnh giấy vàng đã vẽ sẵn nét tròn đang nằm ngay ngắn trên bàn. Bạn hãy nhờ Mai cắt hình tròn ấy ra bằng một câu tiếng Anh xem nào.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Invite learner retrieval of the target instruction with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Nhắc bạn cắt đúng hình",
+            "visual_en": "Medium shot. CH02 holds the craft scissors ready beside the paper. CH01 gestures toward a prompt card displaying the fill-in stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Cut out this circle.\" Mảnh bìa hình tròn vừa khít khung gỗ, chiếc đồng hồ thủ công gắn kim quay tích tắc trông thật đáng yêu.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide the full model sentence and conclude with the completed craft clock payoff.",
+            "scene_id": "s5",
+            "title_vi": "Mặt đồng hồ tròn xoe",
+            "visual_en": "Medium shot. CH01 and CH02 proudly hold up the finished cardboard clock: the round dial sits perfectly centered with two neat paper hands pointing to the hour."
+          }
+        ],
+        "title": "Cắt hình tròn cho mặt đồng hồ"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Nam",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Việt",
+            "outfit_en": "One plain red-orange short-sleeve top."
+          }
+        ],
+        "job": "vocab-way-script-467",
+        "learner_outcome_vi": "Người học hiểu và sử dụng từ way mang nghĩa lối đi, con đường để hỏi và chỉ hướng.",
+        "opening_function_vi": "Mở đầu bằng ngã rẽ gây phân vân trước giờ tàu khởi hành.",
+        "plot_vi": "Nam và Việt đứng trước ngã rẽ vắng người trong lúc sắp đến giờ tàu chạy. Cả hai xem bản đồ để xác định đúng con đường dẫn tới sân ga.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hai ngã rẽ làm tôi bối rối. Chuyến tàu sắp khởi hành, tôi cuống quýt hỏi Việt: \"Which way is the station?\" Nhà ga đi đường nào vậy Việt?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 1 asking for the route to a specific place.",
+            "scene_id": "s1",
+            "title_vi": "Đứng trước hai ngã rẽ",
+            "visual_en": "Eye-level medium wide shot. CH01 and CH02 stand at a fork in a stone pathway. CH01 checks a wristwatch with an anxious gesture and speaks to CH02."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Connect the map route directly to the physical pathway in front of them.",
+                "quote": "chỉ vào con đường lát gạch bên trái",
+                "visual_en": "Same-camera view: CH02's finger taps the left route marked on the map, then gestures straight toward the actual left pathway ahead."
+              }
+            ],
+            "narration": "Việt mở tấm bản đồ cầm tay ra đối chiếu, chỉ vào con đường lát gạch bên trái: \"This is the way to the station.\" Đây là đường tới nhà ga.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 confirming the correct route.",
+            "scene_id": "s2",
+            "title_vi": "Xác định trên bản đồ",
+            "visual_en": "Medium shot. CH02 unfolds a pocket tourist map and points a finger decisively toward the brick-paved left route."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Tôi nhìn theo lối đi rợp bóng mát phía trước, thấy biển chỉ dẫn bằng sắt gắn hình đầu tàu lấp ló sau những rặng thông xanh rì.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Reinforce visual verification of the route path.",
+            "scene_id": "s3",
+            "title_vi": "Thấy cột mốc chỉ dẫn",
+            "visual_en": "Point-of-view perspective looking down the left path. A small cast-iron pole sign with a miniature train silhouette is visible beside green pine branches."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "route inquiry board",
+                "placement": "center overlay",
+                "text": "Which ___ is the station?"
+              }
+            ],
+            "narration": "Đứng trước ngã ba đường chưa rõ hướng đi, bạn hãy hỏi Việt lối đi tới ga xe lửa bằng một câu tiếng Anh xem nào.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt full-sentence question retrieval with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Hỏi lại đúng đường đi",
+            "visual_en": "Medium shot. CH01 stands beside CH02 at the fork, looking toward the viewer with an inviting gesture as a prompt banner appears."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Which way is the station?\" Đi đúng con đường bên trái, hai đứa thảnh thơi bước chân lên toa tàu vừa kịp giờ khởi hành êm ái.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide the full correct answer and show the timely arrival payoff.",
+            "scene_id": "s5",
+            "title_vi": "Kịp chuyến tàu khởi hành",
+            "visual_en": "Wide shot at the train platform. CH01 and CH02 step comfortably onto the passenger carriage doorway just as the train bell dings softly."
+          }
+        ],
+        "title": "Hỏi lối đi tới nhà ga"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Huy",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Tuấn",
+            "outfit_en": "One plain emerald-green short-sleeve top."
+          }
+        ],
+        "job": "vocab-right-script-468",
+        "learner_outcome_vi": "Người học nắm vững danh từ right trong cụm on the right để diễn đạt vị trí phía bên phải.",
+        "opening_function_vi": "Bắt đầu bằng sự hoang mang giữa sảnh lớn nhiều dãy cửa hàng.",
+        "plot_vi": "Huy và Tuấn cùng tìm tiệm sách và cửa thoát hiểm trong sảnh thương mại rộng lớn. Cả hai thống nhất dùng mốc phía bên phải để không bị nhầm phương hướng.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Sảnh lớn này nhiều lối rẽ quá. Tuấn đứng cùng hướng nhìn với tôi rồi giơ tay chỉ: \"The shop is on the right.\" Cửa hàng ở phía bên phải.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 1 using right as a direction noun in on the right.",
+            "scene_id": "s1",
+            "title_vi": "Nhìn theo cùng một hướng",
+            "visual_en": "Eye-level medium wide shot. In a spacious minimalist lobby, CH01 and CH02 stand shoulder-to-shoulder facing the same direction. CH02 extends an arm pointing toward the right wing."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi thấy tấm biển hiệu bán sách sáng đèn ở dãy hành lang bên phải, liền hỏi tiếp: \"Is the exit on the right too?\" Lối ra cũng ở phía bên phải à?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 confirming if the exit is also on the right.",
+            "scene_id": "s2",
+            "title_vi": "Hỏi về vị trí lối ra",
+            "visual_en": "Medium shot. CH01 gazes along the right-hand wall at an illuminated bookstore sign, then turns slightly to ask CH02 about the nearby glass doors."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Demonstrate that both landmarks share the exact same right-hand side of the corridor.",
+                "quote": "chỉ cánh cửa kính thoát hiểm nằm ngay cạnh gian hàng sách",
+                "visual_en": "Same-camera view: CH02's outstretched hand shifts focus from the bookstore window to the clear glass emergency door right beside it."
+              }
+            ],
+            "narration": "Tuấn mỉm cười gật đầu, chỉ cánh cửa kính thoát hiểm nằm ngay cạnh gian hàng sách, giúp cả hai yên tâm chọn đồ mà không sợ lạc đường.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm spatial orientation so both characters stay oriented.",
+            "scene_id": "s3",
+            "title_vi": "Xác nhận mốc cửa kính",
+            "visual_en": "Medium shot. CH02 points at a clear double-glass exit doorway positioned directly adjacent to the bookstore entrance on the right side."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "directory guidance card",
+                "placement": "center overlay",
+                "text": "The shop is on the ___."
+              }
+            ],
+            "narration": "Người bạn đang ngó nghiêng tìm vị trí tiệm sách trong sảnh. Bạn hãy nói cho bạn biết cửa hàng nằm ở phía bên phải bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt full-sentence retrieval of the location statement with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Chỉ phía bên phải cho bạn",
+            "visual_en": "Medium shot. CH01 gestures toward the right corridor while presenting an onscreen prompt card displaying the fill-in sentence."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"The shop is on the right.\" Đi về phía bên phải, hai đứa nhanh chóng mua được tập sổ tay ưng ý rồi thong thả rảo bước ra cửa.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Give full correct answer and close with a smooth shopping payoff.",
+            "scene_id": "s5",
+            "title_vi": "Mua được sách và ra về",
+            "visual_en": "Eye-level medium shot. CH01 and CH02 walk side by side holding a newly purchased notebook paper bag, exiting effortlessly through the right-side glass doors."
+          }
+        ],
+        "title": "Cửa hàng ở phía bên phải"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Bảo",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Đức",
+            "outfit_en": "One plain royal-blue short-sleeve top."
+          }
+        ],
+        "job": "vocab-login-script-469",
+        "learner_outcome_vi": "Người học phân biệt và sử dụng đúng động từ hai từ log in trong giao tiếp thao tác máy tính.",
+        "opening_function_vi": "Mở đầu bằng màn hình báo khóa tài khoản gây trở ngại nộp bài tập.",
+        "plot_vi": "Bảo loay hoay không nộp được đồ án vì tài khoản lớp học trực tuyến bị khóa. Đức hướng dẫn Bảo thực hiện bước đăng nhập trước khi gửi bài.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Depict the blocked attempt to access the learning system.",
+                "quote": "gõ tài khoản mà trang web không mở",
+                "visual_en": "Same-camera view: CH01 taps keys on the keyboard, but the red padlock icon on the computer monitor pulses without opening."
+              }
+            ],
+            "narration": "Màn hình hiện ô khóa màu đỏ. Tôi gõ tài khoản mà trang web không mở, liền bảo Đức: \"I can't log in.\" Tôi không đăng nhập được.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce verb log in in model sentence 1 expressing inability to access.",
+            "scene_id": "s1",
+            "title_vi": "Vướng ô khóa trên màn hình",
+            "visual_en": "Eye-level medium shot. CH01 sits in front of a desktop monitor displaying a simple webpage with a red lock icon, typing on the keyboard and speaking to CH02."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Đức nhìn kỹ dòng nhắc nhở màu xanh bên dưới thanh menu rồi chỉ tay: \"Please log in first.\" Xin hãy đăng nhập trước nhé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 instructing the essential prerequisite action.",
+            "scene_id": "s2",
+            "title_vi": "Nhắc nhở làm bước đầu tiên",
+            "visual_en": "Medium close-up. CH02 leans over the desk, pointing a finger to the top right corner of the screen where an authentication banner appears."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Tôi phát hiện mình gõ nhầm tên lớp nhóm, liền nhập lại thông tin tài khoản cá nhân từng ký tự thật cẩn thận để hệ thống duyệt qua.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show corrective action solving the friction.",
+            "scene_id": "s3",
+            "title_vi": "Điền lại thông tin chính xác",
+            "visual_en": "Close-up on CH01's hands typing steadily on the keyboard; the input field on the screen now displays green checkmarks beside the username box."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "login prompt dialog",
+                "placement": "center overlay",
+                "text": "Please ___ first."
+              }
+            ],
+            "narration": "Đức đứng bên cạnh nhắc tôi hoàn thành bước truy cập tài khoản trước lúc nộp bài. Hãy nhắc bạn bằng một câu tiếng Anh xem nào.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt retrieval of the polite instruction using verb log in with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Nhắc bạn đăng nhập trước",
+            "visual_en": "Medium shot. CH02 stands encouragingly by the desk. A prompt modal appears over the monitor showing the incomplete sentence stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Please log in first.\" Đăng nhập tài khoản thành công, thư mục bài làm mở ra và tệp đồ án của hai đứa được gửi đi đúng hạn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide full answer and deliver timely submission payoff.",
+            "scene_id": "s5",
+            "title_vi": "Nộp bài thành công",
+            "visual_en": "Medium shot. The monitor screen displays a bright green checkmark over the words 'Uploaded'. CH01 and CH02 give a high-five in relief."
+          }
+        ],
+        "title": "Đăng nhập nộp bài tập"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Khánh",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Vinh",
+            "outfit_en": "One plain plum-purple short-sleeve top."
+          }
+        ],
+        "job": "vocab-play-script-470",
+        "learner_outcome_vi": "Người học áp dụng từ play để nói về khả năng chơi một loại nhạc cụ cụ thể.",
+        "opening_function_vi": "Bắt đầu trong phòng tập vắng lặng cần chia vai nhạc cụ.",
+        "plot_vi": "Khánh và Vinh chuẩn bị tiết mục âm nhạc cho lớp. Khánh phụ trách chơi piano và hỏi Vinh khả năng chơi đàn ghi-ta để tạo nên bản song tấu mộc mạc.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Phòng hòa nhạc chỉ còn hai đứa. Tôi ngồi xuống trước hàng phím đen trắng của cây đàn dương cầm: \"I play the piano.\" Tôi chơi đàn piano.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce play (musical instrument) in model sentence 1.",
+            "scene_id": "s1",
+            "title_vi": "Ngồi vào đàn piano",
+            "visual_en": "Eye-level medium shot. CH01 sits on a wooden bench in front of an upright piano, resting fingers gently on the ivory keys while speaking to CH02."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Thấy cây đàn sáu dây bằng gỗ dựng ở góc sân khấu, tôi quay sang hỏi Vinh: \"Can you play the guitar?\" Bạn có chơi đàn ghi-ta được không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 inquiring about playing the guitar.",
+            "scene_id": "s2",
+            "title_vi": "Hỏi bạn về cây đàn ghi-ta",
+            "visual_en": "Medium shot. CH01 gestures toward an acoustic wooden guitar resting on a floor stand near the edge of the stage, turning to ask CH02."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Show the visual synchrony of two distinct instruments playing together.",
+                "quote": "gảy thử một hợp âm ấm áp hòa cùng tiếng dương cầm",
+                "visual_en": "Same-camera view: CH02's hand plucks a clear acoustic chord on the guitar while CH01 presses three adjacent piano keys in unison."
+              }
+            ],
+            "narration": "Vinh vui vẻ gảy thử một hợp âm ấm áp hòa cùng tiếng dương cầm ngân vang, tạo nên giai điệu mộc mạc làm sáng bừng cả căn phòng.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Depict the immediate trial and harmonious musical cooperation.",
+            "scene_id": "s3",
+            "title_vi": "Thử phím đàn và dây đàn",
+            "visual_en": "Medium shot. CH02 holds the acoustic guitar across lap, strumming the nylon strings with fingers as CH01 plays gentle chords on the piano keys."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "music recruitment card",
+                "placement": "center overlay",
+                "text": "Can you ___ the guitar?"
+              }
+            ],
+            "narration": "Buổi biểu diễn văn nghệ đang cần một người đệm đàn ghi-ta. Bạn hãy hỏi Vinh khả năng chơi nhạc cụ này bằng một câu tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt learner retrieval of the target question with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Thử hỏi khả năng đệm đàn",
+            "visual_en": "Medium shot. CH02 stands holding the guitar ready, smiling. CH01 points toward a musical banner showing the sentence stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Can you play the guitar?\" Tiếng đàn ghi-ta hòa cùng phím piano rộn rã, bản song tấu mộc mạc nhận được tràng pháo tay giòn giã của cả lớp.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Give full correct answer and deliver a joyous musical performance payoff.",
+            "scene_id": "s5",
+            "title_vi": "Bản song tấu rộn rã",
+            "visual_en": "Wide shot on stage. CH01 plays the piano and CH02 strums the guitar in joyful sync, with musical note symbols floating in the air."
+          }
+        ],
+        "title": "Chơi đàn cho buổi hòa nhạc"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tùng",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Phong",
+            "outfit_en": "One plain teal-blue short-sleeve top."
+          }
+        ],
+        "job": "vocab-loud-script-471",
+        "learner_outcome_vi": "Người học hiểu và sử dụng tính từ loud để mô tả mức độ âm thanh lớn, to trong đời sống.",
+        "opening_function_vi": "Bắt đầu bằng sự khó chịu do âm lượng loa bật quá to làm rung bàn học.",
+        "plot_vi": "Tùng và Phong đang ôn bài nhưng tiếng loa nghe nhạc quá to làm rung cả mặt bàn. Phong vặn nhỏ núm loa để cả hai trò chuyện rõ ràng hơn.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tiếng loa rung cả mặt bàn. Tiếng nhạc dội vào tai buốt rát, tôi phải ghé sát tai Phong nói to: \"The music is loud.\" Nhạc đang to quá.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce loud in model sentence 1 describing excessive acoustic sound.",
+            "scene_id": "s1",
+            "title_vi": "Âm thanh dội buốt tai",
+            "visual_en": "Eye-level medium shot. On a study desk, a black tabletop speaker vibrates with visible motion marks. CH01 leans toward CH02, cupping a hand near mouth to speak."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Show the direct manual adjustment reducing sound intensity.",
+                "quote": "vặn núm âm lượng xuống một nấc nhỏ",
+                "visual_en": "Same-camera view: CH02's fingers turn the rotary dial knob down, causing the speaker vibration lines to shrink significantly."
+              }
+            ],
+            "narration": "Phong vội vặn núm âm lượng xuống một nấc nhỏ rồi quay đầu lại hỏi tôi: \"Is this too loud?\" Âm thanh thế này có quá to không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 asking whether the sound level is still excessively loud.",
+            "scene_id": "s2",
+            "title_vi": "Vặn nhỏ núm xoay âm lượng",
+            "visual_en": "Medium close-up. CH02 rotates the circular volume knob on the front face of the speaker counter-clockwise, looking back at CH01 to check."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Màng loa rung nhẹ dần, giai điệu trở nên êm dịu giúp hai đứa có thể ngồi trò chuyện ôn bài mà không phải hét to từng câu nữa.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Depict the positive change in auditory environment.",
+            "scene_id": "s3",
+            "title_vi": "Màng loa rung nhẹ lại",
+            "visual_en": "Medium shot. Both CH01 and CH02 sit back comfortably on their chairs beside the desk, notebooks open, chatting at a normal speaking distance."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "audio check badge",
+                "placement": "center overlay",
+                "text": "Is this too ___?"
+              }
+            ],
+            "narration": "Phong chỉnh lại núm xoay âm lượng thêm một chút rồi muốn hỏi ý kiến bạn. Bạn hãy hỏi mức loa có quá to không bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt retrieval of the inquiry with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Hỏi mức âm lượng thích hợp",
+            "visual_en": "Medium shot. CH02 rests a finger lightly on the volume knob, waiting. CH01 gestures toward a sound check card hovering in the center."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Is this too loud?\" Mức âm lượng dịu êm vừa vặn cho căn phòng, hai đứa thoải mái trao đổi bài học mà tiếng nhạc nền vẫn du dương.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide full correct answer and deliver comfortable study atmosphere payoff.",
+            "scene_id": "s5",
+            "title_vi": "Giai điệu êm ái vừa vặn",
+            "visual_en": "Medium wide shot. CH01 and CH02 comfortably discuss an open textbook together; subtle smooth sound curves float softly from the quiet speaker."
+          }
+        ],
+        "title": "Chỉnh bớt tiếng loa quá to"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Canonical mascot, minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Quân",
+            "outfit_en": "Exactly one single pale-blue #8CCFE8 short-sleeve torso."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head, dark navy outline, two solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Hải",
+            "outfit_en": "One plain chocolate-brown short-sleeve top."
+          }
+        ],
+        "job": "vocab-draw-script-472",
+        "learner_outcome_vi": "Người học sử dụng thành thạo động từ draw mang nghĩa vẽ đường nét bằng bút trên giấy.",
+        "opening_function_vi": "Mở đầu bằng sự bối rối khi chỉ đường bằng lời nói miệng.",
+        "plot_vi": "Quân và Hải hẹn nhau đến điểm sinh hoạt mới nhưng chỉ đường bằng lời rất khó hình dung. Quân rút bút vẽ một sơ đồ trực quan giúp cả hai không bị lạc.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chỉ đường bằng lời thật khó hiểu. Tôi mở quyển sổ tay rồi rút cây bút mực ra bảo Hải: \"I can draw a map.\" Tôi có thể vẽ một sơ đồ.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce draw (with pen/lines) in model sentence 1.",
+            "scene_id": "s1",
+            "title_vi": "Rút bút vẽ sơ đồ",
+            "visual_en": "Eye-level medium shot. CH01 sits at a desk with an open blank notebook, taking out a black felt-tip pen and speaking confidently to CH02."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hải mỉm cười gật đầu, đưa ngón tay trỏ chấm vào khoảng giấy trắng: \"Draw the park here.\" Hãy vẽ công viên ở ngay góc này nhé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce model sentence 2 instructing where to draw the park.",
+            "scene_id": "s2",
+            "title_vi": "Chỉ điểm hẹn trên giấy",
+            "visual_en": "Medium close-up. CH02 leans forward over the notebook, tapping a finger at the upper right corner of the blank page."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "extra_visual_states": [
+              {
+                "purpose_en": "Illustrate concrete visual lines forming an easily readable map.",
+                "quote": "từng nét mực đen vạch rõ ngã tư và bãi cỏ xanh",
+                "visual_en": "Same-camera view: the felt-tip pen draws crisp black lines connecting a crossroad directly to a bordered green square."
+              }
+            ],
+            "narration": "Dưới ngòi bút mực sắc nét, từng nét mực đen vạch rõ ngã tư và bãi cỏ xanh, biến lối đi quanh co thành hình vẽ trực quan rõ ràng.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Depict the physical process of drawing lines and landmarks on paper.",
+            "scene_id": "s3",
+            "title_vi": "Từng nét mực hiện rõ",
+            "visual_en": "Close-up on notebook page. CH01's hand guides the pen steadily, forming two intersecting street lines and a neat square tree icon for the park."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "custom_visible_text": [
+              {
+                "object": "sketch offer card",
+                "placement": "center overlay",
+                "text": "I can ___ a map."
+              }
+            ],
+            "narration": "Hải đang băn khoăn tìm đường đến điểm hẹn mới. Bạn hãy đề nghị vẽ một tấm sơ đồ cho bạn bằng một câu tiếng Anh xem nào.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt learner retrieval of the target verb draw with 4 seconds quiet hold.",
+            "scene_id": "s4",
+            "title_vi": "Đề nghị vẽ sơ đồ",
+            "visual_en": "Medium shot. CH02 looks down thoughtfully at the blank paper. CH01 holds the pen poised, pointing toward a prompt card with the missing verb."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"I can draw a map.\" Nhìn vào tấm sơ đồ vẽ tay chi tiết, Hải nhận ra ngay hướng rẽ và hai đứa tự tin cất bước lên đường.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide full correct answer and deliver a confident journey payoff.",
+            "scene_id": "s5",
+            "title_vi": "Tự tin bước lên đường",
+            "visual_en": "Medium wide shot outdoors. CH02 holds the folded hand-drawn map sheet, nodding with a clear smile as CH01 and CH02 walk briskly forward together."
+          }
+        ],
+        "title": "Vẽ sơ đồ chỉ đường đi"
+      }
+    ]
+  },
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "episodes": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    },
+    "required": [
+      "episodes"
+    ]
+  },
+  "usage": {
+    "input_tokens": 123977,
+    "output_tokens": 62608,
+    "thinking_tokens": 39476,
+    "cache_read_tokens": 0,
+    "total_tokens": 186585
+  }
+}

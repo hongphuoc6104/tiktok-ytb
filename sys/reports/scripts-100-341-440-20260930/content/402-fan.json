@@ -1,0 +1,460 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "835ac2f42f021dd54482e739f15552f1638acdecb2628200d2b5374c38f1306e",
+  "topic": "Học từ vựng tiếng Anh FAN (danh từ: người hâm mộ) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FAN",
+    "Làm rõ nghĩa lõi \"người hâm mộ\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FAN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FAN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành trong tình huống",
+      "appearance": "Adult friend or companion. Minimal flat ink style. Maintain age, gender, clothing and identity across all scenes; use mustard top and only explicitly needed accessory. Distinct from canonical mascot.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cổ vũ từ ngoài sân — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot sits beside enthusiastic adult supporter waving plain team scarf at small football stand.",
+      "setting": "Ghế xem bóng và khăn đội.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Chưa bước xuống sân mà người bạn đã reo khản giọng! Fan ở đây là người hâm mộ. Bạn ngồi xem bóng cùng người ấy, thấy chiếc khăn đội được giơ lên mỗi lần cầu thủ quen xuất hiện.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fan",
+          "meaning": "người hâm mộ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot sits beside enthusiastic adult supporter waving plain team scarf at small football stand. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sits beside enthusiastic adult supporter waving plain team scarf at small football stand.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "fan",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Chưa bước xuống sân mà người bạn đã reo khản giọng! Fan ở đây là người hâm mộ. Bạn ngồi xem bóng cùng người ấy, thấy chiếc khăn đội được giơ lên mỗi lần cầu thủ quen xuất hiện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Cổ vũ từ ngoài sân — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Mascot asks supporter friend between plays, scarf lowered onto lap.",
+      "setting": "Ghế xem bóng và khăn đội.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn hỏi: \"Are you a football fan?\" Bạn có phải người hâm mộ bóng đá không? A fan gọi người yêu thích và theo dõi; người bạn gật đầu rồi kể mình thường xem cùng gia đình.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fan",
+          "meaning": "người hâm mộ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot asks supporter friend between plays, scarf lowered onto lap. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot asks supporter friend between plays, scarf lowered onto lap.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Are you a football fan?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Are you a football fan?\" Bạn có phải người hâm mộ bóng đá không? A fan gọi người yêu thích và theo dõi; người bạn gật đầu rồi kể mình thường xem cùng gia đình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Cổ vũ từ ngoài sân — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Friend points to preferred plain-bib team on field while mascot follows gaze.",
+      "setting": "Ghế xem bóng và khăn đội.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người ấy nói: \"I'm a big fan of this team.\" Tôi rất hâm mộ đội này. A big fan nói mức yêu thích lớn, không tả vóc dáng; bạn nhìn đội đang chơi để biết người bạn cổ vũ bên nào.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fan",
+          "meaning": "người hâm mộ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Friend points to preferred plain-bib team on field while mascot follows gaze. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend points to preferred plain-bib team on field while mascot follows gaze.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "I'm a big fan of this team.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Người ấy nói: \"I'm a big fan of this team.\" Tôi rất hâm mộ đội này. A big fan nói mức yêu thích lớn, không tả vóc dáng; bạn nhìn đội đang chơi để biết người bạn cổ vũ bên nào.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Cổ vũ từ ngoài sân — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold spectators and full model sentence, team visible in background without logos.",
+      "setting": "Ghế xem bóng và khăn đội.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn muốn nói mình rất hâm mộ đội đang xem. Nói lại \"I'm a big fan of this team.\" như lời giới thiệu sở thích, không cần hét to như lúc cổ vũ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fan",
+          "meaning": "người hâm mộ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold spectators and full model sentence, team visible in background without logos. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold spectators and full model sentence, team visible in background without logos.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "I'm a big fan of this team.",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói mình rất hâm mộ đội đang xem. Nói lại \"I'm a big fan of this team.\" như lời giới thiệu sở thích, không cần hét to như lúc cổ vũ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 6
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Cổ vũ từ ngoài sân — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot and supporter friend watch play resume, scarf held neatly on lap.",
+      "setting": "Ghế xem bóng và khăn đội.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"I'm a big fan of this team.\" Tôi rất hâm mộ đội này. Bạn đã hiểu chiếc khăn có ý nghĩa gì với người bạn. Hai người lại hướng mắt về sân khi bóng được đưa vào cuộc.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fan",
+          "meaning": "người hâm mộ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and supporter friend watch play resume, scarf held neatly on lap. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and supporter friend watch play resume, scarf held neatly on lap.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "I'm a big fan of this team.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm a big fan of this team.\" Tôi rất hâm mộ đội này. Bạn đã hiểu chiếc khăn có ý nghĩa gì với người bạn. Hai người lại hướng mắt về sân khi bóng được đưa vào cuộc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chưa bước xuống sân mà người bạn đã reo khản giọng! Fan ở đây là người hâm mộ. Bạn ngồi xem bóng cùng người ấy, thấy chiếc khăn đội được giơ lên mỗi lần cầu thủ quen xuất hiện."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chưa bước xuống sân mà người bạn đã reo khản giọng! Fan ở đây là người hâm mộ. Bạn ngồi xem bóng cùng người ấy, thấy chiếc khăn đội được giơ lên mỗi lần cầu thủ quen xuất hiện."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Are you a football fan?\" Bạn có phải người hâm mộ bóng đá không? A fan gọi người yêu thích và theo dõi; người bạn gật đầu rồi kể mình thường xem cùng gia đình."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Are you a football fan?\" Bạn có phải người hâm mộ bóng đá không? A fan gọi người yêu thích và theo dõi; người bạn gật đầu rồi kể mình thường xem cùng gia đình."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người ấy nói: \"I'm a big fan of this team.\" Tôi rất hâm mộ đội này. A big fan nói mức yêu thích lớn, không tả vóc dáng; bạn nhìn đội đang chơi để biết người bạn cổ vũ bên nào."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn nói mình rất hâm mộ đội đang xem. Nói lại \"I'm a big fan of this team.\" như lời giới thiệu sở thích, không cần hét to như lúc cổ vũ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I'm a big fan of this team.\" Tôi rất hâm mộ đội này. Bạn đã hiểu chiếc khăn có ý nghĩa gì với người bạn. Hai người lại hướng mắt về sân khi bóng được đưa vào cuộc."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Thấy cổ vũ → hỏi sở thích → nhận fan → cùng xem.. Next visible event: Mascot asks supporter friend between plays, scarf lowered onto lap."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy cổ vũ → hỏi sở thích → nhận fan → cùng xem.. Next visible event: Friend points to preferred plain-bib team on field while mascot follows gaze."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy cổ vũ → hỏi sở thích → nhận fan → cùng xem.. Next visible event: Hold spectators and full model sentence, team visible in background without logos."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy cổ vũ → hỏi sở thích → nhận fan → cùng xem.. Next visible event: Mascot and supporter friend watch play resume, scarf held neatly on lap."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy cổ vũ → hỏi sở thích → nhận fan → cùng xem.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

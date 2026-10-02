@@ -1,0 +1,45 @@
+{
+  "job": "vocab-body-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 60,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn muốn chụp tư thế cả người, nhưng khung hình mới có đầu và vai. Body nghĩa là cơ thể. Trong bài này, mình cần thấy người từ đầu đến chân, nên phải lùi máy ra một chút.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of body and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nghe câu: \"Move your body.\" Hãy cử động cơ thể. Đây là một chỉ dẫn đơn giản trong hoạt động vận động. Body nói về cơ thể của bạn, chứ không chỉ riêng một bàn tay hay một bàn chân.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of body and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Sau lượt chơi, bạn có thể nói: \"My body needs a rest.\" Cơ thể tôi cần nghỉ một chút. Sau lượt chơi, bạn ngồi xuống một chút rồi mới tính hoạt động tiếp theo. Câu nói cho người đi cùng biết bạn muốn dừng để nghỉ.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of body and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Người hướng dẫn nhắc bạn cử động cả cơ thể. Hãy hoàn thành \"Move your...\" Nhìn hình từ đầu đến chân để nhớ từ nhé.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of body and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"Move your body.\" Từ còn thiếu là body. Máy ảnh đã lùi đủ xa, đôi chân cũng vào khung. Bạn nhìn được toàn bộ tư thế, thay vì phải đoán phần còn lại ngoài bức hình.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of body and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

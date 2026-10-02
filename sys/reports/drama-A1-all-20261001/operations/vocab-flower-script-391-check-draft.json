@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 42,
+            "seconds": 12.87,
+            "min": 9.65,
+            "max": 16.08
+          },
+          {
+            "scene_id": "SC02",
+            "units": 32,
+            "seconds": 9.79,
+            "min": 7.34,
+            "max": 12.24
+          },
+          {
+            "scene_id": "SC03",
+            "units": 32,
+            "seconds": 9.64,
+            "min": 7.23,
+            "max": 12.05
+          },
+          {
+            "scene_id": "SC04",
+            "units": 32,
+            "seconds": 13.64,
+            "min": 10.23,
+            "max": 17.05
+          },
+          {
+            "scene_id": "SC05",
+            "units": 41,
+            "seconds": 12.59,
+            "min": 9.44,
+            "max": 15.74
+          }
+        ],
+        "min": 43.89,
+        "max": 73.16,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "21060",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi hái tặng cô bạn hàng xóm bông hoa cúc trắng nhỏ để khích lệ trước giờ bạn đi phỏng vấn xin việc. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

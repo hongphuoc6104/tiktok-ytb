@@ -1,0 +1,637 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "cb3e897cd81059555ae69a683fcf8edf89589a4fd1952d809cc531625866aef7",
+  "topic": "Học từ vựng tiếng Anh EACH (từ hạn định: mỗi) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 80,
+    "max_seconds": 110
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ EACH",
+    "Làm rõ nghĩa lõi \"mỗi\" (từ hạn định) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng EACH, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại EACH, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người tham gia hoặc nhân vật bổ trợ",
+      "appearance": "Adult additional participant or professional explicitly named in the scene. Preserve the same role and identity; do not add a person when the scene does not call for one. Minimal flat ink style and ordinary adult proportions.",
+      "outfit": "Single plain lavender top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Phát cả xấp chưa có nghĩa là từng người đã nhận — Nhịp 1",
+      "purpose": "Establish the need and one selected meaning promptly.",
+      "action": "Mascot and three adult learners at craft table, one learner has no paper while stack sits centrally.",
+      "setting": "Lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Xấp giấy đặt giữa bàn, một người vẫn chưa có tờ để làm! Each là mỗi, nhìn từng người hoặc từng món riêng trong nhóm. \"Consider the members one by one.\" Bạn cần kiểm việc nhận giấy từng người, không chỉ nói vật liệu đã tới phòng.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "each",
+          "meaning": "mỗi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and three adult learners at craft table, one learner has no paper while stack sits centrally. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and three adult learners at craft table, one learner has no paper while stack sits centrally.",
+          "reason": "Establish the need and one selected meaning promptly.",
+          "visible_text": [
+            {
+              "text": "each",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the need and one selected meaning promptly.",
+          "anchor": {
+            "vi": {
+              "quote": "Xấp giấy đặt giữa bàn, một người vẫn chưa có tờ để làm! Each là mỗi, nhìn từng người hoặc từng món riêng trong nhóm. \"Consider the members one by one.\" Bạn cần kiểm việc nhận giấy từng người, không chỉ nói vật liệu đã tới phòng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Phát cả xấp chưa có nghĩa là từng người đã nhận — Nhịp 2",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "action": "Companion gives one sheet to each visible participant, sequence focuses individual recipients.",
+      "setting": "Lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nhắc: \"Each person needs a sheet of paper.\" Mỗi người cần một tờ giấy. \"Check one person at a time.\" Người bạn phát từng tờ, nhìn từng chỗ ngồi để không bỏ sót người đang chờ cuối bàn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "each",
+          "meaning": "mỗi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Companion gives one sheet to each visible participant, sequence focuses individual recipients. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion gives one sheet to each visible participant, sequence focuses individual recipients.",
+          "reason": "Use the first model at the point where the speaker needs it.",
+          "visible_text": [
+            {
+              "text": "Each person needs a sheet of paper.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first model at the point where the speaker needs it.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhắc: \"Each person needs a sheet of paper.\" Mỗi người cần một tờ giấy. \"Check one person at a time.\" Người bạn phát từng tờ, nhìn từng chỗ ngồi để không bỏ sót người đang chờ cuối bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Phát cả xấp chưa có nghĩa là từng người đã nhận — Nhịp 3",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "action": "Mascot checks individual places with one sheet each, all identities and supplies stable.",
+      "setting": "Lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Sau each trong mẫu là person ở số ít. \"The sentence focuses on an individual member each time.\" Tuy nhóm có nhiều người, ta vẫn nói each person needs. Không đổi person thành people chỉ vì tổng số người trong phòng nhiều hơn một.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "each",
+          "meaning": "mỗi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot checks individual places with one sheet each, all identities and supplies stable. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot checks individual places with one sheet each, all identities and supplies stable.",
+          "reason": "Show the condition or contrast that makes this usage matter.",
+          "visible_text": [
+            {
+              "text": "each",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the condition or contrast that makes this usage matter.",
+          "anchor": {
+            "vi": {
+              "quote": "Sau each trong mẫu là person ở số ít. \"The sentence focuses on an individual member each time.\" Tuy nhóm có nhiều người, ta vẫn nói each person needs. Không đổi person thành people chỉ vì tổng số người trong phòng nhiều hơn một.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Phát cả xấp chưa có nghĩa là từng người đã nhận — Nhịp 4",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "action": "Mascot and companion inspect two craft tables one by one, add missing box to second.",
+      "setting": "Lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn kiểm tiếp: \"Each table has a box.\" Mỗi bàn có một chiếc hộp. \"Every individual table is checked separately here.\" Nhóm nhìn lần lượt các bàn trong căn phòng để thấy bàn nào chưa có hộp vật liệu; chiếc thiếu được bổ sung.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "each",
+          "meaning": "mỗi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot and companion inspect two craft tables one by one, add missing box to second. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion inspect two craft tables one by one, add missing box to second.",
+          "reason": "Use the second model to advance or compare within the same story.",
+          "visible_text": [
+            {
+              "text": "Each table has a box.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to advance or compare within the same story.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kiểm tiếp: \"Each table has a box.\" Mỗi bàn có một chiếc hộp. \"Every individual table is checked separately here.\" Nhóm nhìn lần lượt các bàn trong căn phòng để thấy bàn nào chưa có hộp vật liệu; chiếc thiếu được bổ sung.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Phát cả xấp chưa có nghĩa là từng người đã nhận — Nhịp 5",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "action": "Close view of separate person and table supplies, no extra grammatical target labels.",
+      "setting": "Lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Each trong bài đứng trước danh từ, không luyện kiểu đứng một mình thay danh từ. \"Keep the noun after each in these models.\" Cả hai mẫu giúp làm một lượt kiểm cụ thể; người học không chỉ nhớ bản dịch mà biết chú ý từng đơn vị trong nhóm.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "each",
+          "meaning": "mỗi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Close view of separate person and table supplies, no extra grammatical target labels. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close view of separate person and table supplies, no extra grammatical target labels.",
+          "reason": "Clarify a common trap through this example without expanding to another meaning.",
+          "visible_text": [
+            {
+              "text": "each",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Each trong bài đứng trước danh từ, không luyện kiểu đứng một mình thay danh từ. \"Keep the noun after each in these models.\" Cả hai mẫu giúp làm một lượt kiểm cụ thể; người học không chỉ nhớ bản dịch mà biết chú ý từng đơn vị trong nhóm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Phát cả xấp chưa có nghĩa là từng người đã nhận — Lượt thực hành",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "action": "Hold individually supplied group and full model through response.",
+      "setting": "Lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn nói mỗi người cần một tờ giấy. \"Use singular person after each.\" Hãy nói: \"Each person needs a sheet of paper.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "each",
+          "meaning": "mỗi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Hold individually supplied group and full model through response. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold individually supplied group and full model through response.",
+          "reason": "Invite a supported learner response; hold before the feedback.",
+          "visible_text": [
+            {
+              "text": "Use singular person after each.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "Each person needs a sheet of paper.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Invite a supported learner response; hold before the feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói mỗi người cần một tờ giấy. \"Use singular person after each.\" Hãy nói: \"Each person needs a sheet of paper.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC07",
+      "title": "Phát cả xấp chưa có nghĩa là từng người đã nhận — Phản hồi và kết quả",
+      "purpose": "Provide the response and complete the opening promise.",
+      "action": "All same participants begin craft work with individual sheets and table supply boxes.",
+      "setting": "Lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Each person needs a sheet of paper.\" Mỗi người cần một tờ giấy. \"No one at this table is left without a sheet.\" Người cuối bàn đã nhận giấy, hộp ở các bàn cũng có đủ trong chuyện. Each giúp nhóm chuyển từ nhìn đồ chung sang kiểm từng người, từng chỗ cần chuẩn bị.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "each",
+          "meaning": "mỗi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC07_I1",
+          "description": "All same participants begin craft work with individual sheets and table supply boxes. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "All same participants begin craft work with individual sheets and table supply boxes.",
+          "reason": "Provide the response and complete the opening promise.",
+          "visible_text": [
+            {
+              "text": "Each person needs a sheet of paper.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC07_B1",
+          "image_id": "SC07_I1",
+          "purpose": "Provide the response and complete the opening promise.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Each person needs a sheet of paper.\" Mỗi người cần một tờ giấy. \"No one at this table is left without a sheet.\" Người cuối bàn đã nhận giấy, hộp ở các bàn cũng có đủ trong chuyện. Each giúp nhóm chuyển từ nhìn đồ chung sang kiểm từng người, từng chỗ cần chuẩn bị.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Xấp giấy đặt giữa bàn, một người vẫn chưa có tờ để làm! Each là mỗi, nhìn từng người hoặc từng món riêng trong nhóm. \"Consider the members one by one.\" Bạn cần kiểm việc nhận giấy từng người, không chỉ nói vật liệu đã tới phòng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Xấp giấy đặt giữa bàn, một người vẫn chưa có tờ để làm! Each là mỗi, nhìn từng người hoặc từng món riêng trong nhóm. \"Consider the members one by one.\" Bạn cần kiểm việc nhận giấy từng người, không chỉ nói vật liệu đã tới phòng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nhắc: \"Each person needs a sheet of paper.\" Mỗi người cần một tờ giấy. \"Check one person at a time.\" Người bạn phát từng tờ, nhìn từng chỗ ngồi để không bỏ sót người đang chờ cuối bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nhắc: \"Each person needs a sheet of paper.\" Mỗi người cần một tờ giấy. \"Check one person at a time.\" Người bạn phát từng tờ, nhìn từng chỗ ngồi để không bỏ sót người đang chờ cuối bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Sau each trong mẫu là person ở số ít. \"The sentence focuses on an individual member each time.\" Tuy nhóm có nhiều người, ta vẫn nói each person needs. Không đổi person thành people chỉ vì tổng số người trong phòng nhiều hơn một."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn kiểm tiếp: \"Each table has a box.\" Mỗi bàn có một chiếc hộp. \"Every individual table is checked separately here.\" Nhóm nhìn lần lượt các bàn trong căn phòng để thấy bàn nào chưa có hộp vật liệu; chiếc thiếu được bổ sung."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Each trong bài đứng trước danh từ, không luyện kiểu đứng một mình thay danh từ. \"Keep the noun after each in these models.\" Cả hai mẫu giúp làm một lượt kiểm cụ thể; người học không chỉ nhớ bản dịch mà biết chú ý từng đơn vị trong nhóm."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "Bạn muốn nói mỗi người cần một tờ giấy. \"Use singular person after each.\" Hãy nói: \"Each person needs a sheet of paper.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC07",
+      "quote": "\"Each person needs a sheet of paper.\" Mỗi người cần một tờ giấy. \"No one at this table is left without a sheet.\" Người cuối bàn đã nhận giấy, hộp ở các bàn cũng có đủ trong chuyện. Each giúp nhóm chuyển từ nhìn đồ chung sang kiểm từng người, từng chỗ cần chuẩn bị."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the need and one selected meaning promptly.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Có vật liệu chung → phát từng người → kiểm mỗi bàn → mọi lượt nhận đủ.. Next event: Companion gives one sheet to each visible participant, sequence focuses individual recipients."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Có vật liệu chung → phát từng người → kiểm mỗi bàn → mọi lượt nhận đủ.. Next event: Mascot checks individual places with one sheet each, all identities and supplies stable."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Có vật liệu chung → phát từng người → kiểm mỗi bàn → mọi lượt nhận đủ.. Next event: Mascot and companion inspect two craft tables one by one, add missing box to second."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Có vật liệu chung → phát từng người → kiểm mỗi bàn → mọi lượt nhận đủ.. Next event: Close view of separate person and table supplies, no extra grammatical target labels."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Có vật liệu chung → phát từng người → kiểm mỗi bàn → mọi lượt nhận đủ.. Next event: Hold individually supplied group and full model through response."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có vật liệu chung → phát từng người → kiểm mỗi bàn → mọi lượt nhận đủ.. Next event: All same participants begin craft work with individual sheets and table supply boxes."
+    },
+    {
+      "scene_id": "SC07",
+      "purpose": "Provide the response and complete the opening promise.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có vật liệu chung → phát từng người → kiểm mỗi bàn → mọi lượt nhận đủ.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

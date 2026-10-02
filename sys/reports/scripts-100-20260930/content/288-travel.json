@@ -1,0 +1,495 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "51bdb0aa202635cca5b82d279c93d71584c039b58b1ae6cbf41fad1c8e6a04e1",
+  "topic": "Học từ vựng tiếng Anh TRAVEL (động từ: đi xa, du hành) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TRAVEL",
+    "Làm rõ nghĩa lõi \"đi xa, du hành\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TRAVEL, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TRAVEL, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Nhân vật đồng hành chính",
+      "appearance": "Adult friend or companion. Minimal flat ink style; consistent adult face, age, gender and identity across all scenes. Distinct from canonical mascot. Plain mustard top; only explicitly required work outerwear, helmet or life jacket.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc túi sẵn cho chuyến xa — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot stands beside packed bag and simple intercity route map with bus and rail icons.",
+      "setting": "Bản đồ tuyến đường và túi du lịch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Túi đã xếp, mình đi bằng gì? Travel là đi xa hoặc du hành. Bạn chuẩn bị tới một thành phố khác thăm người thân, đang cân nhắc cách đi cùng người bạn đồng hành.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "travel",
+          "meaning": "đi xa, du hành"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot stands beside packed bag and simple intercity route map with bus and rail icons. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stands beside packed bag and simple intercity route map with bus and rail icons.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "travel",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Túi đã xếp, mình đi bằng gì? Travel là đi xa hoặc du hành. Bạn chuẩn bị tới một thành phố khác thăm người thân, đang cân nhắc cách đi cùng người bạn đồng hành.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chiếc túi sẵn cho chuyến xa — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Mascot traces rail route between two city icons while friend listens.",
+      "setting": "Bản đồ tuyến đường và túi du lịch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn đề xuất: \"We can travel by train.\" Chúng ta có thể đi bằng tàu hỏa. By train cho biết phương tiện; travel vẫn là việc di chuyển xa trong chuyến này.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "travel",
+          "meaning": "đi xa, du hành"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot traces rail route between two city icons while friend listens. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot traces rail route between two city icons while friend listens.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "We can travel by train.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đề xuất: \"We can travel by train.\" Chúng ta có thể đi bằng tàu hỏa. By train cho biết phương tiện; travel vẫn là việc di chuyển xa trong chuyến này.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chiếc túi sẵn cho chuyến xa — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Friend points at coach icon on same route map; mascot compares travel options.",
+      "setting": "Bản đồ tuyến đường và túi du lịch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn hỏi: \"Do you travel by bus?\" Bạn có đi xa bằng xe buýt không? Bạn nhìn thời gian và hành lý của cả hai rồi bàn tiếp, thay vì chọn chỉ vì xe có màu đẹp.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "travel",
+          "meaning": "đi xa, du hành"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Friend points at coach icon on same route map; mascot compares travel options. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend points at coach icon on same route map; mascot compares travel options.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "Do you travel by bus?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn hỏi: \"Do you travel by bus?\" Bạn có đi xa bằng xe buýt không? Bạn nhìn thời gian và hành lý của cả hai rồi bàn tiếp, thay vì chọn chỉ vì xe có màu đẹp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chiếc túi sẵn cho chuyến xa — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold rail icon, packed bag and partial sentence without complete answer.",
+      "setting": "Bản đồ tuyến đường và túi du lịch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn muốn đề xuất đi bằng tàu hỏa. Dùng mẫu \"We can travel by...\" với train rồi nói cả câu. Đó là lời đề xuất cho chuyến đi của hai người.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "travel",
+          "meaning": "đi xa, du hành"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold rail icon, packed bag and partial sentence without complete answer. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold rail icon, packed bag and partial sentence without complete answer.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "We can travel by...",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn đề xuất đi bằng tàu hỏa. Dùng mẫu \"We can travel by...\" với train rồi nói cả câu. Đó là lời đề xuất cho chuyến đi của hai người.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 6
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chiếc túi sẵn cho chuyến xa — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot and friend pick up travel bags beside chosen rail route.",
+      "setting": "Bản đồ tuyến đường và túi du lịch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"We can travel by train.\" Hai người có thể đi bằng tàu hỏa. Sau khi thống nhất, bạn mới cầm túi ra cửa. Tấm bản đồ đã biến thành một kế hoạch cụ thể.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "travel",
+          "meaning": "đi xa, du hành"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Two packed bags on floor beside chosen rail route map, travelers stand nearby. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two packed bags on floor beside chosen rail route map, travelers stand nearby.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "We can travel by train.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC05_I2",
+          "description": "Both travelers hold the same bags and face doorway; map remains on table. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC05_I1",
+          "preserve": "Preserve base scene camera, background, character identities, single mascot torso and exact clothing, prop positions and visible text; change only the specified state.",
+          "change": "Both travelers hold the same bags and face doorway; map remains on table.",
+          "reason": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "visible_text": [
+            {
+              "text": "We can travel by train.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"We can travel by train.\" Hai người có thể đi bằng tàu hỏa. Sau khi thống nhất, bạn mới cầm túi ra cửa. Tấm bản đồ đã biến thành một kế hoạch cụ thể.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC05_B2",
+          "image_id": "SC05_I2",
+          "purpose": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "anchor": {
+            "vi": {
+              "quote": "bạn mới cầm túi ra cửa",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Túi đã xếp, mình đi bằng gì? Travel là đi xa hoặc du hành. Bạn chuẩn bị tới một thành phố khác thăm người thân, đang cân nhắc cách đi cùng người bạn đồng hành."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Túi đã xếp, mình đi bằng gì? Travel là đi xa hoặc du hành. Bạn chuẩn bị tới một thành phố khác thăm người thân, đang cân nhắc cách đi cùng người bạn đồng hành."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn đề xuất: \"We can travel by train.\" Chúng ta có thể đi bằng tàu hỏa. By train cho biết phương tiện; travel vẫn là việc di chuyển xa trong chuyến này."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn đề xuất: \"We can travel by train.\" Chúng ta có thể đi bằng tàu hỏa. By train cho biết phương tiện; travel vẫn là việc di chuyển xa trong chuyến này."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn hỏi: \"Do you travel by bus?\" Bạn có đi xa bằng xe buýt không? Bạn nhìn thời gian và hành lý của cả hai rồi bàn tiếp, thay vì chọn chỉ vì xe có màu đẹp."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn đề xuất đi bằng tàu hỏa. Dùng mẫu \"We can travel by...\" với train rồi nói cả câu. Đó là lời đề xuất cho chuyến đi của hai người."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"We can travel by train.\" Hai người có thể đi bằng tàu hỏa. Sau khi thống nhất, bạn mới cầm túi ra cửa. Tấm bản đồ đã biến thành một kế hoạch cụ thể."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Muốn thăm người thân → chọn phương tiện → thống nhất → lên đường.. Next visible event: Mascot traces rail route between two city icons while friend listens."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn thăm người thân → chọn phương tiện → thống nhất → lên đường.. Next visible event: Friend points at coach icon on same route map; mascot compares travel options."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn thăm người thân → chọn phương tiện → thống nhất → lên đường.. Next visible event: Hold rail icon, packed bag and partial sentence without complete answer."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn thăm người thân → chọn phương tiện → thống nhất → lên đường.. Next visible event: Mascot and friend pick up travel bags beside chosen rail route."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn thăm người thân → chọn phương tiện → thống nhất → lên đường.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

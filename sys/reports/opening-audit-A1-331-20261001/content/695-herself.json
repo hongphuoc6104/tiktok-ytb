@@ -1,0 +1,573 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "d2d3d59b76e0959d36b265d5ecc88dacf28d6c3453ade37ceeb98276a78fc4b3",
+  "topic": "Học từ vựng tiếng Anh HERSELF (đại từ: chính cô ấy) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ HERSELF",
+    "Làm rõ nghĩa lõi \"chính cô ấy\" (đại từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng HERSELF, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại HERSELF, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult companion who listens or helps with the current task. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người tham gia hoặc nhân vật bổ trợ",
+      "appearance": "Fictional adult female Lan, identified participant or recipient, keep her identity throughout. Minimal flat ink style and ordinary adult proportions.",
+      "outfit": "Single plain lavender top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chị Lan làm phần bánh cho nhóm — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Female Lan presents self-made food box to mascot and companion, no health claims or real personal data.",
+      "setting": "Bàn buổi gặp hư cấu, chị Lan và hộp bánh.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Chị Lan tự làm món này mang tới! Herself trong mẫu này nhấn chính cô ấy. \"The same female person did the task here.\" Bạn và người bạn dự buổi gặp hư cấu, nghe người làm món kể về phần của mình.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "herself",
+          "meaning": "chính cô ấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Female Lan presents self-made food box to mascot and companion, no health claims or real personal data. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Female Lan presents self-made food box to mascot and companion, no health claims or real personal data.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "herself",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Chị Lan tự làm món này mang tới! Herself trong mẫu này nhấn chính cô ấy. \"The same female person did the task here.\" Bạn và người bạn dự buổi gặp hư cấu, nghe người làm món kể về phần của mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chị Lan làm phần bánh cho nhóm — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Mascot identifies fictional Lan as stated maker, box kept closed for presentation.",
+      "setting": "Bàn buổi gặp hư cấu, chị Lan và hộp bánh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nhắc lại: \"She made it herself.\" Cô ấy tự làm nó. \"She is Lan in this story.\" Người bạn nghe đã được giới thiệu với chị Lan, nên biết mình đang hỏi về đúng người và món đã được nhắc.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "herself",
+          "meaning": "chính cô ấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot identifies fictional Lan as stated maker, box kept closed for presentation. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot identifies fictional Lan as stated maker, box kept closed for presentation.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "She made it herself.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhắc lại: \"She made it herself.\" Cô ấy tự làm nó. \"She is Lan in this story.\" Người bạn nghe đã được giới thiệu với chị Lan, nên biết mình đang hỏi về đúng người và món đã được nhắc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chị Lan làm phần bánh cho nhóm — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Lan explains stated contribution while mascot and companion listen, no inference solely from decoration.",
+      "setting": "Bàn buổi gặp hư cấu, chị Lan và hộp bánh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Herself quay về she trong lời nhấn này. \"It is about that person's own action.\" Hai người nghe việc chị Lan kể, không suy ai đã làm từ kiểu hộp hoặc màu khăn trên bàn; những chi tiết ấy không thay cho lời của người làm.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "herself",
+          "meaning": "chính cô ấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Lan explains stated contribution while mascot and companion listen, no inference solely from decoration. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Lan explains stated contribution while mascot and companion listen, no inference solely from decoration.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "herself",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Herself quay về she trong lời nhấn này. \"It is about that person's own action.\" Hai người nghe việc chị Lan kể, không suy ai đã làm từ kiểu hộp hoặc màu khăn trên bàn; những chi tiết ấy không thay cho lời của người làm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chị Lan làm phần bánh cho nhóm — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Fictional Lan places self-packed cake box at shared gathering table.",
+      "setting": "Bàn buổi gặp hư cấu, chị Lan và hộp bánh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn kể thêm: \"She packed it herself.\" Cô ấy tự gói nó. \"The box was part of her preparation too.\" Chị Lan đặt món vào chỗ của buổi gặp hư cấu, để nhóm chia phần sau khi đã biết điều mình muốn hỏi.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "herself",
+          "meaning": "chính cô ấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Fictional Lan places self-packed cake box at shared gathering table. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Fictional Lan places self-packed cake box at shared gathering table.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "She packed it herself.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể thêm: \"She packed it herself.\" Cô ấy tự gói nó. \"The box was part of her preparation too.\" Chị Lan đặt món vào chỗ của buổi gặp hư cấu, để nhóm chia phần sau khi đã biết điều mình muốn hỏi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chị Lan làm phần bánh cho nhóm — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold fictional female maker and full learner sentence.",
+      "setting": "Bàn buổi gặp hư cấu, chị Lan và hộp bánh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn đóng vai người kể chị Lan tự chuẩn bị món. \"Say who did this work.\" Hãy nói: \"She made it herself.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "herself",
+          "meaning": "chính cô ấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold fictional female maker and full learner sentence. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold fictional female maker and full learner sentence.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "She made it herself.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đóng vai người kể chị Lan tự chuẩn bị món. \"Say who did this work.\" Hãy nói: \"She made it herself.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Chị Lan làm phần bánh cho nhóm — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Mascot and companion thank fictional Lan and prepare shared gathering table.",
+      "setting": "Bàn buổi gặp hư cấu, chị Lan và hộp bánh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"She made it herself.\" Cô ấy tự làm nó. \"The people have heard the maker's story.\" Buổi gặp hư cấu đã có phần chị Lan mang tới và lời kể rõ về người thực hiện, nhóm tiếp tục trò chuyện.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "herself",
+          "meaning": "chính cô ấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Mascot and companion thank fictional Lan and prepare shared gathering table. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion thank fictional Lan and prepare shared gathering table.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "She made it herself.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"She made it herself.\" Cô ấy tự làm nó. \"The people have heard the maker's story.\" Buổi gặp hư cấu đã có phần chị Lan mang tới và lời kể rõ về người thực hiện, nhóm tiếp tục trò chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chị Lan tự làm món này mang tới! Herself trong mẫu này nhấn chính cô ấy. \"The same female person did the task here.\" Bạn và người bạn dự buổi gặp hư cấu, nghe người làm món kể về phần của mình."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chị Lan tự làm món này mang tới! Herself trong mẫu này nhấn chính cô ấy. \"The same female person did the task here.\" Bạn và người bạn dự buổi gặp hư cấu, nghe người làm món kể về phần của mình."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nhắc lại: \"She made it herself.\" Cô ấy tự làm nó. \"She is Lan in this story.\" Người bạn nghe đã được giới thiệu với chị Lan, nên biết mình đang hỏi về đúng người và món đã được nhắc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nhắc lại: \"She made it herself.\" Cô ấy tự làm nó. \"She is Lan in this story.\" Người bạn nghe đã được giới thiệu với chị Lan, nên biết mình đang hỏi về đúng người và món đã được nhắc."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Herself quay về she trong lời nhấn này. \"It is about that person's own action.\" Hai người nghe việc chị Lan kể, không suy ai đã làm từ kiểu hộp hoặc màu khăn trên bàn; những chi tiết ấy không thay cho lời của người làm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn kể thêm: \"She packed it herself.\" Cô ấy tự gói nó. \"The box was part of her preparation too.\" Chị Lan đặt món vào chỗ của buổi gặp hư cấu, để nhóm chia phần sau khi đã biết điều mình muốn hỏi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn đóng vai người kể chị Lan tự chuẩn bị món. \"Say who did this work.\" Hãy nói: \"She made it herself.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"She made it herself.\" Cô ấy tự làm nó. \"The people have heard the maker's story.\" Buổi gặp hư cấu đã có phần chị Lan mang tới và lời kể rõ về người thực hiện, nhóm tiếp tục trò chuyện."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Female Lan presents self-made food box to mascot and companion, no health claims or real personal data. Continue with the existing connected model: Mascot identifies fictional Lan as stated maker, box kept closed for presentation."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Có bánh → hỏi ai làm → kể Lan tự làm → tự gói.. Next event: Lan explains stated contribution while mascot and companion listen, no inference solely from decoration."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Có bánh → hỏi ai làm → kể Lan tự làm → tự gói.. Next event: Fictional Lan places self-packed cake box at shared gathering table."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Có bánh → hỏi ai làm → kể Lan tự làm → tự gói.. Next event: Hold fictional female maker and full learner sentence."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có bánh → hỏi ai làm → kể Lan tự làm → tự gói.. Next event: Mascot and companion thank fictional Lan and prepare shared gathering table."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có bánh → hỏi ai làm → kể Lan tự làm → tự gói.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18469",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Chị Lan tự làm món này mang tới!”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ],
+  "open_questions": []
+}

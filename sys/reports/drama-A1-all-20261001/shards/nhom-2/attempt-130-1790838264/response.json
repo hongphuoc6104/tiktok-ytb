@@ -1,0 +1,982 @@
+{
+  "conversation_id": "ec61c095-e829-4678-a509-cf2140c48132",
+  "status": "SUCCESS",
+  "response": "{\"episodes\":[{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"An\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with a small dark ponytail, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Linh\",\"outfit_en\":\"Single plain pale-green short-sleeve shirt.\"}],\"job\":\"vocab-open-script-583\",\"learner_outcome_vi\":\"Hiểu đúng nghĩa tính từ của open chỉ trạng thái đang mở cửa và nói được câu hoàn chỉnh xác nhận trạng thái này.\",\"opening_function_vi\":\"Đến trước cửa tiệm sách khi cửa chỉ mới hé một nửa, lập tức làm nảy sinh nhu cầu xác nhận tiệm đã mở cửa hay chưa.\",\"plot_vi\":\"An và Linh đến tiệm sách sớm để mua giấy màu làm áp phích; hai đứa đợi tiệm chuyển sang trạng thái mở cửa rồi mới bước vào.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Trời vừa hửng sáng, phố xá còn vắng. Tôi cùng Linh đạp xe đến tiệm sách để mua giấy màu. Thấy cửa kéo chỉ hé một nửa, tôi hỏi: \\\"Is the shop open?\\\" Tiệm có đang mở cửa không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Open with a quiet early morning moment and introduce the first English model asking about the shop's open state.\",\"scene_id\":\"SC01\",\"title_vi\":\"Trước giờ mở cửa\",\"visual_en\":\"Early morning sidewalk outside a small bookstore. The storefront shutter is half raised with lights dim inside. The pale-blue mascot stands holding a bicycle handlebar beside the ponytail friend, looking at the half-open doorway.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Linh nhìn đồng hồ rồi lắc đầu. Biển giờ mở cửa ghi tám giờ, mà giờ mới bảy giờ rưỡi. Bác chủ tiệm đang quét dọn bên trong, bảo hai đứa ngồi đợi vài phút.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Clarify the state of waiting before business hours and support the intended descriptive meaning.\",\"scene_id\":\"SC02\",\"title_vi\":\"Khoảng chờ trước tiệm\",\"visual_en\":\"Same storefront framing. The ponytail friend points toward a small hanging board near the door while the mascot waits on the steps. Inside the shop window, a shopkeeper figure sweeps the clean floor.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Đúng tám giờ, bác chủ đẩy rộng cửa kính và bật đèn sáng trưng. Bác vẫy tay gọi hai đứa vào. Tôi mừng rỡ bảo Linh: \\\"The shop is open now.\\\" Tiệm đang mở cửa rồi đấy.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the second English model describing the active open state as a concrete change of state.\",\"scene_id\":\"SC03\",\"title_vi\":\"Cửa mở đón khách\",\"visual_en\":\"Same storefront angle. The glass door is now fully swung wide, interior warm lights fully on. The shopkeeper waves from inside. The mascot smiles and gestures toward the illuminated interior.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Nhìn thấy tiệm bắt đầu đón khách, bạn nói giúp tôi câu tiệm đang mở cửa rồi bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Invite full-sentence retrieval of the target adjective model; hold quietly for learner response.\",\"scene_id\":\"SC04\",\"stem\":\"The shop is ___ now.\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Medium two-shot outside the brightly lit shop door. Mascot turns slightly toward viewer inviting the response, while the friend stands ready with her canvas tote bag. Upper safe area reserved for sentence stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"The shop is open now.\\\" Hai đứa bước vào trong chọn giấy và bút màu, kịp hoàn thành tấm áp phích cho buổi hội thảo chiều nay.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide the correct English answer and conclude with the achieved personal goal.\",\"scene_id\":\"SC05\",\"title_vi\":\"Vào trong tiệm\",\"visual_en\":\"Interior of the bright stationery shop. Mascot and friend stand beside a display of colored paper sheets, holding a fresh pack of drawing materials with genuine relief.\"}],\"title\":\"Cửa tiệm lúc bình minh\"},{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Nam\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with a small ink cap, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Bình\",\"outfit_en\":\"Single plain muted-yellow short-sleeve shirt.\"}],\"job\":\"vocab-closed-script-584\",\"learner_outcome_vi\":\"Hiểu đúng nghĩa tính từ closed chỉ trạng thái đóng cửa và nói được câu tiếng Anh thông báo tiệm đóng cửa.\",\"opening_function_vi\":\"Sự cố xẹp lốp xe bất ngờ trên đường tạo ra nhu cầu cấp bách kiểm tra xem tiệm sửa xe có đang đóng cửa hay không.\",\"plot_vi\":\"Nam dắt xe đạp thủng lốp đến tiệm sửa xe quen nhưng gặp cửa cuốn đóng kín; hai bạn xác nhận tiệm nghỉ và chuyển sang tự vá xe tại nhà.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bánh xe bỗng xẹp lép giữa đường. Tôi dắt xe chạy vội đến tiệm sửa xe đầu ngõ. Thấy cửa cuốn hạ sát đất, tôi hỏi: \\\"Is the shop closed?\\\" Tiệm có đóng cửa không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Open with a sudden obstacle and introduce the first English model asking about the closed state.\",\"scene_id\":\"SC01\",\"title_vi\":\"Sự cố thủng lốp\",\"visual_en\":\"Street corner by a small bicycle repair stall. The steel shutter door is rolled completely down to the ground. Mascot in pale-blue holds a flat-tired bicycle beside his capped friend, inspecting the shut door.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bình chỉ tay vào tấm biển gỗ nhỏ treo bên hông cửa. Tiệm nghỉ ngày Chủ nhật để chủ quán về quê. Tôi đứng nhìn chiếc lốp bẹp dí, thở dài vì chưa biết làm sao.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Clarify the closed condition and establish the shared difficulty between the two companions.\",\"scene_id\":\"SC02\",\"title_vi\":\"Tấm biển treo ngoài\",\"visual_en\":\"Closer view at the repair stall entrance. The capped friend points to a plain wooden sign hanging by the padlock. Mascot crouches slightly, touching the deflated rear tire with a pensive posture.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Không thể đợi đến sáng mai, tôi quay sang bảo Bình: \\\"The shop is closed today.\\\" Hôm nay tiệm đóng cửa rồi. Chúng mình đành tìm cách khác thôi.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver the second English model as a realistic decision to stop waiting and take alternative action.\",\"scene_id\":\"SC03\",\"title_vi\":\"Đổi phương án\",\"visual_en\":\"Same street corner. Mascot stands up, turns away from the locked shutter, and gestures toward the street ahead with determination. The capped friend nods in agreement.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Muốn thông báo hôm nay tiệm đóng cửa với bạn mình, bạn nói cả câu bằng tiếng Anh giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Invite learner retrieval of the target adjective sentence; hold quietly.\",\"scene_id\":\"SC04\",\"stem\":\"The shop is ___ today.\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Two companions beside the bicycle facing front; mascot gestures toward viewer while holding the handlebar. Upper area kept clean for the sentence stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"The shop is closed today.\\\" Hai đứa dắt xe về góc sân nhà tôi, cùng mở hộp đồ nghề cũ của bố để tự vá lốp xe.\",\"practice_pause_seconds\":0,\"purpose_en\":\"State the full answer and show the practical resolution of the problem.\",\"scene_id\":\"SC05\",\"title_vi\":\"Tự vá lốp xe\",\"visual_en\":\"A cozy home porch corner. The bicycle is inverted on the ground; mascot and capped friend work together with hand pump and tire levers from an old metal toolbox.\"}],\"title\":\"Tiệm sửa xe ngày Chủ nhật\"},{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Huy\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with two small side hair clips, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Mai\",\"outfit_en\":\"Single plain pale-orange short-sleeve shirt.\"}],\"job\":\"vocab-beautiful-script-585\",\"learner_outcome_vi\":\"Sử dụng chính xác tính từ beautiful để miêu tả vẻ đẹp của một tác phẩm và nói được câu khen ngợi hoàn chỉnh.\",\"opening_function_vi\":\"Một bức vẽ phong cảnh vừa khô nét mực tạo nên khoảnh khắc rung động thị giác trực tiếp dẫn thẳng đến nhận xét đẹp.\",\"plot_vi\":\"Huy ngắm bức tranh phong cảnh Mai vừa vẽ xong ở phòng mỹ thuật; lời khen chân thành giúp Mai tự tin nộp tranh tham dự triển lãm.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bức vẽ trên bàn vừa khô mực. Mai vừa hoàn thành bức phong cảnh sau ba ngày tỉ mẩn. Tôi ngắm nhìn vệt nắng trên giấy rồi thốt lên: \\\"This painting is beautiful.\\\" Bức tranh này đẹp thật đấy.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Open with immediate aesthetic appreciation and introduce the first English model.\",\"scene_id\":\"SC01\",\"title_vi\":\"Bức vẽ vừa xong\",\"visual_en\":\"Art room table beside a tall window with sunlight streaming in. On the easel rests a painted landscape on paper. Mascot in pale-blue leans forward admiring the artwork beside the friend in pale-orange.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Màu xanh của lũy tre và vệt nắng chiều hiện lên rất sinh động. Mai bảo bạn ấy từng lo mình pha màu không chuẩn. Tôi kéo ghế lại gần để ngắm kỹ hơn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deepen the meaning of beautiful by focusing on specific artistic qualities and the creator's doubt.\",\"scene_id\":\"SC02\",\"title_vi\":\"Nỗi băn khoăn của bạn\",\"visual_en\":\"Closer framing of the easel. Mascot points gently to the painted riverbank and tree strokes. The friend holds a wooden palette and a clean brush, listening with modest uncertainty.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Thấy bạn còn ngập ngừng chưa dám nộp cho thầy giáo, tôi động viên: \\\"It is a beautiful painting.\\\" Nó là một bức tranh đẹp mà. Bạn hãy tự tin lên nhé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Present the second English model to encourage the friend and reinforce the core descriptive meaning.\",\"scene_id\":\"SC03\",\"title_vi\":\"Lời động viên\",\"visual_en\":\"Same art room setting. Mascot offers an encouraging hand gesture toward the painting, looking warmly at the friend who begins to smile.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Để khen bức tranh này đẹp bằng tiếng Anh với bạn mình, bạn nói cả câu giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Invite learner retrieval of the first target sentence; pause quietly.\",\"scene_id\":\"SC04\",\"stem\":\"This painting is ___.\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Mascot turns to camera with a warm gesture toward the painting on the easel. Upper zone kept clear for the prompt stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"This painting is beautiful.\\\" Mai mỉm cười lau vệt màu trên má, cẩn thận mang tranh đặt lên giá trưng bày giữa lớp.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm the full answer and show the satisfying resolution as the painting takes center stage.\",\"scene_id\":\"SC05\",\"title_vi\":\"Bức tranh trên giá trưng bày\",\"visual_en\":\"Center of the classroom. The friend places the framed paper painting onto the main display shelf, while mascot watches from nearby with proud satisfaction.\"}],\"title\":\"Bức tranh bên cửa sổ\"},{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Minh\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with two small side buns, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Hoa\",\"outfit_en\":\"Single plain pale-purple short-sleeve shirt.\"}],\"job\":\"vocab-pretty-script-586\",\"learner_outcome_vi\":\"Nắm vững nghĩa tính từ pretty để miêu tả đồ vật nhỏ nhắn, xinh xắn và nói được câu hoàn chỉnh.\",\"opening_function_vi\":\"Chiếc nơ đỏ vừa thắt xong trên nắp hộp giấy thô lập tức làm nổi bật vẻ xinh xắn, duyên dáng của món đồ nhỏ.\",\"plot_vi\":\"Minh và em họ trang trí chiếc hộp giấy tái chế bằng hoa cúc khô; chiếc hộp trở nên xinh xắn và sẵn sàng đựng quà tặng bà.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Mẩu ruy băng đỏ đã thắt xong. Hoa vừa dán thêm mấy cánh hoa cúc khô lên nắp hộp quà tự làm. Tôi nghiêng đầu ngắm nghía rồi nhận xét: \\\"The box is pretty.\\\" Chiếc hộp này xinh xắn ghê.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the handmade craft setting and present the first English model with pretty as an adjective.\",\"scene_id\":\"SC01\",\"title_vi\":\"Chiếc nơ hoàn thành\",\"visual_en\":\"Work table with scissors, ribbon rolls, and pressed dry blossoms. A small brown cardboard gift box sits in the center with a tidy red bow and yellow flower petals on the lid. Mascot and the girl with side buns admire it.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Ban đầu nó chỉ là chiếc hộp bìa thô màu nâu nhạt. Nhờ bàn tay khéo léo của Hoa, từng góc cạnh đều trở nên hài hòa và ấm áp. Hoa hỏi tôi chiếc hộp có quá đơn giản không.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Clarify the delicacy and charm implied by pretty through the transformation of ordinary materials.\",\"scene_id\":\"SC02\",\"title_vi\":\"Món quà giản dị\",\"visual_en\":\"Closer view of the tabletop. The girl with side buns adjusts a loose petal on the edge of the lid with a pair of tweezers. Mascot rests one hand on the table, watching attentively.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi cầm chiếc nơ chỉnh lại cho ngay ngắn rồi mỉm cười: \\\"It is a pretty box.\\\" Đó là một chiếc hộp xinh xắn mà. Bà nhất định sẽ rất vui khi nhận quà.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the second model emphasizing the pleasing visual character of the gift.\",\"scene_id\":\"SC03\",\"title_vi\":\"Sự ấm lòng\",\"visual_en\":\"Same craft table. Mascot gently pats the top of the box while smiling at the girl. The girl clasps her hands together with relief.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Để khen chiếc hộp này xinh xắn bằng tiếng Anh cùng Hoa, bạn nói cả câu giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Invite learner retrieval of the target sentence; silent pause.\",\"scene_id\":\"SC04\",\"stem\":\"The box is ___.\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Mascot points toward the decorated box on the table, turning toward the viewer to prompt the response. Sentence stem placed in upper third.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"The box is pretty.\\\" Hoa vui vẻ đặt chiếc khăn len đã gấp ngay ngắn vào lòng hộp, chuẩn bị mang sang thăm bà.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver correct response and complete the action of preparing the gift.\",\"scene_id\":\"SC05\",\"title_vi\":\"Gói trọn tấm lòng\",\"visual_en\":\"The girl places a neatly folded pastel wool scarf into the open base of the decorated box, while mascot holds the lid ready to close it.\"}],\"title\":\"Hộp quà hoa cúc\"},{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Khoa\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with small round glasses, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Thắng\",\"outfit_en\":\"Single plain pale-gray short-sleeve shirt.\"}],\"job\":\"vocab-good-script-587\",\"learner_outcome_vi\":\"Sử dụng tính từ good để đánh giá một giải pháp hay, hữu ích và nói được câu tiếng Anh phù hợp ngữ cảnh.\",\"opening_function_vi\":\"Bàn trưng bày chật chội làm nảy sinh đề xuất sáng tạo, dẫn ngay đến nhận định về một ý tưởng hay, có giá trị sử dụng.\",\"plot_vi\":\"Khoa và Thắng chuẩn bị bàn trưng bày khoa học; đề xuất dựng giá đứng giúp tiết kiệm không gian và hoàn thiện kế hoạch của nhóm.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bàn trưng bày quá chật chội. Chúng tôi không còn chỗ để đặt mô hình núi lửa. Thắng liền đề xuất treo áp phích lên giá gỗ đứng. Tôi gật đầu ngay: \\\"That's a good idea.\\\" Đó là một ý kiến tốt.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Open with spatial constraint and introduce the first English model validating a practical suggestion.\",\"scene_id\":\"SC01\",\"title_vi\":\"Chiếc bàn chật chội\",\"visual_en\":\"School exhibition hall. A table is crowded with paper notes, science poster boards, and a clay volcano model. Mascot in pale-blue looks overwhelmed, while the glasses-wearing friend points to a vertical wooden stand.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Giá đỡ vừa gọn gàng vừa giúp người xem dễ đọc nội dung từ xa. Thắng đo lại kích thước từng tấm bìa để chia đều khoảng cách. Hai đứa cùng thảo luận từng bước thực hiện.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Clarify why the idea works well through collaborative practical details.\",\"scene_id\":\"SC02\",\"title_vi\":\"Tính toán không gian\",\"visual_en\":\"Friend with glasses measures the standing wooden frame with a folding ruler. Mascot holds up a poster board against the frame to check viewing height.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Sau khi tính toán thời gian và vật liệu, tôi kiểm lại danh sách rồi bảo: \\\"This is a good plan.\\\" Đây là một kế hoạch tốt. Chúng mình bắt tay vào làm thôi.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver the second model expressing overall approval of the strategy.\",\"scene_id\":\"SC03\",\"title_vi\":\"Kế hoạch hoàn chỉnh\",\"visual_en\":\"Mascot checks off items on a clipboard while standing by the wooden frame. Friend gives an affirmative thumbs-up gesture.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Nếu bạn cũng muốn đồng ý đó là một ý kiến tốt, bạn nói cả câu bằng tiếng Anh giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt full-sentence retrieval of the first target model; 4s pause.\",\"scene_id\":\"SC04\",\"stem\":\"That's a ___ idea.\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Both characters stand beside the stand; mascot turns forward with an open palm toward viewer. Upper screen reserved for the prompt stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"That's a good idea.\\\" Thắng mang khung gỗ dựng sát tường, nhường trọn vẹn mặt bàn cho mô hình thí nghiệm của nhóm.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide correct answer and show the clean, organized outcome.\",\"scene_id\":\"SC05\",\"title_vi\":\"Bàn trưng bày ngăn nắp\",\"visual_en\":\"The poster stand is neatly positioned behind the table against the wall. The table surface is now clear and spacious, with the volcano model showcased prominently in the center.\"}],\"title\":\"Ý tưởng trên giá gỗ\"},{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tuấn\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with a short neat tuft of dark hair, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Long\",\"outfit_en\":\"Single plain pale-brown short-sleeve shirt.\"}],\"job\":\"vocab-bad-script-588\",\"learner_outcome_vi\":\"Hiểu đúng nghĩa tính từ bad để chỉ một hành động hoặc ý tưởng không tốt, dễ gây hậu quả xấu.\",\"opening_function_vi\":\"Nguy cơ làm đổ nước bẩn lên tranh vẽ tạo phản xạ ngăn cản ngay lập tức trước một ý định tai hại.\",\"plot_vi\":\"Tuấn kịp ngăn Long đặt cốc nước rửa cọ lênh láng lên xấp tranh mới vẽ; cả hai chuyển cốc sang vị trí an toàn.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Cốc nước rửa cọ sắp tràn. Long định đặt ngay cốc nước màu lên chồng bản vẽ vừa hoàn thành. Tôi vội xua tay can ngăn: \\\"That's a bad idea.\\\" Đó là một ý kiến tệ lắm em.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Open with immediate risk to precious work and deliver the first model evaluating an unwise action.\",\"scene_id\":\"SC01\",\"title_vi\":\"Nguy cơ đổ nước\",\"visual_en\":\"Drawing studio table. A glass jar filled to the brim with murky bluish brush water is being placed down by the friend in brown. Mascot in pale-blue quickly raises an open hand to stop him above a stack of fresh watercolor sketches.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chỉ cần va nhẹ tay, toàn bộ công sức vẽ tranh suốt buổi sáng sẽ ướt sũng. Long ngập ngừng nhìn quanh tìm chỗ khác trên mặt bàn đã bừa bộn giấy báo.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Explain the causal consequence of the bad idea and observe the companion's search for a solution.\",\"scene_id\":\"SC02\",\"title_vi\":\"Hậu quả suýt xảy ra\",\"visual_en\":\"Friend pauses mid-motion holding the water jar above the table. Mascot points to the delicate dried pigment on the paper sheets, showing why water there would ruin them.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi chỉ vào góc mép bàn gần khay cọ rồi lắc đầu: \\\"This is a bad spot.\\\" Chỗ này cũng là vị trí tồi, dễ va quẹt lắm. Em đem ra khay nhựa đằng kia nhé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Use the second English model to reject another risky location and direct toward safety.\",\"scene_id\":\"SC03\",\"title_vi\":\"Chọn vị trí an toàn\",\"visual_en\":\"Friend hovers jar near table corner; mascot shakes head and points toward a separate plastic utility tray on a sturdy side shelf away from all paper.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Muốn nhắc em mình rằng đó là một ý kiến không tốt, bạn nói cả câu bằng tiếng Anh giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Elicit the full sentence evaluation; 4s hold.\",\"scene_id\":\"SC04\",\"stem\":\"That's a ___ idea.\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Mascot gestures toward the unsafe placement with a cautionary expression while facing the viewer. Prompt stem shown in safe upper boundary.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"That's a bad idea.\\\" Long rụt tay lại, bưng cốc nước đặt sang khay nhựa cạnh bồn rửa, giữ cho tranh vẽ an toàn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm the full answer and show the relieved, safe outcome.\",\"scene_id\":\"SC05\",\"title_vi\":\"Bản vẽ an toàn\",\"visual_en\":\"Friend places the water jar securely inside the deep plastic wash tray near the sink. Mascot rests both hands on the table, straightening the dry, pristine watercolor drawings.\"}],\"title\":\"Cốc nước cạnh bản vẽ\"},{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Đức\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with a rolled bandana headband, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Khang\",\"outfit_en\":\"Single plain pale-orange short-sleeve shirt.\"}],\"job\":\"vocab-wrong-script-589\",\"learner_outcome_vi\":\"Hiểu và sử dụng đúng tính từ wrong để chỉ điều sai lệch, không đúng với thực tế hay quy định.\",\"opening_function_vi\":\"Tấm thẻ giao hàng dán lệch thông tin khiến nhân viên nghi ngờ có sự nhầm lẫn, dẫn thẳng tới việc tra hỏi về thẻ sai.\",\"plot_vi\":\"Đức và Khang kiểm tra đơn hàng chuẩn bị giao; phát hiện một tấm thẻ ghi sai địa chỉ và kịp thời thay bằng thẻ đúng trước giờ chuyển phát.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Thẻ giao hàng bị dán lệch. Tôi kiểm tra kiện hàng gửi đi Đà Nẵng nhưng tấm thẻ trên tay Khang lại ghi tên nơi khác. Tôi ngập ngừng hỏi: \\\"Is this the wrong card?\\\" Đây có phải tấm thẻ sai không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Open with concrete shipping discrepancy and introduce the first English model inquiring about error.\",\"scene_id\":\"SC01\",\"title_vi\":\"Nghi ngờ nhầm lẫn\",\"visual_en\":\"Packaging room counter. A cardboard parcel rests on the table with destination writing. Friend with bandana holds an adhesive delivery tag. Mascot in pale-blue leans over to examine the tag with a questioning gesture.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Khang so lại tập phiếu hẹn xếp trên bàn. Do sơ suất lúc phân loại, bạn ấy đã cầm nhầm phiếu của đợt gửi tuần trước. Suýt nữa thùng gốm đã bị gửi nhầm địa chỉ.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Establish why wrongness matters in this practical context and how it occurred.\",\"scene_id\":\"SC02\",\"title_vi\":\"Đối chiếu sổ sách\",\"visual_en\":\"Friend flips through a stack of paper forms in an organizer binder. Mascot points out the mismatched batch date on the shipping log.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi cầm bút gạch bỏ dòng ghi chú cũ rồi nhắc bạn: \\\"This address is wrong.\\\" Địa chỉ này sai rồi. Chúng mình phải lấy đúng danh sách mới in sáng nay.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the second model asserting the factual error and leading to correction.\",\"scene_id\":\"SC03\",\"title_vi\":\"Địa chỉ không khớp\",\"visual_en\":\"Mascot draws a single clean ink line across the outdated tag on the table, pointing to a fresh clipped paper printout beside the parcel.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Để hỏi bạn mình xem đây có phải tấm thẻ sai không, bạn nói cả câu bằng tiếng Anh giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt retrieval of the question model with wrong; 4s hold.\",\"scene_id\":\"SC04\",\"stem\":\"Is this the ___ card?\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Both characters beside the packaging counter; mascot turns forward inviting the spoken English sentence. Upper area clear for stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Is this the wrong card?\\\" Khang đối chiếu mã đơn, nhanh chóng tìm lại tấm thẻ chuẩn để dán lên kiện hàng trước giờ xe đến.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver correct response and show the accurate tag securely applied.\",\"scene_id\":\"SC05\",\"title_vi\":\"Dán lại thẻ chuẩn\",\"visual_en\":\"Friend firmly presses the new verified tag onto the center of the box. Mascot checks the entry on the clipboard with satisfaction as a delivery van is seen through the doorway.\"}],\"title\":\"Tấm thẻ bị nhầm\"},{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Việt\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with neat short hair outlined in navy, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Trang\",\"outfit_en\":\"Single plain pale-yellow short-sleeve shirt.\"}],\"job\":\"vocab-true-script-590\",\"learner_outcome_vi\":\"Nắm vững nghĩa tính từ true diễn đạt sự việc đúng sự thật và sử dụng thành thạo trong câu hỏi và câu trả lời.\",\"opening_function_vi\":\"Một tin tức bất ngờ về lịch nộp bài thôi thúc sự kiểm chứng sự thật trên bảng thông báo chính thức.\",\"plot_vi\":\"Việt và Trang nghe tin ngày nộp bài tập lớn bị dời sớm; hai bạn ra bảng tin xác nhận tin đó là sự thật để kịp sắp xếp lại công việc.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tờ thông báo vừa dán lên. Trang hớt hải chạy vào báo ngày nộp mô hình khoa học bị dời sớm hơn một tuần. Tôi giật mình hỏi lại: \\\"Is that true?\\\" Điều đó có đúng sự thật không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Open with urgent news and present the first English model questioning truth.\",\"scene_id\":\"SC01\",\"title_vi\":\"Tin tức bất ngờ\",\"visual_en\":\"Study hallway. Friend in yellow approaches with hurried steps holding a notebook, speaking anxiously. Mascot in pale-blue stops walking, looking startled with hands slightly raised in inquiry.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Nếu nộp sớm, cả nhóm chỉ còn ba ngày để hoàn thiện mạch điện. Tôi cùng Trang đi thẳng ra bảng tin trung tâm ở hành lang để đọc văn bản chính thức có mộc đỏ.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show the concrete verification process that proves whether the claim is true.\",\"scene_id\":\"SC02\",\"title_vi\":\"Kiểm tra bảng tin\",\"visual_en\":\"Central corridor notice board covered with pinned notices. Both characters stand looking up at a freshly pinned announcement sheet with a circular red seal.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Trang đọc kỹ từng dòng rồi thở dài xác nhận: \\\"Yes, it is true.\\\" Đúng, điều đó là sự thật. Thầy phụ trách đã ký duyệt lịch thi mới từ chiều qua.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide the second English model affirming the verified truth.\",\"scene_id\":\"SC03\",\"title_vi\":\"Xác nhận sự thật\",\"visual_en\":\"Close-up profile at the notice board. Friend points to the highlighted bold deadline line and signature. Mascot nods in solemn realization.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Để hỏi lại một thông tin xem có đúng sự thật không bằng tiếng Anh, bạn nói cả câu giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt full-sentence retrieval of the question model; 4s hold.\",\"scene_id\":\"SC04\",\"stem\":\"Is that ___?\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Mascot turns to the camera beside the notice board, gesturing inquiringly. Upper safe area reserved for sentence stem.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Is that true?\\\" Trang gật đầu chỉ vào con dấu đỏ trên bảng tin, rồi hai đứa nhanh chóng quay về phòng để đẩy nhanh tiến độ làm mô hình.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm the answer and show immediate constructive action following the confirmed truth.\",\"scene_id\":\"SC05\",\"title_vi\":\"Khẩn trương làm việc\",\"visual_en\":\"Back at their workbench. The two teammates roll up their sleeves, opening circuit boards and assembly tools with energetic focus.\"}],\"title\":\"Thông báo trên bảng tin\"},{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Quân\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with a short spiky hair tuft, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Tân\",\"outfit_en\":\"Single plain pale-green short-sleeve shirt.\"}],\"job\":\"vocab-same-script-591\",\"learner_outcome_vi\":\"Hiểu và sử dụng đúng tính từ same để miêu tả sự giống nhau hoặc cùng một đối tượng.\",\"opening_function_vi\":\"Hai tấm thẻ đặt cạnh nhau trong trò chơi đòi hỏi sự so sánh tương đồng trực tiếp, dẫn thẳng tới việc nhận diện tính chất giống nhau.\",\"plot_vi\":\"Quân và Tân chơi trò ghép cặp hình; phát hiện hai tấm thẻ tuy khác góc chụp nhưng cùng mang một biểu tượng hoa giống nhau để ghi điểm.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hai tấm thẻ đặt cạnh nhau. Tân lật được hai hình hoa hướng dương trong trò chơi trí nhớ của lớp. Tôi nghiêng người kiểm tra: \\\"These cards have the same picture.\\\" Hai tấm thẻ này có cùng hình ảnh.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Open with visual comparison in a memory game and introduce the first English model.\",\"scene_id\":\"SC01\",\"title_vi\":\"Lật trúng cặp thẻ\",\"visual_en\":\"Activity table with a grid of square memory cards turned face-down. In front of the friend in green, two face-up cards display identical stylized sunflower illustrations. Mascot in pale-blue leans over to examine them.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tuy cùng hình hoa vàng nhưng viền lá của một tấm dường như có nét cắt khác. Tân định nhặt cả hai thẻ bỏ vào hộp điểm của mình. Tôi giữ tay bạn lại để nhìn kỹ hơn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Create doubt and closer inspection to test whether they truly share identity.\",\"scene_id\":\"SC02\",\"title_vi\":\"Sự hoài nghi về chi tiết\",\"visual_en\":\"Closer table view. Friend reaches out to pick up both cards. Mascot gently holds a finger down beside one card, pointing to the subtle green leaf border to scrutinize the print.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hai đứa đặt sát mép thẻ để so từng cánh hoa. Tân nheo mắt hỏi tôi: \\\"Are they the same?\\\" Chúng có giống nhau không? Tôi thấy góc lá dưới đều có một chấm đỏ nhỏ.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the second English model as a direct verification question.\",\"scene_id\":\"SC03\",\"title_vi\":\"Hỏi để xác nhận\",\"visual_en\":\"Both characters put their heads close above the two side-by-side cards. Friend gestures with open palms asking whether the match is valid.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Để hỏi hai món đồ có giống hệt nhau không bằng tiếng Anh, bạn nói cả câu giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Invite learner retrieval of the question model with same; 4s hold.\",\"scene_id\":\"SC04\",\"stem\":\"Are they the ___?\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Mascot turns to viewer, holding hands symmetrically beside the two matching cards. Sentence stem displayed in upper third.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Are they the same?\\\" Tân cười rạng rỡ khi thấy cả hai chấm đỏ đều trùng khớp, vui vẻ thu cặp thẻ hợp lệ về phần mình.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm the correct answer and conclude with the rewarding game turn.\",\"scene_id\":\"SC05\",\"title_vi\":\"Ghi điểm hợp lệ\",\"visual_en\":\"Friend happily slides the two verified matching sunflower cards into his score pile, while mascot smiles and turns over the next card on the grid.\"}],\"title\":\"Cặp thẻ hoa hướng dương\"},{\"characters\":[{\"appearance_en\":\"Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Bảo\",\"outfit_en\":\"Single pale-blue #8CCFE8 short-sleeve shirt.\"},{\"appearance_en\":\"Minimalist 2D stick figure with a small ink beret, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Lâm\",\"outfit_en\":\"Single plain pale-brown short-sleeve shirt.\"}],\"job\":\"vocab-different-script-592\",\"learner_outcome_vi\":\"Sử dụng tính từ different để chỉ ra sự khác nhau giữa các sự vật, hình ảnh và diễn đạt trọn vẹn bằng tiếng Anh.\",\"opening_function_vi\":\"Hai bản phác thảo đặt cạnh nhau làm lộ ra sự bất đồng về chi tiết và màu sắc, dẫn thẳng đến việc gọi tên sự khác biệt.\",\"plot_vi\":\"Bảo và Lâm phân loại các bản phác thảo phong cảnh; nhận ra hai bản vẽ khác nhau ở các chi tiết then chốt và xếp vào hồ sơ riêng.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hai bản vẽ đặt cạnh nhau. Thoạt nhìn cả hai đều vẽ cây cầu gỗ qua suối, nhưng bố cục lại không giống. Tôi chỉ tay bảo Lâm: \\\"The pictures are different.\\\" Những bức tranh này khác nhau đấy.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Open with immediate contrast between two illustrations and present the first English model.\",\"scene_id\":\"SC01\",\"title_vi\":\"Bản vẽ thoạt nhìn giống\",\"visual_en\":\"Art studio drafting table. Two side-by-side paper sketches show wooden bridge scenes, but one includes a willow tree while the other has a moored rowboat. Mascot in pale-blue points between them while speaking to the beret-wearing friend.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bản bên trái vẽ thêm hàng liễu rủ, còn bản bên phải lại có con thuyền nan nhỏ neo dưới chân cầu. Lâm cứ ngỡ hai bản này in cùng một khuôn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Elaborate the specific observable distinctions that make them different.\",\"scene_id\":\"SC02\",\"title_vi\":\"Chi tiết đối lập\",\"visual_en\":\"Friend with beret leans in close, comparing the willow branches on the left sheet against the boat silhouette on the right sheet. Mascot traces the difference with a pencil tip without touching the paper.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Lâm cầm hộp màu nước định tô nền trời, tôi liền nhắc bạn: \\\"This is a different colour.\\\" Đây là một màu khác rồi. Em phải dùng màu lam nhạt thay vì màu tím than.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Present the second model highlighting a color discrepancy.\",\"scene_id\":\"SC03\",\"title_vi\":\"Màu sắc khác biệt\",\"visual_en\":\"Friend holds a watercolor cake pan of dark purple. Mascot points to the reference palette showing soft sky-blue, guiding him toward the correct shade.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Muốn nhận xét rằng những bức vẽ này khác nhau bằng tiếng Anh, bạn nói cả câu giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Invite retrieval of the core statement with different; 4s pause.\",\"scene_id\":\"SC04\",\"stem\":\"The pictures are ___.\",\"title_vi\":\"Lời người xem giúp nói\",\"visual_en\":\"Mascot turns to camera with an open hand indicating the two contrasting drawings on the table. Sentence stem clearly placed in top region.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"The pictures are different.\\\" Lâm xếp riêng hai bản vào hai bìa hồ sơ khác nhau, chuẩn bị cho buổi họp chọn tranh triển lãm.\",\"practice_pause_seconds\":0,\"purpose_en\":\"State the full answer and show the resolved organization of materials.\",\"scene_id\":\"SC05\",\"title_vi\":\"Phân loại rõ ràng\",\"visual_en\":\"Friend places the willow drawing into a blue folder and the boat drawing into an amber folder. Mascot closes both folders neatly on the desk.\"}],\"title\":\"Hai bản vẽ bên suối\"}],\"toolAction\":\"Returning finished episodes\",\"toolSummary\":\"Vocabulary drama episodes\"}\n",
+  "duration_seconds": 115.617317654,
+  "num_turns": 1,
+  "structured_output": {
+    "episodes": [
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "An",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with a small dark ponytail, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Linh",
+            "outfit_en": "Single plain pale-green short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-open-script-583",
+        "learner_outcome_vi": "Hiểu đúng nghĩa tính từ của open chỉ trạng thái đang mở cửa và nói được câu hoàn chỉnh xác nhận trạng thái này.",
+        "opening_function_vi": "Đến trước cửa tiệm sách khi cửa chỉ mới hé một nửa, lập tức làm nảy sinh nhu cầu xác nhận tiệm đã mở cửa hay chưa.",
+        "plot_vi": "An và Linh đến tiệm sách sớm để mua giấy màu làm áp phích; hai đứa đợi tiệm chuyển sang trạng thái mở cửa rồi mới bước vào.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Trời vừa hửng sáng, phố xá còn vắng. Tôi cùng Linh đạp xe đến tiệm sách để mua giấy màu. Thấy cửa kéo chỉ hé một nửa, tôi hỏi: \"Is the shop open?\" Tiệm có đang mở cửa không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Open with a quiet early morning moment and introduce the first English model asking about the shop's open state.",
+            "scene_id": "SC01",
+            "title_vi": "Trước giờ mở cửa",
+            "visual_en": "Early morning sidewalk outside a small bookstore. The storefront shutter is half raised with lights dim inside. The pale-blue mascot stands holding a bicycle handlebar beside the ponytail friend, looking at the half-open doorway."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Linh nhìn đồng hồ rồi lắc đầu. Biển giờ mở cửa ghi tám giờ, mà giờ mới bảy giờ rưỡi. Bác chủ tiệm đang quét dọn bên trong, bảo hai đứa ngồi đợi vài phút.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Clarify the state of waiting before business hours and support the intended descriptive meaning.",
+            "scene_id": "SC02",
+            "title_vi": "Khoảng chờ trước tiệm",
+            "visual_en": "Same storefront framing. The ponytail friend points toward a small hanging board near the door while the mascot waits on the steps. Inside the shop window, a shopkeeper figure sweeps the clean floor."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Đúng tám giờ, bác chủ đẩy rộng cửa kính và bật đèn sáng trưng. Bác vẫy tay gọi hai đứa vào. Tôi mừng rỡ bảo Linh: \"The shop is open now.\" Tiệm đang mở cửa rồi đấy.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the second English model describing the active open state as a concrete change of state.",
+            "scene_id": "SC03",
+            "title_vi": "Cửa mở đón khách",
+            "visual_en": "Same storefront angle. The glass door is now fully swung wide, interior warm lights fully on. The shopkeeper waves from inside. The mascot smiles and gestures toward the illuminated interior."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Nhìn thấy tiệm bắt đầu đón khách, bạn nói giúp tôi câu tiệm đang mở cửa rồi bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Invite full-sentence retrieval of the target adjective model; hold quietly for learner response.",
+            "scene_id": "SC04",
+            "stem": "The shop is ___ now.",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Medium two-shot outside the brightly lit shop door. Mascot turns slightly toward viewer inviting the response, while the friend stands ready with her canvas tote bag. Upper safe area reserved for sentence stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"The shop is open now.\" Hai đứa bước vào trong chọn giấy và bút màu, kịp hoàn thành tấm áp phích cho buổi hội thảo chiều nay.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide the correct English answer and conclude with the achieved personal goal.",
+            "scene_id": "SC05",
+            "title_vi": "Vào trong tiệm",
+            "visual_en": "Interior of the bright stationery shop. Mascot and friend stand beside a display of colored paper sheets, holding a fresh pack of drawing materials with genuine relief."
+          }
+        ],
+        "title": "Cửa tiệm lúc bình minh"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Nam",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with a small ink cap, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Bình",
+            "outfit_en": "Single plain muted-yellow short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-closed-script-584",
+        "learner_outcome_vi": "Hiểu đúng nghĩa tính từ closed chỉ trạng thái đóng cửa và nói được câu tiếng Anh thông báo tiệm đóng cửa.",
+        "opening_function_vi": "Sự cố xẹp lốp xe bất ngờ trên đường tạo ra nhu cầu cấp bách kiểm tra xem tiệm sửa xe có đang đóng cửa hay không.",
+        "plot_vi": "Nam dắt xe đạp thủng lốp đến tiệm sửa xe quen nhưng gặp cửa cuốn đóng kín; hai bạn xác nhận tiệm nghỉ và chuyển sang tự vá xe tại nhà.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bánh xe bỗng xẹp lép giữa đường. Tôi dắt xe chạy vội đến tiệm sửa xe đầu ngõ. Thấy cửa cuốn hạ sát đất, tôi hỏi: \"Is the shop closed?\" Tiệm có đóng cửa không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Open with a sudden obstacle and introduce the first English model asking about the closed state.",
+            "scene_id": "SC01",
+            "title_vi": "Sự cố thủng lốp",
+            "visual_en": "Street corner by a small bicycle repair stall. The steel shutter door is rolled completely down to the ground. Mascot in pale-blue holds a flat-tired bicycle beside his capped friend, inspecting the shut door."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bình chỉ tay vào tấm biển gỗ nhỏ treo bên hông cửa. Tiệm nghỉ ngày Chủ nhật để chủ quán về quê. Tôi đứng nhìn chiếc lốp bẹp dí, thở dài vì chưa biết làm sao.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Clarify the closed condition and establish the shared difficulty between the two companions.",
+            "scene_id": "SC02",
+            "title_vi": "Tấm biển treo ngoài",
+            "visual_en": "Closer view at the repair stall entrance. The capped friend points to a plain wooden sign hanging by the padlock. Mascot crouches slightly, touching the deflated rear tire with a pensive posture."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Không thể đợi đến sáng mai, tôi quay sang bảo Bình: \"The shop is closed today.\" Hôm nay tiệm đóng cửa rồi. Chúng mình đành tìm cách khác thôi.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver the second English model as a realistic decision to stop waiting and take alternative action.",
+            "scene_id": "SC03",
+            "title_vi": "Đổi phương án",
+            "visual_en": "Same street corner. Mascot stands up, turns away from the locked shutter, and gestures toward the street ahead with determination. The capped friend nods in agreement."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Muốn thông báo hôm nay tiệm đóng cửa với bạn mình, bạn nói cả câu bằng tiếng Anh giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Invite learner retrieval of the target adjective sentence; hold quietly.",
+            "scene_id": "SC04",
+            "stem": "The shop is ___ today.",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Two companions beside the bicycle facing front; mascot gestures toward viewer while holding the handlebar. Upper area kept clean for the sentence stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"The shop is closed today.\" Hai đứa dắt xe về góc sân nhà tôi, cùng mở hộp đồ nghề cũ của bố để tự vá lốp xe.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "State the full answer and show the practical resolution of the problem.",
+            "scene_id": "SC05",
+            "title_vi": "Tự vá lốp xe",
+            "visual_en": "A cozy home porch corner. The bicycle is inverted on the ground; mascot and capped friend work together with hand pump and tire levers from an old metal toolbox."
+          }
+        ],
+        "title": "Tiệm sửa xe ngày Chủ nhật"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Huy",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with two small side hair clips, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Mai",
+            "outfit_en": "Single plain pale-orange short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-beautiful-script-585",
+        "learner_outcome_vi": "Sử dụng chính xác tính từ beautiful để miêu tả vẻ đẹp của một tác phẩm và nói được câu khen ngợi hoàn chỉnh.",
+        "opening_function_vi": "Một bức vẽ phong cảnh vừa khô nét mực tạo nên khoảnh khắc rung động thị giác trực tiếp dẫn thẳng đến nhận xét đẹp.",
+        "plot_vi": "Huy ngắm bức tranh phong cảnh Mai vừa vẽ xong ở phòng mỹ thuật; lời khen chân thành giúp Mai tự tin nộp tranh tham dự triển lãm.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bức vẽ trên bàn vừa khô mực. Mai vừa hoàn thành bức phong cảnh sau ba ngày tỉ mẩn. Tôi ngắm nhìn vệt nắng trên giấy rồi thốt lên: \"This painting is beautiful.\" Bức tranh này đẹp thật đấy.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Open with immediate aesthetic appreciation and introduce the first English model.",
+            "scene_id": "SC01",
+            "title_vi": "Bức vẽ vừa xong",
+            "visual_en": "Art room table beside a tall window with sunlight streaming in. On the easel rests a painted landscape on paper. Mascot in pale-blue leans forward admiring the artwork beside the friend in pale-orange."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Màu xanh của lũy tre và vệt nắng chiều hiện lên rất sinh động. Mai bảo bạn ấy từng lo mình pha màu không chuẩn. Tôi kéo ghế lại gần để ngắm kỹ hơn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deepen the meaning of beautiful by focusing on specific artistic qualities and the creator's doubt.",
+            "scene_id": "SC02",
+            "title_vi": "Nỗi băn khoăn của bạn",
+            "visual_en": "Closer framing of the easel. Mascot points gently to the painted riverbank and tree strokes. The friend holds a wooden palette and a clean brush, listening with modest uncertainty."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Thấy bạn còn ngập ngừng chưa dám nộp cho thầy giáo, tôi động viên: \"It is a beautiful painting.\" Nó là một bức tranh đẹp mà. Bạn hãy tự tin lên nhé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Present the second English model to encourage the friend and reinforce the core descriptive meaning.",
+            "scene_id": "SC03",
+            "title_vi": "Lời động viên",
+            "visual_en": "Same art room setting. Mascot offers an encouraging hand gesture toward the painting, looking warmly at the friend who begins to smile."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Để khen bức tranh này đẹp bằng tiếng Anh với bạn mình, bạn nói cả câu giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Invite learner retrieval of the first target sentence; pause quietly.",
+            "scene_id": "SC04",
+            "stem": "This painting is ___.",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Mascot turns to camera with a warm gesture toward the painting on the easel. Upper zone kept clear for the prompt stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"This painting is beautiful.\" Mai mỉm cười lau vệt màu trên má, cẩn thận mang tranh đặt lên giá trưng bày giữa lớp.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm the full answer and show the satisfying resolution as the painting takes center stage.",
+            "scene_id": "SC05",
+            "title_vi": "Bức tranh trên giá trưng bày",
+            "visual_en": "Center of the classroom. The friend places the framed paper painting onto the main display shelf, while mascot watches from nearby with proud satisfaction."
+          }
+        ],
+        "title": "Bức tranh bên cửa sổ"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Minh",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with two small side buns, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Hoa",
+            "outfit_en": "Single plain pale-purple short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-pretty-script-586",
+        "learner_outcome_vi": "Nắm vững nghĩa tính từ pretty để miêu tả đồ vật nhỏ nhắn, xinh xắn và nói được câu hoàn chỉnh.",
+        "opening_function_vi": "Chiếc nơ đỏ vừa thắt xong trên nắp hộp giấy thô lập tức làm nổi bật vẻ xinh xắn, duyên dáng của món đồ nhỏ.",
+        "plot_vi": "Minh và em họ trang trí chiếc hộp giấy tái chế bằng hoa cúc khô; chiếc hộp trở nên xinh xắn và sẵn sàng đựng quà tặng bà.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Mẩu ruy băng đỏ đã thắt xong. Hoa vừa dán thêm mấy cánh hoa cúc khô lên nắp hộp quà tự làm. Tôi nghiêng đầu ngắm nghía rồi nhận xét: \"The box is pretty.\" Chiếc hộp này xinh xắn ghê.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the handmade craft setting and present the first English model with pretty as an adjective.",
+            "scene_id": "SC01",
+            "title_vi": "Chiếc nơ hoàn thành",
+            "visual_en": "Work table with scissors, ribbon rolls, and pressed dry blossoms. A small brown cardboard gift box sits in the center with a tidy red bow and yellow flower petals on the lid. Mascot and the girl with side buns admire it."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Ban đầu nó chỉ là chiếc hộp bìa thô màu nâu nhạt. Nhờ bàn tay khéo léo của Hoa, từng góc cạnh đều trở nên hài hòa và ấm áp. Hoa hỏi tôi chiếc hộp có quá đơn giản không.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Clarify the delicacy and charm implied by pretty through the transformation of ordinary materials.",
+            "scene_id": "SC02",
+            "title_vi": "Món quà giản dị",
+            "visual_en": "Closer view of the tabletop. The girl with side buns adjusts a loose petal on the edge of the lid with a pair of tweezers. Mascot rests one hand on the table, watching attentively."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi cầm chiếc nơ chỉnh lại cho ngay ngắn rồi mỉm cười: \"It is a pretty box.\" Đó là một chiếc hộp xinh xắn mà. Bà nhất định sẽ rất vui khi nhận quà.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the second model emphasizing the pleasing visual character of the gift.",
+            "scene_id": "SC03",
+            "title_vi": "Sự ấm lòng",
+            "visual_en": "Same craft table. Mascot gently pats the top of the box while smiling at the girl. The girl clasps her hands together with relief."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Để khen chiếc hộp này xinh xắn bằng tiếng Anh cùng Hoa, bạn nói cả câu giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Invite learner retrieval of the target sentence; silent pause.",
+            "scene_id": "SC04",
+            "stem": "The box is ___.",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Mascot points toward the decorated box on the table, turning toward the viewer to prompt the response. Sentence stem placed in upper third."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"The box is pretty.\" Hoa vui vẻ đặt chiếc khăn len đã gấp ngay ngắn vào lòng hộp, chuẩn bị mang sang thăm bà.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver correct response and complete the action of preparing the gift.",
+            "scene_id": "SC05",
+            "title_vi": "Gói trọn tấm lòng",
+            "visual_en": "The girl places a neatly folded pastel wool scarf into the open base of the decorated box, while mascot holds the lid ready to close it."
+          }
+        ],
+        "title": "Hộp quà hoa cúc"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Khoa",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with small round glasses, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Thắng",
+            "outfit_en": "Single plain pale-gray short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-good-script-587",
+        "learner_outcome_vi": "Sử dụng tính từ good để đánh giá một giải pháp hay, hữu ích và nói được câu tiếng Anh phù hợp ngữ cảnh.",
+        "opening_function_vi": "Bàn trưng bày chật chội làm nảy sinh đề xuất sáng tạo, dẫn ngay đến nhận định về một ý tưởng hay, có giá trị sử dụng.",
+        "plot_vi": "Khoa và Thắng chuẩn bị bàn trưng bày khoa học; đề xuất dựng giá đứng giúp tiết kiệm không gian và hoàn thiện kế hoạch của nhóm.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bàn trưng bày quá chật chội. Chúng tôi không còn chỗ để đặt mô hình núi lửa. Thắng liền đề xuất treo áp phích lên giá gỗ đứng. Tôi gật đầu ngay: \"That's a good idea.\" Đó là một ý kiến tốt.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Open with spatial constraint and introduce the first English model validating a practical suggestion.",
+            "scene_id": "SC01",
+            "title_vi": "Chiếc bàn chật chội",
+            "visual_en": "School exhibition hall. A table is crowded with paper notes, science poster boards, and a clay volcano model. Mascot in pale-blue looks overwhelmed, while the glasses-wearing friend points to a vertical wooden stand."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Giá đỡ vừa gọn gàng vừa giúp người xem dễ đọc nội dung từ xa. Thắng đo lại kích thước từng tấm bìa để chia đều khoảng cách. Hai đứa cùng thảo luận từng bước thực hiện.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Clarify why the idea works well through collaborative practical details.",
+            "scene_id": "SC02",
+            "title_vi": "Tính toán không gian",
+            "visual_en": "Friend with glasses measures the standing wooden frame with a folding ruler. Mascot holds up a poster board against the frame to check viewing height."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Sau khi tính toán thời gian và vật liệu, tôi kiểm lại danh sách rồi bảo: \"This is a good plan.\" Đây là một kế hoạch tốt. Chúng mình bắt tay vào làm thôi.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver the second model expressing overall approval of the strategy.",
+            "scene_id": "SC03",
+            "title_vi": "Kế hoạch hoàn chỉnh",
+            "visual_en": "Mascot checks off items on a clipboard while standing by the wooden frame. Friend gives an affirmative thumbs-up gesture."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Nếu bạn cũng muốn đồng ý đó là một ý kiến tốt, bạn nói cả câu bằng tiếng Anh giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt full-sentence retrieval of the first target model; 4s pause.",
+            "scene_id": "SC04",
+            "stem": "That's a ___ idea.",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Both characters stand beside the stand; mascot turns forward with an open palm toward viewer. Upper screen reserved for the prompt stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"That's a good idea.\" Thắng mang khung gỗ dựng sát tường, nhường trọn vẹn mặt bàn cho mô hình thí nghiệm của nhóm.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide correct answer and show the clean, organized outcome.",
+            "scene_id": "SC05",
+            "title_vi": "Bàn trưng bày ngăn nắp",
+            "visual_en": "The poster stand is neatly positioned behind the table against the wall. The table surface is now clear and spacious, with the volcano model showcased prominently in the center."
+          }
+        ],
+        "title": "Ý tưởng trên giá gỗ"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tuấn",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with a short neat tuft of dark hair, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Long",
+            "outfit_en": "Single plain pale-brown short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-bad-script-588",
+        "learner_outcome_vi": "Hiểu đúng nghĩa tính từ bad để chỉ một hành động hoặc ý tưởng không tốt, dễ gây hậu quả xấu.",
+        "opening_function_vi": "Nguy cơ làm đổ nước bẩn lên tranh vẽ tạo phản xạ ngăn cản ngay lập tức trước một ý định tai hại.",
+        "plot_vi": "Tuấn kịp ngăn Long đặt cốc nước rửa cọ lênh láng lên xấp tranh mới vẽ; cả hai chuyển cốc sang vị trí an toàn.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Cốc nước rửa cọ sắp tràn. Long định đặt ngay cốc nước màu lên chồng bản vẽ vừa hoàn thành. Tôi vội xua tay can ngăn: \"That's a bad idea.\" Đó là một ý kiến tệ lắm em.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Open with immediate risk to precious work and deliver the first model evaluating an unwise action.",
+            "scene_id": "SC01",
+            "title_vi": "Nguy cơ đổ nước",
+            "visual_en": "Drawing studio table. A glass jar filled to the brim with murky bluish brush water is being placed down by the friend in brown. Mascot in pale-blue quickly raises an open hand to stop him above a stack of fresh watercolor sketches."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chỉ cần va nhẹ tay, toàn bộ công sức vẽ tranh suốt buổi sáng sẽ ướt sũng. Long ngập ngừng nhìn quanh tìm chỗ khác trên mặt bàn đã bừa bộn giấy báo.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Explain the causal consequence of the bad idea and observe the companion's search for a solution.",
+            "scene_id": "SC02",
+            "title_vi": "Hậu quả suýt xảy ra",
+            "visual_en": "Friend pauses mid-motion holding the water jar above the table. Mascot points to the delicate dried pigment on the paper sheets, showing why water there would ruin them."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi chỉ vào góc mép bàn gần khay cọ rồi lắc đầu: \"This is a bad spot.\" Chỗ này cũng là vị trí tồi, dễ va quẹt lắm. Em đem ra khay nhựa đằng kia nhé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Use the second English model to reject another risky location and direct toward safety.",
+            "scene_id": "SC03",
+            "title_vi": "Chọn vị trí an toàn",
+            "visual_en": "Friend hovers jar near table corner; mascot shakes head and points toward a separate plastic utility tray on a sturdy side shelf away from all paper."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Muốn nhắc em mình rằng đó là một ý kiến không tốt, bạn nói cả câu bằng tiếng Anh giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Elicit the full sentence evaluation; 4s hold.",
+            "scene_id": "SC04",
+            "stem": "That's a ___ idea.",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Mascot gestures toward the unsafe placement with a cautionary expression while facing the viewer. Prompt stem shown in safe upper boundary."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"That's a bad idea.\" Long rụt tay lại, bưng cốc nước đặt sang khay nhựa cạnh bồn rửa, giữ cho tranh vẽ an toàn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm the full answer and show the relieved, safe outcome.",
+            "scene_id": "SC05",
+            "title_vi": "Bản vẽ an toàn",
+            "visual_en": "Friend places the water jar securely inside the deep plastic wash tray near the sink. Mascot rests both hands on the table, straightening the dry, pristine watercolor drawings."
+          }
+        ],
+        "title": "Cốc nước cạnh bản vẽ"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Đức",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with a rolled bandana headband, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Khang",
+            "outfit_en": "Single plain pale-orange short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-wrong-script-589",
+        "learner_outcome_vi": "Hiểu và sử dụng đúng tính từ wrong để chỉ điều sai lệch, không đúng với thực tế hay quy định.",
+        "opening_function_vi": "Tấm thẻ giao hàng dán lệch thông tin khiến nhân viên nghi ngờ có sự nhầm lẫn, dẫn thẳng tới việc tra hỏi về thẻ sai.",
+        "plot_vi": "Đức và Khang kiểm tra đơn hàng chuẩn bị giao; phát hiện một tấm thẻ ghi sai địa chỉ và kịp thời thay bằng thẻ đúng trước giờ chuyển phát.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Thẻ giao hàng bị dán lệch. Tôi kiểm tra kiện hàng gửi đi Đà Nẵng nhưng tấm thẻ trên tay Khang lại ghi tên nơi khác. Tôi ngập ngừng hỏi: \"Is this the wrong card?\" Đây có phải tấm thẻ sai không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Open with concrete shipping discrepancy and introduce the first English model inquiring about error.",
+            "scene_id": "SC01",
+            "title_vi": "Nghi ngờ nhầm lẫn",
+            "visual_en": "Packaging room counter. A cardboard parcel rests on the table with destination writing. Friend with bandana holds an adhesive delivery tag. Mascot in pale-blue leans over to examine the tag with a questioning gesture."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Khang so lại tập phiếu hẹn xếp trên bàn. Do sơ suất lúc phân loại, bạn ấy đã cầm nhầm phiếu của đợt gửi tuần trước. Suýt nữa thùng gốm đã bị gửi nhầm địa chỉ.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Establish why wrongness matters in this practical context and how it occurred.",
+            "scene_id": "SC02",
+            "title_vi": "Đối chiếu sổ sách",
+            "visual_en": "Friend flips through a stack of paper forms in an organizer binder. Mascot points out the mismatched batch date on the shipping log."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi cầm bút gạch bỏ dòng ghi chú cũ rồi nhắc bạn: \"This address is wrong.\" Địa chỉ này sai rồi. Chúng mình phải lấy đúng danh sách mới in sáng nay.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the second model asserting the factual error and leading to correction.",
+            "scene_id": "SC03",
+            "title_vi": "Địa chỉ không khớp",
+            "visual_en": "Mascot draws a single clean ink line across the outdated tag on the table, pointing to a fresh clipped paper printout beside the parcel."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Để hỏi bạn mình xem đây có phải tấm thẻ sai không, bạn nói cả câu bằng tiếng Anh giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt retrieval of the question model with wrong; 4s hold.",
+            "scene_id": "SC04",
+            "stem": "Is this the ___ card?",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Both characters beside the packaging counter; mascot turns forward inviting the spoken English sentence. Upper area clear for stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Is this the wrong card?\" Khang đối chiếu mã đơn, nhanh chóng tìm lại tấm thẻ chuẩn để dán lên kiện hàng trước giờ xe đến.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver correct response and show the accurate tag securely applied.",
+            "scene_id": "SC05",
+            "title_vi": "Dán lại thẻ chuẩn",
+            "visual_en": "Friend firmly presses the new verified tag onto the center of the box. Mascot checks the entry on the clipboard with satisfaction as a delivery van is seen through the doorway."
+          }
+        ],
+        "title": "Tấm thẻ bị nhầm"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Việt",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with neat short hair outlined in navy, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Trang",
+            "outfit_en": "Single plain pale-yellow short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-true-script-590",
+        "learner_outcome_vi": "Nắm vững nghĩa tính từ true diễn đạt sự việc đúng sự thật và sử dụng thành thạo trong câu hỏi và câu trả lời.",
+        "opening_function_vi": "Một tin tức bất ngờ về lịch nộp bài thôi thúc sự kiểm chứng sự thật trên bảng thông báo chính thức.",
+        "plot_vi": "Việt và Trang nghe tin ngày nộp bài tập lớn bị dời sớm; hai bạn ra bảng tin xác nhận tin đó là sự thật để kịp sắp xếp lại công việc.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tờ thông báo vừa dán lên. Trang hớt hải chạy vào báo ngày nộp mô hình khoa học bị dời sớm hơn một tuần. Tôi giật mình hỏi lại: \"Is that true?\" Điều đó có đúng sự thật không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Open with urgent news and present the first English model questioning truth.",
+            "scene_id": "SC01",
+            "title_vi": "Tin tức bất ngờ",
+            "visual_en": "Study hallway. Friend in yellow approaches with hurried steps holding a notebook, speaking anxiously. Mascot in pale-blue stops walking, looking startled with hands slightly raised in inquiry."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Nếu nộp sớm, cả nhóm chỉ còn ba ngày để hoàn thiện mạch điện. Tôi cùng Trang đi thẳng ra bảng tin trung tâm ở hành lang để đọc văn bản chính thức có mộc đỏ.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show the concrete verification process that proves whether the claim is true.",
+            "scene_id": "SC02",
+            "title_vi": "Kiểm tra bảng tin",
+            "visual_en": "Central corridor notice board covered with pinned notices. Both characters stand looking up at a freshly pinned announcement sheet with a circular red seal."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Trang đọc kỹ từng dòng rồi thở dài xác nhận: \"Yes, it is true.\" Đúng, điều đó là sự thật. Thầy phụ trách đã ký duyệt lịch thi mới từ chiều qua.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide the second English model affirming the verified truth.",
+            "scene_id": "SC03",
+            "title_vi": "Xác nhận sự thật",
+            "visual_en": "Close-up profile at the notice board. Friend points to the highlighted bold deadline line and signature. Mascot nods in solemn realization."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Để hỏi lại một thông tin xem có đúng sự thật không bằng tiếng Anh, bạn nói cả câu giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt full-sentence retrieval of the question model; 4s hold.",
+            "scene_id": "SC04",
+            "stem": "Is that ___?",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Mascot turns to the camera beside the notice board, gesturing inquiringly. Upper safe area reserved for sentence stem."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Is that true?\" Trang gật đầu chỉ vào con dấu đỏ trên bảng tin, rồi hai đứa nhanh chóng quay về phòng để đẩy nhanh tiến độ làm mô hình.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm the answer and show immediate constructive action following the confirmed truth.",
+            "scene_id": "SC05",
+            "title_vi": "Khẩn trương làm việc",
+            "visual_en": "Back at their workbench. The two teammates roll up their sleeves, opening circuit boards and assembly tools with energetic focus."
+          }
+        ],
+        "title": "Thông báo trên bảng tin"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Quân",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with a short spiky hair tuft, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Tân",
+            "outfit_en": "Single plain pale-green short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-same-script-591",
+        "learner_outcome_vi": "Hiểu và sử dụng đúng tính từ same để miêu tả sự giống nhau hoặc cùng một đối tượng.",
+        "opening_function_vi": "Hai tấm thẻ đặt cạnh nhau trong trò chơi đòi hỏi sự so sánh tương đồng trực tiếp, dẫn thẳng tới việc nhận diện tính chất giống nhau.",
+        "plot_vi": "Quân và Tân chơi trò ghép cặp hình; phát hiện hai tấm thẻ tuy khác góc chụp nhưng cùng mang một biểu tượng hoa giống nhau để ghi điểm.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hai tấm thẻ đặt cạnh nhau. Tân lật được hai hình hoa hướng dương trong trò chơi trí nhớ của lớp. Tôi nghiêng người kiểm tra: \"These cards have the same picture.\" Hai tấm thẻ này có cùng hình ảnh.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Open with visual comparison in a memory game and introduce the first English model.",
+            "scene_id": "SC01",
+            "title_vi": "Lật trúng cặp thẻ",
+            "visual_en": "Activity table with a grid of square memory cards turned face-down. In front of the friend in green, two face-up cards display identical stylized sunflower illustrations. Mascot in pale-blue leans over to examine them."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tuy cùng hình hoa vàng nhưng viền lá của một tấm dường như có nét cắt khác. Tân định nhặt cả hai thẻ bỏ vào hộp điểm của mình. Tôi giữ tay bạn lại để nhìn kỹ hơn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Create doubt and closer inspection to test whether they truly share identity.",
+            "scene_id": "SC02",
+            "title_vi": "Sự hoài nghi về chi tiết",
+            "visual_en": "Closer table view. Friend reaches out to pick up both cards. Mascot gently holds a finger down beside one card, pointing to the subtle green leaf border to scrutinize the print."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hai đứa đặt sát mép thẻ để so từng cánh hoa. Tân nheo mắt hỏi tôi: \"Are they the same?\" Chúng có giống nhau không? Tôi thấy góc lá dưới đều có một chấm đỏ nhỏ.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the second English model as a direct verification question.",
+            "scene_id": "SC03",
+            "title_vi": "Hỏi để xác nhận",
+            "visual_en": "Both characters put their heads close above the two side-by-side cards. Friend gestures with open palms asking whether the match is valid."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Để hỏi hai món đồ có giống hệt nhau không bằng tiếng Anh, bạn nói cả câu giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Invite learner retrieval of the question model with same; 4s hold.",
+            "scene_id": "SC04",
+            "stem": "Are they the ___?",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Mascot turns to viewer, holding hands symmetrically beside the two matching cards. Sentence stem displayed in upper third."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Are they the same?\" Tân cười rạng rỡ khi thấy cả hai chấm đỏ đều trùng khớp, vui vẻ thu cặp thẻ hợp lệ về phần mình.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm the correct answer and conclude with the rewarding game turn.",
+            "scene_id": "SC05",
+            "title_vi": "Ghi điểm hợp lệ",
+            "visual_en": "Friend happily slides the two verified matching sunflower cards into his score pile, while mascot smiles and turns over the next card on the grid."
+          }
+        ],
+        "title": "Cặp thẻ hoa hướng dương"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH01",
+            "name_vi": "Bảo",
+            "outfit_en": "Single pale-blue #8CCFE8 short-sleeve shirt."
+          },
+          {
+            "appearance_en": "Minimalist 2D stick figure with a small ink beret, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+            "id": "CH02",
+            "name_vi": "Lâm",
+            "outfit_en": "Single plain pale-brown short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-different-script-592",
+        "learner_outcome_vi": "Sử dụng tính từ different để chỉ ra sự khác nhau giữa các sự vật, hình ảnh và diễn đạt trọn vẹn bằng tiếng Anh.",
+        "opening_function_vi": "Hai bản phác thảo đặt cạnh nhau làm lộ ra sự bất đồng về chi tiết và màu sắc, dẫn thẳng đến việc gọi tên sự khác biệt.",
+        "plot_vi": "Bảo và Lâm phân loại các bản phác thảo phong cảnh; nhận ra hai bản vẽ khác nhau ở các chi tiết then chốt và xếp vào hồ sơ riêng.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hai bản vẽ đặt cạnh nhau. Thoạt nhìn cả hai đều vẽ cây cầu gỗ qua suối, nhưng bố cục lại không giống. Tôi chỉ tay bảo Lâm: \"The pictures are different.\" Những bức tranh này khác nhau đấy.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Open with immediate contrast between two illustrations and present the first English model.",
+            "scene_id": "SC01",
+            "title_vi": "Bản vẽ thoạt nhìn giống",
+            "visual_en": "Art studio drafting table. Two side-by-side paper sketches show wooden bridge scenes, but one includes a willow tree while the other has a moored rowboat. Mascot in pale-blue points between them while speaking to the beret-wearing friend."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bản bên trái vẽ thêm hàng liễu rủ, còn bản bên phải lại có con thuyền nan nhỏ neo dưới chân cầu. Lâm cứ ngỡ hai bản này in cùng một khuôn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Elaborate the specific observable distinctions that make them different.",
+            "scene_id": "SC02",
+            "title_vi": "Chi tiết đối lập",
+            "visual_en": "Friend with beret leans in close, comparing the willow branches on the left sheet against the boat silhouette on the right sheet. Mascot traces the difference with a pencil tip without touching the paper."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Lâm cầm hộp màu nước định tô nền trời, tôi liền nhắc bạn: \"This is a different colour.\" Đây là một màu khác rồi. Em phải dùng màu lam nhạt thay vì màu tím than.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Present the second model highlighting a color discrepancy.",
+            "scene_id": "SC03",
+            "title_vi": "Màu sắc khác biệt",
+            "visual_en": "Friend holds a watercolor cake pan of dark purple. Mascot points to the reference palette showing soft sky-blue, guiding him toward the correct shade."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Muốn nhận xét rằng những bức vẽ này khác nhau bằng tiếng Anh, bạn nói cả câu giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Invite retrieval of the core statement with different; 4s pause.",
+            "scene_id": "SC04",
+            "stem": "The pictures are ___.",
+            "title_vi": "Lời người xem giúp nói",
+            "visual_en": "Mascot turns to camera with an open hand indicating the two contrasting drawings on the table. Sentence stem clearly placed in top region."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"The pictures are different.\" Lâm xếp riêng hai bản vào hai bìa hồ sơ khác nhau, chuẩn bị cho buổi họp chọn tranh triển lãm.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "State the full answer and show the resolved organization of materials.",
+            "scene_id": "SC05",
+            "title_vi": "Phân loại rõ ràng",
+            "visual_en": "Friend places the willow drawing into a blue folder and the boat drawing into an amber folder. Mascot closes both folders neatly on the desk."
+          }
+        ],
+        "title": "Hai bản vẽ bên suối"
+      }
+    ]
+  },
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "episodes": {
+        "type": "array",
+        "minItems": 10,
+        "maxItems": 10,
+        "items": {
+          "type": "object",
+          "required": [
+            "job",
+            "title",
+            "plot_vi",
+            "opening_function_vi",
+            "learner_outcome_vi",
+            "characters",
+            "scenes"
+          ],
+          "properties": {
+            "job": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "plot_vi": {
+              "type": "string"
+            },
+            "opening_function_vi": {
+              "type": "string"
+            },
+            "learner_outcome_vi": {
+              "type": "string"
+            },
+            "characters": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "name_vi",
+                  "appearance_en",
+                  "outfit_en"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name_vi": {
+                    "type": "string"
+                  },
+                  "appearance_en": {
+                    "type": "string"
+                  },
+                  "outfit_en": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "scenes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "scene_id",
+                  "title_vi",
+                  "narration",
+                  "purpose_en",
+                  "visual_en",
+                  "character_ids",
+                  "practice_pause_seconds"
+                ],
+                "properties": {
+                  "scene_id": {
+                    "type": "string"
+                  },
+                  "title_vi": {
+                    "type": "string"
+                  },
+                  "narration": {
+                    "type": "string"
+                  },
+                  "purpose_en": {
+                    "type": "string"
+                  },
+                  "visual_en": {
+                    "type": "string"
+                  },
+                  "stem": {
+                    "type": "string"
+                  },
+                  "character_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "practice_pause_seconds": {
+                    "type": "number"
+                  },
+                  "extra_visual_states": {
+                    "type": "array",
+                    "items": {
+                      "type": "object"
+                    }
+                  },
+                  "custom_visible_text": {
+                    "type": "array",
+                    "items": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "episodes"
+    ]
+  },
+  "usage": {
+    "input_tokens": 34796,
+    "output_tokens": 40417,
+    "thinking_tokens": 29785,
+    "cache_read_tokens": 0,
+    "total_tokens": 75213
+  }
+}

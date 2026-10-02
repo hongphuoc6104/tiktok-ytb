@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 29,
+            "seconds": 9.26,
+            "min": 6.94,
+            "max": 11.57
+          },
+          {
+            "scene_id": "SC02",
+            "units": 35,
+            "seconds": 10.77,
+            "min": 8.08,
+            "max": 13.47
+          },
+          {
+            "scene_id": "SC03",
+            "units": 34,
+            "seconds": 10.49,
+            "min": 7.87,
+            "max": 13.12
+          },
+          {
+            "scene_id": "SC04",
+            "units": 12,
+            "seconds": 7.78,
+            "min": 5.84,
+            "max": 9.73
+          },
+          {
+            "scene_id": "SC05",
+            "units": 34,
+            "seconds": 10.79,
+            "min": 8.1,
+            "max": 13.49
+          }
+        ],
+        "min": 36.83,
+        "max": 61.38,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "19153",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Mẹ đưa một tấm ảnh vừa nhận, nhờ con lưu lại; con làm ngay thay vì hẹn khi rảnh, để mẹ được xem nó lần nữa. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "19217",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Mẹ đưa một tấm ảnh vừa nhận, nhờ con lưu lại; con làm ngay thay vì hẹn khi rảnh, để mẹ được xem nó lần nữa. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

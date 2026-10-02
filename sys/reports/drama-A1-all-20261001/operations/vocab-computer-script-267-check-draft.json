@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 29,
+            "seconds": 9.26,
+            "min": 6.94,
+            "max": 11.57
+          },
+          {
+            "scene_id": "SC02",
+            "units": 36,
+            "seconds": 11.2,
+            "min": 8.4,
+            "max": 14.0
+          },
+          {
+            "scene_id": "SC03",
+            "units": 31,
+            "seconds": 9.66,
+            "min": 7.25,
+            "max": 12.08
+          },
+          {
+            "scene_id": "SC04",
+            "units": 21,
+            "seconds": 10.43,
+            "min": 7.83,
+            "max": 13.04
+          },
+          {
+            "scene_id": "SC05",
+            "units": 36,
+            "seconds": 11.35,
+            "min": 8.51,
+            "max": 14.19
+          }
+        ],
+        "min": 38.93,
+        "max": 64.88,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "19097",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Bà ngại chạm máy tính để xem ảnh cháu; nhân vật chờ bà tự làm một bước nhỏ thay vì bấm hộ hết. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

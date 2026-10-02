@@ -1,0 +1,484 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "122a59b3c788c7ac2a3d873e751702f23f67ec586d22d44a4d2772724fe1bab8",
+  "topic": "Học từ vựng tiếng Anh SAVE (động từ: lưu tệp) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SAVE",
+    "Làm rõ nghĩa lõi \"lưu tệp\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SAVE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SAVE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Nhân vật đồng hành chính",
+      "appearance": "Adult friend or companion. Minimal flat ink style; consistent adult face, age, gender and identity across all scenes. Distinct from canonical mascot. Plain mustard top; only explicitly required work outerwear, helmet or life jacket.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đừng đóng bản đang vẽ — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot's cursor hovers near window close icon on drawing app; friend raises hand.",
+      "setting": "Máy tính có bức vẽ đang chỉnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Save the file!\" Lưu tập tin đã! Save trong bài này là lưu tệp. Bạn vừa chỉnh xong hình, tay đã đưa tới nút đóng; người bạn thấy vậy liền nhắc trước khi công sức bị bỏ lại.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "save",
+          "meaning": "lưu tệp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot's cursor hovers near window close icon on drawing app; friend raises hand. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot's cursor hovers near window close icon on drawing app; friend raises hand.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "Save the file!",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Save the file!\" Lưu tập tin đã! Save trong bài này là lưu tệp. Bạn vừa chỉnh xong hình, tay đã đưa tới nút đóng; người bạn thấy vậy liền nhắc trước khi công sức bị bỏ lại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Đừng đóng bản đang vẽ — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Mascot selects generic save icon; destination folder visible without names.",
+      "setting": "Máy tính có bức vẽ đang chỉnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn nói: \"Save the file.\" Hãy lưu tập tin. The file là bức vẽ đang làm; bạn chọn thao tác lưu và kiểm tra tệp ở đúng thư mục mình muốn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "save",
+          "meaning": "lưu tệp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot selects generic save icon; destination folder visible without names. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot selects generic save icon; destination folder visible without names.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Save the file.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nói: \"Save the file.\" Hãy lưu tập tin. The file là bức vẽ đang làm; bạn chọn thao tác lưu và kiểm tra tệp ở đúng thư mục mình muốn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Đừng đóng bản đang vẽ — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Drawing now appears as saved picture thumbnail in folder beside open app.",
+      "setting": "Máy tính có bức vẽ đang chỉnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn nhờ thêm: \"Please save this picture.\" Làm ơn lưu bức hình này. This picture chỉ hình vừa hoàn thành; người bạn đợi dấu lưu xong rồi mới đóng cửa sổ.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "save",
+          "meaning": "lưu tệp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Drawing app displays the completed image with save action pending. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Drawing app displays the completed image with save action pending.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "Please save this picture.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Saved image thumbnail appears in destination folder beside same drawing app. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve base scene camera, background, character identities, single mascot torso and exact clothing, prop positions and visible text; change only the specified state.",
+          "change": "Saved image thumbnail appears in destination folder beside same drawing app.",
+          "reason": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "visible_text": [
+            {
+              "text": "Please save this picture.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhờ thêm: \"Please save this picture.\" Làm ơn lưu bức hình này. This picture chỉ hình vừa hoàn thành; người bạn đợi dấu lưu xong rồi mới đóng cửa sổ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "anchor": {
+            "vi": {
+              "quote": "đợi dấu lưu xong",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Đừng đóng bản đang vẽ — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold cursor near close icon and unsaved artwork; no printed complete answer.",
+      "setting": "Máy tính có bức vẽ đang chỉnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn thấy người bạn sắp đóng tài liệu chưa lưu. Hãy nói một lời nhắc có save. Có thể dùng câu ngắn vừa nghe, không cần thêm lời giải thích dài.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "save",
+          "meaning": "lưu tệp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold cursor near close icon and unsaved artwork; no printed complete answer. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold cursor near close icon and unsaved artwork; no printed complete answer.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn thấy người bạn sắp đóng tài liệu chưa lưu. Hãy nói một lời nhắc có save. Có thể dùng câu ngắn vừa nghe, không cần thêm lời giải thích dài.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Đừng đóng bản đang vẽ — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot reopens the saved drawing from folder and recognizes completed image.",
+      "setting": "Máy tính có bức vẽ đang chỉnh.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Save the file.\" Hoặc \"Please save this picture.\" Cả hai đều nhắc lưu đúng thứ đang làm. Mở lại thấy hình vẫn còn, bạn mới yên tâm rời bàn.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "save",
+          "meaning": "lưu tệp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot reopens the saved drawing from folder and recognizes completed image. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot reopens the saved drawing from folder and recognizes completed image.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "Save the file.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Save the file.\" Hoặc \"Please save this picture.\" Cả hai đều nhắc lưu đúng thứ đang làm. Mở lại thấy hình vẫn còn, bạn mới yên tâm rời bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "\"Save the file!\" Lưu tập tin đã! Save trong bài này là lưu tệp. Bạn vừa chỉnh xong hình, tay đã đưa tới nút đóng; người bạn thấy vậy liền nhắc trước khi công sức bị bỏ lại."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "\"Save the file!\" Lưu tập tin đã! Save trong bài này là lưu tệp. Bạn vừa chỉnh xong hình, tay đã đưa tới nút đóng; người bạn thấy vậy liền nhắc trước khi công sức bị bỏ lại."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người bạn nói: \"Save the file.\" Hãy lưu tập tin. The file là bức vẽ đang làm; bạn chọn thao tác lưu và kiểm tra tệp ở đúng thư mục mình muốn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người bạn nói: \"Save the file.\" Hãy lưu tập tin. The file là bức vẽ đang làm; bạn chọn thao tác lưu và kiểm tra tệp ở đúng thư mục mình muốn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nhờ thêm: \"Please save this picture.\" Làm ơn lưu bức hình này. This picture chỉ hình vừa hoàn thành; người bạn đợi dấu lưu xong rồi mới đóng cửa sổ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn thấy người bạn sắp đóng tài liệu chưa lưu. Hãy nói một lời nhắc có save. Có thể dùng câu ngắn vừa nghe, không cần thêm lời giải thích dài."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Save the file.\" Hoặc \"Please save this picture.\" Cả hai đều nhắc lưu đúng thứ đang làm. Mở lại thấy hình vẫn còn, bạn mới yên tâm rời bàn."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Định đóng → nhớ lưu → lưu → mở lại.. Next visible event: Mascot selects generic save icon; destination folder visible without names."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Định đóng → nhớ lưu → lưu → mở lại.. Next visible event: Drawing now appears as saved picture thumbnail in folder beside open app."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Định đóng → nhớ lưu → lưu → mở lại.. Next visible event: Hold cursor near close icon and unsaved artwork; no printed complete answer."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Định đóng → nhớ lưu → lưu → mở lại.. Next visible event: Mascot reopens the saved drawing from folder and recognizes completed image."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Định đóng → nhớ lưu → lưu → mở lại.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

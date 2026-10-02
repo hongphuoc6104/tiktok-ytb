@@ -1,0 +1,476 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "643eee306a0621421518f67bdb47547c0951db16db19e3b95939afedf887bb93",
+  "topic": "Học từ vựng tiếng Anh PLAYER (danh từ: cầu thủ, vận động viên) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ PLAYER",
+    "Làm rõ nghĩa lõi \"cầu thủ, vận động viên\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng PLAYER, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại PLAYER, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành trong tình huống",
+      "appearance": "Adult spectator friend. Minimal flat ink style. Maintain age, gender, clothing and identity across all scenes; use mustard top and only explicitly needed accessory. Distinct from canonical mascot.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Adult football player wearing mustard practice bib. Minimal flat ink style; consistent role, adult identity and lavender clothing with only scenario-required outerwear. Distinct from mascot and companion.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Ai đang chơi, ai đang xem — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot stands with supporter friend outside field, active adult football players inside wear simple team bibs.",
+      "setting": "Sân bóng tập và ghế khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Cùng mặc áo đội, ai đang chơi trên sân? Player là cầu thủ hoặc người chơi trong môn thể thao. Bạn tới xem buổi đá bóng, thấy người bạn mặc áo giống đội nhưng đứng ngoài hàng rào cổ vũ.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot stands with supporter friend outside field, active adult football players inside wear simple team bibs. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stands with supporter friend outside field, active adult football players inside wear simple team bibs.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "player",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Cùng mặc áo đội, ai đang chơi trên sân? Player là cầu thủ hoặc người chơi trong môn thể thao. Bạn tới xem buổi đá bóng, thấy người bạn mặc áo giống đội nhưng đứng ngoài hàng rào cổ vũ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Ai đang chơi, ai đang xem — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "One adult football player receives ball on field, mascot points from spectator side.",
+      "setting": "Sân bóng tập và ghế khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn chỉ người trên sân: \"He's a football player.\" Anh ấy là cầu thủ bóng đá. A player nói người tham gia chơi; trong cảnh này người ấy đang nhận bóng để chuyền tiếp cho đồng đội.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "One adult football player receives ball on field, mascot points from spectator side. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "One adult football player receives ball on field, mascot points from spectator side.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "He's a football player.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn chỉ người trên sân: \"He's a football player.\" Anh ấy là cầu thủ bóng đá. A player nói người tham gia chơi; trong cảnh này người ấy đang nhận bóng để chuyền tiếp cho đồng đội.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Ai đang chơi, ai đang xem — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Same player runs into space for pass, mascot and friend watch beyond fence.",
+      "setting": "Sân bóng tập và ghế khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn nhận xét: \"That player is fast.\" Cầu thủ kia nhanh. That player chỉ đúng người vừa bứt lên đón bóng; bạn nhìn hành động để nhận vai, không chỉ nhìn chiếc áo đang mặc.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Same player runs into space for pass, mascot and friend watch beyond fence. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same player runs into space for pass, mascot and friend watch beyond fence.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "That player is fast.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nhận xét: \"That player is fast.\" Cầu thủ kia nhanh. That player chỉ đúng người vừa bứt lên đón bóng; bạn nhìn hành động để nhận vai, không chỉ nhìn chiếc áo đang mặc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Ai đang chơi, ai đang xem — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Active player and spectator clearly separated, full model sentence with no answer highlight.",
+      "setting": "Sân bóng tập và ghế khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Một người đang thi đấu, một người đứng xem. Player gọi người nào trong tình huống này? Chọn đúng người rồi nói \"He's a football player.\".",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Active player and spectator clearly separated, full model sentence with no answer highlight. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Active player and spectator clearly separated, full model sentence with no answer highlight.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "He's a football player.",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Một người đang thi đấu, một người đứng xem. Player gọi người nào trong tình huống này? Chọn đúng người rồi nói \"He's a football player.\".",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Ai đang chơi, ai đang xem — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot watches player pass ball while supporter friend claps outside field.",
+      "setting": "Sân bóng tập và ghế khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người đang thi đấu là player. \"He's a football player.\" Bạn đã biết người bạn ngoài hàng rào đang cổ vũ cho ai. Chiếc áo có thể giống nhau, nhưng việc họ làm khác nhau.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "player",
+          "meaning": "cầu thủ, vận động viên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot watches player pass ball while supporter friend claps outside field. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot watches player pass ball while supporter friend claps outside field.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "He's a football player.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Người đang thi đấu là player. \"He's a football player.\" Bạn đã biết người bạn ngoài hàng rào đang cổ vũ cho ai. Chiếc áo có thể giống nhau, nhưng việc họ làm khác nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Cùng mặc áo đội, ai đang chơi trên sân? Player là cầu thủ hoặc người chơi trong môn thể thao. Bạn tới xem buổi đá bóng, thấy người bạn mặc áo giống đội nhưng đứng ngoài hàng rào cổ vũ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Cùng mặc áo đội, ai đang chơi trên sân? Player là cầu thủ hoặc người chơi trong môn thể thao. Bạn tới xem buổi đá bóng, thấy người bạn mặc áo giống đội nhưng đứng ngoài hàng rào cổ vũ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn chỉ người trên sân: \"He's a football player.\" Anh ấy là cầu thủ bóng đá. A player nói người tham gia chơi; trong cảnh này người ấy đang nhận bóng để chuyền tiếp cho đồng đội."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn chỉ người trên sân: \"He's a football player.\" Anh ấy là cầu thủ bóng đá. A player nói người tham gia chơi; trong cảnh này người ấy đang nhận bóng để chuyền tiếp cho đồng đội."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn nhận xét: \"That player is fast.\" Cầu thủ kia nhanh. That player chỉ đúng người vừa bứt lên đón bóng; bạn nhìn hành động để nhận vai, không chỉ nhìn chiếc áo đang mặc."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Một người đang thi đấu, một người đứng xem. Player gọi người nào trong tình huống này? Chọn đúng người rồi nói \"He's a football player.\"."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Người đang thi đấu là player. \"He's a football player.\" Bạn đã biết người bạn ngoài hàng rào đang cổ vũ cho ai. Chiếc áo có thể giống nhau, nhưng việc họ làm khác nhau."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Nhìn áo giống → nhận vai → thấy chơi → gọi tên vai.. Next visible event: One adult football player receives ball on field, mascot points from spectator side."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Nhìn áo giống → nhận vai → thấy chơi → gọi tên vai.. Next visible event: Same player runs into space for pass, mascot and friend watch beyond fence."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Nhìn áo giống → nhận vai → thấy chơi → gọi tên vai.. Next visible event: Active player and spectator clearly separated, full model sentence with no answer highlight."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhìn áo giống → nhận vai → thấy chơi → gọi tên vai.. Next visible event: Mascot watches player pass ball while supporter friend claps outside field."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhìn áo giống → nhận vai → thấy chơi → gọi tên vai.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

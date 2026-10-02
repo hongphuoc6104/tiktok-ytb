@@ -1,0 +1,569 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "b0911696c777b8b6a2be1013a15fe4f76cec6be8f17688f657fe09ede7725f42",
+  "topic": "Học từ vựng tiếng Anh WAIT FOR (cụm từ: chờ đợi) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ WAIT FOR",
+    "Làm rõ nghĩa lõi \"chờ đợi\" (cụm từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng WAIT FOR, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại WAIT FOR, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult companion who listens or helps with the current task. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người tham gia hoặc nhân vật bổ trợ",
+      "appearance": "Fictional adult female Lan, identified participant or recipient, keep her identity throughout. Minimal flat ink style and ordinary adult proportions.",
+      "outfit": "Single plain lavender top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Bạn tới rồi, còn người hẹn đâu? — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Mascot waits outside class with companion, female Lan has not arrived yet; doorway and empty place remain visible.",
+      "setting": "Cửa lớp thủ công.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Mình còn chờ Lan, đừng vào lớp vội. Wait for là chờ đợi ai hoặc điều gì. \"Stay until the person arrives.\" Trong chuyện này, bạn chờ Lan ở điểm hai người đã thống nhất, không phải đang đi tìm cô ấy khắp nơi.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait for",
+          "meaning": "chờ đợi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot waits outside class with companion, female Lan has not arrived yet; doorway and empty place remain visible. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot waits outside class with companion, female Lan has not arrived yet; doorway and empty place remain visible.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "wait for",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Mình còn chờ Lan, đừng vào lớp vội. Wait for là chờ đợi ai hoặc điều gì. \"Stay until the person arrives.\" Trong chuyện này, bạn chờ Lan ở điểm hai người đã thống nhất, không phải đang đi tìm cô ấy khắp nơi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Bạn tới rồi, còn người hẹn đâu? — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Adult companion approaches waiting mascot outside same doorway.",
+      "setting": "Cửa lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn giải thích: \"I'm waiting for Lan.\" Tôi đang chờ Lan. \"Lan is the person I expect.\" Một người bạn khác nghe câu đó sẽ hiểu vì sao bạn chưa bước vào, thay vì tưởng bạn đứng đây mà không có kế hoạch.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait for",
+          "meaning": "chờ đợi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Adult companion approaches waiting mascot outside same doorway. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Adult companion approaches waiting mascot outside same doorway.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "I'm waiting for Lan.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn giải thích: \"I'm waiting for Lan.\" Tôi đang chờ Lan. \"Lan is the person I expect.\" Một người bạn khác nghe câu đó sẽ hiểu vì sao bạn chưa bước vào, thay vì tưởng bạn đứng đây mà không có kế hoạch.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Bạn tới rồi, còn người hẹn đâu? — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Mascot remains at agreed doorway, companion checks shared activity materials.",
+      "setting": "Cửa lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "For giữ rõ người được chờ trong hai mẫu của bài. \"The name follows for here.\" Ta không bỏ for trong câu đang luyện. Thời điểm người kia tới chưa được biết chính xác; việc chờ vẫn tiếp tục trong tình huống.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait for",
+          "meaning": "chờ đợi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot remains at agreed doorway, companion checks shared activity materials. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot remains at agreed doorway, companion checks shared activity materials.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "wait for",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "For giữ rõ người được chờ trong hai mẫu của bài. \"The name follows for here.\" Ta không bỏ for trong câu đang luyện. Thời điểm người kia tới chưa được biết chính xác; việc chờ vẫn tiếp tục trong tình huống.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Bạn tới rồi, còn người hẹn đâu? — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Both wait in same position; female Lan approaches from corridor.",
+      "setting": "Cửa lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Người bạn đề nghị: \"Let's wait for her here.\" Cùng chờ cô ấy ở đây nhé. \"Her means Lan from the first sentence.\" Hai người giữ điểm hẹn, để Lan đến có thể thấy họ trước cửa lớp.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait for",
+          "meaning": "chờ đợi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both wait in same position; female Lan approaches from corridor. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both wait in same position; female Lan approaches from corridor.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "Let's wait for her here.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn đề nghị: \"Let's wait for her here.\" Cùng chờ cô ấy ở đây nhé. \"Her means Lan from the first sentence.\" Hai người giữ điểm hẹn, để Lan đến có thể thấy họ trước cửa lớp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Bạn tới rồi, còn người hẹn đâu? — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold clear waiting scene and model naming Lan.",
+      "setting": "Cửa lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn nói mình đang chờ Lan. \"Keep for before the name.\" Hãy nói: \"I'm waiting for Lan.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait for",
+          "meaning": "chờ đợi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold clear waiting scene and model naming Lan. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold clear waiting scene and model naming Lan.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Keep for before the name.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "I'm waiting for Lan.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói mình đang chờ Lan. \"Keep for before the name.\" Hãy nói: \"I'm waiting for Lan.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Bạn tới rồi, còn người hẹn đâu? — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Lan joins mascot and companion, all enter established craft classroom.",
+      "setting": "Cửa lớp thủ công.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"I'm waiting for Lan.\" Tôi đang chờ Lan. \"The person we waited for has arrived.\" Lan tới, cả nhóm mới cùng vào lớp. Câu vừa luyện nêu đúng người bạn chờ; cuối chuyện cho thấy cuộc chờ đã có kết quả.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait for",
+          "meaning": "chờ đợi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Lan joins mascot and companion, all enter established craft classroom. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Lan joins mascot and companion, all enter established craft classroom.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "I'm waiting for Lan.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm waiting for Lan.\" Tôi đang chờ Lan. \"The person we waited for has arrived.\" Lan tới, cả nhóm mới cùng vào lớp. Câu vừa luyện nêu đúng người bạn chờ; cuối chuyện cho thấy cuộc chờ đã có kết quả.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mình còn chờ Lan, đừng vào lớp vội. Wait for là chờ đợi ai hoặc điều gì. \"Stay until the person arrives.\" Trong chuyện này, bạn chờ Lan ở điểm hai người đã thống nhất, không phải đang đi tìm cô ấy khắp nơi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mình còn chờ Lan, đừng vào lớp vội. Wait for là chờ đợi ai hoặc điều gì. \"Stay until the person arrives.\" Trong chuyện này, bạn chờ Lan ở điểm hai người đã thống nhất, không phải đang đi tìm cô ấy khắp nơi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn giải thích: \"I'm waiting for Lan.\" Tôi đang chờ Lan. \"Lan is the person I expect.\" Một người bạn khác nghe câu đó sẽ hiểu vì sao bạn chưa bước vào, thay vì tưởng bạn đứng đây mà không có kế hoạch."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn giải thích: \"I'm waiting for Lan.\" Tôi đang chờ Lan. \"Lan is the person I expect.\" Một người bạn khác nghe câu đó sẽ hiểu vì sao bạn chưa bước vào, thay vì tưởng bạn đứng đây mà không có kế hoạch."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "For giữ rõ người được chờ trong hai mẫu của bài. \"The name follows for here.\" Ta không bỏ for trong câu đang luyện. Thời điểm người kia tới chưa được biết chính xác; việc chờ vẫn tiếp tục trong tình huống."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Người bạn đề nghị: \"Let's wait for her here.\" Cùng chờ cô ấy ở đây nhé. \"Her means Lan from the first sentence.\" Hai người giữ điểm hẹn, để Lan đến có thể thấy họ trước cửa lớp."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn nói mình đang chờ Lan. \"Keep for before the name.\" Hãy nói: \"I'm waiting for Lan.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I'm waiting for Lan.\" Tôi đang chờ Lan. \"The person we waited for has arrived.\" Lan tới, cả nhóm mới cùng vào lớp. Câu vừa luyện nêu đúng người bạn chờ; cuối chuyện cho thấy cuộc chờ đã có kết quả."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Mascot waits outside class with companion, female Lan has not arrived yet; doorway and empty place remain visible. Continue with the existing connected model: Adult companion approaches waiting mascot outside same doorway."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Đến điểm hẹn → chờ Lan → giữ đúng người → Lan xuất hiện.. Next event: Mascot remains at agreed doorway, companion checks shared activity materials."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Đến điểm hẹn → chờ Lan → giữ đúng người → Lan xuất hiện.. Next event: Both wait in same position; female Lan approaches from corridor."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Đến điểm hẹn → chờ Lan → giữ đúng người → Lan xuất hiện.. Next event: Hold clear waiting scene and model naming Lan."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đến điểm hẹn → chờ Lan → giữ đúng người → Lan xuất hiện.. Next event: Lan joins mascot and companion, all enter established craft classroom."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đến điểm hẹn → chờ Lan → giữ đúng người → Lan xuất hiện.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

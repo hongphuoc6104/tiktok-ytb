@@ -1,0 +1,467 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "cb2d626a7200a78bf32808b88337475c528c7ec396029c448487fa0dceea8918",
+  "topic": "Học từ vựng tiếng Anh BUS STOP (cụm từ: trạm xe buýt) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ BUS STOP",
+    "Làm rõ nghĩa lõi \"trạm xe buýt\" (cụm từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng BUS STOP, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại BUS STOP, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Nhân vật đồng hành chính",
+      "appearance": "Adult friend or companion. Minimal flat ink style; consistent adult face, age, gender and identity across all scenes. Distinct from canonical mascot. Plain mustard top; only explicitly required work outerwear, helmet or life jacket.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đứng đúng phía đường — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot on sidewalk sees two opposite bus shelters, friend checks route map.",
+      "setting": "Vỉa hè với hai trạm ở hai phía đường.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Thấy trạm rồi, nhưng có đúng phía không? Bus stop là trạm xe buýt. Bạn nhìn thấy mái che bên kia đường, trong khi điểm đón theo hướng mình cần lại ở cùng phía đang đứng.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "bus stop",
+          "meaning": "trạm xe buýt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot on sidewalk sees two opposite bus shelters, friend checks route map. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot on sidewalk sees two opposite bus shelters, friend checks route map.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "bus stop",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Thấy trạm rồi, nhưng có đúng phía không? Bus stop là trạm xe buýt. Bạn nhìn thấy mái che bên kia đường, trong khi điểm đón theo hướng mình cần lại ở cùng phía đang đứng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Đứng đúng phía đường — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Friend points to same-side shelter with route dots; both stay on sidewalk.",
+      "setting": "Vỉa hè với hai trạm ở hai phía đường.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn hỏi: \"Where is the bus stop?\" Trạm xe buýt ở đâu? Người bạn chỉ mái che gần hơn, rồi kiểm tra hướng xe đi. Tên nơi đã rõ, nhưng mình vẫn cần đúng hướng.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "bus stop",
+          "meaning": "trạm xe buýt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend points to same-side shelter with route dots; both stay on sidewalk. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend points to same-side shelter with route dots; both stay on sidewalk.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Where is the bus stop?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Where is the bus stop?\" Trạm xe buýt ở đâu? Người bạn chỉ mái che gần hơn, rồi kiểm tra hướng xe đi. Tên nơi đã rõ, nhưng mình vẫn cần đúng hướng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Đứng đúng phía đường — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Mascot waits under same-side shelter and phones arriving friend; opposite shelter visible distantly.",
+      "setting": "Vỉa hè với hai trạm ở hai phía đường.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn báo cho người tới sau: \"I'm at the bus stop.\" Tôi đang ở trạm xe buýt. Bạn nói thêm vị trí hẹn riêng để người ấy tới đúng phía, tránh mỗi người chờ một bên.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "bus stop",
+          "meaning": "trạm xe buýt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot waits under same-side shelter and phones arriving friend; opposite shelter visible distantly. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot waits under same-side shelter and phones arriving friend; opposite shelter visible distantly.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "I'm at the bus stop.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn báo cho người tới sau: \"I'm at the bus stop.\" Tôi đang ở trạm xe buýt. Bạn nói thêm vị trí hẹn riêng để người ấy tới đúng phía, tránh mỗi người chờ một bên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Đứng đúng phía đường — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold mascot under shelter with two choices; the second is a question ending with a question mark.",
+      "setting": "Vỉa hè với hai trạm ở hai phía đường.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn đang đứng ở trạm và cần báo đã tới. Chọn câu \"I'm at the bus stop.\" hay \"Where is the bus stop?\" rồi nói lời báo vị trí.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "bus stop",
+          "meaning": "trạm xe buýt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold mascot under shelter with two choices; the second is a question ending with a question mark. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold mascot under shelter with two choices; the second is a question ending with a question mark.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "I'm at the bus stop.",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "Where is the bus stop?",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đang đứng ở trạm và cần báo đã tới. Chọn câu \"I'm at the bus stop.\" hay \"Where is the bus stop?\" rồi nói lời báo vị trí.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 6
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Đứng đúng phía đường — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Two friends wait together inside same shelter, roadway clear between opposing stops.",
+      "setting": "Vỉa hè với hai trạm ở hai phía đường.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"I'm at the bus stop.\" Tôi đang ở trạm xe buýt. Người bạn tới đúng phía và đứng cạnh bạn. Hai người đợi cùng một hướng, không chỉ cùng tên trạm.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "bus stop",
+          "meaning": "trạm xe buýt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Two friends wait together inside same shelter, roadway clear between opposing stops. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two friends wait together inside same shelter, roadway clear between opposing stops.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "I'm at the bus stop.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm at the bus stop.\" Tôi đang ở trạm xe buýt. Người bạn tới đúng phía và đứng cạnh bạn. Hai người đợi cùng một hướng, không chỉ cùng tên trạm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Thấy trạm rồi, nhưng có đúng phía không? Bus stop là trạm xe buýt. Bạn nhìn thấy mái che bên kia đường, trong khi điểm đón theo hướng mình cần lại ở cùng phía đang đứng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Thấy trạm rồi, nhưng có đúng phía không? Bus stop là trạm xe buýt. Bạn nhìn thấy mái che bên kia đường, trong khi điểm đón theo hướng mình cần lại ở cùng phía đang đứng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Where is the bus stop?\" Trạm xe buýt ở đâu? Người bạn chỉ mái che gần hơn, rồi kiểm tra hướng xe đi. Tên nơi đã rõ, nhưng mình vẫn cần đúng hướng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Where is the bus stop?\" Trạm xe buýt ở đâu? Người bạn chỉ mái che gần hơn, rồi kiểm tra hướng xe đi. Tên nơi đã rõ, nhưng mình vẫn cần đúng hướng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn báo cho người tới sau: \"I'm at the bus stop.\" Tôi đang ở trạm xe buýt. Bạn nói thêm vị trí hẹn riêng để người ấy tới đúng phía, tránh mỗi người chờ một bên."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn đang đứng ở trạm và cần báo đã tới. Chọn câu \"I'm at the bus stop.\" hay \"Where is the bus stop?\" rồi nói lời báo vị trí."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I'm at the bus stop.\" Tôi đang ở trạm xe buýt. Người bạn tới đúng phía và đứng cạnh bạn. Hai người đợi cùng một hướng, không chỉ cùng tên trạm."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Tìm trạm → thấy hai phía → kiểm tra hướng → đợi đúng.. Next visible event: Friend points to same-side shelter with route dots; both stay on sidewalk."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Tìm trạm → thấy hai phía → kiểm tra hướng → đợi đúng.. Next visible event: Mascot waits under same-side shelter and phones arriving friend; opposite shelter visible distantly."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Tìm trạm → thấy hai phía → kiểm tra hướng → đợi đúng.. Next visible event: Hold mascot under shelter with two choices; the second is a question ending with a question mark."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Tìm trạm → thấy hai phía → kiểm tra hướng → đợi đúng.. Next visible event: Two friends wait together inside same shelter, roadway clear between opposing stops."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Tìm trạm → thấy hai phía → kiểm tra hướng → đợi đúng.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

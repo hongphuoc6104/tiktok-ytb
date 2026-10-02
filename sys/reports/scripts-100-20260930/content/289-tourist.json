@@ -1,0 +1,466 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "75130b2bd85c2bff9240a5f74e0d68232954b551360f5df19bbdd7cb7f7176c0",
+  "topic": "Học từ vựng tiếng Anh TOURIST (danh từ: khách du lịch) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TOURIST",
+    "Làm rõ nghĩa lõi \"khách du lịch\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TOURIST, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TOURIST, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Nhân vật đồng hành chính",
+      "appearance": "Adult travel companion. Minimal flat ink style; consistent adult face, age, gender and identity across all scenes. Distinct from canonical mascot. Plain mustard top; only explicitly required work outerwear, helmet or life jacket.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Adult information attendant. Minimal flat ink style; keep one consistent adult identity across scenes. Distinct from mascot and main companion. Plain lavender top with explicitly required professional outerwear only.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Người cầm bản đồ cần gì — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot holds large folded map at visitor information booth in square.",
+      "setting": "Quảng trường và quầy thông tin.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"I'm a tourist.\" Tôi là khách du lịch. Bản đồ mở to, người nhìn vẫn ngơ ngác! Bạn đang ghé một nơi mới, muốn tìm khu tham quan; người ở quầy hướng dẫn nhìn thấy và bước tới hỏi.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds large folded map at visitor information booth in square. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds large folded map at visitor information booth in square.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "I'm a tourist.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm a tourist.\" Tôi là khách du lịch. Bản đồ mở to, người nhìn vẫn ngơ ngác! Bạn đang ghé một nơi mới, muốn tìm khu tham quan; người ở quầy hướng dẫn nhìn thấy và bước tới hỏi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Người cầm bản đồ cần gì — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Mascot indicates landmark icon on map to adult information attendant.",
+      "setting": "Quảng trường và quầy thông tin.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn giới thiệu: \"I'm a tourist.\" Tôi là khách du lịch. A tourist nói vai trò của mình trong chuyến thăm này; bạn chỉ nơi muốn đến để người hướng dẫn biết cần giúp gì.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot indicates landmark icon on map to adult information attendant. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot indicates landmark icon on map to adult information attendant.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "I'm a tourist.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn giới thiệu: \"I'm a tourist.\" Tôi là khách du lịch. A tourist nói vai trò của mình trong chuyến thăm này; bạn chỉ nơi muốn đến để người hướng dẫn biết cần giúp gì.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Người cầm bản đồ cần gì — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Attendant offers a clear simple map while old map is awkwardly folded.",
+      "setting": "Quảng trường và quầy thông tin.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn nói: \"The tourist needs a map.\" Vị khách du lịch cần một bản đồ. Bản của bạn bị gấp che mất một góc, nên người hướng dẫn đưa bản dễ xem hơn.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Attendant offers a clear simple map while old map is awkwardly folded. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Attendant offers a clear simple map while old map is awkwardly folded.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "The tourist needs a map.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nói: \"The tourist needs a map.\" Vị khách du lịch cần một bản đồ. Bản của bạn bị gấp che mất một góc, nên người hướng dẫn đưa bản dễ xem hơn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Người cầm bản đồ cần gì — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold mascot at visitor booth and sentence stem only.",
+      "setting": "Quảng trường và quầy thông tin.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn đang thăm một thành phố và muốn nói mình là khách du lịch. Hãy nói câu ngắn với \"I'm a...\" bằng từ vừa học, như đứng trước quầy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold mascot at visitor booth and sentence stem only. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold mascot at visitor booth and sentence stem only.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "I'm a...",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đang thăm một thành phố và muốn nói mình là khách du lịch. Hãy nói câu ngắn với \"I'm a...\" bằng từ vừa học, như đứng trước quầy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Người cầm bản đồ cần gì — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot walks toward landmark with map held correctly, attendant waves.",
+      "setting": "Quảng trường và quầy thông tin.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"I'm a tourist.\" Bạn là khách du lịch trong tình huống ấy. Bản đồ đã mở đúng mặt, lối đi cũng được chỉ. Bạn cảm ơn rồi bắt đầu khám phá.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tourist",
+          "meaning": "khách du lịch"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot walks toward landmark with map held correctly, attendant waves. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot walks toward landmark with map held correctly, attendant waves.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "I'm a tourist.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm a tourist.\" Bạn là khách du lịch trong tình huống ấy. Bản đồ đã mở đúng mặt, lối đi cũng được chỉ. Bạn cảm ơn rồi bắt đầu khám phá.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "\"I'm a tourist.\" Tôi là khách du lịch. Bản đồ mở to, người nhìn vẫn ngơ ngác! Bạn đang ghé một nơi mới, muốn tìm khu tham quan; người ở quầy hướng dẫn nhìn thấy và bước tới hỏi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "\"I'm a tourist.\" Tôi là khách du lịch. Bản đồ mở to, người nhìn vẫn ngơ ngác! Bạn đang ghé một nơi mới, muốn tìm khu tham quan; người ở quầy hướng dẫn nhìn thấy và bước tới hỏi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn giới thiệu: \"I'm a tourist.\" Tôi là khách du lịch. A tourist nói vai trò của mình trong chuyến thăm này; bạn chỉ nơi muốn đến để người hướng dẫn biết cần giúp gì."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn giới thiệu: \"I'm a tourist.\" Tôi là khách du lịch. A tourist nói vai trò của mình trong chuyến thăm này; bạn chỉ nơi muốn đến để người hướng dẫn biết cần giúp gì."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn nói: \"The tourist needs a map.\" Vị khách du lịch cần một bản đồ. Bản của bạn bị gấp che mất một góc, nên người hướng dẫn đưa bản dễ xem hơn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn đang thăm một thành phố và muốn nói mình là khách du lịch. Hãy nói câu ngắn với \"I'm a...\" bằng từ vừa học, như đứng trước quầy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I'm a tourist.\" Bạn là khách du lịch trong tình huống ấy. Bản đồ đã mở đúng mặt, lối đi cũng được chỉ. Bạn cảm ơn rồi bắt đầu khám phá."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Khách tìm lối → tự giới thiệu → hỏi hỗ trợ → tìm được nơi.. Next visible event: Mascot indicates landmark icon on map to adult information attendant."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Khách tìm lối → tự giới thiệu → hỏi hỗ trợ → tìm được nơi.. Next visible event: Attendant offers a clear simple map while old map is awkwardly folded."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Khách tìm lối → tự giới thiệu → hỏi hỗ trợ → tìm được nơi.. Next visible event: Hold mascot at visitor booth and sentence stem only."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Khách tìm lối → tự giới thiệu → hỏi hỗ trợ → tìm được nơi.. Next visible event: Mascot walks toward landmark with map held correctly, attendant waves."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Khách tìm lối → tự giới thiệu → hỏi hỗ trợ → tìm được nơi.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

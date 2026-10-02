@@ -1,0 +1,469 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "e03219c5dba617f022d5e6c19625941c9a83f45788c1a13fe8802b371cfded28",
+  "topic": "Học từ vựng tiếng Anh EXCITED (tính từ: hào hứng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ EXCITED",
+    "Làm rõ nghĩa lõi \"hào hứng\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng EXCITED, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại EXCITED, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Túi đã chuẩn bị từ tối trước — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot checks packed bag and fictional trip plan before departure day, companion nearby.",
+      "setting": "Bàn chuẩn bị chuyến thăm, túi và vé hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Chưa tới ngày đi, bạn đã xếp túi xong rồi! Excited nghĩa là hào hứng. \"Looking forward to something.\" Bạn sắp thăm một nơi đã muốn tới cùng người bạn, nên cứ xem lại kế hoạch của chuyến đi.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "excited",
+          "meaning": "hào hứng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot checks packed bag and fictional trip plan before departure day, companion nearby. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot checks packed bag and fictional trip plan before departure day, companion nearby.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "excited",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Chưa tới ngày đi, bạn đã xếp túi xong rồi! Excited nghĩa là hào hứng. \"Looking forward to something.\" Bạn sắp thăm một nơi đã muốn tới cùng người bạn, nên cứ xem lại kế hoạch của chuyến đi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Túi đã chuẩn bị từ tối trước — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Mascot shows packed bag as friend checks agreed travel-item icons.",
+      "setting": "Bàn chuẩn bị chuyến thăm, túi và vé hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn kể: \"I'm excited about the trip.\" Tôi hào hứng về chuyến đi. \"I want it to begin.\" Người bạn nhìn túi đã xếp rồi cùng kiểm xem hai người có mang những thứ đã thống nhất chưa.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "excited",
+          "meaning": "hào hứng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot shows packed bag as friend checks agreed travel-item icons. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot shows packed bag as friend checks agreed travel-item icons.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "I'm excited about the trip.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể: \"I'm excited about the trip.\" Tôi hào hứng về chuyến đi. \"I want it to begin.\" Người bạn nhìn túi đã xếp rồi cùng kiểm xem hai người có mang những thứ đã thống nhất chưa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Túi đã chuẩn bị từ tối trước — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Friend points to first planned activity on fictional itinerary, mascot listens.",
+      "setting": "Bàn chuẩn bị chuyến thăm, túi và vé hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Are you excited too?\" Bạn cũng hào hứng à? \"Do you feel the same?\" Người bạn kể điều mình muốn làm đầu tiên; hai người có thêm một lý do để chờ tới chuyến đi.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "excited",
+          "meaning": "hào hứng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Friend points to first planned activity on fictional itinerary, mascot listens. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend points to first planned activity on fictional itinerary, mascot listens.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "Are you excited too?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Are you excited too?\" Bạn cũng hào hứng à? \"Do you feel the same?\" Người bạn kể điều mình muốn làm đầu tiên; hai người có thêm một lý do để chờ tới chuyến đi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Túi đã chuẩn bị từ tối trước — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold trip plan and full model sentence, no actual personal feeling assumed.",
+      "setting": "Bàn chuẩn bị chuyến thăm, túi và vé hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn nói mình hào hứng về chuyến đi theo vai. \"Say what you feel.\" Nói rồi nghĩ tới kế hoạch của hai nhân vật: \"I'm excited about the trip.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "excited",
+          "meaning": "hào hứng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold trip plan and full model sentence, no actual personal feeling assumed. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold trip plan and full model sentence, no actual personal feeling assumed.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "Say what you feel.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "I'm excited about the trip.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói mình hào hứng về chuyến đi theo vai. \"Say what you feel.\" Nói rồi nghĩ tới kế hoạch của hai nhân vật: \"I'm excited about the trip.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Túi đã chuẩn bị từ tối trước — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Packed bag stays by desk, both set trip plan beside it and finish preparation.",
+      "setting": "Bàn chuẩn bị chuyến thăm, túi và vé hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"I'm excited about the trip.\" Tôi hào hứng về chuyến đi. \"The bag is ready now.\" Hai người đã kiểm đồ và biết điều mình chờ đợi; tới ngày đi mới bắt đầu hành trình.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "excited",
+          "meaning": "hào hứng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Packed bag stays by desk, both set trip plan beside it and finish preparation. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Packed bag stays by desk, both set trip plan beside it and finish preparation.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "I'm excited about the trip.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm excited about the trip.\" Tôi hào hứng về chuyến đi. \"The bag is ready now.\" Hai người đã kiểm đồ và biết điều mình chờ đợi; tới ngày đi mới bắt đầu hành trình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chưa tới ngày đi, bạn đã xếp túi xong rồi! Excited nghĩa là hào hứng. \"Looking forward to something.\" Bạn sắp thăm một nơi đã muốn tới cùng người bạn, nên cứ xem lại kế hoạch của chuyến đi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chưa tới ngày đi, bạn đã xếp túi xong rồi! Excited nghĩa là hào hứng. \"Looking forward to something.\" Bạn sắp thăm một nơi đã muốn tới cùng người bạn, nên cứ xem lại kế hoạch của chuyến đi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn kể: \"I'm excited about the trip.\" Tôi hào hứng về chuyến đi. \"I want it to begin.\" Người bạn nhìn túi đã xếp rồi cùng kiểm xem hai người có mang những thứ đã thống nhất chưa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn kể: \"I'm excited about the trip.\" Tôi hào hứng về chuyến đi. \"I want it to begin.\" Người bạn nhìn túi đã xếp rồi cùng kiểm xem hai người có mang những thứ đã thống nhất chưa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn hỏi: \"Are you excited too?\" Bạn cũng hào hứng à? \"Do you feel the same?\" Người bạn kể điều mình muốn làm đầu tiên; hai người có thêm một lý do để chờ tới chuyến đi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn nói mình hào hứng về chuyến đi theo vai. \"Say what you feel.\" Nói rồi nghĩ tới kế hoạch của hai nhân vật: \"I'm excited about the trip.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I'm excited about the trip.\" Tôi hào hứng về chuyến đi. \"The bag is ready now.\" Hai người đã kiểm đồ và biết điều mình chờ đợi; tới ngày đi mới bắt đầu hành trình."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Sắp đi → kể hào hứng → hỏi bạn → kiểm đồ.. Next event: Mascot shows packed bag as friend checks agreed travel-item icons."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Sắp đi → kể hào hứng → hỏi bạn → kiểm đồ.. Next event: Friend points to first planned activity on fictional itinerary, mascot listens."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Sắp đi → kể hào hứng → hỏi bạn → kiểm đồ.. Next event: Hold trip plan and full model sentence, no actual personal feeling assumed."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Sắp đi → kể hào hứng → hỏi bạn → kiểm đồ.. Next event: Packed bag stays by desk, both set trip plan beside it and finish preparation."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Sắp đi → kể hào hứng → hỏi bạn → kiểm đồ.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

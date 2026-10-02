@@ -1,0 +1,45 @@
+{
+  "job": "vocab-uncle-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 100,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Mẹ bạn giới thiệu người vừa mang bánh đến: đây là em trai của mẹ. Với bạn, người ấy là uncle. Trong tình huống này, tiếng Việt gọi là cậu. Tiếng Anh dùng uncle cho quan hệ ấy. Lần theo hình từ bạn tới mẹ, rồi từ mẹ tới người em trai của mẹ. Với mẹ, đó là em trai. Với bạn, đó là cậu. Cùng một người nhưng quan hệ được nhìn từ hai người khác nhau. Tiếng Anh dùng uncle trong lời giới thiệu của bạn.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of uncle and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nói: \"This is my uncle.\" Đây là cậu tôi. Uncle còn có thể dùng cho anh hoặc em trai của bố. Vì vậy, từ tiếng Việt cụ thể phụ thuộc người ấy thuộc bên nào trong gia đình. Nếu chuyển sang anh hoặc em trai của bố, tiếng Việt có thể gọi bác trai hoặc chú. Tiếng Anh vẫn có thể dùng uncle cho quan hệ ấy. Không cần đổi từ theo người ấy lớn hay nhỏ tuổi hơn bố. Trong bài, mình theo một nhánh gia đình trước để không rối.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of uncle and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bạn kể: \"I play with my uncle.\" Tôi chơi cùng cậu. Hôm nay hai người ra vườn chơi sau khi mang bánh vào nhà. My uncle vẫn chỉ người vừa được mẹ giới thiệu, không phải một người mới. Hộp bánh không quyết định từ: người quen cũng có thể mang bánh tới. Quan hệ trên sơ đồ mới giúp bạn xác nhận ai là cậu của mình.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of uncle and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Em trai của mẹ đang đứng trước mặt bạn. Hãy giới thiệu bằng câu \"This is my...\" và chọn từ theo đúng quan hệ này.",
+      "learner_pause_seconds": 5,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of uncle and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"This is my uncle.\" Từ cần dùng là uncle; trong câu chuyện này là cậu. Hộp bánh đã được mở, người mới tới cũng được giới thiệu rõ. Bạn không cần đoán từ qua ngoại hình nữa vì đã biết quan hệ.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of uncle and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

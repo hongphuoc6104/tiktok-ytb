@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 33,
+            "seconds": 10.37,
+            "min": 7.77,
+            "max": 12.96
+          },
+          {
+            "scene_id": "SC02",
+            "units": 35,
+            "seconds": 10.92,
+            "min": 8.19,
+            "max": 13.65
+          },
+          {
+            "scene_id": "SC03",
+            "units": 37,
+            "seconds": 11.33,
+            "min": 8.5,
+            "max": 14.16
+          },
+          {
+            "scene_id": "SC04",
+            "units": 17,
+            "seconds": 9.32,
+            "min": 6.99,
+            "max": 11.65
+          },
+          {
+            "scene_id": "SC05",
+            "units": 36,
+            "seconds": 11.2,
+            "min": 8.4,
+            "max": 14.0
+          }
+        ],
+        "min": 39.85,
+        "max": 66.42,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "17012",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Kiên đoán số năm trên thẻ rồi nhận ra chưa biết luật; Hoàng chỉ năm ô và Kiên nhường bạn lượt đầu. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "request_id": "19915",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Kiên đoán số năm trên thẻ rồi nhận ra chưa biết luật; Hoàng chỉ năm ô và Kiên nhường bạn lượt đầu. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

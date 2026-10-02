@@ -1,0 +1,491 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "b47c60558b036c796fa7842b4b445f4cafc62c0b7bc476ebea18a262fef4ec43",
+  "topic": "Học từ vựng tiếng Anh COPY (động từ: sao chép) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ COPY",
+    "Làm rõ nghĩa lõi \"sao chép\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng COPY, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại COPY, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Nhân vật đồng hành chính",
+      "appearance": "Adult friend or companion. Minimal flat ink style; consistent adult face, age, gender and identity across all scenes. Distinct from canonical mascot. Plain mustard top; only explicitly required work outerwear, helmet or life jacket.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đừng gõ lại cả dòng — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot looks at two text boxes, first with abstract line and second empty.",
+      "setting": "Máy tính có hai ô văn bản minh họa.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Dòng dài thế này phải gõ lại à? Copy là sao chép. Bạn cần đưa một dòng ghi chú của mình sang ô khác, nhưng người bạn chỉ cách chọn phần đã có để khỏi nhập lại từng chữ.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "copy",
+          "meaning": "sao chép"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot looks at two text boxes, first with abstract line and second empty. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot looks at two text boxes, first with abstract line and second empty.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "copy",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Dòng dài thế này phải gõ lại à? Copy là sao chép. Bạn cần đưa một dòng ghi chú của mình sang ô khác, nhưng người bạn chỉ cách chọn phần đã có để khỏi nhập lại từng chữ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Đừng gõ lại cả dòng — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "First text line highlighted; mascot selects generic copy icon, original remains present.",
+      "setting": "Máy tính có hai ô văn bản minh họa.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn nói: \"Copy this text.\" Sao chép phần chữ này. This text chỉ đoạn đang được chọn. Bạn thực hiện thao tác sao chép; bản gốc vẫn nằm nguyên ở ô đầu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "copy",
+          "meaning": "sao chép"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "First text line highlighted; mascot selects generic copy icon, original remains present. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "First text line highlighted; mascot selects generic copy icon, original remains present.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Copy this text.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nói: \"Copy this text.\" Sao chép phần chữ này. This text chỉ đoạn đang được chọn. Bạn thực hiện thao tác sao chép; bản gốc vẫn nằm nguyên ở ô đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Đừng gõ lại cả dòng — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Two matching abstract text lines in separate boxes after paste, mascot checks both.",
+      "setting": "Máy tính có hai ô văn bản minh họa.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn xác nhận: \"I can copy it.\" Tôi có thể sao chép nó. Sau đó bạn dán vào ô thứ hai để có bản giống nhau; copy là bước sao chép, chưa tự đưa chữ vào mọi nơi.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "copy",
+          "meaning": "sao chép"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Selected text remains in first box; second box empty. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Selected text remains in first box; second box empty.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "I can copy it.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Matching abstract line appears in second box, original remains in first; keep exact line shapes identical. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve base scene camera, background, character identities, single mascot torso and exact clothing, prop positions and visible text; change only the specified state.",
+          "change": "Matching abstract line appears in second box, original remains in first; keep exact line shapes identical.",
+          "reason": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "visible_text": [
+            {
+              "text": "I can copy it.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn xác nhận: \"I can copy it.\" Tôi có thể sao chép nó. Sau đó bạn dán vào ô thứ hai để có bản giống nhau; copy là bước sao chép, chưa tự đưa chữ vào mọi nơi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "anchor": {
+            "vi": {
+              "quote": "Sau đó bạn dán vào ô thứ hai",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Đừng gõ lại cả dòng — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold two text boxes and full sentence for supported response; no correct option marked.",
+      "setting": "Máy tính có hai ô văn bản minh họa.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Khi sao chép phần chữ, bản gốc có nhất thiết biến mất không? Nói có hoặc không, rồi thử nhắc câu \"Copy this text.\".",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "copy",
+          "meaning": "sao chép"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold two text boxes and full sentence for supported response; no correct option marked. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold two text boxes and full sentence for supported response; no correct option marked.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "Copy this text.",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Khi sao chép phần chữ, bản gốc có nhất thiết biến mất không? Nói có hoặc không, rồi thử nhắc câu \"Copy this text.\".",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Đừng gõ lại cả dòng — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot compares matching text boxes side by side, keyboard untouched.",
+      "setting": "Máy tính có hai ô văn bản minh họa.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Không. Sao chép giữ lại bản gốc. \"Copy this text.\" Hai ô đã có cùng nội dung, bạn đối chiếu rồi tiếp tục. Lần này không phải đánh máy lại cả dòng.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "copy",
+          "meaning": "sao chép"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot compares matching text boxes side by side, keyboard untouched. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot compares matching text boxes side by side, keyboard untouched.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "Copy this text.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Không. Sao chép giữ lại bản gốc. \"Copy this text.\" Hai ô đã có cùng nội dung, bạn đối chiếu rồi tiếp tục. Lần này không phải đánh máy lại cả dòng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Dòng dài thế này phải gõ lại à? Copy là sao chép. Bạn cần đưa một dòng ghi chú của mình sang ô khác, nhưng người bạn chỉ cách chọn phần đã có để khỏi nhập lại từng chữ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Dòng dài thế này phải gõ lại à? Copy là sao chép. Bạn cần đưa một dòng ghi chú của mình sang ô khác, nhưng người bạn chỉ cách chọn phần đã có để khỏi nhập lại từng chữ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người bạn nói: \"Copy this text.\" Sao chép phần chữ này. This text chỉ đoạn đang được chọn. Bạn thực hiện thao tác sao chép; bản gốc vẫn nằm nguyên ở ô đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người bạn nói: \"Copy this text.\" Sao chép phần chữ này. This text chỉ đoạn đang được chọn. Bạn thực hiện thao tác sao chép; bản gốc vẫn nằm nguyên ở ô đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn xác nhận: \"I can copy it.\" Tôi có thể sao chép nó. Sau đó bạn dán vào ô thứ hai để có bản giống nhau; copy là bước sao chép, chưa tự đưa chữ vào mọi nơi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Khi sao chép phần chữ, bản gốc có nhất thiết biến mất không? Nói có hoặc không, rồi thử nhắc câu \"Copy this text.\"."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Không. Sao chép giữ lại bản gốc. \"Copy this text.\" Hai ô đã có cùng nội dung, bạn đối chiếu rồi tiếp tục. Lần này không phải đánh máy lại cả dòng."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Cần dòng ở hai chỗ → sao chép → dán → đối chiếu.. Next visible event: First text line highlighted; mascot selects generic copy icon, original remains present."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Cần dòng ở hai chỗ → sao chép → dán → đối chiếu.. Next visible event: Two matching abstract text lines in separate boxes after paste, mascot checks both."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Cần dòng ở hai chỗ → sao chép → dán → đối chiếu.. Next visible event: Hold two text boxes and full sentence for supported response; no correct option marked."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Cần dòng ở hai chỗ → sao chép → dán → đối chiếu.. Next visible event: Mascot compares matching text boxes side by side, keyboard untouched."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Cần dòng ở hai chỗ → sao chép → dán → đối chiếu.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

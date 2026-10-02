@@ -1,0 +1,45 @@
+{
+  "job": "vocab-early-55s-001",
+  "content_revision": 1,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 80,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Buổi học bắt đầu lúc tám giờ, bạn tới lúc bảy giờ năm mươi. Cửa còn đóng vì chưa tới giờ. Early nghĩa là sớm hơn giờ dự kiến. Bạn có mặt trước mười phút, nên còn thời gian ngồi chờ. Mình so với giờ hẹn, không chỉ nhìn trời sáng hay tối. Một cuộc hẹn buổi chiều cũng có thể được đến sớm nếu bạn tới trước giờ đã thống nhất.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of early and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nhìn lại lịch và nói: \"I’m early.\" Tôi đến sớm rồi. Trong câu này, early nói thời điểm bạn tới so với giờ hẹn. Nó không chỉ có nghĩa là trời còn sớm. Đến trước mười phút nghĩa là bạn còn thời gian chờ. Cửa chưa mở trong câu chuyện là dấu hiệu bổ sung; mốc tám giờ trên lịch mới giúp xác định rõ.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of early and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bạn kể rõ hơn: \"I’m early for class.\" Tôi đến lớp sớm. For class cho biết buổi học mà bạn tới trước giờ. Bạn ngồi chờ bên cửa, chưa cần vội mở một cánh cửa còn khóa.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of early and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Lớp bắt đầu tám giờ, bạn tới bảy giờ năm mươi. Hãy điền tính từ vừa học vào câu \"I’m...\" rồi nói cả câu. Nghĩ tới hai mốc giờ trước khi trả lời nhé.",
+      "learner_pause_seconds": 5,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of early and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"I’m early.\" Từ cần điền là early. Bạn tới trước giờ hẹn nên đến sớm. Tới tám giờ, cửa mở và bạn vào lớp. Khoảng chờ lúc nãy giúp bạn xem lại đồ dùng trước khi buổi học bắt đầu.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of early and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

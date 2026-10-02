@@ -1,0 +1,45 @@
+{
+  "job": "vocab-mouth-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 60,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn vừa ăn một miếng bánh thì có người hỏi chuyện. Mouth nghĩa là miệng. Bạn ra hiệu chờ một chút, ăn xong miếng ấy rồi mới trả lời. Một tình huống nhỏ nhưng ai cũng dễ hình dung.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Nhìn hình, bạn nói: \"This is my mouth.\" Đây là miệng tôi. Mouth chỉ bộ phận ấy trên khuôn mặt. Mình có thể vừa nói vừa chỉ nhẹ để nối từ tiếng Anh với vị trí mình đang gọi tên.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Trong trò làm theo hình, bạn nghe: \"Open your mouth.\" Mở miệng ra. Câu này là một chỉ dẫn. Chưa cần học câu thật dài, chỉ cần nghe đúng mouth và hiểu người nói muốn bạn làm gì.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Bạn đang chỉ vào miệng mình. Hãy gọi tên bằng câu \"This is my...\" và nói hết câu trước khi xem đáp án.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"This is my mouth.\" Từ còn thiếu là mouth. Miếng bánh đã ăn xong, câu hỏi lúc nãy cũng được trả lời. Lần sau nghe từ này, bạn nhớ đúng miệng mình đang dùng để nói chuyện nhé.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

@@ -1,0 +1,558 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "d1fb74acfd62d1914e128dc1af97bb700869dc29eb61e845119a0cd526ee6106",
+  "topic": "Học từ vựng tiếng Anh RIGHT (tính từ: đúng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ RIGHT",
+    "Làm rõ nghĩa lõi \"đúng\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng RIGHT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại RIGHT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Câu trả lời đúng trong trò minh họa — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Mascot points to selected game picture while companion compares source card before affirming.",
+      "setting": "Bàn đối chiếu thẻ hình hư cấu.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Mình chọn hình này, có đúng không? Right trong bài này nghĩa là đúng. \"It matches the answer in our example.\" Hai người chơi một hoạt động nhận diện hình hư cấu, không nói phía bên phải của bàn.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "right",
+          "meaning": "đúng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot points to selected game picture while companion compares source card before affirming. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to selected game picture while companion compares source card before affirming.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "right",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Mình chọn hình này, có đúng không? Right trong bài này nghĩa là đúng. \"It matches the answer in our example.\" Hai người chơi một hoạt động nhận diện hình hư cấu, không nói phía bên phải của bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Câu trả lời đúng trong trò minh họa — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Companion confirms mascot's matching choice against stated fictional reference.",
+      "setting": "Bàn đối chiếu thẻ hình hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Người bạn nói sau khi kiểm: \"You're right.\" Bạn đúng. \"Your choice matches this example.\" Bạn nhìn phần hình được đối chiếu, để lời nhận xét có điều cụ thể gắn với câu trả lời vừa đưa ra trong trò hư cấu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "right",
+          "meaning": "đúng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Companion confirms mascot's matching choice against stated fictional reference. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion confirms mascot's matching choice against stated fictional reference.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "You're right.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nói sau khi kiểm: \"You're right.\" Bạn đúng. \"Your choice matches this example.\" Bạn nhìn phần hình được đối chiếu, để lời nhận xét có điều cụ thể gắn với câu trả lời vừa đưa ra trong trò hư cấu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Câu trả lời đúng trong trò minh họa — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both set checked pair aside while unplayed cards remain separate.",
+      "setting": "Bàn đối chiếu thẻ hình hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Một câu right trong tình huống này không có nghĩa người nói luôn đúng về mọi điều. \"This reply is about the choice we checked.\" Hai người giữ phần đã đối chiếu riêng với lượt chưa làm, không lấy lời khen làm đáp án cho thẻ tiếp theo.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "right",
+          "meaning": "đúng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both set checked pair aside while unplayed cards remain separate. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both set checked pair aside while unplayed cards remain separate.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "right",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Một câu right trong tình huống này không có nghĩa người nói luôn đúng về mọi điều. \"This reply is about the choice we checked.\" Hai người giữ phần đã đối chiếu riêng với lượt chưa làm, không lấy lời khen làm đáp án cho thẻ tiếp theo.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Câu trả lời đúng trong trò minh họa — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Both compare next fictional candidate picture with reference, no answer highlight during practice.",
+      "setting": "Bàn đối chiếu thẻ hình hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Is this the right picture?\" Đây có phải hình đúng không? \"Let's compare before moving on.\" Người bạn đặt tấm mới cạnh mẫu của lượt tiếp, hai người nhìn lại chi tiết trước khi chọn kết quả của câu chuyện.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "right",
+          "meaning": "đúng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both compare next fictional candidate picture with reference, no answer highlight during practice. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both compare next fictional candidate picture with reference, no answer highlight during practice.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "Is this the right picture?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Is this the right picture?\" Đây có phải hình đúng không? \"Let's compare before moving on.\" Người bạn đặt tấm mới cạnh mẫu của lượt tiếp, hai người nhìn lại chi tiết trước khi chọn kết quả của câu chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Câu trả lời đúng trong trò minh họa — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold fictional candidate and reference without filled answer, full question visible.",
+      "setting": "Bàn đối chiếu thẻ hình hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi hình mình chọn có đúng trong lượt này. \"Ask for the check.\" Hãy nói: \"Is this the right picture?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "right",
+          "meaning": "đúng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold fictional candidate and reference without filled answer, full question visible. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold fictional candidate and reference without filled answer, full question visible.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Ask for the check.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "Is this the right picture?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi hình mình chọn có đúng trong lượt này. \"Ask for the check.\" Hãy nói: \"Is this the right picture?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Câu trả lời đúng trong trò minh họa — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both confirm next fictional match after comparing details.",
+      "setting": "Bàn đối chiếu thẻ hình hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Is this the right picture?\" Đây là hình đúng à? \"The next choice has its own check.\" Hai người đã đối chiếu hình của lượt hư cấu, có cách dùng right để hỏi và nói về điều đúng trong mẫu cụ thể.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "right",
+          "meaning": "đúng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both confirm next fictional match after comparing details. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both confirm next fictional match after comparing details.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "Is this the right picture?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is this the right picture?\" Đây là hình đúng à? \"The next choice has its own check.\" Hai người đã đối chiếu hình của lượt hư cấu, có cách dùng right để hỏi và nói về điều đúng trong mẫu cụ thể.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mình chọn hình này, có đúng không? Right trong bài này nghĩa là đúng. \"It matches the answer in our example.\" Hai người chơi một hoạt động nhận diện hình hư cấu, không nói phía bên phải của bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mình chọn hình này, có đúng không? Right trong bài này nghĩa là đúng. \"It matches the answer in our example.\" Hai người chơi một hoạt động nhận diện hình hư cấu, không nói phía bên phải của bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người bạn nói sau khi kiểm: \"You're right.\" Bạn đúng. \"Your choice matches this example.\" Bạn nhìn phần hình được đối chiếu, để lời nhận xét có điều cụ thể gắn với câu trả lời vừa đưa ra trong trò hư cấu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người bạn nói sau khi kiểm: \"You're right.\" Bạn đúng. \"Your choice matches this example.\" Bạn nhìn phần hình được đối chiếu, để lời nhận xét có điều cụ thể gắn với câu trả lời vừa đưa ra trong trò hư cấu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Một câu right trong tình huống này không có nghĩa người nói luôn đúng về mọi điều. \"This reply is about the choice we checked.\" Hai người giữ phần đã đối chiếu riêng với lượt chưa làm, không lấy lời khen làm đáp án cho thẻ tiếp theo."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn hỏi: \"Is this the right picture?\" Đây có phải hình đúng không? \"Let's compare before moving on.\" Người bạn đặt tấm mới cạnh mẫu của lượt tiếp, hai người nhìn lại chi tiết trước khi chọn kết quả của câu chuyện."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn hỏi hình mình chọn có đúng trong lượt này. \"Ask for the check.\" Hãy nói: \"Is this the right picture?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Is this the right picture?\" Đây là hình đúng à? \"The next choice has its own check.\" Hai người đã đối chiếu hình của lượt hư cấu, có cách dùng right để hỏi và nói về điều đúng trong mẫu cụ thể."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Mascot points to selected game picture while companion compares source card before affirming. Continue with the existing connected model: Companion confirms mascot's matching choice against stated fictional reference."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Bạn trả lời → kiểm hình → nói đúng → hỏi lựa chọn.. Next event: Both set checked pair aside while unplayed cards remain separate."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Bạn trả lời → kiểm hình → nói đúng → hỏi lựa chọn.. Next event: Both compare next fictional candidate picture with reference, no answer highlight during practice."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Bạn trả lời → kiểm hình → nói đúng → hỏi lựa chọn.. Next event: Hold fictional candidate and reference without filled answer, full question visible."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bạn trả lời → kiểm hình → nói đúng → hỏi lựa chọn.. Next event: Both confirm next fictional match after comparing details."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bạn trả lời → kiểm hình → nói đúng → hỏi lựa chọn.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18384",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Mình chọn hình này, có đúng không?”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "695dcfe5fcdfdd3c50d19c47810175e6e1669caa361d7315520f1a5880ade063",
+  "topic": "Học từ vựng tiếng Anh LEARN (động từ: học được, tiếp thu) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ LEARN",
+    "Làm rõ nghĩa lõi \"học được, tiếp thu\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng LEARN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại LEARN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người hỗ trợ trong tình huống",
+      "appearance": "Adult supporting person in minimal flat ink style. Maintain the role and identity specified by the scene across the whole story. Plain mustard top; may wear the explicitly described extra garment for clothing lessons.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Adult supporting person, distinct from the main mascot and first companion, minimal flat ink style; appears only when explicitly specified.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Học được câu chào mới — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Adult mascot listens to friend at a study table with a blank flashcard and pen, then points toward a visitor approaching nearby.",
+      "setting": "Bàn học có thẻ câu và cuộc gặp sau đó.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Một câu mới, dùng được ngay! Learn là học, tiếp thu điều mình chưa biết. Bạn nghe người bạn nói một câu chào, thử nói theo rồi ghi vào thẻ. Lượt thử tiếp theo, bạn muốn tự nói mà không nhìn thẻ nữa.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "learn",
+          "meaning": "học được, tiếp thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Adult mascot listens to friend at a study table with a blank flashcard and pen, then points toward a visitor approaching nearby. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Adult mascot listens to friend at a study table with a blank flashcard and pen, then points toward a visitor approaching nearby.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "learn",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Một câu mới, dùng được ngay! Learn là học, tiếp thu điều mình chưa biết. Bạn nghe người bạn nói một câu chào, thử nói theo rồi ghi vào thẻ. Lượt thử tiếp theo, bạn muốn tự nói mà không nhìn thẻ nữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Học được câu chào mới — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Friend presents one simple flashcard to mascot at the desk; avoid dense text or extra vocabulary.",
+      "setting": "Bàn học có thẻ câu và cuộc gặp sau đó.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn nói: \"I want to learn English.\" Tôi muốn học tiếng Anh. Want to learn nói mong muốn tiếp thu. Người bạn chọn một câu ngắn để bạn hiểu và thử dùng, thay vì đưa cả trang đầy từ mới một lúc.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "learn",
+          "meaning": "học được, tiếp thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend presents one simple flashcard to mascot at the desk; avoid dense text or extra vocabulary. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend presents one simple flashcard to mascot at the desk; avoid dense text or extra vocabulary.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "I want to learn English.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I want to learn English.\" Tôi muốn học tiếng Anh. Want to learn nói mong muốn tiếp thu. Người bạn chọn một câu ngắn để bạn hiểu và thử dùng, thay vì đưa cả trang đầy từ mới một lúc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Học được câu chào mới — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Mascot reviews one word card and turns it face down before speaking to the friend.",
+      "setting": "Bàn học có thẻ câu và cuộc gặp sau đó.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn kể: \"I learn a new word every day.\" Tôi học một từ mới mỗi ngày. Every day là mỗi ngày. Trong câu chuyện, bạn chọn học ít nhưng thử nhớ và dùng, rồi kiểm lại xem mình đã nói đúng chưa.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "learn",
+          "meaning": "học được, tiếp thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot reviews one word card and turns it face down before speaking to the friend. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot reviews one word card and turns it face down before speaking to the friend.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "I learn a new word every day.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể: \"I learn a new word every day.\" Tôi học một từ mới mỗi ngày. Every day là mỗi ngày. Trong câu chuyện, bạn chọn học ít nhưng thử nhớ và dùng, rồi kiểm lại xem mình đã nói đúng chưa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Học được câu chào mới — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold one face-down flashcard and the incomplete sentence, no answer word.",
+      "setting": "Bàn học có thẻ câu và cuộc gặp sau đó.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Muốn nói mình muốn học tiếng Anh, hoàn thành \"I want to... English.\" rồi nói đầy đủ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "learn",
+          "meaning": "học được, tiếp thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold one face-down flashcard and the incomplete sentence, no answer word. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold one face-down flashcard and the incomplete sentence, no answer word.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "I want to... English.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Muốn nói mình muốn học tiếng Anh, hoàn thành \"I want to... English.\" rồi nói đầy đủ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Học được câu chào mới — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot speaks with empty hands while friend holds the face-down card and listens supportively.",
+      "setting": "Bàn học có thẻ câu và cuộc gặp sau đó.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"I want to learn English.\" Từ đó là learn. Bạn úp thẻ xuống, thử nói câu vừa học với người bạn. Nhớ được đến đâu, mình kiểm lại đến đó.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "learn",
+          "meaning": "học được, tiếp thu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot speaks with empty hands while friend holds the face-down card and listens supportively. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot speaks with empty hands while friend holds the face-down card and listens supportively.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "I want to learn English.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I want to learn English.\" Từ đó là learn. Bạn úp thẻ xuống, thử nói câu vừa học với người bạn. Nhớ được đến đâu, mình kiểm lại đến đó.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Một câu mới, dùng được ngay! Learn là học, tiếp thu điều mình chưa biết. Bạn nghe người bạn nói một câu chào, thử nói theo rồi ghi vào thẻ. Lượt thử tiếp theo, bạn muốn tự nói mà không nhìn thẻ nữa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Một câu mới, dùng được ngay! Learn là học, tiếp thu điều mình chưa biết. Bạn nghe người bạn nói một câu chào, thử nói theo rồi ghi vào thẻ. Lượt thử tiếp theo, bạn muốn tự nói mà không nhìn thẻ nữa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I want to learn English.\" Tôi muốn học tiếng Anh. Want to learn nói mong muốn tiếp thu. Người bạn chọn một câu ngắn để bạn hiểu và thử dùng, thay vì đưa cả trang đầy từ mới một lúc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I want to learn English.\" Tôi muốn học tiếng Anh. Want to learn nói mong muốn tiếp thu. Người bạn chọn một câu ngắn để bạn hiểu và thử dùng, thay vì đưa cả trang đầy từ mới một lúc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn kể: \"I learn a new word every day.\" Tôi học một từ mới mỗi ngày. Every day là mỗi ngày. Trong câu chuyện, bạn chọn học ít nhưng thử nhớ và dùng, rồi kiểm lại xem mình đã nói đúng chưa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Muốn nói mình muốn học tiếng Anh, hoàn thành \"I want to... English.\" rồi nói đầy đủ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I want to learn English.\" Từ đó là learn. Bạn úp thẻ xuống, thử nói câu vừa học với người bạn. Nhớ được đến đâu, mình kiểm lại đến đó."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Muốn học → nghe và thử → nhớ câu → dùng khi gặp.. Next visible event: Friend presents one simple flashcard to mascot at the desk; avoid dense text or extra vocabulary."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn học → nghe và thử → nhớ câu → dùng khi gặp.. Next visible event: Mascot reviews one word card and turns it face down before speaking to the friend."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn học → nghe và thử → nhớ câu → dùng khi gặp.. Next visible event: Hold one face-down flashcard and the incomplete sentence, no answer word."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn học → nghe và thử → nhớ câu → dùng khi gặp.. Next visible event: Mascot speaks with empty hands while friend holds the face-down card and listens supportively."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn học → nghe và thử → nhớ câu → dùng khi gặp.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

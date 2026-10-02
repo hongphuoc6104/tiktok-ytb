@@ -1,0 +1,516 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "e12841221d45093ebaa7af45001da4b9804c51f5b150681818f70766429aac1a",
+  "topic": "Học từ vựng tiếng Anh POT (danh từ: nồi) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ POT",
+    "Làm rõ nghĩa lõi \"nồi\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng POT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại POT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người hỗ trợ trong tình huống",
+      "appearance": "Adult supporting person in minimal flat ink style. Maintain the role and identity specified by the scene across the whole story. Plain mustard top; may wear the explicitly described extra garment for clothing lessons.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Adult supporting person, distinct from the main mascot and first companion, minimal flat ink style; appears only when explicitly specified.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Nắp này của ai — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot holds a round lid over a shallow pan on a cool kitchen counter; a deep pot sits on a separate shelf.",
+      "setting": "Bếp nguội, nắp nồi và chảo nằm riêng.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Có nắp mà thiếu nồi! Pot là cái nồi. Bạn cầm chiếc nắp tròn, thử đặt lên chảo thì không vừa. Chiếc nồi để nấu canh đang ở đâu đó; trước tiên phải tìm đúng vật đi cùng chiếc nắp này.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pot",
+          "meaning": "nồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds a round lid over a shallow pan on a cool kitchen counter; a deep pot sits on a separate shelf. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds a round lid over a shallow pan on a cool kitchen counter; a deep pot sits on a separate shelf.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "pot",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Có nắp mà thiếu nồi! Pot là cái nồi. Bạn cầm chiếc nắp tròn, thử đặt lên chảo thì không vừa. Chiếc nồi để nấu canh đang ở đâu đó; trước tiên phải tìm đúng vật đi cùng chiếc nắp này.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nắp này của ai — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Mascot retrieves the deep cooking pot from a low shelf while the friend points.",
+      "setting": "Bếp nguội, nắp nồi và chảo nằm riêng.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn hỏi: \"Where is the pot?\" Cái nồi ở đâu? Người bạn chỉ ngăn dưới. Bạn lấy chiếc nồi sâu lòng lên, đặt cạnh nắp. Trong câu này, pot gọi đúng chiếc nồi đang cần tìm.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pot",
+          "meaning": "nồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot retrieves the deep cooking pot from a low shelf while the friend points. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot retrieves the deep cooking pot from a low shelf while the friend points.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Where is the pot?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Where is the pot?\" Cái nồi ở đâu? Người bạn chỉ ngăn dưới. Bạn lấy chiếc nồi sâu lòng lên, đặt cạnh nắp. Trong câu này, pot gọi đúng chiếc nồi đang cần tìm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nắp này của ai — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "The lid fits the deep pot on the counter; the shallow pan remains separate.",
+      "setting": "Bếp nguội, nắp nồi và chảo nằm riêng.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn thử lại: \"The pot has a lid.\" Cái nồi có nắp. Has diễn tả có. Lần này chiếc nắp vừa miệng nồi; bạn không phải lấy chiếc đĩa để đậy tạm nữa.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pot",
+          "meaning": "nồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "The lid is just above the deep pot; keep pan separate. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "The lid is just above the deep pot; keep pan separate.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "The pot has a lid.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC03_I2",
+          "description": "The matching lid now rests squarely on the deep pot. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve base scene camera, background, character identities, single mascot torso and exact clothing, prop positions and visible text; change only the specified state.",
+          "change": "The matching lid now rests squarely on the deep pot.",
+          "reason": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "visible_text": [
+            {
+              "text": "The pot has a lid.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn thử lại: \"The pot has a lid.\" Cái nồi có nắp. Has diễn tả có. Lần này chiếc nắp vừa miệng nồi; bạn không phải lấy chiếc đĩa để đậy tạm nữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "anchor": {
+            "vi": {
+              "quote": "Lần này chiếc nắp vừa miệng nồi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nắp này của ai — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold the deep pot and a question prompt without the answer word.",
+      "setting": "Bếp nguội, nắp nồi và chảo nằm riêng.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Cần hỏi cái nồi ở đâu, bạn nói \"Where is the...?\" gì? Nhớ chiếc nồi sâu đang chờ nấu canh và nói trọn câu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pot",
+          "meaning": "nồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold the deep pot and a question prompt without the answer word. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold the deep pot and a question prompt without the answer word.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "Where is the...?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Cần hỏi cái nồi ở đâu, bạn nói \"Where is the...?\" gì? Nhớ chiếc nồi sâu đang chờ nấu canh và nói trọn câu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Nắp này của ai — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Matching pot and lid rest together beside uncut vegetables on a cool counter.",
+      "setting": "Bếp nguội, nắp nồi và chảo nằm riêng.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Where is the pot?\" Từ cần điền là pot. Nồi và nắp đã về cùng nhau. Bếp vẫn chưa bật; giờ hai người mới chuẩn bị nguyên liệu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pot",
+          "meaning": "nồi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Matching pot and lid rest together beside uncut vegetables on a cool counter. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Matching pot and lid rest together beside uncut vegetables on a cool counter.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "Where is the pot?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Where is the pot?\" Từ cần điền là pot. Nồi và nắp đã về cùng nhau. Bếp vẫn chưa bật; giờ hai người mới chuẩn bị nguyên liệu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Có nắp mà thiếu nồi! Pot là cái nồi. Bạn cầm chiếc nắp tròn, thử đặt lên chảo thì không vừa. Chiếc nồi để nấu canh đang ở đâu đó; trước tiên phải tìm đúng vật đi cùng chiếc nắp này."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Có nắp mà thiếu nồi! Pot là cái nồi. Bạn cầm chiếc nắp tròn, thử đặt lên chảo thì không vừa. Chiếc nồi để nấu canh đang ở đâu đó; trước tiên phải tìm đúng vật đi cùng chiếc nắp này."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Where is the pot?\" Cái nồi ở đâu? Người bạn chỉ ngăn dưới. Bạn lấy chiếc nồi sâu lòng lên, đặt cạnh nắp. Trong câu này, pot gọi đúng chiếc nồi đang cần tìm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Where is the pot?\" Cái nồi ở đâu? Người bạn chỉ ngăn dưới. Bạn lấy chiếc nồi sâu lòng lên, đặt cạnh nắp. Trong câu này, pot gọi đúng chiếc nồi đang cần tìm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn thử lại: \"The pot has a lid.\" Cái nồi có nắp. Has diễn tả có. Lần này chiếc nắp vừa miệng nồi; bạn không phải lấy chiếc đĩa để đậy tạm nữa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Cần hỏi cái nồi ở đâu, bạn nói \"Where is the...?\" gì? Nhớ chiếc nồi sâu đang chờ nấu canh và nói trọn câu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Where is the pot?\" Từ cần điền là pot. Nồi và nắp đã về cùng nhau. Bếp vẫn chưa bật; giờ hai người mới chuẩn bị nguyên liệu."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Có nắp chưa có nồi → tìm đúng vật → ghép nắp → chuẩn bị canh.. Next visible event: Mascot retrieves the deep cooking pot from a low shelf while the friend points."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Có nắp chưa có nồi → tìm đúng vật → ghép nắp → chuẩn bị canh.. Next visible event: The lid fits the deep pot on the counter; the shallow pan remains separate."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Có nắp chưa có nồi → tìm đúng vật → ghép nắp → chuẩn bị canh.. Next visible event: Hold the deep pot and a question prompt without the answer word."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có nắp chưa có nồi → tìm đúng vật → ghép nắp → chuẩn bị canh.. Next visible event: Matching pot and lid rest together beside uncut vegetables on a cool counter."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có nắp chưa có nồi → tìm đúng vật → ghép nắp → chuẩn bị canh.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

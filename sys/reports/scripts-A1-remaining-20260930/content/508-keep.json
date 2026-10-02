@@ -1,0 +1,462 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "1d4b83ff9b7be92e26d9d18fa3a3ca4fb26c5f5178f29d8aca9bed6899751f34",
+  "topic": "Học từ vựng tiếng Anh KEEP (động từ: giữ lại) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ KEEP",
+    "Làm rõ nghĩa lõi \"giữ lại\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng KEEP, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại KEEP, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Tấm thẻ được giữ làm kỷ niệm — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot holds handmade picture card after game, friend gathers other cards.",
+      "setting": "Bàn trò chơi, thẻ hình đặc biệt.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Trò chơi đã xong, tấm thẻ này mình có được mang về không? Keep ở đây là giữ lại. \"It can stay with you.\" Bạn thích thẻ hình do người bạn tự làm, muốn hỏi trước khi cất vào túi.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds handmade picture card after game, friend gathers other cards. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds handmade picture card after game, friend gathers other cards.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "keep",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Trò chơi đã xong, tấm thẻ này mình có được mang về không? Keep ở đây là giữ lại. \"It can stay with you.\" Bạn thích thẻ hình do người bạn tự làm, muốn hỏi trước khi cất vào túi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Tấm thẻ được giữ làm kỷ niệm — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Friend confirms permission for mascot to retain handmade card.",
+      "setting": "Bàn trò chơi, thẻ hình đặc biệt.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Can I keep this card?\" Tôi giữ lại thẻ này được không? \"May it stay with me?\" Người bạn nhìn thẻ rồi gật đầu; bạn chờ lời đáp trước khi coi nó là kỷ niệm của mình.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend confirms permission for mascot to retain handmade card. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend confirms permission for mascot to retain handmade card.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "Can I keep this card?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Can I keep this card?\" Tôi giữ lại thẻ này được không? \"May it stay with me?\" Người bạn nhìn thẻ rồi gật đầu; bạn chờ lời đáp trước khi coi nó là kỷ niệm của mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Tấm thẻ được giữ làm kỷ niệm — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Mascot puts gifted card in own bag while friend returns remaining cards to game box.",
+      "setting": "Bàn trò chơi, thẻ hình đặc biệt.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Người ấy nói: \"You can keep it.\" Bạn có thể giữ nó. \"That card is yours to keep.\" Bạn cất riêng tấm thẻ, trả các phần còn lại vào hộp của trò chơi.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot puts gifted card in own bag while friend returns remaining cards to game box. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot puts gifted card in own bag while friend returns remaining cards to game box.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "You can keep it.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Người ấy nói: \"You can keep it.\" Bạn có thể giữ nó. \"That card is yours to keep.\" Bạn cất riêng tấm thẻ, trả các phần còn lại vào hộp của trò chơi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Tấm thẻ được giữ làm kỷ niệm — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold handmade card and full permission question.",
+      "setting": "Bàn trò chơi, thẻ hình đặc biệt.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn xin giữ một tấm thẻ. \"Ask before taking it home.\" Nói như lúc trò chơi vừa kết thúc: \"Can I keep this card?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold handmade card and full permission question. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold handmade card and full permission question.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "Can I keep this card?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn xin giữ một tấm thẻ. \"Ask before taking it home.\" Nói như lúc trò chơi vừa kết thúc: \"Can I keep this card?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Tấm thẻ được giữ làm kỷ niệm — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Mascot leaves with retained card safely in bag, friend keeps original game box.",
+      "setting": "Bàn trò chơi, thẻ hình đặc biệt.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Can I keep this card?\" Tôi giữ thẻ này nhé? \"One card becomes a memory.\" Bạn đã được phép giữ lại, mang thẻ về cùng câu chuyện của buổi gặp.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "keep",
+          "meaning": "giữ lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot leaves with retained card safely in bag, friend keeps original game box. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot leaves with retained card safely in bag, friend keeps original game box.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "Can I keep this card?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I keep this card?\" Tôi giữ thẻ này nhé? \"One card becomes a memory.\" Bạn đã được phép giữ lại, mang thẻ về cùng câu chuyện của buổi gặp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Trò chơi đã xong, tấm thẻ này mình có được mang về không? Keep ở đây là giữ lại. \"It can stay with you.\" Bạn thích thẻ hình do người bạn tự làm, muốn hỏi trước khi cất vào túi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Trò chơi đã xong, tấm thẻ này mình có được mang về không? Keep ở đây là giữ lại. \"It can stay with you.\" Bạn thích thẻ hình do người bạn tự làm, muốn hỏi trước khi cất vào túi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can I keep this card?\" Tôi giữ lại thẻ này được không? \"May it stay with me?\" Người bạn nhìn thẻ rồi gật đầu; bạn chờ lời đáp trước khi coi nó là kỷ niệm của mình."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can I keep this card?\" Tôi giữ lại thẻ này được không? \"May it stay with me?\" Người bạn nhìn thẻ rồi gật đầu; bạn chờ lời đáp trước khi coi nó là kỷ niệm của mình."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người ấy nói: \"You can keep it.\" Bạn có thể giữ nó. \"That card is yours to keep.\" Bạn cất riêng tấm thẻ, trả các phần còn lại vào hộp của trò chơi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn xin giữ một tấm thẻ. \"Ask before taking it home.\" Nói như lúc trò chơi vừa kết thúc: \"Can I keep this card?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can I keep this card?\" Tôi giữ thẻ này nhé? \"One card becomes a memory.\" Bạn đã được phép giữ lại, mang thẻ về cùng câu chuyện của buổi gặp."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Chơi xong → muốn giữ thẻ → hỏi → được phép giữ.. Next event: Friend confirms permission for mascot to retain handmade card."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Chơi xong → muốn giữ thẻ → hỏi → được phép giữ.. Next event: Mascot puts gifted card in own bag while friend returns remaining cards to game box."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Chơi xong → muốn giữ thẻ → hỏi → được phép giữ.. Next event: Hold handmade card and full permission question."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chơi xong → muốn giữ thẻ → hỏi → được phép giữ.. Next event: Mascot leaves with retained card safely in bag, friend keeps original game box."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chơi xong → muốn giữ thẻ → hỏi → được phép giữ.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

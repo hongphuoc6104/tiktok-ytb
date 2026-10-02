@@ -1,0 +1,558 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "80d1967c057a08af5d31cbb1f063b52f6d50ca1f682464ce3fb45b696b1f2b79",
+  "topic": "Học từ vựng tiếng Anh ANYTHING (đại từ: bất cứ thứ gì) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ ANYTHING",
+    "Làm rõ nghĩa lõi \"bất cứ thứ gì\" (đại từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng ANYTHING, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại ANYTHING, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Hỏi có bất cứ thứ gì còn trong túi — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Mascot opens bag for companion to inspect remaining class supplies before departure.",
+      "setting": "Bàn kiểm túi sau hoạt động.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Túi này còn món nào của lớp không? Anything nghĩa là bất cứ thứ gì trong mẫu hỏi này. \"We have not selected a particular object.\" Bạn cùng người bạn kiểm phần còn lại của hoạt động hư cấu trước khi rời bàn.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "anything",
+          "meaning": "bất cứ thứ gì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot opens bag for companion to inspect remaining class supplies before departure. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot opens bag for companion to inspect remaining class supplies before departure.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "anything",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Túi này còn món nào của lớp không? Anything nghĩa là bất cứ thứ gì trong mẫu hỏi này. \"We have not selected a particular object.\" Bạn cùng người bạn kiểm phần còn lại của hoạt động hư cấu trước khi rời bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Hỏi có bất cứ thứ gì còn trong túi — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Companion checks bag interior for remaining class items.",
+      "setting": "Bàn kiểm túi sau hoạt động.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Is there anything in the bag?\" Trong túi có thứ gì không? \"We are checking for any item, not one named thing.\" Người bạn mở túi để xem, câu hỏi cho họ biết bạn muốn kiểm phần bên trong chứ không chỉ một cây bút đã nói trước.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "anything",
+          "meaning": "bất cứ thứ gì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Companion checks bag interior for remaining class items. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion checks bag interior for remaining class items.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "Is there anything in the bag?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Is there anything in the bag?\" Trong túi có thứ gì không? \"We are checking for any item, not one named thing.\" Người bạn mở túi để xem, câu hỏi cho họ biết bạn muốn kiểm phần bên trong chứ không chỉ một cây bút đã nói trước.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hỏi có bất cứ thứ gì còn trong túi — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both examine interior rather than infer from bag shape or weight.",
+      "setting": "Bàn kiểm túi sau hoạt động.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Anything giúp giữ câu hỏi mở về đồ vật trong tình huống. \"The answer can name an item or say there is none.\" Bạn chưa lấy việc túi nhẹ làm chắc nó rỗng; hai người nhìn phần của câu chuyện rồi mới kể điều còn lại.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "anything",
+          "meaning": "bất cứ thứ gì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both examine interior rather than infer from bag shape or weight. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both examine interior rather than infer from bag shape or weight.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "anything",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Anything giúp giữ câu hỏi mở về đồ vật trong tình huống. \"The answer can name an item or say there is none.\" Bạn chưa lấy việc túi nhẹ làm chắc nó rỗng; hai người nhìn phần của câu chuyện rồi mới kể điều còn lại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Hỏi có bất cứ thứ gì còn trong túi — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Companion checks own next-task plan and answers item-needed question.",
+      "setting": "Bàn kiểm túi sau hoạt động.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi thêm: \"Do you need anything?\" Bạn có cần gì không? \"Is there an item for your next task?\" Người bạn nhìn phần chuẩn bị của mình, nói món cần lấy trong buổi hư cấu nếu còn thiếu.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "anything",
+          "meaning": "bất cứ thứ gì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Companion checks own next-task plan and answers item-needed question. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion checks own next-task plan and answers item-needed question.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "Do you need anything?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi thêm: \"Do you need anything?\" Bạn có cần gì không? \"Is there an item for your next task?\" Người bạn nhìn phần chuẩn bị của mình, nói món cần lấy trong buổi hư cấu nếu còn thiếu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hỏi có bất cứ thứ gì còn trong túi — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold fictional supplies and full learner question, no item preselected during pause.",
+      "setting": "Bàn kiểm túi sau hoạt động.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi người bạn còn cần món nào mà chưa chọn tên cụ thể. \"Leave the question open.\" Hãy nói: \"Do you need anything?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "anything",
+          "meaning": "bất cứ thứ gì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold fictional supplies and full learner question, no item preselected during pause. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold fictional supplies and full learner question, no item preselected during pause.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Leave the question open.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "Do you need anything?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi người bạn còn cần món nào mà chưa chọn tên cụ thể. \"Leave the question open.\" Hãy nói: \"Do you need anything?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Hỏi có bất cứ thứ gì còn trong túi — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both finish fictional packing after checking remaining and needed items.",
+      "setting": "Bàn kiểm túi sau hoạt động.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Do you need anything?\" Bạn có cần gì không? \"The reply can tell us the item to look for.\" Hai người đã kiểm túi và phần cần chuẩn bị trong câu chuyện, cất đồ khi cả hai đã nói điều mình còn cần.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "anything",
+          "meaning": "bất cứ thứ gì"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both finish fictional packing after checking remaining and needed items. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both finish fictional packing after checking remaining and needed items.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "Do you need anything?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Do you need anything?\" Bạn có cần gì không? \"The reply can tell us the item to look for.\" Hai người đã kiểm túi và phần cần chuẩn bị trong câu chuyện, cất đồ khi cả hai đã nói điều mình còn cần.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Túi này còn món nào của lớp không? Anything nghĩa là bất cứ thứ gì trong mẫu hỏi này. \"We have not selected a particular object.\" Bạn cùng người bạn kiểm phần còn lại của hoạt động hư cấu trước khi rời bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Túi này còn món nào của lớp không? Anything nghĩa là bất cứ thứ gì trong mẫu hỏi này. \"We have not selected a particular object.\" Bạn cùng người bạn kiểm phần còn lại của hoạt động hư cấu trước khi rời bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is there anything in the bag?\" Trong túi có thứ gì không? \"We are checking for any item, not one named thing.\" Người bạn mở túi để xem, câu hỏi cho họ biết bạn muốn kiểm phần bên trong chứ không chỉ một cây bút đã nói trước."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is there anything in the bag?\" Trong túi có thứ gì không? \"We are checking for any item, not one named thing.\" Người bạn mở túi để xem, câu hỏi cho họ biết bạn muốn kiểm phần bên trong chứ không chỉ một cây bút đã nói trước."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Anything giúp giữ câu hỏi mở về đồ vật trong tình huống. \"The answer can name an item or say there is none.\" Bạn chưa lấy việc túi nhẹ làm chắc nó rỗng; hai người nhìn phần của câu chuyện rồi mới kể điều còn lại."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn hỏi thêm: \"Do you need anything?\" Bạn có cần gì không? \"Is there an item for your next task?\" Người bạn nhìn phần chuẩn bị của mình, nói món cần lấy trong buổi hư cấu nếu còn thiếu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn hỏi người bạn còn cần món nào mà chưa chọn tên cụ thể. \"Leave the question open.\" Hãy nói: \"Do you need anything?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Do you need anything?\" Bạn có cần gì không? \"The reply can tell us the item to look for.\" Hai người đã kiểm túi và phần cần chuẩn bị trong câu chuyện, cất đồ khi cả hai đã nói điều mình còn cần."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Mascot opens bag for companion to inspect remaining class supplies before departure. Continue with the existing connected model: Companion checks bag interior for remaining class items."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Chưa biết còn đồ → hỏi thứ gì → kiểm → hỏi cần gì.. Next event: Both examine interior rather than infer from bag shape or weight."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Chưa biết còn đồ → hỏi thứ gì → kiểm → hỏi cần gì.. Next event: Companion checks own next-task plan and answers item-needed question."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Chưa biết còn đồ → hỏi thứ gì → kiểm → hỏi cần gì.. Next event: Hold fictional supplies and full learner question, no item preselected during pause."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chưa biết còn đồ → hỏi thứ gì → kiểm → hỏi cần gì.. Next event: Both finish fictional packing after checking remaining and needed items."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chưa biết còn đồ → hỏi thứ gì → kiểm → hỏi cần gì.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18514",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Túi này còn món nào của lớp không?”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ],
+  "open_questions": []
+}

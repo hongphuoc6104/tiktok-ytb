@@ -1,0 +1,544 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "f5e70428fd208d5c467f4156204241c2cf5acac10b354e6545147ee86c2ca39c",
+  "topic": "Học từ vựng tiếng Anh TOP (danh từ: đỉnh, phần trên cùng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TOP",
+    "Làm rõ nghĩa lõi \"đỉnh, phần trên cùng\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TOP, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TOP, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Phần trên cùng của chiếc hộp — Nhịp 1",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "action": "Mascot and companion inspect gift box with distinct top lid, front and lateral faces.",
+      "setting": "Bàn trang trí hộp và hình giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Hộp có mặt trước rồi, tấm hình mới muốn nằm trên cùng hay ở bên? Top trong bài này là phần trên cùng. \"The upper part of this object.\" Bạn làm hộp quà hư cấu, cần chỉ đúng phần sẽ trang trí trước khi dán giấy lên.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and companion inspect gift box with distinct top lid, front and lateral faces. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion inspect gift box with distinct top lid, front and lateral faces.",
+          "reason": "Make the selected sense useful in a concrete situation.",
+          "visible_text": [
+            {
+              "text": "top",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the selected sense useful in a concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Hộp có mặt trước rồi, tấm hình mới muốn nằm trên cùng hay ở bên? Top trong bài này là phần trên cùng. \"The upper part of this object.\" Bạn làm hộp quà hư cấu, cần chỉ đúng phần sẽ trang trí trước khi dán giấy lên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Phần trên cùng của chiếc hộp — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Friend places loose paper decoration on top lid of box, mascot watches.",
+      "setting": "Bàn trang trí hộp và hình giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"Put it on the top.\" Đặt nó lên phần trên cùng nhé. \"The lid area we are pointing to.\" Người bạn đặt thử hình giấy trên nắp, chưa dán để còn kiểm xem hai người chọn đúng mặt không.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend places loose paper decoration on top lid of box, mascot watches. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend places loose paper decoration on top lid of box, mascot watches.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "Put it on the top.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"Put it on the top.\" Đặt nó lên phần trên cùng nhé. \"The lid area we are pointing to.\" Người bạn đặt thử hình giấy trên nắp, chưa dán để còn kiểm xem hai người chọn đúng mặt không.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Phần trên cùng của chiếc hộp — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both indicate box top relative to lateral faces, no ranking sense.",
+      "setting": "Bàn trang trí hộp và hình giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Top được hiểu qua vật đang nói. \"The top of this box in our example.\" Hai người đang gọi phần trên của hộp, không nói thứ hạng hay giới thiệu một đỉnh núi khác; mặt bên và phần nắp được giữ riêng trong bố cục.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both indicate box top relative to lateral faces, no ranking sense. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both indicate box top relative to lateral faces, no ranking sense.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "top",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Top được hiểu qua vật đang nói. \"The top of this box in our example.\" Hai người đang gọi phần trên của hộp, không nói thứ hạng hay giới thiệu một đỉnh núi khác; mặt bên và phần nắp được giữ riêng trong bố cục.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Phần trên cùng của chiếc hộp — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Companion confirms top lid while mascot compares orientation, objects continuous.",
+      "setting": "Bàn trang trí hộp và hình giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Is this the top of the box?\" Đây có phải phần trên cùng của hộp không? \"Let us check the face before adding glue.\" Người bạn xoay hộp vừa đủ cho bạn nhìn, rồi giữ đúng nắp theo phần đã thống nhất.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Companion confirms top lid while mascot compares orientation, objects continuous. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion confirms top lid while mascot compares orientation, objects continuous.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "Is this the top of the box?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Is this the top of the box?\" Đây có phải phần trên cùng của hộp không? \"Let us check the face before adding glue.\" Người bạn xoay hộp vừa đủ cho bạn nhìn, rồi giữ đúng nắp theo phần đã thống nhất.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Phần trên cùng của chiếc hộp — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold defined box top and full question.",
+      "setting": "Bàn trang trí hộp và hình giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi phần đang chỉ có phải phía trên cùng hộp. \"Name the part in the question.\" Hãy nói: \"Is this the top of the box?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold defined box top and full question. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold defined box top and full question.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Is this the top of the box?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi phần đang chỉ có phải phía trên cùng hộp. \"Name the part in the question.\" Hãy nói: \"Is this the top of the box?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Phần trên cùng của chiếc hộp — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both finish decoration on top lid and close fictional gift box.",
+      "setting": "Bàn trang trí hộp và hình giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Is this the top of the box?\" Đây là phần trên cùng hộp à? \"The decoration is now on the chosen face.\" Hai người đã chọn đúng chỗ, dán hình lên nắp của hộp quà hư cấu rồi kiểm lại trước khi cất.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "top",
+          "meaning": "đỉnh, phần trên cùng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both finish decoration on top lid and close fictional gift box. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both finish decoration on top lid and close fictional gift box.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "Is this the top of the box?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is this the top of the box?\" Đây là phần trên cùng hộp à? \"The decoration is now on the chosen face.\" Hai người đã chọn đúng chỗ, dán hình lên nắp của hộp quà hư cấu rồi kiểm lại trước khi cất.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Hộp có mặt trước rồi, tấm hình mới muốn nằm trên cùng hay ở bên? Top trong bài này là phần trên cùng. \"The upper part of this object.\" Bạn làm hộp quà hư cấu, cần chỉ đúng phần sẽ trang trí trước khi dán giấy lên."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Hộp có mặt trước rồi, tấm hình mới muốn nằm trên cùng hay ở bên? Top trong bài này là phần trên cùng. \"The upper part of this object.\" Bạn làm hộp quà hư cấu, cần chỉ đúng phần sẽ trang trí trước khi dán giấy lên."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"Put it on the top.\" Đặt nó lên phần trên cùng nhé. \"The lid area we are pointing to.\" Người bạn đặt thử hình giấy trên nắp, chưa dán để còn kiểm xem hai người chọn đúng mặt không."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"Put it on the top.\" Đặt nó lên phần trên cùng nhé. \"The lid area we are pointing to.\" Người bạn đặt thử hình giấy trên nắp, chưa dán để còn kiểm xem hai người chọn đúng mặt không."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Top được hiểu qua vật đang nói. \"The top of this box in our example.\" Hai người đang gọi phần trên của hộp, không nói thứ hạng hay giới thiệu một đỉnh núi khác; mặt bên và phần nắp được giữ riêng trong bố cục."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn hỏi: \"Is this the top of the box?\" Đây có phải phần trên cùng của hộp không? \"Let us check the face before adding glue.\" Người bạn xoay hộp vừa đủ cho bạn nhìn, rồi giữ đúng nắp theo phần đã thống nhất."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn hỏi phần đang chỉ có phải phía trên cùng hộp. \"Name the part in the question.\" Hãy nói: \"Is this the top of the box?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Is this the top of the box?\" Đây là phần trên cùng hộp à? \"The decoration is now on the chosen face.\" Hai người đã chọn đúng chỗ, dán hình lên nắp của hộp quà hư cấu rồi kiểm lại trước khi cất."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Nhiều mặt → hỏi phần trên → đặt hình → kiểm.. Next event: Friend places loose paper decoration on top lid of box, mascot watches."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Nhiều mặt → hỏi phần trên → đặt hình → kiểm.. Next event: Both indicate box top relative to lateral faces, no ranking sense."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Nhiều mặt → hỏi phần trên → đặt hình → kiểm.. Next event: Companion confirms top lid while mascot compares orientation, objects continuous."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Nhiều mặt → hỏi phần trên → đặt hình → kiểm.. Next event: Hold defined box top and full question."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhiều mặt → hỏi phần trên → đặt hình → kiểm.. Next event: Both finish decoration on top lid and close fictional gift box."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhiều mặt → hỏi phần trên → đặt hình → kiểm.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

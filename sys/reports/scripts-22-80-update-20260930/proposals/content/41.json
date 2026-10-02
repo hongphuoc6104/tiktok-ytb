@@ -1,0 +1,580 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "d07427427eab6694aa91bf8a12ddc0bcc6af4f7b636d1253aa83255894f57e17",
+  "topic": "Học từ vựng tiếng Anh dad — bố (thân mật) qua câu chuyện “Dad, giúp con mở hộp với!”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới dad; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “bố (thân mật)” của dad; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng dad chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng dad, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Bố",
+      "appearance": "Adult man, simple flat illustration, minimal limbs.",
+      "outfit": "Plain sage-green short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc hộp không chịu mở",
+      "purpose": "Motivate a natural call for help.",
+      "action": "Mascot tries to lift a closed lunchbox lid with simple hands; father nearby reading a plain notebook.",
+      "setting": "Kitchen table with a stuck lunchbox, father in sage top and canonical mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn đã kéo nắp hộp hai lần mà nó vẫn không mở. Dad là cách gọi bố thân mật. Trong câu chuyện này, bạn quay sang nhờ bố, người đang ngồi ngay cạnh bàn chứ chẳng cần gọi điện tìm đâu xa. Father và dad đều có thể nhắc tới bố. Trong lời gọi nhờ giúp ở nhà, dad là cách gọi thân mật. Chiếc hộp khó mở tạo lý do để bạn gọi ông ấy.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "dad",
+          "meaning": "bố (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot tries to lift a closed lunchbox lid with simple hands; father nearby reading a plain notebook. Kitchen table with a stuck lunchbox, father in sage top and canonical mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot tries to lift a closed lunchbox lid with simple hands; father nearby reading a plain notebook.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "dad",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Show the declared father addressed by the mascot with the closed lunchbox, then the same father releasing the side latch. A separate explanatory card links direct address to talking about the same father. Kitchen table with a stuck lunchbox, father in sage top and canonical mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show the declared father addressed by the mascot with the closed lunchbox, then the same father releasing the side latch. A separate explanatory card links direct address to talking about the same father.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "dad",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đã kéo nắp hộp hai lần",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Father và dad đều có thể nhắc",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nhờ giúp một chút",
+      "purpose": "Model direct address within a polite request.",
+      "action": "Mascot slides lunchbox toward father and points to the lid.",
+      "setting": "Kitchen table with a stuck lunchbox, father in sage top and canonical mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"Dad, can you help me?\" Bố ơi, bố giúp con được không? Dad dùng để gọi trực tiếp. Phần can you help me là lời nhờ giúp, hợp lúc chiếc nắp đang thắng cả hai bàn tay. Bạn nói với bố thì gọi Dad; kể với người khác thì dùng my dad. Đổi người đang nghe không làm quan hệ thay đổi, chỉ làm cách đặt từ trong câu khác đi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "dad",
+          "meaning": "bố (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot slides lunchbox toward father and points to the lid. Kitchen table with a stuck lunchbox, father in sage top and canonical mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot slides lunchbox toward father and points to the lid.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Show the declared father addressed by the mascot with the closed lunchbox, then the same father releasing the side latch. A separate explanatory card links direct address to talking about the same father. Kitchen table with a stuck lunchbox, father in sage top and canonical mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show the declared father addressed by the mascot with the closed lunchbox, then the same father releasing the side latch. A separate explanatory card links direct address to talking about the same father.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "dad",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"Dad, can you help me?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói với bố thì gọi Dad;",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Kể với người khác",
+      "purpose": "Model reference rather than address.",
+      "action": "Father presses the small side latch while mascot watches closely, lid starts to open.",
+      "setting": "Kitchen table with a stuck lunchbox, father in sage top and canonical mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Kể lại với bạn, bạn nói: \"My dad helps me.\" Bố giúp tôi. My dad là bố của mình. Bố chỉ vào chiếc chốt nhỏ bên cạnh: hóa ra nắp có khóa, không phải do bạn kéo chưa đủ mạnh.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "dad",
+          "meaning": "bố (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Father presses the small side latch while mascot watches closely, lid starts to open. Kitchen table with a stuck lunchbox, father in sage top and canonical mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Father presses the small side latch while mascot watches closely, lid starts to open.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Father presses the small side latch while mascot watches closely, lid starts to open. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Kitchen table with a stuck lunchbox, father in sage top and canonical mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Father presses the small side latch while mascot watches closely, lid starts to open. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "My dad helps me.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Kể lại với bạn, bạn nói: \"My",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"My dad helps me.\" Bố giúp tôi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Thử nhờ bằng tiếng Anh",
+      "purpose": "Prompt the complete helpful request.",
+      "action": "Mascot presents closed lunchbox, question stem with blank before comma at top.",
+      "setting": "Kitchen table with a stuck lunchbox, father in sage top and canonical mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Chiếc hộp vẫn chưa mở. Bạn nhờ bố: \"..., can you help me?\" Hãy điền cách gọi thân mật rồi nói cả lời nhờ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "dad",
+          "meaning": "bố (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot presents closed lunchbox, question stem with blank before comma at top. Kitchen table with a stuck lunchbox, father in sage top and canonical mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot presents closed lunchbox, question stem with blank before comma at top.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot presents closed lunchbox, question stem with blank before comma at top. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Kitchen table with a stuck lunchbox, father in sage top and canonical mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot presents closed lunchbox, question stem with blank before comma at top. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "..., can you help me?",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Chiếc hộp vẫn chưa mở. Bạn nhờ",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"..., can you help me?\" Hãy điền",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chiếc chốt mới là đáp án",
+      "purpose": "Confirm and resolve the stuck object.",
+      "action": "Mascot opens released lunchbox beside father, both smile at the small latch.",
+      "setting": "Kitchen table with a stuck lunchbox, father in sage top and canonical mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"Dad, can you help me?\" Từ gọi bố là Dad. Chốt được mở, nắp cũng bật lên dễ dàng. Bạn có câu nhờ giúp mới, và còn biết thêm rằng trước khi kéo mạnh thì nên nhìn kỹ chiếc hộp.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "dad",
+          "meaning": "bố (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot opens released lunchbox beside father, both smile at the small latch. Kitchen table with a stuck lunchbox, father in sage top and canonical mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot opens released lunchbox beside father, both smile at the small latch.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Dad, can you help me?\" Từ gọi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Motivate a natural call for help.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model direct address within a polite request."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model direct address within a polite request.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Model reference rather than address."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model reference rather than address.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt the complete helpful request."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the complete helpful request.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and resolve the stuck object."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the stuck object.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn đã kéo nắp hộp hai lần mà nó vẫn không mở. Dad là cách gọi bố thân mật. Trong câu chuyện này, bạn quay sang nhờ bố, người đang ngồi ngay cạnh bàn chứ chẳng cần gọi điện tìm đâu xa. Father và dad đều có thể nhắc tới bố. Trong lời gọi nhờ giúp ở nhà, dad là cách gọi thân mật. Chiếc hộp khó mở tạo lý do để bạn gọi ông ấy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn đã kéo nắp hộp hai lần mà nó vẫn không mở. Dad là cách gọi bố thân mật. Trong câu chuyện này, bạn quay sang nhờ bố, người đang ngồi ngay cạnh bàn chứ chẳng cần gọi điện tìm đâu xa. Father và dad đều có thể nhắc tới bố. Trong lời gọi nhờ giúp ở nhà, dad là cách gọi thân mật. Chiếc hộp khó mở tạo lý do để bạn gọi ông ấy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"Dad, can you help me?\" Bố ơi, bố giúp con được không? Dad dùng để gọi trực tiếp. Phần can you help me là lời nhờ giúp, hợp lúc chiếc nắp đang thắng cả hai bàn tay. Bạn nói với bố thì gọi Dad; kể với người khác thì dùng my dad. Đổi người đang nghe không làm quan hệ thay đổi, chỉ làm cách đặt từ trong câu khác đi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"Dad, can you help me?\" Bố ơi, bố giúp con được không? Dad dùng để gọi trực tiếp. Phần can you help me là lời nhờ giúp, hợp lúc chiếc nắp đang thắng cả hai bàn tay. Bạn nói với bố thì gọi Dad; kể với người khác thì dùng my dad. Đổi người đang nghe không làm quan hệ thay đổi, chỉ làm cách đặt từ trong câu khác đi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Kể lại với bạn, bạn nói: \"My dad helps me.\" Bố giúp tôi. My dad là bố của mình. Bố chỉ vào chiếc chốt nhỏ bên cạnh: hóa ra nắp có khóa, không phải do bạn kéo chưa đủ mạnh."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Chiếc hộp vẫn chưa mở. Bạn nhờ bố: \"..., can you help me?\" Hãy điền cách gọi thân mật rồi nói cả lời nhờ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Dad, can you help me?\" Từ gọi bố là Dad. Chốt được mở, nắp cũng bật lên dễ dàng. Bạn có câu nhờ giúp mới, và còn biết thêm rằng trước khi kéo mạnh thì nên nhìn kỹ chiếc hộp."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

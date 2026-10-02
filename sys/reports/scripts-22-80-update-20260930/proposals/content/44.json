@@ -1,0 +1,580 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "069d5d7b4fd33cb7c7b59d14e8e0de948f720c4b7f53788c7c624cb3907918cc",
+  "topic": "Học từ vựng tiếng Anh child — đứa trẻ qua câu chuyện “Một đứa trẻ bên bàn đọc sách”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới child; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “đứa trẻ” của child; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng child chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng child, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Đứa trẻ",
+      "appearance": "Young child, clearly smaller than adult mascot, simple round head, minimal limbs.",
+      "outfit": "Plain yellow top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Ai cần chiếc ghế thấp?",
+      "purpose": "Ground child in a clear age context.",
+      "action": "Mascot notices a small child trying to see a picture book on a high reading table.",
+      "setting": "Library reading table with mascot and a small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Chiếc bàn đọc sách hơi cao, người khách nhỏ cứ phải nhón lên nhìn. Child trong bài này là đứa trẻ. Từ ấy có thể dùng cho trẻ trai hoặc trẻ gái, nên bạn chưa cần biết giới tính để gọi đúng. Trong bài này, chiếc ghế được chọn cho người còn nhỏ tuổi. Mình đang gọi một đứa trẻ theo tuổi, không suy từ việc người ấy là con của người lớn nào.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "child",
+          "meaning": "đứa trẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot notices a small child trying to see a picture book on a high reading table. Library reading table with mascot and a small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot notices a small child trying to see a picture book on a high reading table.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "child",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Keep the declared young child and appropriately low chair visible. A small neutral age-comparison card distinguishes a young child from an adult without adding a second real child or teaching the parent-child sense. Library reading table with mascot and a small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Keep the declared young child and appropriately low chair visible. A small neutral age-comparison card distinguishes a young child from an adult without adding a second real child or teaching the parent-child sense.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "child",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Chiếc bàn đọc sách hơi cao, người",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong bài này, chiếc ghế được chọn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of child and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Gọi tên người khách nhỏ",
+      "purpose": "Model a singular noun with a clear referent.",
+      "action": "Mascot offers the child a lower chair beside the reading table.",
+      "setting": "Library reading table with mascot and a small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"The child needs a chair.\" Đứa trẻ cần một chiếc ghế. The child chỉ người khách nhỏ đang ở trước mặt mình. Nhờ gọi đúng người, bạn biết chiếc ghế thấp vừa mang tới dành cho ai. Đứa trẻ có thể là trai hoặc gái. Bạn vẫn dùng cùng từ khi nói chiếc ghế dành cho người ấy; không cần thay từ chỉ vì áo hoặc kiểu tóc khác.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "child",
+          "meaning": "đứa trẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot offers the child a lower chair beside the reading table. Library reading table with mascot and a small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot offers the child a lower chair beside the reading table.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Keep the declared young child and appropriately low chair visible. A small neutral age-comparison card distinguishes a young child from an adult without adding a second real child or teaching the parent-child sense. Library reading table with mascot and a small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Keep the declared young child and appropriately low chair visible. A small neutral age-comparison card distinguishes a young child from an adult without adding a second real child or teaching the parent-child sense.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "child",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"The child needs a chair.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Đứa trẻ có thể là trai hoặc",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of child and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Ngồi được rồi thì đọc",
+      "purpose": "Connect the second example to the solved height problem.",
+      "action": "Child sits at suitable chair reading picture book, mascot nearby turns another book page.",
+      "setting": "Library reading table with mascot and a small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Khi đã ngồi vừa bàn: \"The child is reading.\" Đứa trẻ đang đọc sách. Is reading cho biết việc đang diễn ra. Child vẫn là người lúc nãy, giờ đã nhìn rõ trang sách mà không cần nhón chân nữa.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "child",
+          "meaning": "đứa trẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Child sits at suitable chair reading picture book, mascot nearby turns another book page. Library reading table with mascot and a small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Child sits at suitable chair reading picture book, mascot nearby turns another book page.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Child sits at suitable chair reading picture book, mascot nearby turns another book page. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Library reading table with mascot and a small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Child sits at suitable chair reading picture book, mascot nearby turns another book page. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "The child is reading.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Khi đã ngồi vừa bàn: \"The child",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The child is reading.\" Đứa trẻ đang",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of child and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nhìn tuổi để chọn từ",
+      "purpose": "Prompt retrieval of the intended child sense.",
+      "action": "Mascot points toward small child with open book; sentence stem above.",
+      "setting": "Library reading table with mascot and a small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Một đứa trẻ đang đọc sách. Hãy hoàn thành \"The... is reading.\" bằng từ vừa học. Câu này gọi người đọc theo tuổi nhỏ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "child",
+          "meaning": "đứa trẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot points toward small child with open book; sentence stem above. Library reading table with mascot and a small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points toward small child with open book; sentence stem above.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot points toward small child with open book; sentence stem above. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Library reading table with mascot and a small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot points toward small child with open book; sentence stem above. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "The... is reading.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Một đứa trẻ đang đọc sách. Hãy",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The... is reading.\" bằng từ vừa học.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of child and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Ghế đúng, sách vừa tầm",
+      "purpose": "Confirm and end with the resolved reading goal.",
+      "action": "Mascot and child sit at separate appropriately sized chairs, both reading calmly.",
+      "setting": "Library reading table with mascot and a small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"The child is reading.\" Từ còn thiếu là child. Chiếc ghế thấp cuối cùng đã có đúng người ngồi. Còn bài này chỉ giữ nghĩa đứa trẻ, để bạn nhìn tình huống và dùng được ngay một câu rõ ràng.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "child",
+          "meaning": "đứa trẻ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and child sit at separate appropriately sized chairs, both reading calmly. Library reading table with mascot and a small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and child sit at separate appropriately sized chairs, both reading calmly.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The child is reading.\" Từ còn thiếu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of child and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Ground child in a clear age context.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model a singular noun with a clear referent."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a singular noun with a clear referent.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Connect the second example to the solved height problem."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Connect the second example to the solved height problem.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt retrieval of the intended child sense."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt retrieval of the intended child sense.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and end with the resolved reading goal."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and end with the resolved reading goal.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chiếc bàn đọc sách hơi cao, người khách nhỏ cứ phải nhón lên nhìn. Child trong bài này là đứa trẻ. Từ ấy có thể dùng cho trẻ trai hoặc trẻ gái, nên bạn chưa cần biết giới tính để gọi đúng. Trong bài này, chiếc ghế được chọn cho người còn nhỏ tuổi. Mình đang gọi một đứa trẻ theo tuổi, không suy từ việc người ấy là con của người lớn nào."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chiếc bàn đọc sách hơi cao, người khách nhỏ cứ phải nhón lên nhìn. Child trong bài này là đứa trẻ. Từ ấy có thể dùng cho trẻ trai hoặc trẻ gái, nên bạn chưa cần biết giới tính để gọi đúng. Trong bài này, chiếc ghế được chọn cho người còn nhỏ tuổi. Mình đang gọi một đứa trẻ theo tuổi, không suy từ việc người ấy là con của người lớn nào."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"The child needs a chair.\" Đứa trẻ cần một chiếc ghế. The child chỉ người khách nhỏ đang ở trước mặt mình. Nhờ gọi đúng người, bạn biết chiếc ghế thấp vừa mang tới dành cho ai. Đứa trẻ có thể là trai hoặc gái. Bạn vẫn dùng cùng từ khi nói chiếc ghế dành cho người ấy; không cần thay từ chỉ vì áo hoặc kiểu tóc khác."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"The child needs a chair.\" Đứa trẻ cần một chiếc ghế. The child chỉ người khách nhỏ đang ở trước mặt mình. Nhờ gọi đúng người, bạn biết chiếc ghế thấp vừa mang tới dành cho ai. Đứa trẻ có thể là trai hoặc gái. Bạn vẫn dùng cùng từ khi nói chiếc ghế dành cho người ấy; không cần thay từ chỉ vì áo hoặc kiểu tóc khác."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Khi đã ngồi vừa bàn: \"The child is reading.\" Đứa trẻ đang đọc sách. Is reading cho biết việc đang diễn ra. Child vẫn là người lúc nãy, giờ đã nhìn rõ trang sách mà không cần nhón chân nữa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Một đứa trẻ đang đọc sách. Hãy hoàn thành \"The... is reading.\" bằng từ vừa học. Câu này gọi người đọc theo tuổi nhỏ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The child is reading.\" Từ còn thiếu là child. Chiếc ghế thấp cuối cùng đã có đúng người ngồi. Còn bài này chỉ giữ nghĩa đứa trẻ, để bạn nhìn tình huống và dùng được ngay một câu rõ ràng."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

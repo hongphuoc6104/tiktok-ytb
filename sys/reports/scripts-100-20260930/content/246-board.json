@@ -1,0 +1,470 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "9d62122c09a38b207295bbf15ae891f3e470cb915eb03f07382694f4ff1c61d1",
+  "topic": "Học từ vựng tiếng Anh BOARD (danh từ: bảng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ BOARD",
+    "Làm rõ nghĩa lõi \"bảng\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng BOARD, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại BOARD, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Nhân vật đồng hành chính",
+      "appearance": "Adult classroom teacher. Minimal flat ink style; consistent adult face, age, gender and identity across all scenes. Distinct from canonical mascot. Plain mustard top; only explicitly required work outerwear, helmet or life jacket.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Adult fellow learner. Minimal flat ink style; keep one consistent adult identity across scenes. Distinct from mascot and main companion. Plain lavender top with explicitly required professional outerwear only.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cả lớp nhìn đâu — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot looks down at paper as adult teacher points toward classroom writing board.",
+      "setting": "Lớp học người lớn, bảng viết.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Look at the board.\" Hãy nhìn lên bảng. Board ở đây là bảng trong lớp học. Bạn cứ tìm bài trên tờ giấy, trong khi phần cần xem đang nằm ngay phía trước cả lớp.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "board",
+          "meaning": "bảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot looks down at paper as adult teacher points toward classroom writing board. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot looks down at paper as adult teacher points toward classroom writing board.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "Look at the board.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Look at the board.\" Hãy nhìn lên bảng. Board ở đây là bảng trong lớp học. Bạn cứ tìm bài trên tờ giấy, trong khi phần cần xem đang nằm ngay phía trước cả lớp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Cả lớp nhìn đâu — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Mascot faces board; teacher points to one simple geometric drawing.",
+      "setting": "Lớp học người lớn, bảng viết.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người hướng dẫn nhắc: \"Look at the board.\" The board chỉ chiếc bảng mọi người đều thấy. Bạn ngẩng lên, đặt tờ giấy xuống và theo dõi chỗ được chỉ.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "board",
+          "meaning": "bảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot faces board; teacher points to one simple geometric drawing. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot faces board; teacher points to one simple geometric drawing.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Look at the board.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Người hướng dẫn nhắc: \"Look at the board.\" The board chỉ chiếc bảng mọi người đều thấy. Bạn ngẩng lên, đặt tờ giấy xuống và theo dõi chỗ được chỉ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Cả lớp nhìn đâu — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Teacher holds eraser beside now clean classroom board; mascot and friend face it.",
+      "setting": "Lớp học người lớn, bảng viết.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn nói nhỏ: \"The board is clean.\" Bảng sạch rồi. Phần viết cũ đã được xóa để chuẩn bị bài mới; nhìn cả mặt bảng, mình sẽ không chép nhầm nội dung hôm trước.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "board",
+          "meaning": "bảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Teacher holds eraser beside now clean classroom board; mascot and friend face it. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Teacher holds eraser beside now clean classroom board; mascot and friend face it.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "The board is clean.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nói nhỏ: \"The board is clean.\" Bảng sạch rồi. Phần viết cũ đã được xóa để chuẩn bị bài mới; nhìn cả mặt bảng, mình sẽ không chép nhầm nội dung hôm trước.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Cả lớp nhìn đâu — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Show classroom board and desk notebook clearly; full model instruction for response, no highlighted location.",
+      "setting": "Lớp học người lớn, bảng viết.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn đang nhìn xuống vở khi nghe \"Look at the board.\" Bạn sẽ nhìn tới đâu? Chọn đúng chỗ trong hình, rồi nhắc lại lời hướng dẫn ấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "board",
+          "meaning": "bảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Show classroom board and desk notebook clearly; full model instruction for response, no highlighted location. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show classroom board and desk notebook clearly; full model instruction for response, no highlighted location.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "Look at the board.",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đang nhìn xuống vở khi nghe \"Look at the board.\" Bạn sẽ nhìn tới đâu? Chọn đúng chỗ trong hình, rồi nhắc lại lời hướng dẫn ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Cả lớp nhìn đâu — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Both learners face board as teacher begins a simple new diagram without readable text.",
+      "setting": "Lớp học người lớn, bảng viết.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Look at the board.\" Đáp án là board. Hai người đã nhìn cùng một chỗ. Khi phần mới xuất hiện, chẳng ai còn lật giấy tìm bài nữa.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "board",
+          "meaning": "bảng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both learners face board as teacher begins a simple new diagram without readable text. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both learners face board as teacher begins a simple new diagram without readable text.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "Look at the board.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Look at the board.\" Đáp án là board. Hai người đã nhìn cùng một chỗ. Khi phần mới xuất hiện, chẳng ai còn lật giấy tìm bài nữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "\"Look at the board.\" Hãy nhìn lên bảng. Board ở đây là bảng trong lớp học. Bạn cứ tìm bài trên tờ giấy, trong khi phần cần xem đang nằm ngay phía trước cả lớp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "\"Look at the board.\" Hãy nhìn lên bảng. Board ở đây là bảng trong lớp học. Bạn cứ tìm bài trên tờ giấy, trong khi phần cần xem đang nằm ngay phía trước cả lớp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người hướng dẫn nhắc: \"Look at the board.\" The board chỉ chiếc bảng mọi người đều thấy. Bạn ngẩng lên, đặt tờ giấy xuống và theo dõi chỗ được chỉ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người hướng dẫn nhắc: \"Look at the board.\" The board chỉ chiếc bảng mọi người đều thấy. Bạn ngẩng lên, đặt tờ giấy xuống và theo dõi chỗ được chỉ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn nói nhỏ: \"The board is clean.\" Bảng sạch rồi. Phần viết cũ đã được xóa để chuẩn bị bài mới; nhìn cả mặt bảng, mình sẽ không chép nhầm nội dung hôm trước."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn đang nhìn xuống vở khi nghe \"Look at the board.\" Bạn sẽ nhìn tới đâu? Chọn đúng chỗ trong hình, rồi nhắc lại lời hướng dẫn ấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Look at the board.\" Đáp án là board. Hai người đã nhìn cùng một chỗ. Khi phần mới xuất hiện, chẳng ai còn lật giấy tìm bài nữa."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Nhìn nhầm giấy → hướng lên bảng → thấy bài → đọc cùng.. Next visible event: Mascot faces board; teacher points to one simple geometric drawing."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Nhìn nhầm giấy → hướng lên bảng → thấy bài → đọc cùng.. Next visible event: Teacher holds eraser beside now clean classroom board; mascot and friend face it."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Nhìn nhầm giấy → hướng lên bảng → thấy bài → đọc cùng.. Next visible event: Show classroom board and desk notebook clearly; full model instruction for response, no highlighted location."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhìn nhầm giấy → hướng lên bảng → thấy bài → đọc cùng.. Next visible event: Both learners face board as teacher begins a simple new diagram without readable text."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhìn nhầm giấy → hướng lên bảng → thấy bài → đọc cùng.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

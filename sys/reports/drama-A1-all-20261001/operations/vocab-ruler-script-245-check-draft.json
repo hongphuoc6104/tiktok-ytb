@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 26,
+            "seconds": 8.42,
+            "min": 6.32,
+            "max": 10.53
+          },
+          {
+            "scene_id": "SC02",
+            "units": 31,
+            "seconds": 9.66,
+            "min": 7.25,
+            "max": 12.08
+          },
+          {
+            "scene_id": "SC03",
+            "units": 32,
+            "seconds": 9.94,
+            "min": 7.45,
+            "max": 12.42
+          },
+          {
+            "scene_id": "SC04",
+            "units": 24,
+            "seconds": 11.42,
+            "min": 8.56,
+            "max": 14.27
+          },
+          {
+            "scene_id": "SC05",
+            "units": 35,
+            "seconds": 11.07,
+            "min": 8.3,
+            "max": 13.84
+          }
+        ],
+        "min": 37.88,
+        "max": 63.14,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "18938",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Ông muốn làm lại khung ảnh từ nhà cũ; cháu giúp đo bằng thước dài rồi ở lại ăn cơm, thay vì mải điện thoại. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

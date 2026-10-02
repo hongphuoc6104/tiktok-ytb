@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 44,
+            "seconds": 13.57,
+            "min": 10.18,
+            "max": 16.97
+          },
+          {
+            "scene_id": "SC02",
+            "units": 44,
+            "seconds": 13.42,
+            "min": 10.07,
+            "max": 16.78
+          },
+          {
+            "scene_id": "SC03",
+            "units": 35,
+            "seconds": 10.77,
+            "min": 8.08,
+            "max": 13.47
+          },
+          {
+            "scene_id": "SC04",
+            "units": 26,
+            "seconds": 11.82,
+            "min": 8.87,
+            "max": 14.78
+          },
+          {
+            "scene_id": "SC05",
+            "units": 31,
+            "seconds": 9.51,
+            "min": 7.13,
+            "max": 11.89
+          }
+        ],
+        "min": 44.33,
+        "max": 73.89,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "21039",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi và Hải vẽ từ lối tham quan khu khỉ; bạn tưởng tôi trêu bức vẽ, rồi hiểu tôi đang chỉ con vật thật và cùng tôi tô tiếp. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

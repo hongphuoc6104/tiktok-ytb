@@ -1,0 +1,45 @@
+{
+  "job": "vocab-family-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 60,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Mọi người đã đứng sát nhau, chỉ người cầm máy là chưa vào ảnh. Family nghĩa là gia đình. Gia đình trong câu chuyện này muốn có một tấm ảnh đủ mặt, kể cả người vẫn thường đứng sau máy chụp.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of family and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Khi giới thiệu tấm ảnh, bạn nói: \"This is my family.\" Đây là gia đình tôi. Family gọi những người trong gia đình; mỗi nhà có thể có số người và cách sống khác nhau, không cần giống tấm ảnh này.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of family and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bạn kể thêm: \"I eat with my family.\" Tôi ăn cùng gia đình. With my family cho biết bạn làm việc ấy cùng ai. Hôm nay mọi người còn muốn giữ lại một tấm ảnh sau bữa ăn.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of family and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Tưởng tượng bạn đang cho mình xem ảnh gia đình. Hãy giới thiệu \"This is my...\" rồi thêm từ gọi những người thân trong ảnh.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of family and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"This is my family.\" Từ còn thiếu là family. Máy ảnh được đặt lên giá, người chụp cũng chạy vào đứng cùng. Tấm ảnh cuối có đủ những người hôm nay đã ngồi quanh bàn với nhau.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of family and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

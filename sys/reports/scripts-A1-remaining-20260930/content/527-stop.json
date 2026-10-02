@@ -1,0 +1,491 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "2e230f3f2dca3967e76706ec5c349348316250c49d9f307c360ae0e4eff24db8",
+  "topic": "Học từ vựng tiếng Anh STOP (động từ: dừng lại) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ STOP",
+    "Làm rõ nghĩa lõi \"dừng lại\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng STOP, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại STOP, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đi qua chỗ hẹn rồi mới nhận ra — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot and companion walk past agreed bench on fictional path, bag in hand.",
+      "setting": "Lối đi hư cấu, ghế nghỉ và túi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Ghế hẹn ở sau lưng rồi, mình đang đi qua mất! Stop ở đây là dừng lại. \"The movement pauses.\" Bạn và người bạn đi trong khu sinh hoạt hư cấu, cần dừng ở chỗ đã hẹn thay vì cứ đi tiếp.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "stop",
+          "meaning": "dừng lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and companion walk past agreed bench on fictional path, bag in hand. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion walk past agreed bench on fictional path, bag in hand.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "stop",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Ghế hẹn ở sau lưng rồi, mình đang đi qua mất! Stop ở đây là dừng lại. \"The movement pauses.\" Bạn và người bạn đi trong khu sinh hoạt hư cấu, cần dừng ở chỗ đã hẹn thay vì cứ đi tiếp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Đi qua chỗ hẹn rồi mới nhận ra — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Both initially walking past bench => Both stop beside bench, path and props continuous.",
+      "setting": "Lối đi hư cấu, ghế nghỉ và túi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nhắc: \"Stop here.\" Dừng ở đây nhé. \"This is the place we need.\" Người bạn dừng bước cùng bạn, để cả hai kiểm lại vị trí trên sơ đồ của buổi gặp.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "stop",
+          "meaning": "dừng lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Both initially walking past bench Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both initially walking past bench",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Both stop beside bench, path and props continuous. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC02_I1",
+          "preserve": "Preserve base camera, background, identities, clothing and all unchanged props; only the specified state and permitted teaching text may change.",
+          "change": "Both stop beside bench, path and props continuous.",
+          "reason": "Show the explicitly described before/after state with the same camera and identities.",
+          "visible_text": [
+            {
+              "text": "Stop here.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhắc: \"Stop here.\" Dừng ở đây nhé. \"This is the place we need.\" Người bạn dừng bước cùng bạn, để cả hai kiểm lại vị trí trên sơ đồ của buổi gặp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Show the explicitly described before/after state with the same camera and identities.",
+          "anchor": {
+            "vi": {
+              "quote": "Stop here.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Đi qua chỗ hẹn rồi mới nhận ra — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Both place bags on bench and review simple fictional meeting plan.",
+      "setting": "Lối đi hư cấu, ghế nghỉ và túi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Can we stop for a minute?\" Mình dừng một phút được không? \"A short pause before moving on.\" Hai người đặt túi lên ghế rồi nhìn thông tin còn cần kiểm trong câu chuyện.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "stop",
+          "meaning": "dừng lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both place bags on bench and review simple fictional meeting plan. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both place bags on bench and review simple fictional meeting plan.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "Can we stop for a minute?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Can we stop for a minute?\" Mình dừng một phút được không? \"A short pause before moving on.\" Hai người đặt túi lên ghế rồi nhìn thông tin còn cần kiểm trong câu chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Đi qua chỗ hẹn rồi mới nhận ra — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold fictional path and short instruction, no actual one-minute learner wait.",
+      "setting": "Lối đi hư cấu, ghế nghỉ và túi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn nhờ người đi cùng dừng ở chỗ mình đang chỉ. \"Say where to pause.\" Nói như trong đoạn đi bộ của hai nhân vật: \"Stop here.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "stop",
+          "meaning": "dừng lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold fictional path and short instruction, no actual one-minute learner wait. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold fictional path and short instruction, no actual one-minute learner wait.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "Stop here.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nhờ người đi cùng dừng ở chỗ mình đang chỉ. \"Say where to pause.\" Nói như trong đoạn đi bộ của hai nhân vật: \"Stop here.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Đi qua chỗ hẹn rồi mới nhận ra — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Mascot and companion confirm bench location before deciding next route.",
+      "setting": "Lối đi hư cấu, ghế nghỉ và túi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Stop here.\" Dừng ở đây nhé. \"The place was not missed after all.\" Hai người đã dừng đúng chỗ để kiểm cuộc hẹn, rồi chọn bước tiếp theo từ thông tin vừa xem.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "stop",
+          "meaning": "dừng lại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and companion confirm bench location before deciding next route. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion confirm bench location before deciding next route.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "Stop here.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Stop here.\" Dừng ở đây nhé. \"The place was not missed after all.\" Hai người đã dừng đúng chỗ để kiểm cuộc hẹn, rồi chọn bước tiếp theo từ thông tin vừa xem.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Ghế hẹn ở sau lưng rồi, mình đang đi qua mất! Stop ở đây là dừng lại. \"The movement pauses.\" Bạn và người bạn đi trong khu sinh hoạt hư cấu, cần dừng ở chỗ đã hẹn thay vì cứ đi tiếp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Ghế hẹn ở sau lưng rồi, mình đang đi qua mất! Stop ở đây là dừng lại. \"The movement pauses.\" Bạn và người bạn đi trong khu sinh hoạt hư cấu, cần dừng ở chỗ đã hẹn thay vì cứ đi tiếp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nhắc: \"Stop here.\" Dừng ở đây nhé. \"This is the place we need.\" Người bạn dừng bước cùng bạn, để cả hai kiểm lại vị trí trên sơ đồ của buổi gặp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nhắc: \"Stop here.\" Dừng ở đây nhé. \"This is the place we need.\" Người bạn dừng bước cùng bạn, để cả hai kiểm lại vị trí trên sơ đồ của buổi gặp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn hỏi: \"Can we stop for a minute?\" Mình dừng một phút được không? \"A short pause before moving on.\" Hai người đặt túi lên ghế rồi nhìn thông tin còn cần kiểm trong câu chuyện."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn nhờ người đi cùng dừng ở chỗ mình đang chỉ. \"Say where to pause.\" Nói như trong đoạn đi bộ của hai nhân vật: \"Stop here.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Stop here.\" Dừng ở đây nhé. \"The place was not missed after all.\" Hai người đã dừng đúng chỗ để kiểm cuộc hẹn, rồi chọn bước tiếp theo từ thông tin vừa xem."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Đi tiếp quá chỗ → nhờ dừng → xin dừng một phút → kiểm.. Next event: Both initially walking past bench => Both stop beside bench, path and props continuous."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Đi tiếp quá chỗ → nhờ dừng → xin dừng một phút → kiểm.. Next event: Both place bags on bench and review simple fictional meeting plan."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Đi tiếp quá chỗ → nhờ dừng → xin dừng một phút → kiểm.. Next event: Hold fictional path and short instruction, no actual one-minute learner wait."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đi tiếp quá chỗ → nhờ dừng → xin dừng một phút → kiểm.. Next event: Mascot and companion confirm bench location before deciding next route."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đi tiếp quá chỗ → nhờ dừng → xin dừng một phút → kiểm.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

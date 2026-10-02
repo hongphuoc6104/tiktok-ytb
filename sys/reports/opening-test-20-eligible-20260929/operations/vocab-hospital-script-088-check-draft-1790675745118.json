@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 39,
+            "seconds": 12.03,
+            "min": 9.03,
+            "max": 15.04
+          },
+          {
+            "scene_id": "SC02",
+            "units": 47,
+            "seconds": 14.26,
+            "min": 10.69,
+            "max": 17.82
+          },
+          {
+            "scene_id": "SC03",
+            "units": 39,
+            "seconds": 12.03,
+            "min": 9.03,
+            "max": 15.04
+          },
+          {
+            "scene_id": "SC04",
+            "units": 28,
+            "seconds": 13.13,
+            "min": 9.85,
+            "max": 16.41
+          },
+          {
+            "scene_id": "SC05",
+            "units": 31,
+            "seconds": 9.81,
+            "min": 7.36,
+            "max": 12.26
+          }
+        ],
+        "min": 45.96,
+        "max": 76.57,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "4100",
+      "status": "addressed",
+      "explanation": "Đã sửa lời dẫn SC01–SC02: mở bằng tình huống/câu tiếng Anh ngay, bỏ dẫn nhập vòng và nối trực tiếp vào câu mẫu. Đã cập nhật hình mở đầu, biến thể cùng góc máy, outline, coverage và neo theo lời chốt. Giữ nguyên SC03–SC05, nghĩa từ, ví dụ bắt buộc và khoảng chờ thực hành. Chưa có số liệu hiệu quả sau đăng.",
+      "scene_ids": [
+        "SC01",
+        "SC02"
+      ]
+    }
+  ]
+}

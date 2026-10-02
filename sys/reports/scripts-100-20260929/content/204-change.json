@@ -1,0 +1,516 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "30f2eefbcbddf4318bfb25e1dadbac8d16a0756bc3a41395cf801c27948c29d9",
+  "topic": "Học từ vựng tiếng Anh CHANGE (động từ: thay đồ) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CHANGE",
+    "Làm rõ nghĩa lõi \"thay đồ\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CHANGE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CHANGE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người hỗ trợ trong tình huống",
+      "appearance": "Adult supporting person in minimal flat ink style. Maintain the role and identity specified by the scene across the whole story. Plain mustard top; may wear the explicitly described extra garment for clothing lessons.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Adult supporting person, distinct from the main mascot and first companion, minimal flat ink style; appears only when explicitly specified.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Áo bị đổ nước — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot offers a clean mustard top to a friend whose mustard shirt has a visible small water patch.",
+      "setting": "Phòng sinh hoạt, áo bạn bị nước và áo sạch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Áo ướt rồi! Change ở đây là thay đồ. Người bạn vô ý làm đổ nước lên áo, đang định đi ra ngoài thì phải dừng lại. Bạn đưa một chiếc áo sạch, để người ấy có thể thay trước khi tiếp tục.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "change",
+          "meaning": "thay đồ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot offers a clean mustard top to a friend whose mustard shirt has a visible small water patch. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot offers a clean mustard top to a friend whose mustard shirt has a visible small water patch.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "change",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Áo ướt rồi! Change ở đây là thay đồ. Người bạn vô ý làm đổ nước lên áo, đang định đi ra ngoài thì phải dừng lại. Bạn đưa một chiếc áo sạch, để người ấy có thể thay trước khi tiếp tục.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Áo bị đổ nước — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Friend holds the clean spare top and walks toward a closed changing-room door; no undressing shown.",
+      "setting": "Phòng sinh hoạt, áo bạn bị nước và áo sạch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn nói: \"I need to change.\" Tôi cần thay đồ. Change trong tình huống này không phải đổi tiền hay đổi ý. Áo đang mặc bị ướt, nên người ấy cầm áo sạch và tìm một phòng riêng.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "change",
+          "meaning": "thay đồ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend holds the clean spare top and walks toward a closed changing-room door; no undressing shown. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend holds the clean spare top and walks toward a closed changing-room door; no undressing shown.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "I need to change.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nói: \"I need to change.\" Tôi cần thay đồ. Change trong tình huống này không phải đổi tiền hay đổi ý. Áo đang mặc bị ướt, nên người ấy cầm áo sạch và tìm một phòng riêng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Áo bị đổ nước — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Mascot points to the private room while friend waits fully clothed holding spare top; no body exposure.",
+      "setting": "Phòng sinh hoạt, áo bạn bị nước và áo sạch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Trước khi đi vào, người bạn hỏi: \"Can I change here?\" Tôi thay đồ ở đây được không? Bạn chỉ căn phòng riêng có cửa. Nơi thay cần phù hợp; mình không thay ngay giữa chỗ mọi người đang ngồi.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "change",
+          "meaning": "thay đồ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot points to the private room while friend waits fully clothed holding spare top; no body exposure. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to the private room while friend waits fully clothed holding spare top; no body exposure.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "Can I change here?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Trước khi đi vào, người bạn hỏi: \"Can I change here?\" Tôi thay đồ ở đây được không? Bạn chỉ căn phòng riêng có cửa. Nơi thay cần phù hợp; mình không thay ngay giữa chỗ mọi người đang ngồi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Áo bị đổ nước — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold fully clothed friend with wet shirt and clean spare garment beside a private doorway.",
+      "setting": "Phòng sinh hoạt, áo bạn bị nước và áo sạch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Áo bị ướt và bạn cần thay đồ. Hoàn thành \"I need to...\" bằng từ vừa học rồi nói câu đầy đủ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "change",
+          "meaning": "thay đồ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold fully clothed friend with wet shirt and clean spare garment beside a private doorway. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold fully clothed friend with wet shirt and clean spare garment beside a private doorway.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "I need to...",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Áo bị ướt và bạn cần thay đồ. Hoàn thành \"I need to...\" bằng từ vừa học rồi nói câu đầy đủ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Áo bị đổ nước — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Friend returns fully dressed in a dry mustard top, carrying the wet one folded; mascot remains unchanged.",
+      "setting": "Phòng sinh hoạt, áo bạn bị nước và áo sạch.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"I need to change.\" Đáp án là change. Thay xong trong phòng riêng, người bạn quay lại với áo khô. Chiếc áo ướt được để riêng để mang giặt.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "change",
+          "meaning": "thay đồ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Friend is behind the closed private-room door; mascot waits fully clothed outside. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend is behind the closed private-room door; mascot waits fully clothed outside.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "I need to change.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC05_I2",
+          "description": "Friend has returned fully dressed in dry mustard top, holding wet top folded. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC05_I1",
+          "preserve": "Preserve base scene camera, background, character identities, single mascot torso and exact clothing, prop positions and visible text; change only the specified state.",
+          "change": "Friend has returned fully dressed in dry mustard top, holding wet top folded.",
+          "reason": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "visible_text": [
+            {
+              "text": "I need to change.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need to change.\" Đáp án là change. Thay xong trong phòng riêng, người bạn quay lại với áo khô. Chiếc áo ướt được để riêng để mang giặt.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC05_B2",
+          "image_id": "SC05_I2",
+          "purpose": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "anchor": {
+            "vi": {
+              "quote": "Thay xong trong phòng riêng",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Áo ướt rồi! Change ở đây là thay đồ. Người bạn vô ý làm đổ nước lên áo, đang định đi ra ngoài thì phải dừng lại. Bạn đưa một chiếc áo sạch, để người ấy có thể thay trước khi tiếp tục."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Áo ướt rồi! Change ở đây là thay đồ. Người bạn vô ý làm đổ nước lên áo, đang định đi ra ngoài thì phải dừng lại. Bạn đưa một chiếc áo sạch, để người ấy có thể thay trước khi tiếp tục."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người bạn nói: \"I need to change.\" Tôi cần thay đồ. Change trong tình huống này không phải đổi tiền hay đổi ý. Áo đang mặc bị ướt, nên người ấy cầm áo sạch và tìm một phòng riêng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người bạn nói: \"I need to change.\" Tôi cần thay đồ. Change trong tình huống này không phải đổi tiền hay đổi ý. Áo đang mặc bị ướt, nên người ấy cầm áo sạch và tìm một phòng riêng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Trước khi đi vào, người bạn hỏi: \"Can I change here?\" Tôi thay đồ ở đây được không? Bạn chỉ căn phòng riêng có cửa. Nơi thay cần phù hợp; mình không thay ngay giữa chỗ mọi người đang ngồi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Áo bị ướt và bạn cần thay đồ. Hoàn thành \"I need to...\" bằng từ vừa học rồi nói câu đầy đủ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I need to change.\" Đáp án là change. Thay xong trong phòng riêng, người bạn quay lại với áo khô. Chiếc áo ướt được để riêng để mang giặt."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Đổ nước lên áo → cần thay → lấy áo sạch → quay lại.. Next visible event: Friend holds the clean spare top and walks toward a closed changing-room door; no undressing shown."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Đổ nước lên áo → cần thay → lấy áo sạch → quay lại.. Next visible event: Mascot points to the private room while friend waits fully clothed holding spare top; no body exposure."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Đổ nước lên áo → cần thay → lấy áo sạch → quay lại.. Next visible event: Hold fully clothed friend with wet shirt and clean spare garment beside a private doorway."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đổ nước lên áo → cần thay → lấy áo sạch → quay lại.. Next visible event: Friend returns fully dressed in a dry mustard top, carrying the wet one folded; mascot remains unchanged."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đổ nước lên áo → cần thay → lấy áo sạch → quay lại.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

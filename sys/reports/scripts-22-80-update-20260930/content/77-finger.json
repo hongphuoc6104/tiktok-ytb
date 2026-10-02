@@ -1,0 +1,471 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "714f3c8222a36021aa2ec83b3cd2abfcb5df4e0375ab850634475c0ebeda8ca2",
+  "topic": "Học từ vựng tiếng Anh finger — ngón tay qua câu chuyện “Chạm nút bằng một ngón tay”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới finger; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “ngón tay” của finger; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng finger chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng finger, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Nút tròn chờ một lần chạm",
+      "purpose": "Make a finger's role visible without changing mascot anatomy.",
+      "action": "Mascot holds tablet with large plain circle while separate teaching hand extends one index finger toward it.",
+      "setting": "Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Trên màn hình có một nút tròn, người hướng dẫn dùng một ngón tay chạm vào. Finger nghĩa là ngón tay. Mình nhìn hình bàn tay riêng để thấy rõ từng ngón, thay vì nhầm cả bàn tay là một finger.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "finger",
+          "meaning": "ngón tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds tablet with large plain circle while separate teaching hand extends one index finger toward it. Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds tablet with large plain circle while separate teaching hand extends one index finger toward it.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "finger",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot holds tablet with large plain circle while separate teaching hand extends one index finger toward it. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot holds tablet with large plain circle while separate teaching hand extends one index finger toward it. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "finger",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trên màn hình có một nút tròn,",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Mình nhìn hình bàn tay riêng để",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Gọi tên một ngón",
+      "purpose": "Model singular finger with unambiguous pointing.",
+      "action": "Mascot points to one highlighted finger on flat hand diagram, other fingers muted but visible.",
+      "setting": "Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"This is my finger.\" Đây là ngón tay của tôi. Finger chỉ một ngón tay. Khi gọi tên, hãy nhìn đúng một ngón được đánh dấu trên hình, đừng chỉ chung vào cả bàn tay đang mở.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "finger",
+          "meaning": "ngón tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to one highlighted finger on flat hand diagram, other fingers muted but visible. Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to one highlighted finger on flat hand diagram, other fingers muted but visible.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"This is my finger.\" Đây",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Thao tác bằng một ngón",
+      "purpose": "Model an instruction connected to the tablet.",
+      "action": "Separate teaching hand uses one fingertip to touch large circle on tablet held by mascot.",
+      "setting": "Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nghe: \"Point with your finger.\" Chỉ bằng ngón tay của bạn. With your finger nói cách làm động tác. Bạn chỉ nhẹ vào nút tròn để người kia biết chỗ cần bấm, không phải ấn mạnh cả bàn tay lên màn hình.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "finger",
+          "meaning": "ngón tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Separate teaching hand uses one fingertip to touch large circle on tablet held by mascot. Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Separate teaching hand uses one fingertip to touch large circle on tablet held by mascot.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nghe: \"Point with your finger.\" Chỉ",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chỉ một bộ phận nhỏ",
+      "purpose": "Prompt the noun in the modeled phrase.",
+      "action": "Mascot presents single highlighted finger diagram, incomplete instruction at upper third.",
+      "setting": "Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Hoàn thành \"Point with your...\" bằng từ chỉ ngón tay. Nhìn đúng một ngón được đánh dấu, đừng gọi chung cả bàn tay nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "finger",
+          "meaning": "ngón tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot presents single highlighted finger diagram, incomplete instruction at upper third. Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot presents single highlighted finger diagram, incomplete instruction at upper third.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Hoàn thành \"Point with your...\" bằng từ",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Nút đã được chọn",
+      "purpose": "Confirm and resolve the tablet interaction.",
+      "action": "Tablet circle now shows a simple check mark after fingertip touch, mascot smiles beside unchanged hand diagram.",
+      "setting": "Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"Point with your finger.\" Từ còn thiếu là finger. Nút tròn đã được chọn bằng một đầu ngón tay. Bạn vừa phân biệt được bộ phận nhỏ này với cả bàn tay, nhờ một thao tác rất dễ nhìn thấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "finger",
+          "meaning": "ngón tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Tablet circle now shows a simple check mark after fingertip touch, mascot smiles beside unchanged hand diagram. Mascot presenting a flat human hand diagram with clearly separated digits, tablet with one large circle. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Tablet circle now shows a simple check mark after fingertip touch, mascot smiles beside unchanged hand diagram.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Point with your finger.\" Từ còn thiếu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make a finger's role visible without changing mascot anatomy.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model singular finger with unambiguous pointing."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model singular finger with unambiguous pointing.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Model an instruction connected to the tablet."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model an instruction connected to the tablet.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt the noun in the modeled phrase."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the noun in the modeled phrase.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and resolve the tablet interaction."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the tablet interaction.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Trên màn hình có một nút tròn, người hướng dẫn dùng một ngón tay chạm vào. Finger nghĩa là ngón tay. Mình nhìn hình bàn tay riêng để thấy rõ từng ngón, thay vì nhầm cả bàn tay là một finger."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Trên màn hình có một nút tròn, người hướng dẫn dùng một ngón tay chạm vào. Finger nghĩa là ngón tay. Mình nhìn hình bàn tay riêng để thấy rõ từng ngón, thay vì nhầm cả bàn tay là một finger."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my finger.\" Đây là ngón tay của tôi. Finger chỉ một ngón tay. Khi gọi tên, hãy nhìn đúng một ngón được đánh dấu trên hình, đừng chỉ chung vào cả bàn tay đang mở."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my finger.\" Đây là ngón tay của tôi. Finger chỉ một ngón tay. Khi gọi tên, hãy nhìn đúng một ngón được đánh dấu trên hình, đừng chỉ chung vào cả bàn tay đang mở."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nghe: \"Point with your finger.\" Chỉ bằng ngón tay của bạn. With your finger nói cách làm động tác. Bạn chỉ nhẹ vào nút tròn để người kia biết chỗ cần bấm, không phải ấn mạnh cả bàn tay lên màn hình."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Hoàn thành \"Point with your...\" bằng từ chỉ ngón tay. Nhìn đúng một ngón được đánh dấu, đừng gọi chung cả bàn tay nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Point with your finger.\" Từ còn thiếu là finger. Nút tròn đã được chọn bằng một đầu ngón tay. Bạn vừa phân biệt được bộ phận nhỏ này với cả bàn tay, nhờ một thao tác rất dễ nhìn thấy."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13964",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

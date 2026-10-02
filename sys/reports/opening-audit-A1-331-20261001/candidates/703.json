@@ -1,0 +1,549 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "5ccd636611e8dbe34f8899364d94f747365dc1e4bafae41ac3876a5aef960dde",
+  "topic": "Học từ vựng tiếng Anh SOMETHING (đại từ: thứ gì đó) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SOMETHING",
+    "Làm rõ nghĩa lõi \"thứ gì đó\" (đại từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SOMETHING, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SOMETHING, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Trong hộp còn một món chưa biết tên — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Mascot tilts open game box to reveal last harmless piece tucked in corner, companion notices it.",
+      "setting": "Bàn mở hộp trò chơi.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Hộp tưởng rỗng, còn một món kìa! Something nghĩa là thứ gì đó. \"A thing whose name we have not given yet.\" Bạn dọn trò chơi hư cấu với người bạn, muốn nhắc có một món cần kiểm trước khi cất hộp.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "something",
+          "meaning": "thứ gì đó"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot tilts open game box to reveal last harmless piece tucked in corner, companion notices it. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot tilts open game box to reveal last harmless piece tucked in corner, companion notices it.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "something",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Hộp tưởng rỗng, còn một món kìa! Something nghĩa là thứ gì đó. \"A thing whose name we have not given yet.\" Bạn dọn trò chơi hư cấu với người bạn, muốn nhắc có một món cần kiểm trước khi cất hộp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Trong hộp còn một món chưa biết tên — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Both look inside defined box for remaining partly hidden token.",
+      "setting": "Bàn mở hộp trò chơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"There's something in the box.\" Có thứ gì đó trong hộp. \"An item is still inside here.\" Người bạn mở phần nắp trong câu chuyện, để hai người nhìn món còn lại thay vì tự nhận hộp đã không có gì.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "something",
+          "meaning": "thứ gì đó"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Both look inside defined box for remaining partly hidden token. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both look inside defined box for remaining partly hidden token.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "There's something in the box.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"There's something in the box.\" Có thứ gì đó trong hộp. \"An item is still inside here.\" Người bạn mở phần nắp trong câu chuyện, để hai người nhìn món còn lại thay vì tự nhận hộp đã không có gì.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Trong hộp còn một món chưa biết tên — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both examine hidden corner without guessing specific token identity prematurely.",
+      "setting": "Bàn mở hộp trò chơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Something chưa gọi tên chính xác đối tượng. \"We can find out what it is next.\" Bạn vẫn giữ rõ vật chứa và điều đã thấy, không lấy chữ something để báo chắc món gì khi chưa nhìn đủ phần của câu chuyện.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "something",
+          "meaning": "thứ gì đó"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both examine hidden corner without guessing specific token identity prematurely. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both examine hidden corner without guessing specific token identity prematurely.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "something",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Something chưa gọi tên chính xác đối tượng. \"We can find out what it is next.\" Bạn vẫn giữ rõ vật chứa và điều đã thấy, không lấy chữ something để báo chắc món gì khi chưa nhìn đủ phần của câu chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Trong hộp còn một món chưa biết tên — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Mascot reveals remaining fictional game token to companion.",
+      "setting": "Bàn mở hộp trò chơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"I found something.\" Tôi tìm thấy một thứ. \"The item is now in view.\" Bạn lấy món của trò hư cấu ra cho người bạn xem, rồi nhận được tên và chỗ nó thuộc về.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "something",
+          "meaning": "thứ gì đó"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot reveals remaining fictional game token to companion. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot reveals remaining fictional game token to companion.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "I found something.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I found something.\" Tôi tìm thấy một thứ. \"The item is now in view.\" Bạn lấy món của trò hư cấu ra cho người bạn xem, rồi nhận được tên và chỗ nó thuộc về.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Trong hộp còn một món chưa biết tên — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold box with partly visible object and full learner sentence.",
+      "setting": "Bàn mở hộp trò chơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn nói có một thứ trong hộp khi chưa gọi tên. \"Keep the object unnamed for this moment.\" Hãy nói: \"There's something in the box.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "something",
+          "meaning": "thứ gì đó"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold box with partly visible object and full learner sentence. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold box with partly visible object and full learner sentence.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Keep the object unnamed for this moment.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "There's something in the box.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói có một thứ trong hộp khi chưa gọi tên. \"Keep the object unnamed for this moment.\" Hãy nói: \"There's something in the box.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Trong hộp còn một món chưa biết tên — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both return revealed token to appropriate game set and close checked box.",
+      "setting": "Bàn mở hộp trò chơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"There's something in the box.\" Có thứ gì đó trong hộp. \"The last item has not been packed away by mistake.\" Hai người đã nhận ra món còn lại và trả về đúng phần trò chơi, khép hộp sau khi kiểm xong.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "something",
+          "meaning": "thứ gì đó"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both return revealed token to appropriate game set and close checked box. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both return revealed token to appropriate game set and close checked box.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "There's something in the box.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"There's something in the box.\" Có thứ gì đó trong hộp. \"The last item has not been packed away by mistake.\" Hai người đã nhận ra món còn lại và trả về đúng phần trò chơi, khép hộp sau khi kiểm xong.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Hộp tưởng rỗng, còn một món kìa! Something nghĩa là thứ gì đó. \"A thing whose name we have not given yet.\" Bạn dọn trò chơi hư cấu với người bạn, muốn nhắc có một món cần kiểm trước khi cất hộp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Hộp tưởng rỗng, còn một món kìa! Something nghĩa là thứ gì đó. \"A thing whose name we have not given yet.\" Bạn dọn trò chơi hư cấu với người bạn, muốn nhắc có một món cần kiểm trước khi cất hộp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"There's something in the box.\" Có thứ gì đó trong hộp. \"An item is still inside here.\" Người bạn mở phần nắp trong câu chuyện, để hai người nhìn món còn lại thay vì tự nhận hộp đã không có gì."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"There's something in the box.\" Có thứ gì đó trong hộp. \"An item is still inside here.\" Người bạn mở phần nắp trong câu chuyện, để hai người nhìn món còn lại thay vì tự nhận hộp đã không có gì."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Something chưa gọi tên chính xác đối tượng. \"We can find out what it is next.\" Bạn vẫn giữ rõ vật chứa và điều đã thấy, không lấy chữ something để báo chắc món gì khi chưa nhìn đủ phần của câu chuyện."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn nói: \"I found something.\" Tôi tìm thấy một thứ. \"The item is now in view.\" Bạn lấy món của trò hư cấu ra cho người bạn xem, rồi nhận được tên và chỗ nó thuộc về."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn nói có một thứ trong hộp khi chưa gọi tên. \"Keep the object unnamed for this moment.\" Hãy nói: \"There's something in the box.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"There's something in the box.\" Có thứ gì đó trong hộp. \"The last item has not been packed away by mistake.\" Hai người đã nhận ra món còn lại và trả về đúng phần trò chơi, khép hộp sau khi kiểm xong."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Mascot tilts open game box to reveal last harmless piece tucked in corner, companion notices it. Continue with the existing connected model: Both look inside defined box for remaining partly hidden token."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Nghe vật chạm → nói có thứ → nhìn trong → nhận món.. Next event: Both examine hidden corner without guessing specific token identity prematurely."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Nghe vật chạm → nói có thứ → nhìn trong → nhận món.. Next event: Mascot reveals remaining fictional game token to companion."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Nghe vật chạm → nói có thứ → nhìn trong → nhận món.. Next event: Hold box with partly visible object and full learner sentence."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nghe vật chạm → nói có thứ → nhìn trong → nhận món.. Next event: Both return revealed token to appropriate game set and close checked box."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nghe vật chạm → nói có thứ → nhìn trong → nhận món.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

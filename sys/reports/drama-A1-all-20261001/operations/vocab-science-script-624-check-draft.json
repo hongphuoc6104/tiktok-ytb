@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 31,
+            "seconds": 9.51,
+            "min": 7.13,
+            "max": 11.89
+          },
+          {
+            "scene_id": "SC02",
+            "units": 36,
+            "seconds": 10.75,
+            "min": 8.06,
+            "max": 13.44
+          },
+          {
+            "scene_id": "SC03",
+            "units": 30,
+            "seconds": 9.23,
+            "min": 6.93,
+            "max": 11.54
+          },
+          {
+            "scene_id": "SC04",
+            "units": 30,
+            "seconds": 9.38,
+            "min": 7.04,
+            "max": 11.73
+          },
+          {
+            "scene_id": "SC05",
+            "units": 29,
+            "seconds": 12.66,
+            "min": 9.49,
+            "max": 15.82
+          },
+          {
+            "scene_id": "SC06",
+            "units": 30,
+            "seconds": 9.38,
+            "min": 7.04,
+            "max": 11.73
+          }
+        ],
+        "min": 45.69,
+        "max": 76.15,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "18094",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Hải định bỏ câu hỏi vì đã đoán nguyên nhân cây héo. Minh giữ câu hỏi và cùng bạn chuẩn bị tìm hiểu trong môn khoa học. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "19536",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hải định bỏ câu hỏi vì đã đoán nguyên nhân cây héo. Minh giữ câu hỏi và cùng bạn chuẩn bị tìm hiểu trong môn khoa học. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ]
+}

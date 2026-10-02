@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 35,
+            "seconds": 10.77,
+            "min": 8.08,
+            "max": 13.47
+          },
+          {
+            "scene_id": "SC02",
+            "units": 39,
+            "seconds": 12.03,
+            "min": 9.03,
+            "max": 15.04
+          },
+          {
+            "scene_id": "SC03",
+            "units": 33,
+            "seconds": 10.07,
+            "min": 7.55,
+            "max": 12.58
+          },
+          {
+            "scene_id": "SC04",
+            "units": 30,
+            "seconds": 12.93,
+            "min": 9.7,
+            "max": 16.17
+          },
+          {
+            "scene_id": "SC05",
+            "units": 41,
+            "seconds": 12.59,
+            "min": 9.44,
+            "max": 15.74
+          }
+        ],
+        "min": 43.8,
+        "max": 73.0,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "22036",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: An định vứt bỏ tờ tranh màu nước vì mảng trời bị loang tối, nhưng tôi nhận ra chiều sâu mộc mạc của vệt màu và giúp bạn giữ lại tác phẩm. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

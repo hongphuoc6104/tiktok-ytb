@@ -1,0 +1,470 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "a70ce31a18a60b82fb2227f07e2b46e3d00bd5ae7082e187ef0eb8f8453d78d5",
+  "topic": "Học từ vựng tiếng Anh VOLLEYBALL (danh từ: bóng chuyền) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ VOLLEYBALL",
+    "Làm rõ nghĩa lõi \"bóng chuyền\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng VOLLEYBALL, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại VOLLEYBALL, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành trong tình huống",
+      "appearance": "Adult volleyball friend. Minimal flat ink style. Maintain age, gender, clothing and identity across all scenes; use mustard top and only explicitly needed accessory. Distinct from canonical mascot.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Adult additional volleyball participant. Minimal flat ink style; consistent role, adult identity and lavender clothing with only scenario-required outerwear. Distinct from mascot and companion.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Bóng qua lưới bằng tay — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot watches adult friends on volleyball court passing ball by hand over high net, no rackets.",
+      "setting": "Sân bóng chuyền, lưới và nhóm nhỏ.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Không có vợt, sao bóng vẫn qua lưới? Volleyball là bóng chuyền. Bạn nhìn nhóm bạn tập trên sân, thấy họ dùng tay đưa bóng sang phía bên kia; chiếc lưới là một phần của cuộc chơi đang xem.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "volleyball",
+          "meaning": "bóng chuyền"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot watches adult friends on volleyball court passing ball by hand over high net, no rackets. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot watches adult friends on volleyball court passing ball by hand over high net, no rackets.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "volleyball",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Không có vợt, sao bóng vẫn qua lưới? Volleyball là bóng chuyền. Bạn nhìn nhóm bạn tập trên sân, thấy họ dùng tay đưa bóng sang phía bên kia; chiếc lưới là một phần của cuộc chơi đang xem.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Bóng qua lưới bằng tay — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Friend beckons mascot to open position on volleyball court, ball held still.",
+      "setting": "Sân bóng chuyền, lưới và nhóm nhỏ.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn hỏi: \"Is this volleyball?\" Đây là bóng chuyền phải không? This chỉ hoạt động trước mặt. Người bạn xác nhận rồi rủ bạn vào vị trí trống để thử một lượt nhẹ.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "volleyball",
+          "meaning": "bóng chuyền"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend beckons mascot to open position on volleyball court, ball held still. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend beckons mascot to open position on volleyball court, ball held still.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Is this volleyball?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Is this volleyball?\" Đây là bóng chuyền phải không? This chỉ hoạt động trước mặt. Người bạn xác nhận rồi rủ bạn vào vị trí trống để thử một lượt nhẹ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Bóng qua lưới bằng tay — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Mascot and adult classmates in casual clothes practice gentle volleyball pass after class, bags at sideline.",
+      "setting": "Sân bóng chuyền, lưới và nhóm nhỏ.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn nói: \"We play volleyball after school.\" Chúng tôi chơi bóng chuyền sau giờ học. After school nói thời điểm nhóm trong câu chuyện thường chơi; bạn có thể đổi phần thời gian khi kể về mình.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "volleyball",
+          "meaning": "bóng chuyền"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot and adult classmates in casual clothes practice gentle volleyball pass after class, bags at sideline. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and adult classmates in casual clothes practice gentle volleyball pass after class, bags at sideline.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "We play volleyball after school.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"We play volleyball after school.\" Chúng tôi chơi bóng chuyền sau giờ học. After school nói thời điểm nhóm trong câu chuyện thường chơi; bạn có thể đổi phần thời gian khi kể về mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Bóng qua lưới bằng tay — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold volleyball equipment and full question, no answer highlighted.",
+      "setting": "Sân bóng chuyền, lưới và nhóm nhỏ.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Trong hình, mọi người dùng tay với bóng và lưới, không dùng vợt. Nói \"Is this volleyball?\" để xác nhận môn đang nhìn, rồi thử trả lời yes theo cảnh.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "volleyball",
+          "meaning": "bóng chuyền"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold volleyball equipment and full question, no answer highlighted. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold volleyball equipment and full question, no answer highlighted.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "Is this volleyball?",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong hình, mọi người dùng tay với bóng và lưới, không dùng vợt. Nói \"Is this volleyball?\" để xác nhận môn đang nhìn, rồi thử trả lời yes theo cảnh.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 6
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Bóng qua lưới bằng tay — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot joins friendly volleyball practice, teammates positioned with space around them.",
+      "setting": "Sân bóng chuyền, lưới và nhóm nhỏ.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Is this volleyball?\" Yes, đây là bóng chuyền. Bạn nhận đúng môn, bước vào vị trí được chỉ và bắt đầu phối hợp. Chiếc lưới không còn là câu hỏi lạ trên sân nữa.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "volleyball",
+          "meaning": "bóng chuyền"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot joins friendly volleyball practice, teammates positioned with space around them. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot joins friendly volleyball practice, teammates positioned with space around them.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "Is this volleyball?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is this volleyball?\" Yes, đây là bóng chuyền. Bạn nhận đúng môn, bước vào vị trí được chỉ và bắt đầu phối hợp. Chiếc lưới không còn là câu hỏi lạ trên sân nữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Không có vợt, sao bóng vẫn qua lưới? Volleyball là bóng chuyền. Bạn nhìn nhóm bạn tập trên sân, thấy họ dùng tay đưa bóng sang phía bên kia; chiếc lưới là một phần của cuộc chơi đang xem."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Không có vợt, sao bóng vẫn qua lưới? Volleyball là bóng chuyền. Bạn nhìn nhóm bạn tập trên sân, thấy họ dùng tay đưa bóng sang phía bên kia; chiếc lưới là một phần của cuộc chơi đang xem."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is this volleyball?\" Đây là bóng chuyền phải không? This chỉ hoạt động trước mặt. Người bạn xác nhận rồi rủ bạn vào vị trí trống để thử một lượt nhẹ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is this volleyball?\" Đây là bóng chuyền phải không? This chỉ hoạt động trước mặt. Người bạn xác nhận rồi rủ bạn vào vị trí trống để thử một lượt nhẹ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nói: \"We play volleyball after school.\" Chúng tôi chơi bóng chuyền sau giờ học. After school nói thời điểm nhóm trong câu chuyện thường chơi; bạn có thể đổi phần thời gian khi kể về mình."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Trong hình, mọi người dùng tay với bóng và lưới, không dùng vợt. Nói \"Is this volleyball?\" để xác nhận môn đang nhìn, rồi thử trả lời yes theo cảnh."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Is this volleyball?\" Yes, đây là bóng chuyền. Bạn nhận đúng môn, bước vào vị trí được chỉ và bắt đầu phối hợp. Chiếc lưới không còn là câu hỏi lạ trên sân nữa."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Thấy lưới → hỏi môn → tham gia → tập chuyền.. Next visible event: Friend beckons mascot to open position on volleyball court, ball held still."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy lưới → hỏi môn → tham gia → tập chuyền.. Next visible event: Mascot and adult classmates in casual clothes practice gentle volleyball pass after class, bags at sideline."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy lưới → hỏi môn → tham gia → tập chuyền.. Next visible event: Hold volleyball equipment and full question, no answer highlighted."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy lưới → hỏi môn → tham gia → tập chuyền.. Next visible event: Mascot joins friendly volleyball practice, teammates positioned with space around them."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy lưới → hỏi môn → tham gia → tập chuyền.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

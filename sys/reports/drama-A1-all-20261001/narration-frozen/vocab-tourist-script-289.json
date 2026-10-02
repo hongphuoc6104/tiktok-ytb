@@ -1,0 +1,86 @@
+{
+  "job": "vocab-tourist-script-289",
+  "title": "Khách ở chính quê mình",
+  "plot_vi": "Nhân vật về làng sau lâu ngày bị hỏi có phải khách du lịch; thay vì giấu chuyện chưa biết ngõ mới, nhân vật nhờ người bạn dẫn xem.",
+  "opening_function_vi": "Lan hỏi tôi có phải khách du lịch",
+  "learner_outcome_vi": "Nhận ra đúng nghĩa đã chọn và dùng một câu ngắn cho nhu cầu của nhân vật.",
+  "characters": [
+    {
+      "appearance_en": "A minimalist stickman with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "id": "CH01",
+      "name_vi": "Minh",
+      "outfit_en": "A plain pale-blue short-sleeve shirt (#8CCFE8)."
+    },
+    {
+      "id": "CH02",
+      "name_vi": "Lan",
+      "appearance_en": "Minimal ink stick figure with round white navy-outlined head, solid black oval eyes and simple stick limbs. A small plain hair silhouette appropriate to the role.",
+      "outfit_en": "Exactly one plain mustard-yellow short-sleeve shirt, no logo or layered torso."
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "title_vi": "Điều xảy ra trước mắt",
+      "narration": "Lan hỏi tôi có phải khách du lịch. \"Are you a tourist?\" Bạn là khách du lịch à? Tôi đang chụp chiếc cổng làng, vừa quay về sau nhiều năm, không biết ngõ mới đi đâu.",
+      "visual_en": "Village entrance: mascot holds camera facing old gate while local Lan asks his purpose. Plain gate without inscription.",
+      "purpose_en": "Open on immediate personal tension and useful English.",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "practice_pause_seconds": 0
+    },
+    {
+      "scene_id": "SC02",
+      "title_vi": "Điều chưa nói",
+      "narration": "Tôi bảo từng sống ở đây. Lan chỉ con đường lát mới, hỏi còn nhớ chỗ giếng cũ không. Tôi định gật đầu, rồi thôi. Tôi hỏi giếng bây giờ còn ở đó không.",
+      "visual_en": "Lan points along a newly paved lane, mascot admits unfamiliarity. Same gate remains behind; no crowd.",
+      "purpose_en": "Reveal the human need and resistance through ordinary action.",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "practice_pause_seconds": 0
+    },
+    {
+      "scene_id": "SC03",
+      "title_vi": "Lựa chọn",
+      "narration": "\"I'm a tourist.\" Hôm nay tôi là khách du lịch. Tôi nói vậy vì muốn đi tham quan lại nơi mình từng biết. Lan bật cười, bảo thế để bạn dẫn một vòng, đừng giả vờ thuộc đường.",
+      "visual_en": "Mascot indicates camera as sightseeing visitor, Lan offers to walk beside him. No official tourism claim or named landmark.",
+      "purpose_en": "Make a small consequential choice using the second model.",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "practice_pause_seconds": 0
+    },
+    {
+      "scene_id": "SC04",
+      "title_vi": "Lời cần đáp",
+      "narration": "Nếu muốn hỏi người đang tới tham quan có phải khách du lịch không, bạn nói giúp Lan câu hỏi bằng tiếng Anh nhé.",
+      "visual_en": "Hold visitor mascot with camera and local Lan at lane entrance. Supported tourist question stem only.",
+      "purpose_en": "Invite the same necessary sentence and wait for learner response.",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "practice_pause_seconds": 4,
+      "stem": "Are you a ___?"
+    },
+    {
+      "scene_id": "SC05",
+      "title_vi": "Chuyện tiếp tục",
+      "narration": "\"Are you a tourist?\" Tôi gật đầu. Lan đi cùng tôi tới giếng cũ, đứng chờ tôi chụp xong. Tôi hỏi bạn có chịu đứng vào ảnh không. Lan bảo nhớ gửi lại cho mình một tấm.",
+      "visual_en": "At a small old village well with solid low wall, mascot photographs Lan standing safely beside it. No leaning into well, other people or lettering.",
+      "purpose_en": "Return the answer and resolve the initial human tension through a concrete gesture.",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "practice_pause_seconds": 0
+    }
+  ],
+  "editorial_review": "Reviewed and rewritten by primary agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

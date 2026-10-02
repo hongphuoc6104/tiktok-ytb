@@ -1,0 +1,549 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "882d8ffba680fabf4e49c4b687f92f4e924a5615342b6682324f2972ad91f234",
+  "topic": "Học từ vựng tiếng Anh FACT (danh từ: sự thật, sự việc có thật) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FACT",
+    "Làm rõ nghĩa lõi \"sự thật, sự việc có thật\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FACT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FACT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Điều đã xảy ra trong lời mời được giữ rõ — Nhịp 1",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "action": "Mascot and companion compare fictional invitation with two different recollection cards.",
+      "setting": "Bàn kiểm cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Một người nhớ giờ khác, mình cần giữ điều nào đã được xác định trong lời mời? Fact ở đây là sự thật, sự việc có thật. \"Something known to be true in our story.\" Hai người kiểm cuộc hẹn hư cấu, không muốn lấy ký ức chưa đối chiếu làm thông tin cuối.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fact",
+          "meaning": "sự thật, sự việc có thật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and companion compare fictional invitation with two different recollection cards. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion compare fictional invitation with two different recollection cards.",
+          "reason": "Make the selected sense useful in a concrete situation.",
+          "visible_text": [
+            {
+              "text": "fact",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the selected sense useful in a concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Một người nhớ giờ khác, mình cần giữ điều nào đã được xác định trong lời mời? Fact ở đây là sự thật, sự việc có thật. \"Something known to be true in our story.\" Hai người kiểm cuộc hẹn hư cấu, không muốn lấy ký ức chưa đối chiếu làm thông tin cuối.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Điều đã xảy ra trong lời mời được giữ rõ — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Both inspect agreed fictional invitation as source for event details.",
+      "setting": "Bàn kiểm cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"Let's check the facts.\" Cùng kiểm các sự việc đã xác định nhé. \"Look at what the invitation actually says.\" Người bạn đặt bản đã chốt trước mặt, hai người đọc phần của cuộc hẹn trong câu chuyện thay vì tranh luận ai nhớ mạnh hơn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fact",
+          "meaning": "sự thật, sự việc có thật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Both inspect agreed fictional invitation as source for event details. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both inspect agreed fictional invitation as source for event details.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "Let's check the facts.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"Let's check the facts.\" Cùng kiểm các sự việc đã xác định nhé. \"Look at what the invitation actually says.\" Người bạn đặt bản đã chốt trước mặt, hai người đọc phần của cuộc hẹn trong câu chuyện thay vì tranh luận ai nhớ mạnh hơn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Điều đã xảy ra trong lời mời được giữ rõ — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both separate confirmed fictional invitation details from unresolved thought cards.",
+      "setting": "Bàn kiểm cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Thông tin đúng cần căn cứ để phân biệt với một lời mình còn đoán. \"Our check has a place to look.\" Ở tình huống này, hai người dùng bản lời mời hư cấu; đây không phải một thí nghiệm hay một dữ kiện khoa học mới được đo trong video.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fact",
+          "meaning": "sự thật, sự việc có thật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both separate confirmed fictional invitation details from unresolved thought cards. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both separate confirmed fictional invitation details from unresolved thought cards.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "fact",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Thông tin đúng cần căn cứ để phân biệt với một lời mình còn đoán. \"Our check has a place to look.\" Ở tình huống này, hai người dùng bản lời mời hư cấu; đây không phải một thí nghiệm hay một dữ kiện khoa học mới được đo trong video.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Điều đã xảy ra trong lời mời được giữ rõ — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Companion records matched fictional invitation detail while mascot confirms.",
+      "setting": "Bàn kiểm cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"That's a fact.\" Đó là một sự thật đã được xác định. \"It matches the information we checked.\" Người bạn ghi lại phần đã đối chiếu, để hai người mang cùng thông tin tới buổi gặp hư cấu.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fact",
+          "meaning": "sự thật, sự việc có thật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Companion records matched fictional invitation detail while mascot confirms. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion records matched fictional invitation detail while mascot confirms.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "That's a fact.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"That's a fact.\" Đó là một sự thật đã được xác định. \"It matches the information we checked.\" Người bạn ghi lại phần đã đối chiếu, để hai người mang cùng thông tin tới buổi gặp hư cấu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Điều đã xảy ra trong lời mời được giữ rõ — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold fictional invitation and full model sentence, no invented real-world evidence.",
+      "setting": "Bàn kiểm cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn rủ kiểm điều đã được xác định trước khi chọn thông tin theo vai. \"Ask for a careful check.\" Hãy nói: \"Let's check the facts.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fact",
+          "meaning": "sự thật, sự việc có thật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold fictional invitation and full model sentence, no invented real-world evidence. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold fictional invitation and full model sentence, no invented real-world evidence.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Ask for a careful check.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "Let's check the facts.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn rủ kiểm điều đã được xác định trước khi chọn thông tin theo vai. \"Ask for a careful check.\" Hãy nói: \"Let's check the facts.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Điều đã xảy ra trong lời mời được giữ rõ — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both keep confirmed fictional plan and separate unresolved question note.",
+      "setting": "Bàn kiểm cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Let's check the facts.\" Cùng kiểm các sự việc nhé. \"The plan now uses the information we found in the story.\" Hai người đã ghi phần khớp lời mời hư cấu, giữ lại các câu hỏi chưa rõ để hỏi thêm chứ không biến chúng thành fact.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "fact",
+          "meaning": "sự thật, sự việc có thật"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both keep confirmed fictional plan and separate unresolved question note. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both keep confirmed fictional plan and separate unresolved question note.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "Let's check the facts.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Let's check the facts.\" Cùng kiểm các sự việc nhé. \"The plan now uses the information we found in the story.\" Hai người đã ghi phần khớp lời mời hư cấu, giữ lại các câu hỏi chưa rõ để hỏi thêm chứ không biến chúng thành fact.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Một người nhớ giờ khác, mình cần giữ điều nào đã được xác định trong lời mời? Fact ở đây là sự thật, sự việc có thật. \"Something known to be true in our story.\" Hai người kiểm cuộc hẹn hư cấu, không muốn lấy ký ức chưa đối chiếu làm thông tin cuối."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Một người nhớ giờ khác, mình cần giữ điều nào đã được xác định trong lời mời? Fact ở đây là sự thật, sự việc có thật. \"Something known to be true in our story.\" Hai người kiểm cuộc hẹn hư cấu, không muốn lấy ký ức chưa đối chiếu làm thông tin cuối."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"Let's check the facts.\" Cùng kiểm các sự việc đã xác định nhé. \"Look at what the invitation actually says.\" Người bạn đặt bản đã chốt trước mặt, hai người đọc phần của cuộc hẹn trong câu chuyện thay vì tranh luận ai nhớ mạnh hơn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"Let's check the facts.\" Cùng kiểm các sự việc đã xác định nhé. \"Look at what the invitation actually says.\" Người bạn đặt bản đã chốt trước mặt, hai người đọc phần của cuộc hẹn trong câu chuyện thay vì tranh luận ai nhớ mạnh hơn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Thông tin đúng cần căn cứ để phân biệt với một lời mình còn đoán. \"Our check has a place to look.\" Ở tình huống này, hai người dùng bản lời mời hư cấu; đây không phải một thí nghiệm hay một dữ kiện khoa học mới được đo trong video."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn nói: \"That's a fact.\" Đó là một sự thật đã được xác định. \"It matches the information we checked.\" Người bạn ghi lại phần đã đối chiếu, để hai người mang cùng thông tin tới buổi gặp hư cấu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn rủ kiểm điều đã được xác định trước khi chọn thông tin theo vai. \"Ask for a careful check.\" Hãy nói: \"Let's check the facts.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Let's check the facts.\" Cùng kiểm các sự việc nhé. \"The plan now uses the information we found in the story.\" Hai người đã ghi phần khớp lời mời hư cấu, giữ lại các câu hỏi chưa rõ để hỏi thêm chứ không biến chúng thành fact."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Có lời kể → hỏi căn cứ → nhận sự việc đã xác định → ghi.. Next event: Both inspect agreed fictional invitation as source for event details."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Có lời kể → hỏi căn cứ → nhận sự việc đã xác định → ghi.. Next event: Both separate confirmed fictional invitation details from unresolved thought cards."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Có lời kể → hỏi căn cứ → nhận sự việc đã xác định → ghi.. Next event: Companion records matched fictional invitation detail while mascot confirms."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Có lời kể → hỏi căn cứ → nhận sự việc đã xác định → ghi.. Next event: Hold fictional invitation and full model sentence, no invented real-world evidence."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có lời kể → hỏi căn cứ → nhận sự việc đã xác định → ghi.. Next event: Both keep confirmed fictional plan and separate unresolved question note."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có lời kể → hỏi căn cứ → nhận sự việc đã xác định → ghi.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

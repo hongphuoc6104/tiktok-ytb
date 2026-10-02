@@ -1,0 +1,93 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Minimal stick figure with a round white head outlined in dark navy, two solid black oval eyes, and simple stick limbs.",
+      "id": "CH01",
+      "name_vi": "Linh",
+      "outfit_en": "A single pale-blue short-sleeve shirt (#8CCFE8) and plain navy stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name_vi": "Mẹ",
+      "appearance_en": "Minimal ink stick figure, adult woman with simple tied-back hair, a round white face and solid black oval eyes. Simple proportions and modest expressions, no realistic muscles or fingers.",
+      "outfit_en": "Exactly one plain mustard-yellow short-sleeve top and minimal stick limbs; no layered shirt or printed logo."
+    }
+  ],
+  "job": "vocab-save-script-275",
+  "learner_outcome_vi": "Nhận ra nghĩa chọn của từ và dùng một câu ngắn để thực hiện hoặc nhờ hành động.",
+  "opening_function_vi": "Đèn pin nhấp nháy đỏ báo động nguy cơ mất sạch dữ liệu thiết kế chưa lưu.",
+  "plot_vi": "Mẹ đưa một tấm ảnh vừa nhận, nhờ con lưu lại; con làm ngay thay vì hẹn khi rảnh, để mẹ được xem nó lần nữa.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Mẹ gửi ảnh, tôi định xem rồi đóng. \"Save the file.\" Lưu tập tin nhé. Mẹ nhắc từ đầu bàn, sợ lần sau lại không biết tìm ở đâu.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Open with the visible human need and an early usable English utterance.",
+      "scene_id": "SC01",
+      "title_vi": "Chi tiết đầu chuyện",
+      "visual_en": "At a home work desk, mascot has just received a family-dinner photo file while mother sits nearby and asks him to save it. The image thumbnail shows small generic faces and a table, no repeated full mascot body."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Trong ảnh là buổi cả nhà cùng ăn cơm đã lâu. Tôi đang làm dở việc, định nói lát nữa con lưu. Mẹ ngồi chờ, chỉ hỏi hôm đó có ai cầm máy chụp nhỉ.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Show the relationship and resistance without a procedural lecture.",
+      "scene_id": "SC02",
+      "title_vi": "Điều cần hiểu",
+      "visual_en": "Mascot pauses his current work and looks at the received photo with mother. She waits, pointing to one corner of the image; no private message or clock deadline."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"Please save this photo.\" Lưu bức ảnh này nhé. Tôi nói lại điều mẹ cần, rồi đặt tên dễ nhận cho ảnh. Mẹ hỏi khi nào muốn xem thì gọi con có được không.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Use the second English model with correct time/reference and a meaningful visible action.",
+      "scene_id": "SC03",
+      "title_vi": "Hành động làm đổi chuyện",
+      "visual_en": "At the same desk angle, mascot is about to save the received photo to a recognizable local folder. Mother watches; no actual name or account information on screen.",
+      "extra_visual_states": [
+        {
+          "quote": "rồi đặt tên dễ nhận cho ảnh.",
+          "visual_en": "Keep the same view and laptop. The received-photo thumbnail is now stored inside the chosen local folder; mother and mascot look at the result, no readable filename.",
+          "purpose_en": "Show the received file becoming stored, rather than merely viewed."
+        }
+      ]
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bạn nói giúp mẹ câu lưu tập tin bằng tiếng Anh nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Invite one supported sentence for the same need; wait before revealing the answer.",
+      "scene_id": "SC04",
+      "title_vi": "Lời người xem giúp nói",
+      "visual_en": "Hold mother and mascot at the same laptop, supported request above and unsaved-versus-saved action not hidden by other text.",
+      "stem": "___ the file."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"Save the file.\" Đúng rồi. Tôi mở lại ảnh vừa lưu, quay màn hình về phía mẹ. Lần này, tôi không nói lát nữa. Hai mẹ con tìm một gương mặt ở góc ảnh.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+      "scene_id": "SC05",
+      "title_vi": "Kết quả",
+      "visual_en": "Mascot reopens the photo from the local folder and turns the laptop toward mother. Both look for one small face in the corner, no guaranteed storage/recovery claim."
+    }
+  ],
+  "title": "Bức ảnh mẹ muốn giữ",
+  "editorial_review": "Reviewed and rewritten by primary agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

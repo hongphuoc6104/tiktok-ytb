@@ -1,0 +1,492 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "c535f327eb594ab3cc77130c179a32e0ac2d90787581b7a1e87a53906a2d210a",
+  "topic": "Học từ vựng tiếng Anh RABBIT (danh từ: con thỏ) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ RABBIT",
+    "Làm rõ nghĩa lõi \"con thỏ\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng RABBIT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại RABBIT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành trong tình huống",
+      "appearance": "Adult animal caretaker. Minimal flat ink style. Maintain age, gender, clothing and identity across all scenes; use mustard top and only explicitly needed accessory. Distinct from canonical mascot.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đôi tai ló sau chiếc hộp — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot and caretaker observe rabbit ears rising behind low cardboard shelter in spacious enclosure.",
+      "setting": "Khu quan sát thú nuôi có người chăm sóc.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Hai chiếc tai ló lên, còn chủ đâu? Rabbit là con thỏ. Bạn đứng ở khu quan sát thú nuôi, thấy đôi tai nhô sau một chiếc hộp thấp; người chăm sóc nhắc mình nhìn thêm một chút.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rabbit",
+          "meaning": "con thỏ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and caretaker observe rabbit ears rising behind low cardboard shelter in spacious enclosure. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and caretaker observe rabbit ears rising behind low cardboard shelter in spacious enclosure.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "rabbit",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Hai chiếc tai ló lên, còn chủ đâu? Rabbit là con thỏ. Bạn đứng ở khu quan sát thú nuôi, thấy đôi tai nhô sau một chiếc hộp thấp; người chăm sóc nhắc mình nhìn thêm một chút.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Đôi tai ló sau chiếc hộp — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Rabbit emerges from low shelter, fully visible to mascot outside enclosure.",
+      "setting": "Khu quan sát thú nuôi có người chăm sóc.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn hỏi: \"Is that a rabbit?\" Kia có phải con thỏ không? That chỉ con vật ở phía xa trong khu nuôi. Khi nó bước ra, cả thân và đôi tai đều hiện rõ, giúp kiểm tra dự đoán.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rabbit",
+          "meaning": "con thỏ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Rabbit ears and part of face visible behind low shelter. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Rabbit ears and part of face visible behind low shelter.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Is that a rabbit?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Whole rabbit visible outside same shelter, enclosure and visitors unchanged. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC02_I1",
+          "preserve": "Preserve base scene camera, background, character identities, single mascot torso and exact clothing, prop positions and visible text; change only the specified state.",
+          "change": "Whole rabbit visible outside same shelter, enclosure and visitors unchanged.",
+          "reason": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "visible_text": [
+            {
+              "text": "Is that a rabbit?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Is that a rabbit?\" Kia có phải con thỏ không? That chỉ con vật ở phía xa trong khu nuôi. Khi nó bước ra, cả thân và đôi tai đều hiện rõ, giúp kiểm tra dự đoán.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Show the visible state change caused by the previous action; attach Base scene reference and canonical Character reference.",
+          "anchor": {
+            "vi": {
+              "quote": "Khi nó bước ra",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Đôi tai ló sau chiếc hộp — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Rabbit eats prepared greens inside enclosure, caretaker and mascot remain outside.",
+      "setting": "Khu quan sát thú nuôi có người chăm sóc.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn nói: \"The rabbit is eating.\" Con thỏ đang ăn. Nó ở cạnh phần thức ăn được người chăm sóc chuẩn bị; bạn quan sát từ ngoài, không đưa đồ mình mang theo qua rào.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rabbit",
+          "meaning": "con thỏ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Rabbit eats prepared greens inside enclosure, caretaker and mascot remain outside. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Rabbit eats prepared greens inside enclosure, caretaker and mascot remain outside.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "The rabbit is eating.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"The rabbit is eating.\" Con thỏ đang ăn. Nó ở cạnh phần thức ăn được người chăm sóc chuẩn bị; bạn quan sát từ ngoài, không đưa đồ mình mang theo qua rào.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Đôi tai ló sau chiếc hộp — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Rabbit fully visible with two unhighlighted word choices and model question.",
+      "setting": "Khu quan sát thú nuôi có người chăm sóc.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn nhìn thấy con vật tai dài bước khỏi hộp. Nên hỏi \"Is that a rabbit?\" hay gọi nó là bird? Chọn tên đúng rồi nói câu hỏi vừa học.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rabbit",
+          "meaning": "con thỏ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Rabbit fully visible with two unhighlighted word choices and model question. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Rabbit fully visible with two unhighlighted word choices and model question.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "Is that a rabbit?",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhìn thấy con vật tai dài bước khỏi hộp. Nên hỏi \"Is that a rabbit?\" hay gọi nó là bird? Chọn tên đúng rồi nói câu hỏi vừa học.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Đôi tai ló sau chiếc hộp — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Rabbit continues eating peacefully near shelter while mascot smiles from observation area.",
+      "setting": "Khu quan sát thú nuôi có người chăm sóc.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Is that a rabbit?\" Kia có phải con thỏ không? Đúng là rabbit. Đôi tai đã dẫn bạn tới đúng con vật; còn nó vẫn bận với bữa ăn, chẳng biết mình vừa là câu đố.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rabbit",
+          "meaning": "con thỏ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Rabbit continues eating peacefully near shelter while mascot smiles from observation area. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Rabbit continues eating peacefully near shelter while mascot smiles from observation area.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "Is that a rabbit?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is that a rabbit?\" Kia có phải con thỏ không? Đúng là rabbit. Đôi tai đã dẫn bạn tới đúng con vật; còn nó vẫn bận với bữa ăn, chẳng biết mình vừa là câu đố.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Hai chiếc tai ló lên, còn chủ đâu? Rabbit là con thỏ. Bạn đứng ở khu quan sát thú nuôi, thấy đôi tai nhô sau một chiếc hộp thấp; người chăm sóc nhắc mình nhìn thêm một chút."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Hai chiếc tai ló lên, còn chủ đâu? Rabbit là con thỏ. Bạn đứng ở khu quan sát thú nuôi, thấy đôi tai nhô sau một chiếc hộp thấp; người chăm sóc nhắc mình nhìn thêm một chút."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is that a rabbit?\" Kia có phải con thỏ không? That chỉ con vật ở phía xa trong khu nuôi. Khi nó bước ra, cả thân và đôi tai đều hiện rõ, giúp kiểm tra dự đoán."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is that a rabbit?\" Kia có phải con thỏ không? That chỉ con vật ở phía xa trong khu nuôi. Khi nó bước ra, cả thân và đôi tai đều hiện rõ, giúp kiểm tra dự đoán."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nói: \"The rabbit is eating.\" Con thỏ đang ăn. Nó ở cạnh phần thức ăn được người chăm sóc chuẩn bị; bạn quan sát từ ngoài, không đưa đồ mình mang theo qua rào."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn nhìn thấy con vật tai dài bước khỏi hộp. Nên hỏi \"Is that a rabbit?\" hay gọi nó là bird? Chọn tên đúng rồi nói câu hỏi vừa học."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Is that a rabbit?\" Kia có phải con thỏ không? Đúng là rabbit. Đôi tai đã dẫn bạn tới đúng con vật; còn nó vẫn bận với bữa ăn, chẳng biết mình vừa là câu đố."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Thấy tai → đoán → nhận thỏ → nhìn hành động.. Next visible event: Rabbit emerges from low shelter, fully visible to mascot outside enclosure."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy tai → đoán → nhận thỏ → nhìn hành động.. Next visible event: Rabbit eats prepared greens inside enclosure, caretaker and mascot remain outside."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy tai → đoán → nhận thỏ → nhìn hành động.. Next visible event: Rabbit fully visible with two unhighlighted word choices and model question."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy tai → đoán → nhận thỏ → nhìn hành động.. Next visible event: Rabbit continues eating peacefully near shelter while mascot smiles from observation area."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy tai → đoán → nhận thỏ → nhìn hành động.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

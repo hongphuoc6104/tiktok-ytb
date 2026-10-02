@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "a6878caacd47c9ffe3e5f838e6dd92e392d48a5b8366d84e44949cde461f1945",
+  "topic": "Học từ vựng tiếng Anh SHORTS (danh từ: quần đùi) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SHORTS",
+    "Làm rõ nghĩa lõi \"quần đùi\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SHORTS, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SHORTS, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người hỗ trợ trong tình huống",
+      "appearance": "Adult supporting person in minimal flat ink style. Maintain the role and identity specified by the scene across the whole story. Plain mustard top; may wear the explicitly described extra garment for clothing lessons.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Adult supporting person, distinct from the main mascot and first companion, minimal flat ink style; appears only when explicitly specified.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đi biển mang nhầm quần — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot helps friend pack a suitcase containing long trousers; a folded pair of shorts is partly visible in a side bag.",
+      "setting": "Vali đi chơi với quần ngắn và quần dài.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Đi biển mà toàn quần dài! Shorts là quần đùi, quần ngắn. Người bạn mở vali, tìm mãi chưa thấy chiếc định mang đi. Bạn nhớ có một món gấp nhỏ ở túi bên cạnh; kiểm tra chỗ ấy trước nhé.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "shorts",
+          "meaning": "quần đùi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot helps friend pack a suitcase containing long trousers; a folded pair of shorts is partly visible in a side bag. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot helps friend pack a suitcase containing long trousers; a folded pair of shorts is partly visible in a side bag.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "shorts",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Đi biển mà toàn quần dài! Shorts là quần đùi, quần ngắn. Người bạn mở vali, tìm mãi chưa thấy chiếc định mang đi. Bạn nhớ có một món gấp nhỏ ở túi bên cạnh; kiểm tra chỗ ấy trước nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Đi biển mang nhầm quần — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Friend lifts a towel from the side bag to reveal folded shorts while mascot points.",
+      "setting": "Vali đi chơi với quần ngắn và quần dài.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn hỏi: \"Where are my shorts?\" Quần đùi của tôi ở đâu? Shorts có dạng số nhiều, mình dùng are. Bạn chỉ túi nhỏ; món đồ gấp gọn nên dễ bị chiếc khăn phủ lên.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "shorts",
+          "meaning": "quần đùi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend lifts a towel from the side bag to reveal folded shorts while mascot points. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend lifts a towel from the side bag to reveal folded shorts while mascot points.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Where are my shorts?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn hỏi: \"Where are my shorts?\" Quần đùi của tôi ở đâu? Shorts có dạng số nhiều, mình dùng are. Bạn chỉ túi nhỏ; món đồ gấp gọn nên dễ bị chiếc khăn phủ lên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Đi biển mang nhầm quần — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Friend holds the shorts on a hanger or by the waistband above the open suitcase; mascot makes space.",
+      "setting": "Vali đi chơi với quần ngắn và quần dài.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn nói: \"These shorts are new.\" Chiếc quần đùi này mới. These shorts gọi đúng món vừa lấy ra. Bạn dành một góc vali cho nó, không nhét xuống đáy rồi quên thêm lần nữa.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "shorts",
+          "meaning": "quần đùi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Friend holds the shorts on a hanger or by the waistband above the open suitcase; mascot makes space. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend holds the shorts on a hanger or by the waistband above the open suitcase; mascot makes space.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "These shorts are new.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nói: \"These shorts are new.\" Chiếc quần đùi này mới. These shorts gọi đúng món vừa lấy ra. Bạn dành một góc vali cho nó, không nhét xuống đáy rồi quên thêm lần nữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Đi biển mang nhầm quần — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold folded shorts near a side bag and the incomplete question.",
+      "setting": "Vali đi chơi với quần ngắn và quần dài.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn muốn hỏi quần đùi của mình ở đâu. Hoàn thành \"Where are my...?\" và nói cả câu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "shorts",
+          "meaning": "quần đùi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold folded shorts near a side bag and the incomplete question. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold folded shorts near a side bag and the incomplete question.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "Where are my...?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi quần đùi của mình ở đâu. Hoàn thành \"Where are my...?\" và nói cả câu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Đi biển mang nhầm quần — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Suitcase now contains neatly folded shorts beside other clothing; both adults remain in their original outfits.",
+      "setting": "Vali đi chơi với quần ngắn và quần dài.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Where are my shorts?\" Đáp án là shorts. Chiếc khăn về chỗ khác, quần ngắn vào vali. Đồ đi biển không còn chỉ toàn quần dài.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "shorts",
+          "meaning": "quần đùi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Suitcase now contains neatly folded shorts beside other clothing; both adults remain in their original outfits. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Suitcase now contains neatly folded shorts beside other clothing; both adults remain in their original outfits.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "Where are my shorts?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Where are my shorts?\" Đáp án là shorts. Chiếc khăn về chỗ khác, quần ngắn vào vali. Đồ đi biển không còn chỉ toàn quần dài.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Đi biển mà toàn quần dài! Shorts là quần đùi, quần ngắn. Người bạn mở vali, tìm mãi chưa thấy chiếc định mang đi. Bạn nhớ có một món gấp nhỏ ở túi bên cạnh; kiểm tra chỗ ấy trước nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Đi biển mà toàn quần dài! Shorts là quần đùi, quần ngắn. Người bạn mở vali, tìm mãi chưa thấy chiếc định mang đi. Bạn nhớ có một món gấp nhỏ ở túi bên cạnh; kiểm tra chỗ ấy trước nhé."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Người bạn hỏi: \"Where are my shorts?\" Quần đùi của tôi ở đâu? Shorts có dạng số nhiều, mình dùng are. Bạn chỉ túi nhỏ; món đồ gấp gọn nên dễ bị chiếc khăn phủ lên."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Người bạn hỏi: \"Where are my shorts?\" Quần đùi của tôi ở đâu? Shorts có dạng số nhiều, mình dùng are. Bạn chỉ túi nhỏ; món đồ gấp gọn nên dễ bị chiếc khăn phủ lên."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn nói: \"These shorts are new.\" Chiếc quần đùi này mới. These shorts gọi đúng món vừa lấy ra. Bạn dành một góc vali cho nó, không nhét xuống đáy rồi quên thêm lần nữa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn hỏi quần đùi của mình ở đâu. Hoàn thành \"Where are my...?\" và nói cả câu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Where are my shorts?\" Đáp án là shorts. Chiếc khăn về chỗ khác, quần ngắn vào vali. Đồ đi biển không còn chỉ toàn quần dài."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Soạn đồ → thiếu quần ngắn → hỏi → tìm đúng ngăn.. Next visible event: Friend lifts a towel from the side bag to reveal folded shorts while mascot points."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Soạn đồ → thiếu quần ngắn → hỏi → tìm đúng ngăn.. Next visible event: Friend holds the shorts on a hanger or by the waistband above the open suitcase; mascot makes space."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Soạn đồ → thiếu quần ngắn → hỏi → tìm đúng ngăn.. Next visible event: Hold folded shorts near a side bag and the incomplete question."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Soạn đồ → thiếu quần ngắn → hỏi → tìm đúng ngăn.. Next visible event: Suitcase now contains neatly folded shorts beside other clothing; both adults remain in their original outfits."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Soạn đồ → thiếu quần ngắn → hỏi → tìm đúng ngăn.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

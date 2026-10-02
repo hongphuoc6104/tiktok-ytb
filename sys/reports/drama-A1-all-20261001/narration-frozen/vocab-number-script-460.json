@@ -1,0 +1,112 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Stick figure with a round white head, dark-navy outline, two solid black oval eyes, and minimal stick limbs.",
+      "id": "CH01",
+      "name_vi": "Kiên",
+      "outfit_en": "Single pale-blue #8CCFE8 short-sleeve torso."
+    },
+    {
+      "appearance_en": "Stick figure with a round white head, dark-navy outline, two solid black oval eyes, and minimal stick limbs.",
+      "id": "CH02",
+      "name_vi": "Hoàng",
+      "outfit_en": "Single pale-tan short-sleeve torso."
+    }
+  ],
+  "job": "vocab-number-script-460",
+  "learner_outcome_vi": "Nhận ra nghĩa đã chọn trong tình huống và nói được câu tiếng Anh ngắn với từ này.",
+  "opening_function_vi": "Hoàng giấu tấm thẻ dưới bàn.",
+  "plot_vi": "Kiên đoán số năm trên thẻ rồi nhận ra chưa biết luật; Hoàng chỉ năm ô và Kiên nhường bạn lượt đầu.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Hoàng giấu tấm thẻ dưới bàn. Bạn muốn tôi đoán con số để nhận lượt đầu. \"What number is this?\" Đây là số mấy? Tôi hỏi, xin bạn cho nhìn một góc thôi.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Open with the concrete personal need and early usable English model.",
+      "scene_id": "SC01",
+      "title_vi": "Điều vừa xảy ra",
+      "visual_en": "Simple game table: Hoàng hides a number tile partly under table; mascot asks to see it. Five empty playing squares on board; no rules text."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Hoàng đưa thẻ ra nhưng xoay ngược. Tôi nghiêng đầu, nhìn đường gạch phía dưới rồi nói: \"The number is five.\" Con số là năm. Bạn xoay lại, đúng là số năm tôi vừa đoán.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Clarify the selected meaning through the same relationship and obstacle; keep English referents accurate.",
+      "scene_id": "SC02",
+      "title_vi": "Lời cần nói",
+      "visual_en": "Close shot: Hoàng reveals a rotated tile and turns its underlined 5 upright while mascot notices. Same board stays behind tile.",
+      "custom_visible_text": [
+        {
+          "text": "5",
+          "placement": "tile center with underline underneath",
+          "object": "number tile"
+        }
+      ]
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi nhận lượt đầu rồi khựng lại: nãy giờ vẫn chưa biết luật. Hoàng chỉ năm ô trên bàn, đếm chậm cho tôi theo. Tôi đặt thẻ ở cạnh ô đầu, chịu nghe hết trước khi chơi.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Show a meaningful action, request or changed state that develops the same story and supports the selected meaning.",
+      "scene_id": "SC03",
+      "title_vi": "Thử làm cùng nhau",
+      "visual_en": "Same angle: Hoàng points across five board cells while mascot listens with number-5 tile resting beside the first cell.",
+      "custom_visible_text": [
+        {
+          "text": "5",
+          "placement": "tile center",
+          "object": "number tile"
+        }
+      ]
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Hoàng rút thêm thẻ. Bạn hỏi giúp tôi câu đây là số mấy bằng tiếng Anh nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Invite supported full-sentence retrieval of the target word; hold at scene end before the answer.",
+      "scene_id": "SC04",
+      "title_vi": "Câu bạn giúp nói",
+      "visual_en": "Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below.",
+      "stem": "What ___ is this?"
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"What number is this?\" Hoàng cho tôi nhìn thẻ mới, vẫn giữ thẻ năm bên cạnh. Tôi đoán lần nữa rồi nhường bạn lượt đầu. Ít nhất, lần này hai đứa cùng biết đang chơi gì.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Give the full correct retrieval answer and the small visible consequence; preserve remaining uncertainty.",
+      "scene_id": "SC05",
+      "title_vi": "Chuyện đi tiếp",
+      "visual_en": "Game table medium shot: Hoàng reveals another tile marked 3 beside the underlined 5; mascot yields the first turn with an open-hand gesture.",
+      "custom_visible_text": [
+        {
+          "text": "3",
+          "placement": "new tile center",
+          "object": "new tile"
+        },
+        {
+          "text": "5",
+          "placement": "old tile center",
+          "object": "old tile"
+        }
+      ]
+    }
+  ],
+  "title": "Thẻ số giấu dưới bàn",
+  "editorial_review": "Reviewed and rewritten by an authorized writing agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 49,
+            "seconds": 14.66,
+            "min": 11.0,
+            "max": 18.33
+          },
+          {
+            "scene_id": "SC02",
+            "units": 44,
+            "seconds": 13.12,
+            "min": 9.84,
+            "max": 16.4
+          },
+          {
+            "scene_id": "SC03",
+            "units": 33,
+            "seconds": 9.92,
+            "min": 7.44,
+            "max": 12.4
+          },
+          {
+            "scene_id": "SC04",
+            "units": 31,
+            "seconds": 13.21,
+            "min": 9.91,
+            "max": 16.51
+          },
+          {
+            "scene_id": "SC05",
+            "units": 38,
+            "seconds": 11.76,
+            "min": 8.82,
+            "max": 14.69
+          }
+        ],
+        "min": 47.01,
+        "max": 78.33,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "20700",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hải ngại lối tham quan trong rừng; tôi đứng đợi trên đường đã đánh dấu, đi cùng nhịp với bạn và ngồi nghỉ ở ghế ven lối. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

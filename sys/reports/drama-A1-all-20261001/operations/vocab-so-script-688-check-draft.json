@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 33,
+            "seconds": 10.52,
+            "min": 7.89,
+            "max": 13.15
+          },
+          {
+            "scene_id": "SC02",
+            "units": 34,
+            "seconds": 10.34,
+            "min": 7.76,
+            "max": 12.93
+          },
+          {
+            "scene_id": "SC03",
+            "units": 36,
+            "seconds": 11.2,
+            "min": 8.4,
+            "max": 14.0
+          },
+          {
+            "scene_id": "SC04",
+            "units": 34,
+            "seconds": 10.49,
+            "min": 7.87,
+            "max": 13.12
+          },
+          {
+            "scene_id": "SC05",
+            "units": 29,
+            "seconds": 12.66,
+            "min": 9.49,
+            "max": 15.82
+          },
+          {
+            "scene_id": "SC06",
+            "units": 34,
+            "seconds": 10.79,
+            "min": 8.1,
+            "max": 13.49
+          }
+        ],
+        "min": 49.51,
+        "max": 82.51,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "18434",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Lỡ xe, Long rủ tôi đi bộ; khi mưa tới, tôi quyết định chờ dưới hiên để giữ bản chung và báo muộn, Long ở lại cùng. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "21702",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Lỡ xe, Long rủ tôi đi bộ; khi mưa tới, tôi quyết định chờ dưới hiên để giữ bản chung và báo muộn, Long ở lại cùng. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "id": "CH01",
+      "name_vi": "Tôi",
+      "outfit_en": "A single plain light sky blue short-sleeve t-shirt (#8CCFE8)."
+    },
+    {
+      "appearance_en": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "id": "CH02",
+      "name_vi": "Hà",
+      "outfit_en": "A single plain pale teal short-sleeve shirt."
+    }
+  ],
+  "custom_visible_text": [
+    {
+      "text": "June",
+      "placement": "small schedule box on brochure",
+      "object": "course brochure"
+    }
+  ],
+  "extra_visual_states": [],
+  "job": "vocab-course-script-658",
+  "learner_outcome_vi": "Người học nhận biết và sử dụng được danh từ course với nghĩa khóa học trong các câu giao tiếp cơ bản.",
+  "opening_function_vi": "Mở đầu bằng hành động lật xem tờ rơi khóa học trên bàn.",
+  "plot_vi": "Hà ngại khóa học không hợp giờ làm và chưa có kinh nghiệm. Tôi chỉ lịch tối, rủ ngồi cùng buổi đầu để cả hai cùng thử.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Hà đẩy tờ rơi lại cho tôi. Bạn tưởng lớp chỉ học ban ngày. \"This course starts in June.\" Khóa học này bắt đầu tháng Sáu. Tôi giữ giấy để cùng đọc lại.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Introduce the printed flyer describing an evening pottery class.",
+      "scene_id": "SC01",
+      "title_vi": "Tờ rơi trên bàn",
+      "visual_en": "The stick figure in the light sky blue shirt looks down at a paper brochure spread on a wooden table beside a friend."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi muốn học làm gốm với bạn, nhưng Hà còn đi làm. Khóa học có nhiều buổi để học dần, chưa phải buổi đến thử một lần. Tôi chỉ phần lịch tối Hà vừa bỏ qua.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Highlight the starting time of the course with the first English model sentence.",
+      "scene_id": "SC02",
+      "title_vi": "Thời gian khai giảng",
+      "visual_en": "Mascot points to permitted June schedule label beside simple moon icon on course brochure, teal-shirt friend examines it. No invented dates or class counts."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Hà đọc lại, nói: \"I like this course.\" Tôi thích khóa học này. Bạn thích những buổi làm bát rồi tách, nhưng vẫn ngại mình không theo kịp.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "The companion expresses strong interest using the second English model sentence.",
+      "scene_id": "SC03",
+      "title_vi": "Sự hào hứng của Hà",
+      "visual_en": "Teal-shirt friend reads brochure containing permitted June label and simple bowl-and-cup icons only. No printed syllabus paragraphs."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi cũng chưa từng làm. Tôi đề nghị ngồi cùng bàn buổi đầu, để hai đứa thử thay vì chờ biết rồi mới đăng ký. Hà lấy bút, vẫn hỏi tháng bắt đầu lần nữa.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Show the decision made to enroll together.",
+      "scene_id": "SC04",
+      "title_vi": "Điền phiếu đăng ký",
+      "visual_en": "Two figures each take a blank application sheet and plain pencil at table, looking at each other uncertainly; brochure remains between them."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bạn nói giúp tôi câu khóa học này bắt đầu tháng Sáu bằng tiếng Anh nhé. Hà muốn chắc phần thời gian trước khi điền tên.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Prompt the learner to retrieve the first model sentence specifying the start date.",
+      "scene_id": "SC05",
+      "stem": "This ___ starts in June.",
+      "title_vi": "Nhắc lại thời gian",
+      "visual_en": "Teal-shirt friend pauses with pen above blank application, looking toward mascot beside same brochure. Top safe region for target-gap stem."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"This course starts in June.\" Khóa học này bắt đầu tháng Sáu. Hà nhận một phiếu, đưa tôi phiếu còn lại. Chúng tôi cất hai tờ cùng chỗ để tới buổi đầu cùng nhau.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Confirm the correct model sentence and conclude the enrollment step happily.",
+      "scene_id": "SC06",
+      "title_vi": "Hẹn ngày đến lớp",
+      "visual_en": "The stick figure in the pale teal shirt closes a folder smiling at the stick figure in the light sky blue shirt."
+    }
+  ],
+  "title": "Khóa học làm gốm",
+  "editorial_review": "Reviewed and rewritten by an authorized writing agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

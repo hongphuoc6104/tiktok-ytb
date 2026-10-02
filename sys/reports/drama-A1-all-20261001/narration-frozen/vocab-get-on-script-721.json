@@ -1,0 +1,117 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Minimal stick figure, round white head outlined in dark navy, two solid black oval eyes, minimal stick limbs.",
+      "id": "CH01",
+      "name_vi": "Tôi",
+      "outfit_en": "Single light sky-blue short-sleeve t-shirt (#8CCFE8)."
+    },
+    {
+      "appearance_en": "Minimal stick figure, round white head outlined in dark navy, simple dark facial features, minimal stick limbs.",
+      "id": "CH02",
+      "name_vi": "Bình",
+      "outfit_en": "Single plain light-grey short-sleeve t-shirt."
+    }
+  ],
+  "custom_visible_text": [
+    {
+      "text": "7",
+      "placement": "large route numeral on bus front placard",
+      "object": "bus route placard"
+    },
+    {
+      "text": "7",
+      "placement": "small route numeral on plain monthly pass",
+      "object": "monthly pass"
+    }
+  ],
+  "extra_visual_states": [
+    {
+      "quote": "Tôi giữ chiếc ghế cạnh cửa sổ cho bạn,",
+      "visual_en": "After both have boarded, the same two registered figures sit on two adjacent empty bus seats by window. No driver or other passenger visible.",
+      "purpose_en": "Show boarded state after the actual step-through action and close their choice to sit together."
+    }
+  ],
+  "job": "vocab-get-on-script-721",
+  "learner_outcome_vi": "Người học hiểu và sử dụng cụm động từ 'get on' mang nghĩa 'lên xe buýt, lên tàu'.",
+  "opening_function_vi": "Mở đầu bằng việc xe buýt dừng đỗ trước nhà chờ.",
+  "plot_vi": "Bình ngại nhớ sai xe và chưa chuẩn bị vé; tôi kiểm số, đứng trên bậc đợi bạn thật sự bước lên rồi cùng chọn chỗ.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bình giữ vé, chưa chịu bước lên. Xe vừa dừng, cửa đã mở. \"Do we get on this bus?\" Mình lên xe buýt này à? Bạn hỏi tôi, sợ mình nhớ sai.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Establish a bus arriving at the roadside stop and the passenger boarding moment.",
+      "scene_id": "SC01",
+      "title_vi": "Xe buýt đỗ vào bến",
+      "visual_en": "Stationary bus with front door fully open and permitted route numeral 7, grey-shirt friend holds pass near curb while mascot waits beside him. No driver or passengers."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bình đối chiếu số xe với chiếc vé tháng trên tay: \"Do we get on this bus?\" Chúng mình lên xe buýt này à? Tôi nhìn rõ số tuyến hiển thị.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Introduce the first model asking whether to board this particular bus.",
+      "scene_id": "SC02",
+      "title_vi": "Hỏi đúng chuyến xe",
+      "visual_en": "The companion in light grey holds a paper monthly pass, pointing questioningly toward the open bus entrance. The stick-figure mascot checks the route sign above the doorway."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi kiểm số trên vé và đầu xe, đúng số đã chọn. \"Get on the bus.\" Lên xe buýt nhé. Tôi bước lên bậc thấp, quay lại đợi Bình, chưa vào ngồi trước.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Introduce the second model urging the companion to board the vehicle.",
+      "scene_id": "SC03",
+      "title_vi": "Giục bạn lên xe",
+      "visual_en": "The stick-figure mascot steps onto the lower entrance step of the bus, turning back to wave an encouraging arm toward the companion in light grey."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bạn vẫn ở ngoài, ngại mình cầm vé chưa sẵn. Tôi đứng giữ vị trí gần cửa để bạn thấy mình. Xe còn dừng, cửa mở, Bình lấy vé ra đúng tay rồi mới bước tới.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Show the companion boarding successfully as the journey begins.",
+      "scene_id": "SC04",
+      "title_vi": "Bước qua bậc cửa",
+      "visual_en": "Mascot stands on lower open bus step looking back, friend remains at curb taking permitted 7 pass from bag. Bus stationary, door fully open, no closing motion."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bình ngập ngừng ở bậc cửa chờ tôi nhắc lại. Bạn nói giúp tôi câu lên xe buýt đi nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Prompt the learner to practice the target command with a pause.",
+      "scene_id": "SC05",
+      "stem": "___ the bus.",
+      "title_vi": "Nhắc lại lời giục lên xe",
+      "visual_en": "Same camera: mascot waits on lower step, friend paused just before boarding with pass ready. No seat view or departure yet; upper safe region for stem."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"Get on the bus.\" Lên xe buýt nhé. Bình bước từ đường lên bậc cửa, vào cùng tôi. Tôi giữ chiếc ghế cạnh cửa sổ cho bạn, không để bạn phải đi tìm chỗ một mình.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Provide feedback on the sentence and settle into a calm journey home.",
+      "scene_id": "SC06",
+      "title_vi": "Chỗ ngồi cạnh cửa sổ",
+      "visual_en": "Grey-shirt friend takes one foot from curb onto lower bus step while mascot stands just inside, door fully open and bus stationary. No driver, crowd or duplicate body."
+    }
+  ],
+  "title": "Chuyến xe buýt chiều",
+  "editorial_review": "Reviewed and rewritten by an authorized writing agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

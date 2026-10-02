@@ -1,0 +1,558 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "3c29d1d2186e47a79e2ae0ff11068ff89df9fed5a9cd4e3bcf8e3cdb4edf9cd4",
+  "topic": "Học từ vựng tiếng Anh nose — mũi qua câu chuyện “Ngửi thấy bánh, chỉ đúng chiếc mũi”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới nose; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “mũi” của nose; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng nose chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng nose, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người minh họa phụ",
+      "appearance": "Adult human teaching figure, simple flat 2D illustration, short black hair, small clearly visible nose and ears, two ordinary eyes; one torso and two arms, no realistic muscles. Hands can be shown in separate flat teaching diagrams with clearly separated digits.",
+      "outfit": "Plain yellow short-sleeve top and dark simple trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chưa thấy bánh đã biết có bánh",
+      "purpose": "Establish the nose with a smell-based situation.",
+      "action": "Mascot stands beside human friend who notices warm bread smell from kitchen; bread visible farther away.",
+      "setting": "Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn chưa bước vào bếp mà đã nhận ra mùi bánh mới. Nose nghĩa là mũi. Mình nhìn người bạn minh họa bên cạnh: chiếc mũi nhỏ ở giữa mặt giúp chỉ rõ bộ phận đang được gọi tên trong bài.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nose",
+          "meaning": "mũi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot stands beside human friend who notices warm bread smell from kitchen; bread visible farther away. Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stands beside human friend who notices warm bread smell from kitchen; bread visible farther away.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "nose",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot stands beside human friend who notices warm bread smell from kitchen; bread visible farther away. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot stands beside human friend who notices warm bread smell from kitchen; bread visible farther away. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "nose",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn chưa bước vào bếp mà đã",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Mình nhìn người bạn minh họa bên",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of nose and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chỉ đúng bộ phận",
+      "purpose": "Model a simple instruction on the human teaching character.",
+      "action": "Human friend lightly points to own nose, mascot gestures toward the demonstration without nose changes.",
+      "setting": "Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nghe: \"Touch your nose.\" Chạm vào mũi của bạn. Nose là bộ phận cần chạm tới. Bạn nhìn người trong hình đưa tay lên đúng mũi. Đừng chạm nhầm sang má hay miệng; vị trí của mỗi bộ phận đều có một tên riêng.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nose",
+          "meaning": "mũi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Human friend lightly points to own nose, mascot gestures toward the demonstration without nose changes. Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Human friend lightly points to own nose, mascot gestures toward the demonstration without nose changes.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nghe: \"Touch your nose.\" Chạm vào",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of nose and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nói về việc nhận mùi",
+      "purpose": "Use a simple second model grounded in ordinary experience.",
+      "action": "Human friend smells bread from a comfortable distance while mascot points toward loaf on counter.",
+      "setting": "Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Người bạn nói: \"I smell with my nose.\" Tôi ngửi bằng mũi. With my nose cho biết bộ phận được dùng. Trong câu chuyện này, đó là mùi bánh quen thuộc vừa dẫn hai người tới cửa bếp.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nose",
+          "meaning": "mũi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Human friend smells bread from a comfortable distance while mascot points toward loaf on counter. Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Human friend smells bread from a comfortable distance while mascot points toward loaf on counter.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Human friend smells bread from a comfortable distance while mascot points toward loaf on counter. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Human friend smells bread from a comfortable distance while mascot points toward loaf on counter. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "I smell with my nose.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nói: \"I smell with my",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I smell with my nose.\" Tôi ngửi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of nose and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nghe rồi gọi tên",
+      "purpose": "Prompt retrieval with a clear face referent.",
+      "action": "Mascot presents a simple face diagram with only nose highlighted, incomplete command above.",
+      "setting": "Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bộ phận được chỉ nằm ở giữa mặt. Hoàn thành \"Touch your...\" để nói chạm vào mũi, rồi thử chỉ nhẹ đúng vị trí.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nose",
+          "meaning": "mũi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot presents a simple face diagram with only nose highlighted, incomplete command above. Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot presents a simple face diagram with only nose highlighted, incomplete command above.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot presents a simple face diagram with only nose highlighted, incomplete command above. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot presents a simple face diagram with only nose highlighted, incomplete command above. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Touch your...",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bộ phận được chỉ nằm ở giữa",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Touch your...\" để nói chạm vào mũi,",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of nose and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Tới nơi có bánh thật",
+      "purpose": "Confirm and close the smell-following setup.",
+      "action": "Mascot and human friend stand beside fresh bread on counter, friend nose remains small and simple.",
+      "setting": "Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"Touch your nose.\" Từ cần điền là nose. Hai người đã tìm tới chiếc bánh trong bếp. Giờ mới thấy chiếc bánh thật sự đang ở trên bàn. Từ lần sau, một mùi quen thuộc cũng có thể nhắc bạn nhớ tới từ vừa học này.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "nose",
+          "meaning": "mũi"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and human friend stand beside fresh bread on counter, friend nose remains small and simple. Kitchen doorway, mascot narrator and simple human teaching friend with a small visible nose. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and human friend stand beside fresh bread on counter, friend nose remains small and simple.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Touch your nose.\" Từ cần điền là",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of nose and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the nose with a smell-based situation.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model a simple instruction on the human teaching character."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a simple instruction on the human teaching character.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Use a simple second model grounded in ordinary experience."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a simple second model grounded in ordinary experience.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt retrieval with a clear face referent."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt retrieval with a clear face referent.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close the smell-following setup."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the smell-following setup.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn chưa bước vào bếp mà đã nhận ra mùi bánh mới. Nose nghĩa là mũi. Mình nhìn người bạn minh họa bên cạnh: chiếc mũi nhỏ ở giữa mặt giúp chỉ rõ bộ phận đang được gọi tên trong bài."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn chưa bước vào bếp mà đã nhận ra mùi bánh mới. Nose nghĩa là mũi. Mình nhìn người bạn minh họa bên cạnh: chiếc mũi nhỏ ở giữa mặt giúp chỉ rõ bộ phận đang được gọi tên trong bài."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nghe: \"Touch your nose.\" Chạm vào mũi của bạn. Nose là bộ phận cần chạm tới. Bạn nhìn người trong hình đưa tay lên đúng mũi. Đừng chạm nhầm sang má hay miệng; vị trí của mỗi bộ phận đều có một tên riêng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nghe: \"Touch your nose.\" Chạm vào mũi của bạn. Nose là bộ phận cần chạm tới. Bạn nhìn người trong hình đưa tay lên đúng mũi. Đừng chạm nhầm sang má hay miệng; vị trí của mỗi bộ phận đều có một tên riêng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn nói: \"I smell with my nose.\" Tôi ngửi bằng mũi. With my nose cho biết bộ phận được dùng. Trong câu chuyện này, đó là mùi bánh quen thuộc vừa dẫn hai người tới cửa bếp."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bộ phận được chỉ nằm ở giữa mặt. Hoàn thành \"Touch your...\" để nói chạm vào mũi, rồi thử chỉ nhẹ đúng vị trí."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Touch your nose.\" Từ cần điền là nose. Hai người đã tìm tới chiếc bánh trong bếp. Giờ mới thấy chiếc bánh thật sự đang ở trên bàn. Từ lần sau, một mùi quen thuộc cũng có thể nhắc bạn nhớ tới từ vừa học này."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13915",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

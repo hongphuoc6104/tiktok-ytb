@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 35,
+            "seconds": 11.22,
+            "min": 8.42,
+            "max": 14.03
+          },
+          {
+            "scene_id": "SC02",
+            "units": 38,
+            "seconds": 11.61,
+            "min": 8.7,
+            "max": 14.51
+          },
+          {
+            "scene_id": "SC03",
+            "units": 35,
+            "seconds": 10.77,
+            "min": 8.08,
+            "max": 13.47
+          },
+          {
+            "scene_id": "SC04",
+            "units": 28,
+            "seconds": 13.68,
+            "min": 10.26,
+            "max": 17.1
+          },
+          {
+            "scene_id": "SC05",
+            "units": 31,
+            "seconds": 9.81,
+            "min": 7.36,
+            "max": 12.26
+          }
+        ],
+        "min": 42.82,
+        "max": 71.37,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "16951",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Cắt giấy xong mới hỏi màu yêu thích?”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ]
+}

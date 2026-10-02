@@ -1,0 +1,570 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "6d655505c33a60878ce43a8fa063fae2d35ff793f15f75e73889f2be5b0e0d78",
+  "topic": "Học từ vựng tiếng Anh grandparent — ông hoặc bà qua câu chuyện “Một người là grandparent, nhiều người là grandparents”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới grandparent; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “ông hoặc bà” của grandparent; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng grandparent chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng grandparent, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Bà",
+      "appearance": "Older adult woman, short gray hair, simple flat illustration, minimal limbs.",
+      "outfit": "Plain peach top."
+    },
+    {
+      "id": "CH03",
+      "name": "Ông",
+      "appearance": "Older adult man, short gray hair, simple flat illustration, minimal limbs.",
+      "outfit": "Plain sage top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đếm người trước khi chọn từ",
+      "purpose": "Prevent the common singular/plural translation error.",
+      "action": "Mascot looks at a photo of one elderly grandmother beside a photo of both grandparents.",
+      "setting": "Family-photo table with two elderly relatives and mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn có một ảnh chụp riêng bà và một ảnh chụp cả ông bà. Grandparent ở số ít là một người ông hoặc bà. Khi nói grandparents, có s, mình đang nhắc đến nhiều người thuộc vai ông bà. Nếu ảnh chỉ có ông, ông cũng là một grandparent. Nếu ảnh chỉ có bà, bà cũng vậy. Không cần cả hai xuất hiện thì từ số ít mới được dùng.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandparent",
+          "meaning": "ông hoặc bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot looks at a photo of one elderly grandmother beside a photo of both grandparents. Family-photo table with two elderly relatives and mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot looks at a photo of one elderly grandmother beside a photo of both grandparents.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "grandparent",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Show a card containing only the declared grandmother, then a card containing only the declared grandfather, then a separate group card containing both. A two-generation link through a generic parent silhouette establishes the family relation. Family-photo table with two elderly relatives and mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show a card containing only the declared grandmother, then a card containing only the declared grandfather, then a separate group card containing both. A two-generation link through a generic parent silhouette establishes the family relation.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "grandparent",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn có một ảnh chụp riêng bà",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Nếu ảnh chỉ có ông, ông cũng",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandparent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chỉ một người trong ảnh",
+      "purpose": "Model the singular relation correctly.",
+      "action": "Mascot points to the single-grandmother photo while paired photo stays farther aside.",
+      "setting": "Family-photo table with two elderly relatives and mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"A grandparent is in the photo.\" Một người ông hoặc bà có trong ảnh. Câu này chưa nói cụ thể là ông hay bà, nhưng đã cho biết chỉ một người đang được nhắc đến. Quan hệ được tính từ bạn qua bố hoặc mẹ tới thế hệ trước. Một người lớn tuổi bất kỳ trong ảnh chưa chắc là ông hay bà của bạn; cần biết liên hệ gia đình.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandparent",
+          "meaning": "ông hoặc bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to the single-grandmother photo while paired photo stays farther aside. Family-photo table with two elderly relatives and mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to the single-grandmother photo while paired photo stays farther aside.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Show a card containing only the declared grandmother, then a card containing only the declared grandfather, then a separate group card containing both. A two-generation link through a generic parent silhouette establishes the family relation. Family-photo table with two elderly relatives and mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show a card containing only the declared grandmother, then a card containing only the declared grandfather, then a separate group card containing both. A two-generation link through a generic parent silhouette establishes the family relation.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "grandparent",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"A grandparent is in the",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Quan hệ được tính từ bạn qua",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandparent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Cả hai cùng tới chơi",
+      "purpose": "Use the plural naturally in a connected event.",
+      "action": "Mascot welcomes grandmother in peach top and grandfather in sage top through doorway.",
+      "setting": "Family-photo table with two elderly relatives and mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Hôm nay cả ông và bà tới nhà. \"My grandparents are here.\" Ông bà tôi ở đây. Grandparents là nhiều người nên câu dùng are. Nhìn hai người trước cửa, bạn hiểu ngay vì sao từ có thêm s.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandparent",
+          "meaning": "ông hoặc bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot welcomes grandmother in peach top and grandfather in sage top through doorway. Family-photo table with two elderly relatives and mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot welcomes grandmother in peach top and grandfather in sage top through doorway.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot welcomes grandmother in peach top and grandfather in sage top through doorway. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Family-photo table with two elderly relatives and mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot welcomes grandmother in peach top and grandfather in sage top through doorway. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "My grandparents are here.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Hôm nay cả ông và bà tới",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"My grandparents are here.\" Ông bà tôi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandparent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Một ảnh, một người",
+      "purpose": "Ask an explicit singular-versus-plural choice.",
+      "action": "Mascot holds only the single-grandmother photo; paired image removed from frame.",
+      "setting": "Family-photo table with two elderly relatives and mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Trong ảnh chỉ có một người bà. Bạn chọn a grandparent hay grandparents để nói riêng người ấy? Hãy chọn theo số người được nhắc đến.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandparent",
+          "meaning": "ông hoặc bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot holds only the single-grandmother photo; paired image removed from frame. Family-photo table with two elderly relatives and mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds only the single-grandmother photo; paired image removed from frame.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "a grandparent / grandparents",
+              "placement": "Upper third: two equally emphasized choices; neither marked correct.",
+              "object": "Practice options."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong ảnh chỉ có một người bà.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandparent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hai chiếc ghế đều có khách",
+      "purpose": "Give feedback and close the visit.",
+      "action": "Grandmother and grandfather sit on two chairs with mascot between them holding a photo album.",
+      "setting": "Family-photo table with two elderly relatives and mascot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "A grandparent là đúng khi nói một người. Còn cả ông bà là grandparents. Hai chiếc ghế trong phòng hôm nay đều có khách, nhưng bạn đã biết cách đổi từ khi chỉ muốn nói riêng một người trong hai.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandparent",
+          "meaning": "ông hoặc bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Grandmother and grandfather sit on two chairs with mascot between them holding a photo album. Family-photo table with two elderly relatives and mascot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Grandmother and grandfather sit on two chairs with mascot between them holding a photo album.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "A grandparent là đúng khi nói một",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandparent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Prevent the common singular/plural translation error.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model the singular relation correctly."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the singular relation correctly.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Use the plural naturally in a connected event."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the plural naturally in a connected event.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Ask an explicit singular-versus-plural choice."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask an explicit singular-versus-plural choice.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Give feedback and close the visit."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give feedback and close the visit.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn có một ảnh chụp riêng bà và một ảnh chụp cả ông bà. Grandparent ở số ít là một người ông hoặc bà. Khi nói grandparents, có s, mình đang nhắc đến nhiều người thuộc vai ông bà. Nếu ảnh chỉ có ông, ông cũng là một grandparent. Nếu ảnh chỉ có bà, bà cũng vậy. Không cần cả hai xuất hiện thì từ số ít mới được dùng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn có một ảnh chụp riêng bà và một ảnh chụp cả ông bà. Grandparent ở số ít là một người ông hoặc bà. Khi nói grandparents, có s, mình đang nhắc đến nhiều người thuộc vai ông bà. Nếu ảnh chỉ có ông, ông cũng là một grandparent. Nếu ảnh chỉ có bà, bà cũng vậy. Không cần cả hai xuất hiện thì từ số ít mới được dùng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"A grandparent is in the photo.\" Một người ông hoặc bà có trong ảnh. Câu này chưa nói cụ thể là ông hay bà, nhưng đã cho biết chỉ một người đang được nhắc đến. Quan hệ được tính từ bạn qua bố hoặc mẹ tới thế hệ trước. Một người lớn tuổi bất kỳ trong ảnh chưa chắc là ông hay bà của bạn; cần biết liên hệ gia đình."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"A grandparent is in the photo.\" Một người ông hoặc bà có trong ảnh. Câu này chưa nói cụ thể là ông hay bà, nhưng đã cho biết chỉ một người đang được nhắc đến. Quan hệ được tính từ bạn qua bố hoặc mẹ tới thế hệ trước. Một người lớn tuổi bất kỳ trong ảnh chưa chắc là ông hay bà của bạn; cần biết liên hệ gia đình."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Hôm nay cả ông và bà tới nhà. \"My grandparents are here.\" Ông bà tôi ở đây. Grandparents là nhiều người nên câu dùng are. Nhìn hai người trước cửa, bạn hiểu ngay vì sao từ có thêm s."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Trong ảnh chỉ có một người bà. Bạn chọn a grandparent hay grandparents để nói riêng người ấy? Hãy chọn theo số người được nhắc đến."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "A grandparent là đúng khi nói một người. Còn cả ông bà là grandparents. Hai chiếc ghế trong phòng hôm nay đều có khách, nhưng bạn đã biết cách đổi từ khi chỉ muốn nói riêng một người trong hai."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

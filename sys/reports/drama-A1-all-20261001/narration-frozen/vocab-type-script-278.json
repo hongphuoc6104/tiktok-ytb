@@ -1,0 +1,107 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Minimal stick figure with a round white head outlined in dark navy, two solid black oval eyes, and simple stick limbs.",
+      "id": "CH01",
+      "name_vi": "Chú Bình",
+      "outfit_en": "A single pale-blue short-sleeve shirt (#8CCFE8) and plain navy stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name_vi": "Miu",
+      "appearance_en": "Minimal ink stick figure, small child with a simple short hair silhouette, a round white face and solid black oval eyes. Simple proportions and modest expressions, no realistic muscles or fingers.",
+      "outfit_en": "Exactly one plain mustard-yellow short-sleeve top and minimal stick limbs; no layered shirt or printed logo."
+    }
+  ],
+  "job": "vocab-type-script-278",
+  "learner_outcome_vi": "Nhận ra nghĩa chọn của từ và dùng một câu ngắn để thực hiện hoặc nhờ hành động.",
+  "opening_function_vi": "Ánh mắt chăm chú ngây thơ của bé gái trước bàn phím máy tính rộng lớn.",
+  "plot_vi": "Miu muốn tự gõ tên trên thiệp tặng mẹ; mắc một lỗi nhỏ nhưng sửa lại và giữ bản mình đã làm.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Miu giấu tấm thiệp, chưa có tên mình. \"Type your name.\" Gõ tên của em nhé. Tôi kéo bàn phím tới gần, để em tự tìm chữ đầu.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Open with the visible human need and an early usable English utterance.",
+      "scene_id": "SC01",
+      "title_vi": "Chi tiết đầu chuyện",
+      "visual_en": "At a home desk, the young child holds a plain birthday card draft with its name field still blank while mascot brings a keyboard closer. No decorative readable writing."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Em muốn mẹ biết thiệp này mình đã làm. Gõ được một chữ, em lại nhìn sang tôi. Tôi định bấm hộ rồi thôi, chỉ vào tấm thẻ có tên em để em tự đối chiếu.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Show the relationship and resistance without a procedural lecture.",
+      "scene_id": "SC02",
+      "title_vi": "Điều cần hiểu",
+      "visual_en": "Mascot places a small name-reference card beside the keyboard, letting the child compare instead of typing for her. Use only permitted child-name text if written; no extra alphabet rows."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"I can type my name.\" Em có thể gõ tên mình. Miu nói vậy khi đã tìm được chữ cuối. Có một chữ bị lặp, em tự xóa rồi gõ lại, không giấu đi.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Use the second English model with correct time/reference and a meaningful visible action.",
+      "scene_id": "SC03",
+      "title_vi": "Hành động làm đổi chuyện",
+      "visual_en": "At a fixed desk angle, the child is ready to type the last character in her short name on the generic card interface. Mascot keeps his hands back; no unreadable paragraph.",
+      "extra_visual_states": [
+        {
+          "quote": "Có một chữ bị lặp, em tự xóa rồi gõ lại,",
+          "visual_en": "Keep the same keyboard, screen and child. The short name field has acquired typed characters while the child actively presses a key and checks it against the reference card. Only approved child-name text may be used.",
+          "purpose_en": "Show typed text as the consequence of keyboard input.",
+          "custom_visible_text": [
+            {
+              "text": "Miu",
+              "placement": "Inside the short typed-name field of the computer card interface after the child has typed it.",
+              "object": "Fictional typed name on the birthday card."
+            }
+          ]
+        }
+      ],
+      "custom_visible_text": [
+        {
+          "text": "Miu",
+          "placement": "On the small physical name-reference card beside the keyboard, not yet in the on-screen input field. Keep the top teaching line and bottom captions separate.",
+          "object": "Fictional child-name reference card."
+        }
+      ]
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Nếu muốn nhắc em gõ tên của mình, bạn nói giúp tôi bằng tiếng Anh nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Invite one supported sentence for the same need; wait before revealing the answer.",
+      "scene_id": "SC04",
+      "title_vi": "Lời người xem giúp nói",
+      "visual_en": "Hold child and mascot near the keyboard, the instruction stem above. The small name field may stay blank, no completed lesson answer.",
+      "stem": "___ your name."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"Type your name.\" Đúng rồi. Thiệp được in ra, tên chưa nằm thật giữa trang. Miu vẫn giữ lấy, bỏ vào phong bì. Em hỏi lúc mẹ mở thì tôi có ngồi cạnh không.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Give feedback and a small concrete consequence, without a perfect or generic emotional flourish.",
+      "scene_id": "SC05",
+      "title_vi": "Kết quả",
+      "visual_en": "Child keeps the newly printed simple card even though the name is slightly off-center, and puts it in a plain envelope. Mascot remains beside her, no readable address or extra text."
+    }
+  ],
+  "title": "Tên trên tấm thiệp",
+  "editorial_review": "Reviewed and rewritten by primary agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 43,
+            "seconds": 13.14,
+            "min": 9.86,
+            "max": 16.43
+          },
+          {
+            "scene_id": "SC02",
+            "units": 43,
+            "seconds": 12.99,
+            "min": 9.75,
+            "max": 16.24
+          },
+          {
+            "scene_id": "SC03",
+            "units": 36,
+            "seconds": 11.05,
+            "min": 8.29,
+            "max": 13.81
+          },
+          {
+            "scene_id": "SC04",
+            "units": 27,
+            "seconds": 12.25,
+            "min": 9.19,
+            "max": 15.31
+          },
+          {
+            "scene_id": "SC05",
+            "units": 35,
+            "seconds": 11.07,
+            "min": 8.3,
+            "max": 13.84
+          }
+        ],
+        "min": 45.39,
+        "max": 75.63,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "21303",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Duy không thích nhịp phim vừa xem, tôi lại thích; hai người hỏi và nghe lý do của nhau rồi vẫn ngồi kể tiếp cảnh mình nhớ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

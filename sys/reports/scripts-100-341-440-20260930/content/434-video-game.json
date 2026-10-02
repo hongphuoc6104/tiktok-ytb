@@ -1,0 +1,462 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "87a075396e4b22fdf3ced6bf554dced6c09ce8c9ea0a18b2ab9cebc459585cfa",
+  "topic": "Học từ vựng tiếng Anh VIDEO GAME (danh từ: trò chơi điện tử) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ VIDEO GAME",
+    "Làm rõ nghĩa lõi \"trò chơi điện tử\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng VIDEO GAME, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại VIDEO GAME, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành trong tình huống",
+      "appearance": "Adult friend or companion. Minimal flat ink style. Maintain age, gender, clothing and identity across all scenes; use mustard top and only explicitly needed accessory. Distinct from canonical mascot.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Tay cầm thứ hai cho ai — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot enters living room where friend plays fictional cooperative game, second controller on sofa.",
+      "setting": "Phòng khách có màn hình và hai tay cầm.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Tay cầm thứ hai còn trống, bạn chơi cùng không? Video game là trò chơi điện tử. Bạn tới nhà người bạn, thấy màn hình đang mở một trò giả lập; chiếc tay cầm bên cạnh chưa có ai dùng.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "video game",
+          "meaning": "trò chơi điện tử"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot enters living room where friend plays fictional cooperative game, second controller on sofa. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot enters living room where friend plays fictional cooperative game, second controller on sofa.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "video game",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Tay cầm thứ hai còn trống, bạn chơi cùng không? Video game là trò chơi điện tử. Bạn tới nhà người bạn, thấy màn hình đang mở một trò giả lập; chiếc tay cầm bên cạnh chưa có ai dùng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Tay cầm thứ hai cho ai — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Both inspect simple fictional game instruction screen, each holding controller.",
+      "setting": "Phòng khách có màn hình và hai tay cầm.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn hỏi: \"Can we play a video game?\" Mình chơi một trò chơi điện tử được không? A video game nói một trò; hai người chọn trò có cách chơi phù hợp rồi cùng xem hướng dẫn trước.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "video game",
+          "meaning": "trò chơi điện tử"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Both inspect simple fictional game instruction screen, each holding controller. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both inspect simple fictional game instruction screen, each holding controller.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "Can we play a video game?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Can we play a video game?\" Mình chơi một trò chơi điện tử được không? A video game nói một trò; hai người chọn trò có cách chơi phù hợp rồi cùng xem hướng dẫn trước.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Tay cầm thứ hai cho ai — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Fictional game shows two abstract characters cooperating toward flag, both adults engaged calmly.",
+      "setting": "Phòng khách có màn hình và hai tay cầm.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn nói: \"This video game is fun.\" Trò chơi điện tử này vui. This chỉ trò đang thử; hai người phối hợp đưa nhân vật trong màn hình tới đích, rồi đổi vai khi tới lượt sau.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "video game",
+          "meaning": "trò chơi điện tử"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Fictional game shows two abstract characters cooperating toward flag, both adults engaged calmly. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Fictional game shows two abstract characters cooperating toward flag, both adults engaged calmly.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "This video game is fun.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nói: \"This video game is fun.\" Trò chơi điện tử này vui. This chỉ trò đang thử; hai người phối hợp đưa nhân vật trong màn hình tới đích, rồi đổi vai khi tới lượt sau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Tay cầm thứ hai cho ai — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Hold two controllers and question stem without complete answer.",
+      "setting": "Phòng khách có màn hình và hai tay cầm.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn muốn rủ chơi một trò chơi điện tử. Hoàn thành \"Can we play a...?\" bằng video game rồi nói trọn câu. Từ game ở đây đi cùng video nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "video game",
+          "meaning": "trò chơi điện tử"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold two controllers and question stem without complete answer. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold two controllers and question stem without complete answer.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "Can we play a...?",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn rủ chơi một trò chơi điện tử. Hoàn thành \"Can we play a...?\" bằng video game rồi nói trọn câu. Từ game ở đây đi cùng video nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 6
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Tay cầm thứ hai cho ai — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Both place controllers down after agreed round and smile, fictional finish screen visible.",
+      "setting": "Phòng khách có màn hình và hai tay cầm.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"Can we play a video game?\" Mình chơi một trò chơi điện tử được không? Tay cầm thứ hai đã có người, cả hai thống nhất số lượt rồi chơi. Buổi gặp vẫn có chỗ cho hoạt động khác sau đó.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "video game",
+          "meaning": "trò chơi điện tử"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both place controllers down after agreed round and smile, fictional finish screen visible. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both place controllers down after agreed round and smile, fictional finish screen visible.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "Can we play a video game?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can we play a video game?\" Mình chơi một trò chơi điện tử được không? Tay cầm thứ hai đã có người, cả hai thống nhất số lượt rồi chơi. Buổi gặp vẫn có chỗ cho hoạt động khác sau đó.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Tay cầm thứ hai còn trống, bạn chơi cùng không? Video game là trò chơi điện tử. Bạn tới nhà người bạn, thấy màn hình đang mở một trò giả lập; chiếc tay cầm bên cạnh chưa có ai dùng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Tay cầm thứ hai còn trống, bạn chơi cùng không? Video game là trò chơi điện tử. Bạn tới nhà người bạn, thấy màn hình đang mở một trò giả lập; chiếc tay cầm bên cạnh chưa có ai dùng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can we play a video game?\" Mình chơi một trò chơi điện tử được không? A video game nói một trò; hai người chọn trò có cách chơi phù hợp rồi cùng xem hướng dẫn trước."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can we play a video game?\" Mình chơi một trò chơi điện tử được không? A video game nói một trò; hai người chọn trò có cách chơi phù hợp rồi cùng xem hướng dẫn trước."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn nói: \"This video game is fun.\" Trò chơi điện tử này vui. This chỉ trò đang thử; hai người phối hợp đưa nhân vật trong màn hình tới đích, rồi đổi vai khi tới lượt sau."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn rủ chơi một trò chơi điện tử. Hoàn thành \"Can we play a...?\" bằng video game rồi nói trọn câu. Từ game ở đây đi cùng video nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can we play a video game?\" Mình chơi một trò chơi điện tử được không? Tay cầm thứ hai đã có người, cả hai thống nhất số lượt rồi chơi. Buổi gặp vẫn có chỗ cho hoạt động khác sau đó."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Một người chơi → bạn tới → hỏi cùng → chia lượt.. Next visible event: Both inspect simple fictional game instruction screen, each holding controller."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Một người chơi → bạn tới → hỏi cùng → chia lượt.. Next visible event: Fictional game shows two abstract characters cooperating toward flag, both adults engaged calmly."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Một người chơi → bạn tới → hỏi cùng → chia lượt.. Next visible event: Hold two controllers and question stem without complete answer."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Một người chơi → bạn tới → hỏi cùng → chia lượt.. Next visible event: Both place controllers down after agreed round and smile, fictional finish screen visible."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Một người chơi → bạn tới → hỏi cùng → chia lượt.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

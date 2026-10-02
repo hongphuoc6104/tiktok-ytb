@@ -1,0 +1,549 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "5f6dc5b4dd92ecfb877f907f931c449e9d76bef1e2ceec27a6d89aa59a6eb071",
+  "topic": "Học từ vựng tiếng Anh RICE (danh từ: cơm, gạo) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ RICE",
+    "Làm rõ nghĩa lõi \"cơm, gạo\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng RICE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại RICE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Tình huống xảy ra ngay",
+      "purpose": "Present an immediate everyday need and the selected vocabulary meaning.",
+      "action": "A medium close view of the canonical mascot holding an unmistakably empty rice bowl beside a table of side dishes. The mustard-shirt friend holds a rice paddle near the rice pot. Use the empty bowl as the focal obstacle; retain rice for the later serving action.",
+      "setting": "Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ.",
+      "camera": "Medium close view with one dominant referent, readable mascot reaction, stable camera and subtitle clearance.",
+      "narration": "Có thức ăn, thiếu cơm! Rice là cơm hoặc gạo. Trong bữa này, mình nói tới cơm đã nấu. Bạn cầm bát trống, nhìn nồi cơm rồi quay sang người đang cầm muôi. Nhờ xới một ít là bữa ăn có thể bắt đầu.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rice",
+          "meaning": "cơm, gạo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "A medium close view of the canonical mascot holding an unmistakably empty rice bowl beside a table of side dishes. The mustard-shirt friend holds a rice paddle near the rice pot. Use the empty bowl as the focal obstacle; retain rice for the later serving action. Attach canonical mascot Character reference. Exactly one pale-blue short-sleeve torso, round white navy-outlined head, black oval eyes and minimal stick limbs. Keep bottom 22% free for subtitles and outer 10% safe. Render only listed visible_text; no incidental lettering or logos.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "A medium close view of the canonical mascot holding an unmistakably empty rice bowl beside a table of side dishes. The mustard-shirt friend holds a rice paddle near the rice pot. Use the empty bowl as the focal obstacle; retain rice for the later serving action.",
+          "reason": "Present an immediate everyday need and the selected vocabulary meaning.",
+          "visible_text": [
+            {
+              "text": "rice",
+              "placement": "Upper third, large readable text; clear of faces, main action and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "The mascot extends the empty bowl toward the friend holding the rice paddle; do not fill the bowl yet. Same shot and layout as the base image; attach Base scene reference and canonical Character reference. Only listed text; preserve subtitle safe space.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the base camera, background, character identities, single pale-blue mascot torso, props, lighting and exact visible text.",
+          "change": "The mascot extends the empty bowl toward the friend holding the rice paddle; do not fill the bowl yet.",
+          "reason": "Show the causal next action while the opening phrase leads into the lesson.",
+          "visible_text": [
+            {
+              "text": "rice",
+              "placement": "Upper third, large readable text; clear of faces, main action and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Present an immediate everyday need and the selected vocabulary meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Có thức ăn, thiếu cơm! Rice là cơm hoặc gạo. Trong bữa này, mình nói tới cơm đã nấu. Bạn cầm bát trống, nhìn nồi cơm rồi quay sang người đang cầm muôi. Nhờ xới một ít là bữa ăn có thể bắt đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Show the causal next action while the opening phrase leads into the lesson.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn cầm bát trống",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Begin the first spoken phrase immediately and address the situation naturally. Keep the English model intelligible; verify actual onset and rhythm on WAV during media.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot đưa bát về phía người bạn đang cầm muôi xới cơm.",
+      "purpose": "Connect the opening to a usable English model without a new introduction.",
+      "action": "Mascot đưa bát về phía người bạn đang cầm muôi xới cơm.",
+      "setting": "Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ.",
+      "camera": "Medium close view with one dominant referent, readable mascot reaction, stable camera and subtitle clearance.",
+      "narration": "Bạn nhờ: \"Can I have some rice?\" Cho tôi xin một ít cơm được không? Some rice là một lượng cơm, không thêm s vào rice. Bạn đưa bát sang, người bạn mở nồi ra xem còn bao nhiêu để chia cho mọi người.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rice",
+          "meaning": "cơm, gạo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot đưa bát về phía người bạn đang cầm muôi xới cơm. Setting: Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đưa bát về phía người bạn đang cầm muôi xới cơm.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "Can I have some rice?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect the opening to a usable English model without a new introduction.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhờ: \"Can I have some rice?\" Cho tôi xin một ít cơm được không? Some rice là một lượng cơm, không thêm s vào rice. Bạn đưa bát sang, người bạn mở nồi ra xem còn bao nhiêu để chia cho mọi người.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Begin the first spoken phrase immediately and address the situation naturally. Keep the English model intelligible; verify actual onset and rhythm on WAV during media.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Mascot xếp thêm bát, người bạn chỉ nồi còn cơm.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Mascot xếp thêm bát, người bạn chỉ nồi còn cơm.",
+      "setting": "Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người bạn nhìn phần cơm còn lại: \"We have enough rice.\" Chúng ta có đủ cơm. Nghe vậy, bạn xếp thêm bát cho người vừa tới. Đủ hay thiếu nói về lượng trong nồi, còn rice vẫn là món mọi người đang chia.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rice",
+          "meaning": "cơm, gạo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Mascot và bạn nhìn nồi còn cơm, trên bàn có các bát ban đầu. Setting: Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot và bạn nhìn nồi còn cơm, trên bàn có các bát ban đầu.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "We have enough rice.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Depict this single concrete story moment: Mascot đặt thêm một bát cho người mới tới, giữ nồi và các bát cũ tại chỗ. Setting: Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Keep the base camera, room, character identities, clothes, lighting, prop positions and visible text; change only the stated action or object state.",
+          "change": "Mascot đặt thêm một bát cho người mới tới, giữ nồi và các bát cũ tại chỗ.",
+          "reason": "Show the visible consequence after the preceding state.",
+          "visible_text": [
+            {
+              "text": "We have enough rice.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nhìn phần cơm còn lại: \"We have enough rice.\" Chúng ta có đủ cơm. Nghe vậy, bạn xếp thêm bát cho người vừa tới. Đủ hay thiếu nói về lượng trong nồi, còn rice vẫn là món mọi người đang chia.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Reveal the action result at the matching spoken cue.",
+          "anchor": {
+            "vi": {
+              "quote": "Nghe vậy, bạn xếp thêm bát",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ bát và muôi cạnh nồi, câu khuyết không hiện đáp án.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ bát và muôi cạnh nồi, câu khuyết không hiện đáp án.",
+      "setting": "Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn cần xin một ít cơm. Hoàn thành \"Can I have some...?\" bằng từ vừa học, rồi nói cả câu với người cầm muôi.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rice",
+          "meaning": "cơm, gạo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ bát và muôi cạnh nồi, câu khuyết không hiện đáp án. Setting: Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ bát và muôi cạnh nồi, câu khuyết không hiện đáp án.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Can I have some...?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn cần xin một ít cơm. Hoàn thành \"Can I have some...?\" bằng từ vừa học, rồi nói cả câu với người cầm muôi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot đặt bát có cơm trước người bạn ở bàn.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot đặt bát có cơm trước người bạn ở bàn.",
+      "setting": "Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Can I have some rice?\" Từ còn thiếu là rice. Cơm được xới vào bát rồi chuyền sang. Đến lượt ăn, bạn không còn cầm một chiếc bát trống nhìn về phía nồi.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "rice",
+          "meaning": "cơm, gạo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot đặt bát có cơm trước người bạn ở bàn. Setting: Bàn ăn cạnh nồi cơm, bát rỗng và túi gạo nhỏ. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đặt bát có cơm trước người bạn ở bàn.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Can I have some rice?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I have some rice?\" Từ còn thiếu là rice. Cơm được xới vào bát rồi chuyền sang. Đến lượt ăn, bạn không còn cầm một chiếc bát trống nhìn về phía nồi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Có thức ăn, thiếu cơm! Rice là cơm hoặc gạo. Trong bữa này, mình nói tới cơm đã nấu. Bạn cầm bát trống, nhìn nồi cơm rồi quay sang người đang cầm muôi. Nhờ xới một ít là bữa ăn có thể bắt đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Có thức ăn, thiếu cơm! Rice là cơm hoặc gạo. Trong bữa này, mình nói tới cơm đã nấu. Bạn cầm bát trống, nhìn nồi cơm rồi quay sang người đang cầm muôi. Nhờ xới một ít là bữa ăn có thể bắt đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nhờ: \"Can I have some rice?\" Cho tôi xin một ít cơm được không? Some rice là một lượng cơm, không thêm s vào rice. Bạn đưa bát sang, người bạn mở nồi ra xem còn bao nhiêu để chia cho mọi người."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nhờ: \"Can I have some rice?\" Cho tôi xin một ít cơm được không? Some rice là một lượng cơm, không thêm s vào rice. Bạn đưa bát sang, người bạn mở nồi ra xem còn bao nhiêu để chia cho mọi người."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn nhìn phần cơm còn lại: \"We have enough rice.\" Chúng ta có đủ cơm. Nghe vậy, bạn xếp thêm bát cho người vừa tới. Đủ hay thiếu nói về lượng trong nồi, còn rice vẫn là món mọi người đang chia."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn cần xin một ít cơm. Hoàn thành \"Can I have some...?\" bằng từ vừa học, rồi nói cả câu với người cầm muôi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can I have some rice?\" Từ còn thiếu là rice. Cơm được xới vào bát rồi chuyền sang. Đến lượt ăn, bạn không còn cầm một chiếc bát trống nhìn về phía nồi."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Present an immediate everyday need and the selected vocabulary meaning.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Resolve the immediate question or need through the next English model. Next visual event: Mascot đưa bát về phía người bạn đang cầm muôi xới cơm."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Connect the opening to a usable English model without a new introduction.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same interaction into the second model. Next visual event: Mascot xếp thêm bát, người bạn chỉ nồi còn cơm."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Bữa ăn thiếu cơm trong bát → nhận gạo/cơm là chất → xin một ít → chọn some → chia đủ bát.. Next visual event: Giữ bát và muôi cạnh nồi, câu khuyết không hiện đáp án."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bữa ăn thiếu cơm trong bát → nhận gạo/cơm là chất → xin một ít → chọn some → chia đủ bát.. Next visual event: Mascot đặt bát có cơm trước người bạn ở bàn."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bữa ăn thiếu cơm trong bát → nhận gạo/cơm là chất → xin một ít → chọn some → chia đủ bát.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

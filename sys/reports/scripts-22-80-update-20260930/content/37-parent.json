@@ -1,0 +1,619 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "a5915a3ce51e26298fc6ea10d07ded0b8257d03c52af5fd478b2d2c756116e5f",
+  "topic": "Học từ vựng tiếng Anh parent — cha hoặc mẹ qua câu chuyện “Tờ giấy cần chữ ký của cha hoặc mẹ”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới parent; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “cha hoặc mẹ” của parent; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng parent chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng parent, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Mẹ",
+      "appearance": "Adult woman, simple flat illustration, gentle expression, minimal limbs.",
+      "outfit": "Plain peach short-sleeve top."
+    },
+    {
+      "id": "CH03",
+      "name": "Bố",
+      "appearance": "Adult man, simple flat illustration, minimal limbs.",
+      "outfit": "Plain sage-green short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Hai người lớn, một chỗ ký",
+      "purpose": "Introduce singular parent with a concrete requirement.",
+      "action": "Mascot holds a school form with one blank signature line, two adults nearby, no readable form text.",
+      "setting": "School permission slip with a single signature line, mascot and two adult relatives.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Tờ giấy xin phép chuyến đi cần chữ ký của một phụ huynh. Parent là cha hoặc mẹ. Chỉ một người cũng gọi là a parent; không phải lúc nào từ này cũng có nghĩa cả bố lẫn mẹ. Hôm nay mẹ đang ở nhà nên mẹ ký. Nếu bố ký thay, yêu cầu một phụ huynh vẫn được đáp ứng trong câu chuyện. Từ không quy định chỉ người cha mới ký được.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "parent",
+          "meaning": "cha hoặc mẹ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds a school form with one blank signature line, two adults nearby, no readable form text. School permission slip with a single signature line, mascot and two adult relatives. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds a school form with one blank signature line, two adults nearby, no readable form text.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "parent",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Show exactly one parent signing the single line. A separate simple comparison card presents either declared mother or declared father as one signer, then both parents together for plural. Never duplicate a person in the actual room. School permission slip with a single signature line, mascot and two adult relatives. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show exactly one parent signing the single line. A separate simple comparison card presents either declared mother or declared father as one signer, then both parents together for plural. Never duplicate a person in the actual room.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "parent",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Tờ giấy xin phép chuyến đi cần",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Hôm nay mẹ đang ở nhà nên",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of parent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Một người là đủ trong yêu cầu này",
+      "purpose": "Model the singular form accurately.",
+      "action": "Mascot points to one signature line while one adult reaches for a pen.",
+      "setting": "School permission slip with a single signature line, mascot and two adult relatives.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn đọc yêu cầu: \"A parent needs to sign.\" Một phụ huynh cần ký. Ở câu này, a parent chỉ một người. Tờ giấy trong câu chuyện không yêu cầu cả hai người cùng chen chữ ký vào một dòng. Hãy nhìn số người mình nhắc tới, không nhìn số chữ ký của cả gia đình. Một người cha vẫn là một parent, dù người ấy có nhiều người con.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "parent",
+          "meaning": "cha hoặc mẹ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to one signature line while one adult reaches for a pen. School permission slip with a single signature line, mascot and two adult relatives. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to one signature line while one adult reaches for a pen.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Mascot points to one signature line while one adult reaches for a pen. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. School permission slip with a single signature line, mascot and two adult relatives. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC02_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot points to one signature line while one adult reaches for a pen. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "A parent needs to sign.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC02_I3",
+          "description": "Show exactly one parent signing the single line. A separate simple comparison card presents either declared mother or declared father as one signer, then both parents together for plural. Never duplicate a person in the actual room. School permission slip with a single signature line, mascot and two adult relatives. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show exactly one parent signing the single line. A separate simple comparison card presents either declared mother or declared father as one signer, then both parents together for plural. Never duplicate a person in the actual room.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "parent",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đọc yêu cầu: \"A parent needs",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"A parent needs to sign.\" Một phụ",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B3",
+          "image_id": "SC02_I3",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Hãy nhìn số người mình nhắc tới,",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of parent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Khi nói đến nhiều người",
+      "purpose": "Connect the plural form to a personal statement.",
+      "action": "Mascot shows the form to both adult relatives, each clearly a separate person.",
+      "setting": "School permission slip with a single signature line, mascot and two adult relatives.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Khi nói về bố mẹ mình, bạn có thể nói: \"My parents help me.\" Bố mẹ giúp tôi. Parents có thêm s để nói nhiều người. Hình thức của từ đổi theo số người bạn muốn nhắc tới.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "parent",
+          "meaning": "cha hoặc mẹ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot shows the form to both adult relatives, each clearly a separate person. School permission slip with a single signature line, mascot and two adult relatives. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot shows the form to both adult relatives, each clearly a separate person.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot shows the form to both adult relatives, each clearly a separate person. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. School permission slip with a single signature line, mascot and two adult relatives. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot shows the form to both adult relatives, each clearly a separate person. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "My parents help me.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Khi nói về bố mẹ mình, bạn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"My parents help me.\" Bố mẹ giúp",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of parent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chọn đúng số người",
+      "purpose": "Ask a short number distinction question.",
+      "action": "Mascot points to exactly one adult beside the single signature line; no target word displayed.",
+      "setting": "School permission slip with a single signature line, mascot and two adult relatives.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Chỉ một người cha đang ký giấy. Bạn chọn a parent hay parents để gọi người ấy? Nhớ chọn theo số người đang nói tới.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "parent",
+          "meaning": "cha hoặc mẹ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot points to exactly one adult beside the single signature line; no target word displayed. School permission slip with a single signature line, mascot and two adult relatives. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to exactly one adult beside the single signature line; no target word displayed.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "a parent / parents",
+              "placement": "Upper third: two equally emphasized choices; neither marked correct.",
+              "object": "Practice options."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Chỉ một người cha đang ký giấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of parent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Một chữ ký, đủ để đi",
+      "purpose": "Give explicit feedback and resolve the form.",
+      "action": "One adult signs the single line while mascot holds the finished permission slip.",
+      "setting": "School permission slip with a single signature line, mascot and two adult relatives.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "A parent là đúng vì đang nói một người. Parent có thể là cha hoặc mẹ. Tờ giấy đã có chữ ký cần thiết, bạn cất vào cặp. Hôm nay chỉ một chữ s thôi cũng làm số người thay đổi.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "parent",
+          "meaning": "cha hoặc mẹ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "One adult signs the single line while mascot holds the finished permission slip. School permission slip with a single signature line, mascot and two adult relatives. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "One adult signs the single line while mascot holds the finished permission slip.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "A parent là đúng vì đang nói",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of parent and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce singular parent with a concrete requirement.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model the singular form accurately."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the singular form accurately.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Connect the plural form to a personal statement."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Connect the plural form to a personal statement.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Ask a short number distinction question."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Ask a short number distinction question.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Give explicit feedback and resolve the form."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the form.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Tờ giấy xin phép chuyến đi cần chữ ký của một phụ huynh. Parent là cha hoặc mẹ. Chỉ một người cũng gọi là a parent; không phải lúc nào từ này cũng có nghĩa cả bố lẫn mẹ. Hôm nay mẹ đang ở nhà nên mẹ ký. Nếu bố ký thay, yêu cầu một phụ huynh vẫn được đáp ứng trong câu chuyện. Từ không quy định chỉ người cha mới ký được."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Tờ giấy xin phép chuyến đi cần chữ ký của một phụ huynh. Parent là cha hoặc mẹ. Chỉ một người cũng gọi là a parent; không phải lúc nào từ này cũng có nghĩa cả bố lẫn mẹ. Hôm nay mẹ đang ở nhà nên mẹ ký. Nếu bố ký thay, yêu cầu một phụ huynh vẫn được đáp ứng trong câu chuyện. Từ không quy định chỉ người cha mới ký được."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn đọc yêu cầu: \"A parent needs to sign.\" Một phụ huynh cần ký. Ở câu này, a parent chỉ một người. Tờ giấy trong câu chuyện không yêu cầu cả hai người cùng chen chữ ký vào một dòng. Hãy nhìn số người mình nhắc tới, không nhìn số chữ ký của cả gia đình. Một người cha vẫn là một parent, dù người ấy có nhiều người con."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn đọc yêu cầu: \"A parent needs to sign.\" Một phụ huynh cần ký. Ở câu này, a parent chỉ một người. Tờ giấy trong câu chuyện không yêu cầu cả hai người cùng chen chữ ký vào một dòng. Hãy nhìn số người mình nhắc tới, không nhìn số chữ ký của cả gia đình. Một người cha vẫn là một parent, dù người ấy có nhiều người con."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Khi nói về bố mẹ mình, bạn có thể nói: \"My parents help me.\" Bố mẹ giúp tôi. Parents có thêm s để nói nhiều người. Hình thức của từ đổi theo số người bạn muốn nhắc tới."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Chỉ một người cha đang ký giấy. Bạn chọn a parent hay parents để gọi người ấy? Nhớ chọn theo số người đang nói tới."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "A parent là đúng vì đang nói một người. Parent có thể là cha hoặc mẹ. Tờ giấy đã có chữ ký cần thiết, bạn cất vào cặp. Hôm nay chỉ một chữ s thôi cũng làm số người thay đổi."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13684",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

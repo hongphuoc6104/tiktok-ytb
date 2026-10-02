@@ -1,0 +1,45 @@
+{
+  "job": "vocab-walk-55s-001",
+  "content_revision": 1,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 60,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn tìm chìa khóa xe để ra cửa hàng, rồi nhớ quán ở ngay góc phố. Walk là đi bộ. Quãng đường này, hôm nay bạn muốn tự bước đi, tiện nhìn xem hàng cây vừa ra lá mới chưa.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of walk and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nói: \"I walk to the shop.\" Tôi đi bộ tới cửa hàng. To the shop cho biết nơi bạn đến. Còn walk nói cách bạn di chuyển: đi bằng những bước chân của mình.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of walk and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Mua xong vài món, bạn quay về. \"I walk home.\" Tôi đi bộ về nhà. Với home, câu này không cần to. Vẫn là hành động đi bộ ấy, nhưng lần này đích đến là nhà mình.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of walk and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Bạn đã mua đồ xong và đang đi bộ về nhà. Hãy nói câu \"I... home.\" Động từ nào cần điền? Nhìn đôi chân đang bước và thử nói cả câu của chuyến về nhé.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of walk and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"I walk home.\" Từ còn thiếu là walk. Đồ đã mua, bạn đã về, chiếc chìa khóa xe vẫn nằm yên trên kệ. Hôm nay nó được nghỉ, còn bạn dùng được một câu ngay trên đường đi.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of walk and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

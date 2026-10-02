@@ -1,0 +1,45 @@
+{
+  "job": "vocab-mother-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 60,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn vừa mở cuộc gọi thì nghe hỏi đã ăn chưa. Mother nghĩa là mẹ. Trong câu chuyện này, mẹ ở xa nên nhìn bữa ăn qua màn hình. Bạn phải nghiêng máy xuống cho mẹ thấy chiếc bát vẫn còn đây.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Có người bạn ngồi cạnh, bạn giới thiệu: \"This is my mother.\" Đây là mẹ tôi. Câu này cho biết quan hệ giữa bạn và người đang xuất hiện trên màn hình, không phải chỉ mô tả tuổi hay ngoại hình.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bạn nói thêm: \"I call my mother every Sunday.\" Tôi gọi cho mẹ mỗi Chủ nhật. Call my mother là gọi cho mẹ. Trong câu chuyện, cuộc gọi đều đặn giúp hai người kể nhau nghe những việc nhỏ trong tuần.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Người bạn chưa biết ai đang gọi video cho bạn. Hãy giới thiệu đây là mẹ tôi: \"This is my...\" Bạn nói tiếp thế nào?",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"This is my mother.\" Từ còn thiếu là mother. Mẹ thấy chiếc bát rồi, câu hỏi đã ăn chưa cũng có đáp án. Hai người tiếp tục nói chuyện, còn bạn nhớ một câu để giới thiệu người rất quen.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

@@ -1,0 +1,580 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "bd11de20a3dd90e0ffb3878831fbbcd228545660acbd43ca59686453badad774",
+  "topic": "Học từ vựng tiếng Anh baby — em bé qua câu chuyện “Đặt chìa khóa khẽ, em bé đang ngủ”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới baby; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “em bé” của baby; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng baby chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng baby, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Em bé",
+      "appearance": "Infant lying in a clear cot, simple flat illustration, small rounded body.",
+      "outfit": "Plain cream onesie."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chìa khóa bỗng thành quá ồn",
+      "purpose": "Make the sleeping baby's needs shape the scene.",
+      "action": "Mascot pauses at door holding keyring as a baby sleeps safely on back in clear cot.",
+      "setting": "Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn vừa về, chùm chìa khóa kêu một tiếng là cả phòng quay lại nhìn. Baby nghĩa là em bé. Hôm nay em vừa ngủ, nên những tiếng động vốn rất bình thường bỗng được mọi người nghe rõ hơn hẳn.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "baby",
+          "meaning": "em bé"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot pauses at door holding keyring as a baby sleeps safely on back in clear cot. Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot pauses at door holding keyring as a baby sleeps safely on back in clear cot.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "baby",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot pauses at door holding keyring as a baby sleeps safely on back in clear cot. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot pauses at door holding keyring as a baby sleeps safely on back in clear cot. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "baby",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn vừa về, chùm chìa khóa kêu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Hôm nay em vừa ngủ, nên những",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of baby and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nói lý do cần nhẹ tiếng",
+      "purpose": "Model a useful present-progressive sentence.",
+      "action": "Mascot points gently toward sleeping baby in cot, no finger on baby's face or mouth.",
+      "setting": "Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói nhỏ: \"The baby is sleeping.\" Em bé đang ngủ. Sleeping cho biết em đang ngủ lúc này. Câu này giúp người vừa bước vào hiểu tại sao mọi người nói nhỏ và đặt đồ xuống nhẹ nhàng.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "baby",
+          "meaning": "em bé"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points gently toward sleeping baby in cot, no finger on baby's face or mouth. Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points gently toward sleeping baby in cot, no finger on baby's face or mouth.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Mascot points gently toward sleeping baby in cot, no finger on baby's face or mouth. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC02_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot points gently toward sleeping baby in cot, no finger on baby's face or mouth. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "The baby is sleeping.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói nhỏ: \"The baby is sleeping.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The baby is sleeping.\" Em bé đang",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of baby and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một câu kể khác về em",
+      "purpose": "Use a second model when the baby wakes naturally.",
+      "action": "Baby awake in cot looks toward a simple hanging toy, mascot smiles from outside cot.",
+      "setting": "Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Một lúc sau em thức dậy. \"The baby is smiling.\" Em bé đang cười. Vẫn là baby ấy, chỉ có trạng thái thay đổi. Bạn có thể nhìn việc đang diễn ra để chọn phần còn lại của câu.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "baby",
+          "meaning": "em bé"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Baby awake in cot looks toward a simple hanging toy, mascot smiles from outside cot. Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Baby awake in cot looks toward a simple hanging toy, mascot smiles from outside cot.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Baby awake in cot looks toward a simple hanging toy, mascot smiles from outside cot. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Baby awake in cot looks toward a simple hanging toy, mascot smiles from outside cot. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "The baby is smiling.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Một lúc sau em thức dậy. \"The",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The baby is smiling.\" Em bé đang",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of baby and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nhắc người vừa vào",
+      "purpose": "Retrieve the noun in the sleep sentence.",
+      "action": "Mascot holds keyring still beside doorway; separate sleeping-baby practice image, no competing action.",
+      "setting": "Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn muốn nhắc người mới vào rằng em bé đang ngủ. Hãy nói \"The... is sleeping.\" và thêm từ còn thiếu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "baby",
+          "meaning": "em bé"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot holds keyring still beside doorway; separate sleeping-baby practice image, no competing action. Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds keyring still beside doorway; separate sleeping-baby practice image, no competing action.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot holds keyring still beside doorway; separate sleeping-baby practice image, no competing action. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot holds keyring still beside doorway; separate sleeping-baby practice image, no competing action. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "The... is sleeping.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nhắc người mới vào rằng",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The... is sleeping.\" và thêm từ còn",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of baby and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chìa khóa được cất yên",
+      "purpose": "Confirm and resolve the noisy keyring opening.",
+      "action": "Mascot puts keyring into a shallow tray away from cot while baby rests calmly.",
+      "setting": "Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"The baby is sleeping.\" Từ còn thiếu là baby. Chùm chìa khóa được cất xuống khay, căn phòng lại yên. Bạn đã có câu giải thích ngắn gọn, khỏi phải vừa ra hiệu vừa chỉ quanh phòng để người mới đến đoán.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "baby",
+          "meaning": "em bé"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot puts keyring into a shallow tray away from cot while baby rests calmly. Living room with a safe cot, sleeping baby and mascot holding a noisy-looking keyring away from cot. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot puts keyring into a shallow tray away from cot while baby rests calmly.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The baby is sleeping.\" Từ còn thiếu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of baby and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the sleeping baby's needs shape the scene.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model a useful present-progressive sentence."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a useful present-progressive sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Use a second model when the baby wakes naturally."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a second model when the baby wakes naturally.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Retrieve the noun in the sleep sentence."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Retrieve the noun in the sleep sentence.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and resolve the noisy keyring opening."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the noisy keyring opening.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn vừa về, chùm chìa khóa kêu một tiếng là cả phòng quay lại nhìn. Baby nghĩa là em bé. Hôm nay em vừa ngủ, nên những tiếng động vốn rất bình thường bỗng được mọi người nghe rõ hơn hẳn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn vừa về, chùm chìa khóa kêu một tiếng là cả phòng quay lại nhìn. Baby nghĩa là em bé. Hôm nay em vừa ngủ, nên những tiếng động vốn rất bình thường bỗng được mọi người nghe rõ hơn hẳn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói nhỏ: \"The baby is sleeping.\" Em bé đang ngủ. Sleeping cho biết em đang ngủ lúc này. Câu này giúp người vừa bước vào hiểu tại sao mọi người nói nhỏ và đặt đồ xuống nhẹ nhàng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói nhỏ: \"The baby is sleeping.\" Em bé đang ngủ. Sleeping cho biết em đang ngủ lúc này. Câu này giúp người vừa bước vào hiểu tại sao mọi người nói nhỏ và đặt đồ xuống nhẹ nhàng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Một lúc sau em thức dậy. \"The baby is smiling.\" Em bé đang cười. Vẫn là baby ấy, chỉ có trạng thái thay đổi. Bạn có thể nhìn việc đang diễn ra để chọn phần còn lại của câu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn nhắc người mới vào rằng em bé đang ngủ. Hãy nói \"The... is sleeping.\" và thêm từ còn thiếu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The baby is sleeping.\" Từ còn thiếu là baby. Chùm chìa khóa được cất xuống khay, căn phòng lại yên. Bạn đã có câu giải thích ngắn gọn, khỏi phải vừa ra hiệu vừa chỉ quanh phòng để người mới đến đoán."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

@@ -1,0 +1,183 @@
+You are a vocabulary episode writing assistant. Return ONLY JSON episodes; do not call any tools, edit files, approve anything or generate media. No paid services, no account/model/provider change. Data below defines exact JOB, selected bank sense/POS, required points, existing scene count and sibling senses to AVOID. Original narration is evidence of intended sense only; replace the lecture with an original micro-drama.
+Write polished natural VIETNAMESE spoken personal stories like a small ordinary want, resistance, action, consequence. Vary relationships, settings, openings and emotion across episodes. No dictionary lecture, stock motivational endings, CTA, greetings, ornate AI prose, repeated mother-departure/tea plot or forced tragedy. First sentence <=9 whitespace units, concrete action/contradiction/inner thought; no title. First usable simple English model in scene1 or early2. Exactly required number of English example models (usually2), plus repeat the retrieval answer later. Keep one sense ONLY and correctly support each model in Vietnamese, with accurate tense/referent. NEVER use noun login for verb: use log in.
+Each episode: job,title,plot_vi,opening_function_vi,learner_outcome_vi,characters[{id,name_vi,appearance_en,outfit_en}], scenes[{scene_id,title_vi,narration,purpose_en,visual_en,character_ids,practice_pause_seconds}]. One learner scene must have stem with ___ replacing the TARGET keyword, not a different noun; invite full-sentence retrieval tied to same plot, 4 seconds quiet hold at the END, immediately NEXT scene gives full correct answer then payoff. Do not read incomplete stems/ellipses in narration. Keep exactly original scene_count (5/6/7); no anchors/coverage. Aim about130–170 Vietnamese whitespace units total for5 scenes, longer if needed for6/7. Build natural direct dialogue and earned small ending, no stock 'Đến lượt bạn thực hành', 'Đúng rồi', 'Tuyệt vời', 'bạn đã...' praise. Do not pad.
+English instructions ONLY for purpose_en, visual_en, appearance_en,outfit_en. Vietnamese titles/plot/outcome/narration retain English models. CH01 always main canonical mascot: round white head/dark navy outline, two solid black oval eyes, exactly ONE single pale-blue #8CCFE8 short-sleeve torso, minimal stick limbs. Cast at most one essential secondary person (also minimal ink white head with solid oval eyes, one different plain top). Mascot can be older by a small hair cue, without losing canonical core. Every frame must show target meaning/action/relation, props/state/position continuous, concrete camera framing, not theme only, no internal IDs in visual prose. No realistic people/muscles, no doubling torso.
+For essential state changes use scene.extra_visual_states:[{quote:literal fragment of narration,visual_en: same-camera before/after description,purpose_en:what relation to notice}]. Preserve exact quote. For any numerical values/names/screen/button text essential to meaning, use scene.custom_visible_text:[{text:exact permitted string,placement:English placement,object:English object}] then visual_en refer to exact permitted text only. No incidental readable text. Avoid unverifiable medicine/electricity/security/finance rules or universal claims. Grammar/meaning should be simple and accurate. Adjectives teach selected descriptive usage; verbs show actions; time/count/measurement nouns distinguish units with controlled marks when needed.
+Do not mark editorial review or visual_review_ready: human-authorized agent will read and repair actual JSON before freezing.
+INPUT DATA:
+[{"job": "vocab-surprised-script-483", "entry_id": "surprised.adj", "word": "surprised", "pos": "adj", "gloss_vi": "ngạc nhiên", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ SURPRISED"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"ngạc nhiên\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng SURPRISED, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại SURPRISED, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt"], "original_narration": ["Quà tới cửa, người mang mới bất ngờ! Surprised nghĩa là ngạc nhiên. \"I did not expect this.\" Bạn mở cửa nhận quà trong câu chuyện, phát hiện người bạn ở xa đã tự mang tới.", "Bạn nói: \"I'm surprised!\" Tôi ngạc nhiên quá! \"You are here in person.\" Người bạn đặt hộp vào tay bạn, còn bạn kéo ghế để cả hai có chỗ ngồi nói chuyện.", "Người ấy hỏi: \"Are you surprised?\" Bạn ngạc nhiên à? \"Was this a surprise for you?\" Bạn kể mình chỉ nghĩ sẽ nhận quà gửi tới, rồi mời người bạn ngồi xuống.", "Bạn đang tập nói ngạc nhiên theo vai trong bài. \"Say what changed.\" Nói như lúc gặp người không ngờ sẽ tới: \"I'm surprised!\"", "\"I'm surprised!\" Tôi ngạc nhiên quá! \"The visit is the real surprise.\" Hộp quà vẫn trên bàn, nhưng hai người đã có thêm một buổi gặp ngoài kế hoạch."]}, {"job": "vocab-bored-script-484", "entry_id": "bored.adj", "word": "bored", "pos": "adj", "gloss_vi": "chán", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ BORED"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"chán\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng BORED, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại BORED, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt"], "original_narration": ["Lại trò này nữa, đổi được không? Bored nghĩa là cảm thấy chán. \"This again?\" Bạn đã chơi cùng một trò nhiều lượt trong câu chuyện; người bạn chưa biết bạn muốn đổi hoạt động.", "Bạn nói: \"I'm bored with this game.\" Tôi thấy chán trò này. \"I want to try something else.\" Người bạn dừng sắp thẻ, nghe bạn nói trước khi bắt đầu thêm một lượt giống cũ.", "Người ấy hỏi: \"Are you bored?\" Bạn thấy chán à? \"Shall we change the activity?\" Bạn gật đầu rồi cùng chọn một việc khác mà cả hai đều muốn thử.", "Bạn muốn nói mình thấy chán trò đang chơi theo vai. \"Explain how you feel.\" Đọc như trong cuộc trò chuyện: \"I'm bored with this game.\"", "\"I'm bored with this game.\" Tôi thấy chán trò này. \"Now we have a new choice.\" Hai người cất thẻ, lấy đồ thủ công ra để bắt đầu một việc khác cùng nhau."]}, {"job": "vocab-interested-script-485", "entry_id": "interested.adj", "word": "interested", "pos": "adj", "gloss_vi": "thấy hứng thú", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ INTERESTED"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"thấy hứng thú\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng INTERESTED, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại INTERESTED, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt"], "original_narration": ["Đi qua rồi, vẫn quay lại nhìn! Interested nghĩa là thấy hứng thú. \"I want to know more.\" Bạn nhìn lớp vẽ được giới thiệu trong câu chuyện, muốn tìm hiểu trước khi chọn tham gia.", "Bạn nói: \"I'm interested in this class.\" Tôi thấy hứng thú với lớp này. \"This is the class I want to see.\" Người bạn lấy tờ giới thiệu để hai người đọc hoạt động và thời gian của lớp.", "Người ấy hỏi: \"Are you interested in drawing?\" Bạn có hứng thú với việc vẽ không? \"Do you want to try it?\" Bạn nói điều mình muốn thử, rồi giữ lịch để xem có thể sắp xếp tới lớp không.", "Bạn muốn nói mình hứng thú với lớp đang giới thiệu. \"Name your interest.\" Nói như khi đang chọn một hoạt động: \"I'm interested in this class.\"", "\"I'm interested in this class.\" Tôi thấy hứng thú với lớp này. \"The leaflet can come with us.\" Bạn giữ tờ giới thiệu, còn việc tham gia sẽ được chọn sau khi kiểm tra lịch."]}, {"job": "vocab-smile-script-486", "entry_id": "smile.v", "word": "smile", "pos": "v", "gloss_vi": "mỉm cười", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ SMILE"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"mỉm cười\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng SMILE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại SMILE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt"], "original_narration": ["Chụp kỷ niệm mà mặt nghiêm quá vậy? Smile là mỉm cười. \"A small happy look.\" Trong câu chuyện, người bạn muốn chụp một tấm ảnh kỷ niệm, nên nhắc bạn trước lúc bấm.", "Người ấy nói: \"Please smile.\" Hãy mỉm cười nhé. \"Ready for the picture?\" Bạn thả lỏng nét mặt và nhìn về máy, chiếc áo xanh vẫn là dấu hiệu quen trong khung hình.", "Xem ảnh, người bạn nói: \"You're smiling in this photo.\" Bạn đang mỉm cười trong ảnh này. \"Look at your face here.\" Bạn nhìn lại tấm hình để thấy lời nhờ lúc nãy đã đi vào khoảnh khắc được chụp.", "Bạn muốn nhờ người được chụp mỉm cười. \"Give a short request.\" Nói lại như lúc đứng sau máy ảnh: \"Please smile.\"", "\"Please smile.\" Hãy mỉm cười nhé. \"The photo is ready.\" Hai người đã có tấm ảnh muốn giữ, rồi cất máy để tiếp tục buổi gặp."]}, {"job": "vocab-laugh-script-487", "entry_id": "laugh.v", "word": "laugh", "pos": "v", "gloss_vi": "cười", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ LAUGH"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"cười\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng LAUGH, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại LAUGH, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt"], "original_narration": ["Đội ngược mũ mà vẫn chụp rất nghiêm! Laugh là cười. \"That picture is funny to us.\" Bạn và người bạn xem ảnh trò hóa trang của chính mình, thấy một chi tiết khiến cả hai bật cười.", "Bạn hỏi: \"Why are you laughing?\" Vì sao bạn đang cười? \"Show me the funny part.\" Người bạn chỉ chiếc mũ trên ảnh, để bạn nhìn đúng chi tiết mình vừa bỏ qua.", "Bạn kể: \"We laugh at this photo.\" Chúng tôi cười khi xem tấm ảnh này. \"It is our own silly moment.\" Hai người nhớ lúc tự hóa trang, rồi cất tấm ảnh vào phần kỷ niệm chung.", "Bạn muốn hỏi người bạn đang cười vì điều gì. \"Ask about the moment.\" Nói như lúc chưa nhìn thấy chi tiết trong ảnh: \"Why are you laughing?\"", "\"Why are you laughing?\" Vì sao bạn đang cười? \"Now I see it too.\" Bạn đã nhìn ra chiếc mũ giấy, cùng người bạn giữ một kỷ niệm vui do cả hai tự tạo."]}, {"job": "vocab-kind-script-488", "entry_id": "kind.adj", "word": "kind", "pos": "adj", "gloss_vi": "tốt bụng", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ KIND"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"tốt bụng\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng KIND, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại KIND, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt", "Từ \"kind\" còn nghĩa khác: loại, chủng loại [n, kind.n.type]. Video này KHÔNG dạy nghĩa đó.", "Từ \"kind\" còn nghĩa khác: một dạng nào đó (a kind of) [n, kind.n.category]. Video này KHÔNG dạy nghĩa đó."], "original_narration": ["Chưa kịp nhờ, bạn đã mang ghế tới. Kind nghĩa là tốt bụng. \"A helpful thing to do.\" Bạn vừa tới phòng sinh hoạt, chưa kịp đặt đồ thì người bạn chuẩn bị chỗ cho bạn ngồi.", "Bạn nói: \"That's kind of you.\" Bạn tốt bụng quá. \"Thank you for doing that.\" Lời nhận xét gắn với việc người bạn vừa giúp, chứ không chỉ với cách người ấy trông trong ảnh.", "Bạn nói thêm: \"You're very kind.\" Bạn rất tốt bụng. \"You made this easier for me.\" Người bạn giúp đặt một túi lên bàn, để bạn rảnh tay sắp xếp phần còn lại.", "Bạn muốn nhận xét việc người bạn vừa giúp mình. \"Respond to their help.\" Nói như lúc chiếc ghế được đưa tới: \"That's kind of you.\"", "\"That's kind of you.\" Bạn tốt bụng quá. \"Now I can put things down.\" Túi đã có chỗ, bạn ngồi được vào ghế; lời nói đã ghi nhận đúng việc giúp vừa xảy ra."]}, {"job": "vocab-nice-script-489", "entry_id": "nice.adj", "word": "nice", "pos": "adj", "gloss_vi": "dễ mến, tốt bụng", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ NICE"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"dễ mến, tốt bụng\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng NICE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại NICE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt"], "original_narration": ["Mới tới mà đã được nhớ chỗ ngồi! Nice trong bài này là dễ mến. \"Someone pleasant to meet.\" Bạn lần đầu ghé buổi sinh hoạt, được người chủ chào và chỉ chỗ đặt túi.", "Bạn nói: \"You're very nice.\" Bạn rất dễ mến. \"I feel welcome here.\" Người chủ đưa tờ giới thiệu của buổi gặp, giúp bạn biết mình có thể bắt đầu từ hoạt động nào.", "Kể với người bạn, bạn nói: \"The host is nice.\" Người chủ rất dễ mến. \"The welcome was warm.\" Bạn nhắc lại việc được đón và hướng dẫn, để người nghe hiểu lời nhận xét gắn với cuộc gặp nào.", "Bạn muốn kể người chủ buổi gặp dễ mến. \"Describe that person.\" Nói theo đúng người được nhắc trong câu chuyện: \"The host is nice.\"", "\"The host is nice.\" Người chủ dễ mến. \"Now we know where to start.\" Bạn và người bạn đã có chỗ ngồi và thông tin hoạt động, sẵn sàng tham gia buổi gặp."]}, {"job": "vocab-friendly-script-490", "entry_id": "friendly.adj", "word": "friendly", "pos": "adj", "gloss_vi": "thân thiện", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ FRIENDLY"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"thân thiện\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng FRIENDLY, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại FRIENDLY, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt"], "original_narration": ["Ngồi đây nhé, mình chưa biết tên bạn! Friendly nghĩa là thân thiện. \"Easy to talk to here.\" Bạn lần đầu tới câu lạc bộ, người ngồi bên cạnh chủ động chào và kéo ghế mời bạn.", "Bạn kể: \"Everyone is friendly here.\" Mọi người ở đây thân thiện. \"They say hello and help me join.\" Trong nhóm nhỏ của câu chuyện, bạn được giới thiệu tên và hoạt động để không phải ngồi đoán.", "Bạn nói với người đã chào mình: \"You're very friendly.\" Bạn rất thân thiện. \"It was easy to start a talk.\" Hai người trao đổi về hoạt động trên bàn, rồi cùng tham gia phần tiếp theo.", "Bạn muốn nhận xét người vừa chủ động chào và trò chuyện. \"Say it to them.\" Nói như lời trong buổi gặp: \"You're very friendly.\"", "\"You're very friendly.\" Bạn rất thân thiện. \"The empty chair is no longer empty.\" Bạn đã ngồi vào bàn, có người để nói chuyện và một hoạt động để cùng làm."]}, {"job": "vocab-lazy-script-491", "entry_id": "lazy.adj", "word": "lazy", "pos": "adj", "gloss_vi": "lười biếng", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ LAZY"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"lười biếng\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng LAZY, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại LAZY, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt"], "original_narration": ["Giấy bút đủ rồi, mình vẫn chưa muốn làm. Lazy nghĩa là lười trong lời tự kể của nhân vật. \"I do not feel like working now.\" Bạn đã hẹn làm đồ thủ công, nhưng hôm nay chưa muốn bắt đầu.", "Bạn nói: \"I'm feeling lazy today.\" Hôm nay tôi thấy lười. \"That is my mood today.\" Người bạn nghe rồi hỏi bạn muốn cùng làm một phần nhỏ trước hay để lại buổi khác.", "Người ấy hỏi: \"Are you feeling lazy?\" Bạn đang thấy lười à? \"Tell me, then we can choose.\" Bạn xác nhận và chọn gấp tờ đầu tiên cùng người bạn, thay vì nhận hết phần việc lúc chưa muốn làm.", "Bạn đang tập nói trạng thái của nhân vật. \"Speak for yourself in this role.\" Không dùng câu này để đoán người khác chỉ từ tư thế ngồi. Nói: \"I'm feeling lazy today.\"", "\"I'm feeling lazy today.\" Hôm nay tôi thấy lười. \"One small step is our choice.\" Hai người đã hiểu lời tự kể và thống nhất phần sẽ làm, rồi bắt đầu tờ giấy đầu tiên."]}, {"job": "vocab-ask-script-492", "entry_id": "ask.v", "word": "ask", "pos": "v", "gloss_vi": "hỏi", "scene_count": 5, "required_points": [{"id": "R1", "text": "Mở bằng một tình huống đời thường dẫn thẳng tới từ ASK"}, {"id": "R2", "text": "Làm rõ nghĩa lõi \"hỏi\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần"}, {"id": "R3", "text": "2 câu ví dụ dùng ASK, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa"}, {"id": "R4", "text": "Một lượt người xem dùng hoặc nhớ lại ASK, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"}], "avoid": ["Dịch nghĩa sáo rỗng kiểu từ điển", "Nhồi quá nhiều từ mới ngoài từ khoá chính", "Nhân vật quá phức tạp gây rối mắt", "Từ \"ask\" còn nghĩa khác: yêu cầu, nhờ [v, ask.v.request]. Video này KHÔNG dạy nghĩa đó."], "original_narration": ["Người ở quầy đây, sao mình cứ đoán? Ask ở đây là hỏi. \"Get information from someone.\" Bạn cần tìm phòng sinh hoạt, người hướng dẫn đang sẵn sàng trả lời một câu ngắn.", "Bạn mở lời: \"Can I ask you a question?\" Tôi hỏi bạn một câu được không? \"A question about this place.\" Người hướng dẫn quay lại nghe, để bạn hỏi phòng mình cần tới.", "Người bạn nhắc: \"You can ask the guide.\" Bạn có thể hỏi người hướng dẫn. \"The guide can help us here.\" Bạn không còn tự đoán lối đi, đem sơ đồ tới hỏi đúng người.", "Bạn muốn mở lời hỏi một câu. \"Start the question politely.\" Nói như lúc đứng trước quầy thông tin: \"Can I ask you a question?\"", "\"Can I ask you a question?\" Tôi hỏi một câu nhé? \"Now the route can be explained.\" Người hướng dẫn đã nghe điều bạn cần biết; bạn nhìn sơ đồ theo lời chỉ trước khi đi."]}]
+Use the following finished episode as a QUALITY REFERENCE: first-person natural modest drama, exact direct retrieval instruction, NO decorative adjectives/adverbs or description of how clearly the narrator speaks. Do not copy plot/lines, only the standard.
+{
+  "characters": [
+    {
+      "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, solid black oval eyes, minimal stick limbs.",
+      "id": "CH01",
+      "name_vi": "Nhân viên ga tàu",
+      "outfit_en": "Pale-blue short-sleeve shirt (#8CCFE8)."
+    },
+    {
+      "id": "CH02",
+      "name_vi": "Bà cụ",
+      "appearance_en": "An elderly minimal ink stick figure with a small silver hair bun, round white face and solid dark oval eyes, ordinary simple proportions.",
+      "outfit_en": "Exactly one plain brown short-sleeve top and minimal stick limbs; no layered costume or realistic fingers."
+    }
+  ],
+  "job": "vocab-pen-script-242",
+  "learner_outcome_vi": "Nhận ra đúng nghĩa và nói được câu mẫu cần cho tình huống.",
+  "opening_function_vi": "Mở đầu bằng sự gấp gáp trước giờ tàu chạy, lập tức tạo ra nhu cầu cấp thiết cần một chiếc bút mực để viết địa chỉ lên giấy trơn.",
+  "plot_vi": "Thiếu đồ viết địa chỉ trong một lần gửi quà; nhân vật giúp bà viết, chấp nhận tặng cây bút còn cần dùng cho cháu bà.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Quà đã gói xong, địa chỉ còn trống. \"I have a pen.\" Tôi đưa cây bút mực cho bà cụ đang lục túi.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Open with a concrete situation and an early usable English line.",
+      "scene_id": "SC01",
+      "title_vi": "Chi tiết đầu chuyện",
+      "visual_en": "At a quiet postal counter, the elderly woman holds a plain wrapped parcel with a blank address label and searches her bag. The pale-blue mascot offers one navy ink pen. No crowd, no printed addresses or incidental text."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bà bảo món quà gửi cho đứa cháu sắp nhập học. Tay bà run, tôi giữ tờ giấy cho bà viết. Tên cháu viết xong rồi, bà vẫn nhìn cây bút rất lâu.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Establish why this small action matters to these people and support the selected meaning.",
+      "scene_id": "SC02",
+      "title_vi": "Điều cần hiểu",
+      "visual_en": "The mascot steadies the blank card on the counter while the elderly woman writes a few non-letter ink strokes with the pen. Her parcel stays beside her, with no readable address. They focus on the same small task."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bà xin giữ cây bút để cháu dùng vào buổi học đầu. Tôi vừa mua nó sáng nay. Nghĩ một lúc, tôi nói: \"Please take this pen.\" Bà cứ cầm cây bút này nhé.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Use the second English model as a decision or action with a consequence.",
+      "scene_id": "SC03",
+      "title_vi": "Hành động làm đổi chuyện",
+      "visual_en": "The elderly woman starts returning the pen; the mascot gently gestures that she can keep it. Parcel remains at the same counter, exactly one pen. Show the decision to give away his own useful object."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bà tưởng tôi chỉ cho mượn. Bạn nói giúp tôi câu bà cứ cầm cây bút này bằng tiếng Anh nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Invite one manageable full-sentence retrieval tied to the same need; hold before the answer.",
+      "scene_id": "SC04",
+      "title_vi": "Lời người xem giúp nói",
+      "visual_en": "Hold the same two people at the counter, woman holding the pen uncertainly and mascot inviting her to keep it. Preserve the parcel and single pen, leave the upper safe region available for the sentence stem.",
+      "stem": "Please take this ___."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"Please take this pen.\" Đúng rồi. Bà đặt bút vào hộp quà, gói lại thật chậm. Tôi bước ra cửa bưu điện, mới nhớ mình cũng chưa viết xong tấm thiệp cho mẹ.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Give the correct response and close the local story with a visible relationship or consequence.",
+      "scene_id": "SC05",
+      "title_vi": "Kết quả",
+      "visual_en": "The elderly woman places the navy pen inside the plain gift parcel while mascot looks at his own still-unwritten plain card. Show the two purposes clearly with no extra stationery or readable postal writing."
+    }
+  ],
+  "title": "Cây bút trong hộp quà",
+  "editorial_review": "Reviewed and rewritten by primary agent; narration frozen before anchors."
+}
+
+Additional reference of restrained personal narration and state planning:
+{
+  "characters": [
+    {
+      "appearance_en": "Stick figure with a round white head, dark-navy outline, two solid black oval eyes, and minimal stick limbs.",
+      "id": "CH01",
+      "name_vi": "Lâm",
+      "outfit_en": "Single pale-blue #8CCFE8 short-sleeve torso."
+    },
+    {
+      "appearance_en": "Stick figure with a round white head, dark-navy outline, two solid black oval eyes, and minimal stick limbs.",
+      "id": "CH02",
+      "name_vi": "Trâm",
+      "outfit_en": "Single pale-purple short-sleeve torso."
+    }
+  ],
+  "job": "vocab-week-script-456",
+  "learner_outcome_vi": "Nhận ra nghĩa đã chọn trong tình huống và nói được câu tiếng Anh ngắn với từ này.",
+  "opening_function_vi": "Trâm chồng sách lên cuốn sổ hẹn.",
+  "plot_vi": "Trâm chồng sách lên cuốn sổ hẹn. Tôi muốn hai đứa làm bài cùng nhau. Tôi lật sang hàng bảy ngày kế tiếp, chọn cùng bạn một buổi còn trống. Phần tôi làm trước được, tôi nhận về. Trâm ghi chỗ hẹn rồi đóng sổ, không còn nhìn mãi chồng sách. Trâm lắc đầu rồi chỉ ô hẹn tuần sau. Tôi chụp lại lịch, mang sách về. Lần này, hai đứa có một ngày gặp thật, thay vì cứ bảo lúc nào rảnh.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Trâm chồng sách lên cuốn sổ hẹn. Tôi muốn hai đứa làm bài cùng nhau. \"Are you free this week?\" Tuần này bạn có rảnh không? Trâm mở lịch, bảy ô đều đã có việc.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Introduce week in the context of checking availability across seven days.",
+      "scene_id": "SC01",
+      "title_vi": "Trang sổ dày cộp",
+      "visual_en": "Library desk: Trâm has a seven-cell current-week planner filled with plain small marks. Mascot points to it while offering to work together. Stack of papers remains on table."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi kéo ghế lại, định xin một buổi tối. Trâm chỉ phần bài chưa làm của riêng bạn. Tôi cất laptop: \"Let's meet next week.\" Chúng mình gặp vào tuần sau nhé. Bạn thở ra, gật đầu.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Introduce the second model sentence showing the progression to next week.",
+      "scene_id": "SC02",
+      "title_vi": "Dời sang tuần tới",
+      "visual_en": "Same desk angle: Trâm points to her separate unfinished notebook; mascot closes laptop and turns to the next seven-cell row of the planner."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi lật sang hàng bảy ngày kế tiếp, chọn cùng bạn một buổi còn trống. Phần tôi làm trước được, tôi nhận về. Trâm ghi chỗ hẹn rồi đóng sổ, không còn nhìn mãi chồng sách.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Illustrate balanced pacing and relief across a fresh weekly plan.",
+      "scene_id": "SC03",
+      "title_vi": "Phân chia hợp lý",
+      "visual_en": "Same angle: they select one empty cell in next-week row. Mascot gathers his own work, Trâm writes a non-letter mark in the chosen cell."
+    },
+    {
+      "character_ids": [
+        "CH01"
+      ],
+      "narration": "Nếu muốn hỏi bạn có rảnh tuần này không, bạn nói cả câu bằng tiếng Anh giúp tôi nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Prompt the learner to recall the first model question with week.",
+      "scene_id": "SC04",
+      "title_vi": "Hỏi lại thời gian rảnh",
+      "visual_en": "Hold the same setting, camera and props from the previous shot. Mascot asks the viewer for the full English sentence. Show only the supplied sentence stem in the upper safe region; keep the answer hidden and leave caption space below.",
+      "stem": "Are you free this ___?"
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"Are you free this week?\" Trâm lắc đầu rồi chỉ ô hẹn tuần sau. Tôi chụp lại lịch, mang sách về. Lần này, hai đứa có một ngày gặp thật, thay vì cứ bảo lúc nào rảnh.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Give the complete retrieval answer and show the small, earned consequence in this same story.",
+      "scene_id": "SC05",
+      "title_vi": "Nhẹ nhõm cất sách",
+      "visual_en": "Library desk: Trâm points to the marked appointment cell next week, mascot photographs the planner then takes his share of books home. No extra tea setting."
+    }
+  ],
+  "title": "Lịch học bảy ngày",
+  "editorial_review": "Reviewed and rewritten by an authorized writing agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}
+
+Before returning read and repair ALL your episodes: every practice narration must explicitly ask the VIEWER to say the full English sentence with Vietnamese meaning; every practice scene MUST have stem property, target keyword gap. Final narration starts with quoted full answer followed by small consequence; not saying I repeat clearly. Second model must be a useful action inside same evolving story, not unrelated fact. Give all requested jobs.

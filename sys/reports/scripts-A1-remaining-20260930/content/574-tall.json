@@ -1,0 +1,462 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "b2c284e299a7d602bad140dfafbca6eb20bb3f2dba03e589df7e1e95ca622009",
+  "topic": "Học từ vựng tiếng Anh TALL (tính từ: cao (người, vật cao)) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TALL",
+    "Làm rõ nghĩa lõi \"cao (người, vật cao)\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TALL, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TALL, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cây cao làm bạn mất cả ngọn trong ảnh — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot with camera notices top of tall fictional tree cropped in view, friend by trunk.",
+      "setting": "Công viên hư cấu, cây và máy ảnh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Ảnh có thân cây rồi, ngọn vẫn nằm ngoài khung! Tall nghĩa là cao về chiều cao của người hoặc vật. \"From the ground up to the top.\" Bạn muốn giữ một ảnh của cây trong công viên hư cấu.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tall",
+          "meaning": "cao (người, vật cao)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot with camera notices top of tall fictional tree cropped in view, friend by trunk. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot with camera notices top of tall fictional tree cropped in view, friend by trunk.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "tall",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Ảnh có thân cây rồi, ngọn vẫn nằm ngoài khung! Tall nghĩa là cao về chiều cao của người hoặc vật. \"From the ground up to the top.\" Bạn muốn giữ một ảnh của cây trong công viên hư cấu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Cây cao làm bạn mất cả ngọn trong ảnh — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Friend moves slightly back while mascot adjusts fictional framing to include full tree.",
+      "setting": "Công viên hư cấu, cây và máy ảnh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"The tree is tall.\" Cây này cao. \"The whole tree needs more space in the picture.\" Người bạn lùi chỗ đứng trong câu chuyện để bạn thử một khung nhìn khác.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tall",
+          "meaning": "cao (người, vật cao)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend moves slightly back while mascot adjusts fictional framing to include full tree. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend moves slightly back while mascot adjusts fictional framing to include full tree.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "The tree is tall.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"The tree is tall.\" Cây này cao. \"The whole tree needs more space in the picture.\" Người bạn lùi chỗ đứng trong câu chuyện để bạn thử một khung nhìn khác.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Cây cao làm bạn mất cả ngọn trong ảnh — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Mascot indicates same distinctive tall tree on fictional park plan as meeting marker.",
+      "setting": "Công viên hư cấu, cây và máy ảnh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hẹn: \"Meet me by the tall tree.\" Gặp tôi bên cây cao nhé. \"That tree is our place to meet.\" Hai người giữ cây làm mốc khi tách ra xem các góc của công viên.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tall",
+          "meaning": "cao (người, vật cao)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot indicates same distinctive tall tree on fictional park plan as meeting marker. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot indicates same distinctive tall tree on fictional park plan as meeting marker.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "Meet me by the tall tree.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hẹn: \"Meet me by the tall tree.\" Gặp tôi bên cây cao nhé. \"That tree is our place to meet.\" Hai người giữ cây làm mốc khi tách ra xem các góc của công viên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Cây cao làm bạn mất cả ngọn trong ảnh — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold tall tree fully visible and model sentence.",
+      "setting": "Công viên hư cấu, cây và máy ảnh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn mô tả chiều cao cây theo cảnh. \"Describe the landmark.\" Nói như lúc nhận ra vì sao ngọn bị cắt khỏi khung: \"The tree is tall.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tall",
+          "meaning": "cao (người, vật cao)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold tall tree fully visible and model sentence. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold tall tree fully visible and model sentence.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "The tree is tall.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn mô tả chiều cao cây theo cảnh. \"Describe the landmark.\" Nói như lúc nhận ra vì sao ngọn bị cắt khỏi khung: \"The tree is tall.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Cây cao làm bạn mất cả ngọn trong ảnh — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Mascot and companion meet by same tall fictional tree after viewing park.",
+      "setting": "Công viên hư cấu, cây và máy ảnh.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"The tree is tall.\" Cây này cao. \"The picture and the meeting have their place.\" Bạn đã chọn được khung nhìn trong câu chuyện và giữ đúng cây để hai người gặp lại.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "tall",
+          "meaning": "cao (người, vật cao)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and companion meet by same tall fictional tree after viewing park. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion meet by same tall fictional tree after viewing park.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "The tree is tall.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The tree is tall.\" Cây này cao. \"The picture and the meeting have their place.\" Bạn đã chọn được khung nhìn trong câu chuyện và giữ đúng cây để hai người gặp lại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Ảnh có thân cây rồi, ngọn vẫn nằm ngoài khung! Tall nghĩa là cao về chiều cao của người hoặc vật. \"From the ground up to the top.\" Bạn muốn giữ một ảnh của cây trong công viên hư cấu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Ảnh có thân cây rồi, ngọn vẫn nằm ngoài khung! Tall nghĩa là cao về chiều cao của người hoặc vật. \"From the ground up to the top.\" Bạn muốn giữ một ảnh của cây trong công viên hư cấu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"The tree is tall.\" Cây này cao. \"The whole tree needs more space in the picture.\" Người bạn lùi chỗ đứng trong câu chuyện để bạn thử một khung nhìn khác."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"The tree is tall.\" Cây này cao. \"The whole tree needs more space in the picture.\" Người bạn lùi chỗ đứng trong câu chuyện để bạn thử một khung nhìn khác."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn hẹn: \"Meet me by the tall tree.\" Gặp tôi bên cây cao nhé. \"That tree is our place to meet.\" Hai người giữ cây làm mốc khi tách ra xem các góc của công viên."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn mô tả chiều cao cây theo cảnh. \"Describe the landmark.\" Nói như lúc nhận ra vì sao ngọn bị cắt khỏi khung: \"The tree is tall.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The tree is tall.\" Cây này cao. \"The picture and the meeting have their place.\" Bạn đã chọn được khung nhìn trong câu chuyện và giữ đúng cây để hai người gặp lại."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Muốn chụp cây → thấy cao → hẹn bên cây → đổi khung.. Next event: Friend moves slightly back while mascot adjusts fictional framing to include full tree."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn chụp cây → thấy cao → hẹn bên cây → đổi khung.. Next event: Mascot indicates same distinctive tall tree on fictional park plan as meeting marker."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Muốn chụp cây → thấy cao → hẹn bên cây → đổi khung.. Next event: Hold tall tree fully visible and model sentence."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn chụp cây → thấy cao → hẹn bên cây → đổi khung.. Next event: Mascot and companion meet by same tall fictional tree after viewing park."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Muốn chụp cây → thấy cao → hẹn bên cây → đổi khung.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

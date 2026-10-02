@@ -1,0 +1,460 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "b6f9f39218a8b5fe9291d2367fbdc2732c44b13f5b4a96c2954f02a7d0c8c2d3",
+  "topic": "Học từ vựng tiếng Anh TRY (động từ: cố gắng) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TRY",
+    "Làm rõ nghĩa lõi \"cố gắng\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TRY, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TRY, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Lượt thử đầu chưa vào đích — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot sees beanbag resting outside target ring in fictional casual game, companion nearby.",
+      "setting": "Bàn trò ném túi đậu hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Túi đậu chưa tới vòng, mình còn được thử nữa không? Try là thử, cố gắng làm một việc. \"An attempt, not a promise to win.\" Bạn đang chơi một trò nhỏ với người bạn, lần đầu chưa tới vị trí muốn ném.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "try",
+          "meaning": "cố gắng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot sees beanbag resting outside target ring in fictional casual game, companion nearby. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sees beanbag resting outside target ring in fictional casual game, companion nearby.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "try",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Túi đậu chưa tới vòng, mình còn được thử nữa không? Try là thử, cố gắng làm một việc. \"An attempt, not a promise to win.\" Bạn đang chơi một trò nhỏ với người bạn, lần đầu chưa tới vị trí muốn ném.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Lượt thử đầu chưa vào đích — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Friend passes beanbag to mascot, target ring clearly visible ahead.",
+      "setting": "Bàn trò ném túi đậu hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"I want to try.\" Tôi muốn thử. \"Give me a chance to do it.\" Người bạn đưa túi đậu để bạn tự chọn chỗ đứng và xem lại vòng cần hướng tới.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "try",
+          "meaning": "cố gắng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend passes beanbag to mascot, target ring clearly visible ahead. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend passes beanbag to mascot, target ring clearly visible ahead.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "I want to try.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I want to try.\" Tôi muốn thử. \"Give me a chance to do it.\" Người bạn đưa túi đậu để bạn tự chọn chỗ đứng và xem lại vòng cần hướng tới.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Lượt thử đầu chưa vào đích — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Mascot prepares second gentle beanbag attempt while friend steps aside.",
+      "setting": "Bàn trò ném túi đậu hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Can I try again?\" Tôi thử lại được không? \"One more attempt.\" Người bạn nhường thêm lượt, bạn nhìn vòng và chuẩn bị ném lại, chưa cần hứa sẽ trúng.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "try",
+          "meaning": "cố gắng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot prepares second gentle beanbag attempt while friend steps aside. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot prepares second gentle beanbag attempt while friend steps aside.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "Can I try again?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Can I try again?\" Tôi thử lại được không? \"One more attempt.\" Người bạn nhường thêm lượt, bạn nhìn vòng và chuẩn bị ném lại, chưa cần hứa sẽ trúng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Lượt thử đầu chưa vào đích — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold beanbag game and full question, no guaranteed successful result.",
+      "setting": "Bàn trò ném túi đậu hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn xin được thử lại trò vừa làm. \"Ask for another turn.\" Nói như lúc lượt đầu chưa đạt điều mình muốn: \"Can I try again?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "try",
+          "meaning": "cố gắng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold beanbag game and full question, no guaranteed successful result. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold beanbag game and full question, no guaranteed successful result.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "Can I try again?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn xin được thử lại trò vừa làm. \"Ask for another turn.\" Nói như lúc lượt đầu chưa đạt điều mình muốn: \"Can I try again?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Lượt thử đầu chưa vào đích — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Mascot takes another fictional beanbag turn, target outcome left open rather than falsely guaranteed.",
+      "setting": "Bàn trò ném túi đậu hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Can I try again?\" Tôi thử lại nhé? \"Now I have another attempt.\" Bạn đã được thêm một lượt trong câu chuyện; try nói việc thử làm, kết quả sẽ được nhìn sau lượt ấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "try",
+          "meaning": "cố gắng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot takes another fictional beanbag turn, target outcome left open rather than falsely guaranteed. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot takes another fictional beanbag turn, target outcome left open rather than falsely guaranteed.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "Can I try again?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I try again?\" Tôi thử lại nhé? \"Now I have another attempt.\" Bạn đã được thêm một lượt trong câu chuyện; try nói việc thử làm, kết quả sẽ được nhìn sau lượt ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Túi đậu chưa tới vòng, mình còn được thử nữa không? Try là thử, cố gắng làm một việc. \"An attempt, not a promise to win.\" Bạn đang chơi một trò nhỏ với người bạn, lần đầu chưa tới vị trí muốn ném."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Túi đậu chưa tới vòng, mình còn được thử nữa không? Try là thử, cố gắng làm một việc. \"An attempt, not a promise to win.\" Bạn đang chơi một trò nhỏ với người bạn, lần đầu chưa tới vị trí muốn ném."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I want to try.\" Tôi muốn thử. \"Give me a chance to do it.\" Người bạn đưa túi đậu để bạn tự chọn chỗ đứng và xem lại vòng cần hướng tới."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I want to try.\" Tôi muốn thử. \"Give me a chance to do it.\" Người bạn đưa túi đậu để bạn tự chọn chỗ đứng và xem lại vòng cần hướng tới."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn hỏi: \"Can I try again?\" Tôi thử lại được không? \"One more attempt.\" Người bạn nhường thêm lượt, bạn nhìn vòng và chuẩn bị ném lại, chưa cần hứa sẽ trúng."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn xin được thử lại trò vừa làm. \"Ask for another turn.\" Nói như lúc lượt đầu chưa đạt điều mình muốn: \"Can I try again?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can I try again?\" Tôi thử lại nhé? \"Now I have another attempt.\" Bạn đã được thêm một lượt trong câu chuyện; try nói việc thử làm, kết quả sẽ được nhìn sau lượt ấy."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Lượt đầu trượt → muốn thử → xin thêm lượt → thử lại.. Next event: Friend passes beanbag to mascot, target ring clearly visible ahead."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Lượt đầu trượt → muốn thử → xin thêm lượt → thử lại.. Next event: Mascot prepares second gentle beanbag attempt while friend steps aside."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Lượt đầu trượt → muốn thử → xin thêm lượt → thử lại.. Next event: Hold beanbag game and full question, no guaranteed successful result."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Lượt đầu trượt → muốn thử → xin thêm lượt → thử lại.. Next event: Mascot takes another fictional beanbag turn, target outcome left open rather than falsely guaranteed."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Lượt đầu trượt → muốn thử → xin thêm lượt → thử lại.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

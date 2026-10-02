@@ -1,0 +1,448 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "9154a227c1e78c534124ecce3dbae845283bcceda531abbc92e04c3a978f1c20",
+  "topic": "Học từ vựng tiếng Anh DONE (tính từ: đã xong) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ DONE",
+    "Làm rõ nghĩa lõi \"đã xong\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng DONE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại DONE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Small expressive eyebrows and changing mouth curves are allowed. Do not add hair, realistic muscles, detailed fingers, a realistic nose or ears to this mascot.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); simple lower clothing where needed. No stacked shirts."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Còn đúng một việc",
+      "purpose": "Show completion of the final task.",
+      "action": "Gấp mép cuối của ngôi nhà giấy.",
+      "setting": "Desk with three task boxes and a finished paper model.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn đã cắt, đã gấp, còn đúng một mép giấy chưa dán. Xong nốt mép này là done, đã xong. Từ ấy hợp với khoảnh khắc bạn có thể đặt đồ xuống vì việc cần làm đã hoàn tất.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "done",
+          "meaning": "đã xong"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot folds the last flap of a paper house; two checked boxes and one empty box, no letters. Desk with three task boxes and a finished paper model. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot folds the last flap of a paper house; two checked boxes and one empty box, no letters.",
+          "reason": "Show completion of the final task.",
+          "visible_text": [
+            {
+              "text": "done",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show completion of the final task.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đã cắt, đã gấp, còn đúng một mép giấy chưa dán. Xong nốt mép này là done, đã xong. Từ ấy hợp với khoảnh khắc bạn có thể đặt đồ xuống vì việc cần làm đã hoàn tất.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Báo tin hoàn thành",
+      "purpose": "Model a short completion announcement.",
+      "action": "Đặt mô hình hoàn chỉnh xuống bàn.",
+      "setting": "Desk with three task boxes and a finished paper model.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn nói: \"I'm done.\" Tôi làm xong rồi. Trong tình huống này, người nghe hiểu bạn vừa hoàn thành mô hình. Không cần kể lại từng bước cắt giấy, gấp mái, rồi dán cửa từ đầu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "done",
+          "meaning": "đã xong"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot sets the completed paper house on the desk and raises one open hand. Desk with three task boxes and a finished paper model. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sets the completed paper house on the desk and raises one open hand.",
+          "reason": "Model a short completion announcement.",
+          "visible_text": [
+            {
+              "text": "I'm done.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model a short completion announcement.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I'm done.\" Tôi làm xong rồi. Trong tình huống này, người nghe hiểu bạn vừa hoàn thành mô hình. Không cần kể lại từng bước cắt giấy, gấp mái, rồi dán cửa từ đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Kiểm tra một lần nữa",
+      "purpose": "Apply done to the finished task rather than cooked food.",
+      "action": "Đánh dấu ô việc cuối cùng.",
+      "setting": "Desk with three task boxes and a finished paper model.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn nhìn danh sách: \"The work is done.\" Công việc đã xong. Hôm nay mình dùng done để nói việc hoàn thành. Ô cuối được đánh dấu vì bạn đã thực sự làm xong phần còn lại.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "done",
+          "meaning": "đã xong"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot checks the final box and points toward the completed model. Desk with three task boxes and a finished paper model. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot checks the final box and points toward the completed model.",
+          "reason": "Apply done to the finished task rather than cooked food.",
+          "visible_text": [
+            {
+              "text": "The work is done.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Apply done to the finished task rather than cooked food.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhìn danh sách: \"The work is done.\" Công việc đã xong. Hôm nay mình dùng done để nói việc hoàn thành. Ô cuối được đánh dấu vì bạn đã thực sự làm xong phần còn lại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Bạn đặt kéo xuống",
+      "purpose": "Invite a completion announcement after a concrete action.",
+      "action": "Đặt kéo xuống và báo làm xong.",
+      "setting": "Desk with three task boxes and a finished paper model.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Mô hình đã hoàn chỉnh, bạn đặt kéo xuống. Hãy báo tôi làm xong rồi, bằng câu \"I'm...\" Bạn thêm từ nào?",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "done",
+          "meaning": "đã xong"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot safely places closed scissors on desk; a two-word sentence stem without the target appears above. Desk with three task boxes and a finished paper model. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot safely places closed scissors on desk; a two-word sentence stem without the target appears above.",
+          "reason": "Invite a completion announcement after a concrete action.",
+          "visible_text": [
+            {
+              "text": "I'm...",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a completion announcement after a concrete action.",
+          "anchor": {
+            "vi": {
+              "quote": "Mô hình đã hoàn chỉnh, bạn đặt kéo xuống. Hãy báo tôi làm xong rồi, bằng câu \"I'm...\" Bạn thêm từ nào?",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the concrete retrieval question; leave the full quiet hold before the next scene gives feedback.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Được ngắm thành quả",
+      "purpose": "Confirm the phrase and show a payoff for finishing.",
+      "action": "Ngồi ngắm thành quả.",
+      "setting": "Desk with three task boxes and a finished paper model.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "\"I'm done.\" Từ còn thiếu là done. Giờ bạn có thể ngắm ngôi nhà giấy thay vì sửa mãi một mái nhà chưa xong. Niềm vui lần này nằm ở chỗ chiếc kéo cuối cùng cũng được nghỉ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "done",
+          "meaning": "đã xong"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot admires the paper house from a relaxed seated pose, all three task boxes checked. Desk with three task boxes and a finished paper model. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot admires the paper house from a relaxed seated pose, all three task boxes checked.",
+          "reason": "Confirm the phrase and show a payoff for finishing.",
+          "visible_text": [
+            {
+              "text": "I'm done.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm the phrase and show a payoff for finishing.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I'm done.\" Từ còn thiếu là done. Giờ bạn có thể ngắm ngôi nhà giấy thay vì sửa mãi một mái nhà chưa xong. Niềm vui lần này nằm ở chỗ chiếc kéo cuối cùng cũng được nghỉ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer, then resolve the opening situation warmly.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show completion of the final task.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Use the established situation (Còn đúng một việc) to motivate the next learning action: Model a short completion announcement."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a short completion announcement.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the established situation (Báo tin hoàn thành) to motivate the next learning action: Apply done to the finished task rather than cooked food."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Apply done to the finished task rather than cooked food.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Use the established situation (Kiểm tra một lần nữa) to motivate the next learning action: Invite a completion announcement after a concrete action."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a completion announcement after a concrete action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Use the established situation (Bạn đặt kéo xuống) to motivate the next learning action: Confirm the phrase and show a payoff for finishing."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm the phrase and show a payoff for finishing.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After explicit learner feedback, resolve the concrete situation introduced in the opening."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn đã cắt, đã gấp, còn đúng một mép giấy chưa dán. Xong nốt mép này là done, đã xong. Từ ấy hợp với khoảnh khắc bạn có thể đặt đồ xuống vì việc cần làm đã hoàn tất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn đã cắt, đã gấp, còn đúng một mép giấy chưa dán. Xong nốt mép này là done, đã xong. Từ ấy hợp với khoảnh khắc bạn có thể đặt đồ xuống vì việc cần làm đã hoàn tất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I'm done.\" Tôi làm xong rồi. Trong tình huống này, người nghe hiểu bạn vừa hoàn thành mô hình. Không cần kể lại từng bước cắt giấy, gấp mái, rồi dán cửa từ đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I'm done.\" Tôi làm xong rồi. Trong tình huống này, người nghe hiểu bạn vừa hoàn thành mô hình. Không cần kể lại từng bước cắt giấy, gấp mái, rồi dán cửa từ đầu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nhìn danh sách: \"The work is done.\" Công việc đã xong. Hôm nay mình dùng done để nói việc hoàn thành. Ô cuối được đánh dấu vì bạn đã thực sự làm xong phần còn lại."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Mô hình đã hoàn chỉnh, bạn đặt kéo xuống. Hãy báo tôi làm xong rồi, bằng câu \"I'm...\" Bạn thêm từ nào?"
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I'm done.\" Từ còn thiếu là done. Giờ bạn có thể ngắm ngôi nhà giấy thay vì sửa mãi một mái nhà chưa xong. Niềm vui lần này nằm ở chỗ chiếc kéo cuối cùng cũng được nghỉ."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

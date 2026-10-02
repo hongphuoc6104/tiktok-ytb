@@ -1,0 +1,655 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "189f2e29d2a23dd2a65f594592b1772058c1195246bf9137d735d56073e40420",
+  "topic": "Học từ vựng tiếng Anh DO (động từ: làm (việc gì đó)) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 80,
+    "max_seconds": 110
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ DO",
+    "Làm rõ nghĩa lõi \"làm (việc gì đó)\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng DO, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại DO, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Có việc để làm, chưa chắc là làm ra đồ vật — Nhịp 1",
+      "purpose": "Establish the need and one selected meaning promptly.",
+      "action": "Mascot and companion sit at study table with blank exercise spaces in book.",
+      "setting": "Bàn học buổi tối.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Sách và bút đủ cả, nhưng phần bài tập vẫn còn trắng! Do ở đây là làm một việc, một hoạt động. \"Carry out an activity or task.\" Bạn cần bắt tay làm bài đã có, không chế tạo cuốn sách mới để thay cho việc học.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "do",
+          "meaning": "làm (việc gì đó)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and companion sit at study table with blank exercise spaces in book. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion sit at study table with blank exercise spaces in book.",
+          "reason": "Establish the need and one selected meaning promptly.",
+          "visible_text": [
+            {
+              "text": "do",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the need and one selected meaning promptly.",
+          "anchor": {
+            "vi": {
+              "quote": "Sách và bút đủ cả, nhưng phần bài tập vẫn còn trắng! Do ở đây là làm một việc, một hoạt động. \"Carry out an activity or task.\" Bạn cần bắt tay làm bài đã có, không chế tạo cuốn sách mới để thay cho việc học.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Có việc để làm, chưa chắc là làm ra đồ vật — Nhịp 2",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "action": "Mascot opens assigned exercise page and begins working, companion reads nearby.",
+      "setting": "Bàn học buổi tối.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"I need to do my homework.\" Tôi cần làm bài tập về nhà. \"The task is waiting for me.\" Bạn mở đúng trang đã được giao trong câu chuyện, đọc yêu cầu rồi bắt đầu; chỉ chuẩn bị bút chưa phải đã làm bài.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "do",
+          "meaning": "làm (việc gì đó)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot opens assigned exercise page and begins working, companion reads nearby. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot opens assigned exercise page and begins working, companion reads nearby.",
+          "reason": "Use the first model at the point where the speaker needs it.",
+          "visible_text": [
+            {
+              "text": "I need to do my homework.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first model at the point where the speaker needs it.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I need to do my homework.\" Tôi cần làm bài tập về nhà. \"The task is waiting for me.\" Bạn mở đúng trang đã được giao trong câu chuyện, đọc yêu cầu rồi bắt đầu; chỉ chuẩn bị bút chưa phải đã làm bài.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Có việc để làm, chưa chắc là làm ra đồ vật — Nhịp 3",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "action": "Mascot works through exercise page, page uses non-readable marks unless explicitly allowed.",
+      "setting": "Bàn học buổi tối.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Do homework là cụm cần nhớ nguyên phần hoạt động. \"Homework names the work to carry out.\" Không có a trước homework trong mẫu này. Ta chỉ luyện cách nói nhiệm vụ ở bàn học, không ép do và make luôn thay được cho nhau.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "do",
+          "meaning": "làm (việc gì đó)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot works through exercise page, page uses non-readable marks unless explicitly allowed. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot works through exercise page, page uses non-readable marks unless explicitly allowed.",
+          "reason": "Show the condition or contrast that makes this usage matter.",
+          "visible_text": [
+            {
+              "text": "do",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the condition or contrast that makes this usage matter.",
+          "anchor": {
+            "vi": {
+              "quote": "Do homework là cụm cần nhớ nguyên phần hoạt động. \"Homework names the work to carry out.\" Không có a trước homework trong mẫu này. Ta chỉ luyện cách nói nhiệm vụ ở bàn học, không ép do và make luôn thay được cho nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Có việc để làm, chưa chắc là làm ra đồ vật — Nhịp 4",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "action": "Both independently write responses then compare same exercise page.",
+      "setting": "Bàn học buổi tối.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn rủ người bạn: \"Let's do the exercises together.\" Cùng làm các bài tập nhé. \"We can compare our answers after trying.\" Hai người tự làm phần mình, rồi đối chiếu; lời rủ không có nghĩa một người viết thay toàn bộ cho người kia.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "do",
+          "meaning": "làm (việc gì đó)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both independently write responses then compare same exercise page. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both independently write responses then compare same exercise page.",
+          "reason": "Use the second model to advance or compare within the same story.",
+          "visible_text": [
+            {
+              "text": "Let's do the exercises together.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to advance or compare within the same story.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn rủ người bạn: \"Let's do the exercises together.\" Cùng làm các bài tập nhé. \"We can compare our answers after trying.\" Hai người tự làm phần mình, rồi đối chiếu; lời rủ không có nghĩa một người viết thay toàn bộ cho người kia.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Có việc để làm, chưa chắc là làm ra đồ vật — Nhịp 5",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "action": "Before unanswered exercise page => After completed response marks, same book and desk.",
+      "setting": "Bàn học buổi tối.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Do trong hai mẫu chỉ hoạt động đã cần thực hiện. \"The book already exists; the work still needs doing.\" Chiếc sách không thay hình dạng thành sản phẩm khác; phần thay đổi là những câu trả lời được hoàn thành ở trang bài.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "do",
+          "meaning": "làm (việc gì đó)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Before unanswered exercise page Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Before unanswered exercise page",
+          "reason": "Clarify a common trap through this example without expanding to another meaning.",
+          "visible_text": []
+        },
+        {
+          "id": "SC05_I2",
+          "description": "After completed response marks, same book and desk. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC05_I1",
+          "preserve": "Preserve base camera, background, identities, clothing and all unchanged props; only the specified state and permitted teaching text may change.",
+          "change": "After completed response marks, same book and desk.",
+          "reason": "Show the explicitly described before/after state with the same camera and identities.",
+          "visible_text": [
+            {
+              "text": "do",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Do trong hai mẫu chỉ hoạt động đã cần thực hiện. \"The book already exists; the work still needs doing.\" Chiếc sách không thay hình dạng thành sản phẩm khác; phần thay đổi là những câu trả lời được hoàn thành ở trang bài.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC05_B2",
+          "image_id": "SC05_I2",
+          "purpose": "Show the explicitly described before/after state with the same camera and identities.",
+          "anchor": {
+            "vi": {
+              "quote": "The book already exists; the work still needs doing.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Có việc để làm, chưa chắc là làm ra đồ vật — Lượt thực hành",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "action": "Hold homework situation and full model.",
+      "setting": "Bàn học buổi tối.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn nói mình cần làm bài tập về nhà. \"Use the activity with do.\" Hãy nói: \"I need to do my homework.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "do",
+          "meaning": "làm (việc gì đó)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Hold homework situation and full model. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold homework situation and full model.",
+          "reason": "Invite a supported learner response; hold before the feedback.",
+          "visible_text": [
+            {
+              "text": "Use the activity with do.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "I need to do my homework.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Invite a supported learner response; hold before the feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói mình cần làm bài tập về nhà. \"Use the activity with do.\" Hãy nói: \"I need to do my homework.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC07",
+      "title": "Có việc để làm, chưa chắc là làm ra đồ vật — Phản hồi và kết quả",
+      "purpose": "Provide the response and complete the opening promise.",
+      "action": "Mascot checks completed homework page and stores same book beside companion.",
+      "setting": "Bàn học buổi tối.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"I need to do my homework.\" Tôi cần làm bài tập về nhà. \"The task has moved from waiting to completed.\" Trang bài có câu trả lời, hai người kiểm lại rồi cất sách. Do trong câu vừa luyện gắn với công việc được thực hiện, và chuyện kết thúc khi nhiệm vụ đã xong.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "do",
+          "meaning": "làm (việc gì đó)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC07_I1",
+          "description": "Mascot checks completed homework page and stores same book beside companion. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot checks completed homework page and stores same book beside companion.",
+          "reason": "Provide the response and complete the opening promise.",
+          "visible_text": [
+            {
+              "text": "I need to do my homework.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC07_B1",
+          "image_id": "SC07_I1",
+          "purpose": "Provide the response and complete the opening promise.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need to do my homework.\" Tôi cần làm bài tập về nhà. \"The task has moved from waiting to completed.\" Trang bài có câu trả lời, hai người kiểm lại rồi cất sách. Do trong câu vừa luyện gắn với công việc được thực hiện, và chuyện kết thúc khi nhiệm vụ đã xong.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Sách và bút đủ cả, nhưng phần bài tập vẫn còn trắng! Do ở đây là làm một việc, một hoạt động. \"Carry out an activity or task.\" Bạn cần bắt tay làm bài đã có, không chế tạo cuốn sách mới để thay cho việc học."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Sách và bút đủ cả, nhưng phần bài tập vẫn còn trắng! Do ở đây là làm một việc, một hoạt động. \"Carry out an activity or task.\" Bạn cần bắt tay làm bài đã có, không chế tạo cuốn sách mới để thay cho việc học."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I need to do my homework.\" Tôi cần làm bài tập về nhà. \"The task is waiting for me.\" Bạn mở đúng trang đã được giao trong câu chuyện, đọc yêu cầu rồi bắt đầu; chỉ chuẩn bị bút chưa phải đã làm bài."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I need to do my homework.\" Tôi cần làm bài tập về nhà. \"The task is waiting for me.\" Bạn mở đúng trang đã được giao trong câu chuyện, đọc yêu cầu rồi bắt đầu; chỉ chuẩn bị bút chưa phải đã làm bài."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Do homework là cụm cần nhớ nguyên phần hoạt động. \"Homework names the work to carry out.\" Không có a trước homework trong mẫu này. Ta chỉ luyện cách nói nhiệm vụ ở bàn học, không ép do và make luôn thay được cho nhau."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn rủ người bạn: \"Let's do the exercises together.\" Cùng làm các bài tập nhé. \"We can compare our answers after trying.\" Hai người tự làm phần mình, rồi đối chiếu; lời rủ không có nghĩa một người viết thay toàn bộ cho người kia."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Do trong hai mẫu chỉ hoạt động đã cần thực hiện. \"The book already exists; the work still needs doing.\" Chiếc sách không thay hình dạng thành sản phẩm khác; phần thay đổi là những câu trả lời được hoàn thành ở trang bài."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "Bạn muốn nói mình cần làm bài tập về nhà. \"Use the activity with do.\" Hãy nói: \"I need to do my homework.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC07",
+      "quote": "\"I need to do my homework.\" Tôi cần làm bài tập về nhà. \"The task has moved from waiting to completed.\" Trang bài có câu trả lời, hai người kiểm lại rồi cất sách. Do trong câu vừa luyện gắn với công việc được thực hiện, và chuyện kết thúc khi nhiệm vụ đã xong."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the need and one selected meaning promptly.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Bài chưa làm → nói kế hoạch → làm bài tập → kiểm → hoàn thành.. Next event: Mascot opens assigned exercise page and begins working, companion reads nearby."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Bài chưa làm → nói kế hoạch → làm bài tập → kiểm → hoàn thành.. Next event: Mascot works through exercise page, page uses non-readable marks unless explicitly allowed."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Bài chưa làm → nói kế hoạch → làm bài tập → kiểm → hoàn thành.. Next event: Both independently write responses then compare same exercise page."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Bài chưa làm → nói kế hoạch → làm bài tập → kiểm → hoàn thành.. Next event: Before unanswered exercise page => After completed response marks, same book and desk."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Bài chưa làm → nói kế hoạch → làm bài tập → kiểm → hoàn thành.. Next event: Hold homework situation and full model."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bài chưa làm → nói kế hoạch → làm bài tập → kiểm → hoàn thành.. Next event: Mascot checks completed homework page and stores same book beside companion."
+    },
+    {
+      "scene_id": "SC07",
+      "purpose": "Provide the response and complete the opening promise.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bài chưa làm → nói kế hoạch → làm bài tập → kiểm → hoàn thành.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

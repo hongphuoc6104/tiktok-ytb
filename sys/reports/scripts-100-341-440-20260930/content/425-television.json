@@ -1,0 +1,472 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "0718e5bf481c8d701b23395b53b8017459a70accec48769ed3dfb0da8ce215cf",
+  "topic": "Học từ vựng tiếng Anh TELEVISION (danh từ: truyền hình) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ TELEVISION",
+    "Làm rõ nghĩa lõi \"truyền hình\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng TELEVISION, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại TELEVISION, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành trong tình huống",
+      "appearance": "Adult viewing companion. Minimal flat ink style. Maintain age, gender, clothing and identity across all scenes; use mustard top and only explicitly needed accessory. Distinct from canonical mascot.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Fictional adult woman interviewed on television, appears only within the screen. Minimal flat ink style; consistent role, adult identity and lavender clothing with only scenario-required outerwear. Distinct from mascot and companion.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chương trình trên truyền hình — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot points toward television showing fictional adult interviewee, friend turns from room doorway.",
+      "setting": "Phòng khách, chương trình trên màn hình.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người quen vừa xuất hiện trên truyền hình! Television trong bài này là truyền hình. Bạn đang xem chương trình ở nhà, thấy một gương mặt quen trong phần phỏng vấn; người bạn quay lại đúng lúc họ lên hình.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "television",
+          "meaning": "truyền hình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot points toward television showing fictional adult interviewee, friend turns from room doorway. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points toward television showing fictional adult interviewee, friend turns from room doorway.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "television",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Người quen vừa xuất hiện trên truyền hình! Television trong bài này là truyền hình. Bạn đang xem chương trình ở nhà, thấy một gương mặt quen trong phần phỏng vấn; người bạn quay lại đúng lúc họ lên hình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chương trình trên truyền hình — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Fictional interviewee visible within screen image, mascot gestures to broadcast content not device top.",
+      "setting": "Phòng khách, chương trình trên màn hình.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn nói: \"She's on television.\" Cô ấy xuất hiện trên truyền hình. On television nói nơi hình ảnh được phát; câu này không có nghĩa cô ấy đang ngồi trên nóc chiếc máy trong phòng.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "television",
+          "meaning": "truyền hình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Fictional interviewee visible within screen image, mascot gestures to broadcast content not device top. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Fictional interviewee visible within screen image, mascot gestures to broadcast content not device top.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "She's on television.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"She's on television.\" Cô ấy xuất hiện trên truyền hình. On television nói nơi hình ảnh được phát; câu này không có nghĩa cô ấy đang ngồi trên nóc chiếc máy trong phòng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chương trình trên truyền hình — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Both sit on sofa watching fictional interview segment, no network logos.",
+      "setting": "Phòng khách, chương trình trên màn hình.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Người bạn hỏi: \"Do you watch television in the evening?\" Bạn có xem truyền hình vào buổi tối không? In the evening nói thói quen theo thời gian; hai người ngồi xem đoạn phỏng vấn rồi trò chuyện.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "television",
+          "meaning": "truyền hình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both sit on sofa watching fictional interview segment, no network logos. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both sit on sofa watching fictional interview segment, no network logos.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "Do you watch television in the evening?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn hỏi: \"Do you watch television in the evening?\" Bạn có xem truyền hình vào buổi tối không? In the evening nói thói quen theo thời gian; hai người ngồi xem đoạn phỏng vấn rồi trò chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chương trình trên truyền hình — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Screen with interviewee and full model sentence, no person physically atop device.",
+      "setting": "Phòng khách, chương trình trên màn hình.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Một người xuất hiện trong chương trình truyền hình. Bạn nói \"She's on television.\" rồi chỉ vị trí người ấy trong hình. Hãy hiểu on theo cả câu vừa học nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "television",
+          "meaning": "truyền hình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Screen with interviewee and full model sentence, no person physically atop device. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Screen with interviewee and full model sentence, no person physically atop device.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "She's on television.",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Một người xuất hiện trong chương trình truyền hình. Bạn nói \"She's on television.\" rồi chỉ vị trí người ấy trong hình. Hãy hiểu on theo cả câu vừa học nhé.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 6
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chương trình trên truyền hình — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot talks to friend after fictional program moves to generic transition screen.",
+      "setting": "Phòng khách, chương trình trên màn hình.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"She's on television.\" Cô ấy xuất hiện trên truyền hình. Đoạn phỏng vấn kết thúc, bạn kể mình quen cô ấy từ đâu. Một câu ngắn đã giúp báo điều bất ngờ trên màn hình.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "television",
+          "meaning": "truyền hình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot talks to friend after fictional program moves to generic transition screen. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot talks to friend after fictional program moves to generic transition screen.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "She's on television.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"She's on television.\" Cô ấy xuất hiện trên truyền hình. Đoạn phỏng vấn kết thúc, bạn kể mình quen cô ấy từ đâu. Một câu ngắn đã giúp báo điều bất ngờ trên màn hình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Người quen vừa xuất hiện trên truyền hình! Television trong bài này là truyền hình. Bạn đang xem chương trình ở nhà, thấy một gương mặt quen trong phần phỏng vấn; người bạn quay lại đúng lúc họ lên hình."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Người quen vừa xuất hiện trên truyền hình! Television trong bài này là truyền hình. Bạn đang xem chương trình ở nhà, thấy một gương mặt quen trong phần phỏng vấn; người bạn quay lại đúng lúc họ lên hình."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"She's on television.\" Cô ấy xuất hiện trên truyền hình. On television nói nơi hình ảnh được phát; câu này không có nghĩa cô ấy đang ngồi trên nóc chiếc máy trong phòng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"She's on television.\" Cô ấy xuất hiện trên truyền hình. On television nói nơi hình ảnh được phát; câu này không có nghĩa cô ấy đang ngồi trên nóc chiếc máy trong phòng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn hỏi: \"Do you watch television in the evening?\" Bạn có xem truyền hình vào buổi tối không? In the evening nói thói quen theo thời gian; hai người ngồi xem đoạn phỏng vấn rồi trò chuyện."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Một người xuất hiện trong chương trình truyền hình. Bạn nói \"She's on television.\" rồi chỉ vị trí người ấy trong hình. Hãy hiểu on theo cả câu vừa học nhé."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"She's on television.\" Cô ấy xuất hiện trên truyền hình. Đoạn phỏng vấn kết thúc, bạn kể mình quen cô ấy từ đâu. Một câu ngắn đã giúp báo điều bất ngờ trên màn hình."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Nhận người quen → hỏi nơi xem → tả chương trình → cùng xem.. Next visible event: Fictional interviewee visible within screen image, mascot gestures to broadcast content not device top."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Nhận người quen → hỏi nơi xem → tả chương trình → cùng xem.. Next visible event: Both sit on sofa watching fictional interview segment, no network logos."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Nhận người quen → hỏi nơi xem → tả chương trình → cùng xem.. Next visible event: Screen with interviewee and full model sentence, no person physically atop device."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhận người quen → hỏi nơi xem → tả chương trình → cùng xem.. Next visible event: Mascot talks to friend after fictional program moves to generic transition screen."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhận người quen → hỏi nơi xem → tả chương trình → cùng xem.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

@@ -1,0 +1,45 @@
+{
+  "job": "vocab-arm-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 80,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn muốn hỏi bài nên giơ tay lên. Arm là cánh tay, phần từ vai tới cổ tay. Khi học từ này, mình nhìn cả phần dài đang giơ lên, chứ không chỉ nhìn bàn tay ở phía cuối. Trong tiếng Việt, giơ tay có thể nói khá chung. Trên hình tiếng Anh, vùng được đánh dấu chạy từ vai tới cổ tay. Phần bàn tay ở cuối được để màu khác.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of arm and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nghe: \"Raise your arm.\" Giơ cánh tay lên. Your arm là cánh tay của bạn. Trong trò làm theo lời nói, câu này yêu cầu đúng một cánh tay, nên không cần giơ cả hai cùng lúc. Cánh tay có phần trên và phần dưới nối ở khuỷu tay. Khi nhân vật giơ lên, cả phần ấy đổi tư thế. Chỉ mở bàn tay thôi chưa làm đúng chỉ dẫn này.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of arm and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bạn nói: \"I have two arms.\" Tôi có hai cánh tay. Khi nói hai, arm thành arms, thêm s. Câu này mô tả nhân vật trong bài; hai nét tay đơn giản trên hình giúp bạn đếm rất rõ.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of arm and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Hãy hoàn thành \"Raise your...\" bằng từ chỉ cánh tay. Nhìn cả phần từ vai tới cổ tay, không chỉ phần bàn tay ở cuối.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of arm and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"Raise your arm.\" Từ cần điền là arm. Người hướng dẫn đã thấy bạn muốn hỏi, nên bạn có thể đặt câu hỏi của mình. Một động tác quen trong lớp giờ đã có thêm câu tiếng Anh đi cùng.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of arm and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

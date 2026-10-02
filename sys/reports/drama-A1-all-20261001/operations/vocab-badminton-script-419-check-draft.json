@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 40,
+            "seconds": 12.16,
+            "min": 9.12,
+            "max": 15.2
+          },
+          {
+            "scene_id": "SC02",
+            "units": 39,
+            "seconds": 12.03,
+            "min": 9.03,
+            "max": 15.04
+          },
+          {
+            "scene_id": "SC03",
+            "units": 28,
+            "seconds": 8.53,
+            "min": 6.4,
+            "max": 10.66
+          },
+          {
+            "scene_id": "SC04",
+            "units": 30,
+            "seconds": 12.93,
+            "min": 9.7,
+            "max": 16.17
+          },
+          {
+            "scene_id": "SC05",
+            "units": 40,
+            "seconds": 12.76,
+            "min": 9.57,
+            "max": 15.95
+          }
+        ],
+        "min": 43.82,
+        "max": 73.02,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "21275",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi kiên nhẫn nhặt quả cầu mắc trên cây và cùng cô em gái tập chơi cầu lông ở khoảng sân lặng gió. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

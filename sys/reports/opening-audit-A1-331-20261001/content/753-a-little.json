@@ -1,0 +1,633 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "26b9a2d57d15f77ffab1ae3feb807fe5c748e8e6676f38358585fba60682c461",
+  "topic": "Học từ vựng tiếng Anh A LITTLE (từ hạn định: một chút) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 80,
+    "max_seconds": 110
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ A LITTLE",
+    "Làm rõ nghĩa lõi \"một chút\" (từ hạn định) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng A LITTLE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại A LITTLE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Không cần cả bình, chỉ chút nước cho màu — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Mascot holds water bottle poised over thick paint tray, companion indicates small addition rather than full pouring.",
+      "setting": "Bàn vẽ màu nước.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Thêm chút nước thôi, đừng đổ cả bình! A little là một chút. \"A small amount of something.\" Bạn chỉ cần chút nước cho phần màu đang dùng ở bàn vẽ; câu chuyện giúp nói lượng nhỏ thay vì xin nguyên bình.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "a little",
+          "meaning": "một chút"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds water bottle poised over thick paint tray, companion indicates small addition rather than full pouring. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds water bottle poised over thick paint tray, companion indicates small addition rather than full pouring.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "a little",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Thêm chút nước thôi, đừng đổ cả bình! A little là một chút. \"A small amount of something.\" Bạn chỉ cần chút nước cho phần màu đang dùng ở bàn vẽ; câu chuyện giúp nói lượng nhỏ thay vì xin nguyên bình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Không cần cả bình, chỉ chút nước cho màu — Nhịp 2",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "action": "Companion pours small amount into painting cup, mascot observes palette.",
+      "setting": "Bàn vẽ màu nước.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nhờ: \"I need a little water.\" Tôi cần một chút nước. \"Just a small amount for this paint.\" Người bạn rót lượng nhỏ vào cốc dùng cho khay, dừng lại để bạn kiểm màu; phần nước còn lại vẫn nằm trong bình.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "a little",
+          "meaning": "một chút"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Companion pours small amount into painting cup, mascot observes palette. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion pours small amount into painting cup, mascot observes palette.",
+          "reason": "Use the first model at the point where the speaker needs it.",
+          "visible_text": [
+            {
+              "text": "I need a little water.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first model at the point where the speaker needs it.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhờ: \"I need a little water.\" Tôi cần một chút nước. \"Just a small amount for this paint.\" Người bạn rót lượng nhỏ vào cốc dùng cho khay, dừng lại để bạn kiểm màu; phần nước còn lại vẫn nằm trong bình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Không cần cả bình, chỉ chút nước cho màu — Nhịp 3",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "action": "Close view of small water amount in cup and remaining water in jug.",
+      "setting": "Bàn vẽ màu nước.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Water trong mẫu này không đếm theo từng món riêng. \"We talk about an amount, not separate waters.\" Có thể đếm các cốc, nhưng cups sẽ là tên vật chứa khác. Bài này giữ water làm thứ cần một chút, không chuyển nhiệm vụ sang đếm cốc.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "a little",
+          "meaning": "một chút"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Close view of small water amount in cup and remaining water in jug. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close view of small water amount in cup and remaining water in jug.",
+          "reason": "Show the condition or contrast that makes this usage matter.",
+          "visible_text": [
+            {
+              "text": "a little",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the condition or contrast that makes this usage matter.",
+          "anchor": {
+            "vi": {
+              "quote": "Water trong mẫu này không đếm theo từng món riêng. \"We talk about an amount, not separate waters.\" Có thể đếm các cốc, nhưng cups sẽ là tên vật chứa khác. Bài này giữ water làm thứ cần một chút, không chuyển nhiệm vụ sang đếm cốc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Không cần cả bình, chỉ chút nước cho màu — Nhịp 4",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "action": "Mascot indicates remaining water in same painting cup, companion adjusts brush.",
+      "setting": "Bàn vẽ màu nước.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"We have a little water left.\" Chúng ta còn một chút nước. \"There is still a small amount to use.\" Hai người giữ phần còn lại cho nét vẽ tiếp, không nhầm câu này thành đã hết sạch vì lượng không nhiều.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "a little",
+          "meaning": "một chút"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot indicates remaining water in same painting cup, companion adjusts brush. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot indicates remaining water in same painting cup, companion adjusts brush.",
+          "reason": "Use the second model to advance or compare within the same story.",
+          "visible_text": [
+            {
+              "text": "We have a little water left.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to advance or compare within the same story.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"We have a little water left.\" Chúng ta còn một chút nước. \"There is still a small amount to use.\" Hai người giữ phần còn lại cho nét vẽ tiếp, không nhầm câu này thành đã hết sạch vì lượng không nhiều.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Không cần cả bình, chỉ chút nước cho màu — Nhịp 5",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "action": "Both judge paint texture in fictional craft activity, no measurement or instructional guarantee.",
+      "setting": "Bàn vẽ màu nước.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Giữ a trong a little của bài. \"The expression says a small amount is there.\" Không coi một chút là một mức đo cố định: nhu cầu của hoạt động quyết định lượng phù hợp. Câu đang luyện chỉ giúp diễn đạt còn hoặc cần lượng nhỏ.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "a little",
+          "meaning": "một chút"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both judge paint texture in fictional craft activity, no measurement or instructional guarantee. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both judge paint texture in fictional craft activity, no measurement or instructional guarantee.",
+          "reason": "Clarify a common trap through this example without expanding to another meaning.",
+          "visible_text": [
+            {
+              "text": "a little",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Giữ a trong a little của bài. \"The expression says a small amount is there.\" Không coi một chút là một mức đo cố định: nhu cầu của hoạt động quyết định lượng phù hợp. Câu đang luyện chỉ giúp diễn đạt còn hoặc cần lượng nhỏ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Không cần cả bình, chỉ chút nước cho màu — Lượt thực hành",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "action": "Hold palette, water cup and exact request for response.",
+      "setting": "Bàn vẽ màu nước.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn cần chút nước cho khay màu. \"Use the small-amount phrase before water.\" Hãy nói: \"I need a little water.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "a little",
+          "meaning": "một chút"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Hold palette, water cup and exact request for response. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold palette, water cup and exact request for response.",
+          "reason": "Invite a supported learner response; hold before the feedback.",
+          "visible_text": [
+            {
+              "text": "I need a little water.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Invite a supported learner response; hold before the feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn cần chút nước cho khay màu. \"Use the small-amount phrase before water.\" Hãy nói: \"I need a little water.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC07",
+      "title": "Không cần cả bình, chỉ chút nước cho màu — Phản hồi và kết quả",
+      "purpose": "Provide the response and complete the opening promise.",
+      "action": "Both paint next simple shape with same palette and retained small water amount.",
+      "setting": "Bàn vẽ màu nước.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"I need a little water.\" Tôi cần một chút nước. \"The remaining water can support the next brushstroke.\" Khay màu đã được điều chỉnh trong chuyện, phần nước còn lại dùng tiếp. A little đi cùng water để nói lượng nhỏ, khác với đếm từng chiếc bút ở một hoạt động khác.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "a little",
+          "meaning": "một chút"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC07_I1",
+          "description": "Both paint next simple shape with same palette and retained small water amount. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both paint next simple shape with same palette and retained small water amount.",
+          "reason": "Provide the response and complete the opening promise.",
+          "visible_text": [
+            {
+              "text": "I need a little water.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC07_B1",
+          "image_id": "SC07_I1",
+          "purpose": "Provide the response and complete the opening promise.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need a little water.\" Tôi cần một chút nước. \"The remaining water can support the next brushstroke.\" Khay màu đã được điều chỉnh trong chuyện, phần nước còn lại dùng tiếp. A little đi cùng water để nói lượng nhỏ, khác với đếm từng chiếc bút ở một hoạt động khác.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Thêm chút nước thôi, đừng đổ cả bình! A little là một chút. \"A small amount of something.\" Bạn chỉ cần chút nước cho phần màu đang dùng ở bàn vẽ; câu chuyện giúp nói lượng nhỏ thay vì xin nguyên bình."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Thêm chút nước thôi, đừng đổ cả bình! A little là một chút. \"A small amount of something.\" Bạn chỉ cần chút nước cho phần màu đang dùng ở bàn vẽ; câu chuyện giúp nói lượng nhỏ thay vì xin nguyên bình."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nhờ: \"I need a little water.\" Tôi cần một chút nước. \"Just a small amount for this paint.\" Người bạn rót lượng nhỏ vào cốc dùng cho khay, dừng lại để bạn kiểm màu; phần nước còn lại vẫn nằm trong bình."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nhờ: \"I need a little water.\" Tôi cần một chút nước. \"Just a small amount for this paint.\" Người bạn rót lượng nhỏ vào cốc dùng cho khay, dừng lại để bạn kiểm màu; phần nước còn lại vẫn nằm trong bình."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Water trong mẫu này không đếm theo từng món riêng. \"We talk about an amount, not separate waters.\" Có thể đếm các cốc, nhưng cups sẽ là tên vật chứa khác. Bài này giữ water làm thứ cần một chút, không chuyển nhiệm vụ sang đếm cốc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn nói: \"We have a little water left.\" Chúng ta còn một chút nước. \"There is still a small amount to use.\" Hai người giữ phần còn lại cho nét vẽ tiếp, không nhầm câu này thành đã hết sạch vì lượng không nhiều."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Giữ a trong a little của bài. \"The expression says a small amount is there.\" Không coi một chút là một mức đo cố định: nhu cầu của hoạt động quyết định lượng phù hợp. Câu đang luyện chỉ giúp diễn đạt còn hoặc cần lượng nhỏ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "Bạn cần chút nước cho khay màu. \"Use the small-amount phrase before water.\" Hãy nói: \"I need a little water.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC07",
+      "quote": "\"I need a little water.\" Tôi cần một chút nước. \"The remaining water can support the next brushstroke.\" Khay màu đã được điều chỉnh trong chuyện, phần nước còn lại dùng tiếp. A little đi cùng water để nói lượng nhỏ, khác với đếm từng chiếc bút ở một hoạt động khác."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Mascot holds water bottle poised over thick paint tray, companion indicates small addition rather than full pouring. Continue with the existing connected model: Companion pours small amount into painting cup, mascot observes palette."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Màu đặc → cần chút nước → thêm lượng nhỏ → giữ lại → dùng tiếp.. Next event: Close view of small water amount in cup and remaining water in jug."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Màu đặc → cần chút nước → thêm lượng nhỏ → giữ lại → dùng tiếp.. Next event: Mascot indicates remaining water in same painting cup, companion adjusts brush."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Màu đặc → cần chút nước → thêm lượng nhỏ → giữ lại → dùng tiếp.. Next event: Both judge paint texture in fictional craft activity, no measurement or instructional guarantee."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Màu đặc → cần chút nước → thêm lượng nhỏ → giữ lại → dùng tiếp.. Next event: Hold palette, water cup and exact request for response."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Màu đặc → cần chút nước → thêm lượng nhỏ → giữ lại → dùng tiếp.. Next event: Both paint next simple shape with same palette and retained small water amount."
+    },
+    {
+      "scene_id": "SC07",
+      "purpose": "Provide the response and complete the opening promise.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Màu đặc → cần chút nước → thêm lượng nhỏ → giữ lại → dùng tiếp.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18754",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Thêm chút nước thôi, đừng đổ cả bình!”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ],
+  "open_questions": []
+}

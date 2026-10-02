@@ -1,0 +1,510 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "e81d56a65ee2db35889a29d481deb8051ca7364fd64b5560300da241e4186cdc",
+  "topic": "Học từ vựng tiếng Anh friend — một người bạn qua câu chuyện “Chiếc ô che thêm một người bạn”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới friend; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “một người bạn” của friend; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng friend chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng friend, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn",
+      "appearance": "Adult friend, simple flat illustration, minimal limbs, distinct from mascot.",
+      "outfit": "Plain lavender top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Một chỗ khô bên cạnh",
+      "purpose": "Establish friendship through a helpful shared moment.",
+      "action": "Mascot stands under umbrella at school exit while friend without umbrella waits nearby.",
+      "setting": "Rainy school exit with mascot and friend in lavender top under a large umbrella.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Trời mưa, bạn mở ô rồi nghiêng sang cho người đứng cạnh cùng vào. Friend nghĩa là bạn. Người ấy đã học, trò chuyện và đi chơi cùng bạn; hôm nay hai người còn chia nhau một khoảng khô dưới chiếc ô.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "friend",
+          "meaning": "một người bạn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot stands under umbrella at school exit while friend without umbrella waits nearby. Rainy school exit with mascot and friend in lavender top under a large umbrella. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stands under umbrella at school exit while friend without umbrella waits nearby.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "friend",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot stands under umbrella at school exit while friend without umbrella waits nearby. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Rainy school exit with mascot and friend in lavender top under a large umbrella. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot stands under umbrella at school exit while friend without umbrella waits nearby. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "friend",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trời mưa, bạn mở ô rồi nghiêng",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Người ấy đã học, trò chuyện và",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Giới thiệu người đi cùng",
+      "purpose": "Model a basic friendship introduction.",
+      "action": "Mascot gestures toward friend beside the umbrella, both fully covered from rain.",
+      "setting": "Rainy school exit with mascot and friend in lavender top under a large umbrella.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"This is my friend.\" Đây là bạn tôi. Friend có thể chỉ bạn nam hoặc bạn nữ. Riêng từ này không nói người ấy là người yêu; mình đang giới thiệu một mối quan hệ bạn bè.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "friend",
+          "meaning": "một người bạn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot gestures toward friend beside the umbrella, both fully covered from rain. Rainy school exit with mascot and friend in lavender top under a large umbrella. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot gestures toward friend beside the umbrella, both fully covered from rain.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"This is my friend.\" Đây",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một thói quen chung",
+      "purpose": "Connect another model to the walk under the umbrella.",
+      "action": "Mascot and friend walk side by side along sidewalk under the same umbrella.",
+      "setting": "Rainy school exit with mascot and friend in lavender top under a large umbrella.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn kể: \"I walk home with my friend.\" Tôi đi bộ về nhà cùng bạn. With my friend cho biết ai đi cùng. Hôm nay cuộc đi bộ giống mọi ngày, chỉ cần hai người bước gần nhau hơn vì trời mưa.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "friend",
+          "meaning": "một người bạn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot and friend walk side by side along sidewalk under the same umbrella. Rainy school exit with mascot and friend in lavender top under a large umbrella. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and friend walk side by side along sidewalk under the same umbrella.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể: \"I walk home with my",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giới thiệu dưới chiếc ô",
+      "purpose": "Prompt retrieval with a recognizable social context.",
+      "action": "Mascot and friend pause under umbrella, incomplete introduction at upper third.",
+      "setting": "Rainy school exit with mascot and friend in lavender top under a large umbrella.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn muốn giới thiệu người đang đi chung ô là bạn mình. Hãy nói \"This is my...\" rồi thêm từ vừa học.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "friend",
+          "meaning": "một người bạn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot and friend pause under umbrella, incomplete introduction at upper third. Rainy school exit with mascot and friend in lavender top under a large umbrella. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and friend pause under umbrella, incomplete introduction at upper third.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot and friend pause under umbrella, incomplete introduction at upper third. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Rainy school exit with mascot and friend in lavender top under a large umbrella. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot and friend pause under umbrella, incomplete introduction at upper third. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "This is my...",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn giới thiệu người đang đi",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my...\" rồi thêm từ vừa",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Cùng về đến chỗ khô",
+      "purpose": "Confirm and close the shared umbrella goal.",
+      "action": "Mascot and friend reach a sheltered doorway, umbrella tilted away from faces.",
+      "setting": "Rainy school exit with mascot and friend in lavender top under a large umbrella.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"This is my friend.\" Từ còn thiếu là friend. Hai người đã đến chỗ khô, chiếc ô cũng hoàn thành nhiệm vụ. Lần tới giới thiệu một người bạn, bạn có thể dùng câu ấy mà không cần giải thích dài.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "friend",
+          "meaning": "một người bạn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and friend reach a sheltered doorway, umbrella tilted away from faces. Rainy school exit with mascot and friend in lavender top under a large umbrella. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and friend reach a sheltered doorway, umbrella tilted away from faces.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my friend.\" Từ còn thiếu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish friendship through a helpful shared moment.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model a basic friendship introduction."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a basic friendship introduction.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Connect another model to the walk under the umbrella."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Connect another model to the walk under the umbrella.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt retrieval with a recognizable social context."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt retrieval with a recognizable social context.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close the shared umbrella goal."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the shared umbrella goal.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Trời mưa, bạn mở ô rồi nghiêng sang cho người đứng cạnh cùng vào. Friend nghĩa là bạn. Người ấy đã học, trò chuyện và đi chơi cùng bạn; hôm nay hai người còn chia nhau một khoảng khô dưới chiếc ô."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Trời mưa, bạn mở ô rồi nghiêng sang cho người đứng cạnh cùng vào. Friend nghĩa là bạn. Người ấy đã học, trò chuyện và đi chơi cùng bạn; hôm nay hai người còn chia nhau một khoảng khô dưới chiếc ô."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my friend.\" Đây là bạn tôi. Friend có thể chỉ bạn nam hoặc bạn nữ. Riêng từ này không nói người ấy là người yêu; mình đang giới thiệu một mối quan hệ bạn bè."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my friend.\" Đây là bạn tôi. Friend có thể chỉ bạn nam hoặc bạn nữ. Riêng từ này không nói người ấy là người yêu; mình đang giới thiệu một mối quan hệ bạn bè."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn kể: \"I walk home with my friend.\" Tôi đi bộ về nhà cùng bạn. With my friend cho biết ai đi cùng. Hôm nay cuộc đi bộ giống mọi ngày, chỉ cần hai người bước gần nhau hơn vì trời mưa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn giới thiệu người đang đi chung ô là bạn mình. Hãy nói \"This is my...\" rồi thêm từ vừa học."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is my friend.\" Từ còn thiếu là friend. Hai người đã đến chỗ khô, chiếc ô cũng hoàn thành nhiệm vụ. Lần tới giới thiệu một người bạn, bạn có thể dùng câu ấy mà không cần giải thích dài."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

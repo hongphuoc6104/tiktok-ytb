@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 37,
+            "seconds": 11.18,
+            "min": 8.38,
+            "max": 13.97
+          },
+          {
+            "scene_id": "SC02",
+            "units": 41,
+            "seconds": 12.44,
+            "min": 9.33,
+            "max": 15.55
+          },
+          {
+            "scene_id": "SC03",
+            "units": 30,
+            "seconds": 9.08,
+            "min": 6.81,
+            "max": 11.35
+          },
+          {
+            "scene_id": "SC04",
+            "units": 29,
+            "seconds": 12.66,
+            "min": 9.49,
+            "max": 15.82
+          },
+          {
+            "scene_id": "SC05",
+            "units": 33,
+            "seconds": 10.37,
+            "min": 7.77,
+            "max": 12.96
+          }
+        ],
+        "min": 41.78,
+        "max": 69.65,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "20371",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hai người bạn lạc đường lúc chiều muộn ở ngã ba vắng; một người nản lòng vì bản đồ rách, người kia nhìn hướng mặt trời lặn để cùng tìm ra lối về nhà ga. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

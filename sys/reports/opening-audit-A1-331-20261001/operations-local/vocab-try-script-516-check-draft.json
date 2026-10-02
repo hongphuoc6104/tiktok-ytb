@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 39,
+            "seconds": 12.33,
+            "min": 9.25,
+            "max": 15.42
+          },
+          {
+            "scene_id": "SC02",
+            "units": 34,
+            "seconds": 10.34,
+            "min": 7.76,
+            "max": 12.93
+          },
+          {
+            "scene_id": "SC03",
+            "units": 32,
+            "seconds": 10.09,
+            "min": 7.57,
+            "max": 12.61
+          },
+          {
+            "scene_id": "SC04",
+            "units": 27,
+            "seconds": 12.25,
+            "min": 9.19,
+            "max": 15.31
+          },
+          {
+            "scene_id": "SC05",
+            "units": 35,
+            "seconds": 10.92,
+            "min": 8.19,
+            "max": 13.65
+          }
+        ],
+        "min": 41.96,
+        "max": 69.92,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "17319",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Chưa trúng vòng, mình thử nữa nhé?”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ]
+}

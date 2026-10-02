@@ -1,0 +1,106 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "id": "CH01",
+      "name_vi": "Tôi",
+      "outfit_en": "A single plain light sky blue short-sleeve t-shirt (#8CCFE8)."
+    },
+    {
+      "appearance_en": "Minimal stick figure with a round white head outlined in dark navy, solid black oval eyes, and minimal navy stick limbs.",
+      "id": "CH02",
+      "name_vi": "Phong",
+      "outfit_en": "A single plain pale slate short-sleeve shirt."
+    }
+  ],
+  "custom_visible_text": [
+    {
+      "text": "7:00",
+      "placement": "small start-time field at lower ticket corner",
+      "object": "show ticket"
+    }
+  ],
+  "extra_visual_states": [],
+  "job": "vocab-show-script-661",
+  "learner_outcome_vi": "Người học nhận biết và sử dụng được danh từ show với nghĩa chương trình biểu diễn, buổi biểu diễn.",
+  "opening_function_vi": "Mở đầu bằng hành động nhìn lên biển gỗ thông báo tại lối vào sân khấu.",
+  "plot_vi": "Phong ngại mua nhầm buổi và muốn về khi sân khấu đóng; tôi kiểm giờ bảy giờ, chọn ngồi lại bên bạn để cùng chờ mở màn.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Phong cất vé, định kéo tôi về. Cậu tưởng tới sai buổi vì sân khấu còn đóng. \"When does the show start?\" Chương trình biểu diễn bắt đầu khi nào? Tôi hỏi.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Establish arrival at an open-air theater checking the entrance sign and tickets.",
+      "scene_id": "SC01",
+      "title_vi": "Tấm biển gỗ",
+      "visual_en": "Slate-shirt friend closes ticket wallet and starts to turn away from a curtained small stage; mascot stops beside him with an asking gesture. Two people only."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Phong mua vé để tôi nghe cùng, nhưng giờ ngại mình nhớ nhầm. Tôi xin xem lại vé. Chương trình biểu diễn có giờ bắt đầu, chưa thấy diễn không có nghĩa đã lỡ mất.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Ask about the performance start time with the first English model sentence.",
+      "scene_id": "SC02",
+      "title_vi": "Hỏi giờ bắt đầu",
+      "visual_en": "The stick figure in the pale slate shirt holds two tickets looking toward the narrator with an inquiring expression."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Tôi đọc cho bạn nghe. Hai người tới sớm một chút; Phong nhìn sân khấu, chưa yên tâm ngồi.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Confirm the starting time using the second English model sentence.",
+      "scene_id": "SC03",
+      "title_vi": "Bảy giờ mở màn",
+      "visual_en": "Mascot points to permitted 7:00 printed in ticket corner, slate-shirt friend reads alongside; blank stage curtain behind them."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi kéo ghế cạnh bạn, đưa vé lại. Tôi muốn ở lại nghe cùng, đâu cần hôm nay mọi thứ đúng như cậu đoán. Phong ngồi xuống, giữ cho tôi chiếc ghế sát bên.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Find seats quietly as the stage lights warm up.",
+      "scene_id": "SC04",
+      "title_vi": "Hàng ghế thứ ba",
+      "visual_en": "Both stick figures sit side by side on a wooden bench facing the lit stage curtain."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Phong hỏi liệu giờ mình vừa đọc có đúng không. Bạn nói giúp tôi câu chương trình bắt đầu lúc bảy giờ bằng tiếng Anh nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Prompt the learner to recall the first model question about the show's start time.",
+      "scene_id": "SC05",
+      "stem": "The ___ starts at seven.",
+      "title_vi": "Nhắc lại câu hỏi",
+      "visual_en": "The stick figure in the light sky blue shirt gestures toward the learner while seated."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"The show starts at seven.\" Chương trình bắt đầu lúc bảy giờ. Đèn sân khấu bật, Phong cất vé. Tôi ngồi ngay chỗ bạn giữ, cùng chờ phần mở màn sau tấm rèm.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Provide model feedback as the performance begins.",
+      "scene_id": "SC06",
+      "title_vi": "Tiếng nhạc hòa tấu",
+      "visual_en": "Two friends sit next to each other facing closed red stage curtain as stage lights turn on; no performers or audience extras visible."
+    }
+  ],
+  "title": "Giờ mở màn của Phong",
+  "editorial_review": "Reviewed and rewritten by an authorized writing agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

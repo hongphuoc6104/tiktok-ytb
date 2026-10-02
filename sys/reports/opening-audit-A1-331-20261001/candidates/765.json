@@ -1,0 +1,625 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "00682f3aea6da732495909272f775b389ef73cb6d35ae8d8155a78be6c97dca8",
+  "topic": "Học từ vựng tiếng Anh AN (từ hạn định: từ hạn định không xác định trước nguyên âm) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 80,
+    "max_seconds": 110
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ AN",
+    "Làm rõ nghĩa lõi \"từ hạn định không xác định trước nguyên âm\" (từ hạn định) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng AN, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại AN, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc ô: nhìn chữ U đã chọn đúng chưa? — Nhịp 1",
+      "purpose": "Establish the need and one selected meaning promptly.",
+      "action": "Mascot waits inside doorway holding book, rain visible outside and umbrella rack nearby.",
+      "setting": "Góc mượn đồ khi mưa.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Trời mưa mà bạn chỉ mang sách! An dùng trước danh từ đếm được số ít có âm đầu nguyên âm. \"Listen to the first sound of the next word.\" Trong bài, bạn cần một chiếc ô: umbrella. Điểm chọn là âm khi nói, không phải chỉ tên chữ cái đầu.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "an",
+          "meaning": "từ hạn định không xác định trước nguyên âm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot waits inside doorway holding book, rain visible outside and umbrella rack nearby. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot waits inside doorway holding book, rain visible outside and umbrella rack nearby.",
+          "reason": "Establish the need and one selected meaning promptly.",
+          "visible_text": [
+            {
+              "text": "an",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish the need and one selected meaning promptly.",
+          "anchor": {
+            "vi": {
+              "quote": "Trời mưa mà bạn chỉ mang sách! An dùng trước danh từ đếm được số ít có âm đầu nguyên âm. \"Listen to the first sound of the next word.\" Trong bài, bạn cần một chiếc ô: umbrella. Điểm chọn là âm khi nói, không phải chỉ tên chữ cái đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chiếc ô: nhìn chữ U đã chọn đúng chưa? — Nhịp 2",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "action": "Companion selects one umbrella from rack and offers it to mascot at sheltered doorway.",
+      "setting": "Góc mượn đồ khi mưa.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"I need an umbrella.\" Tôi cần một chiếc ô. \"One umbrella can help in this situation.\" Người bạn lấy một chiếc ở kệ, hỏi bạn có muốn mượn nó cho chuyến đi trong câu chuyện, thay vì đưa cả nhóm ô tới cửa.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "an",
+          "meaning": "từ hạn định không xác định trước nguyên âm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Companion selects one umbrella from rack and offers it to mascot at sheltered doorway. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion selects one umbrella from rack and offers it to mascot at sheltered doorway.",
+          "reason": "Use the first model at the point where the speaker needs it.",
+          "visible_text": [
+            {
+              "text": "I need an umbrella.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first model at the point where the speaker needs it.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I need an umbrella.\" Tôi cần một chiếc ô. \"One umbrella can help in this situation.\" Người bạn lấy một chiếc ở kệ, hỏi bạn có muốn mượn nó cho chuyến đi trong câu chuyện, thay vì đưa cả nhóm ô tới cửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chiếc ô: nhìn chữ U đã chọn đúng chưa? — Nhịp 3",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "action": "Close view of offered umbrella with permitted teaching model, no generalized letter rule labels.",
+      "setting": "Góc mượn đồ khi mưa.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Umbrella mở đầu bằng âm nguyên âm nên mẫu là an umbrella. \"The sound, not just the letter, guides the choice.\" Ta không nói rằng mọi từ viết bằng u đều dùng an. Bài giữ một ví dụ rõ để tránh biến mẹo nhìn chữ thành quy tắc sai.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "an",
+          "meaning": "từ hạn định không xác định trước nguyên âm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Close view of offered umbrella with permitted teaching model, no generalized letter rule labels. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Close view of offered umbrella with permitted teaching model, no generalized letter rule labels.",
+          "reason": "Show the condition or contrast that makes this usage matter.",
+          "visible_text": [
+            {
+              "text": "an",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the condition or contrast that makes this usage matter.",
+          "anchor": {
+            "vi": {
+              "quote": "Umbrella mở đầu bằng âm nguyên âm nên mẫu là an umbrella. \"The sound, not just the letter, guides the choice.\" Ta không nói rằng mọi từ viết bằng u đều dùng an. Bài giữ một ví dụ rõ để tránh biến mẹo nhìn chữ thành quy tắc sai.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chiếc ô: nhìn chữ U đã chọn đúng chưa? — Nhịp 4",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "action": "Mascot holds same single borrowed umbrella, remaining rack unchanged.",
+      "setting": "Góc mượn đồ khi mưa.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn xác nhận vật vừa nhận: \"This is an umbrella.\" Đây là một chiếc ô. \"It is the single item I needed.\" Người bạn nhìn món trong tay bạn, còn những chiếc khác ở kệ; danh từ trong mẫu vẫn số ít.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "an",
+          "meaning": "từ hạn định không xác định trước nguyên âm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot holds same single borrowed umbrella, remaining rack unchanged. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds same single borrowed umbrella, remaining rack unchanged.",
+          "reason": "Use the second model to advance or compare within the same story.",
+          "visible_text": [
+            {
+              "text": "This is an umbrella.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to advance or compare within the same story.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn xác nhận vật vừa nhận: \"This is an umbrella.\" Đây là một chiếc ô. \"It is the single item I needed.\" Người bạn nhìn món trong tay bạn, còn những chiếc khác ở kệ; danh từ trong mẫu vẫn số ít.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chiếc ô: nhìn chữ U đã chọn đúng chưa? — Nhịp 5",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "action": "Mascot prepares departure with one umbrella and protected book, companion stays inside.",
+      "setting": "Góc mượn đồ khi mưa.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "An có chức năng giới thiệu một món như a; khác ở âm đứng ngay sau. \"Keep the article with umbrella in this model.\" Không kéo thêm các từ khó chỉ để thử mẹo chữ cái. Bạn đang cần dùng đúng câu xin chiếc ô trước khi đi.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "an",
+          "meaning": "từ hạn định không xác định trước nguyên âm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot prepares departure with one umbrella and protected book, companion stays inside. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot prepares departure with one umbrella and protected book, companion stays inside.",
+          "reason": "Clarify a common trap through this example without expanding to another meaning.",
+          "visible_text": [
+            {
+              "text": "an",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "An có chức năng giới thiệu một món như a; khác ở âm đứng ngay sau. \"Keep the article with umbrella in this model.\" Không kéo thêm các từ khó chỉ để thử mẹo chữ cái. Bạn đang cần dùng đúng câu xin chiếc ô trước khi đi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Chiếc ô: nhìn chữ U đã chọn đúng chưa? — Lượt thực hành",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "action": "Hold rain, umbrella rack and complete learner model.",
+      "setting": "Góc mượn đồ khi mưa.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn cần một chiếc ô, chưa chọn chiếc cụ thể. \"Use the article that matches umbrella's first sound.\" Hãy nói: \"I need an umbrella.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "an",
+          "meaning": "từ hạn định không xác định trước nguyên âm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Hold rain, umbrella rack and complete learner model. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold rain, umbrella rack and complete learner model.",
+          "reason": "Invite a supported learner response; hold before the feedback.",
+          "visible_text": [
+            {
+              "text": "Use the article that matches umbrella's first sound.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "I need an umbrella.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Invite a supported learner response; hold before the feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn cần một chiếc ô, chưa chọn chiếc cụ thể. \"Use the article that matches umbrella's first sound.\" Hãy nói: \"I need an umbrella.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC07",
+      "title": "Chiếc ô: nhìn chữ U đã chọn đúng chưa? — Phản hồi và kết quả",
+      "purpose": "Provide the response and complete the opening promise.",
+      "action": "Mascot departs with same borrowed umbrella and book in bag, companion waves from doorway.",
+      "setting": "Góc mượn đồ khi mưa.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"I need an umbrella.\" Tôi cần một chiếc ô. \"Now you have the item you asked for.\" Bạn nhận chiếc ô được cho mượn, cất sách trước khi rời cửa. An umbrella là cụm vừa dùng đúng để xin một vật số ít; việc chọn an đi theo âm đầu của umbrella.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "an",
+          "meaning": "từ hạn định không xác định trước nguyên âm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC07_I1",
+          "description": "Mascot departs with same borrowed umbrella and book in bag, companion waves from doorway. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot departs with same borrowed umbrella and book in bag, companion waves from doorway.",
+          "reason": "Provide the response and complete the opening promise.",
+          "visible_text": [
+            {
+              "text": "I need an umbrella.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC07_B1",
+          "image_id": "SC07_I1",
+          "purpose": "Provide the response and complete the opening promise.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need an umbrella.\" Tôi cần một chiếc ô. \"Now you have the item you asked for.\" Bạn nhận chiếc ô được cho mượn, cất sách trước khi rời cửa. An umbrella là cụm vừa dùng đúng để xin một vật số ít; việc chọn an đi theo âm đầu của umbrella.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Trời mưa mà bạn chỉ mang sách! An dùng trước danh từ đếm được số ít có âm đầu nguyên âm. \"Listen to the first sound of the next word.\" Trong bài, bạn cần một chiếc ô: umbrella. Điểm chọn là âm khi nói, không phải chỉ tên chữ cái đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Trời mưa mà bạn chỉ mang sách! An dùng trước danh từ đếm được số ít có âm đầu nguyên âm. \"Listen to the first sound of the next word.\" Trong bài, bạn cần một chiếc ô: umbrella. Điểm chọn là âm khi nói, không phải chỉ tên chữ cái đầu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I need an umbrella.\" Tôi cần một chiếc ô. \"One umbrella can help in this situation.\" Người bạn lấy một chiếc ở kệ, hỏi bạn có muốn mượn nó cho chuyến đi trong câu chuyện, thay vì đưa cả nhóm ô tới cửa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I need an umbrella.\" Tôi cần một chiếc ô. \"One umbrella can help in this situation.\" Người bạn lấy một chiếc ở kệ, hỏi bạn có muốn mượn nó cho chuyến đi trong câu chuyện, thay vì đưa cả nhóm ô tới cửa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Umbrella mở đầu bằng âm nguyên âm nên mẫu là an umbrella. \"The sound, not just the letter, guides the choice.\" Ta không nói rằng mọi từ viết bằng u đều dùng an. Bài giữ một ví dụ rõ để tránh biến mẹo nhìn chữ thành quy tắc sai."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn xác nhận vật vừa nhận: \"This is an umbrella.\" Đây là một chiếc ô. \"It is the single item I needed.\" Người bạn nhìn món trong tay bạn, còn những chiếc khác ở kệ; danh từ trong mẫu vẫn số ít."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "An có chức năng giới thiệu một món như a; khác ở âm đứng ngay sau. \"Keep the article with umbrella in this model.\" Không kéo thêm các từ khó chỉ để thử mẹo chữ cái. Bạn đang cần dùng đúng câu xin chiếc ô trước khi đi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "Bạn cần một chiếc ô, chưa chọn chiếc cụ thể. \"Use the article that matches umbrella's first sound.\" Hãy nói: \"I need an umbrella.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC07",
+      "quote": "\"I need an umbrella.\" Tôi cần một chiếc ô. \"Now you have the item you asked for.\" Bạn nhận chiếc ô được cho mượn, cất sách trước khi rời cửa. An umbrella là cụm vừa dùng đúng để xin một vật số ít; việc chọn an đi theo âm đầu của umbrella."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish the need and one selected meaning promptly.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Cần ô → nói nhu cầu → nhận ô → xác nhận vật → dùng.. Next event: Companion selects one umbrella from rack and offers it to mascot at sheltered doorway."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Cần ô → nói nhu cầu → nhận ô → xác nhận vật → dùng.. Next event: Close view of offered umbrella with permitted teaching model, no generalized letter rule labels."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Cần ô → nói nhu cầu → nhận ô → xác nhận vật → dùng.. Next event: Mascot holds same single borrowed umbrella, remaining rack unchanged."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Cần ô → nói nhu cầu → nhận ô → xác nhận vật → dùng.. Next event: Mascot prepares departure with one umbrella and protected book, companion stays inside."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Cần ô → nói nhu cầu → nhận ô → xác nhận vật → dùng.. Next event: Hold rain, umbrella rack and complete learner model."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Cần ô → nói nhu cầu → nhận ô → xác nhận vật → dùng.. Next event: Mascot departs with same borrowed umbrella and book in bag, companion waves from doorway."
+    },
+    {
+      "scene_id": "SC07",
+      "purpose": "Provide the response and complete the opening promise.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Cần ô → nói nhu cầu → nhận ô → xác nhận vật → dùng.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

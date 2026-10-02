@@ -1,0 +1,526 @@
+{
+  "schema_version": "3.0",
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": [],
+  "brief_revision": 2,
+  "brief_hash": "1cc9fbcfa37ad9ec29c954afecb222fea4f246efc565f6bbf913ca253b524623",
+  "topic": "Học từ vựng tiếng Anh toilet — bồn cầu qua câu chuyện “Chổi cọ dành cho đúng chỗ”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới toilet; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “bồn cầu” của toilet; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng toilet chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng toilet, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Một góc chưa được dọn",
+      "purpose": "Identify the fixture rather than the whole room.",
+      "action": "Mascot holding a toilet brush stands beside toilet, sink sparkling clean in background; no bodily activity.",
+      "setting": "Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn đã lau gương, rửa bồn, nhưng còn một góc chưa dọn. Toilet trong bài này là bồn cầu. Cây chổi cọ đang chờ sẵn, nhìn là biết việc cuối cùng của buổi dọn phòng rồi.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "toilet",
+          "meaning": "bồn cầu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holding a toilet brush stands beside toilet, sink sparkling clean in background; no bodily activity. Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holding a toilet brush stands beside toilet, sink sparkling clean in background; no bodily activity.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "toilet",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot holding a toilet brush stands beside toilet, sink sparkling clean in background; no bodily activity. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot holding a toilet brush stands beside toilet, sink sparkling clean in background; no bodily activity. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "toilet",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đã lau gương, rửa bồn, nhưng",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Cây chổi cọ đang chờ sẵn, nhìn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of toilet and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nói việc đang làm",
+      "purpose": "Model cleaning the named fixture.",
+      "action": "Mascot uses long toilet brush inside bowl with simple mitten-like glove shape, no realistic fingers.",
+      "setting": "Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"I clean the toilet.\" Tôi cọ rửa bồn cầu. Clean là làm sạch, còn toilet là đồ vật được làm sạch trong câu này. Mình gọi đúng bồn cầu, không gọi chung cả căn phòng.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "toilet",
+          "meaning": "bồn cầu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot uses long toilet brush inside bowl with simple mitten-like glove shape, no realistic fingers. Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot uses long toilet brush inside bowl with simple mitten-like glove shape, no realistic fingers.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I clean the toilet.\" Tôi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of toilet and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Xong việc nhìn thấy rõ",
+      "purpose": "Connect the outcome sentence to cleaning.",
+      "action": "Same angle: mascot holds brush away from now clean bowl, lid up, sink fixed in background.",
+      "setting": "Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Cọ xong, bạn kiểm tra lại. \"The toilet is clean.\" Bồn cầu sạch rồi. Câu trước nói việc bạn làm; câu này nói kết quả. Vẫn là chiếc bồn cầu ấy, nhưng công việc đã hoàn thành.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "toilet",
+          "meaning": "bồn cầu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Same angle: mascot holds brush away from now clean bowl, lid up, sink fixed in background. Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Same angle: mascot holds brush away from now clean bowl, lid up, sink fixed in background.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Same angle: mascot holds brush away from now clean bowl, lid up, sink fixed in background. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Same angle: mascot holds brush away from now clean bowl, lid up, sink fixed in background. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "The toilet is clean.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Cọ xong, bạn kiểm tra lại. \"The",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The toilet is clean.\" Bồn cầu sạch",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of toilet and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Tự báo kết quả",
+      "purpose": "Prompt the learner to complete the result sentence.",
+      "action": "Mascot presents clean toilet from side, incomplete sentence above; brush stored away.",
+      "setting": "Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Đến lượt bạn báo đã dọn xong. Muốn nói bồn cầu sạch rồi, bạn điền từ nào vào \"The... is clean\"? Nhìn đúng đồ vật trong hình và thử nói cả câu cho mình nghe.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "toilet",
+          "meaning": "bồn cầu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot presents clean toilet from side, incomplete sentence above; brush stored away. Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot presents clean toilet from side, incomplete sentence above; brush stored away.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot presents clean toilet from side, incomplete sentence above; brush stored away. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot presents clean toilet from side, incomplete sentence above; brush stored away. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "The... is clean",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Đến lượt bạn báo đã dọn xong.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The... is clean\"? Nhìn đúng đồ vật",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of toilet and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Việc cuối cùng hoàn tất",
+      "purpose": "Confirm and close the cleaning task.",
+      "action": "Mascot puts brush in holder and rests hands at sides beside clean toilet and sink.",
+      "setting": "Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"The toilet is clean.\" Từ còn thiếu là toilet. Chổi cọ về chỗ, bạn cũng xong việc. Lần sau dọn phòng tắm, thử gọi đúng tên đồ vật này trước khi bắt tay vào làm nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "toilet",
+          "meaning": "bồn cầu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot puts brush in holder and rests hands at sides beside clean toilet and sink. Clean bathroom with toilet and sink, mascot in canonical shirt and simple cleaning gloves. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot puts brush in holder and rests hands at sides beside clean toilet and sink.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The toilet is clean.\" Từ còn thiếu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of toilet and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Identify the fixture rather than the whole room.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model cleaning the named fixture."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model cleaning the named fixture.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Connect the outcome sentence to cleaning."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Connect the outcome sentence to cleaning.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt the learner to complete the result sentence."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the learner to complete the result sentence.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close the cleaning task."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the cleaning task.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn đã lau gương, rửa bồn, nhưng còn một góc chưa dọn. Toilet trong bài này là bồn cầu. Cây chổi cọ đang chờ sẵn, nhìn là biết việc cuối cùng của buổi dọn phòng rồi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn đã lau gương, rửa bồn, nhưng còn một góc chưa dọn. Toilet trong bài này là bồn cầu. Cây chổi cọ đang chờ sẵn, nhìn là biết việc cuối cùng của buổi dọn phòng rồi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I clean the toilet.\" Tôi cọ rửa bồn cầu. Clean là làm sạch, còn toilet là đồ vật được làm sạch trong câu này. Mình gọi đúng bồn cầu, không gọi chung cả căn phòng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I clean the toilet.\" Tôi cọ rửa bồn cầu. Clean là làm sạch, còn toilet là đồ vật được làm sạch trong câu này. Mình gọi đúng bồn cầu, không gọi chung cả căn phòng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Cọ xong, bạn kiểm tra lại. \"The toilet is clean.\" Bồn cầu sạch rồi. Câu trước nói việc bạn làm; câu này nói kết quả. Vẫn là chiếc bồn cầu ấy, nhưng công việc đã hoàn thành."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Đến lượt bạn báo đã dọn xong. Muốn nói bồn cầu sạch rồi, bạn điền từ nào vào \"The... is clean\"? Nhìn đúng đồ vật trong hình và thử nói cả câu cho mình nghe."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The toilet is clean.\" Từ còn thiếu là toilet. Chổi cọ về chỗ, bạn cũng xong việc. Lần sau dọn phòng tắm, thử gọi đúng tên đồ vật này trước khi bắt tay vào làm nhé."
+    }
+  ]
+}

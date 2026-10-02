@@ -1,0 +1,488 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "2e1af6ad6f6d934a4f6d97659296976ac2f091f501b31b7a37f599ed686b1fbb",
+  "topic": "Học từ vựng tiếng Anh LIE (động từ: nằm) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ LIE",
+    "Làm rõ nghĩa lõi \"nằm\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng LIE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại LIE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chỗ nằm trên tấm thảm — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot and friend at fictional picnic mat on grass, clear space available beside seated companion.",
+      "setting": "Buổi picnic hư cấu, thảm trải cỏ.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Đã ngồi rồi, bạn còn muốn duỗi người trên tấm thảm! Lie ở đây là nằm. \"Put your body in a lying position.\" Bạn nghỉ trong buổi picnic hư cấu, cần xem phần thảm nào còn trống trước khi dùng.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "lie",
+          "meaning": "nằm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and friend at fictional picnic mat on grass, clear space available beside seated companion. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and friend at fictional picnic mat on grass, clear space available beside seated companion.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "lie",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Đã ngồi rồi, bạn còn muốn duỗi người trên tấm thảm! Lie ở đây là nằm. \"Put your body in a lying position.\" Bạn nghỉ trong buổi picnic hư cấu, cần xem phần thảm nào còn trống trước khi dùng.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chỗ nằm trên tấm thảm — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Friend moves bag aside from clear mat section as mascot asks permission.",
+      "setting": "Buổi picnic hư cấu, thảm trải cỏ.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Can I lie here?\" Tôi nằm ở đây được không? \"Is this space free on the mat?\" Người bạn dời túi khỏi phần thảm, để bạn có chỗ nằm trong câu chuyện.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "lie",
+          "meaning": "nằm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend moves bag aside from clear mat section as mascot asks permission. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend moves bag aside from clear mat section as mascot asks permission.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "Can I lie here?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Can I lie here?\" Tôi nằm ở đây được không? \"Is this space free on the mat?\" Người bạn dời túi khỏi phần thảm, để bạn có chỗ nằm trong câu chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chỗ nằm trên tấm thảm — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Mascot seated beside mat => Mascot lies horizontally on cleared mat with single pale-blue torso and simple limbs.",
+      "setting": "Buổi picnic hư cấu, thảm trải cỏ.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"I like to lie on the mat.\" Tôi thích nằm trên thảm. \"This is a comfortable place for me.\" Bạn đặt túi bên mép thảm rồi nằm xuống phần đã được chừa trống.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "lie",
+          "meaning": "nằm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot seated beside mat Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot seated beside mat",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot lies horizontally on cleared mat with single pale-blue torso and simple limbs. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve base camera, background, identities, clothing and all unchanged props; only the specified state and permitted teaching text may change.",
+          "change": "Mascot lies horizontally on cleared mat with single pale-blue torso and simple limbs.",
+          "reason": "Show the explicitly described before/after state with the same camera and identities.",
+          "visible_text": [
+            {
+              "text": "I like to lie on the mat.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I like to lie on the mat.\" Tôi thích nằm trên thảm. \"This is a comfortable place for me.\" Bạn đặt túi bên mép thảm rồi nằm xuống phần đã được chừa trống.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Show the explicitly described before/after state with the same camera and identities.",
+          "anchor": {
+            "vi": {
+              "quote": "I like to lie on the mat.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chỗ nằm trên tấm thảm — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold clear mat space and full question, no second lie sense illustrated.",
+      "setting": "Buổi picnic hư cấu, thảm trải cỏ.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi có thể nằm ở chỗ đang chỉ. \"Ask about that space.\" Lie trong bài này không nói sự thật hay lời nói dối. Nói: \"Can I lie here?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "lie",
+          "meaning": "nằm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold clear mat space and full question, no second lie sense illustrated. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold clear mat space and full question, no second lie sense illustrated.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "Can I lie here?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi có thể nằm ở chỗ đang chỉ. \"Ask about that space.\" Lie trong bài này không nói sự thật hay lời nói dối. Nói: \"Can I lie here?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chỗ nằm trên tấm thảm — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Mascot rests on mat while companion sits beside, bags remain outside lying space.",
+      "setting": "Buổi picnic hư cấu, thảm trải cỏ.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Can I lie here?\" Tôi nằm đây nhé? \"The mat has room for both of us.\" Bạn đã có chỗ trong buổi nghỉ hư cấu, người bạn ngồi cạnh để tiếp tục trò chuyện.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "lie",
+          "meaning": "nằm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot rests on mat while companion sits beside, bags remain outside lying space. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot rests on mat while companion sits beside, bags remain outside lying space.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "Can I lie here?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can I lie here?\" Tôi nằm đây nhé? \"The mat has room for both of us.\" Bạn đã có chỗ trong buổi nghỉ hư cấu, người bạn ngồi cạnh để tiếp tục trò chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Đã ngồi rồi, bạn còn muốn duỗi người trên tấm thảm! Lie ở đây là nằm. \"Put your body in a lying position.\" Bạn nghỉ trong buổi picnic hư cấu, cần xem phần thảm nào còn trống trước khi dùng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Đã ngồi rồi, bạn còn muốn duỗi người trên tấm thảm! Lie ở đây là nằm. \"Put your body in a lying position.\" Bạn nghỉ trong buổi picnic hư cấu, cần xem phần thảm nào còn trống trước khi dùng."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can I lie here?\" Tôi nằm ở đây được không? \"Is this space free on the mat?\" Người bạn dời túi khỏi phần thảm, để bạn có chỗ nằm trong câu chuyện."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Can I lie here?\" Tôi nằm ở đây được không? \"Is this space free on the mat?\" Người bạn dời túi khỏi phần thảm, để bạn có chỗ nằm trong câu chuyện."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nói: \"I like to lie on the mat.\" Tôi thích nằm trên thảm. \"This is a comfortable place for me.\" Bạn đặt túi bên mép thảm rồi nằm xuống phần đã được chừa trống."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn hỏi có thể nằm ở chỗ đang chỉ. \"Ask about that space.\" Lie trong bài này không nói sự thật hay lời nói dối. Nói: \"Can I lie here?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Can I lie here?\" Tôi nằm đây nhé? \"The mat has room for both of us.\" Bạn đã có chỗ trong buổi nghỉ hư cấu, người bạn ngồi cạnh để tiếp tục trò chuyện."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Đã đi dạo → muốn nằm nghỉ → hỏi chỗ → nằm.. Next event: Friend moves bag aside from clear mat section as mascot asks permission."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Đã đi dạo → muốn nằm nghỉ → hỏi chỗ → nằm.. Next event: Mascot seated beside mat => Mascot lies horizontally on cleared mat with single pale-blue torso and simple limbs."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Đã đi dạo → muốn nằm nghỉ → hỏi chỗ → nằm.. Next event: Hold clear mat space and full question, no second lie sense illustrated."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đã đi dạo → muốn nằm nghỉ → hỏi chỗ → nằm.. Next event: Mascot rests on mat while companion sits beside, bags remain outside lying space."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Đã đi dạo → muốn nằm nghỉ → hỏi chỗ → nằm.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

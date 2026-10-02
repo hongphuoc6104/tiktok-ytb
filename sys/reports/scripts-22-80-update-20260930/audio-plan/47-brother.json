@@ -1,0 +1,45 @@
+{
+  "job": "vocab-brother-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 80,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn nhìn hai anh em rồi hỏi: tiếng Anh gọi anh trai và em trai khác nhau thế nào? Brother dùng được cho cả hai. Riêng từ brother chưa cho biết người ấy lớn tuổi hay nhỏ tuổi hơn bạn. Hai người cùng nhà chưa chắc đã là anh em trai. Trong bài, lời giới thiệu và quan hệ gia đình xác nhận điều đó; chiều cao chỉ tạo câu hỏi mở đầu.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn có thể nói: \"This is my brother.\" Đây là anh hoặc em trai tôi. Quan hệ trong gia đình đã rõ. Nếu người nghe chưa cần biết ai lớn tuổi hơn, câu ấy đã đủ để giới thiệu. Older nói lớn tuổi hơn, không nói cao hơn. Người em vẫn có thể cao hơn người anh. Hãy nhìn thông tin tuổi trước khi chọn cách dịch anh trai hay em trai.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Trong câu chuyện này, người kia lớn tuổi hơn bạn. \"He is my older brother.\" Anh ấy là anh trai tôi. Older bổ sung ý lớn tuổi hơn. Mình xác định bằng tuổi, chứ không chỉ đo xem ai cao hơn.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Bạn muốn giới thiệu anh trai mình. Hãy hoàn thành \"He is my older...\" bằng từ vừa học. Older đã cho biết ai lớn tuổi hơn.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"He is my older brother.\" Từ còn thiếu là brother. Anh lớn tuổi hơn, nhưng ván chơi này bạn lại thắng. Từ chỉ quan hệ không quyết định ai giỏi trò chơi hơn, nó chỉ giúp bạn giới thiệu đúng người.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of brother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

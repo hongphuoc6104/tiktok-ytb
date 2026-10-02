@@ -1,0 +1,573 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "875d15004c7f467595019b4750f765285625c5dcc8f7433f1cfc6ad4b4118c99",
+  "topic": "Học từ vựng tiếng Anh mouth — miệng qua câu chuyện “Ăn xong rồi hãy trả lời”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới mouth; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “miệng” của mouth; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng mouth chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng mouth, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Câu trả lời chờ một chút",
+      "purpose": "Connect mouth to a familiar speaking-and-eating moment.",
+      "action": "Mascot holds bread near mouth but pauses before speaking, friend off-frame, no exaggerated teeth.",
+      "setting": "Lunch table with mascot and a simple human teaching figure shown on a separate card.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn vừa ăn một miếng bánh thì có người hỏi chuyện. Mouth nghĩa là miệng. Bạn ra hiệu chờ một chút, ăn xong miếng ấy rồi mới trả lời. Một tình huống nhỏ nhưng ai cũng dễ hình dung.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mouth",
+          "meaning": "miệng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds bread near mouth but pauses before speaking, friend off-frame, no exaggerated teeth. Lunch table with mascot and a simple human teaching figure shown on a separate card. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds bread near mouth but pauses before speaking, friend off-frame, no exaggerated teeth.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "mouth",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot holds bread near mouth but pauses before speaking, friend off-frame, no exaggerated teeth. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Lunch table with mascot and a simple human teaching figure shown on a separate card. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot holds bread near mouth but pauses before speaking, friend off-frame, no exaggerated teeth. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "mouth",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn vừa ăn một miếng bánh thì",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn ra hiệu chờ một chút, ăn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Gọi tên trên hình",
+      "purpose": "Model the noun with a simple demonstrative.",
+      "action": "Mascot points to mouth on a separate flat human face diagram, own mouth a simple curve.",
+      "setting": "Lunch table with mascot and a simple human teaching figure shown on a separate card.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Nhìn hình, bạn nói: \"This is my mouth.\" Đây là miệng tôi. Mouth chỉ bộ phận ấy trên khuôn mặt. Mình có thể vừa nói vừa chỉ nhẹ để nối từ tiếng Anh với vị trí mình đang gọi tên.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mouth",
+          "meaning": "miệng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to mouth on a separate flat human face diagram, own mouth a simple curve. Lunch table with mascot and a simple human teaching figure shown on a separate card. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to mouth on a separate flat human face diagram, own mouth a simple curve.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Mascot points to mouth on a separate flat human face diagram, own mouth a simple curve. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Lunch table with mascot and a simple human teaching figure shown on a separate card. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC02_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot points to mouth on a separate flat human face diagram, own mouth a simple curve. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "This is my mouth.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhìn hình, bạn nói: \"This is my",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my mouth.\" Đây là miệng",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hiểu một câu chỉ dẫn",
+      "purpose": "Model a familiar instruction in a pretend mirror game.",
+      "action": "Mascot holds card of simple human face opening mouth slightly, no dental detail or clinical setting.",
+      "setting": "Lunch table with mascot and a simple human teaching figure shown on a separate card.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Trong trò làm theo hình, bạn nghe: \"Open your mouth.\" Mở miệng ra. Câu này là một chỉ dẫn. Chưa cần học câu thật dài, chỉ cần nghe đúng mouth và hiểu người nói muốn bạn làm gì.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mouth",
+          "meaning": "miệng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot holds card of simple human face opening mouth slightly, no dental detail or clinical setting. Lunch table with mascot and a simple human teaching figure shown on a separate card. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds card of simple human face opening mouth slightly, no dental detail or clinical setting.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot holds card of simple human face opening mouth slightly, no dental detail or clinical setting. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Lunch table with mascot and a simple human teaching figure shown on a separate card. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot holds card of simple human face opening mouth slightly, no dental detail or clinical setting. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Open your mouth.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong trò làm theo hình, bạn nghe:",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Open your mouth.\" Mở miệng ra. Câu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Đến lượt gọi tên",
+      "purpose": "Prompt the body-part noun from the demonstrative sentence.",
+      "action": "Mascot points to simple mouth diagram; incomplete This is my... sentence above.",
+      "setting": "Lunch table with mascot and a simple human teaching figure shown on a separate card.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn đang chỉ vào miệng mình. Hãy gọi tên bằng câu \"This is my...\" và nói hết câu trước khi xem đáp án.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mouth",
+          "meaning": "miệng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot points to simple mouth diagram; incomplete This is my... sentence above. Lunch table with mascot and a simple human teaching figure shown on a separate card. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to simple mouth diagram; incomplete This is my... sentence above.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot points to simple mouth diagram; incomplete This is my... sentence above. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Lunch table with mascot and a simple human teaching figure shown on a separate card. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot points to simple mouth diagram; incomplete This is my... sentence above. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "This is my...",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đang chỉ vào miệng mình. Hãy",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my...\" và nói hết câu",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Bánh xong, câu trả lời tới",
+      "purpose": "Confirm and close the lunch interruption.",
+      "action": "Mascot sets bread on plate and speaks to off-frame friend, mouth simple and unobstructed.",
+      "setting": "Lunch table with mascot and a simple human teaching figure shown on a separate card.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"This is my mouth.\" Từ còn thiếu là mouth. Miếng bánh đã ăn xong, câu hỏi lúc nãy cũng được trả lời. Lần sau nghe từ này, bạn nhớ đúng miệng mình đang dùng để nói chuyện nhé.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "mouth",
+          "meaning": "miệng"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot sets bread on plate and speaks to off-frame friend, mouth simple and unobstructed. Lunch table with mascot and a simple human teaching figure shown on a separate card. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sets bread on plate and speaks to off-frame friend, mouth simple and unobstructed.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my mouth.\" Từ còn thiếu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of mouth and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Connect mouth to a familiar speaking-and-eating moment.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model the noun with a simple demonstrative."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the noun with a simple demonstrative.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Model a familiar instruction in a pretend mirror game."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model a familiar instruction in a pretend mirror game.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt the body-part noun from the demonstrative sentence."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the body-part noun from the demonstrative sentence.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close the lunch interruption."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the lunch interruption.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn vừa ăn một miếng bánh thì có người hỏi chuyện. Mouth nghĩa là miệng. Bạn ra hiệu chờ một chút, ăn xong miếng ấy rồi mới trả lời. Một tình huống nhỏ nhưng ai cũng dễ hình dung."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn vừa ăn một miếng bánh thì có người hỏi chuyện. Mouth nghĩa là miệng. Bạn ra hiệu chờ một chút, ăn xong miếng ấy rồi mới trả lời. Một tình huống nhỏ nhưng ai cũng dễ hình dung."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Nhìn hình, bạn nói: \"This is my mouth.\" Đây là miệng tôi. Mouth chỉ bộ phận ấy trên khuôn mặt. Mình có thể vừa nói vừa chỉ nhẹ để nối từ tiếng Anh với vị trí mình đang gọi tên."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Nhìn hình, bạn nói: \"This is my mouth.\" Đây là miệng tôi. Mouth chỉ bộ phận ấy trên khuôn mặt. Mình có thể vừa nói vừa chỉ nhẹ để nối từ tiếng Anh với vị trí mình đang gọi tên."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Trong trò làm theo hình, bạn nghe: \"Open your mouth.\" Mở miệng ra. Câu này là một chỉ dẫn. Chưa cần học câu thật dài, chỉ cần nghe đúng mouth và hiểu người nói muốn bạn làm gì."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn đang chỉ vào miệng mình. Hãy gọi tên bằng câu \"This is my...\" và nói hết câu trước khi xem đáp án."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is my mouth.\" Từ còn thiếu là mouth. Miếng bánh đã ăn xong, câu hỏi lúc nãy cũng được trả lời. Lần sau nghe từ này, bạn nhớ đúng miệng mình đang dùng để nói chuyện nhé."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13922",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

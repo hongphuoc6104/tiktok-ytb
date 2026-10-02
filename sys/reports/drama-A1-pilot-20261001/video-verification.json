@@ -1,0 +1,57 @@
+{
+  "video_revision": 1,
+  "video_path": "/home/hongphuoc6104/Desktop/pipelineFlow/sys/runs/vocab-wait-for-script-738/revisions/render/1/video.mp4",
+  "sha256": "d8a8dd421ba9bb3d639a361c2504c1590dfd11452cc256958807ab435391ea30",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1",
+        "side_data_list": [
+          {}
+        ]
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "61.760000",
+      "size": "8609231"
+    }
+  },
+  "full_decode_no_errors": true,
+  "inspected_mp4_frames_seconds": [
+    1,
+    6,
+    17,
+    21,
+    26,
+    31,
+    39,
+    44,
+    48,
+    60
+  ],
+  "phone_frame_size": "360x640",
+  "all_nine_planned_images_represented_in_samples": true,
+  "audio_listening": "unsupported by agent tools",
+  "continuous_playback_review": "pending human viewing/listening",
+  "caption_finding": {
+    "scene": "SC05",
+    "start": 41.2,
+    "end": 46.32,
+    "issue": "Caption leaves me. as a standalone line during the practice hold; the upper exercise Please ... me. remains readable."
+  },
+  "state": "awaiting_review",
+  "content_revision": 3,
+  "media_revision": 2,
+  "video_approval_recorded": false
+}

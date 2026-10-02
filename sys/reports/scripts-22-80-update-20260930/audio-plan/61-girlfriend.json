@@ -1,0 +1,45 @@
+{
+  "job": "vocab-girlfriend-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 80,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn hỏi chiếc ghế trống đang dành cho ai, người khách nói đang chờ girlfriend. Trong bài này, girlfriend là bạn gái theo nghĩa người yêu nữ. Người vừa tới là người yêu của anh ấy, không chỉ một người bạn nữ bất kỳ. Người đàn ông giới thiệu người yêu nữ của mình trong bài. Nếu một người bạn nữ ngồi cùng bàn, bạn không tự gọi cô ấy là girlfriend theo nghĩa đang học hôm nay.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of girlfriend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Anh ấy nói: \"This is my girlfriend.\" Đây là bạn gái tôi. Trong tình huống này, câu nói giới thiệu người yêu. Mình cần ngữ cảnh ấy để hiểu đúng quan hệ, thay vì chỉ nhìn thấy một người phụ nữ. My thuộc về người đàn ông đang nói. Mascot là người nghe và tổ chức trò chơi, nên quan hệ được giới thiệu là giữa hai vị khách, không phải với mascot.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of girlfriend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Anh ấy kể: \"My girlfriend likes games.\" Bạn gái tôi thích trò chơi. Vì vậy hai người đến buổi chơi chung hôm nay. My girlfriend chỉ đúng người vừa được giới thiệu, còn likes games mở ra một chuyện để nói tiếp.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of girlfriend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Người đàn ông giới thiệu người yêu nữ của mình. Bạn đọc lời của anh ấy: \"This is my...\" Từ còn thiếu là gì?",
+      "learner_pause_seconds": 5,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of girlfriend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"This is my girlfriend.\" Từ cần điền là girlfriend. Chiếc ghế đã có người ngồi, mọi người bắt đầu chọn quân chơi. Một lời giới thiệu ngắn đã giúp cả bàn hiểu ai đang đến cùng ai.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of girlfriend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

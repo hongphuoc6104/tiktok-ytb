@@ -1,0 +1,45 @@
+{
+  "job": "vocab-classmate-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 80,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Ở sân trường bạn gặp một người học lớp khác. Vào lớp mình, bạn mở hộp bút thấy trống trơn; người ngồi cạnh đưa sang một chiếc. Classmate là bạn cùng lớp. Hai bạn học chung lớp nên có từ này để giới thiệu. Ở sân trường, bạn gặp một người học lớp khác. Hai người cùng trường nhưng chưa phải bạn cùng lớp. Vào đúng lớp mình, quan hệ classmate mới được xác nhận với người ngồi cạnh.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of classmate and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nói: \"This is my classmate.\" Đây là bạn cùng lớp của tôi. Classmate cho biết hai người học cùng một lớp. Từ này không tự nói rằng hai bạn thân nhau đến mức nào hay đã quen bao lâu. Mượn bút cũng chưa chứng minh hai người cùng lớp: bạn có thể mượn của người khác. Trong bài, cả hai đang học chung lớp nên lời giới thiệu có căn cứ rõ.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of classmate and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bạn kể: \"My classmate helps me.\" Bạn cùng lớp giúp tôi. Hôm nay sự giúp đỡ là chiếc bút được đưa sang đúng lúc. My classmate vẫn chỉ người bên cạnh, không cần đổi sang một nhân vật khác.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of classmate and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Hai người học chung một lớp. Bạn giới thiệu người bên cạnh bằng \"This is my...\" gì? Hãy chọn từ chỉ quan hệ học tập.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of classmate and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"This is my classmate.\" Từ cần điền là classmate. Làm bài xong, bạn trả bút và cảm ơn. Chỉ một việc nhỏ trong lớp cũng đủ cho bạn nhớ cả từ lẫn một câu giới thiệu dùng được ngay.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of classmate and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

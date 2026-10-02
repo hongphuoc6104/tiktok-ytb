@@ -1,0 +1,542 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "57d8f81b73e3d13390a120f3e755c053aa824bb2b5149e5f808207620e01fd94",
+  "topic": "Học từ vựng tiếng Anh HEAR (động từ: nghe thấy) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ HEAR",
+    "Làm rõ nghĩa lõi \"nghe thấy\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng HEAR, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại HEAR, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Nghe thấy người ở đầu cuộc gọi — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Mascot calls companion over fictional phone connection, both communicating without actual signal-quality claim.",
+      "setting": "Tranh cuộc gọi hư cấu, hai nhân vật.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Bạn ơi, nghe thấy mình không? Hear nghĩa là nghe thấy. \"Sound reaches the listener in this scene.\" Bạn kể một cuộc gọi hư cấu của hai nhân vật, cần gọi điều người nghe nhận từ lời người nói.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hear",
+          "meaning": "nghe thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot calls companion over fictional phone connection, both communicating without actual signal-quality claim. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot calls companion over fictional phone connection, both communicating without actual signal-quality claim.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "hear",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn ơi, nghe thấy mình không? Hear nghĩa là nghe thấy. \"Sound reaches the listener in this scene.\" Bạn kể một cuộc gọi hư cấu của hai nhân vật, cần gọi điều người nghe nhận từ lời người nói.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nghe thấy người ở đầu cuộc gọi — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Fictional speaker on phone asks if heard, other character responds in illustrated story.",
+      "setting": "Tranh cuộc gọi hư cấu, hai nhân vật.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Nhân vật hỏi: \"Can you hear me?\" Bạn có nghe thấy tôi không? \"Am I being heard in this talk?\" Người ở đầu kia trả lời theo bối cảnh câu chuyện, để cuộc nói chuyện biết có thể bắt đầu phần cần trao đổi chưa.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hear",
+          "meaning": "nghe thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Fictional speaker on phone asks if heard, other character responds in illustrated story. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Fictional speaker on phone asks if heard, other character responds in illustrated story.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "Can you hear me?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhân vật hỏi: \"Can you hear me?\" Bạn có nghe thấy tôi không? \"Am I being heard in this talk?\" Người ở đầu kia trả lời theo bối cảnh câu chuyện, để cuộc nói chuyện biết có thể bắt đầu phần cần trao đổi chưa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nghe thấy người ở đầu cuộc gọi — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both refer to fictional conversation with a small question-note icon for unclear details.",
+      "setting": "Tranh cuộc gọi hư cấu, hai nhân vật.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Hear ở mẫu này nói nghe thấy, chưa tự chứng minh đã chú ý hay hiểu hết mọi điều được nói. \"Hearing and following the message are not the same check.\" Hai nhân vật còn có thể nhờ nhắc lại nếu phần thông tin trong câu chuyện chưa rõ.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hear",
+          "meaning": "nghe thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both refer to fictional conversation with a small question-note icon for unclear details. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both refer to fictional conversation with a small question-note icon for unclear details.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "hear",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Hear ở mẫu này nói nghe thấy, chưa tự chứng minh đã chú ý hay hiểu hết mọi điều được nói. \"Hearing and following the message are not the same check.\" Hai nhân vật còn có thể nhờ nhắc lại nếu phần thông tin trong câu chuyện chưa rõ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nghe thấy người ở đầu cuộc gọi — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Fictional listener confirms hearing and both discuss planned meeting.",
+      "setting": "Tranh cuộc gọi hư cấu, hai nhân vật.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Nhân vật đáp: \"I can hear you now.\" Bây giờ tôi nghe thấy bạn. \"Your words are reaching me in the story.\" Hai người chuyển sang việc hẹn gặp, tiếp tục nói về giờ và nơi gặp đã được cả hai cùng nhắc.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hear",
+          "meaning": "nghe thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Fictional listener confirms hearing and both discuss planned meeting. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Fictional listener confirms hearing and both discuss planned meeting.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "I can hear you now.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhân vật đáp: \"I can hear you now.\" Bây giờ tôi nghe thấy bạn. \"Your words are reaching me in the story.\" Hai người chuyển sang việc hẹn gặp, tiếp tục nói về giờ và nơi gặp đã được cả hai cùng nhắc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Nghe thấy người ở đầu cuộc gọi — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold fictional call illustration and full learner question, no real hearing test.",
+      "setting": "Tranh cuộc gọi hư cấu, hai nhân vật.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn đóng vai người hỏi có nghe thấy mình. \"Use the question from the scene.\" Hãy nói: \"Can you hear me?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hear",
+          "meaning": "nghe thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold fictional call illustration and full learner question, no real hearing test. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold fictional call illustration and full learner question, no real hearing test.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Can you hear me?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đóng vai người hỏi có nghe thấy mình. \"Use the question from the scene.\" Hãy nói: \"Can you hear me?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Nghe thấy người ở đầu cuộc gọi — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Mascot and companion continue fictional call discussion over meeting plan.",
+      "setting": "Tranh cuộc gọi hư cấu, hai nhân vật.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Can you hear me?\" Bạn nghe thấy tôi không? \"The conversation has its reply now.\" Hai nhân vật đã tiếp tục lời hẹn của câu chuyện, còn người học có mẫu hear để hỏi về việc nghe thấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hear",
+          "meaning": "nghe thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Mascot and companion continue fictional call discussion over meeting plan. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion continue fictional call discussion over meeting plan.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "Can you hear me?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Can you hear me?\" Bạn nghe thấy tôi không? \"The conversation has its reply now.\" Hai nhân vật đã tiếp tục lời hẹn của câu chuyện, còn người học có mẫu hear để hỏi về việc nghe thấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn ơi, nghe thấy mình không? Hear nghĩa là nghe thấy. \"Sound reaches the listener in this scene.\" Bạn kể một cuộc gọi hư cấu của hai nhân vật, cần gọi điều người nghe nhận từ lời người nói."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn ơi, nghe thấy mình không? Hear nghĩa là nghe thấy. \"Sound reaches the listener in this scene.\" Bạn kể một cuộc gọi hư cấu của hai nhân vật, cần gọi điều người nghe nhận từ lời người nói."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Nhân vật hỏi: \"Can you hear me?\" Bạn có nghe thấy tôi không? \"Am I being heard in this talk?\" Người ở đầu kia trả lời theo bối cảnh câu chuyện, để cuộc nói chuyện biết có thể bắt đầu phần cần trao đổi chưa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Nhân vật hỏi: \"Can you hear me?\" Bạn có nghe thấy tôi không? \"Am I being heard in this talk?\" Người ở đầu kia trả lời theo bối cảnh câu chuyện, để cuộc nói chuyện biết có thể bắt đầu phần cần trao đổi chưa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Hear ở mẫu này nói nghe thấy, chưa tự chứng minh đã chú ý hay hiểu hết mọi điều được nói. \"Hearing and following the message are not the same check.\" Hai nhân vật còn có thể nhờ nhắc lại nếu phần thông tin trong câu chuyện chưa rõ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Nhân vật đáp: \"I can hear you now.\" Bây giờ tôi nghe thấy bạn. \"Your words are reaching me in the story.\" Hai người chuyển sang việc hẹn gặp, tiếp tục nói về giờ và nơi gặp đã được cả hai cùng nhắc."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn đóng vai người hỏi có nghe thấy mình. \"Use the question from the scene.\" Hãy nói: \"Can you hear me?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Can you hear me?\" Bạn nghe thấy tôi không? \"The conversation has its reply now.\" Hai nhân vật đã tiếp tục lời hẹn của câu chuyện, còn người học có mẫu hear để hỏi về việc nghe thấy."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Mascot calls companion over fictional phone connection, both communicating without actual signal-quality claim. Continue with the existing connected model: Fictional speaker on phone asks if heard, other character responds in illustrated story."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Một người nói → hỏi nghe được → người kia đáp → trao đổi.. Next event: Both refer to fictional conversation with a small question-note icon for unclear details."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Một người nói → hỏi nghe được → người kia đáp → trao đổi.. Next event: Fictional listener confirms hearing and both discuss planned meeting."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Một người nói → hỏi nghe được → người kia đáp → trao đổi.. Next event: Hold fictional call illustration and full learner question, no real hearing test."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Một người nói → hỏi nghe được → người kia đáp → trao đổi.. Next event: Mascot and companion continue fictional call discussion over meeting plan."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Một người nói → hỏi nghe được → người kia đáp → trao đổi.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

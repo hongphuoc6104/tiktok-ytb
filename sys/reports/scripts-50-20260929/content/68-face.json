@@ -1,0 +1,448 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "18c92b30c16976e00a31e905327ff96fc7e924a49db13cd78f4998d084d004fd",
+  "topic": "Học từ vựng tiếng Anh FACE (danh từ: khuôn mặt) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FACE",
+    "Làm rõ nghĩa lõi \"khuôn mặt\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FACE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FACE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Small expressive eyebrows and changing mouth curves are allowed. Do not add hair, realistic muscles, detailed fingers, a realistic nose or ears to this mascot.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); simple lower clothing where needed. No stacked shirts."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Kem chỉ dính một chỗ",
+      "purpose": "Make the face the concrete referent.",
+      "action": "Soi gương thấy vệt kem cạnh miệng.",
+      "setting": "Home sink and mirror with canonical mascot; no identity-changing facial details.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn ăn bánh xong, áo vẫn sạch nhưng quanh miệng còn dính kem. Face là khuôn mặt. Vệt kem ở ngay phần trước của đầu, nơi có mắt và miệng, nên chỉ cần nhìn gương là thấy.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "face",
+          "meaning": "khuôn mặt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot sees a small cream smear near mouth in mirror, shirt and hands otherwise clean. Home sink and mirror with canonical mascot; no identity-changing facial details. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sees a small cream smear near mouth in mirror, shirt and hands otherwise clean.",
+          "reason": "Make the face the concrete referent.",
+          "visible_text": [
+            {
+              "text": "face",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the face the concrete referent.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn ăn bánh xong, áo vẫn sạch nhưng quanh miệng còn dính kem. Face là khuôn mặt. Vệt kem ở ngay phần trước của đầu, nơi có mắt và miệng, nên chỉ cần nhìn gương là thấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Một câu nhắc đúng việc",
+      "purpose": "Model a common facial-cleaning instruction.",
+      "action": "Rửa mặt ở bồn.",
+      "setting": "Home sink and mirror with canonical mascot; no identity-changing facial details.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn được nhắc: \"Wash your face.\" Rửa mặt đi. Your face là khuôn mặt của bạn. Câu này nói đúng phần đang cần làm sạch, không bảo bạn đi thay toàn bộ quần áo hay dọn cả căn bếp.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "face",
+          "meaning": "khuôn mặt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot touches water at sink and gestures toward own face, mirror reflects same figure. Home sink and mirror with canonical mascot; no identity-changing facial details. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot touches water at sink and gestures toward own face, mirror reflects same figure.",
+          "reason": "Model a common facial-cleaning instruction.",
+          "visible_text": [
+            {
+              "text": "Wash your face.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model a common facial-cleaning instruction.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn được nhắc: \"Wash your face.\" Rửa mặt đi. Your face là khuôn mặt của bạn. Câu này nói đúng phần đang cần làm sạch, không bảo bạn đi thay toàn bộ quần áo hay dọn cả căn bếp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Sau khi đã rửa",
+      "purpose": "Connect a result sentence to the earlier instruction.",
+      "action": "Mặt đã sạch trong gương.",
+      "setting": "Home sink and mirror with canonical mascot; no identity-changing facial details.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Rửa xong, bạn nói: \"My face is clean.\" Mặt tôi sạch rồi. Clean mô tả kết quả, còn face vẫn là khuôn mặt vừa dính kem. Hai câu nối với nhau bằng một hành động có thể nhìn thấy.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "face",
+          "meaning": "khuôn mặt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot looks in mirror with cream removed from face; towel hangs beside sink. Home sink and mirror with canonical mascot; no identity-changing facial details. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot looks in mirror with cream removed from face; towel hangs beside sink.",
+          "reason": "Connect a result sentence to the earlier instruction.",
+          "visible_text": [
+            {
+              "text": "My face is clean.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect a result sentence to the earlier instruction.",
+          "anchor": {
+            "vi": {
+              "quote": "Rửa xong, bạn nói: \"My face is clean.\" Mặt tôi sạch rồi. Clean mô tả kết quả, còn face vẫn là khuôn mặt vừa dính kem. Hai câu nối với nhau bằng một hành động có thể nhìn thấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nhắc người vừa ăn bánh",
+      "purpose": "Prompt the body-part noun in the same command.",
+      "action": "Nói câu nhắc rửa mặt.",
+      "setting": "Home sink and mirror with canonical mascot; no identity-changing facial details.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Nhân vật còn dính kem quanh miệng. Bạn nhắc rửa mặt bằng câu \"Wash your...\" Hãy thêm từ gọi đúng bộ phận cần rửa.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "face",
+          "meaning": "khuôn mặt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot beside sink has a small cream smear again in an explicit practice shot, incomplete command above. Home sink and mirror with canonical mascot; no identity-changing facial details. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot beside sink has a small cream smear again in an explicit practice shot, incomplete command above.",
+          "reason": "Prompt the body-part noun in the same command.",
+          "visible_text": [
+            {
+              "text": "Wash your...",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the body-part noun in the same command.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhân vật còn dính kem quanh miệng. Bạn nhắc rửa mặt bằng câu \"Wash your...\" Hãy thêm từ gọi đúng bộ phận cần rửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the concrete retrieval question; leave the full quiet hold before the next scene gives feedback.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Gương không còn bằng chứng",
+      "purpose": "Confirm and resolve the smear.",
+      "action": "Mỉm cười với khuôn mặt đã sạch.",
+      "setting": "Home sink and mirror with canonical mascot; no identity-changing facial details.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "\"Wash your face.\" Từ còn thiếu là face. Vệt kem đã hết, nụ cười vẫn còn. Bạn vừa dùng được một câu nhắc và một câu báo kết quả, đều gắn với cùng khuôn mặt trong chiếc gương.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "face",
+          "meaning": "khuôn mặt"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot smiles into mirror with clean face, cream-free shirt and no additional anatomy. Home sink and mirror with canonical mascot; no identity-changing facial details. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot smiles into mirror with clean face, cream-free shirt and no additional anatomy.",
+          "reason": "Confirm and resolve the smear.",
+          "visible_text": [
+            {
+              "text": "Wash your face.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm and resolve the smear.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Wash your face.\" Từ còn thiếu là face. Vệt kem đã hết, nụ cười vẫn còn. Bạn vừa dùng được một câu nhắc và một câu báo kết quả, đều gắn với cùng khuôn mặt trong chiếc gương.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer, then resolve the opening situation warmly.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the face the concrete referent.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Use the established situation (Kem chỉ dính một chỗ) to motivate the next learning action: Model a common facial-cleaning instruction."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a common facial-cleaning instruction.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the established situation (Một câu nhắc đúng việc) to motivate the next learning action: Connect a result sentence to the earlier instruction."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Connect a result sentence to the earlier instruction.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Use the established situation (Sau khi đã rửa) to motivate the next learning action: Prompt the body-part noun in the same command."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the body-part noun in the same command.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Use the established situation (Nhắc người vừa ăn bánh) to motivate the next learning action: Confirm and resolve the smear."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the smear.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After explicit learner feedback, resolve the concrete situation introduced in the opening."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn ăn bánh xong, áo vẫn sạch nhưng quanh miệng còn dính kem. Face là khuôn mặt. Vệt kem ở ngay phần trước của đầu, nơi có mắt và miệng, nên chỉ cần nhìn gương là thấy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn ăn bánh xong, áo vẫn sạch nhưng quanh miệng còn dính kem. Face là khuôn mặt. Vệt kem ở ngay phần trước của đầu, nơi có mắt và miệng, nên chỉ cần nhìn gương là thấy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn được nhắc: \"Wash your face.\" Rửa mặt đi. Your face là khuôn mặt của bạn. Câu này nói đúng phần đang cần làm sạch, không bảo bạn đi thay toàn bộ quần áo hay dọn cả căn bếp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn được nhắc: \"Wash your face.\" Rửa mặt đi. Your face là khuôn mặt của bạn. Câu này nói đúng phần đang cần làm sạch, không bảo bạn đi thay toàn bộ quần áo hay dọn cả căn bếp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Rửa xong, bạn nói: \"My face is clean.\" Mặt tôi sạch rồi. Clean mô tả kết quả, còn face vẫn là khuôn mặt vừa dính kem. Hai câu nối với nhau bằng một hành động có thể nhìn thấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Nhân vật còn dính kem quanh miệng. Bạn nhắc rửa mặt bằng câu \"Wash your...\" Hãy thêm từ gọi đúng bộ phận cần rửa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Wash your face.\" Từ còn thiếu là face. Vệt kem đã hết, nụ cười vẫn còn. Bạn vừa dùng được một câu nhắc và một câu báo kết quả, đều gắn với cùng khuôn mặt trong chiếc gương."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

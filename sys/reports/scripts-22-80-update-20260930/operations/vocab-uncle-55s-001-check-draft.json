@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 88,
+            "seconds": 26.84,
+            "min": 20.13,
+            "max": 33.56
+          },
+          {
+            "scene_id": "SC02",
+            "units": 93,
+            "seconds": 27.78,
+            "min": 20.84,
+            "max": 34.73
+          },
+          {
+            "scene_id": "SC03",
+            "units": 68,
+            "seconds": 20.24,
+            "min": 15.18,
+            "max": 25.3
+          },
+          {
+            "scene_id": "SC04",
+            "units": 25,
+            "seconds": 12.99,
+            "min": 9.75,
+            "max": 16.24
+          },
+          {
+            "scene_id": "SC05",
+            "units": 42,
+            "seconds": 12.87,
+            "min": 9.65,
+            "max": 16.08
+          }
+        ],
+        "min": 75.55,
+        "max": 125.91,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "13789",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

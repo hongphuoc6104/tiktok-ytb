@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 33,
+            "seconds": 10.22,
+            "min": 7.66,
+            "max": 12.77
+          },
+          {
+            "scene_id": "SC02",
+            "units": 32,
+            "seconds": 9.64,
+            "min": 7.23,
+            "max": 12.05
+          },
+          {
+            "scene_id": "SC03",
+            "units": 38,
+            "seconds": 11.91,
+            "min": 8.93,
+            "max": 14.88
+          },
+          {
+            "scene_id": "SC04",
+            "units": 38,
+            "seconds": 15.46,
+            "min": 11.59,
+            "max": 19.32
+          },
+          {
+            "scene_id": "SC05",
+            "units": 36,
+            "seconds": 11.35,
+            "min": 8.51,
+            "max": 14.19
+          }
+        ],
+        "min": 43.92,
+        "max": 73.21,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "21366",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi loay hoay với máy ảnh cũ, Khánh đứng đợi để chụp ảnh trước ngày chuyển trường; bạn cùng chọn một góc muốn giữ làm kỷ niệm. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

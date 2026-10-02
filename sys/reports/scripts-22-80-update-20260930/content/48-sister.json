@@ -1,0 +1,593 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "e8bddb49d09f014e98c160989f7b094b4b3aec074882a28511df9c4e9c4bcfbd",
+  "topic": "Học từ vựng tiếng Anh sister — chị hoặc em gái qua câu chuyện “Là chị hay em? Phải hỏi thêm”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới sister; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “chị hoặc em gái” của sister; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng sister chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng sister, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Em gái",
+      "appearance": "Female sibling younger than mascot in story, simple flat illustration, minimal limbs.",
+      "outfit": "Plain lavender top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc thiệp của ai?",
+      "purpose": "Set up a sister relation through a shared task.",
+      "action": "Mascot holds a handmade card while female sibling arranges colored paper nearby.",
+      "setting": "Home craft table with mascot and younger female sibling in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn khoe một chiếc thiệp do người cùng nhà làm, rồi giới thiệu cô ấy là sister. Sister có thể là chị gái hoặc em gái. Chỉ nghe một từ này, người khác chưa biết ai trong hai bạn lớn tuổi hơn. Trong lời giới thiệu đầu, bạn chưa nói tuổi nên người nghe chỉ biết quan hệ chị em gái. Họ cần thêm một thông tin nữa để dịch chính xác thành chị hay em.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sister",
+          "meaning": "chị hoặc em gái"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds a handmade card while female sibling arranges colored paper nearby. Home craft table with mascot and younger female sibling in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds a handmade card while female sibling arranges colored paper nearby.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "sister",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Show an explicit sibling relation card between mascot and declared younger female sibling. Use an age-order arrow, not height or craft skill, to establish younger. Home craft table with mascot and younger female sibling in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show an explicit sibling relation card between mascot and declared younger female sibling. Use an age-order arrow, not height or craft skill, to establish younger.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "sister",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn khoe một chiếc thiệp do người",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong lời giới thiệu đầu, bạn chưa",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of sister and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Giới thiệu người làm thiệp",
+      "purpose": "Model a basic kinship introduction.",
+      "action": "Mascot points toward female sibling holding scissors safely closed beside paper.",
+      "setting": "Home craft table with mascot and younger female sibling in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"This is my sister.\" Đây là chị hoặc em gái tôi. Câu ấy cho biết quan hệ giữa hai người. Để biết cô ấy là chị hay em, người nghe cần thêm thông tin về tuổi. Younger nói nhỏ tuổi hơn, không nói thấp hơn. Một người em gái có thể cao hơn chị hoặc anh mình. Không dùng dáng người để quyết định thứ tự tuổi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sister",
+          "meaning": "chị hoặc em gái"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points toward female sibling holding scissors safely closed beside paper. Home craft table with mascot and younger female sibling in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points toward female sibling holding scissors safely closed beside paper.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Show an explicit sibling relation card between mascot and declared younger female sibling. Use an age-order arrow, not height or craft skill, to establish younger. Home craft table with mascot and younger female sibling in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show an explicit sibling relation card between mascot and declared younger female sibling. Use an age-order arrow, not height or craft skill, to establish younger.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "sister",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"This is my sister.\" Đây",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Younger nói nhỏ tuổi hơn, không nói",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of sister and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nói rõ là em gái",
+      "purpose": "Add the chosen age distinction.",
+      "action": "Younger sister hands a folded card to mascot, both beside craft table.",
+      "setting": "Home craft table with mascot and younger female sibling in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Ở câu chuyện này, cô ấy nhỏ tuổi hơn bạn. \"She is my younger sister.\" Cô ấy là em gái tôi. Younger thêm ý ít tuổi hơn. Bạn nhớ cả cụm younger sister để giới thiệu đúng quan hệ này.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sister",
+          "meaning": "chị hoặc em gái"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Younger sister hands a folded card to mascot, both beside craft table. Home craft table with mascot and younger female sibling in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Younger sister hands a folded card to mascot, both beside craft table.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Younger sister hands a folded card to mascot, both beside craft table. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Home craft table with mascot and younger female sibling in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Younger sister hands a folded card to mascot, both beside craft table. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "She is my younger sister.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Ở câu chuyện này, cô ấy nhỏ",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"She is my younger sister.\" Cô ấy",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of sister and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Người nhỏ tuổi hơn",
+      "purpose": "Prompt the appropriate target in a full sentence.",
+      "action": "Mascot stands beside younger sister, incomplete introduction at top without answer word.",
+      "setting": "Home craft table with mascot and younger female sibling in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn muốn giới thiệu em gái mình. Hãy hoàn thành \"She is my younger...\" Younger cho biết người ấy nhỏ tuổi hơn bạn.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sister",
+          "meaning": "chị hoặc em gái"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot stands beside younger sister, incomplete introduction at top without answer word. Home craft table with mascot and younger female sibling in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stands beside younger sister, incomplete introduction at top without answer word.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot stands beside younger sister, incomplete introduction at top without answer word. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Home craft table with mascot and younger female sibling in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot stands beside younger sister, incomplete introduction at top without answer word. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "She is my younger...",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn giới thiệu em gái mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"She is my younger...\" Younger cho biết",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of sister and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Thiệp đẹp chẳng cần lớn tuổi",
+      "purpose": "Confirm and close the craft premise.",
+      "action": "Mascot displays finished card proudly while younger sister smiles beside remaining paper.",
+      "setting": "Home craft table with mascot and younger female sibling in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"She is my younger sister.\" Từ cần điền là sister. Em nhỏ tuổi hơn nhưng gấp thiệp rất khéo. Bạn vừa giới thiệu được người làm món quà, vừa nói rõ vì sao mình gọi cô ấy là em gái.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sister",
+          "meaning": "chị hoặc em gái"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot displays finished card proudly while younger sister smiles beside remaining paper. Home craft table with mascot and younger female sibling in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot displays finished card proudly while younger sister smiles beside remaining paper.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"She is my younger sister.\" Từ cần",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of sister and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Set up a sister relation through a shared task.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model a basic kinship introduction."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a basic kinship introduction.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Add the chosen age distinction."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Add the chosen age distinction.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt the appropriate target in a full sentence."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the appropriate target in a full sentence.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close the craft premise."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the craft premise.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn khoe một chiếc thiệp do người cùng nhà làm, rồi giới thiệu cô ấy là sister. Sister có thể là chị gái hoặc em gái. Chỉ nghe một từ này, người khác chưa biết ai trong hai bạn lớn tuổi hơn. Trong lời giới thiệu đầu, bạn chưa nói tuổi nên người nghe chỉ biết quan hệ chị em gái. Họ cần thêm một thông tin nữa để dịch chính xác thành chị hay em."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn khoe một chiếc thiệp do người cùng nhà làm, rồi giới thiệu cô ấy là sister. Sister có thể là chị gái hoặc em gái. Chỉ nghe một từ này, người khác chưa biết ai trong hai bạn lớn tuổi hơn. Trong lời giới thiệu đầu, bạn chưa nói tuổi nên người nghe chỉ biết quan hệ chị em gái. Họ cần thêm một thông tin nữa để dịch chính xác thành chị hay em."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my sister.\" Đây là chị hoặc em gái tôi. Câu ấy cho biết quan hệ giữa hai người. Để biết cô ấy là chị hay em, người nghe cần thêm thông tin về tuổi. Younger nói nhỏ tuổi hơn, không nói thấp hơn. Một người em gái có thể cao hơn chị hoặc anh mình. Không dùng dáng người để quyết định thứ tự tuổi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my sister.\" Đây là chị hoặc em gái tôi. Câu ấy cho biết quan hệ giữa hai người. Để biết cô ấy là chị hay em, người nghe cần thêm thông tin về tuổi. Younger nói nhỏ tuổi hơn, không nói thấp hơn. Một người em gái có thể cao hơn chị hoặc anh mình. Không dùng dáng người để quyết định thứ tự tuổi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Ở câu chuyện này, cô ấy nhỏ tuổi hơn bạn. \"She is my younger sister.\" Cô ấy là em gái tôi. Younger thêm ý ít tuổi hơn. Bạn nhớ cả cụm younger sister để giới thiệu đúng quan hệ này."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn giới thiệu em gái mình. Hãy hoàn thành \"She is my younger...\" Younger cho biết người ấy nhỏ tuổi hơn bạn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"She is my younger sister.\" Từ cần điền là sister. Em nhỏ tuổi hơn nhưng gấp thiệp rất khéo. Bạn vừa giới thiệu được người làm món quà, vừa nói rõ vì sao mình gọi cô ấy là em gái."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13761",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

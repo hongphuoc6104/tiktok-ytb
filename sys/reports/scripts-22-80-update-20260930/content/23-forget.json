@@ -1,0 +1,526 @@
+{
+  "schema_version": "3.0",
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": [],
+  "brief_revision": 3,
+  "brief_hash": "762933914d25be26ed3f1035d4c566682bafc84fb28e0c54bc0d8d9bcf9f5f34",
+  "topic": "Học từ vựng tiếng Anh forget — quên mang theo qua câu chuyện “Ô ở nhà, mưa ở đây”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới forget; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “quên mang theo” của forget; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng forget chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng forget, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc ô nghỉ sai ngày",
+      "purpose": "Show a forgotten object through consequence.",
+      "action": "Mascot under bus stop shelter looking at rain; small separate inset shows umbrella by home door.",
+      "setting": "Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Mưa bắt đầu rơi, bạn sờ vào túi mới nhớ chiếc ô vẫn ở nhà. Forget là quên. Chiếc ô được nghỉ cả ngày, đúng hôm mà bạn cần nó đi cùng nhất.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "forget",
+          "meaning": "quên mang theo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot under bus stop shelter looking at rain; small separate inset shows umbrella by home door. Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot under bus stop shelter looking at rain; small separate inset shows umbrella by home door.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "forget",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot under bus stop shelter looking at rain; small separate inset shows umbrella by home door. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot under bus stop shelter looking at rain; small separate inset shows umbrella by home door. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "forget",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Mưa bắt đầu rơi, bạn sờ vào",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Chiếc ô được nghỉ cả ngày, đúng",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of forget and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Một thói quen hơi phiền",
+      "purpose": "Model forgetting a carried object.",
+      "action": "Mascot at home doorway walks past an umbrella leaning against the wall, bag in hand.",
+      "setting": "Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn kể: \"I often forget my umbrella.\" Tôi hay quên ô. Ở câu này, forget nói chuyện không nhớ mang theo. Người nghe hình dung được món đồ ở lại nhà, còn bạn thì đã ra ngoài.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "forget",
+          "meaning": "quên mang theo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot at home doorway walks past an umbrella leaning against the wall, bag in hand. Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot at home doorway walks past an umbrella leaning against the wall, bag in hand.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể: \"I often forget my umbrella.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of forget and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Lời nhắc cho lần sau",
+      "purpose": "Make the second example a solution to the problem.",
+      "action": "Mascot places umbrella directly beside bag at doorway, pointing at both items.",
+      "setting": "Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Để tránh lặp lại, bạn nhắc mình: \"Don't forget your umbrella.\" Đừng quên ô nhé. Don't forget là cách nhắc ai đó nhớ một việc hoặc một món đồ cần mang theo trong tình huống này.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "forget",
+          "meaning": "quên mang theo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot places umbrella directly beside bag at doorway, pointing at both items. Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot places umbrella directly beside bag at doorway, pointing at both items.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot places umbrella directly beside bag at doorway, pointing at both items. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot places umbrella directly beside bag at doorway, pointing at both items. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Don't forget your umbrella.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Để tránh lặp lại, bạn nhắc mình:",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Don't forget your umbrella.\" Đừng quên ô",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of forget and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nhắc một người ra cửa",
+      "purpose": "Prompt a short warning with target verb missing.",
+      "action": "Mascot about to leave with bag while umbrella remains by door; incomplete warning at top.",
+      "setting": "Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn mình đang ra cửa mà chưa cầm ô. Hãy nhắc đừng quên ô nhé, bằng câu \"Don't... your umbrella.\" Từ nào cần điền? Nói lời nhắc trước khi bạn ấy đi mất.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "forget",
+          "meaning": "quên mang theo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot about to leave with bag while umbrella remains by door; incomplete warning at top. Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot about to leave with bag while umbrella remains by door; incomplete warning at top.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot about to leave with bag while umbrella remains by door; incomplete warning at top. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot about to leave with bag while umbrella remains by door; incomplete warning at top. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Don't... your umbrella.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn mình đang ra cửa mà chưa",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Don't... your umbrella.\" Từ nào cần điền?",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of forget and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chiếc ô có việc để làm",
+      "purpose": "Confirm and resolve the rainy-day problem.",
+      "action": "Mascot walks in rain under an open umbrella, canonical blue shirt visible, feet simple.",
+      "setting": "Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"Don't forget your umbrella.\" Từ còn thiếu là forget. Lần này bạn cầm ô thật. Mưa vẫn rơi như cũ, chỉ có câu chuyện đã khác: chiếc ô đi làm đúng ngày nó được cần đến.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "forget",
+          "meaning": "quên mang theo"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot walks in rain under an open umbrella, canonical blue shirt visible, feet simple. Home doorway and sheltered bus stop with rain; umbrella stays visible at home until final scene. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot walks in rain under an open umbrella, canonical blue shirt visible, feet simple.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Don't forget your umbrella.\" Từ còn thiếu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of forget and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show a forgotten object through consequence.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model forgetting a carried object."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model forgetting a carried object.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Make the second example a solution to the problem."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Make the second example a solution to the problem.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt a short warning with target verb missing."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt a short warning with target verb missing.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and resolve the rainy-day problem."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the rainy-day problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mưa bắt đầu rơi, bạn sờ vào túi mới nhớ chiếc ô vẫn ở nhà. Forget là quên. Chiếc ô được nghỉ cả ngày, đúng hôm mà bạn cần nó đi cùng nhất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mưa bắt đầu rơi, bạn sờ vào túi mới nhớ chiếc ô vẫn ở nhà. Forget là quên. Chiếc ô được nghỉ cả ngày, đúng hôm mà bạn cần nó đi cùng nhất."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn kể: \"I often forget my umbrella.\" Tôi hay quên ô. Ở câu này, forget nói chuyện không nhớ mang theo. Người nghe hình dung được món đồ ở lại nhà, còn bạn thì đã ra ngoài."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn kể: \"I often forget my umbrella.\" Tôi hay quên ô. Ở câu này, forget nói chuyện không nhớ mang theo. Người nghe hình dung được món đồ ở lại nhà, còn bạn thì đã ra ngoài."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Để tránh lặp lại, bạn nhắc mình: \"Don't forget your umbrella.\" Đừng quên ô nhé. Don't forget là cách nhắc ai đó nhớ một việc hoặc một món đồ cần mang theo trong tình huống này."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn mình đang ra cửa mà chưa cầm ô. Hãy nhắc đừng quên ô nhé, bằng câu \"Don't... your umbrella.\" Từ nào cần điền? Nói lời nhắc trước khi bạn ấy đi mất."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Don't forget your umbrella.\" Từ còn thiếu là forget. Lần này bạn cầm ô thật. Mưa vẫn rơi như cũ, chỉ có câu chuyện đã khác: chiếc ô đi làm đúng ngày nó được cần đến."
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "8010c5955876090979e007c7366dd81db00187c583dc7ef4ebab49fa7b26f68c",
+  "topic": "Học từ vựng tiếng Anh LOUD (tính từ: to, ồn) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ LOUD",
+    "Làm rõ nghĩa lõi \"to, ồn\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng LOUD, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại LOUD, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Loa đang lấn tiếng hỏi — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot leans toward friend speaking beside prominent speaker, simple sound-wave illustration.",
+      "setting": "Phòng khách có loa và hai người nói chuyện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Người bạn đã hỏi hai lần, chiếc loa vẫn chiếm hết phòng! Loud nghĩa là to về âm thanh. \"A lot of sound.\" Trong câu chuyện, bạn đang bật nhạc nhưng muốn nghe cả lời người đang đứng cạnh.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot leans toward friend speaking beside prominent speaker, simple sound-wave illustration. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot leans toward friend speaking beside prominent speaker, simple sound-wave illustration.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "loud",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn đã hỏi hai lần, chiếc loa vẫn chiếm hết phòng! Loud nghĩa là to về âm thanh. \"A lot of sound.\" Trong câu chuyện, bạn đang bật nhạc nhưng muốn nghe cả lời người đang đứng cạnh.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Loa đang lấn tiếng hỏi — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Friend indicates speaker while mascot acknowledges conversation difficulty, no actual loud audio claimed.",
+      "setting": "Phòng khách có loa và hai người nói chuyện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"The music is loud.\" Nhạc đang to. \"Too much for our talk here.\" Người bạn chỉ chiếc loa, hai người hiểu vì sao câu hỏi vừa rồi bị lẫn vào phần nhạc.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend indicates speaker while mascot acknowledges conversation difficulty, no actual loud audio claimed. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend indicates speaker while mascot acknowledges conversation difficulty, no actual loud audio claimed.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "The music is loud.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"The music is loud.\" Nhạc đang to. \"Too much for our talk here.\" Người bạn chỉ chiếc loa, hai người hiểu vì sao câu hỏi vừa rồi bị lẫn vào phần nhạc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Loa đang lấn tiếng hỏi — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Friend speaks comfortably as mascot checks generic speaker control, no unapproved numerals.",
+      "setting": "Phòng khách có loa và hai người nói chuyện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Is this too loud?\" Mức này có quá to không? \"Can we hear each other?\" Bạn chỉnh lại mức loa trong câu chuyện rồi chờ người bạn phản hồi, thay vì tự đoán từ một con số.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Friend speaks comfortably as mascot checks generic speaker control, no unapproved numerals. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend speaks comfortably as mascot checks generic speaker control, no unapproved numerals.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "Is this too loud?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Is this too loud?\" Mức này có quá to không? \"Can we hear each other?\" Bạn chỉnh lại mức loa trong câu chuyện rồi chờ người bạn phản hồi, thay vì tự đoán từ một con số.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Loa đang lấn tiếng hỏi — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold speaker and complete question, no measured sound level shown.",
+      "setting": "Phòng khách có loa và hai người nói chuyện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi tiếng nhạc ở mức đang chọn có quá to. \"Ask about the sound.\" Nói như lúc cả hai muốn tiếp tục trò chuyện: \"Is this too loud?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold speaker and complete question, no measured sound level shown. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold speaker and complete question, no measured sound level shown.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "Ask about the sound.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "Is this too loud?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi tiếng nhạc ở mức đang chọn có quá to. \"Ask about the sound.\" Nói như lúc cả hai muốn tiếp tục trò chuyện: \"Is this too loud?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Loa đang lấn tiếng hỏi — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Both converse beside background speaker, smaller illustrative sound rays, same room.",
+      "setting": "Phòng khách có loa và hai người nói chuyện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Is this too loud?\" Có quá to không? \"We can talk now.\" Người bạn đã nghe rõ lời hỏi trong câu chuyện; hai người thống nhất mức nhạc rồi trở lại cuộc nói chuyện.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "loud",
+          "meaning": "to, ồn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both converse beside background speaker, smaller illustrative sound rays, same room. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both converse beside background speaker, smaller illustrative sound rays, same room.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "Is this too loud?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is this too loud?\" Có quá to không? \"We can talk now.\" Người bạn đã nghe rõ lời hỏi trong câu chuyện; hai người thống nhất mức nhạc rồi trở lại cuộc nói chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Người bạn đã hỏi hai lần, chiếc loa vẫn chiếm hết phòng! Loud nghĩa là to về âm thanh. \"A lot of sound.\" Trong câu chuyện, bạn đang bật nhạc nhưng muốn nghe cả lời người đang đứng cạnh."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Người bạn đã hỏi hai lần, chiếc loa vẫn chiếm hết phòng! Loud nghĩa là to về âm thanh. \"A lot of sound.\" Trong câu chuyện, bạn đang bật nhạc nhưng muốn nghe cả lời người đang đứng cạnh."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"The music is loud.\" Nhạc đang to. \"Too much for our talk here.\" Người bạn chỉ chiếc loa, hai người hiểu vì sao câu hỏi vừa rồi bị lẫn vào phần nhạc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"The music is loud.\" Nhạc đang to. \"Too much for our talk here.\" Người bạn chỉ chiếc loa, hai người hiểu vì sao câu hỏi vừa rồi bị lẫn vào phần nhạc."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn hỏi: \"Is this too loud?\" Mức này có quá to không? \"Can we hear each other?\" Bạn chỉnh lại mức loa trong câu chuyện rồi chờ người bạn phản hồi, thay vì tự đoán từ một con số."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn hỏi tiếng nhạc ở mức đang chọn có quá to. \"Ask about the sound.\" Nói như lúc cả hai muốn tiếp tục trò chuyện: \"Is this too loud?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Is this too loud?\" Có quá to không? \"We can talk now.\" Người bạn đã nghe rõ lời hỏi trong câu chuyện; hai người thống nhất mức nhạc rồi trở lại cuộc nói chuyện."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Không nghe rõ bạn → nhận tiếng loa to → hỏi → chỉnh mức.. Next event: Friend indicates speaker while mascot acknowledges conversation difficulty, no actual loud audio claimed."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Không nghe rõ bạn → nhận tiếng loa to → hỏi → chỉnh mức.. Next event: Friend speaks comfortably as mascot checks generic speaker control, no unapproved numerals."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Không nghe rõ bạn → nhận tiếng loa to → hỏi → chỉnh mức.. Next event: Hold speaker and complete question, no measured sound level shown."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Không nghe rõ bạn → nhận tiếng loa to → hỏi → chỉnh mức.. Next event: Both converse beside background speaker, smaller illustrative sound rays, same room."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Không nghe rõ bạn → nhận tiếng loa to → hỏi → chỉnh mức.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

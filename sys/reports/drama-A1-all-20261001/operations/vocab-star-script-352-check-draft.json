@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 42,
+            "seconds": 12.72,
+            "min": 9.54,
+            "max": 15.9
+          },
+          {
+            "scene_id": "SC02",
+            "units": 42,
+            "seconds": 12.57,
+            "min": 9.43,
+            "max": 15.71
+          },
+          {
+            "scene_id": "SC03",
+            "units": 33,
+            "seconds": 9.92,
+            "min": 7.44,
+            "max": 12.4
+          },
+          {
+            "scene_id": "SC04",
+            "units": 29,
+            "seconds": 12.66,
+            "min": 9.49,
+            "max": 15.82
+          },
+          {
+            "scene_id": "SC05",
+            "units": 42,
+            "seconds": 13.02,
+            "min": 9.76,
+            "max": 16.27
+          }
+        ],
+        "min": 45.66,
+        "max": 76.1,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "20427",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hà mất kẹp tóc ngoài sân, tôi ngồi nhìn sao với em rồi dùng đèn pin tìm lại kẹp, hai người cùng thu đồ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 43,
+            "seconds": 12.84,
+            "min": 9.63,
+            "max": 16.06
+          },
+          {
+            "scene_id": "SC02",
+            "units": 43,
+            "seconds": 12.84,
+            "min": 9.63,
+            "max": 16.06
+          },
+          {
+            "scene_id": "SC03",
+            "units": 38,
+            "seconds": 11.76,
+            "min": 8.82,
+            "max": 14.69
+          },
+          {
+            "scene_id": "SC04",
+            "units": 31,
+            "seconds": 13.21,
+            "min": 9.91,
+            "max": 16.51
+          },
+          {
+            "scene_id": "SC05",
+            "units": 38,
+            "seconds": 11.76,
+            "min": 8.82,
+            "max": 14.69
+          }
+        ],
+        "min": 46.81,
+        "max": 78.01,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "20378",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Hai chị em dọn dẹp căn gác xép cũ; chiếc áo len bạc màu gợi nhắc về mùa trong năm mà mỗi người nâng niu nhất. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

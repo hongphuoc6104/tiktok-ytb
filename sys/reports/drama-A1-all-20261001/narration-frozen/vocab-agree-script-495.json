@@ -1,0 +1,100 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, two solid black oval eyes, minimal stick limbs.",
+      "id": "CH01",
+      "name_vi": "Minh",
+      "outfit_en": "Single pale-blue #8CCFE8 short-sleeve torso."
+    },
+    {
+      "appearance_en": "Minimal ink stick figure with a round white head, dark-navy outline, two solid black oval eyes, and minimal stick limbs.",
+      "id": "CH02",
+      "name_vi": "Bình",
+      "outfit_en": "Single plain pale-purple short-sleeve torso."
+    }
+  ],
+  "job": "vocab-agree-script-495",
+  "learner_outcome_vi": "Nắm vững nghĩa động từ đồng ý trong việc thống nhất ý kiến và nói được câu hỏi lẫn câu trả lời với từ agree.",
+  "opening_function_vi": "Bình nhìn chằm chằm vào tờ lịch.",
+  "plot_vi": "Bình nhìn chằm chằm vào tờ lịch. Tôi muốn đổi giờ tập nhóm sớm hơn nửa tiếng. Tôi hỏi ý bạn:  Bình đánh dấu giờ đã cùng xem rồi nói: \"I agree.\" Tôi đồng ý. Tôi hỏi bạn có cần báo thêm việc gì không, để lần này lời đồng ý không chỉ là nể tôi rồi vội chạy tới.  Bình gật, cất lịch đã đánh dấu. Tôi ghi việc mang bánh vào sổ. Chiều mai còn phải tập đúng giờ; ít nhất hai đứa đã nói hết điều cần trước khi nhắn cả nhóm.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bình nhìn chằm chằm vào tờ lịch. Tôi muốn đổi giờ tập nhóm sớm hơn nửa tiếng. Tôi hỏi ý bạn: \"Do you agree?\" Bạn có đồng ý không?",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Open with personal need and an early usable English model.",
+      "scene_id": "SC01",
+      "title_vi": "Điều vừa xảy ra",
+      "visual_en": "Classroom desk: a paper rehearsal schedule lies open between them. The purple-shirt friend studies the timetable while the pale-blue mascot points to an earlier time slot."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bình sợ giờ mới trùng lúc bạn ăn trước buổi tập. Tôi còn chuyến xe cuối phải kịp về, nên không muốn chỉ chốt theo mình. Hai đứa xem lại lịch, tôi đề nghị mang bánh để bạn có thời gian ăn.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Clarify the selected sense and resistance in the same human story.",
+      "scene_id": "SC02",
+      "title_vi": "Lời cần nói",
+      "visual_en": "Same desk: both study plain rehearsal time grid and mascot proposes bringing two bread snacks."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bình đánh dấu giờ đã cùng xem rồi nói: \"I agree.\" Tôi đồng ý. Tôi hỏi bạn có cần báo thêm việc gì không, để lần này lời đồng ý không chỉ là nể tôi rồi vội chạy tới.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Use a decision or visible action to change the story and support target meaning.",
+      "scene_id": "SC03",
+      "title_vi": "Thử làm cùng nhau",
+      "visual_en": "Same desk: Bình marks chosen 17:00 time cell and nods agreement while mascot checks remaining concern.",
+      "custom_visible_text": [
+        {
+          "text": "17:00",
+          "placement": "marked rehearsal cell",
+          "object": "planner"
+        }
+      ]
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi muốn nghe Bình xác nhận lại quyết định chung để nhắn cho cả nhóm. Bạn nói giúp tôi câu bạn có đồng ý không bằng tiếng Anh nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Ask viewer for a supported complete target sentence and wait at scene end.",
+      "scene_id": "SC04",
+      "stem": "Do you ___?",
+      "title_vi": "Câu bạn giúp nói",
+      "visual_en": "Static shot of the desk with the circled calendar. The mascot faces forward, gesturing toward the viewer. The upper area is reserved for the stem."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"Do you agree?\" Bình gật, cất lịch đã đánh dấu. Tôi ghi việc mang bánh vào sổ. Chiều mai còn phải tập đúng giờ; ít nhất hai đứa đã nói hết điều cần trước khi nhắn cả nhóm.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Give correct full retrieval response then modest visible payoff.",
+      "scene_id": "SC05",
+      "title_vi": "Chuyện đi tiếp",
+      "visual_en": "Same desk: Bình packs marked planner, mascot records snack reminder as small bread pictogram. No transport guarantee.",
+      "custom_visible_text": [
+        {
+          "text": "17:00",
+          "placement": "marked rehearsal cell",
+          "object": "planner"
+        }
+      ]
+    }
+  ],
+  "title": "Giờ hẹn tập kịch",
+  "editorial_review": "Reviewed and rewritten by an authorized writing agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

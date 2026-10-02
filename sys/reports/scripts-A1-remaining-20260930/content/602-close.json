@@ -1,0 +1,462 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "e619f25dba2adaa179ecf2e829ca7e51fe2d079ac59f3f11e0f6b870635459fc",
+  "topic": "Học từ vựng tiếng Anh CLOSE (tính từ: gần) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CLOSE",
+    "Làm rõ nghĩa lõi \"gần\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CLOSE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CLOSE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chỗ hẹn ở gần nhà người bạn — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot and companion review fictional map showing park relatively close to companion's home icon.",
+      "setting": "Bàn hẹn đi dạo, sơ đồ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Không cần chọn thật xa, chỗ hẹn này có thể ở ngay gần bạn! Close trong bài này là gần về khoảng cách. \"Not far away in our plan.\" Hai người xem công viên trên sơ đồ hư cấu trước khi chọn nơi gặp.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "close",
+          "meaning": "gần"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and companion review fictional map showing park relatively close to companion's home icon. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion review fictional map showing park relatively close to companion's home icon.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "close",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Không cần chọn thật xa, chỗ hẹn này có thể ở ngay gần bạn! Close trong bài này là gần về khoảng cách. \"Not far away in our plan.\" Hai người xem công viên trên sơ đồ hư cấu trước khi chọn nơi gặp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality. Check the adjective close with its final /s/, distinct from the verb close; verify in the actual WAV.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chỗ hẹn ở gần nhà người bạn — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Companion traces short fictional route from home to park, mascot asks.",
+      "setting": "Bàn hẹn đi dạo, sơ đồ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Is the park close?\" Công viên có gần không? \"Close to where we are starting.\" Người bạn nhìn vị trí nhà của mình trên sơ đồ rồi chỉ đoạn đường tới đó.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "close",
+          "meaning": "gần"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Companion traces short fictional route from home to park, mascot asks. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion traces short fictional route from home to park, mascot asks.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "Is the park close?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Is the park close?\" Công viên có gần không? \"Close to where we are starting.\" Người bạn nhìn vị trí nhà của mình trên sơ đồ rồi chỉ đoạn đường tới đó.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality. Check the adjective close with its final /s/, distinct from the verb close; verify in the actual WAV.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chỗ hẹn ở gần nhà người bạn — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Both confirm park close to stated fictional home location, not a real address.",
+      "setting": "Bàn hẹn đi dạo, sơ đồ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Người ấy đáp: \"It's close to my house.\" Nó ở gần nhà tôi. \"My house is the place I mean.\" Bạn xem thêm lối đi, rồi hai người chọn chỗ gặp trong kế hoạch của câu chuyện.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "close",
+          "meaning": "gần"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both confirm park close to stated fictional home location, not a real address. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both confirm park close to stated fictional home location, not a real address.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "It's close to my house.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Người ấy đáp: \"It's close to my house.\" Nó ở gần nhà tôi. \"My house is the place I mean.\" Bạn xem thêm lối đi, rồi hai người chọn chỗ gặp trong kế hoạch của câu chuyện.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality. Check the adjective close with its final /s/, distinct from the verb close; verify in the actual WAV.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chỗ hẹn ở gần nhà người bạn — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold fictional map and full question.",
+      "setting": "Bàn hẹn đi dạo, sơ đồ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi công viên có gần theo vai. \"Ask about the distance.\" Close ở đây không nói hành động đóng một chiếc hộp. Nói: \"Is the park close?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "close",
+          "meaning": "gần"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold fictional map and full question. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold fictional map and full question.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "Is the park close?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi công viên có gần theo vai. \"Ask about the distance.\" Close ở đây không nói hành động đóng một chiếc hộp. Nói: \"Is the park close?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality. Check the adjective close with its final /s/, distinct from the verb close; verify in the actual WAV.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chỗ hẹn ở gần nhà người bạn — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Mascot and companion fold agreed fictional park route map.",
+      "setting": "Bàn hẹn đi dạo, sơ đồ hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Is the park close?\" Công viên gần không? \"The meeting place has a clear route.\" Hai người đã hiểu khoảng cách trong câu chuyện, giữ sơ đồ để dùng lúc tới điểm hẹn.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "close",
+          "meaning": "gần"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and companion fold agreed fictional park route map. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion fold agreed fictional park route map.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "Is the park close?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is the park close?\" Công viên gần không? \"The meeting place has a clear route.\" Hai người đã hiểu khoảng cách trong câu chuyện, giữ sơ đồ để dùng lúc tới điểm hẹn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality. Check the adjective close with its final /s/, distinct from the verb close; verify in the actual WAV.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Không cần chọn thật xa, chỗ hẹn này có thể ở ngay gần bạn! Close trong bài này là gần về khoảng cách. \"Not far away in our plan.\" Hai người xem công viên trên sơ đồ hư cấu trước khi chọn nơi gặp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Không cần chọn thật xa, chỗ hẹn này có thể ở ngay gần bạn! Close trong bài này là gần về khoảng cách. \"Not far away in our plan.\" Hai người xem công viên trên sơ đồ hư cấu trước khi chọn nơi gặp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is the park close?\" Công viên có gần không? \"Close to where we are starting.\" Người bạn nhìn vị trí nhà của mình trên sơ đồ rồi chỉ đoạn đường tới đó."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is the park close?\" Công viên có gần không? \"Close to where we are starting.\" Người bạn nhìn vị trí nhà của mình trên sơ đồ rồi chỉ đoạn đường tới đó."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người ấy đáp: \"It's close to my house.\" Nó ở gần nhà tôi. \"My house is the place I mean.\" Bạn xem thêm lối đi, rồi hai người chọn chỗ gặp trong kế hoạch của câu chuyện."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn hỏi công viên có gần theo vai. \"Ask about the distance.\" Close ở đây không nói hành động đóng một chiếc hộp. Nói: \"Is the park close?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Is the park close?\" Công viên gần không? \"The meeting place has a clear route.\" Hai người đã hiểu khoảng cách trong câu chuyện, giữ sơ đồ để dùng lúc tới điểm hẹn."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Chọn điểm → hỏi có gần → biết gần nhà → hẹn.. Next event: Companion traces short fictional route from home to park, mascot asks."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Chọn điểm → hỏi có gần → biết gần nhà → hẹn.. Next event: Both confirm park close to stated fictional home location, not a real address."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Chọn điểm → hỏi có gần → biết gần nhà → hẹn.. Next event: Hold fictional map and full question."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chọn điểm → hỏi có gần → biết gần nhà → hẹn.. Next event: Mascot and companion fold agreed fictional park route map."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chọn điểm → hỏi có gần → biết gần nhà → hẹn.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

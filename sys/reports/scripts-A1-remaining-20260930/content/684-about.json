@@ -1,0 +1,555 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "5bac06c1fbb309aac8d6f75d4384e34cc5968c70d5b4d9c14de49703b5c617f1",
+  "topic": "Học từ vựng tiếng Anh ABOUT (giới từ: về (chủ đề)) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ ABOUT",
+    "Làm rõ nghĩa lõi \"về (chủ đề)\" (giới từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng ABOUT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại ABOUT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người tham gia hoặc nhân vật bổ trợ",
+      "appearance": "Adult additional participant or professional explicitly named in the scene. Preserve the same role and identity; do not add a person when the scene does not call for one. Minimal flat ink style and ordinary adult proportions.",
+      "outfit": "Single plain lavender top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cuộc nói chuyện về chuyến đi — Nhịp 1",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "action": "Mascot and companion view fictional outing album as third adult joins table.",
+      "setting": "Bàn album hư cấu và bạn.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Album đã mở nhưng người bạn vừa tới còn chưa biết mình đang nói chuyện gì! About trong bài này là về một chủ đề. \"The subject of the conversation here.\" Bạn cùng người bạn kể một chuyến đi hư cấu, muốn nói rõ nội dung với người mới tham gia.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "về (chủ đề)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and companion view fictional outing album as third adult joins table. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion view fictional outing album as third adult joins table.",
+          "reason": "Make the selected sense useful in a concrete situation.",
+          "visible_text": [
+            {
+              "text": "about",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the selected sense useful in a concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Album đã mở nhưng người bạn vừa tới còn chưa biết mình đang nói chuyện gì! About trong bài này là về một chủ đề. \"The subject of the conversation here.\" Bạn cùng người bạn kể một chuyến đi hư cấu, muốn nói rõ nội dung với người mới tham gia.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Cuộc nói chuyện về chuyến đi — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Mascot introduces fictional trip topic to arriving adult, album visible.",
+      "setting": "Bàn album hư cấu và bạn.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"We're talking about the trip.\" Chúng tôi đang nói về chuyến đi. \"That is the topic in this talk.\" Người mới tới nhìn album, hiểu vì sao hai người đang nhắc một bức ảnh trong đó.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "về (chủ đề)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot introduces fictional trip topic to arriving adult, album visible. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot introduces fictional trip topic to arriving adult, album visible.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "We're talking about the trip.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"We're talking about the trip.\" Chúng tôi đang nói về chuyến đi. \"That is the topic in this talk.\" Người mới tới nhìn album, hiểu vì sao hai người đang nhắc một bức ảnh trong đó.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Cuộc nói chuyện về chuyến đi — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both choose photos from one defined fictional trip, unrelated images set aside.",
+      "setting": "Bàn album hư cấu và bạn.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "About ở mẫu này nối việc nói với chủ đề, không phải khoảng chừng một lượng. \"Keep the trip as what we are discussing.\" Bạn chọn ảnh thuộc chuyến đang kể, để cuộc trò chuyện có mốc thay vì đổi sang mọi sự kiện từng chụp.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "về (chủ đề)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both choose photos from one defined fictional trip, unrelated images set aside. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both choose photos from one defined fictional trip, unrelated images set aside.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "about",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "About ở mẫu này nối việc nói với chủ đề, không phải khoảng chừng một lượng. \"Keep the trip as what we are discussing.\" Bạn chọn ảnh thuộc chuyến đang kể, để cuộc trò chuyện có mốc thay vì đổi sang mọi sự kiện từng chụp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Cuộc nói chuyện về chuyến đi — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Three fictional adults share one outing story through related photographs.",
+      "setting": "Bàn album hư cấu và bạn.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn rủ: \"Let's talk about the trip.\" Cùng nói chuyện về chuyến đi nhé. \"We can start with this photo.\" Người bạn kể phần trước bức ảnh, người mới tới hỏi thêm rồi cùng xem đoạn sau của album.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "về (chủ đề)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Three fictional adults share one outing story through related photographs. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Three fictional adults share one outing story through related photographs.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "Let's talk about the trip.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn rủ: \"Let's talk about the trip.\" Cùng nói chuyện về chuyến đi nhé. \"We can start with this photo.\" Người bạn kể phần trước bức ảnh, người mới tới hỏi thêm rồi cùng xem đoạn sau của album.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Cuộc nói chuyện về chuyến đi — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold related album photos and full invitation.",
+      "setting": "Bàn album hư cấu và bạn.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn rủ cùng nói về chuyến đi hư cấu. \"Name the topic.\" Hãy nói: \"Let's talk about the trip.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "về (chủ đề)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold related album photos and full invitation. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold related album photos and full invitation.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Name the topic.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "Let's talk about the trip.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn rủ cùng nói về chuyến đi hư cấu. \"Name the topic.\" Hãy nói: \"Let's talk about the trip.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Cuộc nói chuyện về chuyến đi — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "All three discuss same fictional outing with album at table centre.",
+      "setting": "Bàn album hư cấu và bạn.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Let's talk about the trip.\" Cùng nói về chuyến đi nhé. \"The new guest knows what the story is about.\" Ba người đã có cùng một chủ đề trong cuộc gặp hư cấu, tiếp tục kể từ ảnh đã chọn.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "about",
+          "meaning": "về (chủ đề)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "All three discuss same fictional outing with album at table centre. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "All three discuss same fictional outing with album at table centre.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "Let's talk about the trip.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Let's talk about the trip.\" Cùng nói về chuyến đi nhé. \"The new guest knows what the story is about.\" Ba người đã có cùng một chủ đề trong cuộc gặp hư cấu, tiếp tục kể từ ảnh đã chọn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Album đã mở nhưng người bạn vừa tới còn chưa biết mình đang nói chuyện gì! About trong bài này là về một chủ đề. \"The subject of the conversation here.\" Bạn cùng người bạn kể một chuyến đi hư cấu, muốn nói rõ nội dung với người mới tham gia."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Album đã mở nhưng người bạn vừa tới còn chưa biết mình đang nói chuyện gì! About trong bài này là về một chủ đề. \"The subject of the conversation here.\" Bạn cùng người bạn kể một chuyến đi hư cấu, muốn nói rõ nội dung với người mới tham gia."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"We're talking about the trip.\" Chúng tôi đang nói về chuyến đi. \"That is the topic in this talk.\" Người mới tới nhìn album, hiểu vì sao hai người đang nhắc một bức ảnh trong đó."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"We're talking about the trip.\" Chúng tôi đang nói về chuyến đi. \"That is the topic in this talk.\" Người mới tới nhìn album, hiểu vì sao hai người đang nhắc một bức ảnh trong đó."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "About ở mẫu này nối việc nói với chủ đề, không phải khoảng chừng một lượng. \"Keep the trip as what we are discussing.\" Bạn chọn ảnh thuộc chuyến đang kể, để cuộc trò chuyện có mốc thay vì đổi sang mọi sự kiện từng chụp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn rủ: \"Let's talk about the trip.\" Cùng nói chuyện về chuyến đi nhé. \"We can start with this photo.\" Người bạn kể phần trước bức ảnh, người mới tới hỏi thêm rồi cùng xem đoạn sau của album."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn rủ cùng nói về chuyến đi hư cấu. \"Name the topic.\" Hãy nói: \"Let's talk about the trip.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Let's talk about the trip.\" Cùng nói về chuyến đi nhé. \"The new guest knows what the story is about.\" Ba người đã có cùng một chủ đề trong cuộc gặp hư cấu, tiếp tục kể từ ảnh đã chọn."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Bạn hỏi đang nói gì → nhận chủ đề → chọn kể chuyến đi → xem ảnh.. Next event: Mascot introduces fictional trip topic to arriving adult, album visible."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Bạn hỏi đang nói gì → nhận chủ đề → chọn kể chuyến đi → xem ảnh.. Next event: Both choose photos from one defined fictional trip, unrelated images set aside."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Bạn hỏi đang nói gì → nhận chủ đề → chọn kể chuyến đi → xem ảnh.. Next event: Three fictional adults share one outing story through related photographs."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Bạn hỏi đang nói gì → nhận chủ đề → chọn kể chuyến đi → xem ảnh.. Next event: Hold related album photos and full invitation."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bạn hỏi đang nói gì → nhận chủ đề → chọn kể chuyến đi → xem ảnh.. Next event: All three discuss same fictional outing with album at table centre."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bạn hỏi đang nói gì → nhận chủ đề → chọn kể chuyến đi → xem ảnh.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

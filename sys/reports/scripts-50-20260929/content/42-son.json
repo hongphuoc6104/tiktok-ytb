@@ -1,0 +1,464 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "3df2cc8a5f1ca2b038ca4640f9225b47b01afd2e45620ee2b21445c95c6d75d5",
+  "topic": "Học từ vựng tiếng Anh SON (danh từ: con trai) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SON",
+    "Làm rõ nghĩa lõi \"con trai\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SON, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SON, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Small expressive eyebrows and changing mouth curves are allowed. Do not add hair, realistic muscles, detailed fingers, a realistic nose or ears to this mascot.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); simple lower clothing where needed. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Bố",
+      "appearance": "Adult man, simple flat illustration, minimal limbs.",
+      "outfit": "Plain sage-green short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cao hơn bố vẫn là con",
+      "purpose": "Challenge age-based misunderstanding of the family role.",
+      "action": "Người con trưởng thành đứng cạnh bố.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn cao hơn bố rồi, nhưng khi bố giới thiệu bạn, từ dùng vẫn là son, con trai. Son nói quan hệ với cha mẹ. Lớn lên không làm bạn hết là con trai của họ trong cách gọi này.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Adult-sized mascot stands slightly taller than father, both beside park bench. Park meeting with mascot as adult son and father in sage top. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Adult-sized mascot stands slightly taller than father, both beside park bench.",
+          "reason": "Challenge age-based misunderstanding of the family role.",
+          "visible_text": [
+            {
+              "text": "son",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Challenge age-based misunderstanding of the family role.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn cao hơn bố rồi, nhưng khi bố giới thiệu bạn, từ dùng vẫn là son, con trai. Son nói quan hệ với cha mẹ. Lớn lên không làm bạn hết là con trai của họ trong cách gọi này.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nghe bố giới thiệu",
+      "purpose": "Model the parent's perspective clearly.",
+      "action": "Bố giới thiệu con trai.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bố nói: \"This is my son.\" Đây là con trai tôi. Người nói câu này là bố hoặc mẹ, và son là người con trai được giới thiệu. Mình nhìn quan hệ giữa hai người, không đo chiều cao để chọn từ.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Father gestures toward mascot while facing an off-frame acquaintance. Park meeting with mascot as adult son and father in sage top. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Father gestures toward mascot while facing an off-frame acquaintance.",
+          "reason": "Model the parent's perspective clearly.",
+          "visible_text": [
+            {
+              "text": "This is my son.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model the parent's perspective clearly.",
+          "anchor": {
+            "vi": {
+              "quote": "Bố nói: \"This is my son.\" Đây là con trai tôi. Người nói câu này là bố hoặc mẹ, và son là người con trai được giới thiệu. Mình nhìn quan hệ giữa hai người, không đo chiều cao để chọn từ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nói về một việc con làm",
+      "purpose": "Connect a second sentence to the same parental viewpoint.",
+      "action": "Con đưa cốc nước giúp bố.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bố kể tiếp: \"My son helps me.\" Con trai tôi giúp tôi. Hôm nay bạn vừa mang nước cho bố. Son vẫn chỉ cùng một người trong hai câu, dù lúc đứng chào hay lúc đang đưa chiếc cốc.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot holds a simple travel mug for father beside the bench. Park meeting with mascot as adult son and father in sage top. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds a simple travel mug for father beside the bench.",
+          "reason": "Connect a second sentence to the same parental viewpoint.",
+          "visible_text": [
+            {
+              "text": "My son helps me.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect a second sentence to the same parental viewpoint.",
+          "anchor": {
+            "vi": {
+              "quote": "Bố kể tiếp: \"My son helps me.\" Con trai tôi giúp tôi. Hôm nay bạn vừa mang nước cho bố. Son vẫn chỉ cùng một người trong hai câu, dù lúc đứng chào hay lúc đang đưa chiếc cốc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Ai đang nói?",
+      "purpose": "Check perspective instead of only spelling recall.",
+      "action": "Điền từ theo góc nhìn người bố.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bố muốn giới thiệu con trai đứng cạnh mình. Ông nói \"This is my...\" gì? Hãy trả lời từ góc nhìn của người bố.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Father points toward mascot with an empty speech bubble; mother not shown. Park meeting with mascot as adult son and father in sage top. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Father points toward mascot with an empty speech bubble; mother not shown.",
+          "reason": "Check perspective instead of only spelling recall.",
+          "visible_text": [
+            {
+              "text": "This is my...",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Check perspective instead of only spelling recall.",
+          "anchor": {
+            "vi": {
+              "quote": "Bố muốn giới thiệu con trai đứng cạnh mình. Ông nói \"This is my...\" gì? Hãy trả lời từ góc nhìn của người bố.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the concrete retrieval question; leave the full quiet hold before the next scene gives feedback.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Người con đã lớn",
+      "purpose": "Confirm and close the height contrast.",
+      "action": "Hai bố con ngồi cạnh nhau.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "\"This is my son.\" Từ cần điền là son. Bạn đã lớn và có thể chăm sóc bố bằng những việc nhỏ. Trong lời giới thiệu của bố, bạn vẫn là người con trai đang ngồi cạnh ông ấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and father sit together on bench with two mugs, adult mascot slightly taller when seated. Park meeting with mascot as adult son and father in sage top. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and father sit together on bench with two mugs, adult mascot slightly taller when seated.",
+          "reason": "Confirm and close the height contrast.",
+          "visible_text": [
+            {
+              "text": "This is my son.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm and close the height contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my son.\" Từ cần điền là son. Bạn đã lớn và có thể chăm sóc bố bằng những việc nhỏ. Trong lời giới thiệu của bố, bạn vẫn là người con trai đang ngồi cạnh ông ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer, then resolve the opening situation warmly.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Challenge age-based misunderstanding of the family role.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Use the established situation (Cao hơn bố vẫn là con) to motivate the next learning action: Model the parent's perspective clearly."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the parent's perspective clearly.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the established situation (Nghe bố giới thiệu) to motivate the next learning action: Connect a second sentence to the same parental viewpoint."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Connect a second sentence to the same parental viewpoint.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Use the established situation (Nói về một việc con làm) to motivate the next learning action: Check perspective instead of only spelling recall."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Check perspective instead of only spelling recall.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Use the established situation (Ai đang nói?) to motivate the next learning action: Confirm and close the height contrast."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the height contrast.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After explicit learner feedback, resolve the concrete situation introduced in the opening."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn cao hơn bố rồi, nhưng khi bố giới thiệu bạn, từ dùng vẫn là son, con trai. Son nói quan hệ với cha mẹ. Lớn lên không làm bạn hết là con trai của họ trong cách gọi này."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn cao hơn bố rồi, nhưng khi bố giới thiệu bạn, từ dùng vẫn là son, con trai. Son nói quan hệ với cha mẹ. Lớn lên không làm bạn hết là con trai của họ trong cách gọi này."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bố nói: \"This is my son.\" Đây là con trai tôi. Người nói câu này là bố hoặc mẹ, và son là người con trai được giới thiệu. Mình nhìn quan hệ giữa hai người, không đo chiều cao để chọn từ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bố nói: \"This is my son.\" Đây là con trai tôi. Người nói câu này là bố hoặc mẹ, và son là người con trai được giới thiệu. Mình nhìn quan hệ giữa hai người, không đo chiều cao để chọn từ."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bố kể tiếp: \"My son helps me.\" Con trai tôi giúp tôi. Hôm nay bạn vừa mang nước cho bố. Son vẫn chỉ cùng một người trong hai câu, dù lúc đứng chào hay lúc đang đưa chiếc cốc."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bố muốn giới thiệu con trai đứng cạnh mình. Ông nói \"This is my...\" gì? Hãy trả lời từ góc nhìn của người bố."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is my son.\" Từ cần điền là son. Bạn đã lớn và có thể chăm sóc bố bằng những việc nhỏ. Trong lời giới thiệu của bố, bạn vẫn là người con trai đang ngồi cạnh ông ấy."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

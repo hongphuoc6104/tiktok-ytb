@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 32,
+            "seconds": 10.09,
+            "min": 7.57,
+            "max": 12.61
+          },
+          {
+            "scene_id": "SC02",
+            "units": 29,
+            "seconds": 9.11,
+            "min": 6.83,
+            "max": 11.38
+          },
+          {
+            "scene_id": "SC03",
+            "units": 33,
+            "seconds": 10.22,
+            "min": 7.66,
+            "max": 12.77
+          },
+          {
+            "scene_id": "SC04",
+            "units": 23,
+            "seconds": 11.14,
+            "min": 8.35,
+            "max": 13.92
+          },
+          {
+            "scene_id": "SC05",
+            "units": 28,
+            "seconds": 8.98,
+            "min": 6.73,
+            "max": 11.22
+          }
+        ],
+        "min": 37.14,
+        "max": 61.9,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "17414",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Khoan mang hộp đi, nắp chưa đóng!”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ]
+}

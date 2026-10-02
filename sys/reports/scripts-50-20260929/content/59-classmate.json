@@ -1,0 +1,464 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "b817ac3293c7a44886a7c89596c475b704c25bc14d99a310a7825856fa53b32d",
+  "topic": "Học từ vựng tiếng Anh CLASSMATE (danh từ: bạn cùng lớp) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ CLASSMATE",
+    "Làm rõ nghĩa lõi \"bạn cùng lớp\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng CLASSMATE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại CLASSMATE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Small expressive eyebrows and changing mouth curves are allowed. Do not add hair, realistic muscles, detailed fingers, a realistic nose or ears to this mascot.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); simple lower clothing where needed. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Bạn cùng lớp",
+      "appearance": "Learner of similar age to mascot, simple flat illustration.",
+      "outfit": "Plain yellow top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Thiếu bút trước giờ làm bài",
+      "purpose": "Make the classroom relationship relevant.",
+      "action": "Hộp bút trống, bạn cùng lớp có bút dư.",
+      "setting": "Classroom desk with mascot and classmate in yellow top, one spare pen.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn mở hộp bút và thấy trống trơn, người ngồi cạnh đưa sang một chiếc. Classmate là bạn cùng lớp. Hai bạn có thể mới quen, nhưng học chung lớp nên đã có một từ rõ ràng để nói về nhau.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "classmate",
+          "meaning": "bạn cùng lớp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot opens an empty pencil case while neighboring learner holds two pens. Classroom desk with mascot and classmate in yellow top, one spare pen. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot opens an empty pencil case while neighboring learner holds two pens.",
+          "reason": "Make the classroom relationship relevant.",
+          "visible_text": [
+            {
+              "text": "classmate",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the classroom relationship relevant.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn mở hộp bút và thấy trống trơn, người ngồi cạnh đưa sang một chiếc. Classmate là bạn cùng lớp. Hai bạn có thể mới quen, nhưng học chung lớp nên đã có một từ rõ ràng để nói về nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Giới thiệu theo quan hệ học tập",
+      "purpose": "Model a gender-neutral classmate noun.",
+      "action": "Giới thiệu người bàn bên.",
+      "setting": "Classroom desk with mascot and classmate in yellow top, one spare pen.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn nói: \"This is my classmate.\" Đây là bạn cùng lớp của tôi. Classmate cho biết hai người học cùng một lớp. Từ này không tự nói rằng hai bạn thân nhau đến mức nào hay đã quen bao lâu.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "classmate",
+          "meaning": "bạn cùng lớp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot gestures toward learner at neighboring desk, pen held in other hand. Classroom desk with mascot and classmate in yellow top, one spare pen. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot gestures toward learner at neighboring desk, pen held in other hand.",
+          "reason": "Model a gender-neutral classmate noun.",
+          "visible_text": [
+            {
+              "text": "This is my classmate.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model a gender-neutral classmate noun.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"This is my classmate.\" Đây là bạn cùng lớp của tôi. Classmate cho biết hai người học cùng một lớp. Từ này không tự nói rằng hai bạn thân nhau đến mức nào hay đã quen bao lâu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Việc nhỏ vừa xảy ra",
+      "purpose": "Use the second model as a summary of the pen help.",
+      "action": "Bạn đưa bút sang giúp.",
+      "setting": "Classroom desk with mascot and classmate in yellow top, one spare pen.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn kể: \"My classmate helps me.\" Bạn cùng lớp giúp tôi. Hôm nay sự giúp đỡ là chiếc bút được đưa sang đúng lúc. My classmate vẫn chỉ người bên cạnh, không cần đổi sang một nhân vật khác.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "classmate",
+          "meaning": "bạn cùng lớp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Classmate hands spare pen across desk to mascot, both seated calmly. Classroom desk with mascot and classmate in yellow top, one spare pen. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Classmate hands spare pen across desk to mascot, both seated calmly.",
+          "reason": "Use the second model as a summary of the pen help.",
+          "visible_text": [
+            {
+              "text": "My classmate helps me.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model as a summary of the pen help.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể: \"My classmate helps me.\" Bạn cùng lớp giúp tôi. Hôm nay sự giúp đỡ là chiếc bút được đưa sang đúng lúc. My classmate vẫn chỉ người bên cạnh, không cần đổi sang một nhân vật khác.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Gọi đúng quan hệ",
+      "purpose": "Prompt retrieval with same-class evidence.",
+      "action": "Gọi đúng quan hệ học chung lớp.",
+      "setting": "Classroom desk with mascot and classmate in yellow top, one spare pen.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Hai người học chung một lớp. Bạn giới thiệu người bên cạnh bằng \"This is my...\" gì? Hãy chọn từ chỉ quan hệ học tập.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "classmate",
+          "meaning": "bạn cùng lớp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot and classmate sit at adjacent desks facing the same board with no text. Classroom desk with mascot and classmate in yellow top, one spare pen. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and classmate sit at adjacent desks facing the same board with no text.",
+          "reason": "Prompt retrieval with same-class evidence.",
+          "visible_text": [
+            {
+              "text": "This is my...",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt retrieval with same-class evidence.",
+          "anchor": {
+            "vi": {
+              "quote": "Hai người học chung một lớp. Bạn giới thiệu người bên cạnh bằng \"This is my...\" gì? Hãy chọn từ chỉ quan hệ học tập.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the concrete retrieval question; leave the full quiet hold before the next scene gives feedback.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Bút được trả sau giờ",
+      "purpose": "Confirm and close the borrowed-pen story.",
+      "action": "Làm xong bài và trả bút.",
+      "setting": "Classroom desk with mascot and classmate in yellow top, one spare pen.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "\"This is my classmate.\" Từ cần điền là classmate. Làm bài xong, bạn trả bút và cảm ơn. Chỉ một việc nhỏ trong lớp cũng đủ cho bạn nhớ cả từ lẫn một câu giới thiệu dùng được ngay.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "classmate",
+          "meaning": "bạn cùng lớp"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot returns pen to classmate after finishing a plain worksheet. Classroom desk with mascot and classmate in yellow top, one spare pen. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot returns pen to classmate after finishing a plain worksheet.",
+          "reason": "Confirm and close the borrowed-pen story.",
+          "visible_text": [
+            {
+              "text": "This is my classmate.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm and close the borrowed-pen story.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my classmate.\" Từ cần điền là classmate. Làm bài xong, bạn trả bút và cảm ơn. Chỉ một việc nhỏ trong lớp cũng đủ cho bạn nhớ cả từ lẫn một câu giới thiệu dùng được ngay.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer, then resolve the opening situation warmly.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the classroom relationship relevant.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Use the established situation (Thiếu bút trước giờ làm bài) to motivate the next learning action: Model a gender-neutral classmate noun."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a gender-neutral classmate noun.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the established situation (Giới thiệu theo quan hệ học tập) to motivate the next learning action: Use the second model as a summary of the pen help."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model as a summary of the pen help.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Use the established situation (Việc nhỏ vừa xảy ra) to motivate the next learning action: Prompt retrieval with same-class evidence."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt retrieval with same-class evidence.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Use the established situation (Gọi đúng quan hệ) to motivate the next learning action: Confirm and close the borrowed-pen story."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the borrowed-pen story.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After explicit learner feedback, resolve the concrete situation introduced in the opening."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn mở hộp bút và thấy trống trơn, người ngồi cạnh đưa sang một chiếc. Classmate là bạn cùng lớp. Hai bạn có thể mới quen, nhưng học chung lớp nên đã có một từ rõ ràng để nói về nhau."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn mở hộp bút và thấy trống trơn, người ngồi cạnh đưa sang một chiếc. Classmate là bạn cùng lớp. Hai bạn có thể mới quen, nhưng học chung lớp nên đã có một từ rõ ràng để nói về nhau."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my classmate.\" Đây là bạn cùng lớp của tôi. Classmate cho biết hai người học cùng một lớp. Từ này không tự nói rằng hai bạn thân nhau đến mức nào hay đã quen bao lâu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my classmate.\" Đây là bạn cùng lớp của tôi. Classmate cho biết hai người học cùng một lớp. Từ này không tự nói rằng hai bạn thân nhau đến mức nào hay đã quen bao lâu."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn kể: \"My classmate helps me.\" Bạn cùng lớp giúp tôi. Hôm nay sự giúp đỡ là chiếc bút được đưa sang đúng lúc. My classmate vẫn chỉ người bên cạnh, không cần đổi sang một nhân vật khác."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Hai người học chung một lớp. Bạn giới thiệu người bên cạnh bằng \"This is my...\" gì? Hãy chọn từ chỉ quan hệ học tập."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is my classmate.\" Từ cần điền là classmate. Làm bài xong, bạn trả bút và cảm ơn. Chỉ một việc nhỏ trong lớp cũng đủ cho bạn nhớ cả từ lẫn một câu giới thiệu dùng được ngay."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

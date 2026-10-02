@@ -1,0 +1,460 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "40e9c4e450ad269c2db1727b9cd4b1a568bc915f38610aa06a47d80f31edb6b3",
+  "topic": "Học từ vựng tiếng Anh YEAR (danh từ: năm) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ YEAR",
+    "Làm rõ nghĩa lõi \"năm\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng YEAR, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại YEAR, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Tấm ảnh từ năm nào — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot and friend sort outing photographs into separate yearly album sections, no unapproved numerals.",
+      "setting": "Bàn album qua các năm.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Album có ảnh quen, nhưng mình quên chụp vào năm nào! Year là năm. \"A long unit of time.\" Bạn và người bạn xem lại các chuyến đi, muốn xếp những tấm ảnh theo năm đã cùng trải qua.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and friend sort outing photographs into separate yearly album sections, no unapproved numerals. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and friend sort outing photographs into separate yearly album sections, no unapproved numerals.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "year",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Album có ảnh quen, nhưng mình quên chụp vào năm nào! Year là năm. \"A long unit of time.\" Bạn và người bạn xem lại các chuyến đi, muốn xếp những tấm ảnh theo năm đã cùng trải qua.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Tấm ảnh từ năm nào — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Friend compares two photos from same outing and points to corresponding album section.",
+      "setting": "Bàn album qua các năm.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"What year was this?\" Đây là năm nào? \"Which year in our album?\" Người bạn tìm bức ảnh liên quan bên cạnh, rồi nhớ ra đoạn thời gian của chuyến đi ấy.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend compares two photos from same outing and points to corresponding album section. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend compares two photos from same outing and points to corresponding album section.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "What year was this?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"What year was this?\" Đây là năm nào? \"Which year in our album?\" Người bạn tìm bức ảnh liên quan bên cạnh, rồi nhớ ra đoạn thời gian của chuyến đi ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Tấm ảnh từ năm nào — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Mascot and friend leave one photo slot empty at end of album for future yearly tradition.",
+      "setting": "Bàn album qua các năm.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"Let's take a photo every year.\" Mỗi năm mình chụp một ảnh nhé. \"One photo each year.\" Hai người đặt một chỗ trống trong album để sau này thêm kỷ niệm mới.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot and friend leave one photo slot empty at end of album for future yearly tradition. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and friend leave one photo slot empty at end of album for future yearly tradition.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "Let's take a photo every year.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"Let's take a photo every year.\" Mỗi năm mình chụp một ảnh nhé. \"One photo each year.\" Hai người đặt một chỗ trống trong album để sau này thêm kỷ niệm mới.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Tấm ảnh từ năm nào — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold old outing photograph and full question.",
+      "setting": "Bàn album qua các năm.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi tấm ảnh cũ thuộc năm nào. \"Ask about the memory.\" Nói lại như lúc vừa nhận ra một chuyến đi: \"What year was this?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold old outing photograph and full question. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold old outing photograph and full question.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "What year was this?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi tấm ảnh cũ thuộc năm nào. \"Ask about the memory.\" Nói lại như lúc vừa nhận ra một chuyến đi: \"What year was this?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Tấm ảnh từ năm nào — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Album contains sorted old photos and one empty future slot, mascot closes cover gently.",
+      "setting": "Bàn album qua các năm.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"What year was this?\" Đây là năm nào nhỉ? \"A place for new memories.\" Ảnh cũ đã được xếp đúng phần, còn ô trống nhắc hai người giữ thêm một kỷ niệm vào năm sau.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "year",
+          "meaning": "năm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Album contains sorted old photos and one empty future slot, mascot closes cover gently. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Album contains sorted old photos and one empty future slot, mascot closes cover gently.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "What year was this?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"What year was this?\" Đây là năm nào nhỉ? \"A place for new memories.\" Ảnh cũ đã được xếp đúng phần, còn ô trống nhắc hai người giữ thêm một kỷ niệm vào năm sau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Album có ảnh quen, nhưng mình quên chụp vào năm nào! Year là năm. \"A long unit of time.\" Bạn và người bạn xem lại các chuyến đi, muốn xếp những tấm ảnh theo năm đã cùng trải qua."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Album có ảnh quen, nhưng mình quên chụp vào năm nào! Year là năm. \"A long unit of time.\" Bạn và người bạn xem lại các chuyến đi, muốn xếp những tấm ảnh theo năm đã cùng trải qua."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"What year was this?\" Đây là năm nào? \"Which year in our album?\" Người bạn tìm bức ảnh liên quan bên cạnh, rồi nhớ ra đoạn thời gian của chuyến đi ấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"What year was this?\" Đây là năm nào? \"Which year in our album?\" Người bạn tìm bức ảnh liên quan bên cạnh, rồi nhớ ra đoạn thời gian của chuyến đi ấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nói: \"Let's take a photo every year.\" Mỗi năm mình chụp một ảnh nhé. \"One photo each year.\" Hai người đặt một chỗ trống trong album để sau này thêm kỷ niệm mới."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn hỏi tấm ảnh cũ thuộc năm nào. \"Ask about the memory.\" Nói lại như lúc vừa nhận ra một chuyến đi: \"What year was this?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"What year was this?\" Đây là năm nào nhỉ? \"A place for new memories.\" Ảnh cũ đã được xếp đúng phần, còn ô trống nhắc hai người giữ thêm một kỷ niệm vào năm sau."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Thấy ảnh cũ → hỏi năm → nhớ chuyến đi → thêm ảnh mới.. Next event: Friend compares two photos from same outing and points to corresponding album section."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy ảnh cũ → hỏi năm → nhớ chuyến đi → thêm ảnh mới.. Next event: Mascot and friend leave one photo slot empty at end of album for future yearly tradition."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy ảnh cũ → hỏi năm → nhớ chuyến đi → thêm ảnh mới.. Next event: Hold old outing photograph and full question."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy ảnh cũ → hỏi năm → nhớ chuyến đi → thêm ảnh mới.. Next event: Album contains sorted old photos and one empty future slot, mascot closes cover gently."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy ảnh cũ → hỏi năm → nhớ chuyến đi → thêm ảnh mới.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

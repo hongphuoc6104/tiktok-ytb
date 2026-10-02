@@ -1,0 +1,474 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "d2bb71e4bacee35199fd09a07338b4f3a48d6a6031d549df69f46a9ac77df133",
+  "topic": "Học từ vựng tiếng Anh SAME (tính từ: giống nhau) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SAME",
+    "Làm rõ nghĩa lõi \"giống nhau\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SAME, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SAME, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Hai tờ có cùng một hình — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Two game cards with cat pictures, mascot compares exact picture details rather than background colour.",
+      "setting": "Bàn trò ghép thẻ, hai hình mèo.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Cùng hình mèo, có đúng cùng tấm hình? Same nghĩa là giống nhau trong bài này. \"The same picture on both cards.\" Bạn chơi tìm cặp với người bạn, không chỉ ghép vì cùng một màu nền.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "same",
+          "meaning": "giống nhau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Two game cards with cat pictures, mascot compares exact picture details rather than background colour. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Two game cards with cat pictures, mascot compares exact picture details rather than background colour.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "same",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Cùng hình mèo, có đúng cùng tấm hình? Same nghĩa là giống nhau trong bài này. \"The same picture on both cards.\" Bạn chơi tìm cặp với người bạn, không chỉ ghép vì cùng một màu nền.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Hai tờ có cùng một hình — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Both align two identical cat cards and compare matching illustration details.",
+      "setting": "Bàn trò ghép thẻ, hai hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"These cards have the same picture.\" Hai thẻ này có cùng hình. \"Look at the cat in each one.\" Người bạn nhìn các nét của hình đã chọn, rồi đặt hai tấm cùng nhau.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "same",
+          "meaning": "giống nhau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Both align two identical cat cards and compare matching illustration details. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both align two identical cat cards and compare matching illustration details.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "These cards have the same picture.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "cat",
+              "placement": "On the explicitly described card, object or display; readable and clear of teaching sentence.",
+              "object": "The literal teaching example named in narration."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"These cards have the same picture.\" Hai thẻ này có cùng hình. \"Look at the cat in each one.\" Người bạn nhìn các nét của hình đã chọn, rồi đặt hai tấm cùng nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hai tờ có cùng một hình — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Mascot contrasts matched cat pair with different cat-picture card, no early answer highlight for later practice.",
+      "setting": "Bàn trò ghép thẻ, hai hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Are they the same?\" Chúng có giống nhau không? \"Check the details, not just the colour.\" Hai người xác nhận cặp trong trò hư cấu, chưa lấy tấm có hình mèo khác ở bên cạnh.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "same",
+          "meaning": "giống nhau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot contrasts matched cat pair with different cat-picture card, no early answer highlight for later practice. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot contrasts matched cat pair with different cat-picture card, no early answer highlight for later practice.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "Are they the same?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Are they the same?\" Chúng có giống nhau không? \"Check the details, not just the colour.\" Hai người xác nhận cặp trong trò hư cấu, chưa lấy tấm có hình mèo khác ở bên cạnh.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Hai tờ có cùng một hình — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold candidate card pair and full question, no correct mark during practice.",
+      "setting": "Bàn trò ghép thẻ, hai hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi hai thẻ có giống nhau. \"Compare the pair.\" Nói như lúc cần xác nhận trước khi ghép: \"Are they the same?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "same",
+          "meaning": "giống nhau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold candidate card pair and full question, no correct mark during practice. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold candidate card pair and full question, no correct mark during practice.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "Are they the same?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi hai thẻ có giống nhau. \"Compare the pair.\" Nói như lúc cần xác nhận trước khi ghép: \"Are they the same?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hai tờ có cùng một hình — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Matched identical cards stored together as both prepare next fictional pair.",
+      "setting": "Bàn trò ghép thẻ, hai hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Are they the same?\" Chúng giống nhau không? \"This pair can be put together now.\" Hai người đã ghép đúng cùng hình trong câu chuyện, lật tiếp thẻ cho lượt sau.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "same",
+          "meaning": "giống nhau"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Matched identical cards stored together as both prepare next fictional pair. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Matched identical cards stored together as both prepare next fictional pair.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "Are they the same?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Are they the same?\" Chúng giống nhau không? \"This pair can be put together now.\" Hai người đã ghép đúng cùng hình trong câu chuyện, lật tiếp thẻ cho lượt sau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Cùng hình mèo, có đúng cùng tấm hình? Same nghĩa là giống nhau trong bài này. \"The same picture on both cards.\" Bạn chơi tìm cặp với người bạn, không chỉ ghép vì cùng một màu nền."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Cùng hình mèo, có đúng cùng tấm hình? Same nghĩa là giống nhau trong bài này. \"The same picture on both cards.\" Bạn chơi tìm cặp với người bạn, không chỉ ghép vì cùng một màu nền."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"These cards have the same picture.\" Hai thẻ này có cùng hình. \"Look at the cat in each one.\" Người bạn nhìn các nét của hình đã chọn, rồi đặt hai tấm cùng nhau."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"These cards have the same picture.\" Hai thẻ này có cùng hình. \"Look at the cat in each one.\" Người bạn nhìn các nét của hình đã chọn, rồi đặt hai tấm cùng nhau."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn hỏi: \"Are they the same?\" Chúng có giống nhau không? \"Check the details, not just the colour.\" Hai người xác nhận cặp trong trò hư cấu, chưa lấy tấm có hình mèo khác ở bên cạnh."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn hỏi hai thẻ có giống nhau. \"Compare the pair.\" Nói như lúc cần xác nhận trước khi ghép: \"Are they the same?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Are they the same?\" Chúng giống nhau không? \"This pair can be put together now.\" Hai người đã ghép đúng cùng hình trong câu chuyện, lật tiếp thẻ cho lượt sau."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Two game cards with cat pictures, mascot compares exact picture details rather than background colour. Continue with the existing connected model: Both align two identical cat cards and compare matching illustration details."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy gần giống → kiểm cùng hình → ghép → đổi thẻ tiếp.. Next event: Mascot contrasts matched cat pair with different cat-picture card, no early answer highlight for later practice."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy gần giống → kiểm cùng hình → ghép → đổi thẻ tiếp.. Next event: Hold candidate card pair and full question, no correct mark during practice."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy gần giống → kiểm cùng hình → ghép → đổi thẻ tiếp.. Next event: Matched identical cards stored together as both prepare next fictional pair."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy gần giống → kiểm cùng hình → ghép → đổi thẻ tiếp.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "17822",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Cùng hình mèo, có đúng cùng tấm hình?”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ],
+  "open_questions": []
+}

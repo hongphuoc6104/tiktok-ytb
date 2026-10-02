@@ -1,0 +1,82 @@
+{
+  "job": "vocab-message-script-285",
+  "title": "Tin vẫn chưa gửi",
+  "plot_vi": "Hai bạn đợi nhau ở hai chỗ; nhân vật nhận ra tin hẹn mình soạn chưa gửi và gọi bạn, rồi thôi giả vờ đang ở gần.",
+  "opening_function_vi": "Hải đứng chờ, tôi còn ở nhà",
+  "learner_outcome_vi": "Nhận ra đúng nghĩa đã chọn và dùng một câu ngắn cho nhu cầu của nhân vật.",
+  "characters": [
+    {
+      "appearance_en": "A minimalist stickman with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+      "id": "CH01",
+      "name_vi": "Minh",
+      "outfit_en": "A plain pale-blue short-sleeve shirt (#8CCFE8)."
+    },
+    {
+      "id": "CH02",
+      "name_vi": "Hải",
+      "appearance_en": "Minimal ink stick figure with round white navy-outlined head, solid black oval eyes and simple stick limbs. A small plain hair silhouette appropriate to the role.",
+      "outfit_en": "Exactly one plain mustard-yellow short-sleeve shirt, no logo or layered torso."
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "title_vi": "Điều xảy ra trước mắt",
+      "narration": "Hải đứng chờ, tôi còn ở nhà. \"Please read my message.\" Đọc tin nhắn của tôi nhé. Tôi nhờ bạn rồi mở máy, mới thấy tin vẫn nằm trong ô soạn.",
+      "visual_en": "Home medium shot: mascot examines phone with an unsent generic draft bubble. Hải is not physically present; only mascot in this shot.",
+      "purpose_en": "Open on immediate personal tension and useful English.",
+      "character_ids": [
+        "CH01"
+      ],
+      "practice_pause_seconds": 0
+    },
+    {
+      "scene_id": "SC02",
+      "title_vi": "Điều chưa nói",
+      "narration": "Tôi đã đổi chỗ hẹn nhưng chưa bấm gửi. Hải vẫn ở quán cũ, tưởng tôi sắp tới. Tôi nhìn câu đang viết rằng mình gần tới rồi, xóa đi, nhắn mình còn ở nhà.",
+      "visual_en": "Same phone angle: mascot erases an abstract draft block and prepares new message. No readable location, private data or wording.",
+      "purpose_en": "Reveal the human need and resistance through ordinary action.",
+      "character_ids": [
+        "CH01"
+      ],
+      "practice_pause_seconds": 0
+    },
+    {
+      "scene_id": "SC03",
+      "title_vi": "Lựa chọn",
+      "narration": "\"You have a new message.\" Bạn có tin nhắn mới. Hải đọc thông báo rồi gọi lại. Bạn hỏi cần bao lâu. Tôi nói rõ, chờ nghe câu trả lời thay vì vội hứa thêm.",
+      "visual_en": "Café shot: Hải sees one incoming message icon on phone and calls mascot, one empty neighboring chair. No other customer or staff.",
+      "purpose_en": "Make a small consequential choice using the second model.",
+      "character_ids": [
+        "CH02"
+      ],
+      "practice_pause_seconds": 0
+    },
+    {
+      "scene_id": "SC04",
+      "title_vi": "Lời cần đáp",
+      "narration": "Tôi muốn nhờ Hải xem lời hẹn vừa gửi. Bạn nói giúp tôi câu đọc tin nhắn của tôi nhé bằng tiếng Anh.",
+      "visual_en": "Home shot: mascot holds phone ready to request Hải read the new message. Supported stem only.",
+      "purpose_en": "Invite the same necessary sentence and wait for learner response.",
+      "character_ids": [
+        "CH01"
+      ],
+      "practice_pause_seconds": 4,
+      "stem": "Please read my ___."
+    },
+    {
+      "scene_id": "SC05",
+      "title_vi": "Chuyện tiếp tục",
+      "narration": "\"Please read my message.\" Hải bảo sẽ chờ ở quán cũ. Khi tôi tới, bạn để chiếc ghế cạnh mình trống. Tôi đặt máy xuống, xin lỗi rồi hỏi bạn đã gọi món gì chưa.",
+      "visual_en": "At the same café table, mascot finally sits on the chair beside Hải. Two plain cups, phones set down, no other people.",
+      "purpose_en": "Return the answer and resolve the initial human tension through a concrete gesture.",
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "practice_pause_seconds": 0
+    }
+  ],
+  "editorial_review": "Reviewed and rewritten by primary agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

@@ -1,0 +1,554 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "e407603ea31dab99cee885ed73647664ce1f792647ef2f48c9fc6c88d90c493b",
+  "topic": "Học từ vựng tiếng Anh WORD (danh từ: từ) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ WORD",
+    "Làm rõ nghĩa lõi \"từ\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng WORD, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại WORD, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chữ cat trên thẻ đang gọi con mèo — Nhịp 1",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "action": "Mascot and companion view teaching card with permitted cat text and simple cat illustration.",
+      "setting": "Bàn học có thẻ cat và hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Thẻ có hình mèo rồi, phần chữ cat đang là gì trong việc học? Word nghĩa là từ. \"A word can carry a meaning.\" Bạn xem một thẻ hư cấu với người bạn, muốn biết phần chữ mình đang đọc có nghĩa nào trong tình huống.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and companion view teaching card with permitted cat text and simple cat illustration. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion view teaching card with permitted cat text and simple cat illustration.",
+          "reason": "Make the selected sense useful in a concrete situation.",
+          "visible_text": [
+            {
+              "text": "word",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "cat",
+              "placement": "On the explicitly described card, object or display; readable and clear of teaching sentence.",
+              "object": "The literal teaching example named in narration."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the selected sense useful in a concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Thẻ có hình mèo rồi, phần chữ cat đang là gì trong việc học? Word nghĩa là từ. \"A word can carry a meaning.\" Bạn xem một thẻ hư cấu với người bạn, muốn biết phần chữ mình đang đọc có nghĩa nào trong tình huống.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chữ cat trên thẻ đang gọi con mèo — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Friend connects permitted cat text to cat illustration while mascot asks.",
+      "setting": "Bàn học có thẻ cat và hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"What does this word mean?\" Từ này nghĩa là gì? \"Tell me about the word on the card.\" Người bạn chỉ tới hình mèo, để bạn liên hệ phần chữ với đối tượng đang được minh họa.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend connects permitted cat text to cat illustration while mascot asks. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend connects permitted cat text to cat illustration while mascot asks.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "What does this word mean?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"What does this word mean?\" Từ này nghĩa là gì? \"Tell me about the word on the card.\" Người bạn chỉ tới hình mèo, để bạn liên hệ phần chữ với đối tượng đang được minh họa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chữ cat trên thẻ đang gọi con mèo — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both inspect word and picture as separate parts of same teaching card.",
+      "setting": "Bàn học có thẻ cat và hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Trong mẫu này, cat là từ trên thẻ; cả tấm thẻ còn có một bức hình hỗ trợ. \"Look at the word and its picture.\" Bạn có thể hỏi về một từ khi chưa biết, thay vì đoán rằng chữ và hình luôn tự làm mọi người hiểu giống nhau.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both inspect word and picture as separate parts of same teaching card. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both inspect word and picture as separate parts of same teaching card.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "word",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong mẫu này, cat là từ trên thẻ; cả tấm thẻ còn có một bức hình hỗ trợ. \"Look at the word and its picture.\" Bạn có thể hỏi về một từ khi chưa biết, thay vì đoán rằng chữ và hình luôn tự làm mọi người hiểu giống nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chữ cat trên thẻ đang gọi con mèo — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Mascot places known cat card in review set with companion.",
+      "setting": "Bàn học có thẻ cat và hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"I know this word.\" Tôi biết từ này. \"I can connect it with the cat here.\" Bạn nhận ra phần đã học trước trong câu chuyện, rồi đặt thẻ vào nhóm mình muốn dùng để ôn lại.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot places known cat card in review set with companion. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot places known cat card in review set with companion.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "I know this word.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "cat",
+              "placement": "On the explicitly described card, object or display; readable and clear of teaching sentence.",
+              "object": "The literal teaching example named in narration."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I know this word.\" Tôi biết từ này. \"I can connect it with the cat here.\" Bạn nhận ra phần đã học trước trong câu chuyện, rồi đặt thẻ vào nhóm mình muốn dùng để ôn lại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chữ cat trên thẻ đang gọi con mèo — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold teaching card and full learner question, no new cat lesson target.",
+      "setting": "Bàn học có thẻ cat và hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi nghĩa một từ trên thẻ. \"Ask about the word.\" Hãy nói: \"What does this word mean?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold teaching card and full learner question, no new cat lesson target. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold teaching card and full learner question, no new cat lesson target.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "What does this word mean?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi nghĩa một từ trên thẻ. \"Ask about the word.\" Hãy nói: \"What does this word mean?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Chữ cat trên thẻ đang gọi con mèo — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both move to next plain teaching card after storing known cat card.",
+      "setting": "Bàn học có thẻ cat và hình mèo.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"What does this word mean?\" Từ này nghĩa là gì? \"The question gives us a way to learn.\" Hai người đã liên hệ được chữ với hình trong mẫu hư cấu, tiếp tục xem từ khác bằng lời hỏi vừa tập.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "word",
+          "meaning": "từ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both move to next plain teaching card after storing known cat card. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both move to next plain teaching card after storing known cat card.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "What does this word mean?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"What does this word mean?\" Từ này nghĩa là gì? \"The question gives us a way to learn.\" Hai người đã liên hệ được chữ với hình trong mẫu hư cấu, tiếp tục xem từ khác bằng lời hỏi vừa tập.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Thẻ có hình mèo rồi, phần chữ cat đang là gì trong việc học? Word nghĩa là từ. \"A word can carry a meaning.\" Bạn xem một thẻ hư cấu với người bạn, muốn biết phần chữ mình đang đọc có nghĩa nào trong tình huống."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Thẻ có hình mèo rồi, phần chữ cat đang là gì trong việc học? Word nghĩa là từ. \"A word can carry a meaning.\" Bạn xem một thẻ hư cấu với người bạn, muốn biết phần chữ mình đang đọc có nghĩa nào trong tình huống."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"What does this word mean?\" Từ này nghĩa là gì? \"Tell me about the word on the card.\" Người bạn chỉ tới hình mèo, để bạn liên hệ phần chữ với đối tượng đang được minh họa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"What does this word mean?\" Từ này nghĩa là gì? \"Tell me about the word on the card.\" Người bạn chỉ tới hình mèo, để bạn liên hệ phần chữ với đối tượng đang được minh họa."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Trong mẫu này, cat là từ trên thẻ; cả tấm thẻ còn có một bức hình hỗ trợ. \"Look at the word and its picture.\" Bạn có thể hỏi về một từ khi chưa biết, thay vì đoán rằng chữ và hình luôn tự làm mọi người hiểu giống nhau."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn nói: \"I know this word.\" Tôi biết từ này. \"I can connect it with the cat here.\" Bạn nhận ra phần đã học trước trong câu chuyện, rồi đặt thẻ vào nhóm mình muốn dùng để ôn lại."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn hỏi nghĩa một từ trên thẻ. \"Ask about the word.\" Hãy nói: \"What does this word mean?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"What does this word mean?\" Từ này nghĩa là gì? \"The question gives us a way to learn.\" Hai người đã liên hệ được chữ với hình trong mẫu hư cấu, tiếp tục xem từ khác bằng lời hỏi vừa tập."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Thấy chữ → hỏi nghĩa từ → nhìn hình → nhận ra.. Next event: Friend connects permitted cat text to cat illustration while mascot asks."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy chữ → hỏi nghĩa từ → nhìn hình → nhận ra.. Next event: Both inspect word and picture as separate parts of same teaching card."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Thấy chữ → hỏi nghĩa từ → nhìn hình → nhận ra.. Next event: Mascot places known cat card in review set with companion."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Thấy chữ → hỏi nghĩa từ → nhìn hình → nhận ra.. Next event: Hold teaching card and full learner question, no new cat lesson target."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy chữ → hỏi nghĩa từ → nhìn hình → nhận ra.. Next event: Both move to next plain teaching card after storing known cat card."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thấy chữ → hỏi nghĩa từ → nhìn hình → nhận ra.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

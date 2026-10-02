@@ -1,0 +1,580 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "3df2cc8a5f1ca2b038ca4640f9225b47b01afd2e45620ee2b21445c95c6d75d5",
+  "topic": "Học từ vựng tiếng Anh son — con trai qua câu chuyện “Con đã lớn, vẫn là con trai của bố”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới son; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “con trai” của son; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng son chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng son, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Bố",
+      "appearance": "Adult man, simple flat illustration, minimal limbs.",
+      "outfit": "Plain sage-green short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Cao hơn bố vẫn là con",
+      "purpose": "Challenge age-based misunderstanding of the family role.",
+      "action": "Adult-sized mascot stands slightly taller than father, both beside park bench.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn cao hơn bố rồi, nhưng khi bố giới thiệu bạn, từ dùng vẫn là son, con trai. Son nói quan hệ với cha mẹ. Lớn lên không làm bạn hết là con trai của họ trong cách gọi này. Người đứng cạnh có thể là một em bé hoặc một người đàn ông trưởng thành. Muốn chọn từ đúng, hỏi người ấy là con của ai, không chỉ hỏi bao nhiêu tuổi.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Adult-sized mascot stands slightly taller than father, both beside park bench. Park meeting with mascot as adult son and father in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Adult-sized mascot stands slightly taller than father, both beside park bench.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "son",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Show the declared father as speaker and adult mascot as his son. A separate relation card links the same father to the mascot; make adult status explicit. No age inferred from height alone. Park meeting with mascot as adult son and father in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show the declared father as speaker and adult mascot as his son. A separate relation card links the same father to the mascot; make adult status explicit. No age inferred from height alone.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "son",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn cao hơn bố rồi, nhưng khi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Người đứng cạnh có thể là một",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nghe bố giới thiệu",
+      "purpose": "Model the parent's perspective clearly.",
+      "action": "Father gestures toward mascot while facing an off-frame acquaintance.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bố nói: \"This is my son.\" Đây là con trai tôi. Người nói câu này là bố hoặc mẹ, và son là người con trai được giới thiệu. Mình nhìn quan hệ giữa hai người, không đo chiều cao để chọn từ. Trong lời giới thiệu, my thuộc về người bố đang nói. Nếu bạn là người nghe, đừng đổi góc nhìn rồi tưởng người bố đang tự giới thiệu chính mình là người con.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Father gestures toward mascot while facing an off-frame acquaintance. Park meeting with mascot as adult son and father in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Father gestures toward mascot while facing an off-frame acquaintance.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Show the declared father as speaker and adult mascot as his son. A separate relation card links the same father to the mascot; make adult status explicit. No age inferred from height alone. Park meeting with mascot as adult son and father in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show the declared father as speaker and adult mascot as his son. A separate relation card links the same father to the mascot; make adult status explicit. No age inferred from height alone.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "son",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bố nói: \"This is my son.\" Đây",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong lời giới thiệu, my thuộc về",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nói về một việc con làm",
+      "purpose": "Connect a second sentence to the same parental viewpoint.",
+      "action": "Mascot holds a simple travel mug for father beside the bench.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bố kể tiếp: \"My son helps me.\" Con trai tôi giúp tôi. Hôm nay bạn vừa mang nước cho bố. Son vẫn chỉ cùng một người trong hai câu, dù lúc đứng chào hay lúc đang đưa chiếc cốc.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot holds a simple travel mug for father beside the bench. Park meeting with mascot as adult son and father in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds a simple travel mug for father beside the bench.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot holds a simple travel mug for father beside the bench. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Park meeting with mascot as adult son and father in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot holds a simple travel mug for father beside the bench. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "My son helps me.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bố kể tiếp: \"My son helps me.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"My son helps me.\" Con trai tôi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Ai đang nói?",
+      "purpose": "Check perspective instead of only spelling recall.",
+      "action": "Father points toward mascot with an empty speech bubble; mother not shown.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bố muốn giới thiệu con trai đứng cạnh mình. Ông nói \"This is my...\" gì? Hãy trả lời từ góc nhìn của người bố.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Father points toward mascot with an empty speech bubble; mother not shown. Park meeting with mascot as adult son and father in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Father points toward mascot with an empty speech bubble; mother not shown.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Father points toward mascot with an empty speech bubble; mother not shown. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Park meeting with mascot as adult son and father in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Father points toward mascot with an empty speech bubble; mother not shown. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "This is my...",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bố muốn giới thiệu con trai đứng",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my...\" gì? Hãy trả lời",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Người con đã lớn",
+      "purpose": "Confirm and close the height contrast.",
+      "action": "Mascot and father sit together on bench with two mugs, adult mascot slightly taller when seated.",
+      "setting": "Park meeting with mascot as adult son and father in sage top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"This is my son.\" Từ cần điền là son. Bạn đã lớn và có thể chăm sóc bố bằng những việc nhỏ. Trong lời giới thiệu của bố, bạn vẫn là người con trai đang ngồi cạnh ông ấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "son",
+          "meaning": "con trai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and father sit together on bench with two mugs, adult mascot slightly taller when seated. Park meeting with mascot as adult son and father in sage top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and father sit together on bench with two mugs, adult mascot slightly taller when seated.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my son.\" Từ cần điền",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Challenge age-based misunderstanding of the family role.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model the parent's perspective clearly."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the parent's perspective clearly.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Connect a second sentence to the same parental viewpoint."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Connect a second sentence to the same parental viewpoint.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Check perspective instead of only spelling recall."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Check perspective instead of only spelling recall.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close the height contrast."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the height contrast.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn cao hơn bố rồi, nhưng khi bố giới thiệu bạn, từ dùng vẫn là son, con trai. Son nói quan hệ với cha mẹ. Lớn lên không làm bạn hết là con trai của họ trong cách gọi này. Người đứng cạnh có thể là một em bé hoặc một người đàn ông trưởng thành. Muốn chọn từ đúng, hỏi người ấy là con của ai, không chỉ hỏi bao nhiêu tuổi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn cao hơn bố rồi, nhưng khi bố giới thiệu bạn, từ dùng vẫn là son, con trai. Son nói quan hệ với cha mẹ. Lớn lên không làm bạn hết là con trai của họ trong cách gọi này. Người đứng cạnh có thể là một em bé hoặc một người đàn ông trưởng thành. Muốn chọn từ đúng, hỏi người ấy là con của ai, không chỉ hỏi bao nhiêu tuổi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bố nói: \"This is my son.\" Đây là con trai tôi. Người nói câu này là bố hoặc mẹ, và son là người con trai được giới thiệu. Mình nhìn quan hệ giữa hai người, không đo chiều cao để chọn từ. Trong lời giới thiệu, my thuộc về người bố đang nói. Nếu bạn là người nghe, đừng đổi góc nhìn rồi tưởng người bố đang tự giới thiệu chính mình là người con."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bố nói: \"This is my son.\" Đây là con trai tôi. Người nói câu này là bố hoặc mẹ, và son là người con trai được giới thiệu. Mình nhìn quan hệ giữa hai người, không đo chiều cao để chọn từ. Trong lời giới thiệu, my thuộc về người bố đang nói. Nếu bạn là người nghe, đừng đổi góc nhìn rồi tưởng người bố đang tự giới thiệu chính mình là người con."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bố kể tiếp: \"My son helps me.\" Con trai tôi giúp tôi. Hôm nay bạn vừa mang nước cho bố. Son vẫn chỉ cùng một người trong hai câu, dù lúc đứng chào hay lúc đang đưa chiếc cốc."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bố muốn giới thiệu con trai đứng cạnh mình. Ông nói \"This is my...\" gì? Hãy trả lời từ góc nhìn của người bố."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is my son.\" Từ cần điền là son. Bạn đã lớn và có thể chăm sóc bố bằng những việc nhỏ. Trong lời giới thiệu của bố, bạn vẫn là người con trai đang ngồi cạnh ông ấy."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

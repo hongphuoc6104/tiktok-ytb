@@ -1,0 +1,45 @@
+{
+  "job": "vocab-son-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 80,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn cao hơn bố rồi, nhưng khi bố giới thiệu bạn, từ dùng vẫn là son, con trai. Son nói quan hệ với cha mẹ. Lớn lên không làm bạn hết là con trai của họ trong cách gọi này. Người đứng cạnh có thể là một em bé hoặc một người đàn ông trưởng thành. Muốn chọn từ đúng, hỏi người ấy là con của ai, không chỉ hỏi bao nhiêu tuổi.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bố nói: \"This is my son.\" Đây là con trai tôi. Người nói câu này là bố hoặc mẹ, và son là người con trai được giới thiệu. Mình nhìn quan hệ giữa hai người, không đo chiều cao để chọn từ. Trong lời giới thiệu, my thuộc về người bố đang nói. Nếu bạn là người nghe, đừng đổi góc nhìn rồi tưởng người bố đang tự giới thiệu chính mình là người con.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bố kể tiếp: \"My son helps me.\" Con trai tôi giúp tôi. Hôm nay bạn vừa mang nước cho bố. Son vẫn chỉ cùng một người trong hai câu, dù lúc đứng chào hay lúc đang đưa chiếc cốc.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Bố muốn giới thiệu con trai đứng cạnh mình. Ông nói \"This is my...\" gì? Hãy trả lời từ góc nhìn của người bố.",
+      "learner_pause_seconds": 5,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"This is my son.\" Từ cần điền là son. Bạn đã lớn và có thể chăm sóc bố bằng những việc nhỏ. Trong lời giới thiệu của bố, bạn vẫn là người con trai đang ngồi cạnh ông ấy.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of son and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

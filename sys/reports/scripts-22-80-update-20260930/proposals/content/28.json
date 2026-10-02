@@ -1,0 +1,526 @@
+{
+  "schema_version": "3.0",
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": [],
+  "brief_revision": 2,
+  "brief_hash": "d2ffd01db0cd043eb8c5c38f507b3b90ea654f3dd9ba8b0f3a3632ad8ffafc95",
+  "topic": "Học từ vựng tiếng Anh wait — chờ qua câu chuyện “Bấm nữa, thang máy vẫn chưa tới”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới wait; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “chờ” của wait; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng wait chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng wait, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Nút bấm không biết vội",
+      "purpose": "Open with an everyday unhelpful action.",
+      "action": "Mascot presses the already lit elevator call button while holding a grocery bag, elevator doors closed.",
+      "setting": "Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn bấm nút gọi thang máy lần thứ ba, nhưng cửa vẫn chưa mở. Wait là chờ. Cái nút đã sáng từ lần đầu rồi; bây giờ việc bạn cần làm chỉ là đứng lại một chút.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait",
+          "meaning": "chờ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot presses the already lit elevator call button while holding a grocery bag, elevator doors closed. Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot presses the already lit elevator call button while holding a grocery bag, elevator doors closed.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "wait",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot presses the already lit elevator call button while holding a grocery bag, elevator doors closed. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot presses the already lit elevator call button while holding a grocery bag, elevator doors closed. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "wait",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn bấm nút gọi thang máy lần",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Cái nút đã sáng từ lần đầu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of wait and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nói việc mình làm",
+      "purpose": "Model waiting for something.",
+      "action": "Mascot steps back from elevator button, stands with bag at feet, doors still closed.",
+      "setting": "Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"I wait for the lift.\" Tôi chờ thang máy. Trong câu này, wait for cho biết bạn đang chờ thứ gì. Không cần tiếp tục bấm nút để chứng minh mình vẫn đang đứng đó.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait",
+          "meaning": "chờ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot steps back from elevator button, stands with bag at feet, doors still closed. Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot steps back from elevator button, stands with bag at feet, doors still closed.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I wait for the lift.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of wait and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nhờ một người chờ",
+      "purpose": "Connect a useful request to retrieving a dropped item.",
+      "action": "Mascot bends to pick up a dropped orange beside grocery bag as elevator doors begin opening.",
+      "setting": "Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Cửa vừa mở thì một quả cam lăn khỏi túi. Bạn nói với người bên trong: \"Please wait.\" Làm ơn chờ một chút. Câu này giúp bạn nhờ họ chờ trong lúc nhặt lại món đồ vừa rơi.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait",
+          "meaning": "chờ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot bends to pick up a dropped orange beside grocery bag as elevator doors begin opening. Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot bends to pick up a dropped orange beside grocery bag as elevator doors begin opening.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot bends to pick up a dropped orange beside grocery bag as elevator doors begin opening. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot bends to pick up a dropped orange beside grocery bag as elevator doors begin opening. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Please wait.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Cửa vừa mở thì một quả cam",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Please wait.\" Làm ơn chờ một chút.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of wait and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nhặt cam trước khi cửa đóng",
+      "purpose": "Prompt urgent but manageable retrieval.",
+      "action": "Mascot reaches toward orange while looking at open elevator, incomplete polite request at top.",
+      "setting": "Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Giờ bạn là người đánh rơi quả cam. Muốn nhờ người trong thang máy chờ, hãy nói \"Please...\" rồi thêm động từ vừa học. Thử nói cả câu, đủ rõ để họ nghe thấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait",
+          "meaning": "chờ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot reaches toward orange while looking at open elevator, incomplete polite request at top. Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot reaches toward orange while looking at open elevator, incomplete polite request at top.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot reaches toward orange while looking at open elevator, incomplete polite request at top. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot reaches toward orange while looking at open elevator, incomplete polite request at top. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Please...",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Giờ bạn là người đánh rơi quả",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Please...\" rồi thêm động từ vừa học.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of wait and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Cuối cùng cũng lên được",
+      "purpose": "Confirm and close both waiting and dropped-fruit problems.",
+      "action": "Mascot safely inside open elevator with orange back in bag, hands clear of door edges.",
+      "setting": "Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"Please wait.\" Từ còn thiếu là wait. Quả cam đã vào túi, bạn cũng vào thang máy. Lần này, điều giúp bạn lên được không phải bấm nút thêm lần nữa, mà là một lời nhờ đúng lúc.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "wait",
+          "meaning": "chờ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot safely inside open elevator with orange back in bag, hands clear of door edges. Apartment elevator lobby, one lit unlabeled call button; no readable floor numbers. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot safely inside open elevator with orange back in bag, hands clear of door edges.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Please wait.\" Từ còn thiếu là wait.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of wait and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open with an everyday unhelpful action.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model waiting for something."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model waiting for something.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Connect a useful request to retrieving a dropped item."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Connect a useful request to retrieving a dropped item.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt urgent but manageable retrieval."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt urgent but manageable retrieval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close both waiting and dropped-fruit problems."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close both waiting and dropped-fruit problems.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn bấm nút gọi thang máy lần thứ ba, nhưng cửa vẫn chưa mở. Wait là chờ. Cái nút đã sáng từ lần đầu rồi; bây giờ việc bạn cần làm chỉ là đứng lại một chút."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn bấm nút gọi thang máy lần thứ ba, nhưng cửa vẫn chưa mở. Wait là chờ. Cái nút đã sáng từ lần đầu rồi; bây giờ việc bạn cần làm chỉ là đứng lại một chút."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I wait for the lift.\" Tôi chờ thang máy. Trong câu này, wait for cho biết bạn đang chờ thứ gì. Không cần tiếp tục bấm nút để chứng minh mình vẫn đang đứng đó."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I wait for the lift.\" Tôi chờ thang máy. Trong câu này, wait for cho biết bạn đang chờ thứ gì. Không cần tiếp tục bấm nút để chứng minh mình vẫn đang đứng đó."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Cửa vừa mở thì một quả cam lăn khỏi túi. Bạn nói với người bên trong: \"Please wait.\" Làm ơn chờ một chút. Câu này giúp bạn nhờ họ chờ trong lúc nhặt lại món đồ vừa rơi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Giờ bạn là người đánh rơi quả cam. Muốn nhờ người trong thang máy chờ, hãy nói \"Please...\" rồi thêm động từ vừa học. Thử nói cả câu, đủ rõ để họ nghe thấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Please wait.\" Từ còn thiếu là wait. Quả cam đã vào túi, bạn cũng vào thang máy. Lần này, điều giúp bạn lên được không phải bấm nút thêm lần nữa, mà là một lời nhờ đúng lúc."
+    }
+  ]
+}

@@ -1,0 +1,558 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "18ae2718ada7e087602295b532d55794262cd3bccb2832b0d80fe9dfa26f7a36",
+  "topic": "Học từ vựng tiếng Anh ear — tai qua câu chuyện “Tai nghe một bên, chỉ đúng một tai”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới ear; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “tai” của ear; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng ear chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng ear, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người minh họa phụ",
+      "appearance": "Adult human teaching figure, simple flat 2D illustration, short black hair, small clearly visible nose and ears, two ordinary eyes; one torso and two arms, no realistic muscles. Hands can be shown in separate flat teaching diagrams with clearly separated digits.",
+      "outfit": "Plain yellow short-sleeve top and dark simple trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Bản nhạc thiếu một nửa",
+      "purpose": "Motivate a particular ear through a headphone problem.",
+      "action": "Human friend holds one headphone cup near left ear while other cup rests away; mascot watches.",
+      "setting": "Mascot and human teaching friend with small visible ears, simple headphones on table.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn đeo tai nghe rồi phát hiện âm thanh chỉ ở một bên. Ear là tai. Trong tình huống này, người bạn tháo tai nghe ra để xem bên nào đang có tiếng, chứ không vội tăng âm lượng lên thật to.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ear",
+          "meaning": "tai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Human friend holds one headphone cup near left ear while other cup rests away; mascot watches. Mascot and human teaching friend with small visible ears, simple headphones on table. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Human friend holds one headphone cup near left ear while other cup rests away; mascot watches.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "ear",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Human friend holds one headphone cup near left ear while other cup rests away; mascot watches. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Mascot and human teaching friend with small visible ears, simple headphones on table. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Human friend holds one headphone cup near left ear while other cup rests away; mascot watches. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "ear",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đeo tai nghe rồi phát hiện",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong tình huống này, người bạn tháo",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of ear and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Gọi tên một tai",
+      "purpose": "Model singular ear on the teaching face.",
+      "action": "Mascot points to one visible ear of separate human face diagram; own head unchanged.",
+      "setting": "Mascot and human teaching friend with small visible ears, simple headphones on table.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Nhìn hình, bạn nói: \"This is my ear.\" Đây là tai tôi. Ear chỉ một tai. Khi muốn nói hai tai, mình dùng ears, thêm s. Bạn có thể nhìn hai bên đầu để hiểu vì sao có hai cách dùng.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ear",
+          "meaning": "tai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to one visible ear of separate human face diagram; own head unchanged. Mascot and human teaching friend with small visible ears, simple headphones on table. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to one visible ear of separate human face diagram; own head unchanged.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Mascot points to one visible ear of separate human face diagram; own head unchanged. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Mascot and human teaching friend with small visible ears, simple headphones on table. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC02_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot points to one visible ear of separate human face diagram; own head unchanged. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "This is my ear.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhìn hình, bạn nói: \"This is my",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my ear.\" Đây là tai",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of ear and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chỉ đúng bên được yêu cầu",
+      "purpose": "Model a qualified instruction.",
+      "action": "Human friend lightly touches left ear while mascot presents a simple arrow toward that side.",
+      "setting": "Mascot and human teaching friend with small visible ears, simple headphones on table.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Người hướng dẫn nói: \"Touch your left ear.\" Chạm vào tai trái của bạn. Left cho biết bên trái, còn ear gọi bộ phận. Câu này giúp bạn hiểu người nói muốn chỉ đúng bên nào, không chỉ gọi chung cả đầu.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ear",
+          "meaning": "tai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Human friend lightly touches left ear while mascot presents a simple arrow toward that side. Mascot and human teaching friend with small visible ears, simple headphones on table. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Human friend lightly touches left ear while mascot presents a simple arrow toward that side.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Human friend lightly touches left ear while mascot presents a simple arrow toward that side. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Mascot and human teaching friend with small visible ears, simple headphones on table. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Human friend lightly touches left ear while mascot presents a simple arrow toward that side. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Touch your left ear.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Người hướng dẫn nói: \"Touch your left",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Touch your left ear.\" Chạm vào tai",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of ear and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Điền đúng bộ phận",
+      "purpose": "Prompt the noun within the modeled left-side instruction.",
+      "action": "Mascot points to left ear on teaching figure, incomplete instruction above.",
+      "setting": "Mascot and human teaching friend with small visible ears, simple headphones on table.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Câu \"Touch your left...\" cần từ nào để chỉ tai trái? Hãy nói hết câu rồi chỉ nhẹ tai bên trái của chính mình.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ear",
+          "meaning": "tai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot points to left ear on teaching figure, incomplete instruction above. Mascot and human teaching friend with small visible ears, simple headphones on table. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to left ear on teaching figure, incomplete instruction above.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Câu \"Touch your left...\" cần từ nào",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of ear and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Dây cắm đã vào hết",
+      "purpose": "Confirm and resolve the audio prop problem.",
+      "action": "Human friend reseats headphone plug in device while mascot stands nearby; both ear cups visible.",
+      "setting": "Mascot and human teaching friend with small visible ears, simple headphones on table.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"Touch your left ear.\" Từ còn thiếu là ear. Hóa ra dây cắm lúc nãy chưa vào hết, nên tai nghe chỉ có tiếng một bên. Lỗi nhỏ đã tìm được, còn bạn nhớ thêm một bộ phận cùng cách nói bên trái.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "ear",
+          "meaning": "tai"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Human friend reseats headphone plug in device while mascot stands nearby; both ear cups visible. Mascot and human teaching friend with small visible ears, simple headphones on table. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Human friend reseats headphone plug in device while mascot stands nearby; both ear cups visible.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Touch your left ear.\" Từ còn thiếu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of ear and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Motivate a particular ear through a headphone problem.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model singular ear on the teaching face."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model singular ear on the teaching face.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Model a qualified instruction."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model a qualified instruction.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt the noun within the modeled left-side instruction."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the noun within the modeled left-side instruction.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and resolve the audio prop problem."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the audio prop problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn đeo tai nghe rồi phát hiện âm thanh chỉ ở một bên. Ear là tai. Trong tình huống này, người bạn tháo tai nghe ra để xem bên nào đang có tiếng, chứ không vội tăng âm lượng lên thật to."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn đeo tai nghe rồi phát hiện âm thanh chỉ ở một bên. Ear là tai. Trong tình huống này, người bạn tháo tai nghe ra để xem bên nào đang có tiếng, chứ không vội tăng âm lượng lên thật to."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Nhìn hình, bạn nói: \"This is my ear.\" Đây là tai tôi. Ear chỉ một tai. Khi muốn nói hai tai, mình dùng ears, thêm s. Bạn có thể nhìn hai bên đầu để hiểu vì sao có hai cách dùng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Nhìn hình, bạn nói: \"This is my ear.\" Đây là tai tôi. Ear chỉ một tai. Khi muốn nói hai tai, mình dùng ears, thêm s. Bạn có thể nhìn hai bên đầu để hiểu vì sao có hai cách dùng."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người hướng dẫn nói: \"Touch your left ear.\" Chạm vào tai trái của bạn. Left cho biết bên trái, còn ear gọi bộ phận. Câu này giúp bạn hiểu người nói muốn chỉ đúng bên nào, không chỉ gọi chung cả đầu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Câu \"Touch your left...\" cần từ nào để chỉ tai trái? Hãy nói hết câu rồi chỉ nhẹ tai bên trái của chính mình."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Touch your left ear.\" Từ còn thiếu là ear. Hóa ra dây cắm lúc nãy chưa vào hết, nên tai nghe chỉ có tiếng một bên. Lỗi nhỏ đã tìm được, còn bạn nhớ thêm một bộ phận cùng cách nói bên trái."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13936",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,448 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "a51a6cfc3c6d3c2c334ad85b6299ee9b93cd618d4b27dcbaf05a7ee7c4a8b500",
+  "topic": "Học từ vựng tiếng Anh HAND (danh từ: bàn tay) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ HAND",
+    "Làm rõ nghĩa lõi \"bàn tay\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng HAND, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại HAND, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Small expressive eyebrows and changing mouth curves are allowed. Do not add hair, realistic muscles, detailed fingers, a realistic nose or ears to this mascot.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); simple lower clothing where needed. No stacked shirts."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đồng xu biến đi đâu?",
+      "purpose": "Make the hand the relevant container in a harmless game.",
+      "action": "Đồng xu giấu trong bàn tay khép.",
+      "setting": "Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn vừa thấy đồng xu trên bàn, chớp mắt một cái đã mất. Hand là bàn tay. Trong trò này, đồng xu nằm trong bàn tay khép lại của nhân vật. Không có phép thuật đâu, chỉ là bạn chưa nhìn thấy bên trong.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hand",
+          "meaning": "bàn tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds one minimal closed hand above table, a plain coin partly hidden; other hand relaxed. Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds one minimal closed hand above table, a plain coin partly hidden; other hand relaxed.",
+          "reason": "Make the hand the relevant container in a harmless game.",
+          "visible_text": [
+            {
+              "text": "hand",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the hand the relevant container in a harmless game.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn vừa thấy đồng xu trên bàn, chớp mắt một cái đã mất. Hand là bàn tay. Trong trò này, đồng xu nằm trong bàn tay khép lại của nhân vật. Không có phép thuật đâu, chỉ là bạn chưa nhìn thấy bên trong.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Một câu để mở bí mật",
+      "purpose": "Model a hand-opening instruction.",
+      "action": "Mở tay cho thấy đồng xu.",
+      "setting": "Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn nói: \"Open your hand.\" Mở bàn tay ra. Your hand là bàn tay của bạn. Câu này nhắc đúng phần cần mở, khác với việc giơ cả cánh tay từ vai lên cao.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hand",
+          "meaning": "bàn tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot opens simple rounded hand to reveal plain coin, no realistic fingers or extra limbs. Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot opens simple rounded hand to reveal plain coin, no realistic fingers or extra limbs.",
+          "reason": "Model a hand-opening instruction.",
+          "visible_text": [
+            {
+              "text": "Open your hand.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model a hand-opening instruction.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"Open your hand.\" Mở bàn tay ra. Your hand là bàn tay của bạn. Câu này nhắc đúng phần cần mở, khác với việc giơ cả cánh tay từ vai lên cao.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Bàn tay được dùng làm gì",
+      "purpose": "Model hand in an everyday writing sentence.",
+      "action": "Viết bằng bàn tay phải.",
+      "setting": "Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn có thể kể: \"I write with my right hand.\" Tôi viết bằng tay phải. Trong câu này, right hand là bàn tay phải. Người thuận tay khác có thể dùng cách nói phù hợp với chính mình.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hand",
+          "meaning": "bàn tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot writes with pencil held by a minimal mitten-like hand, separate flat teaching hand diagram beside paper. Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot writes with pencil held by a minimal mitten-like hand, separate flat teaching hand diagram beside paper.",
+          "reason": "Model hand in an everyday writing sentence.",
+          "visible_text": [
+            {
+              "text": "I write with my right hand.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Model hand in an everyday writing sentence.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn có thể kể: \"I write with my right hand.\" Tôi viết bằng tay phải. Trong câu này, right hand là bàn tay phải. Người thuận tay khác có thể dùng cách nói phù hợp với chính mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Yêu cầu mở bàn tay",
+      "purpose": "Prompt the target noun with clear practical meaning.",
+      "action": "Nói câu yêu cầu mở bàn tay.",
+      "setting": "Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Muốn xem đồng xu đang giấu, bạn nói \"Open your...\" gì? Hãy thêm từ chỉ bàn tay rồi đọc trọn lời yêu cầu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hand",
+          "meaning": "bàn tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot holds closed simple hand over table again, incomplete instruction above. Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds closed simple hand over table again, incomplete instruction above.",
+          "reason": "Prompt the target noun with clear practical meaning.",
+          "visible_text": [
+            {
+              "text": "Open your...",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the target noun with clear practical meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Muốn xem đồng xu đang giấu, bạn nói \"Open your...\" gì? Hãy thêm từ chỉ bàn tay rồi đọc trọn lời yêu cầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the concrete retrieval question; leave the full quiet hold before the next scene gives feedback.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Đồng xu trở lại bàn",
+      "purpose": "Confirm and resolve the disappearing-coin trick.",
+      "action": "Đặt đồng xu lại lên bàn.",
+      "setting": "Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "\"Open your hand.\" Từ cần điền là hand. Đồng xu đã trở lại trước mắt, không đi đâu xa cả. Bạn nhớ hand là bàn tay, còn cả phần từ vai xuống cổ tay mình gọi bằng từ khác.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "hand",
+          "meaning": "bàn tay"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot opens hand and places coin back on table, both minimal hands visible. Tabletop guessing game with mascot and separate simple hand diagram, one coin without markings. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot opens hand and places coin back on table, both minimal hands visible.",
+          "reason": "Confirm and resolve the disappearing-coin trick.",
+          "visible_text": [
+            {
+              "text": "Open your hand.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm and resolve the disappearing-coin trick.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Open your hand.\" Từ cần điền là hand. Đồng xu đã trở lại trước mắt, không đi đâu xa cả. Bạn nhớ hand là bàn tay, còn cả phần từ vai xuống cổ tay mình gọi bằng từ khác.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer, then resolve the opening situation warmly.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the hand the relevant container in a harmless game.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Use the established situation (Đồng xu biến đi đâu?) to motivate the next learning action: Model a hand-opening instruction."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a hand-opening instruction.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the established situation (Một câu để mở bí mật) to motivate the next learning action: Model hand in an everyday writing sentence."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model hand in an everyday writing sentence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Use the established situation (Bàn tay được dùng làm gì) to motivate the next learning action: Prompt the target noun with clear practical meaning."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the target noun with clear practical meaning.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Use the established situation (Yêu cầu mở bàn tay) to motivate the next learning action: Confirm and resolve the disappearing-coin trick."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the disappearing-coin trick.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After explicit learner feedback, resolve the concrete situation introduced in the opening."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn vừa thấy đồng xu trên bàn, chớp mắt một cái đã mất. Hand là bàn tay. Trong trò này, đồng xu nằm trong bàn tay khép lại của nhân vật. Không có phép thuật đâu, chỉ là bạn chưa nhìn thấy bên trong."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn vừa thấy đồng xu trên bàn, chớp mắt một cái đã mất. Hand là bàn tay. Trong trò này, đồng xu nằm trong bàn tay khép lại của nhân vật. Không có phép thuật đâu, chỉ là bạn chưa nhìn thấy bên trong."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"Open your hand.\" Mở bàn tay ra. Your hand là bàn tay của bạn. Câu này nhắc đúng phần cần mở, khác với việc giơ cả cánh tay từ vai lên cao."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"Open your hand.\" Mở bàn tay ra. Your hand là bàn tay của bạn. Câu này nhắc đúng phần cần mở, khác với việc giơ cả cánh tay từ vai lên cao."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn có thể kể: \"I write with my right hand.\" Tôi viết bằng tay phải. Trong câu này, right hand là bàn tay phải. Người thuận tay khác có thể dùng cách nói phù hợp với chính mình."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Muốn xem đồng xu đang giấu, bạn nói \"Open your...\" gì? Hãy thêm từ chỉ bàn tay rồi đọc trọn lời yêu cầu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Open your hand.\" Từ cần điền là hand. Đồng xu đã trở lại trước mắt, không đi đâu xa cả. Bạn nhớ hand là bàn tay, còn cả phần từ vai xuống cổ tay mình gọi bằng từ khác."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

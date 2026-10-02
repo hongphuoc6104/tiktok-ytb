@@ -1,0 +1,45 @@
+{
+  "job": "vocab-dad-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 80,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn đã kéo nắp hộp hai lần mà nó vẫn không mở. Dad là cách gọi bố thân mật. Trong câu chuyện này, bạn quay sang nhờ bố, người đang ngồi ngay cạnh bàn chứ chẳng cần gọi điện tìm đâu xa. Father và dad đều có thể nhắc tới bố. Trong lời gọi nhờ giúp ở nhà, dad là cách gọi thân mật. Chiếc hộp khó mở tạo lý do để bạn gọi ông ấy.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nói: \"Dad, can you help me?\" Bố ơi, bố giúp con được không? Dad dùng để gọi trực tiếp. Phần can you help me là lời nhờ giúp, hợp lúc chiếc nắp đang thắng cả hai bàn tay. Bạn nói với bố thì gọi Dad; kể với người khác thì dùng my dad. Đổi người đang nghe không làm quan hệ thay đổi, chỉ làm cách đặt từ trong câu khác đi.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Kể lại với bạn, bạn nói: \"My dad helps me.\" Bố giúp tôi. My dad là bố của mình. Bố chỉ vào chiếc chốt nhỏ bên cạnh: hóa ra nắp có khóa, không phải do bạn kéo chưa đủ mạnh.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Chiếc hộp vẫn chưa mở. Bạn nhờ bố: \"..., can you help me?\" Hãy điền cách gọi thân mật rồi nói cả lời nhờ.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"Dad, can you help me?\" Từ gọi bố là Dad. Chốt được mở, nắp cũng bật lên dễ dàng. Bạn có câu nhờ giúp mới, và còn biết thêm rằng trước khi kéo mạnh thì nên nhìn kỹ chiếc hộp.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of dad and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

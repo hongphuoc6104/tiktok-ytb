@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 29,
+            "seconds": 8.96,
+            "min": 6.72,
+            "max": 11.19
+          },
+          {
+            "scene_id": "SC02",
+            "units": 32,
+            "seconds": 9.64,
+            "min": 7.23,
+            "max": 12.05
+          },
+          {
+            "scene_id": "SC03",
+            "units": 32,
+            "seconds": 10.24,
+            "min": 7.68,
+            "max": 12.8
+          },
+          {
+            "scene_id": "SC04",
+            "units": 29,
+            "seconds": 8.96,
+            "min": 6.72,
+            "max": 11.19
+          },
+          {
+            "scene_id": "SC05",
+            "units": 26,
+            "seconds": 11.82,
+            "min": 8.87,
+            "max": 14.78
+          },
+          {
+            "scene_id": "SC06",
+            "units": 32,
+            "seconds": 9.94,
+            "min": 7.45,
+            "max": 12.42
+          }
+        ],
+        "min": 44.67,
+        "max": 74.43,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "18079",
+      "status": "addressed",
+      "explanation": "Yêu cầu trước được giữ trong lịch sử; bản này theo hướng phim ngắn người dùng vừa duyệt. Đã viết lại toàn bộ diễn biến: Nam chọn nhầm từ miêu tả khi chuẩn bị thẻ đồ dùng. Minh dùng chiếc ghế thật và câu I need a chair. để giúp Nam tự tìm danh từ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    },
+    {
+      "request_id": "19515",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Nam chọn nhầm từ miêu tả khi chuẩn bị thẻ đồ dùng. Minh dùng chiếc ghế thật và câu I need a chair. để giúp Nam tự tìm danh từ. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05",
+        "SC06"
+      ]
+    }
+  ]
+}

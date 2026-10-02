@@ -1,0 +1,100 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Minimal stick figure, round white head outlined in dark navy, two solid black oval eyes, minimal stick limbs.",
+      "id": "CH01",
+      "name_vi": "Tôi",
+      "outfit_en": "Single light sky-blue short-sleeve t-shirt (#8CCFE8)."
+    },
+    {
+      "appearance_en": "Minimal stick figure, round white head outlined in dark navy, simple dark facial features, minimal stick limbs.",
+      "id": "CH02",
+      "name_vi": "Dũng",
+      "outfit_en": "Single plain beige short-sleeve t-shirt."
+    }
+  ],
+  "custom_visible_text": [],
+  "extra_visual_states": [],
+  "job": "vocab-anywhere-script-708",
+  "learner_outcome_vi": "Người học hiểu và sử dụng đại từ 'anywhere' mang nghĩa 'bất cứ đâu' hoặc 'chỗ nào cũng được'.",
+  "opening_function_vi": "Mở đầu bằng sự bỡ ngỡ khi bước vào phòng đọc yên tĩnh của thư viện.",
+  "plot_vi": "Tôi ngại chọn sai chỗ khi quên thẻ, Dũng chỉ quyền chọn bất cứ ghế trong dãy đã được dùng; bạn ngồi cạnh để tôi thôi đứng chờ.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Dũng cất sách, tôi vẫn đứng ở cửa. Nhiều bàn trống nhưng tôi chưa biết chỗ dành cho ai. \"Can I sit anywhere?\" Tôi ngồi chỗ nào cũng được không? Tôi hỏi bạn.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Establish a quiet library setting with wide open seating choices.",
+      "scene_id": "SC01",
+      "title_vi": "Căn phòng đọc vắng",
+      "visual_en": "The stick-figure mascot in a light sky-blue shirt carries a blue study folder into a serene library hall lined with long wooden tables and empty chairs. A companion stick figure in a plain beige shirt organizes books behind a low service desk."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Bạn đã rủ tôi tới đọc cùng, nhưng tôi quên mang thẻ người đọc. Tôi sợ ngồi nhầm phần đặt riêng, cứ giữ túi trên vai. Dũng đặt sách xuống để chỉ khu mình đang ở.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Introduce the first model asking whether sitting in any spot is permissible.",
+      "scene_id": "SC02",
+      "title_vi": "Hỏi xin chỗ ngồi",
+      "visual_en": "The stick-figure mascot approaches the desk, politely gesturing with an open hand toward the rows of empty reading desks. The companion in beige looks up with an attentive expression."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"You can sit anywhere here.\" Bạn ngồi bất cứ chỗ nào ở đây được. Dũng chỉ dãy bàn này, nơi bạn đã hỏi phép dùng trước; những phần khác của thư viện chưa thuộc lời mời.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Introduce the second model giving permission to choose any location within the area.",
+      "scene_id": "SC03",
+      "title_vi": "Chỗ nào ở đây cũng được",
+      "visual_en": "The companion in beige smiles warmly and sweeps an arm toward the sunlit reading section along large bay windows."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi chọn ghế cuối dãy, vẫn chưa đặt đồ vì bạn đang đứng. Dũng mang sách tới cạnh, hỏi sao tôi cứ sợ phải chọn đúng một chiếc ghế nhất định.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Show the character settling comfortably into an ordinary specific spot.",
+      "scene_id": "SC04",
+      "title_vi": "Chiếc ghế cuối dãy",
+      "visual_en": "Mascot pauses behind chosen empty chair with bag still over shoulder, beige-shirt friend brings closed book toward adjacent seat in identified reading row."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Tôi muốn xác nhận chỗ ngồi trong dãy này trước khi mở sách. Bạn nói giúp tôi câu tôi ngồi chỗ nào cũng được không bằng tiếng Anh nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Prompt the learner to practice the polite question with a pause.",
+      "scene_id": "SC05",
+      "stem": "Can I sit ___?",
+      "title_vi": "Gợi ý câu hỏi",
+      "visual_en": "Mascot asks same friend beside chosen two chairs, no new reader at door. Top safe region for stem."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"Can I sit anywhere?\" Tôi ngồi chỗ nào cũng được không? Dũng gật, kéo ghế bên cạnh tôi. Tôi để túi xuống, mở sách; buổi đọc cùng bạn cuối cùng đã có chỗ cho cả hai.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Confirm the sentence and resolve the episode in quiet productivity.",
+      "scene_id": "SC06",
+      "title_vi": "Yên tâm học bài",
+      "visual_en": "Both friends sit side by side in identified reading row with books open and mascot's bag beneath chair. No other library guests or global access sign."
+    }
+  ],
+  "title": "Buổi sáng ở thư viện",
+  "editorial_review": "Reviewed and rewritten by an authorized writing agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

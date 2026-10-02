@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 40,
+            "seconds": 12.61,
+            "min": 9.46,
+            "max": 15.76
+          },
+          {
+            "scene_id": "SC02",
+            "units": 35,
+            "seconds": 10.92,
+            "min": 8.19,
+            "max": 13.65
+          },
+          {
+            "scene_id": "SC03",
+            "units": 25,
+            "seconds": 7.69,
+            "min": 5.77,
+            "max": 9.62
+          },
+          {
+            "scene_id": "SC04",
+            "units": 18,
+            "seconds": 9.6,
+            "min": 7.2,
+            "max": 12.0
+          },
+          {
+            "scene_id": "SC05",
+            "units": 35,
+            "seconds": 10.92,
+            "min": 8.19,
+            "max": 13.65
+          }
+        ],
+        "min": 38.81,
+        "max": 64.68,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "20574",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi sợ bị bỏng nên rụt tay không dám nhận ly sữa, người chị đặt bàn tay tôi quanh thành gốm để cảm nhận độ ấm vừa vặn xua tan cái lạnh. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 38,
+            "seconds": 11.61,
+            "min": 8.7,
+            "max": 14.51
+          },
+          {
+            "scene_id": "SC02",
+            "units": 31,
+            "seconds": 9.51,
+            "min": 7.13,
+            "max": 11.89
+          },
+          {
+            "scene_id": "SC03",
+            "units": 31,
+            "seconds": 9.36,
+            "min": 7.02,
+            "max": 11.7
+          },
+          {
+            "scene_id": "SC04",
+            "units": 24,
+            "seconds": 11.27,
+            "min": 8.45,
+            "max": 14.08
+          },
+          {
+            "scene_id": "SC05",
+            "units": 42,
+            "seconds": 13.17,
+            "min": 9.88,
+            "max": 16.46
+          }
+        ],
+        "min": 41.18,
+        "max": 68.64,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "21193",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi và Khoa rủ nhau chạy một đoạn ngắn tới cọc; tôi chạy chậm để đi cùng, rồi hai người tự chọn cùng nghỉ ở mốc ấy. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "type": "object",
+  "properties": {
+    "episodes": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "properties": {
+          "job": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "plot_vi": {
+            "type": "string"
+          },
+          "opening_function_vi": {
+            "type": "string"
+          },
+          "learner_outcome_vi": {
+            "type": "string"
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name_vi": {
+                  "type": "string"
+                },
+                "appearance_en": {
+                  "type": "string"
+                },
+                "outfit_en": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name_vi",
+                "appearance_en",
+                "outfit_en"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "scenes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "scene_id": {
+                  "type": "string"
+                },
+                "title_vi": {
+                  "type": "string"
+                },
+                "narration": {
+                  "type": "string"
+                },
+                "purpose_en": {
+                  "type": "string"
+                },
+                "visual_en": {
+                  "type": "string"
+                },
+                "character_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "practice_pause_seconds": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "scene_id",
+                "title_vi",
+                "narration",
+                "purpose_en",
+                "visual_en",
+                "character_ids",
+                "practice_pause_seconds"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "job",
+          "title",
+          "plot_vi",
+          "opening_function_vi",
+          "learner_outcome_vi",
+          "characters",
+          "scenes"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "episodes"
+  ],
+  "additionalProperties": false
+}

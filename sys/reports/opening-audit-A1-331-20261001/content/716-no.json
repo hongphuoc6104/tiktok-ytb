@@ -1,0 +1,561 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "83738a4c36a398b7f0f63fdfda1223302d5cfd832562220fdf148614e315a783",
+  "topic": "Học từ vựng tiếng Anh NO (từ hạn định: không có (phủ định danh từ)) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ NO",
+    "Làm rõ nghĩa lõi \"không có (phủ định danh từ)\" (từ hạn định) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng NO, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại NO, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người tham gia hoặc nhân vật bổ trợ",
+      "appearance": "Adult additional participant or professional explicitly named in the scene. Preserve the same role and identity; do not add a person when the scene does not call for one. Minimal flat ink style and ordinary adult proportions.",
+      "outfit": "Single plain lavender top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Không có giấy ở phần dùng chung — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Pens on craft table beside clearly empty paper tray, mascot and companion notice missing supply.",
+      "setting": "Bàn lớp hư cấu, khu vật liệu.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Bút đủ rồi, chẳng có tờ giấy nào! No trong bài này đứng trước danh từ để nói không có. \"The thing named after it is absent here.\" Bạn và người bạn chuẩn bị hoạt động hư cấu, cần báo đúng vật đang thiếu để hỏi phần dùng chung.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "no",
+          "meaning": "không có (phủ định danh từ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Pens on craft table beside clearly empty paper tray, mascot and companion notice missing supply. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Pens on craft table beside clearly empty paper tray, mascot and companion notice missing supply.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "no",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Bút đủ rồi, chẳng có tờ giấy nào! No trong bài này đứng trước danh từ để nói không có. \"The thing named after it is absent here.\" Bạn và người bạn chuẩn bị hoạt động hư cấu, cần báo đúng vật đang thiếu để hỏi phần dùng chung.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Không có giấy ở phần dùng chung — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Both inspect defined empty paper-supply location, private notes kept separate.",
+      "setting": "Bàn lớp hư cấu, khu vật liệu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"There is no paper.\" Không có giấy. \"The paper for this step is not here in our story.\" Người bạn nhìn khu đã được nhắc, chưa lấy phần ghi chú của người khác làm vật liệu chung khi chưa hỏi.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "no",
+          "meaning": "không có (phủ định danh từ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Both inspect defined empty paper-supply location, private notes kept separate. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both inspect defined empty paper-supply location, private notes kept separate.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "There is no paper.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"There is no paper.\" Không có giấy. \"The paper for this step is not here in our story.\" Người bạn nhìn khu đã được nhắc, chưa lấy phần ghi chú của người khác làm vật liệu chung khi chưa hỏi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Không có giấy ở phần dùng chung — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both indicate defined supply area rather than all room materials.",
+      "setting": "Bàn lớp hư cấu, khu vật liệu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "No dùng trước paper trong mẫu này; mình không thêm not vào câu đó. \"The sentence already gives the negative meaning.\" Hai người giữ phạm vi là phần dùng chung của lớp hư cấu, không báo rằng mọi nơi đều không còn giấy.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "no",
+          "meaning": "không có (phủ định danh từ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both indicate defined supply area rather than all room materials. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both indicate defined supply area rather than all room materials.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "no",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "No dùng trước paper trong mẫu này; mình không thêm not vào câu đó. \"The sentence already gives the negative meaning.\" Hai người giữ phạm vi là phần dùng chung của lớp hư cấu, không báo rằng mọi nơi đều không còn giấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Không có giấy ở phần dùng chung — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Both inspect visibly empty fictional card box.",
+      "setting": "Bàn lớp hư cấu, khu vật liệu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói thêm: \"There are no cards in this box.\" Không có thẻ trong hộp này. \"We checked the inside before saying that.\" Người bạn mở hộp của hoạt động, hai người xác nhận phần vật liệu cần hỏi thêm.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "no",
+          "meaning": "không có (phủ định danh từ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both inspect visibly empty fictional card box. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both inspect visibly empty fictional card box.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "There are no cards in this box.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói thêm: \"There are no cards in this box.\" Không có thẻ trong hộp này. \"We checked the inside before saying that.\" Người bạn mở hộp của hoạt động, hai người xác nhận phần vật liệu cần hỏi thêm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Không có giấy ở phần dùng chung — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold empty defined supply area and full learner sentence.",
+      "setting": "Bàn lớp hư cấu, khu vật liệu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn báo phần giấy dùng chung đang không có theo vai. \"Say the missing thing directly.\" Hãy nói: \"There is no paper.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "no",
+          "meaning": "không có (phủ định danh từ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold empty defined supply area and full learner sentence. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold empty defined supply area and full learner sentence.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "There is no paper.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn báo phần giấy dùng chung đang không có theo vai. \"Say the missing thing directly.\" Hãy nói: \"There is no paper.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Không có giấy ở phần dùng chung — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both ask fictional instructor about additional paper supply, no real action beyond story.",
+      "setting": "Bàn lớp hư cấu, khu vật liệu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"There is no paper.\" Không có giấy. \"The question for more supplies is clear now.\" Hai người đã gọi được phần thiếu, hỏi người hướng dẫn hư cấu chỗ nhận vật liệu trước khi làm tiếp.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "no",
+          "meaning": "không có (phủ định danh từ)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both ask fictional instructor about additional paper supply, no real action beyond story. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both ask fictional instructor about additional paper supply, no real action beyond story.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "There is no paper.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"There is no paper.\" Không có giấy. \"The question for more supplies is clear now.\" Hai người đã gọi được phần thiếu, hỏi người hướng dẫn hư cấu chỗ nhận vật liệu trước khi làm tiếp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bút đủ rồi, chẳng có tờ giấy nào! No trong bài này đứng trước danh từ để nói không có. \"The thing named after it is absent here.\" Bạn và người bạn chuẩn bị hoạt động hư cấu, cần báo đúng vật đang thiếu để hỏi phần dùng chung."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bút đủ rồi, chẳng có tờ giấy nào! No trong bài này đứng trước danh từ để nói không có. \"The thing named after it is absent here.\" Bạn và người bạn chuẩn bị hoạt động hư cấu, cần báo đúng vật đang thiếu để hỏi phần dùng chung."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"There is no paper.\" Không có giấy. \"The paper for this step is not here in our story.\" Người bạn nhìn khu đã được nhắc, chưa lấy phần ghi chú của người khác làm vật liệu chung khi chưa hỏi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"There is no paper.\" Không có giấy. \"The paper for this step is not here in our story.\" Người bạn nhìn khu đã được nhắc, chưa lấy phần ghi chú của người khác làm vật liệu chung khi chưa hỏi."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "No dùng trước paper trong mẫu này; mình không thêm not vào câu đó. \"The sentence already gives the negative meaning.\" Hai người giữ phạm vi là phần dùng chung của lớp hư cấu, không báo rằng mọi nơi đều không còn giấy."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn nói thêm: \"There are no cards in this box.\" Không có thẻ trong hộp này. \"We checked the inside before saying that.\" Người bạn mở hộp của hoạt động, hai người xác nhận phần vật liệu cần hỏi thêm."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn báo phần giấy dùng chung đang không có theo vai. \"Say the missing thing directly.\" Hãy nói: \"There is no paper.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"There is no paper.\" Không có giấy. \"The question for more supplies is clear now.\" Hai người đã gọi được phần thiếu, hỏi người hướng dẫn hư cấu chỗ nhận vật liệu trước khi làm tiếp."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Pens on craft table beside clearly empty paper tray, mascot and companion notice missing supply. Continue with the existing connected model: Both inspect defined empty paper-supply location, private notes kept separate."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Chuẩn bị viết → thiếu giấy → nói không có → hỏi chỗ khác.. Next event: Both indicate defined supply area rather than all room materials."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Chuẩn bị viết → thiếu giấy → nói không có → hỏi chỗ khác.. Next event: Both inspect visibly empty fictional card box."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Chuẩn bị viết → thiếu giấy → nói không có → hỏi chỗ khác.. Next event: Hold empty defined supply area and full learner sentence."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chuẩn bị viết → thiếu giấy → nói không có → hỏi chỗ khác.. Next event: Both ask fictional instructor about additional paper supply, no real action beyond story."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chuẩn bị viết → thiếu giấy → nói không có → hỏi chỗ khác.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18584",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Bút đủ rồi, chẳng có tờ giấy nào!”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 27,
+            "seconds": 8.7,
+            "min": 6.52,
+            "max": 10.88
+          },
+          {
+            "scene_id": "SC02",
+            "units": 35,
+            "seconds": 10.62,
+            "min": 7.97,
+            "max": 13.28
+          },
+          {
+            "scene_id": "SC03",
+            "units": 29,
+            "seconds": 9.26,
+            "min": 6.94,
+            "max": 11.57
+          },
+          {
+            "scene_id": "SC04",
+            "units": 18,
+            "seconds": 9.6,
+            "min": 7.2,
+            "max": 12.0
+          },
+          {
+            "scene_id": "SC05",
+            "units": 30,
+            "seconds": 9.68,
+            "min": 7.26,
+            "max": 12.1
+          }
+        ],
+        "min": 35.89,
+        "max": 59.83,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "19139",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Mẹ muốn tự xem ảnh cháu qua một ứng dụng, thay vì luôn đưa máy cho con; nhân vật giúp mẹ nhớ cách nhờ và tự thử. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

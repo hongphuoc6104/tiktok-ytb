@@ -1,0 +1,45 @@
+{
+  "job": "vocab-finger-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 60,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Trên màn hình có một nút tròn, người hướng dẫn dùng một ngón tay chạm vào. Finger nghĩa là ngón tay. Mình nhìn hình bàn tay riêng để thấy rõ từng ngón, thay vì nhầm cả bàn tay là một finger.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nói: \"This is my finger.\" Đây là ngón tay của tôi. Finger chỉ một ngón tay. Khi gọi tên, hãy nhìn đúng một ngón được đánh dấu trên hình, đừng chỉ chung vào cả bàn tay đang mở.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bạn nghe: \"Point with your finger.\" Chỉ bằng ngón tay của bạn. With your finger nói cách làm động tác. Bạn chỉ nhẹ vào nút tròn để người kia biết chỗ cần bấm, không phải ấn mạnh cả bàn tay lên màn hình.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Hoàn thành \"Point with your...\" bằng từ chỉ ngón tay. Nhìn đúng một ngón được đánh dấu, đừng gọi chung cả bàn tay nhé.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"Point with your finger.\" Từ còn thiếu là finger. Nút tròn đã được chọn bằng một đầu ngón tay. Bạn vừa phân biệt được bộ phận nhỏ này với cả bàn tay, nhờ một thao tác rất dễ nhìn thấy.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of finger and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

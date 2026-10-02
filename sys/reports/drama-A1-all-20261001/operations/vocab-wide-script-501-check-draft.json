@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 29,
+            "seconds": 8.96,
+            "min": 6.72,
+            "max": 11.19
+          },
+          {
+            "scene_id": "SC02",
+            "units": 41,
+            "seconds": 12.59,
+            "min": 9.44,
+            "max": 15.74
+          },
+          {
+            "scene_id": "SC03",
+            "units": 30,
+            "seconds": 9.23,
+            "min": 6.93,
+            "max": 11.54
+          },
+          {
+            "scene_id": "SC04",
+            "units": 32,
+            "seconds": 13.49,
+            "min": 10.12,
+            "max": 16.86
+          },
+          {
+            "scene_id": "SC05",
+            "units": 40,
+            "seconds": 12.31,
+            "min": 9.23,
+            "max": 15.39
+          }
+        ],
+        "min": 42.44,
+        "max": 70.72,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "20202",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Chiếc thùng các-tông chắn trước cửa kho. Chúng tôi cần chuyển nó vào trong phòng. Tuấn chỉ khoảng trống lối đi:  Tôi giữ mép đáy, ngập ngừng hỏi Tuấn: \"Is this box too wide?\" Chiếc hộp này có rộng quá không? Tuấn hạ một góc xuống để ngắm lại kích thước.  Tuấn đặt xuống, cùng tôi xoay cạnh ngắn về phía cửa rồi thử nhấc lại. Hai đứa chuyển được hộp vào kho. Tôi mở nắp kiểm mô hình, Tuấn giữ cửa chờ tôi xem xong. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

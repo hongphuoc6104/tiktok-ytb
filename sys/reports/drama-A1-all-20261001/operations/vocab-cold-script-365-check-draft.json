@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 42,
+            "seconds": 13.02,
+            "min": 9.76,
+            "max": 16.27
+          },
+          {
+            "scene_id": "SC02",
+            "units": 36,
+            "seconds": 11.35,
+            "min": 8.51,
+            "max": 14.19
+          },
+          {
+            "scene_id": "SC03",
+            "units": 38,
+            "seconds": 11.91,
+            "min": 8.93,
+            "max": 14.88
+          },
+          {
+            "scene_id": "SC04",
+            "units": 19,
+            "seconds": 9.88,
+            "min": 7.41,
+            "max": 12.35
+          },
+          {
+            "scene_id": "SC05",
+            "units": 36,
+            "seconds": 11.65,
+            "min": 8.74,
+            "max": 14.56
+          }
+        ],
+        "min": 43.35,
+        "max": 72.25,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "20658",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi và em đang rửa đồ chơi bằng nước lạnh; tôi báo cảm giác lạnh và cùng em nghỉ tay dưới hiên, rồi giữ đồ để em lau. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

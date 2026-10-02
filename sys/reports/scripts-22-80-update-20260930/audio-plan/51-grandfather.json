@@ -1,0 +1,45 @@
+{
+  "job": "vocab-grandfather-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 80,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn lật album và thấy một người trẻ bên chiếc xe đạp. Ông chỉ vào ảnh: đó là ông hồi đi học. Grandfather nghĩa là ông. Người đang ngồi cạnh bạn cũng từng có những chuyến đi đầu tiên như thế. Ông là bố của bố hoặc mẹ mình. Mình đi theo sơ đồ qua một thế hệ để xác nhận, không chỉ nhìn một người lớn tuổi đang cầm cuốn album.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandfather and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nói: \"This is my grandfather.\" Đây là ông tôi. Grandfather có thể là ông nội hoặc ông ngoại; riêng từ này chưa chia hai phía. Mình học cách giới thiệu ông trước, rồi mới thêm chi tiết nếu cần. Hình người trẻ trong album vẫn có thể là ông hồi trước. Từ grandfather nói quan hệ hiện tại với bạn, nên không đổi chỉ vì bức ảnh được chụp khi ông còn trẻ.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandfather and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bạn kể: \"I visit my grandfather on Sundays.\" Tôi thăm ông vào những ngày Chủ nhật. Visit my grandfather nói việc đến thăm ông. Lần này cuốn album khiến buổi thăm có thêm một câu chuyện chưa từng nghe.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandfather and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Có người hỏi ai đang xem album cùng bạn. Hãy nói đây là ông tôi: \"This is my...\" Bạn thêm từ nào?",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandfather and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"This is my grandfather.\" Từ cần điền là grandfather. Bạn đã biết gọi đúng người kể chuyện, còn cuốn album vẫn nhiều trang chưa mở. Chủ nhật tới, có lẽ hai người sẽ kể tiếp về chiếc xe đạp ấy.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandfather and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

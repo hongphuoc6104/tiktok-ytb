@@ -1,0 +1,513 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "c56c333a34f0917dfa5c752847e6d4be3c19e4ebc79167577d3c4e705b55ce1a",
+  "topic": "Học từ vựng tiếng Anh COLD (danh từ: bệnh cảm) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ COLD",
+    "Làm rõ nghĩa lõi \"bệnh cảm\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng COLD, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại COLD, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Câu dùng ngay",
+      "purpose": "Present an immediate everyday need and the selected vocabulary meaning.",
+      "action": "A medium close view of the canonical mascot holding a tissue beside a tissue packet while responding to a mustard-shirt friend. Keep the familiar room neutral, with no snowflakes, weather symbols, medication or diagnostic claims. The mascot has only a mild tired expression.",
+      "setting": "Phòng khách, mascot có khăn giấy, điện thoại và lịch hẹn.",
+      "camera": "Medium close view with one dominant referent, readable mascot reaction, stable camera and subtitle clearance.",
+      "narration": "\"I have a cold.\" Tôi bị cảm. Cold trong câu này là bệnh cảm. Bạn vừa rút khăn giấy thì người bên cạnh hỏi thăm. Chỉ cần câu ấy để nói mình đang bị cảm, không phải giải thích vòng qua chuyện thời tiết.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cold",
+          "meaning": "bệnh cảm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "A medium close view of the canonical mascot holding a tissue beside a tissue packet while responding to a mustard-shirt friend. Keep the familiar room neutral, with no snowflakes, weather symbols, medication or diagnostic claims. The mascot has only a mild tired expression. Attach canonical mascot Character reference. Exactly one pale-blue short-sleeve torso, round white navy-outlined head, black oval eyes and minimal stick limbs. Keep bottom 22% free for subtitles and outer 10% safe. Render only listed visible_text; no incidental lettering or logos.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "A medium close view of the canonical mascot holding a tissue beside a tissue packet while responding to a mustard-shirt friend. Keep the familiar room neutral, with no snowflakes, weather symbols, medication or diagnostic claims. The mascot has only a mild tired expression.",
+          "reason": "Present an immediate everyday need and the selected vocabulary meaning.",
+          "visible_text": [
+            {
+              "text": "I have a cold.",
+              "placement": "Upper third, large readable text; clear of faces, main action and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "The mascot lowers the tissue packet onto the table while continuing to address the friend. Same shot and layout as the base image; attach Base scene reference and canonical Character reference. Only listed text; preserve subtitle safe space.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the base camera, background, character identities, single pale-blue mascot torso, props, lighting and exact visible text.",
+          "change": "The mascot lowers the tissue packet onto the table while continuing to address the friend.",
+          "reason": "Show the causal next action while the opening phrase leads into the lesson.",
+          "visible_text": [
+            {
+              "text": "I have a cold.",
+              "placement": "Upper third, large readable text; clear of faces, main action and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Present an immediate everyday need and the selected vocabulary meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I have a cold.\" Tôi bị cảm. Cold trong câu này là bệnh cảm. Bạn vừa rút khăn giấy thì người bên cạnh hỏi thăm. Chỉ cần câu ấy để nói mình đang bị cảm, không phải giải thích vòng qua chuyện thời tiết.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Show the causal next action while the opening phrase leads into the lesson.",
+          "anchor": {
+            "vi": {
+              "quote": "Chỉ cần câu ấy",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Begin the first spoken phrase immediately and address the situation naturally. Keep the English model intelligible; verify actual onset and rhythm on WAV during media.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot nói với bạn áo vàng, chữ I have a cold ở phần trên.",
+      "purpose": "Connect the opening to a usable English model without a new introduction.",
+      "action": "Mascot nói với bạn áo vàng, chữ I have a cold ở phần trên.",
+      "setting": "Phòng khách, mascot có khăn giấy, điện thoại và lịch hẹn.",
+      "camera": "Medium close view with one dominant referent, readable mascot reaction, stable camera and subtitle clearance.",
+      "narration": "Bạn nói trọn câu: \"I have a cold.\" Giữ cụm have a cold, có a trước cold. Người bạn nghe xong đã hiểu vì sao bạn mang theo khăn giấy. Đây là câu kể về bệnh cảm; nếu nói mình thấy lạnh thì cần cách nói khác.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cold",
+          "meaning": "bệnh cảm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot nói với bạn áo vàng, chữ I have a cold ở phần trên. Setting: Phòng khách, mascot có khăn giấy, điện thoại và lịch hẹn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot nói với bạn áo vàng, chữ I have a cold ở phần trên.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "I have a cold.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect the opening to a usable English model without a new introduction.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói trọn câu: \"I have a cold.\" Giữ cụm have a cold, có a trước cold. Người bạn nghe xong đã hiểu vì sao bạn mang theo khăn giấy. Đây là câu kể về bệnh cảm; nếu nói mình thấy lạnh thì cần cách nói khác.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Begin the first spoken phrase immediately and address the situation naturally. Keep the English model intelligible; verify actual onset and rhythm on WAV during media.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Bạn áo vàng viết tin nhắn về mascot, mascot ở nhà với gói khăn giấy.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Bạn áo vàng viết tin nhắn về mascot, mascot ở nhà với gói khăn giấy.",
+      "setting": "Phòng khách, mascot có khăn giấy, điện thoại và lịch hẹn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người bạn nhắn lại cho nhóm: \"My friend has a cold.\" Bạn tôi bị cảm. Khi kể về bạn, người ấy dùng has thay cho have. A cold vẫn là bệnh cảm đã nhắc tới; câu nói giúp nhóm hiểu vì sao hôm nay bạn không tham gia cuộc gọi.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cold",
+          "meaning": "bệnh cảm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Bạn áo vàng viết tin nhắn về mascot, mascot ở nhà với gói khăn giấy. Setting: Phòng khách, mascot có khăn giấy, điện thoại và lịch hẹn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Bạn áo vàng viết tin nhắn về mascot, mascot ở nhà với gói khăn giấy.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "My friend has a cold.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn nhắn lại cho nhóm: \"My friend has a cold.\" Bạn tôi bị cảm. Khi kể về bạn, người ấy dùng has thay cho have. A cold vẫn là bệnh cảm đã nhắc tới; câu nói giúp nhóm hiểu vì sao hôm nay bạn không tham gia cuộc gọi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ mascot với gói khăn giấy và câu gợi ý khuyết.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ mascot với gói khăn giấy và câu gợi ý khuyết.",
+      "setting": "Phòng khách, mascot có khăn giấy, điện thoại và lịch hẹn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Bạn muốn nói tôi bị cảm. Hoàn thành \"I have a...\" bằng từ vừa học, rồi đọc nguyên câu, nhớ giữ chữ a.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cold",
+          "meaning": "bệnh cảm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ mascot với gói khăn giấy và câu gợi ý khuyết. Setting: Phòng khách, mascot có khăn giấy, điện thoại và lịch hẹn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ mascot với gói khăn giấy và câu gợi ý khuyết.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "I have a...",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói tôi bị cảm. Hoàn thành \"I have a...\" bằng từ vừa học, rồi đọc nguyên câu, nhớ giữ chữ a.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot đặt điện thoại xuống cạnh khăn giấy",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot đặt điện thoại xuống cạnh khăn giấy; lịch không ghi số ngoài danh sách.",
+      "setting": "Phòng khách, mascot có khăn giấy, điện thoại và lịch hẹn.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"I have a cold.\" Từ cần điền là cold. Nhóm hiểu bạn bị cảm nên dời cuộc gọi. Bạn đặt điện thoại xuống, không còn phải giải thích bằng một loạt hình chiếc khăn giấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "cold",
+          "meaning": "bệnh cảm"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot đặt điện thoại xuống cạnh khăn giấy; lịch không ghi số ngoài danh sách. Setting: Phòng khách, mascot có khăn giấy, điện thoại và lịch hẹn. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot đặt điện thoại xuống cạnh khăn giấy; lịch không ghi số ngoài danh sách.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "I have a cold.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I have a cold.\" Từ cần điền là cold. Nhóm hiểu bạn bị cảm nên dời cuộc gọi. Bạn đặt điện thoại xuống, không còn phải giải thích bằng một loạt hình chiếc khăn giấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "\"I have a cold.\" Tôi bị cảm. Cold trong câu này là bệnh cảm. Bạn vừa rút khăn giấy thì người bên cạnh hỏi thăm. Chỉ cần câu ấy để nói mình đang bị cảm, không phải giải thích vòng qua chuyện thời tiết."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "\"I have a cold.\" Tôi bị cảm. Cold trong câu này là bệnh cảm. Bạn vừa rút khăn giấy thì người bên cạnh hỏi thăm. Chỉ cần câu ấy để nói mình đang bị cảm, không phải giải thích vòng qua chuyện thời tiết."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói trọn câu: \"I have a cold.\" Giữ cụm have a cold, có a trước cold. Người bạn nghe xong đã hiểu vì sao bạn mang theo khăn giấy. Đây là câu kể về bệnh cảm; nếu nói mình thấy lạnh thì cần cách nói khác."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói trọn câu: \"I have a cold.\" Giữ cụm have a cold, có a trước cold. Người bạn nghe xong đã hiểu vì sao bạn mang theo khăn giấy. Đây là câu kể về bệnh cảm; nếu nói mình thấy lạnh thì cần cách nói khác."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bạn nhắn lại cho nhóm: \"My friend has a cold.\" Bạn tôi bị cảm. Khi kể về bạn, người ấy dùng has thay cho have. A cold vẫn là bệnh cảm đã nhắc tới; câu nói giúp nhóm hiểu vì sao hôm nay bạn không tham gia cuộc gọi."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn nói tôi bị cảm. Hoàn thành \"I have a...\" bằng từ vừa học, rồi đọc nguyên câu, nhớ giữ chữ a."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I have a cold.\" Từ cần điền là cold. Nhóm hiểu bạn bị cảm nên dời cuộc gọi. Bạn đặt điện thoại xuống, không còn phải giải thích bằng một loạt hình chiếc khăn giấy."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Present an immediate everyday need and the selected vocabulary meaning.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Resolve the immediate question or need through the next English model. Next visual event: Mascot nói với bạn áo vàng, chữ I have a cold ở phần trên."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Connect the opening to a usable English model without a new introduction.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same interaction into the second model. Next visual event: Bạn áo vàng viết tin nhắn về mascot, mascot ở nhà với gói khăn giấy."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Nhân vật đã biết bị cảm → báo với bạn → phân biệt danh từ có a → điền câu → giải quyết cuộc hẹn bằng lời nhắn.. Next visual event: Giữ mascot với gói khăn giấy và câu gợi ý khuyết."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhân vật đã biết bị cảm → báo với bạn → phân biệt danh từ có a → điền câu → giải quyết cuộc hẹn bằng lời nhắn.. Next visual event: Mascot đặt điện thoại xuống cạnh khăn giấy; lịch không ghi số ngoài danh sách."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nhân vật đã biết bị cảm → báo với bạn → phân biệt danh từ có a → điền câu → giải quyết cuộc hẹn bằng lời nhắn.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

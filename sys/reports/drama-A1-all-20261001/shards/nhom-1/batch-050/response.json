@@ -1,0 +1,872 @@
+{
+  "conversation_id": "ba4c7b1e-f11f-4318-8371-f78dc733cc93",
+  "status": "SUCCESS",
+  "response": "{\n  \"episodes\": [\n    {\n      \"job\": \"vocab-west-script-344\",\n      \"title\": \"Lối về hướng tây\",\n      \"plot_vi\": \"Hai người bạn lạc đường lúc chiều muộn ở ngã ba vắng; một người nản lòng vì bản đồ rách, người kia nhìn hướng mặt trời lặn để cùng tìm ra lối về nhà ga.\",\n      \"opening_function_vi\": \"Mở đầu bằng tình huống bối rối ở ngã ba đường để làm nảy sinh nhu cầu xác định phương hướng.\",\n      \"learner_outcome_vi\": \"Người học gọi đúng từ west để chỉ hướng tây và dùng được câu chỉ vị trí phương hướng đơn giản.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Lâm\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain yellow short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Ngã ba lúc chiều tà\",\n          \"narration\": \"Bóng chúng tôi đổ dài về trước. Tờ bản đồ rách mép khiến tôi lúng túng giữa ngã ba vắng. Lâm nhìn vệt nắng chiều rồi hỏi tôi: \\\"Which way is west?\\\" Hướng nào là hướng tây?\",\n          \"purpose_en\": \"Establish setting, show the torn map dilemma, and introduce the first model question asking for west.\",\n          \"visual_en\": \"Medium shot of the blue-shirt stickman holding a torn paper map at a dusty rural fork road, looking puzzled beside the yellow-shirt friend who gestures toward the low sun in the distance.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Nhìn theo vạt nắng\",\n          \"narration\": \"Tôi ngẩng lên nhìn rặng cây đang ngả bóng dài. Tôi chỉ tay về phía dốc và bảo: \\\"The station is in the west.\\\" Nhà ga ở hướng tây. Cậu ấy thở phào, cất chai nước vào túi.\",\n          \"purpose_en\": \"Clarify core meaning of west as a cardinal direction and provide the second model sentence.\",\n          \"visual_en\": \"The blue-shirt stickman points his stick arm toward the distant sloping road where the sun sets behind tree silhouettes, while the friend in yellow shirt puts a water bottle into his backpack.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Bước chân cùng nhịp\",\n          \"narration\": \"Gió thổi mát rượi qua bãi cỏ ven đường. Lâm bước chậm lại để đi ngang hàng với tôi, không còn cằn nhằn về ngã rẽ bị trễ hồi trưa.\",\n          \"purpose_en\": \"Develop personal connection and ease the tension between the two travelers through shared walking.\",\n          \"visual_en\": \"Side profile of both stick figures walking side by side along the gravel path, their long shadows trailing ahead under the gentle breeze swaying tall grass.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Xác nhận hướng đi\",\n          \"narration\": \"Lâm vẫn liếc nhìn ngã ba phía sau. Bạn nói giúp tôi câu nhà ga ở hướng tây bằng tiếng Anh để bạn tôi yên tâm bước tiếp nhé.\",\n          \"purpose_en\": \"Prompt the learner to speak the second model sentence to reassure the friend.\",\n          \"visual_en\": \"Close-up on the yellow-shirt friend looking back over his shoulder hesitantly, while the blue-shirt stickman waits with an open supportive hand gesture.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"The station is in the ___.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Mái ga cuối đường\",\n          \"narration\": \"\\\"The station is in the west.\\\" Nhà ga ở hướng tây. Vừa qua khúc quanh, mái tôn nhà ga hiện ra thật. Lâm khẽ cười, đưa tay xách đỡ tôi chiếc túi nặng.\",\n          \"purpose_en\": \"Deliver spoken answer model and show local emotional resolution as the station appears.\",\n          \"visual_en\": \"The two stick figures reach the crest of the dirt path, where the small station roof is visible ahead bathed in sunset light; the friend reaches over to share the weight of the duffel bag.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-season-script-345\",\n      \"title\": \"Mùa cất trong ngăn tủ\",\n      \"plot_vi\": \"Hai chị em dọn dẹp căn gác xép cũ; chiếc áo len bạc màu gợi nhắc về mùa trong năm mà mỗi người nâng niu nhất.\",\n      \"opening_function_vi\": \"Mở đầu bằng việc tìm thấy kỷ vật cũ phủ bụi để dẫn vào khái niệm mùa trong năm.\",\n      \"learner_outcome_vi\": \"Người học hiểu đúng từ season chỉ mùa trong năm và biết nói mùa yêu thích của mình.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Chị Mai\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain green short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Chiếc thùng phủ bụi\",\n          \"narration\": \"Chiếc thùng các tông phủ lớp bụi mỏng. Chị Mai lôi ra mớ áo len cũ rồi ngập ngừng nhìn tôi. Tôi cầm chiếc áo đan màu xám lên hỏi chị: \\\"What is your favorite season?\\\" Mùa bạn thích nhất là mùa nào?\",\n          \"purpose_en\": \"Hook the viewer with a dusty storage box and establish the first model question about favorite season.\",\n          \"visual_en\": \"Interior attic setting; the blue-shirt stickman lifts a folded knitted grey sweater from an open cardboard box, looking at the sister in green shirt sitting on the wooden floor.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Nếp len kỷ niệm\",\n          \"narration\": \"Chị Mai vuốt lại nếp áo len đã sờn chỉ ở cổ tay. Chị mỉm cười khẽ đáp: \\\"Autumn is my favorite season.\\\" Mùa thu là mùa tôi thích nhất. Hóa ra chị vẫn giữ kỷ niệm về những buổi chiều rụng lá.\",\n          \"purpose_en\": \"Demonstrate core meaning of season through dialogue and introduce the second model sentence.\",\n          \"visual_en\": \"Close shot of the green-shirt stick figure smoothing the sleeve cuff of the wool sweater with gentle fingers, looking nostalgic.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Gió lùa qua song\",\n          \"narration\": \"Tôi mở cửa sổ gác xép cho gió lùa vào phòng. Mùi vải cũ thơm mùi nắng nhạt khiến hai chị em không còn vội vã giục nhau dọn cho xong đống đồ bừa bộn.\",\n          \"purpose_en\": \"Deepen the reflective mood and show emotional shift through simple physical gesture.\",\n          \"visual_en\": \"The blue-shirt stickman props open a small wooden attic window, letting pale sunlight and breeze tilt across the scattered storage boxes.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Câu hỏi của chị\",\n          \"narration\": \"Chị Mai hỏi lại tôi về khoảng thời gian tôi yêu thích nhất trong năm. Bạn nói giúp tôi câu mùa thu là mùa tôi thích nhất bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Prompt the learner to recall and speak the second model sentence using season.\",\n          \"visual_en\": \"The green-shirt sister looks up from the floor box, tilting her head inquisitively toward the blue-shirt stickman standing near the window.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"Autumn is my favorite ___.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Xếp lại vạt nắng\",\n          \"narration\": \"\\\"Autumn is my favorite season.\\\" Mùa thu là mùa tôi thích nhất. Chị Mai gật đầu, cẩn thận xếp chiếc áo len vào ngăn trên cùng. Hai chị em ngồi bệt xuống sàn, cùng ngắm vạt nắng nghiêng ngoài hiên.\",\n          \"purpose_en\": \"Provide the spoken target model and conclude with a warm earned resolution.\",\n          \"visual_en\": \"The sister carefully places the folded sweater into the top drawer of a small wooden chest, and both stick figures sit side by side on the floor looking out the sunny window.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-spring-script-346\",\n      \"title\": \"Chồi non mùa xuân\",\n      \"plot_vi\": \"Hai người bạn cùng phòng phân vân việc vứt bỏ một chậu cây khô héo; một mầm xanh hé nhú mang lại niềm tin về mùa xuân và sự kiên nhẫn.\",\n      \"opening_function_vi\": \"Bắt đầu bằng một chậu cây khô sắp bị bỏ đi để gợi sự chú ý vào chu kỳ hồi sinh của thiên nhiên.\",\n      \"learner_outcome_vi\": \"Người học nhận biết từ spring mang nghĩa mùa xuân và biết bày tỏ cảm xúc yêu thích mùa xuân.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Hòa\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain orange short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Chậu cây trơ cành\",\n          \"narration\": \"Chậu cây bên cửa sổ trơ cành. Hòa định bê chậu đất khô ra bãi rác đầu ngõ. Tôi vội giữ tay bạn lại và bảo: \\\"Flowers bloom in spring.\\\" Hoa nở vào mùa xuân.\",\n          \"purpose_en\": \"Present the initial conflict over throwing away a potted plant and introduce the first model sentence with spring.\",\n          \"visual_en\": \"Apartment balcony; the orange-shirt stickman bends down to lift a dry potted plant with bare twigs, while the blue-shirt stickman reaches out to touch his wrist to stop him.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Chấm xanh trên vỏ cây\",\n          \"narration\": \"Hòa nhìn những nhánh khẳng khiu với vẻ ngần ngại. Tôi chỉ vào một chấm xanh li ti vừa nhú ở kẽ nứt thân cây rồi nói thêm: \\\"I love spring.\\\" Tôi yêu mùa xuân. Hòa dừng tay, đặt chậu lại góc bệ cửa.\",\n          \"purpose_en\": \"Show evidence of life returning in spring and present the second model sentence expressing love for the season.\",\n          \"visual_en\": \"Close-up of a dry twig showing a tiny green bud sprouting from the bark; the blue-shirt stickman points right at it as the orange-shirt friend sets the pot back onto the sill.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Gáo nước đầu tiên\",\n          \"narration\": \"Hai đứa múc một ca nước nhỏ tưới quanh gốc đất khô cằn. Hòa không còn vẻ bực bội vì góc ban công chật chội, lặng lẽ nhặt vài chiếc lá khô rụng quanh thềm gạch.\",\n          \"purpose_en\": \"Illustrate collaborative care and quiet easing of frustration between roommates.\",\n          \"visual_en\": \"The blue-shirt stickman gently pours water from a plastic mug onto the dark soil around the plant stem, while the friend sweeps away dry crumbled leaves with his hand.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Niềm tin nhỏ\",\n          \"narration\": \"Hòa hỏi tôi vì sao vẫn tha thiết giữ lại chậu cây già này. Bạn nói giúp tôi câu tôi yêu mùa xuân bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Invite the learner to speak the personal statement model using spring in context.\",\n          \"visual_en\": \"The orange-shirt friend looks at the blue-shirt stickman with curiosity, pointing slightly back at the damp potted plant.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"I love ___.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Ban công buổi sớm\",\n          \"narration\": \"\\\"I love spring.\\\" Tôi yêu mùa xuân. Hòa mỉm cười, lấy ngón tay chạm nhẹ vào mầm non vừa hé. Ban công nhỏ bỗng ấm áp hơn trong làn gió nhẹ buổi sớm.\",\n          \"purpose_en\": \"Reinforce the target model and end with an earned emotional lift around patience and renewal.\",\n          \"visual_en\": \"Both stick figures stand side by side on the small tiled balcony under soft morning light; the friend in orange shirt gently grazes the green bud with his fingertip.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-summer-script-347\",\n      \"title\": \"Buổi trưa mùa hè\",\n      \"plot_vi\": \"Hai anh em ở nhà ngày oi ả; mâu thuẫn nhỏ hôm trước nhanh chóng được hóa giải khi cùng nhau nhớ về niềm vui bơi lội mùa hè.\",\n      \"opening_function_vi\": \"Mở đầu bằng âm thanh tiếng quạt cũ và cái nóng bức để dẫn vào mùa hè.\",\n      \"learner_outcome_vi\": \"Người học nhận biết từ summer mang nghĩa mùa hè và thực hành câu nói về hoạt động ngày hè.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Duy\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain brown short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Tiếng quạt trưa\",\n          \"narration\": \"Chiếc quạt máy cũ kêu ro ro. Duy ngồi uống cốc nước đá, ngập ngừng nhìn chiếc mũ cói trên móc tường. Tôi nhìn mồ hôi trên trán em rồi bảo: \\\"It is hot in summer.\\\" Trời nóng vào mùa hè.\",\n          \"purpose_en\": \"Establish hot indoor atmosphere and introduce the first descriptive model sentence with summer.\",\n          \"visual_en\": \"Interior room; an old electric desk fan turns side to side on a low wooden table; the brown-shirt boy drinks water while the blue-shirt stickman wipes his forehead.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Lời rủ bất ngờ\",\n          \"narration\": \"Duy ngước mắt lên, đánh bạo rủ tôi ra hồ nước đầu làng. Thằng bé cười tít mắt: \\\"I swim in summer.\\\" Em bơi vào mùa hè. Cơn bực vì em làm rơi hộp mồi câu hôm qua trong tôi bỗng tan biến.\",\n          \"purpose_en\": \"Break the tension with brotherly invitation and present the second model sentence.\",\n          \"visual_en\": \"The brown-shirt younger brother stands up excitedly, making a brief two-arm swimming motion toward the open front doorway.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Tìm lại kính bơi\",\n          \"narration\": \"Tôi đứng dậy lấy chiếc kính bơi cũ trong ngăn kéo ra phủi bụi. Duy mừng rỡ chạy lại giúp tôi buộc chặt lại quai kính bị tuột một đầu nối nhựa.\",\n          \"purpose_en\": \"Show mutual gesture of reconciliation through preparing swimming gear.\",\n          \"visual_en\": \"The blue-shirt stickman opens a wooden desk drawer and takes out black swim goggles, while the brother steps in to hold the elastic strap steady.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Kế hoạch ra hồ\",\n          \"narration\": \"Duy háo hức hỏi tôi thường làm gì để giải nhiệt những ngày oi ả này. Bạn nói giúp tôi câu tôi bơi vào mùa hè bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Prompt the viewer to produce the action model sentence with summer.\",\n          \"visual_en\": \"The younger brother holds the goggles happily, looking up expectantly at the blue-shirt stickman ready by the door.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"I swim in ___.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Bước qua cổng ngõ\",\n          \"narration\": \"\\\"I swim in summer.\\\" Tôi bơi vào mùa hè. Hai anh em xỏ dép bước ra cổng ngõ ngập nắng. Cơn gió đồng thoảng qua xua bớt hơi nóng hầm hập của buổi trưa.\",\n          \"purpose_en\": \"Reinforce the target sentence and deliver an active outdoor ending.\",\n          \"visual_en\": \"The two stick figures walk side by side through the open courtyard gate into the bright outdoor path, shaded by green bamboo overhead.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-autumn-script-348\",\n      \"title\": \"Chiếc lá trong trang sách\",\n      \"plot_vi\": \"Hai người bạn cũ gặp lại sau một năm xa cách; chiếc lá ép khô kẹp giữa trang sách giúp xóa tan khoảng cách ngượng ngùng.\",\n      \"opening_function_vi\": \"Mở đầu bằng âm thanh trang sách và chiếc lá khô rơi ra để gợi ký ức mùa thu.\",\n      \"learner_outcome_vi\": \"Người học nắm vững từ autumn với nghĩa mùa thu và vận dụng được vào câu bày tỏ sở thích.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Hải\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain purple short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Chiếc lá rơi\",\n          \"narration\": \"Trang sách mở ra tiếng sột soạt. Chiếc lá vàng khô rơi khẽ xuống mặt bàn gỗ. Hải nhìn chiếc lá rồi khẽ bảo tôi: \\\"Leaves fall in autumn.\\\" Lá rụng vào mùa thu.\",\n          \"purpose_en\": \"Hook viewer with the physical object of a pressed autumn leaf and introduce model sentence one.\",\n          \"visual_en\": \"Overhead shot of a rustic wooden table; a hardcover book lies open, and a dried golden leaf flutters flat onto the page between the two seated stick figures.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Nhớ lại chuyện cũ\",\n          \"narration\": \"Tôi nhớ lại buổi chiều hai đứa từng hẹn nhau ở góc sân trường cũ nhưng tôi đến muộn vì bận việc. Tôi vuốt lại mép lá khô rồi nói: \\\"I like autumn.\\\" Tôi thích mùa thu. Ánh mắt Hải chùng xuống, mỉm cười bỏ qua chuyện cũ.\",\n          \"purpose_en\": \"Explain past relational tension and introduce model sentence two with emotional grounding.\",\n          \"visual_en\": \"The blue-shirt stickman gently touches the brittle edge of the pressed leaf, looking across the table at the purple-shirt friend whose posture softens into a warm smile.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Tách trà ấm\",\n          \"narration\": \"Tôi rót thêm nước ấm vào chiếc tách gốm sứt quai của Hải. Không khí im lặng giữa hai người bạn lâu năm bỗng trở nên nhẹ nhõm bên khung cửa sổ mở hé.\",\n          \"purpose_en\": \"Show simple hospitable gesture that confirms reconciliation.\",\n          \"visual_en\": \"The blue-shirt stickman lifts a ceramic teapot to pour steaming tea into the friend's chip-rimmed cup beside the open book.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Câu hỏi nối lại\",\n          \"narration\": \"Hải hỏi tôi còn thích khoảng thời gian lá đổi màu như ngày xưa không. Bạn nói giúp tôi câu tôi thích mùa thu bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Elicit the learner's response using autumn to answer the friend's question.\",\n          \"visual_en\": \"The purple-shirt friend cradles the warm tea cup with both stick hands, gazing attentively at the blue-shirt stickman.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"I like ___.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Kẹp lại trang kỷ niệm\",\n          \"narration\": \"\\\"I like autumn.\\\" Tôi thích mùa thu. Hải cẩn thận kẹp lại chiếc lá vàng vào giữa trang sách. Cơn gió thoảng mang theo mùi hoa sữa đầu mùa len qua song cửa.\",\n          \"purpose_en\": \"Present target answer model and conclude with a quiet, satisfying personal close.\",\n          \"visual_en\": \"The purple-shirt friend carefully nests the dry golden leaf back into the middle fold of the book and shuts it gently, smiling at the blue-shirt stickman.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-winter-script-349\",\n      \"title\": \"Mũi len mùa đông\",\n      \"plot_vi\": \"Người bạn ghé qua nhà trả khăn len và lo sợ bị trách vì lỡ làm tuột một sợi chỉ; sự đón tiếp ấm áp đã xua tan e ngại ngày giá rét.\",\n      \"opening_function_vi\": \"Mở đầu bằng tiếng gió rít bên ngoài cửa sổ để gợi bối cảnh mùa đông lạnh giá.\",\n      \"learner_outcome_vi\": \"Người học nắm được từ winter chỉ mùa đông và biết dùng câu nói về trang phục mùa đông.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Khoa\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain red short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Gió ngoài bậc cửa\",\n          \"narration\": \"Gió rít từng cơn qua khe cửa. Khoa đứng trước hiên, hai tay siết chặt chiếc khăn len màu ghi có mép chỉ sờn. Tôi mời bạn vào nhà rồi khẽ bảo: \\\"It is cold in winter.\\\" Trời lạnh vào mùa đông.\",\n          \"purpose_en\": \"Establish cold weather atmosphere and introduce the first descriptive model sentence with winter.\",\n          \"visual_en\": \"Entrance doorway; the red-shirt friend stands shivering on the doorstep clutching a folded grey wool scarf, as the blue-shirt stickman pulls open the wooden door to let him in.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Chiếc áo khoác dày\",\n          \"narration\": \"Khoa áy náy chìa chiếc khăn ra, bảo lỡ làm tuột một mũi đan. Tôi khoác thêm chiếc áo ấm dày lên vai rồi cười xòa: \\\"I wear a coat in winter.\\\" Tôi mặc áo khoác vào mùa đông. Một mũi len sút chẳng sao cả.\",\n          \"purpose_en\": \"Relieve friend's anxiety over a loose knit thread and introduce the second model sentence.\",\n          \"visual_en\": \"Inside the warm hallway, the blue-shirt stickman drapes a dark coat over his shoulders with a reassuring laugh, while the red-shirt friend holds out the frayed scarf timidly.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Khéo giấu mối chỉ\",\n          \"narration\": \"Tôi lấy cuộn chỉ len thừa trong ngăn tủ ra giấu mối sợi bị tuột vào nếp gấp. Khoa ngồi bên bếp sưởi ấm, bàn tay dần hết cóng sau chặng đường dài đạp xe.\",\n          \"purpose_en\": \"Depict practical caring action that fixes the problem without blaming.\",\n          \"visual_en\": \"The blue-shirt stickman uses a blunt needle to tuck the stray grey yarn thread neatly into the scarf fold, while the friend warms his open hands near a small room heater.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Hỏi cách giữ ấm\",\n          \"narration\": \"Khoa hỏi tôi làm sao giữ ấm khi gió mùa tràn về ngoài phố. Bạn nói giúp tôi câu tôi mặc áo khoác vào mùa đông bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Prompt the learner to reproduce the second model sentence about winter attire.\",\n          \"visual_en\": \"The red-shirt friend looks over from the stool, pointing toward the heavy coat hanging behind the blue-shirt stickman.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"I wear a coat in ___.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Hơi ấm trong phòng\",\n          \"narration\": \"\\\"I wear a coat in winter.\\\" Tôi mặc áo khoác vào mùa đông. Khoa thở phào, đón lấy chiếc khăn len đã được giấu khéo mối chỉ. Căn phòng nhỏ ấm cúng trong tiếng ấm nước reo sôi.\",\n          \"purpose_en\": \"Confirm answer model and conclude with comfortable companionship.\",\n          \"visual_en\": \"The friend in red takes back the repaired scarf with both hands and smiles in relief; a kettle on the table releases soft puffs of white steam.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-sun-script-350\",\n      \"title\": \"Nắng trở lại sân\",\n      \"plot_vi\": \"Mây đen bất ngờ kéo đến khi hai anh em đang phơi mẻ bánh đa; sự kiên nhẫn chờ mặt trời tỏa sáng trở lại đã giữ trọn vẹn mẻ bánh ngày mùa.\",\n      \"opening_function_vi\": \"Mở đầu bằng sự thay đổi ánh sáng đột ngột trên sân gạch để dẫn vào mặt trời.\",\n      \"learner_outcome_vi\": \"Người học nhận biết từ sun mang nghĩa mặt trời và sử dụng được câu miêu tả mặt trời chiếu sáng.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Bình\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain orange short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Bóng râm bất chợt\",\n          \"narration\": \"Khoảng sân gạch đột nhiên tối lại. Bình lo lắng bê khay bánh đa định chạy vào hiên nhà vì sợ mưa. Tôi ngước nhìn vệt mây mỏng rồi bảo: \\\"The sun is warm.\\\" Mặt trời ấm áp.\",\n          \"purpose_en\": \"Create sudden urgency over rice crackers drying in the yard and introduce the first model sentence.\",\n          \"visual_en\": \"Brick courtyard under a passing cloud shadow; the orange-shirt stickman hastily lifts a bamboo tray loaded with round rice cakes, while the blue-shirt stickman gestures calmly upward.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Vạt nắng rạng\",\n          \"narration\": \"Gió thổi đám mây xám dạt sang rặng cây phía tây. Vạt nắng rọi xuống thềm gạch khô ráo, tôi mỉm cười chỉ tay về khoảng trời sáng trong: \\\"The sun is shining.\\\" Mặt trời đang chiếu sáng. Bình từ từ hạ khay bánh xuống.\",\n          \"purpose_en\": \"Demonstrate the sun breaking through and provide the second model sentence.\",\n          \"visual_en\": \"Warm golden light floods back onto the red brick terrace as clouds drift away; the blue-shirt stickman smiles, and the friend in orange slowly lowers the bamboo tray onto the wooden stand.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Trải lại mẻ bánh\",\n          \"narration\": \"Hai anh em cùng trải phẳng từng chiếc bánh lên giàn tre đan. Bình thôi vẻ sốt ruột, vừa làm vừa nhìn bóng nắng nhảy nhót trên mặt sân gạch đỏ.\",\n          \"purpose_en\": \"Show calm teamwork restored after the weather scare.\",\n          \"visual_en\": \"Both stick figures work together side by side, smoothing the round crackers across bamboo racks resting in the sunny courtyard.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Hỏi thăm nắng\",\n          \"narration\": \"Bình hỏi tôi nắng đã lên lại chưa để phơi nốt khay cuối. Bạn nói giúp tôi câu mặt trời đang chiếu sáng bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Direct the learner to speak the second model sentence to confirm the sunny conditions.\",\n          \"visual_en\": \"The orange-shirt cousin points toward a remaining tray in the veranda shade, looking back at the blue-shirt stickman for confirmation.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"The ___ is shining.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Sân gạch ngập nắng\",\n          \"narration\": \"\\\"The sun is shining.\\\" Mặt trời đang chiếu sáng. Nắng trải đều khắp sân gạch sưởi khô từng mẻ bánh thơm lừng. Bình quệt mồ hôi trán, cười tươi nhìn tôi.\",\n          \"purpose_en\": \"Deliver the correct answer model and wrap up with a cheerful practical accomplishment.\",\n          \"visual_en\": \"The courtyard stands fully illuminated with rows of drying crackers; the cousin wipes sweat from his forehead and gives a high-five gesture to the blue-shirt stickman.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-moon-script-351\",\n      \"title\": \"Ánh trăng ngoài hiên\",\n      \"plot_vi\": \"Người bạn mệt mỏi vì công việc căng thẳng; một khoảnh khắc cùng ngắm trăng tròn ngoài hiên nhà đã giúp tìm lại sự tĩnh lặng trong tâm hồn.\",\n      \"opening_function_vi\": \"Mở đầu bằng ánh sáng màn hình điện tử đối lập với bóng tối đêm để dẫn vào mặt trăng.\",\n      \"learner_outcome_vi\": \"Người học nắm được từ moon chỉ mặt trăng và thực hành câu miêu tả mặt trăng sáng.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Nam\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain olive-green short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Ánh sáng màn hình\",\n          \"narration\": \"Màn đêm buông xuống góc hiên nhà. Ánh sáng từ màn hình điện tử hắt lên nét mặt căng thẳng của Nam. Tôi khẽ vỗ vai bạn rồi chỉ lên ngọn cây: \\\"Can you see the moon?\\\" Bạn có thấy mặt trăng không?\",\n          \"purpose_en\": \"Establish quiet evening contrast between electronic screen glare and sky, introducing model sentence one.\",\n          \"visual_en\": \"Porch at dusk; the olive-shirt friend sits hunched over a glowing tablet screen, while the blue-shirt stickman taps his shoulder and points up above the tiled roofline.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Vòm trời tĩnh mịch\",\n          \"narration\": \"Nam ngước nhìn lên khoảng trời đêm tĩnh mịch giữa hai mái ngói. Nét mặt bạn dãn ra khi thấy quả cầu tròn vành vạnh: \\\"The moon is bright.\\\" Mặt trăng sáng. Nam khẽ đặt chiếc máy tính bảng sang một bên.\",\n          \"purpose_en\": \"Shift friend's attention to the night sky and present model sentence two.\",\n          \"visual_en\": \"The olive-shirt friend tilts his head up to see a clear luminous round moon between dark rooftop silhouettes, placing the turned-off tablet face down on the wooden floor.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Gió đêm qua thềm\",\n          \"narration\": \"Gió đêm thổi qua rặng chuối mát rượi sau lưng nhà. Hai đứa cùng ngồi im lặng ngắm vệt sáng bạc loang trên sân gạch, không ai còn muốn nhắc đến đống bài tập dở dang.\",\n          \"purpose_en\": \"Deepen the peaceful mood and show stress melting away in quiet companionship.\",\n          \"visual_en\": \"Wide shot of the two stick figures sitting side by side on the low veranda step, their feet resting on the courtyard pavement touched by soft silver moonlight.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Cùng ngắm trời đêm\",\n          \"narration\": \"Nam vẫn say sưa ngắm vòm trời đêm cao vút. Bạn nói giúp tôi câu mặt trăng sáng bằng tiếng Anh để cùng chia sẻ khoảnh khắc này nhé.\",\n          \"purpose_en\": \"Prompt learner to say model sentence two to share the observation with the friend.\",\n          \"visual_en\": \"Close view of the olive-shirt friend looking upward with a relaxed expression, as the blue-shirt stickman turns to him warmly.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"The ___ is bright.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Hiên nhà sáng bạc\",\n          \"narration\": \"\\\"The moon is bright.\\\" Mặt trăng sáng. Nam tựa lưng vào cột hiên gỗ, mỉm cười nhẹ nhõm. Ánh trăng dịu dàng phủ khắp mảnh sân con.\",\n          \"purpose_en\": \"Provide the spoken target model and settle into a tranquil, grounded ending.\",\n          \"visual_en\": \"The two stick figures lean comfortably against the wooden porch pillar, the gentle round moon glowing high above in the deep navy night sky.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-star-script-352\",\n      \"title\": \"Ngôi sao trên vòm trời\",\n      \"plot_vi\": \"Cô em gái buồn khóc vì đánh rơi chiếc kẹp tóc ngoài bãi cỏ; một chấm sao đêm đầu tiên trên vòm trời đã an ủi và dẫn lối tìm lại đồ vật.\",\n      \"opening_function_vi\": \"Mở đầu bằng nỗi buồn nhỏ mất chiếc kẹp tóc lúc trời tối để hướng mắt lên ngắm sao trời.\",\n      \"learner_outcome_vi\": \"Người học nhận biết từ star chỉ ngôi sao trên trời và dùng được câu thông báo nhìn thấy ngôi sao.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Hà\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain pink short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Nước mắt trên bãi cỏ\",\n          \"narration\": \"Bãi cỏ sẫm màu trong bóng tối. Hà rơm rớm nước mắt vì chiếc kẹp tóc rơi mất trong bụi cây. Tôi ngồi xuống cạnh em, khẽ chỉ tay lên vòm trời xa: \\\"Look at that star.\\\" Hãy nhìn ngôi sao kia.\",\n          \"purpose_en\": \"Hook viewer with a relatable child distress and introduce the first model sentence pointing to a star.\",\n          \"visual_en\": \"Dusk in an open backyard grassy lawn; the smaller pink-shirt girl sits sniffles beside a dark bush, while the blue-shirt stickman crouches beside her pointing up at a pinpoint light in the dusk sky.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Chấm sáng đầu tiên\",\n          \"narration\": \"Hà ngước mắt nhìn chấm sáng lấp lánh vừa hiện ra sau rặng tre. Em chớp chớp mắt rồi khẽ thì thầm: \\\"I see a star.\\\" Em thấy một ngôi sao. Hà đưa tay lau vệt nước mắt còn đọng trên má.\",\n          \"purpose_en\": \"Demonstrate the core meaning of star in the sky and introduce model sentence two.\",\n          \"visual_en\": \"Close-up of the pink-shirt girl looking upward with glistening eyes, wiping a tear away with the back of her stick hand as a single star shines above the bamboo tips.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Ánh đèn pin nhỏ\",\n          \"narration\": \"Tôi bật chiếc đèn pin nhỏ quét chậm rãi quanh lối đi lát sỏi. Hà không còn hờn dỗi, lon ton đi theo sau soi giúp tôi từng gốc cỏ ven bờ rào.\",\n          \"purpose_en\": \"Turn grief into gentle teamwork and systematic searching.\",\n          \"visual_en\": \"The blue-shirt stickman shines a round cone of yellow flashlight beam onto gravel edge grass, while the little sister in pink walks closely behind pointing helpfully.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Nhìn lên bầu trời\",\n          \"narration\": \"Hà vui vẻ chỉ lên bầu trời đầy chấm sáng lung linh phía trên đầu. Bạn nói giúp tôi câu tôi thấy một ngôi sao bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Prompt the learner to practice model sentence two with star.\",\n          \"visual_en\": \"The pink-shirt girl hops forward with excitement, pointing one hand up toward the brightening constellation overhead.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"I see a ___.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Ánh kim trong cỏ\",\n          \"narration\": \"\\\"I see a star.\\\" Tôi thấy một ngôi sao. Dưới ánh sáng lấp lánh của bầu trời đêm, chiếc kẹp tóc màu bạc bất ngờ ánh lên giữa khe cỏ. Hà reo khẽ, nắm chặt lấy tay tôi.\",\n          \"purpose_en\": \"Deliver target model answer and reward the search with a tactile happy find.\",\n          \"visual_en\": \"A small silver hairclip glints inside a tuft of grass under the flashlight and starlight; the little sister picks it up with joy and clasps the blue-shirt stickman's hand.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-sky-script-353\",\n      \"title\": \"Khoảng trời xanh trên giấy\",\n      \"plot_vi\": \"Một bạn học sinh muốn vứt bỏ bức tranh dở vì lỡ tay làm nhòe nước; việc ngắm nhìn bầu trời xanh bên ngoài đã mở ra cách sửa đổi tranh đầy sáng tạo.\",\n      \"opening_function_vi\": \"Mở đầu bằng tai nạn nhỏ làm loang màu trên trang giấy vẽ để khơi dậy hành động nhìn lên bầu trời.\",\n      \"learner_outcome_vi\": \"Người học nhận biết từ sky mang nghĩa bầu trời và vận dụng được câu miêu tả bầu trời xanh.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"An\",\n          \"appearance_en\": \"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\n          \"outfit_en\": \"Plain violet short-sleeve shirt.\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Vệt nước loang\",\n          \"narration\": \"Góc giấy vẽ bị lem vệt nước. An buông bút cọ, vẻ mặt nản lòng muốn vò nát bức tranh dở. Tôi vội giữ tay bạn lại, đẩy nhẹ cánh cửa sổ gỗ ra rồi bảo: \\\"Look at the sky.\\\" Hãy nhìn bầu trời.\",\n          \"purpose_en\": \"Present the frustration of a ruined watercolor sheet and introduce the first imperative model sentence.\",\n          \"visual_en\": \"Art desk beside an open window; the violet-shirt friend slumps in his chair about to crumple a watercolor paper with an accidental blue stain, while the blue-shirt stickman halts his hand and points outside.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Màu xanh ngoài cửa\",\n          \"narration\": \"An ngẩng đầu nhìn ra khoảng không khoáng đạt phía trên rặng phi lao. Tôi cầm cây cọ chấm vào khay màu nước rồi nói khẽ: \\\"The sky is blue.\\\" Bầu trời màu xanh. Vệt nước loang có thể vẽ thành đám mây trôi.\",\n          \"purpose_en\": \"Direct vision to real nature and present model sentence two describing the sky.\",\n          \"visual_en\": \"Through the framed wooden window, a bright clear blue expanse opens above green pine crowns; the blue-shirt stickman dips a brush into a water cup and gestures at the paper stain.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Nét cọ bồng bềnh\",\n          \"narration\": \"An cầm lại chiếc cọ lông, cẩn thận tán nhẹ vệt nước loang thành hình dải mây bồng bềnh. Sự bực bội tan biến, hai đứa cặm cụi pha thêm sắc lam nhạt cho nền tranh.\",\n          \"purpose_en\": \"Depict creative physical transformation of an accident into artistic intention.\",\n          \"visual_en\": \"Close-up on the paper; the friend's stick hand uses a wet brush to blend the blue puddle edges into soft feathered white and azure cloud shapes.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Tô nốt mảng trời\",\n          \"narration\": \"An muốn tô nốt phần trên cùng của bức vẽ theo đúng khung cảnh ngoài cửa sổ. Bạn nói giúp tôi câu bầu trời màu xanh bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Prompt the learner to speak model sentence two to describe the finished backdrop.\",\n          \"visual_en\": \"The friend holds the loaded brush poised above the painting, glancing between the real window sky and the blue-shirt stickman for agreement.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"The ___ is blue.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Bức tranh hoàn thành\",\n          \"narration\": \"\\\"The sky is blue.\\\" Bầu trời màu xanh. Bức tranh phong cảnh hoàn thành với mảng trời êm dịu nâng đỡ những mái ngói rêu phong. An mỉm cười, nghiêng đầu ngắm lại tác phẩm.\",\n          \"purpose_en\": \"Deliver the target answer sentence and conclude with satisfaction in overcoming creative frustration.\",\n          \"visual_en\": \"Both stick figures step back to view the completed landscape painting propped against the desk easel, showcasing an airy blue sky and drifting clouds.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    }\n  ]\n}\n{\"episodes\":[{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Lâm\",\"outfit_en\":\"Plain yellow short-sleeve shirt.\"}],\"job\":\"vocab-west-script-344\",\"learner_outcome_vi\":\"Người học gọi đúng từ west để chỉ hướng tây và dùng được câu chỉ vị trí phương hướng đơn giản.\",\"opening_function_vi\":\"Mở đầu bằng tình huống bối rối ở ngã ba đường để làm nảy sinh nhu cầu xác định phương hướng.\",\"plot_vi\":\"Hai người bạn lạc đường lúc chiều muộn ở ngã ba vắng; một người nản lòng vì bản đồ rách, người kia nhìn hướng mặt trời lặn để cùng tìm ra lối về nhà ga.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bóng chúng tôi đổ dài về trước. Tờ bản đồ rách mép khiến tôi lúng túng giữa ngã ba vắng. Lâm nhìn vệt nắng chiều rồi hỏi tôi: \\\"Which way is west?\\\" Hướng nào là hướng tây?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Establish setting, show the torn map dilemma, and introduce the first model question asking for west.\",\"scene_id\":\"SC01\",\"title_vi\":\"Ngã ba lúc chiều tà\",\"visual_en\":\"Medium shot of the blue-shirt stickman holding a torn paper map at a dusty rural fork road, looking puzzled beside the yellow-shirt friend who gestures toward the low sun in the distance.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi ngẩng lên nhìn rặng cây đang ngả bóng dài. Tôi chỉ tay về phía dốc và bảo: \\\"The station is in the west.\\\" Nhà ga ở hướng tây. Cậu ấy thở phào, cất chai nước vào túi.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Clarify core meaning of west as a cardinal direction and provide the second model sentence.\",\"scene_id\":\"SC02\",\"title_vi\":\"Nhìn theo vạt nắng\",\"visual_en\":\"The blue-shirt stickman points his stick arm toward the distant sloping road where the sun sets behind tree silhouettes, while the friend in yellow shirt puts a water bottle into his backpack.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Gió thổi mát rượi qua bãi cỏ ven đường. Lâm bước chậm lại để đi ngang hàng với tôi, không còn cằn nhằn về ngã rẽ bị trễ hồi trưa.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Develop personal connection and ease the tension between the two travelers through shared walking.\",\"scene_id\":\"SC03\",\"title_vi\":\"Bước chân cùng nhịp\",\"visual_en\":\"Side profile of both stick figures walking side by side along the gravel path, their long shadows trailing ahead under the gentle breeze swaying tall grass.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Lâm vẫn liếc nhìn ngã ba phía sau. Bạn nói giúp tôi câu nhà ga ở hướng tây bằng tiếng Anh để bạn tôi yên tâm bước tiếp nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to speak the second model sentence to reassure the friend.\",\"scene_id\":\"SC04\",\"stem\":\"The station is in the ___.\",\"title_vi\":\"Xác nhận hướng đi\",\"visual_en\":\"Close-up on the yellow-shirt friend looking back over his shoulder hesitantly, while the blue-shirt stickman waits with an open supportive hand gesture.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"The station is in the west.\\\" Nhà ga ở hướng tây. Vừa qua khúc quanh, mái tôn nhà ga hiện ra thật. Lâm khẽ cười, đưa tay xách đỡ tôi chiếc túi nặng.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver spoken answer model and show local emotional resolution as the station appears.\",\"scene_id\":\"SC05\",\"title_vi\":\"Mái ga cuối đường\",\"visual_en\":\"The two stick figures reach the crest of the dirt path, where the small station roof is visible ahead bathed in sunset light; the friend reaches over to share the weight of the duffel bag.\"}],\"title\":\"Lối về hướng tây\"},{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Chị Mai\",\"outfit_en\":\"Plain green short-sleeve shirt.\"}],\"job\":\"vocab-season-script-345\",\"learner_outcome_vi\":\"Người học hiểu đúng từ season chỉ mùa trong năm và biết nói mùa yêu thích của mình.\",\"opening_function_vi\":\"Mở đầu bằng việc tìm thấy kỷ vật cũ phủ bụi để dẫn vào khái niệm mùa trong năm.\",\"plot_vi\":\"Hai chị em dọn dẹp căn gác xép cũ; chiếc áo len bạc màu gợi nhắc về mùa trong năm mà mỗi người nâng niu nhất.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chiếc thùng các tông phủ lớp bụi mỏng. Chị Mai lôi ra mớ áo len cũ rồi ngập ngừng nhìn tôi. Tôi cầm chiếc áo đan màu xám lên hỏi chị: \\\"What is your favorite season?\\\" Mùa bạn thích nhất là mùa nào?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Hook the viewer with a dusty storage box and establish the first model question about favorite season.\",\"scene_id\":\"SC01\",\"title_vi\":\"Chiếc thùng phủ bụi\",\"visual_en\":\"Interior attic setting; the blue-shirt stickman lifts a folded knitted grey sweater from an open cardboard box, looking at the sister in green shirt sitting on the wooden floor.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chị Mai vuốt lại nếp áo len đã sờn chỉ ở cổ tay. Chị mỉm cười khẽ đáp: \\\"Autumn is my favorite season.\\\" Mùa thu là mùa tôi thích nhất. Hóa ra chị vẫn giữ kỷ niệm về những buổi chiều rụng lá.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Demonstrate core meaning of season through dialogue and introduce the second model sentence.\",\"scene_id\":\"SC02\",\"title_vi\":\"Nếp len kỷ niệm\",\"visual_en\":\"Close shot of the green-shirt stick figure smoothing the sleeve cuff of the wool sweater with gentle fingers, looking nostalgic.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi mở cửa sổ gác xép cho gió lùa vào phòng. Mùi vải cũ thơm mùi nắng nhạt khiến hai chị em không còn vội vã giục nhau dọn cho xong đống đồ bừa bộn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deepen the reflective mood and show emotional shift through simple physical gesture.\",\"scene_id\":\"SC03\",\"title_vi\":\"Gió lùa qua song\",\"visual_en\":\"The blue-shirt stickman props open a small wooden attic window, letting pale sunlight and breeze tilt across the scattered storage boxes.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chị Mai hỏi lại tôi về khoảng thời gian tôi yêu thích nhất trong năm. Bạn nói giúp tôi câu mùa thu là mùa tôi thích nhất bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to recall and speak the second model sentence using season.\",\"scene_id\":\"SC04\",\"stem\":\"Autumn is my favorite ___.\",\"title_vi\":\"Câu hỏi của chị\",\"visual_en\":\"The green-shirt sister looks up from the floor box, tilting her head inquisitively toward the blue-shirt stickman standing near the window.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Autumn is my favorite season.\\\" Mùa thu là mùa tôi thích nhất. Chị Mai gật đầu, cẩn thận xếp chiếc áo len vào ngăn trên cùng. Hai chị em ngồi bệt xuống sàn, cùng ngắm vạt nắng nghiêng ngoài hiên.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide the spoken target model and conclude with a warm earned resolution.\",\"scene_id\":\"SC05\",\"title_vi\":\"Xếp lại vạt nắng\",\"visual_en\":\"The sister carefully places the folded sweater into the top drawer of a small wooden chest, and both stick figures sit side by side on the floor looking out the sunny window.\"}],\"title\":\"Mùa cất trong ngăn tủ\"},{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Hòa\",\"outfit_en\":\"Plain orange short-sleeve shirt.\"}],\"job\":\"vocab-spring-script-346\",\"learner_outcome_vi\":\"Người học nhận biết từ spring mang nghĩa mùa xuân và biết bày tỏ cảm xúc yêu thích mùa xuân.\",\"opening_function_vi\":\"Bắt đầu bằng một chậu cây khô sắp bị bỏ đi để gợi sự chú ý vào chu kỳ hồi sinh của thiên nhiên.\",\"plot_vi\":\"Hai người bạn cùng phòng phân vân việc vứt bỏ một chậu cây khô héo; một mầm xanh hé nhú mang lại niềm tin về mùa xuân và sự kiên nhẫn.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chậu cây bên cửa sổ trơ cành. Hòa định bê chậu đất khô ra bãi rác đầu ngõ. Tôi vội giữ tay bạn lại và bảo: \\\"Flowers bloom in spring.\\\" Hoa nở vào mùa xuân.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Present the initial conflict over throwing away a potted plant and introduce the first model sentence with spring.\",\"scene_id\":\"SC01\",\"title_vi\":\"Chậu cây trơ cành\",\"visual_en\":\"Apartment balcony; the orange-shirt stickman bends down to lift a dry potted plant with bare twigs, while the blue-shirt stickman reaches out to touch his wrist to stop him.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hòa nhìn những nhánh khẳng khiu với vẻ ngần ngại. Tôi chỉ vào một chấm xanh li ti vừa nhú ở kẽ nứt thân cây rồi nói thêm: \\\"I love spring.\\\" Tôi yêu mùa xuân. Hòa dừng tay, đặt chậu lại góc bệ cửa.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show evidence of life returning in spring and present the second model sentence expressing love for the season.\",\"scene_id\":\"SC02\",\"title_vi\":\"Chấm xanh trên vỏ cây\",\"visual_en\":\"Close-up of a dry twig showing a tiny green bud sprouting from the bark; the blue-shirt stickman points right at it as the orange-shirt friend sets the pot back onto the sill.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hai đứa múc một ca nước nhỏ tưới quanh gốc đất khô cằn. Hòa không còn vẻ bực bội vì góc ban công chật chội, lặng lẽ nhặt vài chiếc lá khô rụng quanh thềm gạch.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Illustrate collaborative care and quiet easing of frustration between roommates.\",\"scene_id\":\"SC03\",\"title_vi\":\"Gáo nước đầu tiên\",\"visual_en\":\"The blue-shirt stickman gently pours water from a plastic mug onto the dark soil around the plant stem, while the friend sweeps away dry crumbled leaves with his hand.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hòa hỏi tôi vì sao vẫn tha thiết giữ lại chậu cây già này. Bạn nói giúp tôi câu tôi yêu mùa xuân bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Invite the learner to speak the personal statement model using spring in context.\",\"scene_id\":\"SC04\",\"stem\":\"I love ___.\",\"title_vi\":\"Niềm tin nhỏ\",\"visual_en\":\"The orange-shirt friend looks at the blue-shirt stickman with curiosity, pointing slightly back at the damp potted plant.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"I love spring.\\\" Tôi yêu mùa xuân. Hòa mỉm cười, lấy ngón tay chạm nhẹ vào mầm non vừa hé. Ban công nhỏ bỗng ấm áp hơn trong làn gió nhẹ buổi sớm.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Reinforce the target model and end with an earned emotional lift around patience and renewal.\",\"scene_id\":\"SC05\",\"title_vi\":\"Ban công buổi sớm\",\"visual_en\":\"Both stick figures stand side by side on the small tiled balcony under soft morning light; the friend in orange shirt gently grazes the green bud with his fingertip.\"}],\"title\":\"Chồi non mùa xuân\"},{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Duy\",\"outfit_en\":\"Plain brown short-sleeve shirt.\"}],\"job\":\"vocab-summer-script-347\",\"learner_outcome_vi\":\"Người học nhận biết từ summer mang nghĩa mùa hè và thực hành câu nói về hoạt động ngày hè.\",\"opening_function_vi\":\"Mở đầu bằng âm thanh tiếng quạt cũ và cái nóng bức để dẫn vào mùa hè.\",\"plot_vi\":\"Hai anh em ở nhà ngày oi ả; mâu thuẫn nhỏ hôm trước nhanh chóng được hóa giải khi cùng nhau nhớ về niềm vui bơi lội mùa hè.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chiếc quạt máy cũ kêu ro ro. Duy ngồi uống cốc nước đá, ngập ngừng nhìn chiếc mũ cói trên móc tường. Tôi nhìn mồ hôi trên trán em rồi bảo: \\\"It is hot in summer.\\\" Trời nóng vào mùa hè.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Establish hot indoor atmosphere and introduce the first descriptive model sentence with summer.\",\"scene_id\":\"SC01\",\"title_vi\":\"Tiếng quạt trưa\",\"visual_en\":\"Interior room; an old electric desk fan turns side to side on a low wooden table; the brown-shirt boy drinks water while the blue-shirt stickman wipes his forehead.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Duy ngước mắt lên, đánh bạo rủ tôi ra hồ nước đầu làng. Thằng bé cười tít mắt: \\\"I swim in summer.\\\" Em bơi vào mùa hè. Cơn bực vì em làm rơi hộp mồi câu hôm qua trong tôi bỗng tan biến.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Break the tension with brotherly invitation and present the second model sentence.\",\"scene_id\":\"SC02\",\"title_vi\":\"Lời rủ bất ngờ\",\"visual_en\":\"The brown-shirt younger brother stands up excitedly, making a brief two-arm swimming motion toward the open front doorway.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi đứng dậy lấy chiếc kính bơi cũ trong ngăn kéo ra phủi bụi. Duy mừng rỡ chạy lại giúp tôi buộc chặt lại quai kính bị tuột một đầu nối nhựa.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show mutual gesture of reconciliation through preparing swimming gear.\",\"scene_id\":\"SC03\",\"title_vi\":\"Tìm lại kính bơi\",\"visual_en\":\"The blue-shirt stickman opens a wooden desk drawer and takes out black swim goggles, while the brother steps in to hold the elastic strap steady.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Duy háo hức hỏi tôi thường làm gì để giải nhiệt những ngày oi ả này. Bạn nói giúp tôi câu tôi bơi vào mùa hè bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the viewer to produce the action model sentence with summer.\",\"scene_id\":\"SC04\",\"stem\":\"I swim in ___.\",\"title_vi\":\"Kế hoạch ra hồ\",\"visual_en\":\"The younger brother holds the goggles happily, looking up expectantly at the blue-shirt stickman ready by the door.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"I swim in summer.\\\" Tôi bơi vào mùa hè. Hai anh em xỏ dép bước ra cổng ngõ ngập nắng. Cơn gió đồng thoảng qua xua bớt hơi nóng hầm hập của buổi trưa.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Reinforce the target sentence and deliver an active outdoor ending.\",\"scene_id\":\"SC05\",\"title_vi\":\"Bước qua cổng ngõ\",\"visual_en\":\"The two stick figures walk side by side through the open courtyard gate into the bright outdoor path, shaded by green bamboo overhead.\"}],\"title\":\"Buổi trưa mùa hè\"},{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Hải\",\"outfit_en\":\"Plain purple short-sleeve shirt.\"}],\"job\":\"vocab-autumn-script-348\",\"learner_outcome_vi\":\"Người học nắm vững từ autumn với nghĩa mùa thu và vận dụng được vào câu bày tỏ sở thích.\",\"opening_function_vi\":\"Mở đầu bằng âm thanh trang sách và chiếc lá khô rơi ra để gợi ký ức mùa thu.\",\"plot_vi\":\"Hai người bạn cũ gặp lại sau một năm xa cách; chiếc lá ép khô kẹp giữa trang sách giúp xóa tan khoảng cách ngượng ngùng.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Trang sách mở ra tiếng sột soạt. Chiếc lá vàng khô rơi khẽ xuống mặt bàn gỗ. Hải nhìn chiếc lá rồi khẽ bảo tôi: \\\"Leaves fall in autumn.\\\" Lá rụng vào mùa thu.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Hook viewer with the physical object of a pressed autumn leaf and introduce model sentence one.\",\"scene_id\":\"SC01\",\"title_vi\":\"Chiếc lá rơi\",\"visual_en\":\"Overhead shot of a rustic wooden table; a hardcover book lies open, and a dried golden leaf flutters flat onto the page between the two seated stick figures.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi nhớ lại buổi chiều hai đứa từng hẹn nhau ở góc sân trường cũ nhưng tôi đến muộn vì bận việc. Tôi vuốt lại mép lá khô rồi nói: \\\"I like autumn.\\\" Tôi thích mùa thu. Ánh mắt Hải chùng xuống, mỉm cười bỏ qua chuyện cũ.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Explain past relational tension and introduce model sentence two with emotional grounding.\",\"scene_id\":\"SC02\",\"title_vi\":\"Nhớ lại chuyện cũ\",\"visual_en\":\"The blue-shirt stickman gently touches the brittle edge of the pressed leaf, looking across the table at the purple-shirt friend whose posture softens into a warm smile.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi rót thêm nước ấm vào chiếc tách gốm sứt quai của Hải. Không khí im lặng giữa hai người bạn lâu năm bỗng trở nên nhẹ nhõm bên khung cửa sổ mở hé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show simple hospitable gesture that confirms reconciliation.\",\"scene_id\":\"SC03\",\"title_vi\":\"Tách trà ấm\",\"visual_en\":\"The blue-shirt stickman lifts a ceramic teapot to pour steaming tea into the friend's chip-rimmed cup beside the open book.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hải hỏi tôi còn thích khoảng thời gian lá đổi màu như ngày xưa không. Bạn nói giúp tôi câu tôi thích mùa thu bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Elicit the learner's response using autumn to answer the friend's question.\",\"scene_id\":\"SC04\",\"stem\":\"I like ___.\",\"title_vi\":\"Câu hỏi nối lại\",\"visual_en\":\"The purple-shirt friend cradles the warm tea cup with both stick hands, gazing attentively at the blue-shirt stickman.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"I like autumn.\\\" Tôi thích mùa thu. Hải cẩn thận kẹp lại chiếc lá vàng vào giữa trang sách. Cơn gió thoảng mang theo mùi hoa sữa đầu mùa len qua song cửa.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Present target answer model and conclude with a quiet, satisfying personal close.\",\"scene_id\":\"SC05\",\"title_vi\":\"Kẹp lại trang kỷ niệm\",\"visual_en\":\"The purple-shirt friend carefully nests the dry golden leaf back into the middle fold of the book and shuts it gently, smiling at the blue-shirt stickman.\"}],\"title\":\"Chiếc lá trong trang sách\"},{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Khoa\",\"outfit_en\":\"Plain red short-sleeve shirt.\"}],\"job\":\"vocab-winter-script-349\",\"learner_outcome_vi\":\"Người học nắm được từ winter chỉ mùa đông và biết dùng câu nói về trang phục mùa đông.\",\"opening_function_vi\":\"Mở đầu bằng tiếng gió rít bên ngoài cửa sổ để gợi bối cảnh mùa đông lạnh giá.\",\"plot_vi\":\"Người bạn ghé qua nhà trả khăn len và lo sợ bị trách vì lỡ làm tuột một sợi chỉ; sự đón tiếp ấm áp đã xua tan e ngại ngày giá rét.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Gió rít từng cơn qua khe cửa. Khoa đứng trước hiên, hai tay siết chặt chiếc khăn len màu ghi có mép chỉ sờn. Tôi mời bạn vào nhà rồi khẽ bảo: \\\"It is cold in winter.\\\" Trời lạnh vào mùa đông.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Establish cold weather atmosphere and introduce the first descriptive model sentence with winter.\",\"scene_id\":\"SC01\",\"title_vi\":\"Gió ngoài bậc cửa\",\"visual_en\":\"Entrance doorway; the red-shirt friend stands shivering on the doorstep clutching a folded grey wool scarf, as the blue-shirt stickman pulls open the wooden door to let him in.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Khoa áy náy chìa chiếc khăn ra, bảo lỡ làm tuột một mũi đan. Tôi khoác thêm chiếc áo ấm dày lên vai rồi cười xòa: \\\"I wear a coat in winter.\\\" Tôi mặc áo khoác vào mùa đông. Một mũi len sút chẳng sao cả.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Relieve friend's anxiety over a loose knit thread and introduce the second model sentence.\",\"scene_id\":\"SC02\",\"title_vi\":\"Chiếc áo khoác dày\",\"visual_en\":\"Inside the warm hallway, the blue-shirt stickman drapes a dark coat over his shoulders with a reassuring laugh, while the red-shirt friend holds out the frayed scarf timidly.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi lấy cuộn chỉ len thừa trong ngăn tủ ra giấu mối sợi bị tuột vào nếp gấp. Khoa ngồi bên bếp sưởi ấm, bàn tay dần hết cóng sau chặng đường dài đạp xe.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Depict practical caring action that fixes the problem without blaming.\",\"scene_id\":\"SC03\",\"title_vi\":\"Khéo giấu mối chỉ\",\"visual_en\":\"The blue-shirt stickman uses a blunt needle to tuck the stray grey yarn thread neatly into the scarf fold, while the friend warms his open hands near a small room heater.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Khoa hỏi tôi làm sao giữ ấm khi gió mùa tràn về ngoài phố. Bạn nói giúp tôi câu tôi mặc áo khoác vào mùa đông bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to reproduce the second model sentence about winter attire.\",\"scene_id\":\"SC04\",\"stem\":\"I wear a coat in ___.\",\"title_vi\":\"Hỏi cách giữ ấm\",\"visual_en\":\"The red-shirt friend looks over from the stool, pointing toward the heavy coat hanging behind the blue-shirt stickman.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"I wear a coat in winter.\\\" Tôi mặc áo khoác vào mùa đông. Khoa thở phào, đón lấy chiếc khăn len đã được giấu khéo mối chỉ. Căn phòng nhỏ ấm cúng trong tiếng ấm nước reo sôi.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm answer model and conclude with comfortable companionship.\",\"scene_id\":\"SC05\",\"title_vi\":\"Hơi ấm trong phòng\",\"visual_en\":\"The friend in red takes back the repaired scarf with both hands and smiles in relief; a kettle on the table releases soft puffs of white steam.\"}],\"title\":\"Mũi len mùa đông\"},{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Bình\",\"outfit_en\":\"Plain orange short-sleeve shirt.\"}],\"job\":\"vocab-sun-script-350\",\"learner_outcome_vi\":\"Người học nhận biết từ sun mang nghĩa mặt trời và sử dụng được câu miêu tả mặt trời chiếu sáng.\",\"opening_function_vi\":\"Mở đầu bằng sự thay đổi ánh sáng đột ngột trên sân gạch để dẫn vào mặt trời.\",\"plot_vi\":\"Mây đen bất ngờ kéo đến khi hai anh em đang phơi mẻ bánh đa; sự kiên nhẫn chờ mặt trời tỏa sáng trở lại đã giữ trọn vẹn mẻ bánh ngày mùa.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Khoảng sân gạch đột nhiên tối lại. Bình lo lắng bê khay bánh đa định chạy vào hiên nhà vì sợ mưa. Tôi ngước nhìn vệt mây mỏng rồi bảo: \\\"The sun is warm.\\\" Mặt trời ấm áp.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Create sudden urgency over rice crackers drying in the yard and introduce the first model sentence.\",\"scene_id\":\"SC01\",\"title_vi\":\"Bóng râm bất chợt\",\"visual_en\":\"Brick courtyard under a passing cloud shadow; the orange-shirt stickman hastily lifts a bamboo tray loaded with round rice cakes, while the blue-shirt stickman gestures calmly upward.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Gió thổi đám mây xám dạt sang rặng cây phía tây. Vạt nắng rọi xuống thềm gạch khô ráo, tôi mỉm cười chỉ tay về khoảng trời sáng trong: \\\"The sun is shining.\\\" Mặt trời đang chiếu sáng. Bình từ từ hạ khay bánh xuống.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Demonstrate the sun breaking through and provide the second model sentence.\",\"scene_id\":\"SC02\",\"title_vi\":\"Vạt nắng rạng\",\"visual_en\":\"Warm golden light floods back onto the red brick terrace as clouds drift away; the blue-shirt stickman smiles, and the friend in orange slowly lowers the bamboo tray onto the wooden stand.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hai anh em cùng trải phẳng từng chiếc bánh lên giàn tre đan. Bình thôi vẻ sốt ruột, vừa làm vừa nhìn bóng nắng nhảy nhót trên mặt sân gạch đỏ.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show calm teamwork restored after the weather scare.\",\"scene_id\":\"SC03\",\"title_vi\":\"Trải lại mẻ bánh\",\"visual_en\":\"Both stick figures work together side by side, smoothing the round crackers across bamboo racks resting in the sunny courtyard.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bình hỏi tôi nắng đã lên lại chưa để phơi nốt khay cuối. Bạn nói giúp tôi câu mặt trời đang chiếu sáng bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Direct the learner to speak the second model sentence to confirm the sunny conditions.\",\"scene_id\":\"SC04\",\"stem\":\"The ___ is shining.\",\"title_vi\":\"Hỏi thăm nắng\",\"visual_en\":\"The orange-shirt cousin points toward a remaining tray in the veranda shade, looking back at the blue-shirt stickman for confirmation.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"The sun is shining.\\\" Mặt trời đang chiếu sáng. Nắng trải đều khắp sân gạch sưởi khô từng mẻ bánh thơm lừng. Bình quệt mồ hôi trán, cười tươi nhìn tôi.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver the correct answer model and wrap up with a cheerful practical accomplishment.\",\"scene_id\":\"SC05\",\"title_vi\":\"Sân gạch ngập nắng\",\"visual_en\":\"The courtyard stands fully illuminated with rows of drying crackers; the cousin wipes sweat from his forehead and gives a high-five gesture to the blue-shirt stickman.\"}],\"title\":\"Nắng trở lại sân\"},{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Nam\",\"outfit_en\":\"Plain olive-green short-sleeve shirt.\"}],\"job\":\"vocab-moon-script-351\",\"learner_outcome_vi\":\"Người học nắm được từ moon chỉ mặt trăng và thực hành câu miêu tả mặt trăng sáng.\",\"opening_function_vi\":\"Mở đầu bằng ánh sáng màn hình điện tử đối lập với bóng tối đêm để dẫn vào mặt trăng.\",\"plot_vi\":\"Người bạn mệt mỏi vì công việc căng thẳng; một khoảnh khắc cùng ngắm trăng tròn ngoài hiên nhà đã giúp tìm lại sự tĩnh lặng trong tâm hồn.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Màn đêm buông xuống góc hiên nhà. Ánh sáng từ màn hình điện tử hắt lên nét mặt căng thẳng của Nam. Tôi khẽ vỗ vai bạn rồi chỉ lên ngọn cây: \\\"Can you see the moon?\\\" Bạn có thấy mặt trăng không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Establish quiet evening contrast between electronic screen glare and sky, introducing model sentence one.\",\"scene_id\":\"SC01\",\"title_vi\":\"Ánh sáng màn hình\",\"visual_en\":\"Porch at dusk; the olive-shirt friend sits hunched over a glowing tablet screen, while the blue-shirt stickman taps his shoulder and points up above the tiled roofline.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Nam ngước nhìn lên khoảng trời đêm tĩnh mịch giữa hai mái ngói. Nét mặt bạn dãn ra khi thấy quả cầu tròn vành vạnh: \\\"The moon is bright.\\\" Mặt trăng sáng. Nam khẽ đặt chiếc máy tính bảng sang một bên.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Shift friend's attention to the night sky and present model sentence two.\",\"scene_id\":\"SC02\",\"title_vi\":\"Vòm trời tĩnh mịch\",\"visual_en\":\"The olive-shirt friend tilts his head up to see a clear luminous round moon between dark rooftop silhouettes, placing the turned-off tablet face down on the wooden floor.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Gió đêm thổi qua rặng chuối mát rượi sau lưng nhà. Hai đứa cùng ngồi im lặng ngắm vệt sáng bạc loang trên sân gạch, không ai còn muốn nhắc đến đống bài tập dở dang.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deepen the peaceful mood and show stress melting away in quiet companionship.\",\"scene_id\":\"SC03\",\"title_vi\":\"Gió đêm qua thềm\",\"visual_en\":\"Wide shot of the two stick figures sitting side by side on the low veranda step, their feet resting on the courtyard pavement touched by soft silver moonlight.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Nam vẫn say sưa ngắm vòm trời đêm cao vút. Bạn nói giúp tôi câu mặt trăng sáng bằng tiếng Anh để cùng chia sẻ khoảnh khắc này nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt learner to say model sentence two to share the observation with the friend.\",\"scene_id\":\"SC04\",\"stem\":\"The ___ is bright.\",\"title_vi\":\"Cùng ngắm trời đêm\",\"visual_en\":\"Close view of the olive-shirt friend looking upward with a relaxed expression, as the blue-shirt stickman turns to him warmly.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"The moon is bright.\\\" Mặt trăng sáng. Nam tựa lưng vào cột hiên gỗ, mỉm cười nhẹ nhõm. Ánh trăng dịu dàng phủ khắp mảnh sân con.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide the spoken target model and settle into a tranquil, grounded ending.\",\"scene_id\":\"SC05\",\"title_vi\":\"Hiên nhà sáng bạc\",\"visual_en\":\"The two stick figures lean comfortably against the wooden porch pillar, the gentle round moon glowing high above in the deep navy night sky.\"}],\"title\":\"Ánh trăng ngoài hiên\"},{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Hà\",\"outfit_en\":\"Plain pink short-sleeve shirt.\"}],\"job\":\"vocab-star-script-352\",\"learner_outcome_vi\":\"Người học nhận biết từ star chỉ ngôi sao trên trời và dùng được câu thông báo nhìn thấy ngôi sao.\",\"opening_function_vi\":\"Mở đầu bằng nỗi buồn nhỏ mất chiếc kẹp tóc lúc trời tối để hướng mắt lên ngắm sao trời.\",\"plot_vi\":\"Cô em gái buồn khóc vì đánh rơi chiếc kẹp tóc ngoài bãi cỏ; một chấm sao đêm đầu tiên trên vòm trời đã an ủi và dẫn lối tìm lại đồ vật.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bãi cỏ sẫm màu trong bóng tối. Hà rơm rớm nước mắt vì chiếc kẹp tóc rơi mất trong bụi cây. Tôi ngồi xuống cạnh em, khẽ chỉ tay lên vòm trời xa: \\\"Look at that star.\\\" Hãy nhìn ngôi sao kia.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Hook viewer with a relatable child distress and introduce the first model sentence pointing to a star.\",\"scene_id\":\"SC01\",\"title_vi\":\"Nước mắt trên bãi cỏ\",\"visual_en\":\"Dusk in an open backyard grassy lawn; the smaller pink-shirt girl sits sniffles beside a dark bush, while the blue-shirt stickman crouches beside her pointing up at a pinpoint light in the dusk sky.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hà ngước mắt nhìn chấm sáng lấp lánh vừa hiện ra sau rặng tre. Em chớp chớp mắt rồi khẽ thì thầm: \\\"I see a star.\\\" Em thấy một ngôi sao. Hà đưa tay lau vệt nước mắt còn đọng trên má.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Demonstrate the core meaning of star in the sky and introduce model sentence two.\",\"scene_id\":\"SC02\",\"title_vi\":\"Chấm sáng đầu tiên\",\"visual_en\":\"Close-up of the pink-shirt girl looking upward with glistening eyes, wiping a tear away with the back of her stick hand as a single star shines above the bamboo tips.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi bật chiếc đèn pin nhỏ quét chậm rãi quanh lối đi lát sỏi. Hà không còn hờn dỗi, lon ton đi theo sau soi giúp tôi từng gốc cỏ ven bờ rào.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Turn grief into gentle teamwork and systematic searching.\",\"scene_id\":\"SC03\",\"title_vi\":\"Ánh đèn pin nhỏ\",\"visual_en\":\"The blue-shirt stickman shines a round cone of yellow flashlight beam onto gravel edge grass, while the little sister in pink walks closely behind pointing helpfully.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hà vui vẻ chỉ lên bầu trời đầy chấm sáng lung linh phía trên đầu. Bạn nói giúp tôi câu tôi thấy một ngôi sao bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to practice model sentence two with star.\",\"scene_id\":\"SC04\",\"stem\":\"I see a ___.\",\"title_vi\":\"Nhìn lên bầu trời\",\"visual_en\":\"The pink-shirt girl hops forward with excitement, pointing one hand up toward the brightening constellation overhead.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"I see a star.\\\" Tôi thấy một ngôi sao. Dưới ánh sáng lấp lánh của bầu trời đêm, chiếc kẹp tóc màu bạc bất ngờ ánh lên giữa khe cỏ. Hà reo khẽ, nắm chặt lấy tay tôi.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver target model answer and reward the search with a tactile happy find.\",\"scene_id\":\"SC05\",\"title_vi\":\"Ánh kim trong cỏ\",\"visual_en\":\"A small silver hairclip glints inside a tuft of grass under the flashlight and starlight; the little sister picks it up with joy and clasps the blue-shirt stickman's hand.\"}],\"title\":\"Ngôi sao trên vòm trời\"},{\"characters\":[{\"appearance_en\":\"Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single plain pale-blue short-sleeve t-shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"An\",\"outfit_en\":\"Plain violet short-sleeve shirt.\"}],\"job\":\"vocab-sky-script-353\",\"learner_outcome_vi\":\"Người học nhận biết từ sky mang nghĩa bầu trời và vận dụng được câu miêu tả bầu trời xanh.\",\"opening_function_vi\":\"Mở đầu bằng tai nạn nhỏ làm loang màu trên trang giấy vẽ để khơi dậy hành động nhìn lên bầu trời.\",\"plot_vi\":\"Một bạn học sinh muốn vứt bỏ bức tranh dở vì lỡ tay làm nhòe nước; việc ngắm nhìn bầu trời xanh bên ngoài đã mở ra cách sửa đổi tranh đầy sáng tạo.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Góc giấy vẽ bị lem vệt nước. An buông bút cọ, vẻ mặt nản lòng muốn vò nát bức tranh dở. Tôi vội giữ tay bạn lại, đẩy nhẹ cánh cửa sổ gỗ ra rồi bảo: \\\"Look at the sky.\\\" Hãy nhìn bầu trời.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Present the frustration of a ruined watercolor sheet and introduce the first imperative model sentence.\",\"scene_id\":\"SC01\",\"title_vi\":\"Vệt nước loang\",\"visual_en\":\"Art desk beside an open window; the violet-shirt friend slumps in his chair about to crumple a watercolor paper with an accidental blue stain, while the blue-shirt stickman halts his hand and points outside.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"An ngẩng đầu nhìn ra khoảng không khoáng đạt phía trên rặng phi lao. Tôi cầm cây cọ chấm vào khay màu nước rồi nói khẽ: \\\"The sky is blue.\\\" Bầu trời màu xanh. Vệt nước loang có thể vẽ thành đám mây trôi.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Direct vision to real nature and present model sentence two describing the sky.\",\"scene_id\":\"SC02\",\"title_vi\":\"Màu xanh ngoài cửa\",\"visual_en\":\"Through the framed wooden window, a bright clear blue expanse opens above green pine crowns; the blue-shirt stickman dips a brush into a water cup and gestures at the paper stain.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"An cầm lại chiếc cọ lông, cẩn thận tán nhẹ vệt nước loang thành hình dải mây bồng bềnh. Sự bực bội tan biến, hai đứa cặm cụi pha thêm sắc lam nhạt cho nền tranh.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Depict creative physical transformation of an accident into artistic intention.\",\"scene_id\":\"SC03\",\"title_vi\":\"Nét cọ bồng bềnh\",\"visual_en\":\"Close-up on the paper; the friend's stick hand uses a wet brush to blend the blue puddle edges into soft feathered white and azure cloud shapes.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"An muốn tô nốt phần trên cùng của bức vẽ theo đúng khung cảnh ngoài cửa sổ. Bạn nói giúp tôi câu bầu trời màu xanh bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to speak model sentence two to describe the finished backdrop.\",\"scene_id\":\"SC04\",\"stem\":\"The ___ is blue.\",\"title_vi\":\"Tô nốt mảng trời\",\"visual_en\":\"The friend holds the loaded brush poised above the painting, glancing between the real window sky and the blue-shirt stickman for agreement.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"The sky is blue.\\\" Bầu trời màu xanh. Bức tranh phong cảnh hoàn thành với mảng trời êm dịu nâng đỡ những mái ngói rêu phong. An mỉm cười, nghiêng đầu ngắm lại tác phẩm.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver the target answer sentence and conclude with satisfaction in overcoming creative frustration.\",\"scene_id\":\"SC05\",\"title_vi\":\"Bức tranh hoàn thành\",\"visual_en\":\"Both stick figures step back to view the completed landscape painting propped against the desk easel, showcasing an airy blue sky and drifting clouds.\"}],\"title\":\"Khoảng trời xanh trên giấy\"}],\"toolAction\":\"Submitting completed short film scripts\",\"toolSummary\":\"Completed micro-stories for 10 vocabulary jobs\"}\n",
+  "duration_seconds": 121.44340857,
+  "num_turns": 2,
+  "structured_output": {
+    "episodes": [
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Lâm",
+            "outfit_en": "Plain yellow short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-west-script-344",
+        "learner_outcome_vi": "Người học gọi đúng từ west để chỉ hướng tây và dùng được câu chỉ vị trí phương hướng đơn giản.",
+        "opening_function_vi": "Mở đầu bằng tình huống bối rối ở ngã ba đường để làm nảy sinh nhu cầu xác định phương hướng.",
+        "plot_vi": "Hai người bạn lạc đường lúc chiều muộn ở ngã ba vắng; một người nản lòng vì bản đồ rách, người kia nhìn hướng mặt trời lặn để cùng tìm ra lối về nhà ga.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bóng chúng tôi đổ dài về trước. Tờ bản đồ rách mép khiến tôi lúng túng giữa ngã ba vắng. Lâm nhìn vệt nắng chiều rồi hỏi tôi: \"Which way is west?\" Hướng nào là hướng tây?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Establish setting, show the torn map dilemma, and introduce the first model question asking for west.",
+            "scene_id": "SC01",
+            "title_vi": "Ngã ba lúc chiều tà",
+            "visual_en": "Medium shot of the blue-shirt stickman holding a torn paper map at a dusty rural fork road, looking puzzled beside the yellow-shirt friend who gestures toward the low sun in the distance."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi ngẩng lên nhìn rặng cây đang ngả bóng dài. Tôi chỉ tay về phía dốc và bảo: \"The station is in the west.\" Nhà ga ở hướng tây. Cậu ấy thở phào, cất chai nước vào túi.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Clarify core meaning of west as a cardinal direction and provide the second model sentence.",
+            "scene_id": "SC02",
+            "title_vi": "Nhìn theo vạt nắng",
+            "visual_en": "The blue-shirt stickman points his stick arm toward the distant sloping road where the sun sets behind tree silhouettes, while the friend in yellow shirt puts a water bottle into his backpack."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Gió thổi mát rượi qua bãi cỏ ven đường. Lâm bước chậm lại để đi ngang hàng với tôi, không còn cằn nhằn về ngã rẽ bị trễ hồi trưa.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Develop personal connection and ease the tension between the two travelers through shared walking.",
+            "scene_id": "SC03",
+            "title_vi": "Bước chân cùng nhịp",
+            "visual_en": "Side profile of both stick figures walking side by side along the gravel path, their long shadows trailing ahead under the gentle breeze swaying tall grass."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Lâm vẫn liếc nhìn ngã ba phía sau. Bạn nói giúp tôi câu nhà ga ở hướng tây bằng tiếng Anh để bạn tôi yên tâm bước tiếp nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to speak the second model sentence to reassure the friend.",
+            "scene_id": "SC04",
+            "stem": "The station is in the ___.",
+            "title_vi": "Xác nhận hướng đi",
+            "visual_en": "Close-up on the yellow-shirt friend looking back over his shoulder hesitantly, while the blue-shirt stickman waits with an open supportive hand gesture."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"The station is in the west.\" Nhà ga ở hướng tây. Vừa qua khúc quanh, mái tôn nhà ga hiện ra thật. Lâm khẽ cười, đưa tay xách đỡ tôi chiếc túi nặng.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver spoken answer model and show local emotional resolution as the station appears.",
+            "scene_id": "SC05",
+            "title_vi": "Mái ga cuối đường",
+            "visual_en": "The two stick figures reach the crest of the dirt path, where the small station roof is visible ahead bathed in sunset light; the friend reaches over to share the weight of the duffel bag."
+          }
+        ],
+        "title": "Lối về hướng tây"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Chị Mai",
+            "outfit_en": "Plain green short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-season-script-345",
+        "learner_outcome_vi": "Người học hiểu đúng từ season chỉ mùa trong năm và biết nói mùa yêu thích của mình.",
+        "opening_function_vi": "Mở đầu bằng việc tìm thấy kỷ vật cũ phủ bụi để dẫn vào khái niệm mùa trong năm.",
+        "plot_vi": "Hai chị em dọn dẹp căn gác xép cũ; chiếc áo len bạc màu gợi nhắc về mùa trong năm mà mỗi người nâng niu nhất.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chiếc thùng các tông phủ lớp bụi mỏng. Chị Mai lôi ra mớ áo len cũ rồi ngập ngừng nhìn tôi. Tôi cầm chiếc áo đan màu xám lên hỏi chị: \"What is your favorite season?\" Mùa bạn thích nhất là mùa nào?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Hook the viewer with a dusty storage box and establish the first model question about favorite season.",
+            "scene_id": "SC01",
+            "title_vi": "Chiếc thùng phủ bụi",
+            "visual_en": "Interior attic setting; the blue-shirt stickman lifts a folded knitted grey sweater from an open cardboard box, looking at the sister in green shirt sitting on the wooden floor."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chị Mai vuốt lại nếp áo len đã sờn chỉ ở cổ tay. Chị mỉm cười khẽ đáp: \"Autumn is my favorite season.\" Mùa thu là mùa tôi thích nhất. Hóa ra chị vẫn giữ kỷ niệm về những buổi chiều rụng lá.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Demonstrate core meaning of season through dialogue and introduce the second model sentence.",
+            "scene_id": "SC02",
+            "title_vi": "Nếp len kỷ niệm",
+            "visual_en": "Close shot of the green-shirt stick figure smoothing the sleeve cuff of the wool sweater with gentle fingers, looking nostalgic."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi mở cửa sổ gác xép cho gió lùa vào phòng. Mùi vải cũ thơm mùi nắng nhạt khiến hai chị em không còn vội vã giục nhau dọn cho xong đống đồ bừa bộn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deepen the reflective mood and show emotional shift through simple physical gesture.",
+            "scene_id": "SC03",
+            "title_vi": "Gió lùa qua song",
+            "visual_en": "The blue-shirt stickman props open a small wooden attic window, letting pale sunlight and breeze tilt across the scattered storage boxes."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chị Mai hỏi lại tôi về khoảng thời gian tôi yêu thích nhất trong năm. Bạn nói giúp tôi câu mùa thu là mùa tôi thích nhất bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to recall and speak the second model sentence using season.",
+            "scene_id": "SC04",
+            "stem": "Autumn is my favorite ___.",
+            "title_vi": "Câu hỏi của chị",
+            "visual_en": "The green-shirt sister looks up from the floor box, tilting her head inquisitively toward the blue-shirt stickman standing near the window."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Autumn is my favorite season.\" Mùa thu là mùa tôi thích nhất. Chị Mai gật đầu, cẩn thận xếp chiếc áo len vào ngăn trên cùng. Hai chị em ngồi bệt xuống sàn, cùng ngắm vạt nắng nghiêng ngoài hiên.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide the spoken target model and conclude with a warm earned resolution.",
+            "scene_id": "SC05",
+            "title_vi": "Xếp lại vạt nắng",
+            "visual_en": "The sister carefully places the folded sweater into the top drawer of a small wooden chest, and both stick figures sit side by side on the floor looking out the sunny window."
+          }
+        ],
+        "title": "Mùa cất trong ngăn tủ"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Hòa",
+            "outfit_en": "Plain orange short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-spring-script-346",
+        "learner_outcome_vi": "Người học nhận biết từ spring mang nghĩa mùa xuân và biết bày tỏ cảm xúc yêu thích mùa xuân.",
+        "opening_function_vi": "Bắt đầu bằng một chậu cây khô sắp bị bỏ đi để gợi sự chú ý vào chu kỳ hồi sinh của thiên nhiên.",
+        "plot_vi": "Hai người bạn cùng phòng phân vân việc vứt bỏ một chậu cây khô héo; một mầm xanh hé nhú mang lại niềm tin về mùa xuân và sự kiên nhẫn.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chậu cây bên cửa sổ trơ cành. Hòa định bê chậu đất khô ra bãi rác đầu ngõ. Tôi vội giữ tay bạn lại và bảo: \"Flowers bloom in spring.\" Hoa nở vào mùa xuân.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Present the initial conflict over throwing away a potted plant and introduce the first model sentence with spring.",
+            "scene_id": "SC01",
+            "title_vi": "Chậu cây trơ cành",
+            "visual_en": "Apartment balcony; the orange-shirt stickman bends down to lift a dry potted plant with bare twigs, while the blue-shirt stickman reaches out to touch his wrist to stop him."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hòa nhìn những nhánh khẳng khiu với vẻ ngần ngại. Tôi chỉ vào một chấm xanh li ti vừa nhú ở kẽ nứt thân cây rồi nói thêm: \"I love spring.\" Tôi yêu mùa xuân. Hòa dừng tay, đặt chậu lại góc bệ cửa.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show evidence of life returning in spring and present the second model sentence expressing love for the season.",
+            "scene_id": "SC02",
+            "title_vi": "Chấm xanh trên vỏ cây",
+            "visual_en": "Close-up of a dry twig showing a tiny green bud sprouting from the bark; the blue-shirt stickman points right at it as the orange-shirt friend sets the pot back onto the sill."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hai đứa múc một ca nước nhỏ tưới quanh gốc đất khô cằn. Hòa không còn vẻ bực bội vì góc ban công chật chội, lặng lẽ nhặt vài chiếc lá khô rụng quanh thềm gạch.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Illustrate collaborative care and quiet easing of frustration between roommates.",
+            "scene_id": "SC03",
+            "title_vi": "Gáo nước đầu tiên",
+            "visual_en": "The blue-shirt stickman gently pours water from a plastic mug onto the dark soil around the plant stem, while the friend sweeps away dry crumbled leaves with his hand."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hòa hỏi tôi vì sao vẫn tha thiết giữ lại chậu cây già này. Bạn nói giúp tôi câu tôi yêu mùa xuân bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Invite the learner to speak the personal statement model using spring in context.",
+            "scene_id": "SC04",
+            "stem": "I love ___.",
+            "title_vi": "Niềm tin nhỏ",
+            "visual_en": "The orange-shirt friend looks at the blue-shirt stickman with curiosity, pointing slightly back at the damp potted plant."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"I love spring.\" Tôi yêu mùa xuân. Hòa mỉm cười, lấy ngón tay chạm nhẹ vào mầm non vừa hé. Ban công nhỏ bỗng ấm áp hơn trong làn gió nhẹ buổi sớm.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Reinforce the target model and end with an earned emotional lift around patience and renewal.",
+            "scene_id": "SC05",
+            "title_vi": "Ban công buổi sớm",
+            "visual_en": "Both stick figures stand side by side on the small tiled balcony under soft morning light; the friend in orange shirt gently grazes the green bud with his fingertip."
+          }
+        ],
+        "title": "Chồi non mùa xuân"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Duy",
+            "outfit_en": "Plain brown short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-summer-script-347",
+        "learner_outcome_vi": "Người học nhận biết từ summer mang nghĩa mùa hè và thực hành câu nói về hoạt động ngày hè.",
+        "opening_function_vi": "Mở đầu bằng âm thanh tiếng quạt cũ và cái nóng bức để dẫn vào mùa hè.",
+        "plot_vi": "Hai anh em ở nhà ngày oi ả; mâu thuẫn nhỏ hôm trước nhanh chóng được hóa giải khi cùng nhau nhớ về niềm vui bơi lội mùa hè.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chiếc quạt máy cũ kêu ro ro. Duy ngồi uống cốc nước đá, ngập ngừng nhìn chiếc mũ cói trên móc tường. Tôi nhìn mồ hôi trên trán em rồi bảo: \"It is hot in summer.\" Trời nóng vào mùa hè.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Establish hot indoor atmosphere and introduce the first descriptive model sentence with summer.",
+            "scene_id": "SC01",
+            "title_vi": "Tiếng quạt trưa",
+            "visual_en": "Interior room; an old electric desk fan turns side to side on a low wooden table; the brown-shirt boy drinks water while the blue-shirt stickman wipes his forehead."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Duy ngước mắt lên, đánh bạo rủ tôi ra hồ nước đầu làng. Thằng bé cười tít mắt: \"I swim in summer.\" Em bơi vào mùa hè. Cơn bực vì em làm rơi hộp mồi câu hôm qua trong tôi bỗng tan biến.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Break the tension with brotherly invitation and present the second model sentence.",
+            "scene_id": "SC02",
+            "title_vi": "Lời rủ bất ngờ",
+            "visual_en": "The brown-shirt younger brother stands up excitedly, making a brief two-arm swimming motion toward the open front doorway."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi đứng dậy lấy chiếc kính bơi cũ trong ngăn kéo ra phủi bụi. Duy mừng rỡ chạy lại giúp tôi buộc chặt lại quai kính bị tuột một đầu nối nhựa.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show mutual gesture of reconciliation through preparing swimming gear.",
+            "scene_id": "SC03",
+            "title_vi": "Tìm lại kính bơi",
+            "visual_en": "The blue-shirt stickman opens a wooden desk drawer and takes out black swim goggles, while the brother steps in to hold the elastic strap steady."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Duy háo hức hỏi tôi thường làm gì để giải nhiệt những ngày oi ả này. Bạn nói giúp tôi câu tôi bơi vào mùa hè bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the viewer to produce the action model sentence with summer.",
+            "scene_id": "SC04",
+            "stem": "I swim in ___.",
+            "title_vi": "Kế hoạch ra hồ",
+            "visual_en": "The younger brother holds the goggles happily, looking up expectantly at the blue-shirt stickman ready by the door."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"I swim in summer.\" Tôi bơi vào mùa hè. Hai anh em xỏ dép bước ra cổng ngõ ngập nắng. Cơn gió đồng thoảng qua xua bớt hơi nóng hầm hập của buổi trưa.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Reinforce the target sentence and deliver an active outdoor ending.",
+            "scene_id": "SC05",
+            "title_vi": "Bước qua cổng ngõ",
+            "visual_en": "The two stick figures walk side by side through the open courtyard gate into the bright outdoor path, shaded by green bamboo overhead."
+          }
+        ],
+        "title": "Buổi trưa mùa hè"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Hải",
+            "outfit_en": "Plain purple short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-autumn-script-348",
+        "learner_outcome_vi": "Người học nắm vững từ autumn với nghĩa mùa thu và vận dụng được vào câu bày tỏ sở thích.",
+        "opening_function_vi": "Mở đầu bằng âm thanh trang sách và chiếc lá khô rơi ra để gợi ký ức mùa thu.",
+        "plot_vi": "Hai người bạn cũ gặp lại sau một năm xa cách; chiếc lá ép khô kẹp giữa trang sách giúp xóa tan khoảng cách ngượng ngùng.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Trang sách mở ra tiếng sột soạt. Chiếc lá vàng khô rơi khẽ xuống mặt bàn gỗ. Hải nhìn chiếc lá rồi khẽ bảo tôi: \"Leaves fall in autumn.\" Lá rụng vào mùa thu.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Hook viewer with the physical object of a pressed autumn leaf and introduce model sentence one.",
+            "scene_id": "SC01",
+            "title_vi": "Chiếc lá rơi",
+            "visual_en": "Overhead shot of a rustic wooden table; a hardcover book lies open, and a dried golden leaf flutters flat onto the page between the two seated stick figures."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi nhớ lại buổi chiều hai đứa từng hẹn nhau ở góc sân trường cũ nhưng tôi đến muộn vì bận việc. Tôi vuốt lại mép lá khô rồi nói: \"I like autumn.\" Tôi thích mùa thu. Ánh mắt Hải chùng xuống, mỉm cười bỏ qua chuyện cũ.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Explain past relational tension and introduce model sentence two with emotional grounding.",
+            "scene_id": "SC02",
+            "title_vi": "Nhớ lại chuyện cũ",
+            "visual_en": "The blue-shirt stickman gently touches the brittle edge of the pressed leaf, looking across the table at the purple-shirt friend whose posture softens into a warm smile."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi rót thêm nước ấm vào chiếc tách gốm sứt quai của Hải. Không khí im lặng giữa hai người bạn lâu năm bỗng trở nên nhẹ nhõm bên khung cửa sổ mở hé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show simple hospitable gesture that confirms reconciliation.",
+            "scene_id": "SC03",
+            "title_vi": "Tách trà ấm",
+            "visual_en": "The blue-shirt stickman lifts a ceramic teapot to pour steaming tea into the friend's chip-rimmed cup beside the open book."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hải hỏi tôi còn thích khoảng thời gian lá đổi màu như ngày xưa không. Bạn nói giúp tôi câu tôi thích mùa thu bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Elicit the learner's response using autumn to answer the friend's question.",
+            "scene_id": "SC04",
+            "stem": "I like ___.",
+            "title_vi": "Câu hỏi nối lại",
+            "visual_en": "The purple-shirt friend cradles the warm tea cup with both stick hands, gazing attentively at the blue-shirt stickman."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"I like autumn.\" Tôi thích mùa thu. Hải cẩn thận kẹp lại chiếc lá vàng vào giữa trang sách. Cơn gió thoảng mang theo mùi hoa sữa đầu mùa len qua song cửa.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Present target answer model and conclude with a quiet, satisfying personal close.",
+            "scene_id": "SC05",
+            "title_vi": "Kẹp lại trang kỷ niệm",
+            "visual_en": "The purple-shirt friend carefully nests the dry golden leaf back into the middle fold of the book and shuts it gently, smiling at the blue-shirt stickman."
+          }
+        ],
+        "title": "Chiếc lá trong trang sách"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Khoa",
+            "outfit_en": "Plain red short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-winter-script-349",
+        "learner_outcome_vi": "Người học nắm được từ winter chỉ mùa đông và biết dùng câu nói về trang phục mùa đông.",
+        "opening_function_vi": "Mở đầu bằng tiếng gió rít bên ngoài cửa sổ để gợi bối cảnh mùa đông lạnh giá.",
+        "plot_vi": "Người bạn ghé qua nhà trả khăn len và lo sợ bị trách vì lỡ làm tuột một sợi chỉ; sự đón tiếp ấm áp đã xua tan e ngại ngày giá rét.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Gió rít từng cơn qua khe cửa. Khoa đứng trước hiên, hai tay siết chặt chiếc khăn len màu ghi có mép chỉ sờn. Tôi mời bạn vào nhà rồi khẽ bảo: \"It is cold in winter.\" Trời lạnh vào mùa đông.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Establish cold weather atmosphere and introduce the first descriptive model sentence with winter.",
+            "scene_id": "SC01",
+            "title_vi": "Gió ngoài bậc cửa",
+            "visual_en": "Entrance doorway; the red-shirt friend stands shivering on the doorstep clutching a folded grey wool scarf, as the blue-shirt stickman pulls open the wooden door to let him in."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Khoa áy náy chìa chiếc khăn ra, bảo lỡ làm tuột một mũi đan. Tôi khoác thêm chiếc áo ấm dày lên vai rồi cười xòa: \"I wear a coat in winter.\" Tôi mặc áo khoác vào mùa đông. Một mũi len sút chẳng sao cả.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Relieve friend's anxiety over a loose knit thread and introduce the second model sentence.",
+            "scene_id": "SC02",
+            "title_vi": "Chiếc áo khoác dày",
+            "visual_en": "Inside the warm hallway, the blue-shirt stickman drapes a dark coat over his shoulders with a reassuring laugh, while the red-shirt friend holds out the frayed scarf timidly."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi lấy cuộn chỉ len thừa trong ngăn tủ ra giấu mối sợi bị tuột vào nếp gấp. Khoa ngồi bên bếp sưởi ấm, bàn tay dần hết cóng sau chặng đường dài đạp xe.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Depict practical caring action that fixes the problem without blaming.",
+            "scene_id": "SC03",
+            "title_vi": "Khéo giấu mối chỉ",
+            "visual_en": "The blue-shirt stickman uses a blunt needle to tuck the stray grey yarn thread neatly into the scarf fold, while the friend warms his open hands near a small room heater."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Khoa hỏi tôi làm sao giữ ấm khi gió mùa tràn về ngoài phố. Bạn nói giúp tôi câu tôi mặc áo khoác vào mùa đông bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to reproduce the second model sentence about winter attire.",
+            "scene_id": "SC04",
+            "stem": "I wear a coat in ___.",
+            "title_vi": "Hỏi cách giữ ấm",
+            "visual_en": "The red-shirt friend looks over from the stool, pointing toward the heavy coat hanging behind the blue-shirt stickman."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"I wear a coat in winter.\" Tôi mặc áo khoác vào mùa đông. Khoa thở phào, đón lấy chiếc khăn len đã được giấu khéo mối chỉ. Căn phòng nhỏ ấm cúng trong tiếng ấm nước reo sôi.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm answer model and conclude with comfortable companionship.",
+            "scene_id": "SC05",
+            "title_vi": "Hơi ấm trong phòng",
+            "visual_en": "The friend in red takes back the repaired scarf with both hands and smiles in relief; a kettle on the table releases soft puffs of white steam."
+          }
+        ],
+        "title": "Mũi len mùa đông"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Bình",
+            "outfit_en": "Plain orange short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-sun-script-350",
+        "learner_outcome_vi": "Người học nhận biết từ sun mang nghĩa mặt trời và sử dụng được câu miêu tả mặt trời chiếu sáng.",
+        "opening_function_vi": "Mở đầu bằng sự thay đổi ánh sáng đột ngột trên sân gạch để dẫn vào mặt trời.",
+        "plot_vi": "Mây đen bất ngờ kéo đến khi hai anh em đang phơi mẻ bánh đa; sự kiên nhẫn chờ mặt trời tỏa sáng trở lại đã giữ trọn vẹn mẻ bánh ngày mùa.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Khoảng sân gạch đột nhiên tối lại. Bình lo lắng bê khay bánh đa định chạy vào hiên nhà vì sợ mưa. Tôi ngước nhìn vệt mây mỏng rồi bảo: \"The sun is warm.\" Mặt trời ấm áp.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Create sudden urgency over rice crackers drying in the yard and introduce the first model sentence.",
+            "scene_id": "SC01",
+            "title_vi": "Bóng râm bất chợt",
+            "visual_en": "Brick courtyard under a passing cloud shadow; the orange-shirt stickman hastily lifts a bamboo tray loaded with round rice cakes, while the blue-shirt stickman gestures calmly upward."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Gió thổi đám mây xám dạt sang rặng cây phía tây. Vạt nắng rọi xuống thềm gạch khô ráo, tôi mỉm cười chỉ tay về khoảng trời sáng trong: \"The sun is shining.\" Mặt trời đang chiếu sáng. Bình từ từ hạ khay bánh xuống.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Demonstrate the sun breaking through and provide the second model sentence.",
+            "scene_id": "SC02",
+            "title_vi": "Vạt nắng rạng",
+            "visual_en": "Warm golden light floods back onto the red brick terrace as clouds drift away; the blue-shirt stickman smiles, and the friend in orange slowly lowers the bamboo tray onto the wooden stand."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hai anh em cùng trải phẳng từng chiếc bánh lên giàn tre đan. Bình thôi vẻ sốt ruột, vừa làm vừa nhìn bóng nắng nhảy nhót trên mặt sân gạch đỏ.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show calm teamwork restored after the weather scare.",
+            "scene_id": "SC03",
+            "title_vi": "Trải lại mẻ bánh",
+            "visual_en": "Both stick figures work together side by side, smoothing the round crackers across bamboo racks resting in the sunny courtyard."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bình hỏi tôi nắng đã lên lại chưa để phơi nốt khay cuối. Bạn nói giúp tôi câu mặt trời đang chiếu sáng bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Direct the learner to speak the second model sentence to confirm the sunny conditions.",
+            "scene_id": "SC04",
+            "stem": "The ___ is shining.",
+            "title_vi": "Hỏi thăm nắng",
+            "visual_en": "The orange-shirt cousin points toward a remaining tray in the veranda shade, looking back at the blue-shirt stickman for confirmation."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"The sun is shining.\" Mặt trời đang chiếu sáng. Nắng trải đều khắp sân gạch sưởi khô từng mẻ bánh thơm lừng. Bình quệt mồ hôi trán, cười tươi nhìn tôi.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver the correct answer model and wrap up with a cheerful practical accomplishment.",
+            "scene_id": "SC05",
+            "title_vi": "Sân gạch ngập nắng",
+            "visual_en": "The courtyard stands fully illuminated with rows of drying crackers; the cousin wipes sweat from his forehead and gives a high-five gesture to the blue-shirt stickman."
+          }
+        ],
+        "title": "Nắng trở lại sân"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Nam",
+            "outfit_en": "Plain olive-green short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-moon-script-351",
+        "learner_outcome_vi": "Người học nắm được từ moon chỉ mặt trăng và thực hành câu miêu tả mặt trăng sáng.",
+        "opening_function_vi": "Mở đầu bằng ánh sáng màn hình điện tử đối lập với bóng tối đêm để dẫn vào mặt trăng.",
+        "plot_vi": "Người bạn mệt mỏi vì công việc căng thẳng; một khoảnh khắc cùng ngắm trăng tròn ngoài hiên nhà đã giúp tìm lại sự tĩnh lặng trong tâm hồn.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Màn đêm buông xuống góc hiên nhà. Ánh sáng từ màn hình điện tử hắt lên nét mặt căng thẳng của Nam. Tôi khẽ vỗ vai bạn rồi chỉ lên ngọn cây: \"Can you see the moon?\" Bạn có thấy mặt trăng không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Establish quiet evening contrast between electronic screen glare and sky, introducing model sentence one.",
+            "scene_id": "SC01",
+            "title_vi": "Ánh sáng màn hình",
+            "visual_en": "Porch at dusk; the olive-shirt friend sits hunched over a glowing tablet screen, while the blue-shirt stickman taps his shoulder and points up above the tiled roofline."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Nam ngước nhìn lên khoảng trời đêm tĩnh mịch giữa hai mái ngói. Nét mặt bạn dãn ra khi thấy quả cầu tròn vành vạnh: \"The moon is bright.\" Mặt trăng sáng. Nam khẽ đặt chiếc máy tính bảng sang một bên.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Shift friend's attention to the night sky and present model sentence two.",
+            "scene_id": "SC02",
+            "title_vi": "Vòm trời tĩnh mịch",
+            "visual_en": "The olive-shirt friend tilts his head up to see a clear luminous round moon between dark rooftop silhouettes, placing the turned-off tablet face down on the wooden floor."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Gió đêm thổi qua rặng chuối mát rượi sau lưng nhà. Hai đứa cùng ngồi im lặng ngắm vệt sáng bạc loang trên sân gạch, không ai còn muốn nhắc đến đống bài tập dở dang.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deepen the peaceful mood and show stress melting away in quiet companionship.",
+            "scene_id": "SC03",
+            "title_vi": "Gió đêm qua thềm",
+            "visual_en": "Wide shot of the two stick figures sitting side by side on the low veranda step, their feet resting on the courtyard pavement touched by soft silver moonlight."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Nam vẫn say sưa ngắm vòm trời đêm cao vút. Bạn nói giúp tôi câu mặt trăng sáng bằng tiếng Anh để cùng chia sẻ khoảnh khắc này nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt learner to say model sentence two to share the observation with the friend.",
+            "scene_id": "SC04",
+            "stem": "The ___ is bright.",
+            "title_vi": "Cùng ngắm trời đêm",
+            "visual_en": "Close view of the olive-shirt friend looking upward with a relaxed expression, as the blue-shirt stickman turns to him warmly."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"The moon is bright.\" Mặt trăng sáng. Nam tựa lưng vào cột hiên gỗ, mỉm cười nhẹ nhõm. Ánh trăng dịu dàng phủ khắp mảnh sân con.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide the spoken target model and settle into a tranquil, grounded ending.",
+            "scene_id": "SC05",
+            "title_vi": "Hiên nhà sáng bạc",
+            "visual_en": "The two stick figures lean comfortably against the wooden porch pillar, the gentle round moon glowing high above in the deep navy night sky."
+          }
+        ],
+        "title": "Ánh trăng ngoài hiên"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Hà",
+            "outfit_en": "Plain pink short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-star-script-352",
+        "learner_outcome_vi": "Người học nhận biết từ star chỉ ngôi sao trên trời và dùng được câu thông báo nhìn thấy ngôi sao.",
+        "opening_function_vi": "Mở đầu bằng nỗi buồn nhỏ mất chiếc kẹp tóc lúc trời tối để hướng mắt lên ngắm sao trời.",
+        "plot_vi": "Cô em gái buồn khóc vì đánh rơi chiếc kẹp tóc ngoài bãi cỏ; một chấm sao đêm đầu tiên trên vòm trời đã an ủi và dẫn lối tìm lại đồ vật.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bãi cỏ sẫm màu trong bóng tối. Hà rơm rớm nước mắt vì chiếc kẹp tóc rơi mất trong bụi cây. Tôi ngồi xuống cạnh em, khẽ chỉ tay lên vòm trời xa: \"Look at that star.\" Hãy nhìn ngôi sao kia.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Hook viewer with a relatable child distress and introduce the first model sentence pointing to a star.",
+            "scene_id": "SC01",
+            "title_vi": "Nước mắt trên bãi cỏ",
+            "visual_en": "Dusk in an open backyard grassy lawn; the smaller pink-shirt girl sits sniffles beside a dark bush, while the blue-shirt stickman crouches beside her pointing up at a pinpoint light in the dusk sky."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hà ngước mắt nhìn chấm sáng lấp lánh vừa hiện ra sau rặng tre. Em chớp chớp mắt rồi khẽ thì thầm: \"I see a star.\" Em thấy một ngôi sao. Hà đưa tay lau vệt nước mắt còn đọng trên má.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Demonstrate the core meaning of star in the sky and introduce model sentence two.",
+            "scene_id": "SC02",
+            "title_vi": "Chấm sáng đầu tiên",
+            "visual_en": "Close-up of the pink-shirt girl looking upward with glistening eyes, wiping a tear away with the back of her stick hand as a single star shines above the bamboo tips."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi bật chiếc đèn pin nhỏ quét chậm rãi quanh lối đi lát sỏi. Hà không còn hờn dỗi, lon ton đi theo sau soi giúp tôi từng gốc cỏ ven bờ rào.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Turn grief into gentle teamwork and systematic searching.",
+            "scene_id": "SC03",
+            "title_vi": "Ánh đèn pin nhỏ",
+            "visual_en": "The blue-shirt stickman shines a round cone of yellow flashlight beam onto gravel edge grass, while the little sister in pink walks closely behind pointing helpfully."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hà vui vẻ chỉ lên bầu trời đầy chấm sáng lung linh phía trên đầu. Bạn nói giúp tôi câu tôi thấy một ngôi sao bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to practice model sentence two with star.",
+            "scene_id": "SC04",
+            "stem": "I see a ___.",
+            "title_vi": "Nhìn lên bầu trời",
+            "visual_en": "The pink-shirt girl hops forward with excitement, pointing one hand up toward the brightening constellation overhead."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"I see a star.\" Tôi thấy một ngôi sao. Dưới ánh sáng lấp lánh của bầu trời đêm, chiếc kẹp tóc màu bạc bất ngờ ánh lên giữa khe cỏ. Hà reo khẽ, nắm chặt lấy tay tôi.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver target model answer and reward the search with a tactile happy find.",
+            "scene_id": "SC05",
+            "title_vi": "Ánh kim trong cỏ",
+            "visual_en": "A small silver hairclip glints inside a tuft of grass under the flashlight and starlight; the little sister picks it up with joy and clasps the blue-shirt stickman's hand."
+          }
+        ],
+        "title": "Ngôi sao trên vòm trời"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Minimalist stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single plain pale-blue short-sleeve t-shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimalist ink stick figure with a round white head outlined in dark navy, solid black oval eyes, and simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "An",
+            "outfit_en": "Plain violet short-sleeve shirt."
+          }
+        ],
+        "job": "vocab-sky-script-353",
+        "learner_outcome_vi": "Người học nhận biết từ sky mang nghĩa bầu trời và vận dụng được câu miêu tả bầu trời xanh.",
+        "opening_function_vi": "Mở đầu bằng tai nạn nhỏ làm loang màu trên trang giấy vẽ để khơi dậy hành động nhìn lên bầu trời.",
+        "plot_vi": "Một bạn học sinh muốn vứt bỏ bức tranh dở vì lỡ tay làm nhòe nước; việc ngắm nhìn bầu trời xanh bên ngoài đã mở ra cách sửa đổi tranh đầy sáng tạo.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Góc giấy vẽ bị lem vệt nước. An buông bút cọ, vẻ mặt nản lòng muốn vò nát bức tranh dở. Tôi vội giữ tay bạn lại, đẩy nhẹ cánh cửa sổ gỗ ra rồi bảo: \"Look at the sky.\" Hãy nhìn bầu trời.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Present the frustration of a ruined watercolor sheet and introduce the first imperative model sentence.",
+            "scene_id": "SC01",
+            "title_vi": "Vệt nước loang",
+            "visual_en": "Art desk beside an open window; the violet-shirt friend slumps in his chair about to crumple a watercolor paper with an accidental blue stain, while the blue-shirt stickman halts his hand and points outside."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "An ngẩng đầu nhìn ra khoảng không khoáng đạt phía trên rặng phi lao. Tôi cầm cây cọ chấm vào khay màu nước rồi nói khẽ: \"The sky is blue.\" Bầu trời màu xanh. Vệt nước loang có thể vẽ thành đám mây trôi.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Direct vision to real nature and present model sentence two describing the sky.",
+            "scene_id": "SC02",
+            "title_vi": "Màu xanh ngoài cửa",
+            "visual_en": "Through the framed wooden window, a bright clear blue expanse opens above green pine crowns; the blue-shirt stickman dips a brush into a water cup and gestures at the paper stain."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "An cầm lại chiếc cọ lông, cẩn thận tán nhẹ vệt nước loang thành hình dải mây bồng bềnh. Sự bực bội tan biến, hai đứa cặm cụi pha thêm sắc lam nhạt cho nền tranh.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Depict creative physical transformation of an accident into artistic intention.",
+            "scene_id": "SC03",
+            "title_vi": "Nét cọ bồng bềnh",
+            "visual_en": "Close-up on the paper; the friend's stick hand uses a wet brush to blend the blue puddle edges into soft feathered white and azure cloud shapes."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "An muốn tô nốt phần trên cùng của bức vẽ theo đúng khung cảnh ngoài cửa sổ. Bạn nói giúp tôi câu bầu trời màu xanh bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to speak model sentence two to describe the finished backdrop.",
+            "scene_id": "SC04",
+            "stem": "The ___ is blue.",
+            "title_vi": "Tô nốt mảng trời",
+            "visual_en": "The friend holds the loaded brush poised above the painting, glancing between the real window sky and the blue-shirt stickman for agreement."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"The sky is blue.\" Bầu trời màu xanh. Bức tranh phong cảnh hoàn thành với mảng trời êm dịu nâng đỡ những mái ngói rêu phong. An mỉm cười, nghiêng đầu ngắm lại tác phẩm.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver the target answer sentence and conclude with satisfaction in overcoming creative frustration.",
+            "scene_id": "SC05",
+            "title_vi": "Bức tranh hoàn thành",
+            "visual_en": "Both stick figures step back to view the completed landscape painting propped against the desk easel, showcasing an airy blue sky and drifting clouds."
+          }
+        ],
+        "title": "Khoảng trời xanh trên giấy"
+      }
+    ]
+  },
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "episodes": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    },
+    "required": [
+      "episodes"
+    ]
+  },
+  "usage": {
+    "input_tokens": 72856,
+    "output_tokens": 38412,
+    "thinking_tokens": 15741,
+    "cache_read_tokens": 38303,
+    "total_tokens": 111268
+  }
+}

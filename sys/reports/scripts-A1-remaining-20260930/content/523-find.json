@@ -1,0 +1,486 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "55cfdf12b10d32ab45d7058f185b321d42958ea7edf31ad017eb96847b0d93c5",
+  "topic": "Học từ vựng tiếng Anh FIND (động từ: tìm thấy) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FIND",
+    "Làm rõ nghĩa lõi \"tìm thấy\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FIND, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FIND, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chìa khóa đang ở dưới tờ giấy — Nhịp 1",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "action": "Mascot searches bag while key is partly hidden under paper on table, friend nearby.",
+      "setting": "Bàn ra cửa, chìa khóa và giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Túi đã mở ba ngăn, chìa khóa lại nằm ngay trên bàn! Find nghĩa là tìm thấy. \"The thing becomes visible to you.\" Trong câu chuyện, bạn chưa nhìn thấy chìa khóa vì tờ giấy đang phủ lên nó.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "find",
+          "meaning": "tìm thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot searches bag while key is partly hidden under paper on table, friend nearby. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot searches bag while key is partly hidden under paper on table, friend nearby.",
+          "reason": "Introduce a concrete need and the selected sense.",
+          "visible_text": [
+            {
+              "text": "find",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce a concrete need and the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Túi đã mở ba ngăn, chìa khóa lại nằm ngay trên bàn! Find nghĩa là tìm thấy. \"The thing becomes visible to you.\" Trong câu chuyện, bạn chưa nhìn thấy chìa khóa vì tờ giấy đang phủ lên nó.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chìa khóa đang ở dưới tờ giấy — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Friend indicates paper covering key as mascot stops searching bag.",
+      "setting": "Bàn ra cửa, chìa khóa và giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"I can't find my key.\" Tôi không tìm thấy chìa khóa. \"I do not know where it is yet.\" Người bạn nhìn bàn, gợi ý kiểm dưới tờ giấy trước khi bạn lục thêm một ngăn nữa.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "find",
+          "meaning": "tìm thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend indicates paper covering key as mascot stops searching bag. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend indicates paper covering key as mascot stops searching bag.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "I can't find my key.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I can't find my key.\" Tôi không tìm thấy chìa khóa. \"I do not know where it is yet.\" Người bạn nhìn bàn, gợi ý kiểm dưới tờ giấy trước khi bạn lục thêm một ngăn nữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chìa khóa đang ở dưới tờ giấy — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Key hidden under paper => Paper lifted and same key visible in mascot's hand.",
+      "setting": "Bàn ra cửa, chìa khóa và giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn reo: \"I found my key.\" Tôi tìm thấy chìa khóa rồi. \"There it is.\" Found là dạng kể việc đã qua của find; bạn nhấc giấy và nhận ra chiếc chìa khóa của mình.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "find",
+          "meaning": "tìm thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Key hidden under paper Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Key hidden under paper",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Paper lifted and same key visible in mascot's hand. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve base camera, background, identities, clothing and all unchanged props; only the specified state and permitted teaching text may change.",
+          "change": "Paper lifted and same key visible in mascot's hand.",
+          "reason": "Show the explicitly described before/after state with the same camera and identities.",
+          "visible_text": [
+            {
+              "text": "I found my key.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn reo: \"I found my key.\" Tôi tìm thấy chìa khóa rồi. \"There it is.\" Found là dạng kể việc đã qua của find; bạn nhấc giấy và nhận ra chiếc chìa khóa của mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Show the explicitly described before/after state with the same camera and identities.",
+          "anchor": {
+            "vi": {
+              "quote": "I found my key.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chìa khóa đang ở dưới tờ giấy — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold found key and full model sentence.",
+      "setting": "Bàn ra cửa, chìa khóa và giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn đóng vai người vừa tìm thấy khóa. \"Tell your friend the result.\" Nói như lúc món cần tìm đã hiện ra trước mắt: \"I found my key.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "find",
+          "meaning": "tìm thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold found key and full model sentence. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold found key and full model sentence.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "I found my key.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đóng vai người vừa tìm thấy khóa. \"Tell your friend the result.\" Nói như lúc món cần tìm đã hiện ra trước mắt: \"I found my key.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chìa khóa đang ở dưới tờ giấy — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Mascot places recovered key into designated bag pocket and closes bag.",
+      "setting": "Bàn ra cửa, chìa khóa và giấy.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"I found my key.\" Tôi tìm thấy chìa khóa rồi. \"The bag can close now.\" Bạn cất chìa khóa vào chỗ đã chọn, đóng túi và chuẩn bị ra cửa.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "find",
+          "meaning": "tìm thấy"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot places recovered key into designated bag pocket and closes bag. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot places recovered key into designated bag pocket and closes bag.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "I found my key.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I found my key.\" Tôi tìm thấy chìa khóa rồi. \"The bag can close now.\" Bạn cất chìa khóa vào chỗ đã chọn, đóng túi và chuẩn bị ra cửa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Túi đã mở ba ngăn, chìa khóa lại nằm ngay trên bàn! Find nghĩa là tìm thấy. \"The thing becomes visible to you.\" Trong câu chuyện, bạn chưa nhìn thấy chìa khóa vì tờ giấy đang phủ lên nó."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Túi đã mở ba ngăn, chìa khóa lại nằm ngay trên bàn! Find nghĩa là tìm thấy. \"The thing becomes visible to you.\" Trong câu chuyện, bạn chưa nhìn thấy chìa khóa vì tờ giấy đang phủ lên nó."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I can't find my key.\" Tôi không tìm thấy chìa khóa. \"I do not know where it is yet.\" Người bạn nhìn bàn, gợi ý kiểm dưới tờ giấy trước khi bạn lục thêm một ngăn nữa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I can't find my key.\" Tôi không tìm thấy chìa khóa. \"I do not know where it is yet.\" Người bạn nhìn bàn, gợi ý kiểm dưới tờ giấy trước khi bạn lục thêm một ngăn nữa."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn reo: \"I found my key.\" Tôi tìm thấy chìa khóa rồi. \"There it is.\" Found là dạng kể việc đã qua của find; bạn nhấc giấy và nhận ra chiếc chìa khóa của mình."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn đóng vai người vừa tìm thấy khóa. \"Tell your friend the result.\" Nói như lúc món cần tìm đã hiện ra trước mắt: \"I found my key.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I found my key.\" Tôi tìm thấy chìa khóa rồi. \"The bag can close now.\" Bạn cất chìa khóa vào chỗ đã chọn, đóng túi và chuẩn bị ra cửa."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce a concrete need and the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Chưa thấy khóa → nói không tìm thấy → lật giấy → thấy.. Next event: Friend indicates paper covering key as mascot stops searching bag."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Chưa thấy khóa → nói không tìm thấy → lật giấy → thấy.. Next event: Key hidden under paper => Paper lifted and same key visible in mascot's hand."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Chưa thấy khóa → nói không tìm thấy → lật giấy → thấy.. Next event: Hold found key and full model sentence."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chưa thấy khóa → nói không tìm thấy → lật giấy → thấy.. Next event: Mascot places recovered key into designated bag pocket and closes bag."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chưa thấy khóa → nói không tìm thấy → lật giấy → thấy.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

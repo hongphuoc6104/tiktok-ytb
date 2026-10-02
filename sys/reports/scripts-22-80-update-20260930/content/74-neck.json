@@ -1,0 +1,558 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "2670a5152c4e7e206a238e5df7ea5e399758d864876284e17a26be39ce390014",
+  "topic": "Học từ vựng tiếng Anh neck — cổ qua câu chuyện “Khăn quàng quanh cổ”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới neck; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “cổ” của neck; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng neck chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng neck, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người minh họa phụ",
+      "appearance": "Adult human teaching figure, simple flat 2D illustration, short black hair, small clearly visible nose and ears, two ordinary eyes; one torso and two arms, no realistic muscles. Hands can be shown in separate flat teaching diagrams with clearly separated digits.",
+      "outfit": "Plain yellow short-sleeve top and dark simple trousers."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chiếc khăn cần ở đâu?",
+      "purpose": "Introduce neck through a loose scarf's position.",
+      "action": "Mascot offers a loose scarf to human friend who lets it rest over one shoulder.",
+      "setting": "Mascot and human teaching figure with visible neck, loose scarf held away from face.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Chiếc khăn được đặt hờ lên vai, nhưng người bạn muốn quàng quanh cổ. Neck là cổ, phần nối đầu với thân người. Nhìn người bạn đang chỉnh khăn, bạn thấy vị trí ấy rõ hơn chỉ nghe một lời giải thích.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "neck",
+          "meaning": "cổ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot offers a loose scarf to human friend who lets it rest over one shoulder. Mascot and human teaching figure with visible neck, loose scarf held away from face. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot offers a loose scarf to human friend who lets it rest over one shoulder.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "neck",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot offers a loose scarf to human friend who lets it rest over one shoulder. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Mascot and human teaching figure with visible neck, loose scarf held away from face. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot offers a loose scarf to human friend who lets it rest over one shoulder. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "neck",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Chiếc khăn được đặt hờ lên vai,",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhìn người bạn đang chỉnh khăn, bạn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of neck and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chỉ bộ phận trên hình",
+      "purpose": "Model the noun with a neutral identification sentence.",
+      "action": "Mascot points to neck on simple human teaching diagram, no muscle detail.",
+      "setting": "Mascot and human teaching figure with visible neck, loose scarf held away from face.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"This is my neck.\" Đây là cổ tôi. My neck là cổ của mình. Chỉ nhẹ vào phần nằm dưới đầu và trên vai là đủ để nối câu tiếng Anh với bộ phận cụ thể.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "neck",
+          "meaning": "cổ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to neck on simple human teaching diagram, no muscle detail. Mascot and human teaching figure with visible neck, loose scarf held away from face. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to neck on simple human teaching diagram, no muscle detail.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"This is my neck.\" Đây",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of neck and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Khăn đã ở đúng vị trí",
+      "purpose": "Use a second sentence to locate the prop.",
+      "action": "Human friend wears scarf very loosely around neck with clear breathing space, mascot beside them.",
+      "setting": "Mascot and human teaching figure with visible neck, loose scarf held away from face.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Khi quàng xong, người bạn nói: \"The scarf is around my neck.\" Chiếc khăn ở quanh cổ tôi. Around my neck nói vị trí của khăn. Hôm nay mình dùng neck chỉ bộ phận cơ thể, không nói phần cổ của đồ vật.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "neck",
+          "meaning": "cổ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Human friend wears scarf very loosely around neck with clear breathing space, mascot beside them. Mascot and human teaching figure with visible neck, loose scarf held away from face. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Human friend wears scarf very loosely around neck with clear breathing space, mascot beside them.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Human friend wears scarf very loosely around neck with clear breathing space, mascot beside them. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Mascot and human teaching figure with visible neck, loose scarf held away from face. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Human friend wears scarf very loosely around neck with clear breathing space, mascot beside them. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "The scarf is around my neck.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Khi quàng xong, người bạn nói: \"The",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The scarf is around my neck.\" Chiếc",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of neck and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Gọi đúng phần dưới đầu",
+      "purpose": "Prompt retrieval of the intended body part.",
+      "action": "Mascot presents diagram highlighting neck only, incomplete identification sentence above.",
+      "setting": "Mascot and human teaching figure with visible neck, loose scarf held away from face.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Phần được chỉ nằm giữa đầu và thân. Hãy gọi tên cổ mình bằng câu \"This is my...\" rồi nói trọn câu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "neck",
+          "meaning": "cổ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot presents diagram highlighting neck only, incomplete identification sentence above. Mascot and human teaching figure with visible neck, loose scarf held away from face. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot presents diagram highlighting neck only, incomplete identification sentence above.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot presents diagram highlighting neck only, incomplete identification sentence above. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Mascot and human teaching figure with visible neck, loose scarf held away from face. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot presents diagram highlighting neck only, incomplete identification sentence above. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "This is my...",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Phần được chỉ nằm giữa đầu và",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my...\" rồi nói trọn câu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of neck and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Khăn đã nằm vừa chỗ",
+      "purpose": "Confirm and close the scarf-placement setup.",
+      "action": "Human friend and mascot stand by doorway, scarf loosely settled at neck, shoulders unobstructed.",
+      "setting": "Mascot and human teaching figure with visible neck, loose scarf held away from face.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"This is my neck.\" Từ còn thiếu là neck. Khăn đã được quàng lỏng và đúng vị trí, người bạn chuẩn bị ra ngoài. Bạn nhớ neck bằng chỗ chiếc khăn nằm, còn câu tiếng Anh thì đã nói được đầy đủ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "neck",
+          "meaning": "cổ"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Human friend and mascot stand by doorway, scarf loosely settled at neck, shoulders unobstructed. Mascot and human teaching figure with visible neck, loose scarf held away from face. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Human friend and mascot stand by doorway, scarf loosely settled at neck, shoulders unobstructed.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my neck.\" Từ còn thiếu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of neck and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce neck through a loose scarf's position.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model the noun with a neutral identification sentence."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the noun with a neutral identification sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Use a second sentence to locate the prop."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a second sentence to locate the prop.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt retrieval of the intended body part."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt retrieval of the intended body part.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close the scarf-placement setup."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the scarf-placement setup.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chiếc khăn được đặt hờ lên vai, nhưng người bạn muốn quàng quanh cổ. Neck là cổ, phần nối đầu với thân người. Nhìn người bạn đang chỉnh khăn, bạn thấy vị trí ấy rõ hơn chỉ nghe một lời giải thích."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chiếc khăn được đặt hờ lên vai, nhưng người bạn muốn quàng quanh cổ. Neck là cổ, phần nối đầu với thân người. Nhìn người bạn đang chỉnh khăn, bạn thấy vị trí ấy rõ hơn chỉ nghe một lời giải thích."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my neck.\" Đây là cổ tôi. My neck là cổ của mình. Chỉ nhẹ vào phần nằm dưới đầu và trên vai là đủ để nối câu tiếng Anh với bộ phận cụ thể."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my neck.\" Đây là cổ tôi. My neck là cổ của mình. Chỉ nhẹ vào phần nằm dưới đầu và trên vai là đủ để nối câu tiếng Anh với bộ phận cụ thể."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Khi quàng xong, người bạn nói: \"The scarf is around my neck.\" Chiếc khăn ở quanh cổ tôi. Around my neck nói vị trí của khăn. Hôm nay mình dùng neck chỉ bộ phận cơ thể, không nói phần cổ của đồ vật."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Phần được chỉ nằm giữa đầu và thân. Hãy gọi tên cổ mình bằng câu \"This is my...\" rồi nói trọn câu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is my neck.\" Từ còn thiếu là neck. Khăn đã được quàng lỏng và đúng vị trí, người bạn chuẩn bị ra ngoài. Bạn nhớ neck bằng chỗ chiếc khăn nằm, còn câu tiếng Anh thì đã nói được đầy đủ."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13943",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

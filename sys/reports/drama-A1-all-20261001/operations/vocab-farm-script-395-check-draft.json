@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 36,
+            "seconds": 10.9,
+            "min": 8.18,
+            "max": 13.62
+          },
+          {
+            "scene_id": "SC02",
+            "units": 34,
+            "seconds": 10.49,
+            "min": 7.87,
+            "max": 13.12
+          },
+          {
+            "scene_id": "SC03",
+            "units": 32,
+            "seconds": 9.79,
+            "min": 7.34,
+            "max": 12.24
+          },
+          {
+            "scene_id": "SC04",
+            "units": 33,
+            "seconds": 13.92,
+            "min": 10.44,
+            "max": 17.4
+          },
+          {
+            "scene_id": "SC05",
+            "units": 30,
+            "seconds": 9.23,
+            "min": 6.93,
+            "max": 11.54
+          }
+        ],
+        "min": 40.76,
+        "max": 67.92,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "21088",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi dẫn bạn Huy về thăm trang trại của chú; Huy ngại lấm lem giày mới nhưng dần hòa mình vào cảnh luống rau mộc mạc. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,633 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "89f828d2a79d9700c4ec6e92a411473f7e93b0532050a029bdba0bb48d2b8b71",
+  "topic": "Học từ vựng tiếng Anh AT (giới từ: tại) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 80,
+    "max_seconds": 110
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ AT",
+    "Làm rõ nghĩa lõi \"tại\" (giới từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng AT, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại AT, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Hẹn ở cửa thư viện, đừng tìm trong từng giá sách — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Mascot waits at library entrance, companion visible deeper among shelves, spatial mismatch is clear.",
+      "setting": "Cửa thư viện.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Mình ở cửa, bạn tìm giữa giá sách! At trong bài dùng để nêu một điểm, một nơi có mặt. \"Name the meeting point in this situation.\" Hai người cần gặp tại cửa thư viện, không cần mô tả bên trong từng ngăn sách.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "at",
+          "meaning": "tại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot waits at library entrance, companion visible deeper among shelves, spatial mismatch is clear. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot waits at library entrance, companion visible deeper among shelves, spatial mismatch is clear.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "at",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Mình ở cửa, bạn tìm giữa giá sách! At trong bài dùng để nêu một điểm, một nơi có mặt. \"Name the meeting point in this situation.\" Hai người cần gặp tại cửa thư viện, không cần mô tả bên trong từng ngăn sách.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Hẹn ở cửa thư viện, đừng tìm trong từng giá sách — Nhịp 2",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "action": "Companion turns from shelves toward doorway where mascot stands.",
+      "setting": "Cửa thư viện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn báo: \"I'm at the library entrance.\" Tôi đang ở cửa vào thư viện. \"The entrance is our meeting point.\" Người bạn nghe địa điểm cụ thể, quay ra phía cửa đã hẹn thay vì tiếp tục tìm trong các dãy sách.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "at",
+          "meaning": "tại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Companion turns from shelves toward doorway where mascot stands. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion turns from shelves toward doorway where mascot stands.",
+          "reason": "Use the first model at the point where the speaker needs it.",
+          "visible_text": [
+            {
+              "text": "I'm at the library entrance.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first model at the point where the speaker needs it.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn báo: \"I'm at the library entrance.\" Tôi đang ở cửa vào thư viện. \"The entrance is our meeting point.\" Người bạn nghe địa điểm cụ thể, quay ra phía cửa đã hẹn thay vì tiếp tục tìm trong các dãy sách.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hẹn ở cửa thư viện, đừng tìm trong từng giá sách — Nhịp 3",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "action": "Show library entrance clearly as shared meeting point, interior remains visible beyond.",
+      "setting": "Cửa thư viện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "At trong mẫu nhắm vào điểm được gọi tên. \"The place helps your friend find you.\" Ta không dạy rằng at và in luôn loại trừ nhau cho mọi địa điểm; chỉ chọn cách diễn đạt phù hợp cuộc hẹn ở cửa trong câu chuyện này.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "at",
+          "meaning": "tại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Show library entrance clearly as shared meeting point, interior remains visible beyond. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show library entrance clearly as shared meeting point, interior remains visible beyond.",
+          "reason": "Show the condition or contrast that makes this usage matter.",
+          "visible_text": [
+            {
+              "text": "at",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Show the condition or contrast that makes this usage matter.",
+          "anchor": {
+            "vi": {
+              "quote": "At trong mẫu nhắm vào điểm được gọi tên. \"The place helps your friend find you.\" Ta không dạy rằng at và in luôn loại trừ nhau cho mọi địa điểm; chỉ chọn cách diễn đạt phù hợp cuộc hẹn ở cửa trong câu chuyện này.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Hẹn ở cửa thư viện, đừng tìm trong từng giá sách — Nhịp 4",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "action": "Mascot and companion recognize same established entrance and approach each other.",
+      "setting": "Cửa thư viện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nhắc lời hẹn: \"Let's meet at the library entrance.\" Cùng gặp ở cửa vào thư viện nhé. \"Both of us know which entrance we mean.\" Hai người dựa vào cùng một cửa đã nhắc, nên không rẽ sang điểm khác giữa lúc tìm nhau.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "at",
+          "meaning": "tại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot and companion recognize same established entrance and approach each other. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion recognize same established entrance and approach each other.",
+          "reason": "Use the second model to advance or compare within the same story.",
+          "visible_text": [
+            {
+              "text": "Let's meet at the library entrance.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to advance or compare within the same story.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhắc lời hẹn: \"Let's meet at the library entrance.\" Cùng gặp ở cửa vào thư viện nhé. \"Both of us know which entrance we mean.\" Hai người dựa vào cùng một cửa đã nhắc, nên không rẽ sang điểm khác giữa lúc tìm nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Hẹn ở cửa thư viện, đừng tìm trong từng giá sách — Nhịp 5",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "action": "Both point to same doorway before meeting, no second ambiguous entrance introduced.",
+      "setting": "Cửa thư viện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Một địa điểm chung càng rõ thì lời hẹn càng dễ thực hiện. \"Use the place both people can identify.\" Trong bài, library entrance là nơi đã thống nhất; at không tự giải quyết nếu hai người đang hình dung hai cửa khác nhau.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "at",
+          "meaning": "tại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Both point to same doorway before meeting, no second ambiguous entrance introduced. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both point to same doorway before meeting, no second ambiguous entrance introduced.",
+          "reason": "Clarify a common trap through this example without expanding to another meaning.",
+          "visible_text": [
+            {
+              "text": "at",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "Một địa điểm chung càng rõ thì lời hẹn càng dễ thực hiện. \"Use the place both people can identify.\" Trong bài, library entrance là nơi đã thống nhất; at không tự giải quyết nếu hai người đang hình dung hai cửa khác nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Hẹn ở cửa thư viện, đừng tìm trong từng giá sách — Lượt thực hành",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "action": "Hold shared entrance and complete invitation.",
+      "setting": "Cửa thư viện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hẹn người bạn gặp ở cửa thư viện. \"Keep the meeting point after at.\" Hãy nói: \"Let's meet at the library entrance.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "at",
+          "meaning": "tại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Hold shared entrance and complete invitation. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold shared entrance and complete invitation.",
+          "reason": "Invite a supported learner response; hold before the feedback.",
+          "visible_text": [
+            {
+              "text": "Let's meet at the library entrance.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Invite a supported learner response; hold before the feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hẹn người bạn gặp ở cửa thư viện. \"Keep the meeting point after at.\" Hãy nói: \"Let's meet at the library entrance.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC07",
+      "title": "Hẹn ở cửa thư viện, đừng tìm trong từng giá sách — Phản hồi và kết quả",
+      "purpose": "Provide the response and complete the opening promise.",
+      "action": "Both meet at same library doorway and enter together toward shelves.",
+      "setting": "Cửa thư viện.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Let's meet at the library entrance.\" Cùng gặp ở cửa vào thư viện nhé. \"Now the two people are at the same point.\" Người bạn ra đúng cửa, hai người gặp được nhau rồi mới cùng vào tìm sách. At trong mẫu giúp nói điểm hẹn trước khi hoạt động bên trong bắt đầu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "at",
+          "meaning": "tại"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC07_I1",
+          "description": "Both meet at same library doorway and enter together toward shelves. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both meet at same library doorway and enter together toward shelves.",
+          "reason": "Provide the response and complete the opening promise.",
+          "visible_text": [
+            {
+              "text": "Let's meet at the library entrance.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC07_B1",
+          "image_id": "SC07_I1",
+          "purpose": "Provide the response and complete the opening promise.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Let's meet at the library entrance.\" Cùng gặp ở cửa vào thư viện nhé. \"Now the two people are at the same point.\" Người bạn ra đúng cửa, hai người gặp được nhau rồi mới cùng vào tìm sách. At trong mẫu giúp nói điểm hẹn trước khi hoạt động bên trong bắt đầu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mình ở cửa, bạn tìm giữa giá sách! At trong bài dùng để nêu một điểm, một nơi có mặt. \"Name the meeting point in this situation.\" Hai người cần gặp tại cửa thư viện, không cần mô tả bên trong từng ngăn sách."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mình ở cửa, bạn tìm giữa giá sách! At trong bài dùng để nêu một điểm, một nơi có mặt. \"Name the meeting point in this situation.\" Hai người cần gặp tại cửa thư viện, không cần mô tả bên trong từng ngăn sách."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn báo: \"I'm at the library entrance.\" Tôi đang ở cửa vào thư viện. \"The entrance is our meeting point.\" Người bạn nghe địa điểm cụ thể, quay ra phía cửa đã hẹn thay vì tiếp tục tìm trong các dãy sách."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn báo: \"I'm at the library entrance.\" Tôi đang ở cửa vào thư viện. \"The entrance is our meeting point.\" Người bạn nghe địa điểm cụ thể, quay ra phía cửa đã hẹn thay vì tiếp tục tìm trong các dãy sách."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "At trong mẫu nhắm vào điểm được gọi tên. \"The place helps your friend find you.\" Ta không dạy rằng at và in luôn loại trừ nhau cho mọi địa điểm; chỉ chọn cách diễn đạt phù hợp cuộc hẹn ở cửa trong câu chuyện này."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn nhắc lời hẹn: \"Let's meet at the library entrance.\" Cùng gặp ở cửa vào thư viện nhé. \"Both of us know which entrance we mean.\" Hai người dựa vào cùng một cửa đã nhắc, nên không rẽ sang điểm khác giữa lúc tìm nhau."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC05",
+      "quote": "Một địa điểm chung càng rõ thì lời hẹn càng dễ thực hiện. \"Use the place both people can identify.\" Trong bài, library entrance là nơi đã thống nhất; at không tự giải quyết nếu hai người đang hình dung hai cửa khác nhau."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "Bạn muốn hẹn người bạn gặp ở cửa thư viện. \"Keep the meeting point after at.\" Hãy nói: \"Let's meet at the library entrance.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC07",
+      "quote": "\"Let's meet at the library entrance.\" Cùng gặp ở cửa vào thư viện nhé. \"Now the two people are at the same point.\" Người bạn ra đúng cửa, hai người gặp được nhau rồi mới cùng vào tìm sách. At trong mẫu giúp nói điểm hẹn trước khi hoạt động bên trong bắt đầu."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Mascot waits at library entrance, companion visible deeper among shelves, spatial mismatch is clear. Continue with the existing connected model: Companion turns from shelves toward doorway where mascot stands."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first model at the point where the speaker needs it.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Bạn chờ tại cửa → gọi vị trí → người kia tìm đúng điểm → gặp nhau.. Next event: Show library entrance clearly as shared meeting point, interior remains visible beyond."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Show the condition or contrast that makes this usage matter.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Bạn chờ tại cửa → gọi vị trí → người kia tìm đúng điểm → gặp nhau.. Next event: Mascot and companion recognize same established entrance and approach each other."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to advance or compare within the same story.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Bạn chờ tại cửa → gọi vị trí → người kia tìm đúng điểm → gặp nhau.. Next event: Both point to same doorway before meeting, no second ambiguous entrance introduced."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Clarify a common trap through this example without expanding to another meaning.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Bạn chờ tại cửa → gọi vị trí → người kia tìm đúng điểm → gặp nhau.. Next event: Hold shared entrance and complete invitation."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Invite a supported learner response; hold before the feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bạn chờ tại cửa → gọi vị trí → người kia tìm đúng điểm → gặp nhau.. Next event: Both meet at same library doorway and enter together toward shelves."
+    },
+    {
+      "scene_id": "SC07",
+      "purpose": "Provide the response and complete the opening promise.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Bạn chờ tại cửa → gọi vị trí → người kia tìm đúng điểm → gặp nhau.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "18797",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Mình ở cửa, bạn tìm giữa giá sách!”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ],
+  "open_questions": []
+}

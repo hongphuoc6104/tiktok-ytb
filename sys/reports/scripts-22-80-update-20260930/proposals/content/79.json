@@ -1,0 +1,532 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "4aeb575de2fb1adc95b26d37a9e1aff4717811563fcab8b52532ff4768fdd90d",
+  "topic": "Học từ vựng tiếng Anh leg — chân, phần từ hông tới mắt cá qua câu chuyện “Ống quần che phần nào của chân?”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới leg; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “chân, phần từ hông tới mắt cá” của leg; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng leg chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng leg, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Hai chân không vào một ống",
+      "purpose": "Introduce legs through an everyday clothing mishap.",
+      "action": "Mascot sitting safely on chair notices two simple feet aimed toward same trouser leg, no standing imbalance.",
+      "setting": "Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn mặc quần hơi vội, suýt đưa cả hai chân vào cùng một ống. Leg là chân, phần từ hông đến mắt cá. Nhìn chiếc quần hai ống, bạn có một hình ảnh rất dễ nhớ về hai chân riêng biệt. Trên hình riêng, vùng từ hông tới mắt cá được làm nổi. Phần bàn chân nằm dưới mắt cá dùng màu khác. Hai vùng giúp phân biệt dù tiếng Việt đôi khi đều gọi là chân.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "leg",
+          "meaning": "chân, phần từ hông tới mắt cá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot sitting safely on chair notices two simple feet aimed toward same trouser leg, no standing imbalance. Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sitting safely on chair notices two simple feet aimed toward same trouser leg, no standing imbalance.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "leg",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Use a flat lower-body diagram highlighting hip-to-ankle legs and a muted foot below each ankle. A separate pair of trousers is clearly an object beside the body diagram, not the referent of the noun. Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Use a flat lower-body diagram highlighting hip-to-ankle legs and a muted foot below each ankle. A separate pair of trousers is clearly an object beside the body diagram, not the referent of the noun.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "leg",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn mặc quần hơi vội, suýt đưa",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trên hình riêng, vùng từ hông tới",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of leg and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Đếm hai chân",
+      "purpose": "Model plural legs accurately.",
+      "action": "Mascot stands with two simple legs clearly separated, trousers correctly worn, shirt unchanged.",
+      "setting": "Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"I have two legs.\" Tôi có hai chân. Hai chân thì dùng legs, thêm s. Mình đang nói cả phần chân của nhân vật, không chỉ phần bàn chân nằm thấp nhất sát mặt đất. Mỗi ống quần đi theo một chân, nhưng ống quần là đồ mặc, không phải bộ phận cơ thể. Khi chỉ trên hình người, hãy theo vùng chân thay vì chỉ chiếc quần rời.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "leg",
+          "meaning": "chân, phần từ hông tới mắt cá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot stands with two simple legs clearly separated, trousers correctly worn, shirt unchanged. Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stands with two simple legs clearly separated, trousers correctly worn, shirt unchanged.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Use a flat lower-body diagram highlighting hip-to-ankle legs and a muted foot below each ankle. A separate pair of trousers is clearly an object beside the body diagram, not the referent of the noun. Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Use a flat lower-body diagram highlighting hip-to-ankle legs and a muted foot below each ankle. A separate pair of trousers is clearly an object beside the body diagram, not the referent of the noun.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "leg",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I have two legs.\" Tôi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Mỗi ống quần đi theo một chân,",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of leg and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một động tác nhẹ",
+      "purpose": "Model singular leg in a safe seated action.",
+      "action": "Mascot sits on chair and gently raises one lower limb a little, other foot rests on floor.",
+      "setting": "Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Trong trò làm theo lời nói, bạn nghe: \"Lift one leg.\" Nhấc một chân lên. One leg là một chân. Nhân vật ngồi trên ghế khi thử, nên có thể làm động tác nhỏ mà vẫn giữ tư thế thoải mái.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "leg",
+          "meaning": "chân, phần từ hông tới mắt cá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot sits on chair and gently raises one lower limb a little, other foot rests on floor. Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sits on chair and gently raises one lower limb a little, other foot rests on floor.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot sits on chair and gently raises one lower limb a little, other foot rests on floor. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot sits on chair and gently raises one lower limb a little, other foot rests on floor. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "Lift one leg.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong trò làm theo lời nói, bạn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Lift one leg.\" Nhấc một chân lên.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of leg and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chọn dạng theo con số",
+      "purpose": "Prompt plural retrieval in the established sentence.",
+      "action": "Mascot points to both legs on separate diagram, incomplete two-leg sentence at top.",
+      "setting": "Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Câu \"I have two...\" cần leg hay legs? Hãy nhìn hai chân riêng biệt trên hình và chọn dạng đúng với số lượng.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "leg",
+          "meaning": "chân, phần từ hông tới mắt cá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot points to both legs on separate diagram, incomplete two-leg sentence at top. Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to both legs on separate diagram, incomplete two-leg sentence at top.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "leg / legs",
+              "placement": "Upper third: two equally emphasized choices; neither marked correct.",
+              "object": "Practice options."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Câu \"I have two...\" cần leg hay",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of leg and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mỗi chân một ống",
+      "purpose": "Confirm and close the dressing mishap.",
+      "action": "Mascot seated beside chair with correctly worn trousers, each leg in its own trouser leg.",
+      "setting": "Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"I have two legs.\" Ở đây dùng legs vì có hai chân. Chiếc quần đã mặc đúng, mỗi chân một ống. Bạn có thể nhớ từ qua chuyện nhỏ ấy mà không cần học một danh sách dài ngay trong cùng video.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "leg",
+          "meaning": "chân, phần từ hông tới mắt cá"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot seated beside chair with correctly worn trousers, each leg in its own trouser leg. Mascot in canonical shirt beside simple trousers and flat lower-body teaching diagram. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot seated beside chair with correctly worn trousers, each leg in its own trouser leg.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I have two legs.\" Ở đây dùng",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of leg and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce legs through an everyday clothing mishap.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model plural legs accurately."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model plural legs accurately.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Model singular leg in a safe seated action."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model singular leg in a safe seated action.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt plural retrieval in the established sentence."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt plural retrieval in the established sentence.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close the dressing mishap."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the dressing mishap.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn mặc quần hơi vội, suýt đưa cả hai chân vào cùng một ống. Leg là chân, phần từ hông đến mắt cá. Nhìn chiếc quần hai ống, bạn có một hình ảnh rất dễ nhớ về hai chân riêng biệt. Trên hình riêng, vùng từ hông tới mắt cá được làm nổi. Phần bàn chân nằm dưới mắt cá dùng màu khác. Hai vùng giúp phân biệt dù tiếng Việt đôi khi đều gọi là chân."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn mặc quần hơi vội, suýt đưa cả hai chân vào cùng một ống. Leg là chân, phần từ hông đến mắt cá. Nhìn chiếc quần hai ống, bạn có một hình ảnh rất dễ nhớ về hai chân riêng biệt. Trên hình riêng, vùng từ hông tới mắt cá được làm nổi. Phần bàn chân nằm dưới mắt cá dùng màu khác. Hai vùng giúp phân biệt dù tiếng Việt đôi khi đều gọi là chân."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I have two legs.\" Tôi có hai chân. Hai chân thì dùng legs, thêm s. Mình đang nói cả phần chân của nhân vật, không chỉ phần bàn chân nằm thấp nhất sát mặt đất. Mỗi ống quần đi theo một chân, nhưng ống quần là đồ mặc, không phải bộ phận cơ thể. Khi chỉ trên hình người, hãy theo vùng chân thay vì chỉ chiếc quần rời."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I have two legs.\" Tôi có hai chân. Hai chân thì dùng legs, thêm s. Mình đang nói cả phần chân của nhân vật, không chỉ phần bàn chân nằm thấp nhất sát mặt đất. Mỗi ống quần đi theo một chân, nhưng ống quần là đồ mặc, không phải bộ phận cơ thể. Khi chỉ trên hình người, hãy theo vùng chân thay vì chỉ chiếc quần rời."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Trong trò làm theo lời nói, bạn nghe: \"Lift one leg.\" Nhấc một chân lên. One leg là một chân. Nhân vật ngồi trên ghế khi thử, nên có thể làm động tác nhỏ mà vẫn giữ tư thế thoải mái."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Câu \"I have two...\" cần leg hay legs? Hãy nhìn hai chân riêng biệt trên hình và chọn dạng đúng với số lượng."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I have two legs.\" Ở đây dùng legs vì có hai chân. Chiếc quần đã mặc đúng, mỗi chân một ống. Bạn có thể nhớ từ qua chuyện nhỏ ấy mà không cần học một danh sách dài ngay trong cùng video."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

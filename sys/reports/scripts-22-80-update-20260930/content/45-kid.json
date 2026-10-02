@@ -1,0 +1,593 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "7e4440440f636eae12545e0b5d3d6dc2c5d01285167faa46c72d3cdffcc56b42",
+  "topic": "Học từ vựng tiếng Anh kid — trẻ con (thân mật) qua câu chuyện “Người chơi nhỏ mà nhanh”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới kid; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “trẻ con (thân mật)” của kid; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng kid chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng kid, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Đứa trẻ",
+      "appearance": "Young child, clearly smaller than adult mascot, simple round head, minimal limbs.",
+      "outfit": "Plain yellow top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Bóng lăn, ai tới trước?",
+      "purpose": "Create a playful child-centered event.",
+      "action": "Mascot reaches toward a rolling soft ball while a small child runs toward it a step ahead.",
+      "setting": "Park ball game with mascot and small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Quả bóng lăn ra xa, bạn còn đang đứng lên thì người chơi nhỏ đã chạy tới. Kid là cách nói thân mật về trẻ con. Trong cuộc chơi ở công viên này, từ ấy nghe gần gũi và hợp tình huống. Bạn có thể dùng child để gọi đứa trẻ ấy, còn kid là cách nói thân mật. Trong cuộc chơi và trò chuyện thường ngày, cách gọi này không nhất thiết là chê hay trêu.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "kid",
+          "meaning": "trẻ con (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot reaches toward a rolling soft ball while a small child runs toward it a step ahead. Park ball game with mascot and small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot reaches toward a rolling soft ball while a small child runs toward it a step ahead.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "kid",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Show the same declared child running for the ball and then standing still after returning it. Both panels depict a child; speed does not determine the noun. Keep friendly expression, no mocking label. Park ball game with mascot and small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show the same declared child running for the ball and then standing still after returning it. Both panels depict a child; speed does not determine the noun. Keep friendly expression, no mocking label.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "kid",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Quả bóng lăn ra xa, bạn còn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn có thể dùng child để gọi",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of kid and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nhìn hành động để kể",
+      "purpose": "Model kid in a complete sentence.",
+      "action": "Small child runs with soft ball securely held, mascot watches from behind.",
+      "setting": "Park ball game with mascot and small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"The kid is running.\" Đứa trẻ đang chạy. Kid ở đây chỉ một đứa trẻ, còn is running kể việc đang xảy ra. Mình dùng từ này trong lời trò chuyện thường ngày, không phải một danh xưng trang trọng. Đứa trẻ chạy nhanh trong hình, nhưng kid không có nghĩa chạy nhanh. Một đứa trẻ đang ngồi yên vẫn có thể được gọi như vậy trong ngữ cảnh thân mật.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "kid",
+          "meaning": "trẻ con (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Small child runs with soft ball securely held, mascot watches from behind. Park ball game with mascot and small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Small child runs with soft ball securely held, mascot watches from behind.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Show the same declared child running for the ball and then standing still after returning it. Both panels depict a child; speed does not determine the noun. Keep friendly expression, no mocking label. Park ball game with mascot and small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Show the same declared child running for the ball and then standing still after returning it. Both panels depict a child; speed does not determine the noun. Keep friendly expression, no mocking label.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "kid",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"The kid is running.\" Đứa",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Đứa trẻ chạy nhanh trong hình, nhưng",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of kid and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Bóng đã được mang về",
+      "purpose": "Continue the same action with a result.",
+      "action": "Child returns the ball to mascot, both stand in same park clearing.",
+      "setting": "Park ball game with mascot and small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Khi bóng về tới chỗ bạn: \"That kid is fast.\" Đứa trẻ kia nhanh thật. Bạn đang nhận xét người vừa chạy lấy bóng. Hai câu cùng nói một người nên không cần đổi sang một câu chuyện khác để học từ.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "kid",
+          "meaning": "trẻ con (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Child returns the ball to mascot, both stand in same park clearing. Park ball game with mascot and small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Child returns the ball to mascot, both stand in same park clearing.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Child returns the ball to mascot, both stand in same park clearing. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Park ball game with mascot and small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Child returns the ball to mascot, both stand in same park clearing. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "That kid is fast.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Khi bóng về tới chỗ bạn: \"That",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"That kid is fast.\" Đứa trẻ kia",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of kid and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Kể lại cảnh vừa thấy",
+      "purpose": "Prompt a short descriptive sentence.",
+      "action": "Child runs toward ball in a clean practice framing; mascot gestures toward the action.",
+      "setting": "Park ball game with mascot and small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Nhìn người chơi nhỏ đang chạy. Hãy dùng cách gọi trẻ con thân mật để hoàn thành \"The... is running.\" rồi nói cả câu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "kid",
+          "meaning": "trẻ con (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Child runs toward ball in a clean practice framing; mascot gestures toward the action. Park ball game with mascot and small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Child runs toward ball in a clean practice framing; mascot gestures toward the action.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Child runs toward ball in a clean practice framing; mascot gestures toward the action. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Park ball game with mascot and small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Child runs toward ball in a clean practice framing; mascot gestures toward the action. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "The... is running.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Nhìn người chơi nhỏ đang chạy. Hãy",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The... is running.\" rồi nói cả câu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of kid and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Lần này bạn đi lấy bóng",
+      "purpose": "Confirm and deliver a small role reversal.",
+      "action": "Mascot jogs after ball while child waits near starting spot, playful open posture.",
+      "setting": "Park ball game with mascot and small child in yellow top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"The kid is running.\" Từ cần điền là kid. Quả bóng lại lăn đi, nhưng lần này đến lượt bạn chạy lấy. Người chơi nhỏ được đứng chờ và xem người lớn có nhanh như lời nhận xét lúc nãy không.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "kid",
+          "meaning": "trẻ con (thân mật)"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot jogs after ball while child waits near starting spot, playful open posture. Park ball game with mascot and small child in yellow top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot jogs after ball while child waits near starting spot, playful open posture.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"The kid is running.\" Từ cần điền",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of kid and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Create a playful child-centered event.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model kid in a complete sentence."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model kid in a complete sentence.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Continue the same action with a result."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Continue the same action with a result.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt a short descriptive sentence."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt a short descriptive sentence.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and deliver a small role reversal."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and deliver a small role reversal.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Quả bóng lăn ra xa, bạn còn đang đứng lên thì người chơi nhỏ đã chạy tới. Kid là cách nói thân mật về trẻ con. Trong cuộc chơi ở công viên này, từ ấy nghe gần gũi và hợp tình huống. Bạn có thể dùng child để gọi đứa trẻ ấy, còn kid là cách nói thân mật. Trong cuộc chơi và trò chuyện thường ngày, cách gọi này không nhất thiết là chê hay trêu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Quả bóng lăn ra xa, bạn còn đang đứng lên thì người chơi nhỏ đã chạy tới. Kid là cách nói thân mật về trẻ con. Trong cuộc chơi ở công viên này, từ ấy nghe gần gũi và hợp tình huống. Bạn có thể dùng child để gọi đứa trẻ ấy, còn kid là cách nói thân mật. Trong cuộc chơi và trò chuyện thường ngày, cách gọi này không nhất thiết là chê hay trêu."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"The kid is running.\" Đứa trẻ đang chạy. Kid ở đây chỉ một đứa trẻ, còn is running kể việc đang xảy ra. Mình dùng từ này trong lời trò chuyện thường ngày, không phải một danh xưng trang trọng. Đứa trẻ chạy nhanh trong hình, nhưng kid không có nghĩa chạy nhanh. Một đứa trẻ đang ngồi yên vẫn có thể được gọi như vậy trong ngữ cảnh thân mật."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"The kid is running.\" Đứa trẻ đang chạy. Kid ở đây chỉ một đứa trẻ, còn is running kể việc đang xảy ra. Mình dùng từ này trong lời trò chuyện thường ngày, không phải một danh xưng trang trọng. Đứa trẻ chạy nhanh trong hình, nhưng kid không có nghĩa chạy nhanh. Một đứa trẻ đang ngồi yên vẫn có thể được gọi như vậy trong ngữ cảnh thân mật."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Khi bóng về tới chỗ bạn: \"That kid is fast.\" Đứa trẻ kia nhanh thật. Bạn đang nhận xét người vừa chạy lấy bóng. Hai câu cùng nói một người nên không cần đổi sang một câu chuyện khác để học từ."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Nhìn người chơi nhỏ đang chạy. Hãy dùng cách gọi trẻ con thân mật để hoàn thành \"The... is running.\" rồi nói cả câu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"The kid is running.\" Từ cần điền là kid. Quả bóng lại lăn đi, nhưng lần này đến lượt bạn chạy lấy. Người chơi nhỏ được đứng chờ và xem người lớn có nhanh như lời nhận xét lúc nãy không."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13740",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

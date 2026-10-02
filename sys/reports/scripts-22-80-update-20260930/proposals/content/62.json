@@ -1,0 +1,545 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "aa063b203a0ae74f1be306caa6c7305c59283cb5c14d5ab7371b486e2230be55",
+  "topic": "Học từ vựng tiếng Anh love — yêu thương một người qua câu chuyện “Con yêu mẹ, rồi giúp mẹ một việc nhỏ”",
+  "duration": {
+    "min_seconds": 55,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới love; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “yêu thương một người” của love; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng love chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng love, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Mẹ",
+      "appearance": "Adult woman, simple flat illustration, gentle expression, minimal limbs.",
+      "outfit": "Plain peach short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Không cần đợi quà thật lớn",
+      "purpose": "Establish love as affection for a person, not a hobby sense.",
+      "action": "Mascot leaves a small handmade card and glass of water beside mother resting in a chair.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn muốn nói thương mẹ nhưng chưa có món quà lớn nào. Love nghĩa là yêu, yêu thương. Trong câu chuyện này, bạn bắt đầu bằng một tấm thiệp nhỏ và một câu nói, thay vì chờ đến ngày có thứ thật đắt tiền.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu thương một người"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot leaves a small handmade card and glass of water beside mother resting in a chair. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot leaves a small handmade card and glass of water beside mother resting in a chair.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "love",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Mascot leaves a small handmade card and glass of water beside mother resting in a chair. Focus more closely on the semantic referent already shown; keep the action consistent with this line. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot leaves a small handmade card and glass of water beside mother resting in a chair. Focus more closely on the semantic referent already shown; keep the action consistent with this line.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "love",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói thương mẹ nhưng chưa",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trong câu chuyện này, bạn bắt đầu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of love and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nói trực tiếp với người thân",
+      "purpose": "Model a simple affectionate utterance.",
+      "action": "Mascot hands the card to mother, both look at each other.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"I love you.\" Con yêu mẹ. You là người bạn đang nói trực tiếp cùng; ở đây là mẹ. Câu tiếng Anh giữ nguyên, còn cách xưng hô tiếng Việt thay theo quan hệ của hai người.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu thương một người"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot hands the card to mother, both look at each other. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot hands the card to mother, both look at each other.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I love you.\" Con yêu",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of love and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Kể tình cảm với người khác",
+      "purpose": "Use a second model with an explicit object.",
+      "action": "Mascot talks to an off-frame friend while mother reads the card nearby.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Nếu kể với một người bạn, bạn nói: \"I love my mother.\" Tôi yêu mẹ. Lần này người được yêu thương được gọi rõ là my mother. Mình giữ nghĩa yêu thương một người, không chuyển sang nói sở thích trong bài này.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu thương một người"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot talks to an off-frame friend while mother reads the card nearby. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot talks to an off-frame friend while mother reads the card nearby.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC03_I2",
+          "description": "Mascot talks to an off-frame friend while mother reads the card nearby. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC03_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot talks to an off-frame friend while mother reads the card nearby. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "I love my mother.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Nếu kể với một người bạn, bạn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC03_B2",
+          "image_id": "SC03_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I love my mother.\" Tôi yêu mẹ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of love and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Gửi một câu trong thiệp",
+      "purpose": "Prompt the verb from a direct-address model.",
+      "action": "Mascot holds a small card with incomplete sentence, mother sits calmly nearby.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn muốn gửi một câu yêu thương cho người thân. Hãy hoàn thành \"I... you.\" rồi nói như đang trao tấm thiệp nhỏ ấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu thương một người"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot holds a small card with incomplete sentence, mother sits calmly nearby. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds a small card with incomplete sentence, mother sits calmly nearby.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot holds a small card with incomplete sentence, mother sits calmly nearby. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot holds a small card with incomplete sentence, mother sits calmly nearby. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "I... you.",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn gửi một câu yêu thương",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I... you.\" rồi nói như đang trao",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of love and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Tấm thiệp đã đủ lời",
+      "purpose": "Confirm and close the modest-gift premise.",
+      "action": "Mother holds card against table while mascot sits beside her, glass of water within reach.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"I love you.\" Từ còn thiếu là love. Tấm thiệp chưa cần dài, nhưng điều muốn nói đã rõ. Trong câu chuyện hôm nay, một lời yêu thương đi cùng việc nhỏ là mang nước tới cho mẹ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu thương một người"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mother holds card against table while mascot sits beside her, glass of water within reach. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mother holds card against table while mascot sits beside her, glass of water within reach.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I love you.\" Từ còn thiếu là",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of love and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish love as affection for a person, not a hobby sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model a simple affectionate utterance."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a simple affectionate utterance.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Use a second model with an explicit object."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a second model with an explicit object.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt the verb from a direct-address model."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the verb from a direct-address model.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and close the modest-gift premise."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the modest-gift premise.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn muốn nói thương mẹ nhưng chưa có món quà lớn nào. Love nghĩa là yêu, yêu thương. Trong câu chuyện này, bạn bắt đầu bằng một tấm thiệp nhỏ và một câu nói, thay vì chờ đến ngày có thứ thật đắt tiền."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn muốn nói thương mẹ nhưng chưa có món quà lớn nào. Love nghĩa là yêu, yêu thương. Trong câu chuyện này, bạn bắt đầu bằng một tấm thiệp nhỏ và một câu nói, thay vì chờ đến ngày có thứ thật đắt tiền."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I love you.\" Con yêu mẹ. You là người bạn đang nói trực tiếp cùng; ở đây là mẹ. Câu tiếng Anh giữ nguyên, còn cách xưng hô tiếng Việt thay theo quan hệ của hai người."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I love you.\" Con yêu mẹ. You là người bạn đang nói trực tiếp cùng; ở đây là mẹ. Câu tiếng Anh giữ nguyên, còn cách xưng hô tiếng Việt thay theo quan hệ của hai người."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Nếu kể với một người bạn, bạn nói: \"I love my mother.\" Tôi yêu mẹ. Lần này người được yêu thương được gọi rõ là my mother. Mình giữ nghĩa yêu thương một người, không chuyển sang nói sở thích trong bài này."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn gửi một câu yêu thương cho người thân. Hãy hoàn thành \"I... you.\" rồi nói như đang trao tấm thiệp nhỏ ấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I love you.\" Từ còn thiếu là love. Tấm thiệp chưa cần dài, nhưng điều muốn nói đã rõ. Trong câu chuyện hôm nay, một lời yêu thương đi cùng việc nhỏ là mang nước tới cho mẹ."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

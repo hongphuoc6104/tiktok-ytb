@@ -1,0 +1,70 @@
+{
+  "paused": false,
+  "reason_user_quote": "tạm thời dừng lại.",
+  "counts": {
+    "updated_r2": 305,
+    "kept_r1_checked": 9,
+    "not_finished": 17
+  },
+  "editorial_review_complete": 331,
+  "authored_changes": 321,
+  "kept_openings": 10,
+  "last_success": 755,
+  "resume_checkpoints": [
+    {
+      "number": 592,
+      "job": "vocab-different-script-592",
+      "state": "Own reject and draft exist; pending content submission",
+      "action_on_resume": "Confirm own feedback/draft/r1 hash; check-draft and run content through CLI, without another reject."
+    },
+    {
+      "number": 756,
+      "job": "vocab-enough-script-756",
+      "state": "Own draft/check-draft failed INTERNAL_LABEL in SC01_I1",
+      "error": "Mã nội bộ CH04 appears in image description; character metadata is valid, prose must not contain internal codes.",
+      "action_on_resume": "Remove internal ID from unsubmitted visual prose only; retain four adults/three chairs, narration, character_ids, full practice and feedback. Recheck through CLI before run."
+    }
+  ],
+  "not_visited": [
+    757,
+    758,
+    759,
+    760,
+    761,
+    762,
+    763,
+    764,
+    765,
+    766,
+    767,
+    768,
+    769,
+    770,
+    771
+  ],
+  "created_media": false,
+  "created_video": false,
+  "user_content_approval_recorded": false,
+  "running_task_helpers": false,
+  "r1_preserved_all_331": true,
+  "resumed_user_quote": "tiếp tục: duyệt kịch bản lại, và viết lại nếu chưa đạt: kiểm tra mở đầu bài 3s đầu template mở đầu tránh trùng lặp tạo cảm giác đã xem, ưu tiên đưa phần hay lên đầu và giữ chân người xem nhất có thể. cho người dùng xem giống như một phim drama, phim buồn ngắn nhìu tập mà không nhận ra, trong lúc xem có học tiếng anh, thử nghiệm tạo ra 1 video tôi xem thử.",
+  "opening_review_completed": true,
+  "completed_counts": {
+    "updated_r2": 321,
+    "kept_r1_checked": 10,
+    "not_finished": 0
+  },
+  "current_revision_counts": {
+    "r2": 320,
+    "r1": 10,
+    "r3_drama_trial": 1
+  },
+  "drama_trial_job": "vocab-wait-for-script-738",
+  "drama_trial_revision": 3,
+  "awaiting_gate": "video r1 for drama trial",
+  "drama_content_approved": true,
+  "drama_media_created": true,
+  "drama_video_created": true,
+  "drama_media_approved": true,
+  "drama_video_revision": 1
+}

@@ -1,0 +1,549 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "1306b9f7533dbb6c0acabea7c6957ce8eb2da042c30efc5e14f3d190a7d80d17",
+  "topic": "Học từ vựng tiếng Anh AND (liên từ: và) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ AND",
+    "Làm rõ nghĩa lõi \"và\" (liên từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng AND, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại AND, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Giấy và bút cùng cần cho việc này — Nhịp 1",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "action": "Mascot and companion prepare blank note paper while pen remains in nearby shared tray.",
+      "setting": "Bàn ghi cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Giấy có rồi, thiếu bút thì bạn vẫn chưa ghi được điểm hẹn! And nghĩa là và. \"We include both parts in this example.\" Bạn chuẩn bị ghi chú hư cấu với người bạn, muốn nói rõ những món sẽ được dùng cùng nhau.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "and",
+          "meaning": "và"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and companion prepare blank note paper while pen remains in nearby shared tray. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion prepare blank note paper while pen remains in nearby shared tray.",
+          "reason": "Make the selected sense useful in a concrete situation.",
+          "visible_text": [
+            {
+              "text": "and",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the selected sense useful in a concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Giấy có rồi, thiếu bút thì bạn vẫn chưa ghi được điểm hẹn! And nghĩa là và. \"We include both parts in this example.\" Bạn chuẩn bị ghi chú hư cấu với người bạn, muốn nói rõ những món sẽ được dùng cùng nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Giấy và bút cùng cần cho việc này — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Companion brings pen to paper prepared for fictional note task.",
+      "setting": "Bàn ghi cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nói: \"I need paper and a pen.\" Tôi cần giấy và một cây bút. \"Both are part of this writing task.\" Người bạn mang bút tới chỗ giấy, chưa bỏ một phần chỉ vì phần kia đã có trên bàn.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "and",
+          "meaning": "và"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Companion brings pen to paper prepared for fictional note task. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Companion brings pen to paper prepared for fictional note task.",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": [
+            {
+              "text": "I need paper and a pen.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I need paper and a pen.\" Tôi cần giấy và một cây bút. \"Both are part of this writing task.\" Người bạn mang bút tới chỗ giấy, chưa bỏ một phần chỉ vì phần kia đã có trên bàn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Giấy và bút cùng cần cho việc này — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both indicate distinct paper and pen roles in shared writing setup.",
+      "setting": "Bàn ghi cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "And nối hai phần được nhắc, không làm chúng thành cùng một món. \"Paper is one thing, a pen is another.\" Hai người xem mỗi vật sẽ góp việc gì trong câu chuyện, để câu nói không biến thành lựa chọn chỉ lấy một trong hai.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "and",
+          "meaning": "và"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both indicate distinct paper and pen roles in shared writing setup. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both indicate distinct paper and pen roles in shared writing setup.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "and",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "And nối hai phần được nhắc, không làm chúng thành cùng một món. \"Paper is one thing, a pen is another.\" Hai người xem mỗi vật sẽ góp việc gì trong câu chuyện, để câu nói không biến thành lựa chọn chỉ lấy một trong hai.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giấy và bút cùng cần cho việc này — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Mascot and companion divide illustration and writing for one fictional card.",
+      "setting": "Bàn ghi cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn rủ: \"You and I can make the card.\" Bạn và tôi có thể làm tấm thẻ. \"Both people join this activity.\" Người bạn nhận phần hình, bạn nhận phần viết để sản phẩm có đóng góp của cả hai.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "and",
+          "meaning": "và"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot and companion divide illustration and writing for one fictional card. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion divide illustration and writing for one fictional card.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "You and I can make the card.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn rủ: \"You and I can make the card.\" Bạn và tôi có thể làm tấm thẻ. \"Both people join this activity.\" Người bạn nhận phần hình, bạn nhận phần viết để sản phẩm có đóng góp của cả hai.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Giấy và bút cùng cần cho việc này — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold separate paper and pen with full learner sentence.",
+      "setting": "Bàn ghi cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn nói cần cả giấy và bút trong vai. \"Include the two items.\" Hãy nói: \"I need paper and a pen.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "and",
+          "meaning": "và"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold separate paper and pen with full learner sentence. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold separate paper and pen with full learner sentence.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Include the two items.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "I need paper and a pen.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói cần cả giấy và bút trong vai. \"Include the two items.\" Hãy nói: \"I need paper and a pen.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Giấy và bút cùng cần cho việc này — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both use paper and pen to make jointly planned fictional card.",
+      "setting": "Bàn ghi cuộc hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"I need paper and a pen.\" Tôi cần giấy và bút. \"The two things are now at the same table.\" Hai người đã có đủ phần để làm thẻ hư cấu, bắt đầu công việc đã cùng nhận.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "and",
+          "meaning": "và"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both use paper and pen to make jointly planned fictional card. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both use paper and pen to make jointly planned fictional card.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "I need paper and a pen.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I need paper and a pen.\" Tôi cần giấy và bút. \"The two things are now at the same table.\" Hai người đã có đủ phần để làm thẻ hư cấu, bắt đầu công việc đã cùng nhận.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Giấy có rồi, thiếu bút thì bạn vẫn chưa ghi được điểm hẹn! And nghĩa là và. \"We include both parts in this example.\" Bạn chuẩn bị ghi chú hư cấu với người bạn, muốn nói rõ những món sẽ được dùng cùng nhau."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Giấy có rồi, thiếu bút thì bạn vẫn chưa ghi được điểm hẹn! And nghĩa là và. \"We include both parts in this example.\" Bạn chuẩn bị ghi chú hư cấu với người bạn, muốn nói rõ những món sẽ được dùng cùng nhau."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I need paper and a pen.\" Tôi cần giấy và một cây bút. \"Both are part of this writing task.\" Người bạn mang bút tới chỗ giấy, chưa bỏ một phần chỉ vì phần kia đã có trên bàn."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I need paper and a pen.\" Tôi cần giấy và một cây bút. \"Both are part of this writing task.\" Người bạn mang bút tới chỗ giấy, chưa bỏ một phần chỉ vì phần kia đã có trên bàn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "And nối hai phần được nhắc, không làm chúng thành cùng một món. \"Paper is one thing, a pen is another.\" Hai người xem mỗi vật sẽ góp việc gì trong câu chuyện, để câu nói không biến thành lựa chọn chỉ lấy một trong hai."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn rủ: \"You and I can make the card.\" Bạn và tôi có thể làm tấm thẻ. \"Both people join this activity.\" Người bạn nhận phần hình, bạn nhận phần viết để sản phẩm có đóng góp của cả hai."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn nói cần cả giấy và bút trong vai. \"Include the two items.\" Hãy nói: \"I need paper and a pen.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"I need paper and a pen.\" Tôi cần giấy và bút. \"The two things are now at the same table.\" Hai người đã có đủ phần để làm thẻ hư cấu, bắt đầu công việc đã cùng nhận."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Có giấy → cần cả bút → gọi hai món → cùng làm.. Next event: Companion brings pen to paper prepared for fictional note task."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Có giấy → cần cả bút → gọi hai món → cùng làm.. Next event: Both indicate distinct paper and pen roles in shared writing setup."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Có giấy → cần cả bút → gọi hai món → cùng làm.. Next event: Mascot and companion divide illustration and writing for one fictional card."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Có giấy → cần cả bút → gọi hai món → cùng làm.. Next event: Hold separate paper and pen with full learner sentence."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có giấy → cần cả bút → gọi hai món → cùng làm.. Next event: Both use paper and pen to make jointly planned fictional card."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có giấy → cần cả bút → gọi hai món → cùng làm.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

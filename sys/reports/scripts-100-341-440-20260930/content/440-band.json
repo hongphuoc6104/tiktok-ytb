@@ -1,0 +1,512 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 1,
+  "brief_hash": "4d3f95376bba5ed39ab4e2bc71c062042b2147165bff3550e51c37249ea87e8c",
+  "topic": "Học từ vựng tiếng Anh BAND (danh từ: ban nhạc) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ BAND",
+    "Làm rõ nghĩa lõi \"ban nhạc\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng BAND, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại BAND, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows and mouth changes allowed. No muscles, doubled torso or anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt; keep it throughout, show other clothes as props or on supporting adults."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành trong tình huống",
+      "appearance": "Adult audience companion. Minimal flat ink style. Maintain age, gender, clothing and identity across all scenes; use mustard top and only explicitly needed accessory. Distinct from canonical mascot.",
+      "outfit": "Plain mustard-yellow top, with only scenario-required accessories."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ khi tình huống yêu cầu",
+      "appearance": "Adult band singer on stage. Minimal flat ink style; consistent role, adult identity and lavender clothing with only scenario-required outerwear. Distinct from mascot and companion.",
+      "outfit": "Plain lavender top; scenario-required accessories only."
+    },
+    {
+      "id": "CH04",
+      "name": "Người chơi ghi-ta",
+      "appearance": "Adult band guitarist wearing muted sage top, playing a realistic guitar on stage. Minimal flat ink style; maintain same identity throughout.",
+      "outfit": "Plain single top in specified color; no logos."
+    },
+    {
+      "id": "CH05",
+      "name": "Người chơi trống",
+      "appearance": "Adult band drummer wearing muted coral top, seated at realistic drum kit on stage. Minimal flat ink style; maintain same identity throughout.",
+      "outfit": "Plain single top in specified color; no logos."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Một người chơi chưa thành cả nhóm — Mở tình huống",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "action": "Mascot and friend watch small fictional band with guitarist drummer and singer on low stage.",
+      "setting": "Buổi diễn nhỏ có nhóm nhạc và khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Tiếng đàn, tiếng trống và giọng hát đang đến từ cả nhóm! Band là ban nhạc. Bạn ghé một buổi diễn nhỏ cùng người bạn, thấy nhiều người phối hợp trên sân khấu; không phải một người tự làm mọi phần.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH04",
+        "CH05"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "band",
+          "meaning": "ban nhạc"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and friend watch small fictional band with guitarist drummer and singer on low stage. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03",
+            "CH04",
+            "CH05"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and friend watch small fictional band with guitarist drummer and singer on low stage.",
+          "reason": "Show an immediate concrete need and establish the selected sense.",
+          "visible_text": [
+            {
+              "text": "band",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Show an immediate concrete need and establish the selected sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Tiếng đàn, tiếng trống và giọng hát đang đến từ cả nhóm! Band là ban nhạc. Bạn ghé một buổi diễn nhỏ cùng người bạn, thấy nhiều người phối hợp trên sân khấu; không phải một người tự làm mọi phần.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Một người chơi chưa thành cả nhóm — Câu dùng thứ nhất",
+      "purpose": "Use the first English model as an action within the situation.",
+      "action": "Friend checks plain event leaflet while mascot watches full band, no real band name shown.",
+      "setting": "Buổi diễn nhỏ có nhóm nhạc và khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn hỏi: \"What's the name of this band?\" Ban nhạc này tên gì? This band chỉ nhóm đang biểu diễn. Người bạn xem phần giới thiệu của buổi diễn rồi kể lại, không gọi tên riêng người hát thay cho cả nhóm.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH04",
+        "CH05"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "band",
+          "meaning": "ban nhạc"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend checks plain event leaflet while mascot watches full band, no real band name shown. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03",
+            "CH04",
+            "CH05"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend checks plain event leaflet while mascot watches full band, no real band name shown.",
+          "reason": "Use the first English model as an action within the situation.",
+          "visible_text": [
+            {
+              "text": "What's the name of this band?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model as an action within the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"What's the name of this band?\" Ban nhạc này tên gì? This band chỉ nhóm đang biểu diễn. Người bạn xem phần giới thiệu của buổi diễn rồi kể lại, không gọi tên riêng người hát thay cho cả nhóm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một người chơi chưa thành cả nhóm — Diễn biến tiếp theo",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "action": "Band members play together, mascot and friend sit in audience, instruments distinct and realistic.",
+      "setting": "Buổi diễn nhỏ có nhóm nhạc và khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn nhận xét: \"The band is playing now.\" Ban nhạc đang biểu diễn lúc này. Trong mẫu này, band đi với is; bạn nhìn các thành viên cùng bắt đầu một đoạn, rồi ngồi xuống để nghe trọn.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH04",
+        "CH05"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "band",
+          "meaning": "ban nhạc"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Band members play together, mascot and friend sit in audience, instruments distinct and realistic. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03",
+            "CH04",
+            "CH05"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Band members play together, mascot and friend sit in audience, instruments distinct and realistic.",
+          "reason": "Use the second model to clarify the same sense and advance the outcome.",
+          "visible_text": [
+            {
+              "text": "The band is playing now.",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhận xét: \"The band is playing now.\" Ban nhạc đang biểu diễn lúc này. Trong mẫu này, band đi với is; bạn nhìn các thành viên cùng bắt đầu một đoạn, rồi ngồi xuống để nghe trọn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Start promptly with the concrete situation or model sentence; speak naturally to a Vietnamese beginner and leave English intelligible.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Một người chơi chưa thành cả nhóm — Bạn thử nói",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "action": "Full small band visible with question displayed, no member highlighted as answer.",
+      "setting": "Buổi diễn nhỏ có nhóm nhạc và khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "Bạn muốn hỏi tên cả nhóm nhạc đang xem. Nói lại \"What's the name of this band?\" rồi chỉ về cả nhóm, không chỉ riêng ca sĩ đứng giữa.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH03",
+        "CH02",
+        "CH04",
+        "CH05"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "band",
+          "meaning": "ban nhạc"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Full small band visible with question displayed, no member highlighted as answer. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH03",
+            "CH02",
+            "CH04",
+            "CH05"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Full small band visible with question displayed, no member highlighted as answer.",
+          "reason": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "visible_text": [
+            {
+              "text": "What's the name of this band?",
+              "placement": "Upper third; balanced options, no answer highlight; clear of bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi tên cả nhóm nhạc đang xem. Nói lại \"What's the name of this band?\" rồi chỉ về cả nhóm, không chỉ riêng ca sĩ đứng giữa.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the learner, then wait before the answer.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 6
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Một người chơi chưa thành cả nhóm — Đáp án và kết thúc",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "action": "Mascot and friend listen attentively to full band, event leaflet folded on lap.",
+      "setting": "Buổi diễn nhỏ có nhóm nhạc và khán giả.",
+      "camera": "Medium close view with one dominant semantic action. Match the shot to the referent; lock camera and prop placement for based-on changes. Hold steady during learner response.",
+      "narration": "\"What's the name of this band?\" Ban nhạc này tên gì? Bạn đã hỏi đúng về cả nhóm, rồi cất tờ chương trình để nghe tiếp. Nhiều phần âm thanh cùng gặp nhau trong một ban nhạc.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH04",
+        "CH05"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "band",
+          "meaning": "ban nhạc"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and friend listen attentively to full band, event leaflet folded on lap. Attach canonical Character reference for mascot. Maintain one pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and minimal stick limbs. Show only people explicitly needed by this moment. Keep props and clothing continuous. Bottom 22% clear for subtitles, outer 10% safe. Only visible_text may appear as writing; no incidental logos, dates, numerals, ID details or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03",
+            "CH04",
+            "CH05"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and friend listen attentively to full band, event leaflet folded on lap.",
+          "reason": "Give the correct response and resolve the concrete situation.",
+          "visible_text": [
+            {
+              "text": "What's the name of this band?",
+              "placement": "Upper third, readable at phone size; separate from faces, main object and bottom subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give the correct response and resolve the concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "\"What's the name of this band?\" Ban nhạc này tên gì? Bạn đã hỏi đúng về cả nhóm, rồi cất tờ chương trình để nghe tiếp. Nhiều phần âm thanh cùng gặp nhau trong một ban nhạc.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the situation.",
+          "pronunciation_notes": "Preserve standard English spelling and I. Check target word, plurals and language switches by listening to actual WAV at media stage; directions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Tiếng đàn, tiếng trống và giọng hát đang đến từ cả nhóm! Band là ban nhạc. Bạn ghé một buổi diễn nhỏ cùng người bạn, thấy nhiều người phối hợp trên sân khấu; không phải một người tự làm mọi phần."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Tiếng đàn, tiếng trống và giọng hát đang đến từ cả nhóm! Band là ban nhạc. Bạn ghé một buổi diễn nhỏ cùng người bạn, thấy nhiều người phối hợp trên sân khấu; không phải một người tự làm mọi phần."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"What's the name of this band?\" Ban nhạc này tên gì? This band chỉ nhóm đang biểu diễn. Người bạn xem phần giới thiệu của buổi diễn rồi kể lại, không gọi tên riêng người hát thay cho cả nhóm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"What's the name of this band?\" Ban nhạc này tên gì? This band chỉ nhóm đang biểu diễn. Người bạn xem phần giới thiệu của buổi diễn rồi kể lại, không gọi tên riêng người hát thay cho cả nhóm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nhận xét: \"The band is playing now.\" Ban nhạc đang biểu diễn lúc này. Trong mẫu này, band đi với is; bạn nhìn các thành viên cùng bắt đầu một đoạn, rồi ngồi xuống để nghe trọn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn hỏi tên cả nhóm nhạc đang xem. Nói lại \"What's the name of this band?\" rồi chỉ về cả nhóm, không chỉ riêng ca sĩ đứng giữa."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"What's the name of this band?\" Ban nhạc này tên gì? Bạn đã hỏi đúng về cả nhóm, rồi cất tờ chương trình để nghe tiếp. Nhiều phần âm thanh cùng gặp nhau trong một ban nhạc."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Show an immediate concrete need and establish the selected sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Nghe nhạc → nhìn nhiều người → nhận nhóm → chọn nghe.. Next visible event: Friend checks plain event leaflet while mascot watches full band, no real band name shown."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model as an action within the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Nghe nhạc → nhìn nhiều người → nhận nhóm → chọn nghe.. Next visible event: Band members play together, mascot and friend sit in audience, instruments distinct and realistic."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second model to clarify the same sense and advance the outcome.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Nghe nhạc → nhìn nhiều người → nhận nhóm → chọn nghe.. Next visible event: Full small band visible with question displayed, no member highlighted as answer."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite one manageable learner response; withhold the answer until the next scene.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nghe nhạc → nhìn nhiều người → nhận nhóm → chọn nghe.. Next visible event: Mascot and friend listen attentively to full band, event leaflet folded on lap."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give the correct response and resolve the concrete situation.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Nghe nhạc → nhìn nhiều người → nhận nhóm → chọn nghe.. Next visible event: Hold the resolved result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

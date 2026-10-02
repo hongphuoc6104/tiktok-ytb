@@ -1,0 +1,464 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "5bc4018728c8ed9592645daf7f024a3fb34c7473f0266db3a8dd0d24f58f8026",
+  "topic": "Học từ vựng tiếng Anh GRANDMOTHER (danh từ: bà) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ GRANDMOTHER",
+    "Làm rõ nghĩa lõi \"bà\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng GRANDMOTHER, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại GRANDMOTHER, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Small expressive eyebrows and changing mouth curves are allowed. Do not add hair, realistic muscles, detailed fingers, a realistic nose or ears to this mascot.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); simple lower clothing where needed. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Bà",
+      "appearance": "Older adult woman, short gray hair, simple flat illustration, minimal limbs.",
+      "outfit": "Plain peach top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Đo bằng mắt vẫn vừa",
+      "purpose": "Introduce grandmother through a specific shared activity.",
+      "action": "Bà cho bột vào tô theo kinh nghiệm.",
+      "setting": "Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn hỏi cần bao nhiêu bột, bà bảo một ít rồi làm ngay. Grandmother nghĩa là bà, có thể là bà nội hoặc bà ngoại. Trong căn bếp này, bạn muốn học làm bánh nên cứ phải hỏi bà từng bước.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandmother",
+          "meaning": "bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Grandmother pours a small amount of flour into bowl while mascot holds a blank recipe card. Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Grandmother pours a small amount of flour into bowl while mascot holds a blank recipe card.",
+          "reason": "Introduce grandmother through a specific shared activity.",
+          "visible_text": [
+            {
+              "text": "grandmother",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Introduce grandmother through a specific shared activity.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi cần bao nhiêu bột, bà bảo một ít rồi làm ngay. Grandmother nghĩa là bà, có thể là bà nội hoặc bà ngoại. Trong căn bếp này, bạn muốn học làm bánh nên cứ phải hỏi bà từng bước.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Giới thiệu người hướng dẫn",
+      "purpose": "Model a relationship sentence without inferring maternal side.",
+      "action": "Giới thiệu bà đang hướng dẫn.",
+      "setting": "Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn nói: \"This is my grandmother.\" Đây là bà tôi. Grandmother tự nó chưa nói rõ bà nội hay bà ngoại. Trong câu chuyện, điều mình cần giới thiệu trước là quan hệ bà và cháu giữa hai người.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandmother",
+          "meaning": "bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot gestures toward grandmother beside mixing bowl. Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot gestures toward grandmother beside mixing bowl.",
+          "reason": "Model a relationship sentence without inferring maternal side.",
+          "visible_text": [
+            {
+              "text": "This is my grandmother.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model a relationship sentence without inferring maternal side.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"This is my grandmother.\" Đây là bà tôi. Grandmother tự nó chưa nói rõ bà nội hay bà ngoại. Trong câu chuyện, điều mình cần giới thiệu trước là quan hệ bà và cháu giữa hai người.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nói việc làm cùng bà",
+      "purpose": "Use a second sentence attached to the baking goal.",
+      "action": "Cháu khuấy bột, bà chỉ cách.",
+      "setting": "Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn kể: \"I cook with my grandmother.\" Tôi nấu ăn cùng bà. With my grandmother cho biết người làm cùng bạn. Hôm nay bà chỉ dẫn, còn bạn cầm thìa thử làm để lần sau có thể nhớ bằng trải nghiệm của mình.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandmother",
+          "meaning": "bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot stirs batter while grandmother points gently toward bowl. Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot stirs batter while grandmother points gently toward bowl.",
+          "reason": "Use a second sentence attached to the baking goal.",
+          "visible_text": [
+            {
+              "text": "I cook with my grandmother.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use a second sentence attached to the baking goal.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể: \"I cook with my grandmother.\" Tôi nấu ăn cùng bà. With my grandmother cho biết người làm cùng bạn. Hôm nay bà chỉ dẫn, còn bạn cầm thìa thử làm để lần sau có thể nhớ bằng trải nghiệm của mình.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giới thiệu ở cửa bếp",
+      "purpose": "Prompt retrieval of the kinship noun.",
+      "action": "Giới thiệu người đứng cạnh trong bếp.",
+      "setting": "Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Người bạn vừa bước vào bếp. Hãy giới thiệu đây là bà tôi, bằng câu \"This is my...\" Không cần phân biệt bên nội hay ngoại.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandmother",
+          "meaning": "bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot beside grandmother holds mixing spoon upright away from faces; incomplete introduction above. Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot beside grandmother holds mixing spoon upright away from faces; incomplete introduction above.",
+          "reason": "Prompt retrieval of the kinship noun.",
+          "visible_text": [
+            {
+              "text": "This is my...",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt retrieval of the kinship noun.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bạn vừa bước vào bếp. Hãy giới thiệu đây là bà tôi, bằng câu \"This is my...\" Không cần phân biệt bên nội hay ngoại.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the concrete retrieval question; leave the full quiet hold before the next scene gives feedback.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mẻ bánh có người học việc",
+      "purpose": "Confirm and resolve the recipe-learning goal.",
+      "action": "Cùng đặt bánh đã làm lên bàn.",
+      "setting": "Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "\"This is my grandmother.\" Từ còn thiếu là grandmother. Mẻ bánh đã ra bàn, bạn còn nhớ mình vừa làm bước nào. Công thức chưa viết hết, nhưng lần này ít nhất một ít bột đã có hình dung rõ hơn.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "grandmother",
+          "meaning": "bà"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and grandmother place a finished small cake on table, blank recipe card now beside bowl. Kitchen with mascot and grandmother in peach top, mixing bowl and handwritten-looking blank recipe card. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and grandmother place a finished small cake on table, blank recipe card now beside bowl.",
+          "reason": "Confirm and resolve the recipe-learning goal.",
+          "visible_text": [
+            {
+              "text": "This is my grandmother.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm and resolve the recipe-learning goal.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my grandmother.\" Từ còn thiếu là grandmother. Mẻ bánh đã ra bàn, bạn còn nhớ mình vừa làm bước nào. Công thức chưa viết hết, nhưng lần này ít nhất một ít bột đã có hình dung rõ hơn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer, then resolve the opening situation warmly.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce grandmother through a specific shared activity.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Use the established situation (Đo bằng mắt vẫn vừa) to motivate the next learning action: Model a relationship sentence without inferring maternal side."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a relationship sentence without inferring maternal side.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the established situation (Giới thiệu người hướng dẫn) to motivate the next learning action: Use a second sentence attached to the baking goal."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a second sentence attached to the baking goal.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Use the established situation (Nói việc làm cùng bà) to motivate the next learning action: Prompt retrieval of the kinship noun."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt retrieval of the kinship noun.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Use the established situation (Giới thiệu ở cửa bếp) to motivate the next learning action: Confirm and resolve the recipe-learning goal."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the recipe-learning goal.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After explicit learner feedback, resolve the concrete situation introduced in the opening."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn hỏi cần bao nhiêu bột, bà bảo một ít rồi làm ngay. Grandmother nghĩa là bà, có thể là bà nội hoặc bà ngoại. Trong căn bếp này, bạn muốn học làm bánh nên cứ phải hỏi bà từng bước."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn hỏi cần bao nhiêu bột, bà bảo một ít rồi làm ngay. Grandmother nghĩa là bà, có thể là bà nội hoặc bà ngoại. Trong căn bếp này, bạn muốn học làm bánh nên cứ phải hỏi bà từng bước."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my grandmother.\" Đây là bà tôi. Grandmother tự nó chưa nói rõ bà nội hay bà ngoại. Trong câu chuyện, điều mình cần giới thiệu trước là quan hệ bà và cháu giữa hai người."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my grandmother.\" Đây là bà tôi. Grandmother tự nó chưa nói rõ bà nội hay bà ngoại. Trong câu chuyện, điều mình cần giới thiệu trước là quan hệ bà và cháu giữa hai người."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn kể: \"I cook with my grandmother.\" Tôi nấu ăn cùng bà. With my grandmother cho biết người làm cùng bạn. Hôm nay bà chỉ dẫn, còn bạn cầm thìa thử làm để lần sau có thể nhớ bằng trải nghiệm của mình."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Người bạn vừa bước vào bếp. Hãy giới thiệu đây là bà tôi, bằng câu \"This is my...\" Không cần phân biệt bên nội hay ngoại."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is my grandmother.\" Từ còn thiếu là grandmother. Mẻ bánh đã ra bàn, bạn còn nhớ mình vừa làm bước nào. Công thức chưa viết hết, nhưng lần này ít nhất một ít bột đã có hình dung rõ hơn."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

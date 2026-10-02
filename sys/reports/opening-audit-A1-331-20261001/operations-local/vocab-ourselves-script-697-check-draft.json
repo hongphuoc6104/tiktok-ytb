@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 44,
+            "seconds": 13.42,
+            "min": 10.07,
+            "max": 16.78
+          },
+          {
+            "scene_id": "SC02",
+            "units": 43,
+            "seconds": 12.99,
+            "min": 9.75,
+            "max": 16.24
+          },
+          {
+            "scene_id": "SC03",
+            "units": 44,
+            "seconds": 13.27,
+            "min": 9.95,
+            "max": 16.59
+          },
+          {
+            "scene_id": "SC04",
+            "units": 41,
+            "seconds": 12.44,
+            "min": 9.33,
+            "max": 15.55
+          },
+          {
+            "scene_id": "SC05",
+            "units": 21,
+            "seconds": 10.58,
+            "min": 7.94,
+            "max": 13.23
+          },
+          {
+            "scene_id": "SC06",
+            "units": 37,
+            "seconds": 11.33,
+            "min": 8.5,
+            "max": 14.16
+          }
+        ],
+        "min": 55.54,
+        "max": 92.55,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "18479",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Không có mẫu sẵn, hai đứa tự vẽ!”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ]
+}

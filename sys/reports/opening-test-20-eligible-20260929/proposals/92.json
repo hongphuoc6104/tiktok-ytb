@@ -1,0 +1,513 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "706b25e727afd3a276519ba230a81cdffef23b964e64afeb2a01311201ddba18",
+  "topic": "Học từ vựng tiếng Anh FREE (tính từ: miễn phí) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35.0,
+    "max_seconds": 75.0
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FREE",
+    "Làm rõ nghĩa lõi \"miễn phí\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FREE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FREE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot with round white head, dark navy outline, two solid black oval eyes, exactly one torso and two minimal stick arms and legs. Small eyebrows, sweat and mouth-expression changes allowed under 80/20 tolerance. No realistic muscle anatomy or large anime eye whites.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); no doubled shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn hoặc người phục vụ",
+      "appearance": "Adult supporting character in a plain mustard-yellow top, minimal flat illustration, solid simple eyes; no celebrity likeness. Follow the role explicitly stated in narration: friend, host, shop assistant or waiter.",
+      "outfit": "Plain mustard-yellow top."
+    },
+    {
+      "id": "CH03",
+      "name": "Người phụ thứ hai khi cảnh yêu cầu",
+      "appearance": "Supporting adult, minimal flat illustration, distinct from main mascot and first companion; appears only where explicitly required. Older relative for the family call or visit scenes.",
+      "outfit": "Plain lavender top; gray hair only for an elderly relative."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Câu dùng ngay",
+      "purpose": "Present an immediate everyday need and the selected vocabulary meaning.",
+      "action": "A medium close view of the canonical mascot holding an open wallet at a community ticket counter. The attendant gently raises an open palm while offering a ticket, showing payment is not needed. Keep both ticket and wallet clearly visible, no prices or invented event text.",
+      "setting": "Quầy vé hoạt động cộng đồng, vé trống không giá, mascot cầm ví.",
+      "camera": "Medium close view with one dominant referent, readable mascot reaction, stable camera and subtitle clearance.",
+      "narration": "\"Is it free?\" Miễn phí à? Bạn mở ví, người ở quầy lại xua tay: vé hôm nay không mất tiền. Free ở đây nghĩa là miễn phí. Bạn cầm chiếc vé lên hỏi cho chắc, chiếc ví vẫn còn mở trong tay.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "free",
+          "meaning": "miễn phí"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "A medium close view of the canonical mascot holding an open wallet at a community ticket counter. The attendant gently raises an open palm while offering a ticket, showing payment is not needed. Keep both ticket and wallet clearly visible, no prices or invented event text. Attach canonical mascot Character reference. Exactly one pale-blue short-sleeve torso, round white navy-outlined head, black oval eyes and minimal stick limbs. Keep bottom 22% free for subtitles and outer 10% safe. Render only listed visible_text; no incidental lettering or logos.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "A medium close view of the canonical mascot holding an open wallet at a community ticket counter. The attendant gently raises an open palm while offering a ticket, showing payment is not needed. Keep both ticket and wallet clearly visible, no prices or invented event text.",
+          "reason": "Present an immediate everyday need and the selected vocabulary meaning.",
+          "visible_text": [
+            {
+              "text": "Is it free?",
+              "placement": "Upper third, large readable text; clear of faces, main action and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "The mascot holds the offered ticket with one hand and keeps the wallet open with the other, looking toward the attendant. Same shot and layout as the base image; attach Base scene reference and canonical Character reference. Only listed text; preserve subtitle safe space.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC01_I1",
+          "preserve": "Preserve the base camera, background, character identities, single pale-blue mascot torso, props, lighting and exact visible text.",
+          "change": "The mascot holds the offered ticket with one hand and keeps the wallet open with the other, looking toward the attendant.",
+          "reason": "Show the causal next action while the opening phrase leads into the lesson.",
+          "visible_text": [
+            {
+              "text": "Is it free?",
+              "placement": "Upper third, large readable text; clear of faces, main action and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Present an immediate everyday need and the selected vocabulary meaning.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is it free?\" Miễn phí à? Bạn mở ví, người ở quầy lại xua tay: vé hôm nay không mất tiền. Free ở đây nghĩa là miễn phí. Bạn cầm chiếc vé lên hỏi cho chắc, chiếc ví vẫn còn mở trong tay.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Show the causal next action while the opening phrase leads into the lesson.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn cầm chiếc vé lên",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Begin the first spoken phrase immediately and address the situation naturally. Keep the English model intelligible; verify actual onset and rhythm on WAV during media.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Mascot chỉ tấm vé khi hỏi, ví còn mở.",
+      "purpose": "Connect the opening to a usable English model without a new introduction.",
+      "action": "Mascot chỉ tấm vé khi hỏi, ví còn mở.",
+      "setting": "Quầy vé hoạt động cộng đồng, vé trống không giá, mascot cầm ví.",
+      "camera": "Medium close view with one dominant referent, readable mascot reaction, stable camera and subtitle clearance.",
+      "narration": "Bạn hỏi: \"Is it free?\" It đang chỉ chiếc vé vừa được đưa. Muốn hỏi thứ trước mặt có miễn phí không, bạn dùng cả câu này. Người ở quầy nhìn tấm vé rồi xác nhận; nghe câu trả lời xong, bạn mới cất ví.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "free",
+          "meaning": "miễn phí"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Depict this single concrete story moment: Mascot chỉ tấm vé khi hỏi, ví còn mở. Setting: Quầy vé hoạt động cộng đồng, vé trống không giá, mascot cầm ví. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot chỉ tấm vé khi hỏi, ví còn mở.",
+          "reason": "Use the first English model to advance the situation.",
+          "visible_text": [
+            {
+              "text": "Is it free?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect the opening to a usable English model without a new introduction.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Is it free?\" It đang chỉ chiếc vé vừa được đưa. Muốn hỏi thứ trước mặt có miễn phí không, bạn dùng cả câu này. Người ở quầy nhìn tấm vé rồi xác nhận; nghe câu trả lời xong, bạn mới cất ví.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Begin the first spoken phrase immediately and address the situation naturally. Keep the English model intelligible; verify actual onset and rhythm on WAV during media.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nhân viên đưa vé cho mascot, trên vé chỉ hình lối vào.",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "action": "Nhân viên đưa vé cho mascot, trên vé chỉ hình lối vào.",
+      "setting": "Quầy vé hoạt động cộng đồng, vé trống không giá, mascot cầm ví.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Người bán đáp: \"The ticket is free.\" Vé miễn phí. Nghe đủ câu rồi bạn mới cất ví. Free ở đây nói về chi phí của vé, không nói người bán đang rảnh hay bận; tình huống quyết định nghĩa mình cần hiểu.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "free",
+          "meaning": "miễn phí"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Depict this single concrete story moment: Nhân viên đưa vé cho mascot, trên vé chỉ hình lối vào. Setting: Quầy vé hoạt động cộng đồng, vé trống không giá, mascot cầm ví. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Nhân viên đưa vé cho mascot, trên vé chỉ hình lối vào.",
+          "reason": "Use the second English model for the linked action or consequence.",
+          "visible_text": [
+            {
+              "text": "The ticket is free.",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use the second English model for the linked action or consequence.",
+          "anchor": {
+            "vi": {
+              "quote": "Người bán đáp: \"The ticket is free.\" Vé miễn phí. Nghe đủ câu rồi bạn mới cất ví. Free ở đây nói về chi phí của vé, không nói người bán đang rảnh hay bận; tình huống quyết định nghĩa mình cần hiểu.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak to a Vietnamese beginner in a conversational tone; give each English model clear space without spelling out its letters.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giữ tấm vé và ví, câu hỏi khuyết không có đáp án.",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "action": "Giữ tấm vé và ví, câu hỏi khuyết không có đáp án.",
+      "setting": "Quầy vé hoạt động cộng đồng, vé trống không giá, mascot cầm ví.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "Tại quầy vé, bạn muốn hỏi có miễn phí không. Hãy nói \"Is it...?\" rồi thêm từ vừa học. Thử hỏi như đang cầm chiếc vé ấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "free",
+          "meaning": "miễn phí"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Depict this single concrete story moment: Giữ tấm vé và ví, câu hỏi khuyết không có đáp án. Setting: Quầy vé hoạt động cộng đồng, vé trống không giá, mascot cầm ví. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Giữ tấm vé và ví, câu hỏi khuyết không có đáp án.",
+          "reason": "Elicit one achievable learner response; withhold the answer.",
+          "visible_text": [
+            {
+              "text": "Is it...?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Elicit one achievable learner response; withhold the answer.",
+          "anchor": {
+            "vi": {
+              "quote": "Tại quầy vé, bạn muốn hỏi có miễn phí không. Hãy nói \"Is it...?\" rồi thêm từ vừa học. Thử hỏi như đang cầm chiếc vé ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask and wait for the learner before revealing the answer.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mascot cất ví và đi qua cửa với tấm vé.",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "action": "Mascot cất ví và đi qua cửa với tấm vé.",
+      "setting": "Quầy vé hoạt động cộng đồng, vé trống không giá, mascot cầm ví.",
+      "camera": "Medium shot or close view of the referent; choose one clear focal action. Use stable framing for learner response and locked camera for any based-on state change.",
+      "narration": "\"Is it free?\" Từ đó là free. Nhận lời xác nhận, bạn cất ví và cầm vé đi vào. Vẫn có vé làm kỷ niệm, chỉ là hôm nay không phải mua.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "free",
+          "meaning": "miễn phí"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Depict this single concrete story moment: Mascot cất ví và đi qua cửa với tấm vé. Setting: Quầy vé hoạt động cộng đồng, vé trống không giá, mascot cầm ví. Use only the people explicitly mentioned in this moment, not every registered character. Preserve prop identities and colors across scenes. Attach canonical Character reference for the mascot. Extra symbols and labels are allowed only if explicitly listed as visible text; omit incidental package text, logos, prices, time digits and watermarks. Keep bottom 22% for subtitles and outer 10% as safe margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot cất ví và đi qua cửa với tấm vé.",
+          "reason": "Give explicit feedback and resolve the opening problem.",
+          "visible_text": [
+            {
+              "text": "Is it free?",
+              "placement": "Upper third in large readable type; keep clear of faces and bottom captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Give explicit feedback and resolve the opening problem.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Is it free?\" Từ đó là free. Nhận lời xác nhận, bạn cất ví và cầm vé đi vào. Vẫn có vé làm kỷ niệm, chỉ là hôm nay không phải mua.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer and finish the concrete story.",
+          "pronunciation_notes": "Keep English I and standard spelling. Check English examples, noun plurals, switching and sentence rhythm by listening to the actual WAV only when audio is authorized. Character count alone is not a voice-quality criterion.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "\"Is it free?\" Miễn phí à? Bạn mở ví, người ở quầy lại xua tay: vé hôm nay không mất tiền. Free ở đây nghĩa là miễn phí. Bạn cầm chiếc vé lên hỏi cho chắc, chiếc ví vẫn còn mở trong tay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "\"Is it free?\" Miễn phí à? Bạn mở ví, người ở quầy lại xua tay: vé hôm nay không mất tiền. Free ở đây nghĩa là miễn phí. Bạn cầm chiếc vé lên hỏi cho chắc, chiếc ví vẫn còn mở trong tay."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is it free?\" It đang chỉ chiếc vé vừa được đưa. Muốn hỏi thứ trước mặt có miễn phí không, bạn dùng cả câu này. Người ở quầy nhìn tấm vé rồi xác nhận; nghe câu trả lời xong, bạn mới cất ví."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Is it free?\" It đang chỉ chiếc vé vừa được đưa. Muốn hỏi thứ trước mặt có miễn phí không, bạn dùng cả câu này. Người ở quầy nhìn tấm vé rồi xác nhận; nghe câu trả lời xong, bạn mới cất ví."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người bán đáp: \"The ticket is free.\" Vé miễn phí. Nghe đủ câu rồi bạn mới cất ví. Free ở đây nói về chi phí của vé, không nói người bán đang rảnh hay bận; tình huống quyết định nghĩa mình cần hiểu."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Tại quầy vé, bạn muốn hỏi có miễn phí không. Hãy nói \"Is it...?\" rồi thêm từ vừa học. Thử hỏi như đang cầm chiếc vé ấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Is it free?\" Từ đó là free. Nhận lời xác nhận, bạn cất ví và cầm vé đi vào. Vẫn có vé làm kỷ niệm, chỉ là hôm nay không phải mua."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Present an immediate everyday need and the selected vocabulary meaning.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Resolve the immediate question or need through the next English model. Next visual event: Mascot chỉ tấm vé khi hỏi, ví còn mở."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Connect the opening to a usable English model without a new introduction.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same interaction into the second model. Next visual event: Nhân viên đưa vé cho mascot, trên vé chỉ hình lối vào."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use the second English model for the linked action or consequence.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Chuẩn bị ví → thấy vé miễn phí → hỏi để xác nhận → chọn nghĩa theo vé → cất ví đi vào.. Next visual event: Giữ tấm vé và ví, câu hỏi khuyết không có đáp án."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Elicit one achievable learner response; withhold the answer.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chuẩn bị ví → thấy vé miễn phí → hỏi để xác nhận → chọn nghĩa theo vé → cất ví đi vào.. Next visual event: Mascot cất ví và đi qua cửa với tấm vé."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Give explicit feedback and resolve the opening problem.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Chuẩn bị ví → thấy vé miễn phí → hỏi để xác nhận → chọn nghĩa theo vé → cất ví đi vào.. Next visual event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

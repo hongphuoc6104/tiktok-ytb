@@ -1,0 +1,464 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "aa063b203a0ae74f1be306caa6c7305c59283cb5c14d5ab7371b486e2230be55",
+  "topic": "Học từ vựng tiếng Anh LOVE (động từ: yêu) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ LOVE",
+    "Làm rõ nghĩa lõi \"yêu\" (động từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng LOVE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại LOVE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Small expressive eyebrows and changing mouth curves are allowed. Do not add hair, realistic muscles, detailed fingers, a realistic nose or ears to this mascot.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); simple lower clothing where needed. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Mẹ",
+      "appearance": "Adult woman, simple flat illustration, gentle expression, minimal limbs.",
+      "outfit": "Plain peach short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Không cần đợi quà thật lớn",
+      "purpose": "Establish love as affection for a person, not a hobby sense.",
+      "action": "Đặt thiệp nhỏ và nước cạnh mẹ.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn muốn nói thương mẹ nhưng chưa có món quà lớn nào. Love nghĩa là yêu, yêu thương. Trong câu chuyện này, bạn bắt đầu bằng một tấm thiệp nhỏ và một câu nói, thay vì chờ đến ngày có thứ thật đắt tiền.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot leaves a small handmade card and glass of water beside mother resting in a chair. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot leaves a small handmade card and glass of water beside mother resting in a chair.",
+          "reason": "Establish love as affection for a person, not a hobby sense.",
+          "visible_text": [
+            {
+              "text": "love",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Establish love as affection for a person, not a hobby sense.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nói thương mẹ nhưng chưa có món quà lớn nào. Love nghĩa là yêu, yêu thương. Trong câu chuyện này, bạn bắt đầu bằng một tấm thiệp nhỏ và một câu nói, thay vì chờ đến ngày có thứ thật đắt tiền.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nói trực tiếp với người thân",
+      "purpose": "Model a simple affectionate utterance.",
+      "action": "Đưa thiệp và nói lời yêu thương.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn nói: \"I love you.\" Con yêu mẹ. You là người bạn đang nói trực tiếp cùng; ở đây là mẹ. Câu tiếng Anh giữ nguyên, còn cách xưng hô tiếng Việt thay theo quan hệ của hai người.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot hands the card to mother, both look at each other. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot hands the card to mother, both look at each other.",
+          "reason": "Model a simple affectionate utterance.",
+          "visible_text": [
+            {
+              "text": "I love you.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model a simple affectionate utterance.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"I love you.\" Con yêu mẹ. You là người bạn đang nói trực tiếp cùng; ở đây là mẹ. Câu tiếng Anh giữ nguyên, còn cách xưng hô tiếng Việt thay theo quan hệ của hai người.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Kể tình cảm với người khác",
+      "purpose": "Use a second model with an explicit object.",
+      "action": "Kể với bạn rằng mình yêu mẹ.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Nếu kể với một người bạn, bạn nói: \"I love my mother.\" Tôi yêu mẹ. Lần này người được yêu thương được gọi rõ là my mother. Mình giữ nghĩa yêu thương một người, không chuyển sang nói sở thích trong bài này.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot talks to an off-frame friend while mother reads the card nearby. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot talks to an off-frame friend while mother reads the card nearby.",
+          "reason": "Use a second model with an explicit object.",
+          "visible_text": [
+            {
+              "text": "I love my mother.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Use a second model with an explicit object.",
+          "anchor": {
+            "vi": {
+              "quote": "Nếu kể với một người bạn, bạn nói: \"I love my mother.\" Tôi yêu mẹ. Lần này người được yêu thương được gọi rõ là my mother. Mình giữ nghĩa yêu thương một người, không chuyển sang nói sở thích trong bài này.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Gửi một câu trong thiệp",
+      "purpose": "Prompt the verb from a direct-address model.",
+      "action": "Điền câu trong tấm thiệp.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn muốn gửi một câu yêu thương cho người thân. Hãy hoàn thành \"I... you.\" rồi nói như đang trao tấm thiệp nhỏ ấy.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot holds a small card with incomplete sentence, mother sits calmly nearby. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds a small card with incomplete sentence, mother sits calmly nearby.",
+          "reason": "Prompt the verb from a direct-address model.",
+          "visible_text": [
+            {
+              "text": "I... you.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Prompt the verb from a direct-address model.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn gửi một câu yêu thương cho người thân. Hãy hoàn thành \"I... you.\" rồi nói như đang trao tấm thiệp nhỏ ấy.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the concrete retrieval question; leave the full quiet hold before the next scene gives feedback.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Tấm thiệp đã đủ lời",
+      "purpose": "Confirm and close the modest-gift premise.",
+      "action": "Ngồi cạnh mẹ khi mẹ đọc thiệp.",
+      "setting": "Home with mascot and mother in peach top, a handmade thank-you card and cup of water.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "\"I love you.\" Từ còn thiếu là love. Tấm thiệp chưa cần dài, nhưng điều muốn nói đã rõ. Trong câu chuyện hôm nay, một lời yêu thương đi cùng việc nhỏ là mang nước tới cho mẹ.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "love",
+          "meaning": "yêu"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mother holds card against table while mascot sits beside her, glass of water within reach. Home with mascot and mother in peach top, a handmade thank-you card and cup of water. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mother holds card against table while mascot sits beside her, glass of water within reach.",
+          "reason": "Confirm and close the modest-gift premise.",
+          "visible_text": [
+            {
+              "text": "I love you.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm and close the modest-gift premise.",
+          "anchor": {
+            "vi": {
+              "quote": "\"I love you.\" Từ còn thiếu là love. Tấm thiệp chưa cần dài, nhưng điều muốn nói đã rõ. Trong câu chuyện hôm nay, một lời yêu thương đi cùng việc nhỏ là mang nước tới cho mẹ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer, then resolve the opening situation warmly.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Establish love as affection for a person, not a hobby sense.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Use the established situation (Không cần đợi quà thật lớn) to motivate the next learning action: Model a simple affectionate utterance."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model a simple affectionate utterance.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the established situation (Nói trực tiếp với người thân) to motivate the next learning action: Use a second model with an explicit object."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a second model with an explicit object.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Use the established situation (Kể tình cảm với người khác) to motivate the next learning action: Prompt the verb from a direct-address model."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt the verb from a direct-address model.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Use the established situation (Gửi một câu trong thiệp) to motivate the next learning action: Confirm and close the modest-gift premise."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and close the modest-gift premise.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After explicit learner feedback, resolve the concrete situation introduced in the opening."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Bạn muốn nói thương mẹ nhưng chưa có món quà lớn nào. Love nghĩa là yêu, yêu thương. Trong câu chuyện này, bạn bắt đầu bằng một tấm thiệp nhỏ và một câu nói, thay vì chờ đến ngày có thứ thật đắt tiền."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Bạn muốn nói thương mẹ nhưng chưa có món quà lớn nào. Love nghĩa là yêu, yêu thương. Trong câu chuyện này, bạn bắt đầu bằng một tấm thiệp nhỏ và một câu nói, thay vì chờ đến ngày có thứ thật đắt tiền."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I love you.\" Con yêu mẹ. You là người bạn đang nói trực tiếp cùng; ở đây là mẹ. Câu tiếng Anh giữ nguyên, còn cách xưng hô tiếng Việt thay theo quan hệ của hai người."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"I love you.\" Con yêu mẹ. You là người bạn đang nói trực tiếp cùng; ở đây là mẹ. Câu tiếng Anh giữ nguyên, còn cách xưng hô tiếng Việt thay theo quan hệ của hai người."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Nếu kể với một người bạn, bạn nói: \"I love my mother.\" Tôi yêu mẹ. Lần này người được yêu thương được gọi rõ là my mother. Mình giữ nghĩa yêu thương một người, không chuyển sang nói sở thích trong bài này."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn gửi một câu yêu thương cho người thân. Hãy hoàn thành \"I... you.\" rồi nói như đang trao tấm thiệp nhỏ ấy."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"I love you.\" Từ còn thiếu là love. Tấm thiệp chưa cần dài, nhưng điều muốn nói đã rõ. Trong câu chuyện hôm nay, một lời yêu thương đi cùng việc nhỏ là mang nước tới cho mẹ."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

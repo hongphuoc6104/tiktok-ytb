@@ -1,0 +1,480 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "36fc5c1003047e647ee2e0bd2a88dce30fdd1a087314e788db1e0362cec004af",
+  "topic": "Học từ vựng tiếng Anh FAMILY (danh từ: gia đình) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 75
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ FAMILY",
+    "Làm rõ nghĩa lõi \"gia đình\" (danh từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng FAMILY, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại FAMILY, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Small expressive eyebrows and changing mouth curves are allowed. Do not add hair, realistic muscles, detailed fingers, a realistic nose or ears to this mascot.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8); simple lower clothing where needed. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Mẹ",
+      "appearance": "Adult woman, simple flat illustration, gentle expression, minimal limbs.",
+      "outfit": "Plain peach short-sleeve top."
+    },
+    {
+      "id": "CH03",
+      "name": "Bố",
+      "appearance": "Adult man, simple flat illustration, minimal limbs.",
+      "outfit": "Plain sage-green short-sleeve top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Ai cũng có mặt trừ một người",
+      "purpose": "Set up an inclusive family-photo problem.",
+      "action": "Người cầm máy còn thiếu trong nhóm ảnh.",
+      "setting": "Home living room, photo frame and a camera on a simple stand.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Mọi người đã đứng sát nhau, chỉ người cầm máy là chưa vào ảnh. Family nghĩa là gia đình. Gia đình trong câu chuyện này muốn có một tấm ảnh đủ mặt, kể cả người vẫn thường đứng sau máy chụp.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "family",
+          "meaning": "gia đình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds camera facing two relatives; empty spot beside them clearly reserved for mascot. Home living room, photo frame and a camera on a simple stand. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds camera facing two relatives; empty spot beside them clearly reserved for mascot.",
+          "reason": "Set up an inclusive family-photo problem.",
+          "visible_text": [
+            {
+              "text": "family",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Set up an inclusive family-photo problem.",
+          "anchor": {
+            "vi": {
+              "quote": "Mọi người đã đứng sát nhau, chỉ người cầm máy là chưa vào ảnh. Family nghĩa là gia đình. Gia đình trong câu chuyện này muốn có một tấm ảnh đủ mặt, kể cả người vẫn thường đứng sau máy chụp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Giới thiệu những người thân",
+      "purpose": "Model presenting one's family.",
+      "action": "Chỉ ảnh gia đình.",
+      "setting": "Home living room, photo frame and a camera on a simple stand.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Khi giới thiệu tấm ảnh, bạn nói: \"This is my family.\" Đây là gia đình tôi. Family gọi những người trong gia đình; mỗi nhà có thể có số người và cách sống khác nhau, không cần giống tấm ảnh này.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "family",
+          "meaning": "gia đình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to a framed group photo with two relatives and the mascot. Home living room, photo frame and a camera on a simple stand. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to a framed group photo with two relatives and the mascot.",
+          "reason": "Model presenting one's family.",
+          "visible_text": [
+            {
+              "text": "This is my family.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Model presenting one's family.",
+          "anchor": {
+            "vi": {
+              "quote": "Khi giới thiệu tấm ảnh, bạn nói: \"This is my family.\" Đây là gia đình tôi. Family gọi những người trong gia đình; mỗi nhà có thể có số người và cách sống khác nhau, không cần giống tấm ảnh này.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Một việc cùng làm",
+      "purpose": "Connect the second example to a shared family activity.",
+      "action": "Cùng người thân ngồi quanh bàn ăn.",
+      "setting": "Home living room, photo frame and a camera on a simple stand.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Bạn kể thêm: \"I eat with my family.\" Tôi ăn cùng gia đình. With my family cho biết bạn làm việc ấy cùng ai. Hôm nay mọi người còn muốn giữ lại một tấm ảnh sau bữa ăn.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "family",
+          "meaning": "gia đình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot and two relatives sit around a simple meal table; camera stand nearby. Home living room, photo frame and a camera on a simple stand. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and two relatives sit around a simple meal table; camera stand nearby.",
+          "reason": "Connect the second example to a shared family activity.",
+          "visible_text": [
+            {
+              "text": "I eat with my family.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect the second example to a shared family activity.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể thêm: \"I eat with my family.\" Tôi ăn cùng gia đình. With my family cho biết bạn làm việc ấy cùng ai. Hôm nay mọi người còn muốn giữ lại một tấm ảnh sau bữa ăn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Speak conversationally, clarify the relation or action, and give the English example room to be heard as a full sentence.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Giới thiệu ảnh của mình",
+      "purpose": "Invite retrieval with an imagined personal photo.",
+      "action": "Thử giới thiệu ảnh của mình.",
+      "setting": "Home living room, photo frame and a camera on a simple stand.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "Tưởng tượng bạn đang cho mình xem ảnh gia đình. Hãy giới thiệu \"This is my...\" rồi thêm từ gọi những người thân trong ảnh.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "family",
+          "meaning": "gia đình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot holds blank-backed photo toward self and gestures to viewer; sentence stem above. Home living room, photo frame and a camera on a simple stand. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds blank-backed photo toward self and gestures to viewer; sentence stem above.",
+          "reason": "Invite retrieval with an imagined personal photo.",
+          "visible_text": [
+            {
+              "text": "This is my...",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite retrieval with an imagined personal photo.",
+          "anchor": {
+            "vi": {
+              "quote": "Tưởng tượng bạn đang cho mình xem ảnh gia đình. Hãy giới thiệu \"This is my...\" rồi thêm từ gọi những người thân trong ảnh.",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the concrete retrieval question; leave the full quiet hold before the next scene gives feedback.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Người cầm máy cũng vào ảnh",
+      "purpose": "Confirm and resolve the photo's missing person.",
+      "action": "Đặt máy lên giá để cùng vào ảnh.",
+      "setting": "Home living room, photo frame and a camera on a simple stand.",
+      "camera": "Eye-level medium shot; use a closer view when the named body part or small prop is the learning focus. Keep that referent large and unambiguous on a portrait phone frame.",
+      "narration": "\"This is my family.\" Từ còn thiếu là family. Máy ảnh được đặt lên giá, người chụp cũng chạy vào đứng cùng. Tấm ảnh cuối có đủ những người hôm nay đã ngồi quanh bàn với nhau.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02",
+        "CH03"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "family",
+          "meaning": "gia đình"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Camera on stand faces mascot now standing with both relatives, one group and no duplicate mascot. Home living room, photo frame and a camera on a simple stand. Show only the people explicitly described in this frame. Keep family relations and distinct clothing consistent across the story. For mascot, attach canonical Character reference; never replace the mascot with the secondary human teaching figure. Diagrams on cards are separate flat educational objects. No extra text, labels or numbers outside visible_text. Leave bottom 22% clear for captions and 10% outer margins.",
+          "character_ids": [
+            "CH01",
+            "CH02",
+            "CH03"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Camera on stand faces mascot now standing with both relatives, one group and no duplicate mascot.",
+          "reason": "Confirm and resolve the photo's missing person.",
+          "visible_text": [
+            {
+              "text": "This is my family.",
+              "placement": "Upper third; clear of faces, gesture target and bottom caption area.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Confirm and resolve the photo's missing person.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my family.\" Từ còn thiếu là family. Máy ảnh được đặt lên giá, người chụp cũng chạy vào đứng cùng. Tấm ảnh cuối có đủ những người hôm nay đã ngồi quanh bàn với nhau.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the answer, then resolve the opening situation warmly.",
+          "pronunciation_notes": "Keep standard spelling and read I normally in English. Embedded English and plural endings must be checked by listening only if media is later authorized. No pronunciation claim has been verified from audio.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Set up an inclusive family-photo problem.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Use the established situation (Ai cũng có mặt trừ một người) to motivate the next learning action: Model presenting one's family."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model presenting one's family.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Use the established situation (Giới thiệu những người thân) to motivate the next learning action: Connect the second example to a shared family activity."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Connect the second example to a shared family activity.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Use the established situation (Một việc cùng làm) to motivate the next learning action: Invite retrieval with an imagined personal photo."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite retrieval with an imagined personal photo.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Use the established situation (Giới thiệu ảnh của mình) to motivate the next learning action: Confirm and resolve the photo's missing person."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the photo's missing person.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After explicit learner feedback, resolve the concrete situation introduced in the opening."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Mọi người đã đứng sát nhau, chỉ người cầm máy là chưa vào ảnh. Family nghĩa là gia đình. Gia đình trong câu chuyện này muốn có một tấm ảnh đủ mặt, kể cả người vẫn thường đứng sau máy chụp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Mọi người đã đứng sát nhau, chỉ người cầm máy là chưa vào ảnh. Family nghĩa là gia đình. Gia đình trong câu chuyện này muốn có một tấm ảnh đủ mặt, kể cả người vẫn thường đứng sau máy chụp."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Khi giới thiệu tấm ảnh, bạn nói: \"This is my family.\" Đây là gia đình tôi. Family gọi những người trong gia đình; mỗi nhà có thể có số người và cách sống khác nhau, không cần giống tấm ảnh này."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Khi giới thiệu tấm ảnh, bạn nói: \"This is my family.\" Đây là gia đình tôi. Family gọi những người trong gia đình; mỗi nhà có thể có số người và cách sống khác nhau, không cần giống tấm ảnh này."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn kể thêm: \"I eat with my family.\" Tôi ăn cùng gia đình. With my family cho biết bạn làm việc ấy cùng ai. Hôm nay mọi người còn muốn giữ lại một tấm ảnh sau bữa ăn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Tưởng tượng bạn đang cho mình xem ảnh gia đình. Hãy giới thiệu \"This is my...\" rồi thêm từ gọi những người thân trong ảnh."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is my family.\" Từ còn thiếu là family. Máy ảnh được đặt lên giá, người chụp cũng chạy vào đứng cùng. Tấm ảnh cuối có đủ những người hôm nay đã ngồi quanh bàn với nhau."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

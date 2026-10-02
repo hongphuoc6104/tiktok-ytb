@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 35,
+            "seconds": 10.92,
+            "min": 8.19,
+            "max": 13.65
+          },
+          {
+            "scene_id": "SC02",
+            "units": 35,
+            "seconds": 10.62,
+            "min": 7.97,
+            "max": 13.28
+          },
+          {
+            "scene_id": "SC03",
+            "units": 33,
+            "seconds": 10.37,
+            "min": 7.77,
+            "max": 12.96
+          },
+          {
+            "scene_id": "SC04",
+            "units": 22,
+            "seconds": 10.71,
+            "min": 8.03,
+            "max": 13.39
+          },
+          {
+            "scene_id": "SC05",
+            "units": 36,
+            "seconds": 11.2,
+            "min": 8.4,
+            "max": 14.0
+          }
+        ],
+        "min": 40.36,
+        "max": 67.28,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "19620",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Mẹ muốn gửi ảnh chiếc khăn mình đan cho người cháu ở xa; nhân vật giúp mẹ chia sẻ rồi nhường máy để bà viết lời của mình. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

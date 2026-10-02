@@ -1,0 +1,573 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "4ea1210ae83511679c852ac821257b01c6f24ce68ca4c565b2dc3fbd73fc798f",
+  "topic": "Học từ vựng tiếng Anh PICK UP (cụm từ: nhặt lên, cầm lên) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 65,
+    "max_seconds": 90
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ PICK UP",
+    "Làm rõ nghĩa lõi \"nhặt lên, cầm lên\" (cụm từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng PICK UP, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại PICK UP, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Nhặt thẻ đang nằm dưới bàn — Nhịp 1",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "action": "Mascot and companion notice one game card on floor below table, no person injury.",
+      "setting": "Bàn trò chơi hư cấu và thẻ rơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Thẻ trên bàn đã đếm rồi, một tấm còn nằm dưới chân ghế! Pick up trong bài này là nhặt lên, cầm lên từ chỗ thấp. \"Lift the item from where it is lying here.\" Bạn dọn trò chơi hư cấu, cần lấy lại món trước khi cất đủ bộ.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pick up",
+          "meaning": "nhặt lên, cầm lên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot and companion notice one game card on floor below table, no person injury. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and companion notice one game card on floor below table, no person injury.",
+          "reason": "Make the selected sense useful in a concrete situation.",
+          "visible_text": [
+            {
+              "text": "pick up",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the selected sense useful in a concrete situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Thẻ trên bàn đã đếm rồi, một tấm còn nằm dưới chân ghế! Pick up trong bài này là nhặt lên, cầm lên từ chỗ thấp. \"Lift the item from where it is lying here.\" Bạn dọn trò chơi hư cấu, cần lấy lại món trước khi cất đủ bộ.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Nhặt thẻ đang nằm dưới bàn — Nhịp 2",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "action": "Card on floor beneath chair => Companion holds same card above table level, ordinary adult pose.",
+      "setting": "Bàn trò chơi hư cấu và thẻ rơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn nhờ: \"Pick up the card.\" Nhặt thẻ lên nhé. \"The one below the chair in our scene.\" Người bạn nhìn đúng tấm được nhắc, cúi lấy trong cảnh minh họa rồi đưa về chỗ các thẻ đã kiểm.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pick up",
+          "meaning": "nhặt lên, cầm lên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Card on floor beneath chair Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Card on floor beneath chair",
+          "reason": "Use the first English model with its immediate purpose.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Companion holds same card above table level, ordinary adult pose. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC02_I1",
+          "preserve": "Preserve base camera, background, identities, clothing and all unchanged props; only the specified state and permitted teaching text may change.",
+          "change": "Companion holds same card above table level, ordinary adult pose.",
+          "reason": "Show the explicitly described before/after state with the same camera and identities.",
+          "visible_text": [
+            {
+              "text": "Pick up the card.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Use the first English model with its immediate purpose.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nhờ: \"Pick up the card.\" Nhặt thẻ lên nhé. \"The one below the chair in our scene.\" Người bạn nhìn đúng tấm được nhắc, cúi lấy trong cảnh minh họa rồi đưa về chỗ các thẻ đã kiểm.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Show the explicitly described before/after state with the same camera and identities.",
+          "anchor": {
+            "vi": {
+              "quote": "Pick up the card.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Nhặt thẻ đang nằm dưới bàn — Nhịp 3",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "action": "Both compare noun-card model with pronoun reference, no passenger pickup target.",
+      "setting": "Bàn trò chơi hư cấu và thẻ rơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Với it nhắc lại món, câu mẫu sẽ giữ đại từ giữa pick và up. \"The card remains the same item.\" Bài này không nói tới đón một người bằng xe; hai người đang gọi hành động nhặt một vật của trò chơi.",
+      "requirements": [
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pick up",
+          "meaning": "nhặt lên, cầm lên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both compare noun-card model with pronoun reference, no passenger pickup target. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both compare noun-card model with pronoun reference, no passenger pickup target.",
+          "reason": "Clarify the specific usage or condition and change the story state.",
+          "visible_text": [
+            {
+              "text": "pick up",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Clarify the specific usage or condition and change the story state.",
+          "anchor": {
+            "vi": {
+              "quote": "Với it nhắc lại món, câu mẫu sẽ giữ đại từ giữa pick và up. \"The card remains the same item.\" Bài này không nói tới đón một người bằng xe; hai người đang gọi hành động nhặt một vật của trò chơi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Nhặt thẻ đang nằm dưới bàn — Nhịp 4",
+      "purpose": "Use the second model to move the same situation forward.",
+      "action": "Both return recovered card to defined fictional game set.",
+      "setting": "Bàn trò chơi hư cấu và thẻ rơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn đề nghị: \"Let's pick it up.\" Cùng nhặt nó lên nhé. \"Then it can return to the game box.\" Hai người kiểm lại tấm vừa lấy, đặt vào bộ của câu chuyện trước khi khép nắp.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pick up",
+          "meaning": "nhặt lên, cầm lên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Both return recovered card to defined fictional game set. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both return recovered card to defined fictional game set.",
+          "reason": "Use the second model to move the same situation forward.",
+          "visible_text": [
+            {
+              "text": "Let's pick it up.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Use the second model to move the same situation forward.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn đề nghị: \"Let's pick it up.\" Cùng nhặt nó lên nhé. \"Then it can return to the game box.\" Hai người kiểm lại tấm vừa lấy, đặt vào bộ của câu chuyện trước khi khép nắp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Nhặt thẻ đang nằm dưới bàn — Lượt thực hành",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "action": "Hold floor-card relation and full learner instruction.",
+      "setting": "Bàn trò chơi hư cấu và thẻ rơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn nhờ nhặt tấm thẻ đang ở dưới ghế. \"Name the object to lift.\" Hãy nói: \"Pick up the card.\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pick up",
+          "meaning": "nhặt lên, cầm lên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Hold floor-card relation and full learner instruction. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold floor-card relation and full learner instruction.",
+          "reason": "Ask for one manageable response, without moving on during the learner interval.",
+          "visible_text": [
+            {
+              "text": "Pick up the card.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn nhờ nhặt tấm thẻ đang ở dưới ghế. \"Name the object to lift.\" Hãy nói: \"Pick up the card.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC06",
+      "title": "Nhặt thẻ đang nằm dưới bàn — Phản hồi và kết quả",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "action": "Both store complete fictional card set after recovery.",
+      "setting": "Bàn trò chơi hư cấu và thẻ rơi.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Pick up the card.\" Nhặt thẻ lên nhé. \"The last item is no longer under the chair.\" Hai người đã có lại phần còn thiếu trong câu chuyện, kiểm bàn rồi cất trò chơi.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "pick up",
+          "meaning": "nhặt lên, cầm lên"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC06_I1",
+          "description": "Both store complete fictional card set after recovery. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both store complete fictional card set after recovery.",
+          "reason": "Give feedback and show the result of the shared action.",
+          "visible_text": [
+            {
+              "text": "Pick up the card.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC06_B1",
+          "image_id": "SC06_I1",
+          "purpose": "Give feedback and show the result of the shared action.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Pick up the card.\" Nhặt thẻ lên nhé. \"The last item is no longer under the chair.\" Hai người đã có lại phần còn thiếu trong câu chuyện, kiểm bàn rồi cất trò chơi.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Thẻ trên bàn đã đếm rồi, một tấm còn nằm dưới chân ghế! Pick up trong bài này là nhặt lên, cầm lên từ chỗ thấp. \"Lift the item from where it is lying here.\" Bạn dọn trò chơi hư cấu, cần lấy lại món trước khi cất đủ bộ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Thẻ trên bàn đã đếm rồi, một tấm còn nằm dưới chân ghế! Pick up trong bài này là nhặt lên, cầm lên từ chỗ thấp. \"Lift the item from where it is lying here.\" Bạn dọn trò chơi hư cấu, cần lấy lại món trước khi cất đủ bộ."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nhờ: \"Pick up the card.\" Nhặt thẻ lên nhé. \"The one below the chair in our scene.\" Người bạn nhìn đúng tấm được nhắc, cúi lấy trong cảnh minh họa rồi đưa về chỗ các thẻ đã kiểm."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nhờ: \"Pick up the card.\" Nhặt thẻ lên nhé. \"The one below the chair in our scene.\" Người bạn nhìn đúng tấm được nhắc, cúi lấy trong cảnh minh họa rồi đưa về chỗ các thẻ đã kiểm."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC03",
+      "quote": "Với it nhắc lại món, câu mẫu sẽ giữ đại từ giữa pick và up. \"The card remains the same item.\" Bài này không nói tới đón một người bằng xe; hai người đang gọi hành động nhặt một vật của trò chơi."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC04",
+      "quote": "Bạn đề nghị: \"Let's pick it up.\" Cùng nhặt nó lên nhé. \"Then it can return to the game box.\" Hai người kiểm lại tấm vừa lấy, đặt vào bộ của câu chuyện trước khi khép nắp."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "Bạn muốn nhờ nhặt tấm thẻ đang ở dưới ghế. \"Name the object to lift.\" Hãy nói: \"Pick up the card.\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC06",
+      "quote": "\"Pick up the card.\" Nhặt thẻ lên nhé. \"The last item is no longer under the chair.\" Hai người đã có lại phần còn thiếu trong câu chuyện, kiểm bàn rồi cất trò chơi."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Make the selected sense useful in a concrete situation.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Story continuity: Thẻ dưới đất → nhờ nhặt → hỏi cùng nhặt → cất.. Next event: Card on floor beneath chair => Companion holds same card above table level, ordinary adult pose."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Use the first English model with its immediate purpose.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Thẻ dưới đất → nhờ nhặt → hỏi cùng nhặt → cất.. Next event: Both compare noun-card model with pronoun reference, no passenger pickup target."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Clarify the specific usage or condition and change the story state.",
+      "requirements": [
+        "R2"
+      ],
+      "transition": "Story continuity: Thẻ dưới đất → nhờ nhặt → hỏi cùng nhặt → cất.. Next event: Both return recovered card to defined fictional game set."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Use the second model to move the same situation forward.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Thẻ dưới đất → nhờ nhặt → hỏi cùng nhặt → cất.. Next event: Hold floor-card relation and full learner instruction."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Ask for one manageable response, without moving on during the learner interval.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thẻ dưới đất → nhờ nhặt → hỏi cùng nhặt → cất.. Next event: Both store complete fictional card set after recovery."
+    },
+    {
+      "scene_id": "SC06",
+      "purpose": "Give feedback and show the result of the shared action.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Thẻ dưới đất → nhờ nhặt → hỏi cùng nhặt → cất.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

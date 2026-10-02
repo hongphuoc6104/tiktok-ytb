@@ -1,0 +1,45 @@
+{
+  "job": "vocab-grandmother-55s-001",
+  "content_revision": 2,
+  "language": "vi",
+  "status": "awaiting_content_review_not_synthesized",
+  "duration_target_seconds": 80,
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "narration": "Bạn hỏi cần bao nhiêu bột, bà bảo một ít rồi làm ngay. Grandmother nghĩa là bà, có thể là bà nội hoặc bà ngoại. Trong căn bếp này, bạn muốn học làm bánh nên cứ phải hỏi bà từng bước. Bà là mẹ của bố hoặc mẹ mình. Sơ đồ nhỏ đi qua một người cha hoặc mẹ rồi mới tới bà, giúp xác nhận quan hệ thay vì chỉ nhìn tóc bạc.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandmother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC02",
+      "narration": "Bạn nói: \"This is my grandmother.\" Đây là bà tôi. Grandmother tự nó chưa nói rõ bà nội hay bà ngoại. Trong câu chuyện, điều mình cần giới thiệu trước là quan hệ bà và cháu giữa hai người. Trong câu chuyện, đây là mẹ của mẹ bạn, tức bà ngoại. Khi bà nói với mẹ, hai người là mẹ và con; khi bạn giới thiệu, quan hệ cần gọi là bà và cháu.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandmother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC03",
+      "narration": "Bạn kể: \"I cook with my grandmother.\" Tôi nấu ăn cùng bà. With my grandmother cho biết người làm cùng bạn. Hôm nay bà chỉ dẫn, còn bạn cầm thìa thử làm để lần sau có thể nhớ bằng trải nghiệm của mình.",
+      "learner_pause_seconds": 0,
+      "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandmother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC04",
+      "narration": "Người bạn vừa bước vào bếp. Hãy giới thiệu đây là bà tôi, bằng câu \"This is my...\" Không cần phân biệt bên nội hay ngoại.",
+      "learner_pause_seconds": 4,
+      "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandmother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    },
+    {
+      "scene_id": "SC05",
+      "narration": "\"This is my grandmother.\" Từ còn thiếu là grandmother. Mẻ bánh đã ra bàn, bạn còn nhớ mình vừa làm bước nào. Công thức chưa viết hết, nhưng lần này ít nhất một ít bột đã có hình dung rõ hơn.",
+      "learner_pause_seconds": 0,
+      "intent": "Confirm the response and resolve the initial situation.",
+      "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of grandmother and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control."
+    }
+  ],
+  "note": "Tạo âm thanh qua workflow sau duyệt content; không bỏ khoảng yên lặng và không đọc intent/pronunciation_notes thành lời."
+}

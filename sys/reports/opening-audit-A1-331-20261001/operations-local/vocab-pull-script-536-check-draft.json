@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 36,
+            "seconds": 11.2,
+            "min": 8.4,
+            "max": 14.0
+          },
+          {
+            "scene_id": "SC02",
+            "units": 32,
+            "seconds": 9.94,
+            "min": 7.45,
+            "max": 12.42
+          },
+          {
+            "scene_id": "SC03",
+            "units": 31,
+            "seconds": 9.66,
+            "min": 7.25,
+            "max": 12.08
+          },
+          {
+            "scene_id": "SC04",
+            "units": 24,
+            "seconds": 11.42,
+            "min": 8.56,
+            "max": 14.27
+          },
+          {
+            "scene_id": "SC05",
+            "units": 30,
+            "seconds": 9.38,
+            "min": 7.04,
+            "max": 11.73
+          }
+        ],
+        "min": 38.7,
+        "max": 64.5,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "17424",
+      "status": "addressed",
+      "explanation": "Đã rà 3 giây đầu: mở bằng “Tay nắm ở đây, kéo ngăn ra nào!”; đưa chi tiết có ích lên trước, đổi hình/camera mở để thấy đúng vấn đề. Giữ nguyên các cảnh sau, câu mẫu, khoảng chờ và payoff. Thời gian là ước tính, chưa đo khả năng giữ chân.",
+      "scene_ids": [
+        "SC01"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,545 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "e2fb1d204b2316abb8856ad211e9b33cdf1af300fe7ddead44b7f18bb1079628",
+  "topic": "Học từ vựng tiếng Anh best friend — bạn thân nhất qua câu chuyện “Tin vui, gọi người bạn thân nhất trước”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới best friend; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “bạn thân nhất” của best friend; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng best friend chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng best friend, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    },
+    {
+      "id": "CH02",
+      "name": "Người bạn",
+      "appearance": "Adult friend, simple flat illustration, minimal limbs, distinct from mascot.",
+      "outfit": "Plain lavender top."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Tin vui muốn kể ngay",
+      "purpose": "Introduce close friendship through a communication choice.",
+      "action": "Mascot finishes a paper model and reaches for phone with an excited expression.",
+      "setting": "Mascot at desk with a finished creative project and phone; best friend in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Vừa làm xong một việc mình rất thích, bạn đã muốn nhắn cho một người. Best friend là bạn thân nhất. Trong câu chuyện này, đó là người bạn muốn kể cả lúc vui lẫn lúc cần có ai nghe mình nói. Bạn có thể có nhiều người bạn nhưng muốn nói người thân thiết nhất trong câu chuyện này. Cả cụm best friend làm rõ điều đó; chỉ nói friend thì chưa nêu mức độ ấy.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "best friend",
+          "meaning": "bạn thân nhất"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot finishes a paper model and reaches for phone with an excited expression. Mascot at desk with a finished creative project and phone; best friend in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot finishes a paper model and reaches for phone with an excited expression.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "best friend",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Keep the same close friend and completed creative project. A neutral friendship card distinguishes the selected close friend from a generic group of friends without ranking human worth or requiring daily calls. Mascot at desk with a finished creative project and phone; best friend in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Keep the same close friend and completed creative project. A neutral friendship card distinguishes the selected close friend from a generic group of friends without ranking human worth or requiring daily calls.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "best friend",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Vừa làm xong một việc mình rất",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn có thể có nhiều người bạn",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of best friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Giới thiệu mức độ thân thiết",
+      "purpose": "Model the full two-word phrase.",
+      "action": "Mascot points to close friend arriving beside the desk to admire the model.",
+      "setting": "Mascot at desk with a finished creative project and phone; best friend in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"This is my best friend.\" Đây là bạn thân nhất của tôi. Best friend là cả cụm. Nó nói mức độ thân thiết với bạn, không phải một bảng chấm điểm rằng những người bạn khác kém giá trị hơn. Gọi đầu tiên là lựa chọn của nhân vật khi có tin vui. Không phải tình bạn nào cũng phải nói chuyện mỗi ngày hoặc nhận mọi tin đầu tiên mới được gọi thân nhất.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "best friend",
+          "meaning": "bạn thân nhất"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to close friend arriving beside the desk to admire the model. Mascot at desk with a finished creative project and phone; best friend in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to close friend arriving beside the desk to admire the model.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Keep the same close friend and completed creative project. A neutral friendship card distinguishes the selected close friend from a generic group of friends without ranking human worth or requiring daily calls. Mascot at desk with a finished creative project and phone; best friend in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Keep the same close friend and completed creative project. A neutral friendship card distinguishes the selected close friend from a generic group of friends without ranking human worth or requiring daily calls.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "best friend",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"This is my best friend.\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Gọi đầu tiên là lựa chọn của",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of best friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Kể việc vẫn làm cùng nhau",
+      "purpose": "Use a second model that supports the established closeness.",
+      "action": "Mascot and friend sit on floor beside a board game, paper model on desk behind.",
+      "setting": "Mascot at desk with a finished creative project and phone; best friend in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn kể: \"I talk to my best friend every day.\" Tôi nói chuyện với bạn thân nhất mỗi ngày. Câu này phù hợp với hai người trong câu chuyện; mỗi tình bạn ngoài đời có thể có nhịp trò chuyện khác nhau.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "best friend",
+          "meaning": "bạn thân nhất"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot and friend sit on floor beside a board game, paper model on desk behind. Mascot at desk with a finished creative project and phone; best friend in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and friend sit on floor beside a board game, paper model on desk behind.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn kể: \"I talk to my best",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of best friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Thêm đúng cả cụm",
+      "purpose": "Prompt phrase retrieval rather than leaving only friend.",
+      "action": "Mascot presents friend to viewer; incomplete introduction with phrase-sized blank.",
+      "setting": "Mascot at desk with a finished creative project and phone; best friend in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn muốn giới thiệu bạn thân nhất của mình. Hãy nói \"This is my...\" rồi thêm cả cụm hai từ vừa học.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "best friend",
+          "meaning": "bạn thân nhất"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot presents friend to viewer; incomplete introduction with phrase-sized blank. Mascot at desk with a finished creative project and phone; best friend in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot presents friend to viewer; incomplete introduction with phrase-sized blank.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC04_I2",
+          "description": "Mascot presents friend to viewer; incomplete introduction with phrase-sized blank. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state. Mascot at desk with a finished creative project and phone; best friend in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": "SC04_I1",
+          "preserve": "Preserve the canonical round white head, solid oval eyes, exactly one pale-blue short-sleeve shirt, minimal limbs, all declared characters, camera angle and stable prop layout. Keep minor expressions within permitted 80/20 tolerance.",
+          "change": "Mascot presents friend to viewer; incomplete introduction with phrase-sized blank. Focus on the same referent with the permitted English model placed above it. Preserve the ongoing action state.",
+          "reason": "Present the model at the spoken quote.",
+          "visible_text": [
+            {
+              "text": "This is my...",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn giới thiệu bạn thân nhất",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC04_B2",
+          "image_id": "SC04_I2",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my...\" rồi thêm cả cụm",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of best friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Mô hình có người cùng ngắm",
+      "purpose": "Confirm and resolve the opening urge to share news.",
+      "action": "Mascot and best friend admire completed paper model together, phone put away.",
+      "setting": "Mascot at desk with a finished creative project and phone; best friend in lavender top.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"This is my best friend.\" Cụm cần dùng là best friend. Tin vui đã được kể, mô hình cũng có người cùng ngắm. Bài này giúp bạn gọi đúng mức độ thân thiết mà mình muốn diễn tả trong một câu.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "best friend",
+          "meaning": "bạn thân nhất"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot and best friend admire completed paper model together, phone put away. Mascot at desk with a finished creative project and phone; best friend in lavender top. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot and best friend admire completed paper model together, phone put away.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"This is my best friend.\" Cụm cần",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of best friend and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Introduce close friendship through a communication choice.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model the full two-word phrase."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model the full two-word phrase.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Use a second model that supports the established closeness."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Use a second model that supports the established closeness.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt phrase retrieval rather than leaving only friend."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt phrase retrieval rather than leaving only friend.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and resolve the opening urge to share news."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the opening urge to share news.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Vừa làm xong một việc mình rất thích, bạn đã muốn nhắn cho một người. Best friend là bạn thân nhất. Trong câu chuyện này, đó là người bạn muốn kể cả lúc vui lẫn lúc cần có ai nghe mình nói. Bạn có thể có nhiều người bạn nhưng muốn nói người thân thiết nhất trong câu chuyện này. Cả cụm best friend làm rõ điều đó; chỉ nói friend thì chưa nêu mức độ ấy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Vừa làm xong một việc mình rất thích, bạn đã muốn nhắn cho một người. Best friend là bạn thân nhất. Trong câu chuyện này, đó là người bạn muốn kể cả lúc vui lẫn lúc cần có ai nghe mình nói. Bạn có thể có nhiều người bạn nhưng muốn nói người thân thiết nhất trong câu chuyện này. Cả cụm best friend làm rõ điều đó; chỉ nói friend thì chưa nêu mức độ ấy."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my best friend.\" Đây là bạn thân nhất của tôi. Best friend là cả cụm. Nó nói mức độ thân thiết với bạn, không phải một bảng chấm điểm rằng những người bạn khác kém giá trị hơn. Gọi đầu tiên là lựa chọn của nhân vật khi có tin vui. Không phải tình bạn nào cũng phải nói chuyện mỗi ngày hoặc nhận mọi tin đầu tiên mới được gọi thân nhất."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my best friend.\" Đây là bạn thân nhất của tôi. Best friend là cả cụm. Nó nói mức độ thân thiết với bạn, không phải một bảng chấm điểm rằng những người bạn khác kém giá trị hơn. Gọi đầu tiên là lựa chọn của nhân vật khi có tin vui. Không phải tình bạn nào cũng phải nói chuyện mỗi ngày hoặc nhận mọi tin đầu tiên mới được gọi thân nhất."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn kể: \"I talk to my best friend every day.\" Tôi nói chuyện với bạn thân nhất mỗi ngày. Câu này phù hợp với hai người trong câu chuyện; mỗi tình bạn ngoài đời có thể có nhịp trò chuyện khác nhau."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn giới thiệu bạn thân nhất của mình. Hãy nói \"This is my...\" rồi thêm cả cụm hai từ vừa học."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"This is my best friend.\" Cụm cần dùng là best friend. Tin vui đã được kể, mô hình cũng có người cùng ngắm. Bài này giúp bạn gọi đúng mức độ thân thiết mà mình muốn diễn tả trong một câu."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

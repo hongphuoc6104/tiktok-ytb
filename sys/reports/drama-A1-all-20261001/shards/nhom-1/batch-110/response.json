@@ -1,0 +1,862 @@
+{
+  "conversation_id": "d98255fb-a691-43e9-ad65-5278a96e18d7",
+  "status": "SUCCESS",
+  "response": "{\n  \"episodes\": [\n    {\n      \"job\": \"vocab-point-script-404\",\n      \"title\": \"Vạch Phấn Tính Điểm\",\n      \"plot_vi\": \"Hai người bạn chơi ném túi vải vào hộp giấy ngoài hiên; sau lần ném chạm mép gây tranh cãi, họ thống nhất ghi rõ từng điểm số lên mặt sân để tiếp tục cuộc chơi.\",\n      \"opening_function_vi\": \"Mở đầu bằng tình huống ném túi đậu sát mép hộp và câu hỏi phân định điểm số thực tế.\",\n      \"learner_outcome_vi\": \"Người học nhận biết nghĩa 'điểm số' của POINT và nói được câu 'I have two points.' khi đếm điểm.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Bình\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single light-yellow short-sleeve shirt (#FDFD96).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Chiếc túi chạm mép\",\n          \"narration\": \"Chiếc túi vải rơi trúng mép hộp giấy. Tôi nhặt lên, chưa biết có tính lượt này không. Bình chỉ ngón tay vào vạch viền: \\\"That's one point.\\\" Đó là một điểm.\",\n          \"purpose_en\": \"Introduce the game setting, the disputed hit, and the first model sentence showing the core meaning of point as a score unit.\",\n          \"visual_en\": \"Wide eye-level shot of a front porch. A cardboard box sits on the ground with a chalk target line. A beanbag rests half on the cardboard edge. The friend bends down, pointing a stick finger at the chalk edge while the mascot watches attentively.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Vạch phấn thứ hai\",\n          \"narration\": \"Bình lấy viên phấn trắng vạch một gạch lên nền xi măng. Lượt sau, tôi ném chiếc túi đỏ lọt hẳn vào trong. Tôi chỉ tay vào hai vạch phấn: \\\"I have two points.\\\" Tôi có hai điểm.\",\n          \"purpose_en\": \"Establish score tracking and present the second model sentence with plural points.\",\n          \"visual_en\": \"Medium shot of the porch floor. Two distinct white chalk tally marks are drawn side by side on gray concrete. The mascot stands beside the box, pointing clearly at the two tally marks with an open palm while the friend holds a chalk piece.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Giữ chặt mép hộp\",\n          \"narration\": \"Gió thổi bay chiếc hộp lệch đi một chút. Bình chạy lại kê thêm cục gạch giữ mép hộp, rồi nhặt túi vải đưa cho tôi ném tiếp thay vì đòi đổi lượt ngay.\",\n          \"purpose_en\": \"Deepen the mutual care and patience between the two players through physical prop adjustment.\",\n          \"visual_en\": \"Medium shot of the friend placing a heavy red brick firmly against the back base of the cardboard box to stabilize it against the breeze. The mascot holds two beanbags, waiting patiently.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Đếm điểm của bạn\",\n          \"narration\": \"Bạn muốn cùng tôi xác nhận số điểm mình vừa ghi sau hai lượt ném trúng. Điền từ còn thiếu vào câu nhé.\",\n          \"purpose_en\": \"Prompt the learner to recall and speak the plural target word points in a complete sentence.\",\n          \"visual_en\": \"Close-up shot focused on the two chalk tally marks on the pavement next to the secured box. The mascot gestures invitingly toward the score marks with an encouraging stance.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"I have two ______.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Ấm áp hiên nhà\",\n          \"narration\": \"\\\"I have two points.\\\" Tôi có hai điểm. Bình gật đầu, vạch thêm dấu thứ ba cho tôi. Chúng tôi ngồi bệt xuống bậc thềm, chia nhau cốc nước trà mẹ vừa rót.\",\n          \"purpose_en\": \"Deliver the correct sentence model and conclude with a modest, earned friendly payoff.\",\n          \"visual_en\": \"Wide shot of the porch. The friend finishes drawing a third chalk mark, then sits down on the stone step next to the mascot. A ceramic cup of warm tea sits between them on the step.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-rule-script-405\",\n      \"title\": \"Bàn Cờ Giấy Mới\",\n      \"plot_vi\": \"Hai bạn nhỏ chơi cờ ca-rô giấy tự chế; người này vội đi hai nước cùng lúc, người kia nhắc dừng lại hỏi rõ luật chơi để ván đấu công bằng.\",\n      \"opening_function_vi\": \"Khởi đầu bằng hành động giữ tay khi đối phương đi sai lượt trên bàn cờ giấy.\",\n      \"learner_outcome_vi\": \"Người học hiểu rõ nghĩa 'luật chơi' của RULE và nói được câu hỏi 'What's the rule?'.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"An\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single light-green short-sleeve shirt (#98D8AA).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Nước cờ vội vã\",\n          \"narration\": \"Bàn cờ giấy vừa mở trên bàn gỗ. An giữ tay tôi lại khi tôi định bốc liền hai quân cờ. Tôi dừng lại, khẽ hỏi: \\\"What's the rule?\\\" Luật chơi là gì?\",\n          \"purpose_en\": \"Present the initial conflict over gameplay turns and introduce the first model sentence asking for the game rule.\",\n          \"visual_en\": \"Eye-level medium shot of a simple wooden table. A hand-drawn grid on paper lies flat between the two figures. The friend gently places a hand over the mascot's wrist before two black stone pieces are placed at once.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Mỗi lượt một quân\",\n          \"narration\": \"An chỉ vào tờ giấy nháp ghi vội nét bút chì bên cạnh. An bảo mỗi lượt chỉ được đặt một quân, rồi cười: \\\"Let's follow the rules.\\\" Cùng tuân theo luật chơi nhé.\",\n          \"purpose_en\": \"Demonstrate the second model sentence emphasizing adherence to the agreed game rules.\",\n          \"visual_en\": \"Over-the-shoulder shot showing the friend pointing a pencil tip at a small note sheet where simple numbered game steps are sketched. The mascot listens and pulls one stone back into the lid.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Ngay ngắn lượt đi\",\n          \"narration\": \"Tôi trả lại quân cờ thừa vào nắp hộp. Ngồi thẳng lưng, tôi nhìn kỹ từng ô vuông trên mặt giấy thay vì vội vàng xáo trộn bàn chơi như những lần trước.\",\n          \"purpose_en\": \"Show internal adjustment and respect for the game through careful, deliberate action.\",\n          \"visual_en\": \"Medium shot of the mascot sitting upright, placing a single round stone neatly inside one square of the paper grid with calm concentration.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Hỏi rõ trước khi chơi\",\n          \"narration\": \"Gặp trò mới chưa rõ cách chơi, bạn hãy hỏi bạn mình bằng tiếng Anh để cùng thống nhất nhé.\",\n          \"purpose_en\": \"Prompt the learner to produce the question What's the rule? in a conversational context.\",\n          \"visual_en\": \"Close shot of the paper board and the two hands hovering above the grid. The mascot looks toward the viewer with an open, questioning posture.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"What's the ______?\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Nước cờ thong thả\",\n          \"narration\": \"\\\"What's the rule?\\\" Luật chơi là gì? An mỉm cười giải thích cách chặn góc. Nắng chiều hắt qua song cửa, hai đứa chậm rãi suy nghĩ từng nước đi tiếp theo.\",\n          \"purpose_en\": \"Confirm the question sentence and show the tranquil, earned resolution of fair play.\",\n          \"visual_en\": \"Wide shot of the room. Warm afternoon sunlight falls across the wooden table. Both figures lean over the paper board, each holding a single game piece in turn.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-goal-script-406\",\n      \"title\": \"Khung Thành Sân Bãi\",\n      \"plot_vi\": \"Hai anh em xem trận bóng giao hữu ở bãi đất xóm; người em mải nhặt dép nên bỏ lỡ bàn thắng, người anh chỉ lại và giải thích diễn biến trên sân.\",\n      \"opening_function_vi\": \"Mở đầu bằng tiếng còi và khoảnh khắc bóng bay vào lưới khi người em vừa cúi xuống.\",\n      \"learner_outcome_vi\": \"Người học nắm vững nghĩa 'bàn thắng' của GOAL và nói được câu 'Our team scored a goal.'.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Dũng\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single soft-orange short-sleeve shirt (#FFB380).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Bóng qua vạch vôi\",\n          \"narration\": \"Tiếng còi vang lên từ sân bóng xóm. Quả bóng bay thẳng qua vạch vôi. Dũng vừa cúi nhặt dép ngẩng lên ngơ ngác, tôi liền reo khẽ: \\\"That's a goal!\\\" Đó là một bàn thắng!\",\n          \"purpose_en\": \"Introduce the soccer setting, the missed moment, and the first model sentence identifying a goal.\",\n          \"visual_en\": \"Wide shot of an open dirt field with two bamboo goalposts. A soccer ball rests inside the woven net. In the foreground, the mascot points excitedly toward the net while the younger brother holds a small blue sandal.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Đội nhà ghi bàn\",\n          \"narration\": \"Dũng tròn mắt nhìn lên bảng điểm treo tạm bằng bìa các-tông. Tôi vỗ vai em, chỉ vào anh tiền đạo áo xanh đang chạy về: \\\"Our team scored a goal.\\\" Đội chúng ta ghi một bàn thắng.\",\n          \"purpose_en\": \"Deliver the second model sentence connecting the scored goal to the team.\",\n          \"visual_en\": \"Medium shot of the two figures sitting on a wooden bench. The mascot puts an arm gently around the younger brother's shoulder, pointing toward the makeshift cardboard scoreboard showing 1 - 0.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Theo dõi từng đường bóng\",\n          \"narration\": \"Dũng kéo ghế xích lại gần tôi hơn. Cậu bé không nhìn vu vơ nữa mà chăm chú theo dõi từng đường chuyền bóng ngắn trên bãi cỏ trước mặt.\",\n          \"purpose_en\": \"Show the change in the younger brother's engagement and shared bond.\",\n          \"visual_en\": \"Side view of the bench. The younger brother pulls his wooden stool closer to the mascot, resting both elbows on his knees while watching the field intently.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Kể lại pha lập công\",\n          \"narration\": \"Dũng hỏi chuyện vừa xảy ra ở khung thành. Bạn nói giúp tôi câu báo đội mình đã ghi bàn nhé.\",\n          \"purpose_en\": \"Prompt the learner to produce the sentence Our team scored a goal.\",\n          \"visual_en\": \"Close-up of the mascot leaning forward with an encouraging smile, gesturing toward the open field.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"Our team scored a ______.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Niềm vui bên lề sân\",\n          \"narration\": \"\\\"Our team scored a goal.\\\" Đội chúng ta ghi một bàn thắng. Dũng cười tít mắt, vỗ hai bàn tay nhỏ vào nhau. Hai anh em tiếp tục ngồi sát bên xem hiệp hai.\",\n          \"purpose_en\": \"Reinforce the model sentence and provide a quiet, affectionate ending.\",\n          \"visual_en\": \"Wide shot of the sideline. The younger brother claps his hands happily, sitting side by side with the mascot under the shade of a melaleuca tree.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-kick-script-407\",\n      \"title\": \"Đường Chuyền Đầu Tiên\",\n      \"plot_vi\": \"Hai bạn tập chuyền bóng trên mảnh sân sau cơn mưa; bạn ngập ngừng chưa dám đưa bóng sang, nhân vật chính hướng dẫn dùng chân đá nhẹ tạo nhịp tập.\",\n      \"opening_function_vi\": \"Mở đầu bằng quả bóng nằm yên dưới chân bạn và sự ngập ngừng chưa dám chuyền.\",\n      \"learner_outcome_vi\": \"Người học hiểu rõ nghĩa hành động 'đá' của KICK và nói được câu 'Kick the ball to me.'.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Huy\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single light-yellow short-sleeve shirt (#FDFD96).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Quả bóng dừng lại\",\n          \"narration\": \"Quả bóng da nằm yên dưới chân Huy. Huy đứng tần ngần nhìn tôi, chưa dám chuyền sang. Tôi lùi lại hai bước, đưa tay vẫy: \\\"Kick the ball to me.\\\" Đá bóng cho tôi nhé.\",\n          \"purpose_en\": \"Establish the hesitation and introduce the first model sentence requesting a foot kick pass.\",\n          \"visual_en\": \"Wide shot of a damp dirt courtyard. A black-and-white soccer ball rests motionless by the friend's sneakers. The mascot steps back two paces, opening arms in a ready receiving stance.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Đón bóng bằng chân\",\n          \"narration\": \"Huy co chân đá nhẹ, quả bóng lăn êm qua vũng nước nhỏ. Tôi đón bóng bằng má trong bàn chân thật gọn gàng: \\\"I can kick the ball.\\\" Tôi có thể đá bóng.\",\n          \"purpose_en\": \"Demonstrate the second model sentence showing foot contact and ability.\",\n          \"visual_en\": \"Medium shot of the mascot cushioning the rolling soccer ball with the inside of the right foot, stopping it neatly on the dry patch of dirt.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Mở rộng góc chuyền\",\n          \"narration\": \"Huy bớt lo lắng, bước lên một nhịp để mở góc đón. Tôi cẩn thận chỉnh bóng ra giữa hai mũi giày, mắt nhìn thẳng vào vị trí chân Huy đang chờ.\",\n          \"purpose_en\": \"Depict developing rhythm and mutual coordination.\",\n          \"visual_en\": \"Two-shot showing the friend shifting stance to receive, while the mascot lines up the ball cleanly between both sneakers.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Gọi một đường chuyền\",\n          \"narration\": \"Bạn muốn nhắc Huy dùng chân đưa bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Prompt the learner to produce the imperative Kick the ball to me.\",\n          \"visual_en\": \"Medium close-up of the mascot gesturing downward toward the ground, looking forward with attentive eyes.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"______ the ball to me.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Nhịp tập đều đặn\",\n          \"narration\": \"\\\"Kick the ball to me.\\\" Đá bóng cho tôi nhé. Huy mỉm cười vung chân chuyền tiếp. Quả bóng lăn qua lại giữa hai đôi giày vải sờn gót đều đặn.\",\n          \"purpose_en\": \"Provide the model answer and close with successful continuous passing.\",\n          \"visual_en\": \"Wide tracking shot of the ball rolling smoothly between the two figures, who pass back and forth with relaxed, confident smiles.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-throw-script-408\",\n      \"title\": \"Bóng Nỉ Dưới Giàn Mướp\",\n      \"plot_vi\": \"Hai chị em chơi chuyền bóng nỉ ở góc vườn có giàn leo thấp; người chị sợ bóng vướng giàn cây, người em hướng dẫn ném ngang tay vừa tầm.\",\n      \"opening_function_vi\": \"Mở đầu bằng quả bóng nỉ nằm im trong tay và ánh mắt lo ngại giàn cây vướng víu.\",\n      \"learner_outcome_vi\": \"Người học hiểu rõ nghĩa 'ném' của THROW và nói được câu 'Throw the ball to me.'.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Mai\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-lilac short-sleeve shirt (#D8B4F8).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Ngập ngừng tay ném\",\n          \"narration\": \"Quả bóng nỉ màu vàng nằm trong tay Mai. Mai nhìn giàn cây thấp sau lưng tôi ngập ngừng. Tôi mở hai lòng bàn tay đón: \\\"Throw the ball to me.\\\" Ném bóng cho tôi nhé.\",\n          \"purpose_en\": \"Introduce the garden setting with overhead trellis and present the first model sentence for throwing.\",\n          \"visual_en\": \"Eye-level medium shot in a garden with a bamboo trellis overhead. The cousin holds a yellow felt tennis ball with both hands, glancing upward anxiously. The mascot stands ten feet away with open cupped hands.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Đường ném ngang ngực\",\n          \"narration\": \"Thấy Mai vung tay hơi mạnh, tôi khẽ nhắc nhở: \\\"Don't throw it too high.\\\" Đừng ném nó quá cao. Mai hạ cánh tay xuống ngang ngực, ném một đường thẳng vừa tầm.\",\n          \"purpose_en\": \"Deliver the second model sentence controlling trajectory and safety.\",\n          \"visual_en\": \"Medium shot of the cousin lowering her throwing elbow to shoulder height, releasing the yellow ball in a flat, gentle arc toward the mascot.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Đón trọn đường bóng\",\n          \"narration\": \"Quả bóng nỉ đáp gọn vào lòng bàn tay tôi. Tôi không vội tung mạnh trả lại mà giữ bóng một nhịp, đợi Mai lùi lại chỗ đất bằng phẳng hơn.\",\n          \"purpose_en\": \"Illustrate considerate play and prop control.\",\n          \"visual_en\": \"Close shot of the mascot's hands closing securely around the yellow ball. The cousin takes two steps back onto level ground.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Nhờ ném lại\",\n          \"narration\": \"Bạn muốn giục Mai dùng tay ném bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé.\",\n          \"purpose_en\": \"Prompt the learner to produce Throw the ball to me.\",\n          \"visual_en\": \"Medium shot of the mascot holding hands outstretched in front of chest, looking directly forward.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"______ the ball to me.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Chuyền tay dưới bóng râm\",\n          \"narration\": \"\\\"Throw the ball to me.\\\" Ném bóng cho tôi nhé. Mai mỉm cười tung bóng nhẹ qua khoảng sân nhỏ. Hai chị em cứ thế chuyền tay nhau dưới bóng râm mát dịu.\",\n          \"purpose_en\": \"Confirm the target sentence and conclude with smooth, enjoyable tossing.\",\n          \"visual_en\": \"Wide shot under the bamboo garden trellis. The cousin tosses the ball smoothly across the space into the mascot's hands, with dappled green shadows on the ground.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-catch-script-409\",\n      \"title\": \"Bàn Tay Đón Bóng\",\n      \"plot_vi\": \"Hai bạn tập bắt bóng quần vợt cũ; nhân vật chính từng sợ tuột tay nay vượt qua e ngại, chụm tay bắt gọn quả bóng bay tới.\",\n      \"opening_function_vi\": \"Mở đầu bằng quả bóng bay tới ngực và nỗ lực không lùi bước của người bắt.\",\n      \"learner_outcome_vi\": \"Người học nhận diện nghĩa 'bắt được' của CATCH và nói được câu 'I can catch it.'.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Lâm\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single soft-orange short-sleeve shirt (#FFCC99).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Bóng bay về phía ngực\",\n          \"narration\": \"Quả bóng nỉ bay thẳng về phía ngực tôi. Lâm đứng bên kia sân gạch gọi với sang: \\\"Catch the ball!\\\" Bắt lấy bóng! Tôi hơi chớp mắt nhưng không lùi bước chân nào.\",\n          \"purpose_en\": \"Establish tension with the incoming ball and introduce the imperative model sentence Catch the ball!.\",\n          \"visual_en\": \"Medium-wide shot of a brick courtyard. A worn tennis ball flies through mid-air toward the mascot, who braces both feet firmly on the ground with hands raising up.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Bóng nằm trong tay\",\n          \"narration\": \"Tôi chụm hai bàn tay đón lấy, quả bóng nảy nhẹ rồi nằm yên trong lòng bàn tay. Tôi giơ cao bóng khoe Lâm: \\\"I can catch it.\\\" Tôi có thể bắt được nó.\",\n          \"purpose_en\": \"Provide the second model sentence demonstrating successful hand capture.\",\n          \"visual_en\": \"Close-up of the mascot's two stick hands firmly enclosing the tennis ball at chest height, then holding it aloft with a proud, relieved nod.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Đứng vững hai chân\",\n          \"narration\": \"Lâm gật đầu cười, không còn vẻ sốt ruột lo tôi làm rơi bóng xuống rãnh nước nữa. Tôi vuốt lại lớp nỉ sờn trên quả bóng, đứng vững hai chân hơn.\",\n          \"purpose_en\": \"Show relief and growing confidence between the two friends.\",\n          \"visual_en\": \"Medium shot of the friend lowering raised shoulders and giving a nod of approval across the brick yard, while the mascot stands balanced.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Khẳng định làm được\",\n          \"narration\": \"Giữ được bóng trong tay rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình bắt được bóng nhé.\",\n          \"purpose_en\": \"Prompt the learner to produce I can catch it.\",\n          \"visual_en\": \"Close shot of the mascot holding the ball firmly in both palms at chest level, looking forward.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"I can ______ it.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Tiếp tục bài tập\",\n          \"narration\": \"\\\"I can catch it.\\\" Tôi có thể bắt được nó. Lâm vỗ hai tay tán thưởng rồi lùi thêm một bước. Hai đứa lại tiếp tục bài tập chuyền bóng cho nhau.\",\n          \"purpose_en\": \"Deliver the model answer and seal the small personal triumph.\",\n          \"visual_en\": \"Wide shot of the courtyard. The friend claps lightly, stepping back to extend the distance as the practice resumes with steady ease.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-run-script-410\",\n      \"title\": \"Chạy Tới Cọc Mốc\",\n      \"plot_vi\": \"Hai anh em chạy bộ trong ngõ xóm; người em hay hấp tấp chạy nhanh dẫn đến kiệt sức, người anh đặt cọc mốc ngắn để cùng rèn nhịp chạy chậm vừa sức.\",\n      \"opening_function_vi\": \"Mở đầu bằng chiếc chóp nón nhựa đỏ và hành động giữ vai người em khi cậu bé sắp lao đi.\",\n      \"learner_outcome_vi\": \"Người học nhận biết nghĩa 'chạy bằng chân' của RUN và nói được câu 'Let's run to the cone.'.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Khoa\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single muted-green short-sleeve shirt (#A0C49D).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Chiếc cọc trước mặt\",\n          \"narration\": \"Chiếc nón nhựa đỏ đặt cách mười mét trên đường ngõ. Thấy Khoa chuẩn bị lao vút đi, tôi khẽ giữ vai em lại: \\\"Let's run to the cone.\\\" Cùng chạy tới chiếc cọc nhé.\",\n          \"purpose_en\": \"Introduce the alleyway running marker, restrain over-eager pacing, and present the first model sentence.\",\n          \"visual_en\": \"Wide perspective shot down a paved village lane. A bright red plastic cone sits ten meters ahead on the clean pavement. The mascot rests a hand on the younger cousin's shoulder to pause him.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Bước chân vừa sức\",\n          \"narration\": \"Khoa nhìn theo tay tôi chỉ rồi giảm bớt đà bước. Tôi vỗ nhẹ lưng em, bước những nhịp ngắn đều đặn: \\\"I can run slowly.\\\" Tôi có thể chạy chậm.\",\n          \"purpose_en\": \"Establish pacing with the second model sentence showing controlled running speed.\",\n          \"visual_en\": \"Side profile medium shot of both figures jogging side by side with easy, measured foot strikes, keeping their shoulders relaxed.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Song hành trên ngõ\",\n          \"narration\": \"Hai anh em chạy song song trên nền gạch sạch, tiếng giày vải gõ nhịp nhàng. Khoa không còn cắm đầu thở dốc mà nhìn về chiếc nón nhựa phía trước.\",\n          \"purpose_en\": \"Show the harmonious progress toward the visual target.\",\n          \"visual_en\": \"Tracking medium shot from slightly ahead. The two figures jog in unison, their sneakers tapping cleanly on the brick lane as the red cone draws closer.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Cùng rủ tới đích\",\n          \"narration\": \"Bạn muốn rủ Khoa cùng chạy bước chậm tới chiếc cọc mốc trước mặt. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé.\",\n          \"purpose_en\": \"Prompt the learner to invite the partner with Let's run to the cone.\",\n          \"visual_en\": \"Close-up of the mascot pointing forward along the path toward the visible red cone with a welcoming expression.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"Let's ______ to the cone.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Về đích thong thả\",\n          \"narration\": \"\\\"Let's run to the cone.\\\" Cùng chạy tới chiếc cọc nhé. Cả hai cùng chạm chân tới chiếc nón đỏ, rồi thong thả đi bộ thêm một vòng quanh gốc cây.\",\n          \"purpose_en\": \"Verify the model sentence and conclude with an unhurried, healthy cooldown.\",\n          \"visual_en\": \"Wide shot at the cone marker. Both figures touch the cone with their shoes together, slowing down to a calm walk under a shading banyan tree.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-jump-script-411\",\n      \"title\": \"Vạch Phấn Thử Thách\",\n      \"plot_vi\": \"Hai bạn học vẽ vạch phấn thử tài bật nhảy trên sân trường vắng; sau chút do dự vì sợ trượt chân, nhân vật chính dứt khoát nhảy qua an toàn.\",\n      \"opening_function_vi\": \"Mở đầu bằng vạch phấn trắng trên sân gạch và ánh mắt thách thức thân thiện.\",\n      \"learner_outcome_vi\": \"Người học nắm vững nghĩa 'nhảy' của JUMP và nói được câu 'I can jump over it.'.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Đức\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single soft-brown short-sleeve shirt (#C4A484).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Vạch phấn trắng ngang sân\",\n          \"narration\": \"Vạch phấn trắng nằm ngang mặt sân gạch. Đức đứng bên kia vạch, hơi nghiêng đầu nhìn tôi thách thức: \\\"Can you jump over the line?\\\" Bạn nhảy qua vạch được không?\",\n          \"purpose_en\": \"Set the challenge across the chalk line and introduce the question model sentence with jump.\",\n          \"visual_en\": \"Eye-level medium shot of an empty brick schoolyard. A straight white chalk line divides the foreground from the background. The friend stands on the far side with folded arms, while the mascot looks down at the line.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Nhún chân qua vạch\",\n          \"narration\": \"Tôi cúi xuống buộc lại dây giày cho chặt. Lấy đà hai bước, tôi nhún chân bật người qua vạch: \\\"I can jump over it.\\\" Tôi có thể nhảy qua nó.\",\n          \"purpose_en\": \"Demonstrate the second model sentence showing the jumping action over the line.\",\n          \"visual_en\": \"Side view capturing the mascot in mid-air, knees bent and feet airborne clear above the white chalk mark drawn on the brick ground.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Tiếp đất an toàn\",\n          \"narration\": \"Hai bàn chân tôi tiếp đất gọn gàng phía bên kia, không hề chạm vào bụi phấn trắng. Đức cúi nhìn vạch kẻ rồi khẽ gật đầu đồng ý.\",\n          \"purpose_en\": \"Prove clean success with physical evidence of untouched chalk dust.\",\n          \"visual_en\": \"Close shot of the mascot's shoes landing cleanly on red bricks two inches past the intact, unbroken white chalk line. The friend bends down to inspect.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Nói về khả năng của mình\",\n          \"narration\": \"Đứng bên kia vạch rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình nhảy qua được để Đức nghe nhé.\",\n          \"purpose_en\": \"Prompt the learner to express capability using I can jump over it.\",\n          \"visual_en\": \"Medium shot of the mascot standing tall on the other side of the chalk line, facing forward with a steady posture.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"I can ______ over it.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Đổi lượt chơi mới\",\n          \"narration\": \"\\\"I can jump over it.\\\" Tôi có thể nhảy qua nó. Đức mỉm cười bước lại đầu vạch phấn, nhặt mẩu phấn lên kẻ thêm một nấc thử thách mới.\",\n          \"purpose_en\": \"Reiterate the model sentence and conclude with mutual engagement.\",\n          \"visual_en\": \"Wide shot of the yard. The friend picks up the chalk stub, smiling as he steps back to draw a second line for his own turn.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-swim-script-412\",\n      \"title\": \"Bên Làn Nước Bể Bơi\",\n      \"plot_vi\": \"Hai bạn đến bể bơi công cộng; nhân vật chính ôm phao ngập ngừng trước độ sâu của nước, bạn hỏi thăm để cùng bắt đầu bơi chậm rãi ở vùng nước nông.\",\n      \"opening_function_vi\": \"Mở đầu bằng làn nước bể bơi lăn tăn và chiếc phao ôm chặt trong tay.\",\n      \"learner_outcome_vi\": \"Người học nắm rõ nghĩa 'bơi' của SWIM và nói được câu khẳng định 'Yes, I can swim.'.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Nam\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single muted-teal short-sleeve shirt (#80BBB5).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Gợn sóng lăn tăn\",\n          \"narration\": \"Mặt nước bể bơi gợn sóng lăn tăn. Thấy tôi ôm khư khư chiếc phao bơi màu vàng bên mép bể, Nam quay sang hỏi nhỏ: \\\"Can you swim?\\\" Bạn có biết bơi không?\",\n          \"purpose_en\": \"Introduce the poolside setting, initial hesitation, and the first model question asking about swimming capability.\",\n          \"visual_en\": \"Wide shot of a public pool with clean blue water rippling gently. The mascot stands at the tiled edge holding a yellow foam kickboard tightly against chest. The friend stands nearby, looking over with gentle inquiry.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Bước xuống làn nước\",\n          \"narration\": \"Tôi đặt chiếc phao xốp xuống bậc gạch khô, bước từng bước xuống làn nước ngang hông rồi ngẩng lên: \\\"Yes, I can swim.\\\" Vâng, tôi biết bơi.\",\n          \"purpose_en\": \"Present the second model sentence showing willingness and actual swimming capability.\",\n          \"visual_en\": \"Medium shot of the mascot setting the kickboard on the dry tiled deck, stepping down the shallow submerged pool stairs into waist-deep water.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Đạp chân lướt nước\",\n          \"narration\": \"Nam bước xuống bậc thang cạnh tôi, giữ một khoảng cách vừa đủ để quan sát. Tôi hít một hơi sâu, khẽ đạp chân lướt một quãng ngắn dọc bờ bể.\",\n          \"purpose_en\": \"Show supportive companionship and the physical action of swimming.\",\n          \"visual_en\": \"Side view at water level. The friend watches from the steps as the mascot glides smoothly along the pool wall with gentle flutter kicks.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Trả lời câu hỏi của bạn\",\n          \"narration\": \"Nam đang đứng đợi câu trả lời rõ ràng từ bạn. Hãy nói bằng tiếng Anh câu khẳng định mình biết bơi nhé.\",\n          \"purpose_en\": \"Prompt the learner to produce Yes, I can swim.\",\n          \"visual_en\": \"Close-up of the mascot standing in shallow water, water line at waist, looking forward with calm eyes.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"Yes, I can ______.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Sóng đôi bơi sớm\",\n          \"narration\": \"\\\"Yes, I can swim.\\\" Vâng, tôi biết bơi. Nam mỉm cười gật đầu, đưa tay chỉ về phía làn bơi vắng. Hai đứa thong thả bơi cạnh nhau trong buổi sớm.\",\n          \"purpose_en\": \"Confirm the model answer and finish with tranquil, shared swimming.\",\n          \"visual_en\": \"Wide shot of the pool in soft morning light. The two figures swim leisurely side by side down the quiet shallow lane.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    },\n    {\n      \"job\": \"vocab-ball-script-413\",\n      \"title\": \"Quả Bóng Dưới Gầm Ghế\",\n      \"plot_vi\": \"Hai bạn ra sân tập bóng nhưng mở túi chỉ thấy khăn lau; sau khi tìm thấy quả bóng kẹt dưới gầm ghế đá, họ chuyền tay nhau bắt đầu buổi tập.\",\n      \"opening_function_vi\": \"Mở đầu bằng chiếc túi mở toang chỉ có khăn lau mồ hôi trên ghế đá.\",\n      \"learner_outcome_vi\": \"Người học nắm chắc nghĩa 'quả bóng' của BALL và nói được câu 'Please pass me the ball.'.\",\n      \"characters\": [\n        {\n          \"id\": \"CH01\",\n          \"name_vi\": \"Tôi\",\n          \"appearance_en\": \"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\n          \"outfit_en\": \"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"\n        },\n        {\n          \"id\": \"CH02\",\n          \"name_vi\": \"Vinh\",\n          \"appearance_en\": \"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\n          \"outfit_en\": \"Single soft-red short-sleeve shirt (#E57373).\"\n        }\n      ],\n      \"scenes\": [\n        {\n          \"scene_id\": \"SC01\",\n          \"title_vi\": \"Chiếc túi trống trơn\",\n          \"narration\": \"Chiếc túi vải mở toang trên ghế đá. Trong túi chỉ còn chiếc khăn lau mồ hôi. Tôi ngó quanh khoảng sân vắng, cất tiếng hỏi: \\\"Where is the ball?\\\" Quả bóng ở đâu?\",\n          \"purpose_en\": \"Introduce the missing sports prop and deliver the first model question asking for the ball.\",\n          \"visual_en\": \"Eye-level medium shot of an outdoor stone park bench. An open canvas gym bag reveals only a folded white towel inside. The mascot looks around the gravel court with searching hands.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC02\",\n          \"title_vi\": \"Góc khuất gầm ghế\",\n          \"narration\": \"Vinh cúi người nhìn xuống gầm ghế đá rêu phong, thấy quả bóng da đang nằm kẹt ở góc. Tôi đưa hai tay ra chờ đợi: \\\"Please pass me the ball.\\\" Làm ơn chuyền bóng cho tôi.\",\n          \"purpose_en\": \"Locate the ball and introduce the second model sentence requesting it.\",\n          \"visual_en\": \"Low-angle shot. The friend crouches down beside the stone bench leg, spotting a patterned soccer ball wedged underneath. The mascot stands nearby with cupped waiting hands.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC03\",\n          \"title_vi\": \"Lau vội lớp bụi da\",\n          \"narration\": \"Vinh khom lưng luồn tay kéo quả bóng ra ngoài. Cậu ấy lấy vạt áo lau vội lớp bụi bám trên vỏ da, rồi ngẩng đầu nhìn về phía tôi đang đứng chờ.\",\n          \"purpose_en\": \"Depict the practical retrieval and preparation of the ball.\",\n          \"visual_en\": \"Medium shot of the friend pulling the ball from beneath the stone seat, wiping gray dust off the leather surface with a quick motion.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        },\n        {\n          \"scene_id\": \"SC04\",\n          \"title_vi\": \"Nhờ đưa bóng\",\n          \"narration\": \"Bạn muốn nhờ Vinh đưa quả bóng dưới gầm ghế sang cho mình. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé.\",\n          \"purpose_en\": \"Prompt the learner to produce Please pass me the ball.\",\n          \"visual_en\": \"Close shot of the mascot gesturing toward the ball with both open hands, waiting patiently.\",\n          \"character_ids\": [\"CH01\"],\n          \"practice_pause_seconds\": 4,\n          \"stem\": \"Please pass me the ______.\"\n        },\n        {\n          \"scene_id\": \"SC05\",\n          \"title_vi\": \"Bóng về đúng chỗ\",\n          \"narration\": \"\\\"Please pass me the ball.\\\" Làm ơn chuyền bóng cho tôi. Vinh mỉm cười ném nhẹ quả bóng vào lòng bàn tay tôi. Hai đứa cùng bước ra giữa khoảng sân râm mát.\",\n          \"purpose_en\": \"Confirm the sentence and transition smoothly into the ready practice session.\",\n          \"visual_en\": \"Wide shot of the court. The friend underhand-tosses the clean ball directly into the mascot's hands, and both walk together out onto the shaded playing area.\",\n          \"character_ids\": [\"CH01\", \"CH02\"],\n          \"practice_pause_seconds\": 0\n        }\n      ]\n    }\n  ]\n}\n{\"episodes\":[{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Bình\",\"outfit_en\":\"Single light-yellow short-sleeve shirt (#FDFD96).\"}],\"job\":\"vocab-point-script-404\",\"learner_outcome_vi\":\"Người học nhận biết nghĩa 'điểm số' của POINT và nói được câu 'I have two points.' khi đếm điểm.\",\"opening_function_vi\":\"Mở đầu bằng tình huống ném túi đậu sát mép hộp và câu hỏi phân định điểm số thực tế.\",\"plot_vi\":\"Hai người bạn chơi ném túi vải vào hộp giấy ngoài hiên; sau lần ném chạm mép gây tranh cãi, họ thống nhất ghi rõ từng điểm số lên mặt sân để tiếp tục cuộc chơi.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chiếc túi vải rơi trúng mép hộp giấy. Tôi nhặt lên, chưa biết có tính lượt này không. Bình chỉ ngón tay vào vạch viền: \\\"That's one point.\\\" Đó là một điểm.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the game setting, the disputed hit, and the first model sentence showing the core meaning of point as a score unit.\",\"scene_id\":\"SC01\",\"title_vi\":\"Chiếc túi chạm mép\",\"visual_en\":\"Wide eye-level shot of a front porch. A cardboard box sits on the ground with a chalk target line. A beanbag rests half on the cardboard edge. The friend bends down, pointing a stick finger at the chalk edge while the mascot watches attentively.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bình lấy viên phấn trắng vạch một gạch lên nền xi măng. Lượt sau, tôi ném chiếc túi đỏ lọt hẳn vào trong. Tôi chỉ tay vào hai vạch phấn: \\\"I have two points.\\\" Tôi có hai điểm.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Establish score tracking and present the second model sentence with plural points.\",\"scene_id\":\"SC02\",\"title_vi\":\"Vạch phấn thứ hai\",\"visual_en\":\"Medium shot of the porch floor. Two distinct white chalk tally marks are drawn side by side on gray concrete. The mascot stands beside the box, pointing clearly at the two tally marks with an open palm while the friend holds a chalk piece.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Gió thổi bay chiếc hộp lệch đi một chút. Bình chạy lại kê thêm cục gạch giữ mép hộp, rồi nhặt túi vải đưa cho tôi ném tiếp thay vì đòi đổi lượt ngay.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deepen the mutual care and patience between the two players through physical prop adjustment.\",\"scene_id\":\"SC03\",\"title_vi\":\"Giữ chặt mép hộp\",\"visual_en\":\"Medium shot of the friend placing a heavy red brick firmly against the back base of the cardboard box to stabilize it against the breeze. The mascot holds two beanbags, waiting patiently.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Bạn muốn cùng tôi xác nhận số điểm mình vừa ghi sau hai lượt ném trúng. Điền từ còn thiếu vào câu nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to recall and speak the plural target word points in a complete sentence.\",\"scene_id\":\"SC04\",\"stem\":\"I have two ______.\",\"title_vi\":\"Đếm điểm của bạn\",\"visual_en\":\"Close-up shot focused on the two chalk tally marks on the pavement next to the secured box. The mascot gestures invitingly toward the score marks with an encouraging stance.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"I have two points.\\\" Tôi có hai điểm. Bình gật đầu, vạch thêm dấu thứ ba cho tôi. Chúng tôi ngồi bệt xuống bậc thềm, chia nhau cốc nước trà mẹ vừa rót.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver the correct sentence model and conclude with a modest, earned friendly payoff.\",\"scene_id\":\"SC05\",\"title_vi\":\"Ấm áp hiên nhà\",\"visual_en\":\"Wide shot of the porch. The friend finishes drawing a third chalk mark, then sits down on the stone step next to the mascot. A ceramic cup of warm tea sits between them on the step.\"}],\"title\":\"Vạch Phấn Tính Điểm\"},{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"An\",\"outfit_en\":\"Single light-green short-sleeve shirt (#98D8AA).\"}],\"job\":\"vocab-rule-script-405\",\"learner_outcome_vi\":\"Người học hiểu rõ nghĩa 'luật chơi' của RULE và nói được câu hỏi 'What's the rule?'.\",\"opening_function_vi\":\"Khởi đầu bằng hành động giữ tay khi đối phương đi sai lượt trên bàn cờ giấy.\",\"plot_vi\":\"Hai bạn nhỏ chơi cờ ca-rô giấy tự chế; người này vội đi hai nước cùng lúc, người kia nhắc dừng lại hỏi rõ luật chơi để ván đấu công bằng.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Bàn cờ giấy vừa mở trên bàn gỗ. An giữ tay tôi lại khi tôi định bốc liền hai quân cờ. Tôi dừng lại, khẽ hỏi: \\\"What's the rule?\\\" Luật chơi là gì?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Present the initial conflict over gameplay turns and introduce the first model sentence asking for the game rule.\",\"scene_id\":\"SC01\",\"title_vi\":\"Nước cờ vội vã\",\"visual_en\":\"Eye-level medium shot of a simple wooden table. A hand-drawn grid on paper lies flat between the two figures. The friend gently places a hand over the mascot's wrist before two black stone pieces are placed at once.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"An chỉ vào tờ giấy nháp ghi vội nét bút chì bên cạnh. An bảo mỗi lượt chỉ được đặt một quân, rồi cười: \\\"Let's follow the rules.\\\" Cùng tuân theo luật chơi nhé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Demonstrate the second model sentence emphasizing adherence to the agreed game rules.\",\"scene_id\":\"SC02\",\"title_vi\":\"Mỗi lượt một quân\",\"visual_en\":\"Over-the-shoulder shot showing the friend pointing a pencil tip at a small note sheet where simple numbered game steps are sketched. The mascot listens and pulls one stone back into the lid.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi trả lại quân cờ thừa vào nắp hộp. Ngồi thẳng lưng, tôi nhìn kỹ từng ô vuông trên mặt giấy thay vì vội vàng xáo trộn bàn chơi như những lần trước.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show internal adjustment and respect for the game through careful, deliberate action.\",\"scene_id\":\"SC03\",\"title_vi\":\"Ngay ngắn lượt đi\",\"visual_en\":\"Medium shot of the mascot sitting upright, placing a single round stone neatly inside one square of the paper grid with calm concentration.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Gặp trò mới chưa rõ cách chơi, bạn hãy hỏi bạn mình bằng tiếng Anh để cùng thống nhất nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to produce the question What's the rule? in a conversational context.\",\"scene_id\":\"SC04\",\"stem\":\"What's the ______?\",\"title_vi\":\"Hỏi rõ trước khi chơi\",\"visual_en\":\"Close shot of the paper board and the two hands hovering above the grid. The mascot looks toward the viewer with an open, questioning posture.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"What's the rule?\\\" Luật chơi là gì? An mỉm cười giải thích cách chặn góc. Nắng chiều hắt qua song cửa, hai đứa chậm rãi suy nghĩ từng nước đi tiếp theo.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm the question sentence and show the tranquil, earned resolution of fair play.\",\"scene_id\":\"SC05\",\"title_vi\":\"Nước cờ thong thả\",\"visual_en\":\"Wide shot of the room. Warm afternoon sunlight falls across the wooden table. Both figures lean over the paper board, each holding a single game piece in turn.\"}],\"title\":\"Bàn Cờ Giấy Mới\"},{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Dũng\",\"outfit_en\":\"Single soft-orange short-sleeve shirt (#FFB380).\"}],\"job\":\"vocab-goal-script-406\",\"learner_outcome_vi\":\"Người học nắm vững nghĩa 'bàn thắng' của GOAL và nói được câu 'Our team scored a goal.'.\",\"opening_function_vi\":\"Mở đầu bằng tiếng còi và khoảnh khắc bóng bay vào lưới khi người em vừa cúi xuống.\",\"plot_vi\":\"Hai anh em xem trận bóng giao hữu ở bãi đất xóm; người em mải nhặt dép nên bỏ lỡ bàn thắng, người anh chỉ lại và giải thích diễn biến trên sân.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tiếng còi vang lên từ sân bóng xóm. Quả bóng bay thẳng qua vạch vôi. Dũng vừa cúi nhặt dép ngẩng lên ngơ ngác, tôi liền reo khẽ: \\\"That's a goal!\\\" Đó là một bàn thắng!\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the soccer setting, the missed moment, and the first model sentence identifying a goal.\",\"scene_id\":\"SC01\",\"title_vi\":\"Bóng qua vạch vôi\",\"visual_en\":\"Wide shot of an open dirt field with two bamboo goalposts. A soccer ball rests inside the woven net. In the foreground, the mascot points excitedly toward the net while the younger brother holds a small blue sandal.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Dũng tròn mắt nhìn lên bảng điểm treo tạm bằng bìa các-tông. Tôi vỗ vai em, chỉ vào anh tiền đạo áo xanh đang chạy về: \\\"Our team scored a goal.\\\" Đội chúng ta ghi một bàn thắng.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver the second model sentence connecting the scored goal to the team.\",\"scene_id\":\"SC02\",\"title_vi\":\"Đội nhà ghi bàn\",\"visual_en\":\"Medium shot of the two figures sitting on a wooden bench. The mascot puts an arm gently around the younger brother's shoulder, pointing toward the makeshift cardboard scoreboard showing 1 - 0.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Dũng kéo ghế xích lại gần tôi hơn. Cậu bé không nhìn vu vơ nữa mà chăm chú theo dõi từng đường chuyền bóng ngắn trên bãi cỏ trước mặt.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show the change in the younger brother's engagement and shared bond.\",\"scene_id\":\"SC03\",\"title_vi\":\"Theo dõi từng đường bóng\",\"visual_en\":\"Side view of the bench. The younger brother pulls his wooden stool closer to the mascot, resting both elbows on his knees while watching the field intently.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Dũng hỏi chuyện vừa xảy ra ở khung thành. Bạn nói giúp tôi câu báo đội mình đã ghi bàn nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to produce the sentence Our team scored a goal.\",\"scene_id\":\"SC04\",\"stem\":\"Our team scored a ______.\",\"title_vi\":\"Kể lại pha lập công\",\"visual_en\":\"Close-up of the mascot leaning forward with an encouraging smile, gesturing toward the open field.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Our team scored a goal.\\\" Đội chúng ta ghi một bàn thắng. Dũng cười tít mắt, vỗ hai bàn tay nhỏ vào nhau. Hai anh em tiếp tục ngồi sát bên xem hiệp hai.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Reinforce the model sentence and provide a quiet, affectionate ending.\",\"scene_id\":\"SC05\",\"title_vi\":\"Niềm vui bên lề sân\",\"visual_en\":\"Wide shot of the sideline. The younger brother claps his hands happily, sitting side by side with the mascot under the shade of a melaleuca tree.\"}],\"title\":\"Khung Thành Sân Bãi\"},{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Huy\",\"outfit_en\":\"Single light-yellow short-sleeve shirt (#FDFD96).\"}],\"job\":\"vocab-kick-script-407\",\"learner_outcome_vi\":\"Người học hiểu rõ nghĩa hành động 'đá' của KICK và nói được câu 'Kick the ball to me.'.\",\"opening_function_vi\":\"Mở đầu bằng quả bóng nằm yên dưới chân bạn và sự ngập ngừng chưa dám chuyền.\",\"plot_vi\":\"Hai bạn tập chuyền bóng trên mảnh sân sau cơn mưa; bạn ngập ngừng chưa dám đưa bóng sang, nhân vật chính hướng dẫn dùng chân đá nhẹ tạo nhịp tập.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Quả bóng da nằm yên dưới chân Huy. Huy đứng tần ngần nhìn tôi, chưa dám chuyền sang. Tôi lùi lại hai bước, đưa tay vẫy: \\\"Kick the ball to me.\\\" Đá bóng cho tôi nhé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Establish the hesitation and introduce the first model sentence requesting a foot kick pass.\",\"scene_id\":\"SC01\",\"title_vi\":\"Quả bóng dừng lại\",\"visual_en\":\"Wide shot of a damp dirt courtyard. A black-and-white soccer ball rests motionless by the friend's sneakers. The mascot steps back two paces, opening arms in a ready receiving stance.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Huy co chân đá nhẹ, quả bóng lăn êm qua vũng nước nhỏ. Tôi đón bóng bằng má trong bàn chân thật gọn gàng: \\\"I can kick the ball.\\\" Tôi có thể đá bóng.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Demonstrate the second model sentence showing foot contact and ability.\",\"scene_id\":\"SC02\",\"title_vi\":\"Đón bóng bằng chân\",\"visual_en\":\"Medium shot of the mascot cushioning the rolling soccer ball with the inside of the right foot, stopping it neatly on the dry patch of dirt.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Huy bớt lo lắng, bước lên một nhịp để mở góc đón. Tôi cẩn thận chỉnh bóng ra giữa hai mũi giày, mắt nhìn thẳng vào vị trí chân Huy đang chờ.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Depict developing rhythm and mutual coordination.\",\"scene_id\":\"SC03\",\"title_vi\":\"Mở rộng góc chuyền\",\"visual_en\":\"Two-shot showing the friend shifting stance to receive, while the mascot lines up the ball cleanly between both sneakers.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Bạn muốn nhắc Huy dùng chân đưa bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to produce the imperative Kick the ball to me.\",\"scene_id\":\"SC04\",\"stem\":\"______ the ball to me.\",\"title_vi\":\"Gọi một đường chuyền\",\"visual_en\":\"Medium close-up of the mascot gesturing downward toward the ground, looking forward with attentive eyes.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Kick the ball to me.\\\" Đá bóng cho tôi nhé. Huy mỉm cười vung chân chuyền tiếp. Quả bóng lăn qua lại giữa hai đôi giày vải sờn gót đều đặn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide the model answer and close with successful continuous passing.\",\"scene_id\":\"SC05\",\"title_vi\":\"Nhịp tập đều đặn\",\"visual_en\":\"Wide tracking shot of the ball rolling smoothly between the two figures, who pass back and forth with relaxed, confident smiles.\"}],\"title\":\"Đường Chuyền Đầu Tiên\"},{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Mai\",\"outfit_en\":\"Single pale-lilac short-sleeve shirt (#D8B4F8).\"}],\"job\":\"vocab-throw-script-408\",\"learner_outcome_vi\":\"Người học hiểu rõ nghĩa 'ném' của THROW và nói được câu 'Throw the ball to me.'.\",\"opening_function_vi\":\"Mở đầu bằng quả bóng nỉ nằm im trong tay và ánh mắt lo ngại giàn cây vướng víu.\",\"plot_vi\":\"Hai chị em chơi chuyền bóng nỉ ở góc vườn có giàn leo thấp; người chị sợ bóng vướng giàn cây, người em hướng dẫn ném ngang tay vừa tầm.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Quả bóng nỉ màu vàng nằm trong tay Mai. Mai nhìn giàn cây thấp sau lưng tôi ngập ngừng. Tôi mở hai lòng bàn tay đón: \\\"Throw the ball to me.\\\" Ném bóng cho tôi nhé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the garden setting with overhead trellis and present the first model sentence for throwing.\",\"scene_id\":\"SC01\",\"title_vi\":\"Ngập ngừng tay ném\",\"visual_en\":\"Eye-level medium shot in a garden with a bamboo trellis overhead. The cousin holds a yellow felt tennis ball with both hands, glancing upward anxiously. The mascot stands ten feet away with open cupped hands.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Thấy Mai vung tay hơi mạnh, tôi khẽ nhắc nhở: \\\"Don't throw it too high.\\\" Đừng ném nó quá cao. Mai hạ cánh tay xuống ngang ngực, ném một đường thẳng vừa tầm.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver the second model sentence controlling trajectory and safety.\",\"scene_id\":\"SC02\",\"title_vi\":\"Đường ném ngang ngực\",\"visual_en\":\"Medium shot of the cousin lowering her throwing elbow to shoulder height, releasing the yellow ball in a flat, gentle arc toward the mascot.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Quả bóng nỉ đáp gọn vào lòng bàn tay tôi. Tôi không vội tung mạnh trả lại mà giữ bóng một nhịp, đợi Mai lùi lại chỗ đất bằng phẳng hơn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Illustrate considerate play and prop control.\",\"scene_id\":\"SC03\",\"title_vi\":\"Đón trọn đường bóng\",\"visual_en\":\"Close shot of the mascot's hands closing securely around the yellow ball. The cousin takes two steps back onto level ground.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Bạn muốn giục Mai dùng tay ném bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to produce Throw the ball to me.\",\"scene_id\":\"SC04\",\"stem\":\"______ the ball to me.\",\"title_vi\":\"Nhờ ném lại\",\"visual_en\":\"Medium shot of the mascot holding hands outstretched in front of chest, looking directly forward.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Throw the ball to me.\\\" Ném bóng cho tôi nhé. Mai mỉm cười tung bóng nhẹ qua khoảng sân nhỏ. Hai chị em cứ thế chuyền tay nhau dưới bóng râm mát dịu.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm the target sentence and conclude with smooth, enjoyable tossing.\",\"scene_id\":\"SC05\",\"title_vi\":\"Chuyền tay dưới bóng râm\",\"visual_en\":\"Wide shot under the bamboo garden trellis. The cousin tosses the ball smoothly across the space into the mascot's hands, with dappled green shadows on the ground.\"}],\"title\":\"Bóng Nỉ Dưới Giàn Mướp\"},{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Lâm\",\"outfit_en\":\"Single soft-orange short-sleeve shirt (#FFCC99).\"}],\"job\":\"vocab-catch-script-409\",\"learner_outcome_vi\":\"Người học nhận diện nghĩa 'bắt được' của CATCH và nói được câu 'I can catch it.'.\",\"opening_function_vi\":\"Mở đầu bằng quả bóng bay tới ngực và nỗ lực không lùi bước của người bắt.\",\"plot_vi\":\"Hai bạn tập bắt bóng quần vợt cũ; nhân vật chính từng sợ tuột tay nay vượt qua e ngại, chụm tay bắt gọn quả bóng bay tới.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Quả bóng nỉ bay thẳng về phía ngực tôi. Lâm đứng bên kia sân gạch gọi với sang: \\\"Catch the ball!\\\" Bắt lấy bóng! Tôi hơi chớp mắt nhưng không lùi bước chân nào.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Establish tension with the incoming ball and introduce the imperative model sentence Catch the ball!.\",\"scene_id\":\"SC01\",\"title_vi\":\"Bóng bay về phía ngực\",\"visual_en\":\"Medium-wide shot of a brick courtyard. A worn tennis ball flies through mid-air toward the mascot, who braces both feet firmly on the ground with hands raising up.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi chụm hai bàn tay đón lấy, quả bóng nảy nhẹ rồi nằm yên trong lòng bàn tay. Tôi giơ cao bóng khoe Lâm: \\\"I can catch it.\\\" Tôi có thể bắt được nó.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Provide the second model sentence demonstrating successful hand capture.\",\"scene_id\":\"SC02\",\"title_vi\":\"Bóng nằm trong tay\",\"visual_en\":\"Close-up of the mascot's two stick hands firmly enclosing the tennis ball at chest height, then holding it aloft with a proud, relieved nod.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Lâm gật đầu cười, không còn vẻ sốt ruột lo tôi làm rơi bóng xuống rãnh nước nữa. Tôi vuốt lại lớp nỉ sờn trên quả bóng, đứng vững hai chân hơn.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show relief and growing confidence between the two friends.\",\"scene_id\":\"SC03\",\"title_vi\":\"Đứng vững hai chân\",\"visual_en\":\"Medium shot of the friend lowering raised shoulders and giving a nod of approval across the brick yard, while the mascot stands balanced.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Giữ được bóng trong tay rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình bắt được bóng nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to produce I can catch it.\",\"scene_id\":\"SC04\",\"stem\":\"I can ______ it.\",\"title_vi\":\"Khẳng định làm được\",\"visual_en\":\"Close shot of the mascot holding the ball firmly in both palms at chest level, looking forward.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"I can catch it.\\\" Tôi có thể bắt được nó. Lâm vỗ hai tay tán thưởng rồi lùi thêm một bước. Hai đứa lại tiếp tục bài tập chuyền bóng cho nhau.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Deliver the model answer and seal the small personal triumph.\",\"scene_id\":\"SC05\",\"title_vi\":\"Tiếp tục bài tập\",\"visual_en\":\"Wide shot of the courtyard. The friend claps lightly, stepping back to extend the distance as the practice resumes with steady ease.\"}],\"title\":\"Bàn Tay Đón Bóng\"},{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Khoa\",\"outfit_en\":\"Single muted-green short-sleeve shirt (#A0C49D).\"}],\"job\":\"vocab-run-script-410\",\"learner_outcome_vi\":\"Người học nhận biết nghĩa 'chạy bằng chân' của RUN và nói được câu 'Let's run to the cone.'.\",\"opening_function_vi\":\"Mở đầu bằng chiếc chóp nón nhựa đỏ và hành động giữ vai người em khi cậu bé sắp lao đi.\",\"plot_vi\":\"Hai anh em chạy bộ trong ngõ xóm; người em hay hấp tấp chạy nhanh dẫn đến kiệt sức, người anh đặt cọc mốc ngắn để cùng rèn nhịp chạy chậm vừa sức.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chiếc nón nhựa đỏ đặt cách mười mét trên đường ngõ. Thấy Khoa chuẩn bị lao vút đi, tôi khẽ giữ vai em lại: \\\"Let's run to the cone.\\\" Cùng chạy tới chiếc cọc nhé.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the alleyway running marker, restrain over-eager pacing, and present the first model sentence.\",\"scene_id\":\"SC01\",\"title_vi\":\"Chiếc cọc trước mặt\",\"visual_en\":\"Wide perspective shot down a paved village lane. A bright red plastic cone sits ten meters ahead on the clean pavement. The mascot rests a hand on the younger cousin's shoulder to pause him.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Khoa nhìn theo tay tôi chỉ rồi giảm bớt đà bước. Tôi vỗ nhẹ lưng em, bước những nhịp ngắn đều đặn: \\\"I can run slowly.\\\" Tôi có thể chạy chậm.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Establish pacing with the second model sentence showing controlled running speed.\",\"scene_id\":\"SC02\",\"title_vi\":\"Bước chân vừa sức\",\"visual_en\":\"Side profile medium shot of both figures jogging side by side with easy, measured foot strikes, keeping their shoulders relaxed.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hai anh em chạy song song trên nền gạch sạch, tiếng giày vải gõ nhịp nhàng. Khoa không còn cắm đầu thở dốc mà nhìn về chiếc nón nhựa phía trước.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show the harmonious progress toward the visual target.\",\"scene_id\":\"SC03\",\"title_vi\":\"Song hành trên ngõ\",\"visual_en\":\"Tracking medium shot from slightly ahead. The two figures jog in unison, their sneakers tapping cleanly on the brick lane as the red cone draws closer.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Bạn muốn rủ Khoa cùng chạy bước chậm tới chiếc cọc mốc trước mặt. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to invite the partner with Let's run to the cone.\",\"scene_id\":\"SC04\",\"stem\":\"Let's ______ to the cone.\",\"title_vi\":\"Cùng rủ tới đích\",\"visual_en\":\"Close-up of the mascot pointing forward along the path toward the visible red cone with a welcoming expression.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Let's run to the cone.\\\" Cùng chạy tới chiếc cọc nhé. Cả hai cùng chạm chân tới chiếc nón đỏ, rồi thong thả đi bộ thêm một vòng quanh gốc cây.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Verify the model sentence and conclude with an unhurried, healthy cooldown.\",\"scene_id\":\"SC05\",\"title_vi\":\"Về đích thong thả\",\"visual_en\":\"Wide shot at the cone marker. Both figures touch the cone with their shoes together, slowing down to a calm walk under a shading banyan tree.\"}],\"title\":\"Chạy Tới Cọc Mốc\"},{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Đức\",\"outfit_en\":\"Single soft-brown short-sleeve shirt (#C4A484).\"}],\"job\":\"vocab-jump-script-411\",\"learner_outcome_vi\":\"Người học nắm vững nghĩa 'nhảy' của JUMP và nói được câu 'I can jump over it.'.\",\"opening_function_vi\":\"Mở đầu bằng vạch phấn trắng trên sân gạch và ánh mắt thách thức thân thiện.\",\"plot_vi\":\"Hai bạn học vẽ vạch phấn thử tài bật nhảy trên sân trường vắng; sau chút do dự vì sợ trượt chân, nhân vật chính dứt khoát nhảy qua an toàn.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Vạch phấn trắng nằm ngang mặt sân gạch. Đức đứng bên kia vạch, hơi nghiêng đầu nhìn tôi thách thức: \\\"Can you jump over the line?\\\" Bạn nhảy qua vạch được không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Set the challenge across the chalk line and introduce the question model sentence with jump.\",\"scene_id\":\"SC01\",\"title_vi\":\"Vạch phấn trắng ngang sân\",\"visual_en\":\"Eye-level medium shot of an empty brick schoolyard. A straight white chalk line divides the foreground from the background. The friend stands on the far side with folded arms, while the mascot looks down at the line.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi cúi xuống buộc lại dây giày cho chặt. Lấy đà hai bước, tôi nhún chân bật người qua vạch: \\\"I can jump over it.\\\" Tôi có thể nhảy qua nó.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Demonstrate the second model sentence showing the jumping action over the line.\",\"scene_id\":\"SC02\",\"title_vi\":\"Nhún chân qua vạch\",\"visual_en\":\"Side view capturing the mascot in mid-air, knees bent and feet airborne clear above the white chalk mark drawn on the brick ground.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Hai bàn chân tôi tiếp đất gọn gàng phía bên kia, không hề chạm vào bụi phấn trắng. Đức cúi nhìn vạch kẻ rồi khẽ gật đầu đồng ý.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Prove clean success with physical evidence of untouched chalk dust.\",\"scene_id\":\"SC03\",\"title_vi\":\"Tiếp đất an toàn\",\"visual_en\":\"Close shot of the mascot's shoes landing cleanly on red bricks two inches past the intact, unbroken white chalk line. The friend bends down to inspect.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Đứng bên kia vạch rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình nhảy qua được để Đức nghe nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to express capability using I can jump over it.\",\"scene_id\":\"SC04\",\"stem\":\"I can ______ over it.\",\"title_vi\":\"Nói về khả năng của mình\",\"visual_en\":\"Medium shot of the mascot standing tall on the other side of the chalk line, facing forward with a steady posture.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"I can jump over it.\\\" Tôi có thể nhảy qua nó. Đức mỉm cười bước lại đầu vạch phấn, nhặt mẩu phấn lên kẻ thêm một nấc thử thách mới.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Reiterate the model sentence and conclude with mutual engagement.\",\"scene_id\":\"SC05\",\"title_vi\":\"Đổi lượt chơi mới\",\"visual_en\":\"Wide shot of the yard. The friend picks up the chalk stub, smiling as he steps back to draw a second line for his own turn.\"}],\"title\":\"Vạch Phấn Thử Thách\"},{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Nam\",\"outfit_en\":\"Single muted-teal short-sleeve shirt (#80BBB5).\"}],\"job\":\"vocab-swim-script-412\",\"learner_outcome_vi\":\"Người học nắm rõ nghĩa 'bơi' của SWIM và nói được câu khẳng định 'Yes, I can swim.'.\",\"opening_function_vi\":\"Mở đầu bằng làn nước bể bơi lăn tăn và chiếc phao ôm chặt trong tay.\",\"plot_vi\":\"Hai bạn đến bể bơi công cộng; nhân vật chính ôm phao ngập ngừng trước độ sâu của nước, bạn hỏi thăm để cùng bắt đầu bơi chậm rãi ở vùng nước nông.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Mặt nước bể bơi gợn sóng lăn tăn. Thấy tôi ôm khư khư chiếc phao bơi màu vàng bên mép bể, Nam quay sang hỏi nhỏ: \\\"Can you swim?\\\" Bạn có biết bơi không?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the poolside setting, initial hesitation, and the first model question asking about swimming capability.\",\"scene_id\":\"SC01\",\"title_vi\":\"Gợn sóng lăn tăn\",\"visual_en\":\"Wide shot of a public pool with clean blue water rippling gently. The mascot stands at the tiled edge holding a yellow foam kickboard tightly against chest. The friend stands nearby, looking over with gentle inquiry.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Tôi đặt chiếc phao xốp xuống bậc gạch khô, bước từng bước xuống làn nước ngang hông rồi ngẩng lên: \\\"Yes, I can swim.\\\" Vâng, tôi biết bơi.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Present the second model sentence showing willingness and actual swimming capability.\",\"scene_id\":\"SC02\",\"title_vi\":\"Bước xuống làn nước\",\"visual_en\":\"Medium shot of the mascot setting the kickboard on the dry tiled deck, stepping down the shallow submerged pool stairs into waist-deep water.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Nam bước xuống bậc thang cạnh tôi, giữ một khoảng cách vừa đủ để quan sát. Tôi hít một hơi sâu, khẽ đạp chân lướt một quãng ngắn dọc bờ bể.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Show supportive companionship and the physical action of swimming.\",\"scene_id\":\"SC03\",\"title_vi\":\"Đạp chân lướt nước\",\"visual_en\":\"Side view at water level. The friend watches from the steps as the mascot glides smoothly along the pool wall with gentle flutter kicks.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Nam đang đứng đợi câu trả lời rõ ràng từ bạn. Hãy nói bằng tiếng Anh câu khẳng định mình biết bơi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to produce Yes, I can swim.\",\"scene_id\":\"SC04\",\"stem\":\"Yes, I can ______.\",\"title_vi\":\"Trả lời câu hỏi của bạn\",\"visual_en\":\"Close-up of the mascot standing in shallow water, water line at waist, looking forward with calm eyes.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Yes, I can swim.\\\" Vâng, tôi biết bơi. Nam mỉm cười gật đầu, đưa tay chỉ về phía làn bơi vắng. Hai đứa thong thả bơi cạnh nhau trong buổi sớm.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm the model answer and finish with tranquil, shared swimming.\",\"scene_id\":\"SC05\",\"title_vi\":\"Sóng đôi bơi sớm\",\"visual_en\":\"Wide shot of the pool in soft morning light. The two figures swim leisurely side by side down the quiet shallow lane.\"}],\"title\":\"Bên Làn Nước Bể Bơi\"},{\"characters\":[{\"appearance_en\":\"Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.\",\"id\":\"CH01\",\"name_vi\":\"Tôi\",\"outfit_en\":\"Single pale-blue short-sleeve crewneck shirt (#8CCFE8).\"},{\"appearance_en\":\"Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.\",\"id\":\"CH02\",\"name_vi\":\"Vinh\",\"outfit_en\":\"Single soft-red short-sleeve shirt (#E57373).\"}],\"job\":\"vocab-ball-script-413\",\"learner_outcome_vi\":\"Người học nắm chắc nghĩa 'quả bóng' của BALL và nói được câu 'Please pass me the ball.'.\",\"opening_function_vi\":\"Mở đầu bằng chiếc túi mở toang chỉ có khăn lau mồ hôi trên ghế đá.\",\"plot_vi\":\"Hai bạn ra sân tập bóng nhưng mở túi chỉ thấy khăn lau; sau khi tìm thấy quả bóng kẹt dưới gầm ghế đá, họ chuyền tay nhau bắt đầu buổi tập.\",\"scenes\":[{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Chiếc túi vải mở toang trên ghế đá. Trong túi chỉ còn chiếc khăn lau mồ hôi. Tôi ngó quanh khoảng sân vắng, cất tiếng hỏi: \\\"Where is the ball?\\\" Quả bóng ở đâu?\",\"practice_pause_seconds\":0,\"purpose_en\":\"Introduce the missing sports prop and deliver the first model question asking for the ball.\",\"scene_id\":\"SC01\",\"title_vi\":\"Chiếc túi trống trơn\",\"visual_en\":\"Eye-level medium shot of an outdoor stone park bench. An open canvas gym bag reveals only a folded white towel inside. The mascot looks around the gravel court with searching hands.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Vinh cúi người nhìn xuống gầm ghế đá rêu phong, thấy quả bóng da đang nằm kẹt ở góc. Tôi đưa hai tay ra chờ đợi: \\\"Please pass me the ball.\\\" Làm ơn chuyền bóng cho tôi.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Locate the ball and introduce the second model sentence requesting it.\",\"scene_id\":\"SC02\",\"title_vi\":\"Góc khuất gầm ghế\",\"visual_en\":\"Low-angle shot. The friend crouches down beside the stone bench leg, spotting a patterned soccer ball wedged underneath. The mascot stands nearby with cupped waiting hands.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"Vinh khom lưng luồn tay kéo quả bóng ra ngoài. Cậu ấy lấy vạt áo lau vội lớp bụi bám trên vỏ da, rồi ngẩng đầu nhìn về phía tôi đang đứng chờ.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Depict the practical retrieval and preparation of the ball.\",\"scene_id\":\"SC03\",\"title_vi\":\"Lau vội lớp bụi da\",\"visual_en\":\"Medium shot of the friend pulling the ball from beneath the stone seat, wiping gray dust off the leather surface with a quick motion.\"},{\"character_ids\":[\"CH01\"],\"narration\":\"Bạn muốn nhờ Vinh đưa quả bóng dưới gầm ghế sang cho mình. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé.\",\"practice_pause_seconds\":4,\"purpose_en\":\"Prompt the learner to produce Please pass me the ball.\",\"scene_id\":\"SC04\",\"stem\":\"Please pass me the ______.\",\"title_vi\":\"Nhờ đưa bóng\",\"visual_en\":\"Close shot of the mascot gesturing toward the ball with both open hands, waiting patiently.\"},{\"character_ids\":[\"CH01\",\"CH02\"],\"narration\":\"\\\"Please pass me the ball.\\\" Làm ơn chuyền bóng cho tôi. Vinh mỉm cười ném nhẹ quả bóng vào lòng bàn tay tôi. Hai đứa cùng bước ra giữa khoảng sân râm mát.\",\"practice_pause_seconds\":0,\"purpose_en\":\"Confirm the sentence and transition smoothly into the ready practice session.\",\"scene_id\":\"SC05\",\"title_vi\":\"Bóng về đúng chỗ\",\"visual_en\":\"Wide shot of the court. The friend underhand-tosses the clean ball directly into the mascot's hands, and both walk together out onto the shaded playing area.\"}],\"title\":\"Quả Bóng Dưới Gầm Ghế\"}],\"toolAction\":\"Completing script authoring task\",\"toolSummary\":\"Finish script generation\"}\n",
+  "duration_seconds": 119.916372913,
+  "num_turns": 2,
+  "structured_output": {
+    "episodes": [
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Bình",
+            "outfit_en": "Single light-yellow short-sleeve shirt (#FDFD96)."
+          }
+        ],
+        "job": "vocab-point-script-404",
+        "learner_outcome_vi": "Người học nhận biết nghĩa 'điểm số' của POINT và nói được câu 'I have two points.' khi đếm điểm.",
+        "opening_function_vi": "Mở đầu bằng tình huống ném túi đậu sát mép hộp và câu hỏi phân định điểm số thực tế.",
+        "plot_vi": "Hai người bạn chơi ném túi vải vào hộp giấy ngoài hiên; sau lần ném chạm mép gây tranh cãi, họ thống nhất ghi rõ từng điểm số lên mặt sân để tiếp tục cuộc chơi.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chiếc túi vải rơi trúng mép hộp giấy. Tôi nhặt lên, chưa biết có tính lượt này không. Bình chỉ ngón tay vào vạch viền: \"That's one point.\" Đó là một điểm.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the game setting, the disputed hit, and the first model sentence showing the core meaning of point as a score unit.",
+            "scene_id": "SC01",
+            "title_vi": "Chiếc túi chạm mép",
+            "visual_en": "Wide eye-level shot of a front porch. A cardboard box sits on the ground with a chalk target line. A beanbag rests half on the cardboard edge. The friend bends down, pointing a stick finger at the chalk edge while the mascot watches attentively."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bình lấy viên phấn trắng vạch một gạch lên nền xi măng. Lượt sau, tôi ném chiếc túi đỏ lọt hẳn vào trong. Tôi chỉ tay vào hai vạch phấn: \"I have two points.\" Tôi có hai điểm.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Establish score tracking and present the second model sentence with plural points.",
+            "scene_id": "SC02",
+            "title_vi": "Vạch phấn thứ hai",
+            "visual_en": "Medium shot of the porch floor. Two distinct white chalk tally marks are drawn side by side on gray concrete. The mascot stands beside the box, pointing clearly at the two tally marks with an open palm while the friend holds a chalk piece."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Gió thổi bay chiếc hộp lệch đi một chút. Bình chạy lại kê thêm cục gạch giữ mép hộp, rồi nhặt túi vải đưa cho tôi ném tiếp thay vì đòi đổi lượt ngay.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deepen the mutual care and patience between the two players through physical prop adjustment.",
+            "scene_id": "SC03",
+            "title_vi": "Giữ chặt mép hộp",
+            "visual_en": "Medium shot of the friend placing a heavy red brick firmly against the back base of the cardboard box to stabilize it against the breeze. The mascot holds two beanbags, waiting patiently."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Bạn muốn cùng tôi xác nhận số điểm mình vừa ghi sau hai lượt ném trúng. Điền từ còn thiếu vào câu nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to recall and speak the plural target word points in a complete sentence.",
+            "scene_id": "SC04",
+            "stem": "I have two ______.",
+            "title_vi": "Đếm điểm của bạn",
+            "visual_en": "Close-up shot focused on the two chalk tally marks on the pavement next to the secured box. The mascot gestures invitingly toward the score marks with an encouraging stance."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"I have two points.\" Tôi có hai điểm. Bình gật đầu, vạch thêm dấu thứ ba cho tôi. Chúng tôi ngồi bệt xuống bậc thềm, chia nhau cốc nước trà mẹ vừa rót.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver the correct sentence model and conclude with a modest, earned friendly payoff.",
+            "scene_id": "SC05",
+            "title_vi": "Ấm áp hiên nhà",
+            "visual_en": "Wide shot of the porch. The friend finishes drawing a third chalk mark, then sits down on the stone step next to the mascot. A ceramic cup of warm tea sits between them on the step."
+          }
+        ],
+        "title": "Vạch Phấn Tính Điểm"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "An",
+            "outfit_en": "Single light-green short-sleeve shirt (#98D8AA)."
+          }
+        ],
+        "job": "vocab-rule-script-405",
+        "learner_outcome_vi": "Người học hiểu rõ nghĩa 'luật chơi' của RULE và nói được câu hỏi 'What's the rule?'.",
+        "opening_function_vi": "Khởi đầu bằng hành động giữ tay khi đối phương đi sai lượt trên bàn cờ giấy.",
+        "plot_vi": "Hai bạn nhỏ chơi cờ ca-rô giấy tự chế; người này vội đi hai nước cùng lúc, người kia nhắc dừng lại hỏi rõ luật chơi để ván đấu công bằng.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Bàn cờ giấy vừa mở trên bàn gỗ. An giữ tay tôi lại khi tôi định bốc liền hai quân cờ. Tôi dừng lại, khẽ hỏi: \"What's the rule?\" Luật chơi là gì?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Present the initial conflict over gameplay turns and introduce the first model sentence asking for the game rule.",
+            "scene_id": "SC01",
+            "title_vi": "Nước cờ vội vã",
+            "visual_en": "Eye-level medium shot of a simple wooden table. A hand-drawn grid on paper lies flat between the two figures. The friend gently places a hand over the mascot's wrist before two black stone pieces are placed at once."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "An chỉ vào tờ giấy nháp ghi vội nét bút chì bên cạnh. An bảo mỗi lượt chỉ được đặt một quân, rồi cười: \"Let's follow the rules.\" Cùng tuân theo luật chơi nhé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Demonstrate the second model sentence emphasizing adherence to the agreed game rules.",
+            "scene_id": "SC02",
+            "title_vi": "Mỗi lượt một quân",
+            "visual_en": "Over-the-shoulder shot showing the friend pointing a pencil tip at a small note sheet where simple numbered game steps are sketched. The mascot listens and pulls one stone back into the lid."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi trả lại quân cờ thừa vào nắp hộp. Ngồi thẳng lưng, tôi nhìn kỹ từng ô vuông trên mặt giấy thay vì vội vàng xáo trộn bàn chơi như những lần trước.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show internal adjustment and respect for the game through careful, deliberate action.",
+            "scene_id": "SC03",
+            "title_vi": "Ngay ngắn lượt đi",
+            "visual_en": "Medium shot of the mascot sitting upright, placing a single round stone neatly inside one square of the paper grid with calm concentration."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Gặp trò mới chưa rõ cách chơi, bạn hãy hỏi bạn mình bằng tiếng Anh để cùng thống nhất nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to produce the question What's the rule? in a conversational context.",
+            "scene_id": "SC04",
+            "stem": "What's the ______?",
+            "title_vi": "Hỏi rõ trước khi chơi",
+            "visual_en": "Close shot of the paper board and the two hands hovering above the grid. The mascot looks toward the viewer with an open, questioning posture."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"What's the rule?\" Luật chơi là gì? An mỉm cười giải thích cách chặn góc. Nắng chiều hắt qua song cửa, hai đứa chậm rãi suy nghĩ từng nước đi tiếp theo.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm the question sentence and show the tranquil, earned resolution of fair play.",
+            "scene_id": "SC05",
+            "title_vi": "Nước cờ thong thả",
+            "visual_en": "Wide shot of the room. Warm afternoon sunlight falls across the wooden table. Both figures lean over the paper board, each holding a single game piece in turn."
+          }
+        ],
+        "title": "Bàn Cờ Giấy Mới"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Dũng",
+            "outfit_en": "Single soft-orange short-sleeve shirt (#FFB380)."
+          }
+        ],
+        "job": "vocab-goal-script-406",
+        "learner_outcome_vi": "Người học nắm vững nghĩa 'bàn thắng' của GOAL và nói được câu 'Our team scored a goal.'.",
+        "opening_function_vi": "Mở đầu bằng tiếng còi và khoảnh khắc bóng bay vào lưới khi người em vừa cúi xuống.",
+        "plot_vi": "Hai anh em xem trận bóng giao hữu ở bãi đất xóm; người em mải nhặt dép nên bỏ lỡ bàn thắng, người anh chỉ lại và giải thích diễn biến trên sân.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tiếng còi vang lên từ sân bóng xóm. Quả bóng bay thẳng qua vạch vôi. Dũng vừa cúi nhặt dép ngẩng lên ngơ ngác, tôi liền reo khẽ: \"That's a goal!\" Đó là một bàn thắng!",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the soccer setting, the missed moment, and the first model sentence identifying a goal.",
+            "scene_id": "SC01",
+            "title_vi": "Bóng qua vạch vôi",
+            "visual_en": "Wide shot of an open dirt field with two bamboo goalposts. A soccer ball rests inside the woven net. In the foreground, the mascot points excitedly toward the net while the younger brother holds a small blue sandal."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Dũng tròn mắt nhìn lên bảng điểm treo tạm bằng bìa các-tông. Tôi vỗ vai em, chỉ vào anh tiền đạo áo xanh đang chạy về: \"Our team scored a goal.\" Đội chúng ta ghi một bàn thắng.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver the second model sentence connecting the scored goal to the team.",
+            "scene_id": "SC02",
+            "title_vi": "Đội nhà ghi bàn",
+            "visual_en": "Medium shot of the two figures sitting on a wooden bench. The mascot puts an arm gently around the younger brother's shoulder, pointing toward the makeshift cardboard scoreboard showing 1 - 0."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Dũng kéo ghế xích lại gần tôi hơn. Cậu bé không nhìn vu vơ nữa mà chăm chú theo dõi từng đường chuyền bóng ngắn trên bãi cỏ trước mặt.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show the change in the younger brother's engagement and shared bond.",
+            "scene_id": "SC03",
+            "title_vi": "Theo dõi từng đường bóng",
+            "visual_en": "Side view of the bench. The younger brother pulls his wooden stool closer to the mascot, resting both elbows on his knees while watching the field intently."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Dũng hỏi chuyện vừa xảy ra ở khung thành. Bạn nói giúp tôi câu báo đội mình đã ghi bàn nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to produce the sentence Our team scored a goal.",
+            "scene_id": "SC04",
+            "stem": "Our team scored a ______.",
+            "title_vi": "Kể lại pha lập công",
+            "visual_en": "Close-up of the mascot leaning forward with an encouraging smile, gesturing toward the open field."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Our team scored a goal.\" Đội chúng ta ghi một bàn thắng. Dũng cười tít mắt, vỗ hai bàn tay nhỏ vào nhau. Hai anh em tiếp tục ngồi sát bên xem hiệp hai.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Reinforce the model sentence and provide a quiet, affectionate ending.",
+            "scene_id": "SC05",
+            "title_vi": "Niềm vui bên lề sân",
+            "visual_en": "Wide shot of the sideline. The younger brother claps his hands happily, sitting side by side with the mascot under the shade of a melaleuca tree."
+          }
+        ],
+        "title": "Khung Thành Sân Bãi"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Huy",
+            "outfit_en": "Single light-yellow short-sleeve shirt (#FDFD96)."
+          }
+        ],
+        "job": "vocab-kick-script-407",
+        "learner_outcome_vi": "Người học hiểu rõ nghĩa hành động 'đá' của KICK và nói được câu 'Kick the ball to me.'.",
+        "opening_function_vi": "Mở đầu bằng quả bóng nằm yên dưới chân bạn và sự ngập ngừng chưa dám chuyền.",
+        "plot_vi": "Hai bạn tập chuyền bóng trên mảnh sân sau cơn mưa; bạn ngập ngừng chưa dám đưa bóng sang, nhân vật chính hướng dẫn dùng chân đá nhẹ tạo nhịp tập.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Quả bóng da nằm yên dưới chân Huy. Huy đứng tần ngần nhìn tôi, chưa dám chuyền sang. Tôi lùi lại hai bước, đưa tay vẫy: \"Kick the ball to me.\" Đá bóng cho tôi nhé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Establish the hesitation and introduce the first model sentence requesting a foot kick pass.",
+            "scene_id": "SC01",
+            "title_vi": "Quả bóng dừng lại",
+            "visual_en": "Wide shot of a damp dirt courtyard. A black-and-white soccer ball rests motionless by the friend's sneakers. The mascot steps back two paces, opening arms in a ready receiving stance."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Huy co chân đá nhẹ, quả bóng lăn êm qua vũng nước nhỏ. Tôi đón bóng bằng má trong bàn chân thật gọn gàng: \"I can kick the ball.\" Tôi có thể đá bóng.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Demonstrate the second model sentence showing foot contact and ability.",
+            "scene_id": "SC02",
+            "title_vi": "Đón bóng bằng chân",
+            "visual_en": "Medium shot of the mascot cushioning the rolling soccer ball with the inside of the right foot, stopping it neatly on the dry patch of dirt."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Huy bớt lo lắng, bước lên một nhịp để mở góc đón. Tôi cẩn thận chỉnh bóng ra giữa hai mũi giày, mắt nhìn thẳng vào vị trí chân Huy đang chờ.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Depict developing rhythm and mutual coordination.",
+            "scene_id": "SC03",
+            "title_vi": "Mở rộng góc chuyền",
+            "visual_en": "Two-shot showing the friend shifting stance to receive, while the mascot lines up the ball cleanly between both sneakers."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Bạn muốn nhắc Huy dùng chân đưa bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to produce the imperative Kick the ball to me.",
+            "scene_id": "SC04",
+            "stem": "______ the ball to me.",
+            "title_vi": "Gọi một đường chuyền",
+            "visual_en": "Medium close-up of the mascot gesturing downward toward the ground, looking forward with attentive eyes."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Kick the ball to me.\" Đá bóng cho tôi nhé. Huy mỉm cười vung chân chuyền tiếp. Quả bóng lăn qua lại giữa hai đôi giày vải sờn gót đều đặn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide the model answer and close with successful continuous passing.",
+            "scene_id": "SC05",
+            "title_vi": "Nhịp tập đều đặn",
+            "visual_en": "Wide tracking shot of the ball rolling smoothly between the two figures, who pass back and forth with relaxed, confident smiles."
+          }
+        ],
+        "title": "Đường Chuyền Đầu Tiên"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Mai",
+            "outfit_en": "Single pale-lilac short-sleeve shirt (#D8B4F8)."
+          }
+        ],
+        "job": "vocab-throw-script-408",
+        "learner_outcome_vi": "Người học hiểu rõ nghĩa 'ném' của THROW và nói được câu 'Throw the ball to me.'.",
+        "opening_function_vi": "Mở đầu bằng quả bóng nỉ nằm im trong tay và ánh mắt lo ngại giàn cây vướng víu.",
+        "plot_vi": "Hai chị em chơi chuyền bóng nỉ ở góc vườn có giàn leo thấp; người chị sợ bóng vướng giàn cây, người em hướng dẫn ném ngang tay vừa tầm.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Quả bóng nỉ màu vàng nằm trong tay Mai. Mai nhìn giàn cây thấp sau lưng tôi ngập ngừng. Tôi mở hai lòng bàn tay đón: \"Throw the ball to me.\" Ném bóng cho tôi nhé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the garden setting with overhead trellis and present the first model sentence for throwing.",
+            "scene_id": "SC01",
+            "title_vi": "Ngập ngừng tay ném",
+            "visual_en": "Eye-level medium shot in a garden with a bamboo trellis overhead. The cousin holds a yellow felt tennis ball with both hands, glancing upward anxiously. The mascot stands ten feet away with open cupped hands."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Thấy Mai vung tay hơi mạnh, tôi khẽ nhắc nhở: \"Don't throw it too high.\" Đừng ném nó quá cao. Mai hạ cánh tay xuống ngang ngực, ném một đường thẳng vừa tầm.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver the second model sentence controlling trajectory and safety.",
+            "scene_id": "SC02",
+            "title_vi": "Đường ném ngang ngực",
+            "visual_en": "Medium shot of the cousin lowering her throwing elbow to shoulder height, releasing the yellow ball in a flat, gentle arc toward the mascot."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Quả bóng nỉ đáp gọn vào lòng bàn tay tôi. Tôi không vội tung mạnh trả lại mà giữ bóng một nhịp, đợi Mai lùi lại chỗ đất bằng phẳng hơn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Illustrate considerate play and prop control.",
+            "scene_id": "SC03",
+            "title_vi": "Đón trọn đường bóng",
+            "visual_en": "Close shot of the mascot's hands closing securely around the yellow ball. The cousin takes two steps back onto level ground."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Bạn muốn giục Mai dùng tay ném bóng về phía mình. Hãy nói cả câu bằng tiếng Anh nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to produce Throw the ball to me.",
+            "scene_id": "SC04",
+            "stem": "______ the ball to me.",
+            "title_vi": "Nhờ ném lại",
+            "visual_en": "Medium shot of the mascot holding hands outstretched in front of chest, looking directly forward."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Throw the ball to me.\" Ném bóng cho tôi nhé. Mai mỉm cười tung bóng nhẹ qua khoảng sân nhỏ. Hai chị em cứ thế chuyền tay nhau dưới bóng râm mát dịu.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm the target sentence and conclude with smooth, enjoyable tossing.",
+            "scene_id": "SC05",
+            "title_vi": "Chuyền tay dưới bóng râm",
+            "visual_en": "Wide shot under the bamboo garden trellis. The cousin tosses the ball smoothly across the space into the mascot's hands, with dappled green shadows on the ground."
+          }
+        ],
+        "title": "Bóng Nỉ Dưới Giàn Mướp"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Lâm",
+            "outfit_en": "Single soft-orange short-sleeve shirt (#FFCC99)."
+          }
+        ],
+        "job": "vocab-catch-script-409",
+        "learner_outcome_vi": "Người học nhận diện nghĩa 'bắt được' của CATCH và nói được câu 'I can catch it.'.",
+        "opening_function_vi": "Mở đầu bằng quả bóng bay tới ngực và nỗ lực không lùi bước của người bắt.",
+        "plot_vi": "Hai bạn tập bắt bóng quần vợt cũ; nhân vật chính từng sợ tuột tay nay vượt qua e ngại, chụm tay bắt gọn quả bóng bay tới.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Quả bóng nỉ bay thẳng về phía ngực tôi. Lâm đứng bên kia sân gạch gọi với sang: \"Catch the ball!\" Bắt lấy bóng! Tôi hơi chớp mắt nhưng không lùi bước chân nào.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Establish tension with the incoming ball and introduce the imperative model sentence Catch the ball!.",
+            "scene_id": "SC01",
+            "title_vi": "Bóng bay về phía ngực",
+            "visual_en": "Medium-wide shot of a brick courtyard. A worn tennis ball flies through mid-air toward the mascot, who braces both feet firmly on the ground with hands raising up."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi chụm hai bàn tay đón lấy, quả bóng nảy nhẹ rồi nằm yên trong lòng bàn tay. Tôi giơ cao bóng khoe Lâm: \"I can catch it.\" Tôi có thể bắt được nó.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Provide the second model sentence demonstrating successful hand capture.",
+            "scene_id": "SC02",
+            "title_vi": "Bóng nằm trong tay",
+            "visual_en": "Close-up of the mascot's two stick hands firmly enclosing the tennis ball at chest height, then holding it aloft with a proud, relieved nod."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Lâm gật đầu cười, không còn vẻ sốt ruột lo tôi làm rơi bóng xuống rãnh nước nữa. Tôi vuốt lại lớp nỉ sờn trên quả bóng, đứng vững hai chân hơn.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show relief and growing confidence between the two friends.",
+            "scene_id": "SC03",
+            "title_vi": "Đứng vững hai chân",
+            "visual_en": "Medium shot of the friend lowering raised shoulders and giving a nod of approval across the brick yard, while the mascot stands balanced."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Giữ được bóng trong tay rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình bắt được bóng nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to produce I can catch it.",
+            "scene_id": "SC04",
+            "stem": "I can ______ it.",
+            "title_vi": "Khẳng định làm được",
+            "visual_en": "Close shot of the mascot holding the ball firmly in both palms at chest level, looking forward."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"I can catch it.\" Tôi có thể bắt được nó. Lâm vỗ hai tay tán thưởng rồi lùi thêm một bước. Hai đứa lại tiếp tục bài tập chuyền bóng cho nhau.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Deliver the model answer and seal the small personal triumph.",
+            "scene_id": "SC05",
+            "title_vi": "Tiếp tục bài tập",
+            "visual_en": "Wide shot of the courtyard. The friend claps lightly, stepping back to extend the distance as the practice resumes with steady ease."
+          }
+        ],
+        "title": "Bàn Tay Đón Bóng"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Khoa",
+            "outfit_en": "Single muted-green short-sleeve shirt (#A0C49D)."
+          }
+        ],
+        "job": "vocab-run-script-410",
+        "learner_outcome_vi": "Người học nhận biết nghĩa 'chạy bằng chân' của RUN và nói được câu 'Let's run to the cone.'.",
+        "opening_function_vi": "Mở đầu bằng chiếc chóp nón nhựa đỏ và hành động giữ vai người em khi cậu bé sắp lao đi.",
+        "plot_vi": "Hai anh em chạy bộ trong ngõ xóm; người em hay hấp tấp chạy nhanh dẫn đến kiệt sức, người anh đặt cọc mốc ngắn để cùng rèn nhịp chạy chậm vừa sức.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chiếc nón nhựa đỏ đặt cách mười mét trên đường ngõ. Thấy Khoa chuẩn bị lao vút đi, tôi khẽ giữ vai em lại: \"Let's run to the cone.\" Cùng chạy tới chiếc cọc nhé.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the alleyway running marker, restrain over-eager pacing, and present the first model sentence.",
+            "scene_id": "SC01",
+            "title_vi": "Chiếc cọc trước mặt",
+            "visual_en": "Wide perspective shot down a paved village lane. A bright red plastic cone sits ten meters ahead on the clean pavement. The mascot rests a hand on the younger cousin's shoulder to pause him."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Khoa nhìn theo tay tôi chỉ rồi giảm bớt đà bước. Tôi vỗ nhẹ lưng em, bước những nhịp ngắn đều đặn: \"I can run slowly.\" Tôi có thể chạy chậm.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Establish pacing with the second model sentence showing controlled running speed.",
+            "scene_id": "SC02",
+            "title_vi": "Bước chân vừa sức",
+            "visual_en": "Side profile medium shot of both figures jogging side by side with easy, measured foot strikes, keeping their shoulders relaxed."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hai anh em chạy song song trên nền gạch sạch, tiếng giày vải gõ nhịp nhàng. Khoa không còn cắm đầu thở dốc mà nhìn về chiếc nón nhựa phía trước.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show the harmonious progress toward the visual target.",
+            "scene_id": "SC03",
+            "title_vi": "Song hành trên ngõ",
+            "visual_en": "Tracking medium shot from slightly ahead. The two figures jog in unison, their sneakers tapping cleanly on the brick lane as the red cone draws closer."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Bạn muốn rủ Khoa cùng chạy bước chậm tới chiếc cọc mốc trước mặt. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to invite the partner with Let's run to the cone.",
+            "scene_id": "SC04",
+            "stem": "Let's ______ to the cone.",
+            "title_vi": "Cùng rủ tới đích",
+            "visual_en": "Close-up of the mascot pointing forward along the path toward the visible red cone with a welcoming expression."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Let's run to the cone.\" Cùng chạy tới chiếc cọc nhé. Cả hai cùng chạm chân tới chiếc nón đỏ, rồi thong thả đi bộ thêm một vòng quanh gốc cây.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Verify the model sentence and conclude with an unhurried, healthy cooldown.",
+            "scene_id": "SC05",
+            "title_vi": "Về đích thong thả",
+            "visual_en": "Wide shot at the cone marker. Both figures touch the cone with their shoes together, slowing down to a calm walk under a shading banyan tree."
+          }
+        ],
+        "title": "Chạy Tới Cọc Mốc"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Đức",
+            "outfit_en": "Single soft-brown short-sleeve shirt (#C4A484)."
+          }
+        ],
+        "job": "vocab-jump-script-411",
+        "learner_outcome_vi": "Người học nắm vững nghĩa 'nhảy' của JUMP và nói được câu 'I can jump over it.'.",
+        "opening_function_vi": "Mở đầu bằng vạch phấn trắng trên sân gạch và ánh mắt thách thức thân thiện.",
+        "plot_vi": "Hai bạn học vẽ vạch phấn thử tài bật nhảy trên sân trường vắng; sau chút do dự vì sợ trượt chân, nhân vật chính dứt khoát nhảy qua an toàn.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Vạch phấn trắng nằm ngang mặt sân gạch. Đức đứng bên kia vạch, hơi nghiêng đầu nhìn tôi thách thức: \"Can you jump over the line?\" Bạn nhảy qua vạch được không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Set the challenge across the chalk line and introduce the question model sentence with jump.",
+            "scene_id": "SC01",
+            "title_vi": "Vạch phấn trắng ngang sân",
+            "visual_en": "Eye-level medium shot of an empty brick schoolyard. A straight white chalk line divides the foreground from the background. The friend stands on the far side with folded arms, while the mascot looks down at the line."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi cúi xuống buộc lại dây giày cho chặt. Lấy đà hai bước, tôi nhún chân bật người qua vạch: \"I can jump over it.\" Tôi có thể nhảy qua nó.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Demonstrate the second model sentence showing the jumping action over the line.",
+            "scene_id": "SC02",
+            "title_vi": "Nhún chân qua vạch",
+            "visual_en": "Side view capturing the mascot in mid-air, knees bent and feet airborne clear above the white chalk mark drawn on the brick ground."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Hai bàn chân tôi tiếp đất gọn gàng phía bên kia, không hề chạm vào bụi phấn trắng. Đức cúi nhìn vạch kẻ rồi khẽ gật đầu đồng ý.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Prove clean success with physical evidence of untouched chalk dust.",
+            "scene_id": "SC03",
+            "title_vi": "Tiếp đất an toàn",
+            "visual_en": "Close shot of the mascot's shoes landing cleanly on red bricks two inches past the intact, unbroken white chalk line. The friend bends down to inspect."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Đứng bên kia vạch rồi, bạn hãy nói bằng tiếng Anh câu khẳng định mình nhảy qua được để Đức nghe nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to express capability using I can jump over it.",
+            "scene_id": "SC04",
+            "stem": "I can ______ over it.",
+            "title_vi": "Nói về khả năng của mình",
+            "visual_en": "Medium shot of the mascot standing tall on the other side of the chalk line, facing forward with a steady posture."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"I can jump over it.\" Tôi có thể nhảy qua nó. Đức mỉm cười bước lại đầu vạch phấn, nhặt mẩu phấn lên kẻ thêm một nấc thử thách mới.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Reiterate the model sentence and conclude with mutual engagement.",
+            "scene_id": "SC05",
+            "title_vi": "Đổi lượt chơi mới",
+            "visual_en": "Wide shot of the yard. The friend picks up the chalk stub, smiling as he steps back to draw a second line for his own turn."
+          }
+        ],
+        "title": "Vạch Phấn Thử Thách"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Nam",
+            "outfit_en": "Single muted-teal short-sleeve shirt (#80BBB5)."
+          }
+        ],
+        "job": "vocab-swim-script-412",
+        "learner_outcome_vi": "Người học nắm rõ nghĩa 'bơi' của SWIM và nói được câu khẳng định 'Yes, I can swim.'.",
+        "opening_function_vi": "Mở đầu bằng làn nước bể bơi lăn tăn và chiếc phao ôm chặt trong tay.",
+        "plot_vi": "Hai bạn đến bể bơi công cộng; nhân vật chính ôm phao ngập ngừng trước độ sâu của nước, bạn hỏi thăm để cùng bắt đầu bơi chậm rãi ở vùng nước nông.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Mặt nước bể bơi gợn sóng lăn tăn. Thấy tôi ôm khư khư chiếc phao bơi màu vàng bên mép bể, Nam quay sang hỏi nhỏ: \"Can you swim?\" Bạn có biết bơi không?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the poolside setting, initial hesitation, and the first model question asking about swimming capability.",
+            "scene_id": "SC01",
+            "title_vi": "Gợn sóng lăn tăn",
+            "visual_en": "Wide shot of a public pool with clean blue water rippling gently. The mascot stands at the tiled edge holding a yellow foam kickboard tightly against chest. The friend stands nearby, looking over with gentle inquiry."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Tôi đặt chiếc phao xốp xuống bậc gạch khô, bước từng bước xuống làn nước ngang hông rồi ngẩng lên: \"Yes, I can swim.\" Vâng, tôi biết bơi.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Present the second model sentence showing willingness and actual swimming capability.",
+            "scene_id": "SC02",
+            "title_vi": "Bước xuống làn nước",
+            "visual_en": "Medium shot of the mascot setting the kickboard on the dry tiled deck, stepping down the shallow submerged pool stairs into waist-deep water."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Nam bước xuống bậc thang cạnh tôi, giữ một khoảng cách vừa đủ để quan sát. Tôi hít một hơi sâu, khẽ đạp chân lướt một quãng ngắn dọc bờ bể.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Show supportive companionship and the physical action of swimming.",
+            "scene_id": "SC03",
+            "title_vi": "Đạp chân lướt nước",
+            "visual_en": "Side view at water level. The friend watches from the steps as the mascot glides smoothly along the pool wall with gentle flutter kicks."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Nam đang đứng đợi câu trả lời rõ ràng từ bạn. Hãy nói bằng tiếng Anh câu khẳng định mình biết bơi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to produce Yes, I can swim.",
+            "scene_id": "SC04",
+            "stem": "Yes, I can ______.",
+            "title_vi": "Trả lời câu hỏi của bạn",
+            "visual_en": "Close-up of the mascot standing in shallow water, water line at waist, looking forward with calm eyes."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Yes, I can swim.\" Vâng, tôi biết bơi. Nam mỉm cười gật đầu, đưa tay chỉ về phía làn bơi vắng. Hai đứa thong thả bơi cạnh nhau trong buổi sớm.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm the model answer and finish with tranquil, shared swimming.",
+            "scene_id": "SC05",
+            "title_vi": "Sóng đôi bơi sớm",
+            "visual_en": "Wide shot of the pool in soft morning light. The two figures swim leisurely side by side down the quiet shallow lane."
+          }
+        ],
+        "title": "Bên Làn Nước Bể Bơi"
+      },
+      {
+        "characters": [
+          {
+            "appearance_en": "Stick figure with a round white head outlined in dark navy, minimalist solid black oval eyes, no nose or ears, simple stick limbs.",
+            "id": "CH01",
+            "name_vi": "Tôi",
+            "outfit_en": "Single pale-blue short-sleeve crewneck shirt (#8CCFE8)."
+          },
+          {
+            "appearance_en": "Minimal ink stick figure with a round white head outlined in dark navy, minimalist black oval eyes, simple stick limbs.",
+            "id": "CH02",
+            "name_vi": "Vinh",
+            "outfit_en": "Single soft-red short-sleeve shirt (#E57373)."
+          }
+        ],
+        "job": "vocab-ball-script-413",
+        "learner_outcome_vi": "Người học nắm chắc nghĩa 'quả bóng' của BALL và nói được câu 'Please pass me the ball.'.",
+        "opening_function_vi": "Mở đầu bằng chiếc túi mở toang chỉ có khăn lau mồ hôi trên ghế đá.",
+        "plot_vi": "Hai bạn ra sân tập bóng nhưng mở túi chỉ thấy khăn lau; sau khi tìm thấy quả bóng kẹt dưới gầm ghế đá, họ chuyền tay nhau bắt đầu buổi tập.",
+        "scenes": [
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Chiếc túi vải mở toang trên ghế đá. Trong túi chỉ còn chiếc khăn lau mồ hôi. Tôi ngó quanh khoảng sân vắng, cất tiếng hỏi: \"Where is the ball?\" Quả bóng ở đâu?",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Introduce the missing sports prop and deliver the first model question asking for the ball.",
+            "scene_id": "SC01",
+            "title_vi": "Chiếc túi trống trơn",
+            "visual_en": "Eye-level medium shot of an outdoor stone park bench. An open canvas gym bag reveals only a folded white towel inside. The mascot looks around the gravel court with searching hands."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Vinh cúi người nhìn xuống gầm ghế đá rêu phong, thấy quả bóng da đang nằm kẹt ở góc. Tôi đưa hai tay ra chờ đợi: \"Please pass me the ball.\" Làm ơn chuyền bóng cho tôi.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Locate the ball and introduce the second model sentence requesting it.",
+            "scene_id": "SC02",
+            "title_vi": "Góc khuất gầm ghế",
+            "visual_en": "Low-angle shot. The friend crouches down beside the stone bench leg, spotting a patterned soccer ball wedged underneath. The mascot stands nearby with cupped waiting hands."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "Vinh khom lưng luồn tay kéo quả bóng ra ngoài. Cậu ấy lấy vạt áo lau vội lớp bụi bám trên vỏ da, rồi ngẩng đầu nhìn về phía tôi đang đứng chờ.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Depict the practical retrieval and preparation of the ball.",
+            "scene_id": "SC03",
+            "title_vi": "Lau vội lớp bụi da",
+            "visual_en": "Medium shot of the friend pulling the ball from beneath the stone seat, wiping gray dust off the leather surface with a quick motion."
+          },
+          {
+            "character_ids": [
+              "CH01"
+            ],
+            "narration": "Bạn muốn nhờ Vinh đưa quả bóng dưới gầm ghế sang cho mình. Hãy nói cả câu bằng tiếng Anh giúp tôi nhé.",
+            "practice_pause_seconds": 4,
+            "purpose_en": "Prompt the learner to produce Please pass me the ball.",
+            "scene_id": "SC04",
+            "stem": "Please pass me the ______.",
+            "title_vi": "Nhờ đưa bóng",
+            "visual_en": "Close shot of the mascot gesturing toward the ball with both open hands, waiting patiently."
+          },
+          {
+            "character_ids": [
+              "CH01",
+              "CH02"
+            ],
+            "narration": "\"Please pass me the ball.\" Làm ơn chuyền bóng cho tôi. Vinh mỉm cười ném nhẹ quả bóng vào lòng bàn tay tôi. Hai đứa cùng bước ra giữa khoảng sân râm mát.",
+            "practice_pause_seconds": 0,
+            "purpose_en": "Confirm the sentence and transition smoothly into the ready practice session.",
+            "scene_id": "SC05",
+            "title_vi": "Bóng về đúng chỗ",
+            "visual_en": "Wide shot of the court. The friend underhand-tosses the clean ball directly into the mascot's hands, and both walk together out onto the shaded playing area."
+          }
+        ],
+        "title": "Quả Bóng Dưới Gầm Ghế"
+      }
+    ]
+  },
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "episodes": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    },
+    "required": [
+      "episodes"
+    ]
+  },
+  "usage": {
+    "input_tokens": 72345,
+    "output_tokens": 36641,
+    "thinking_tokens": 14664,
+    "cache_read_tokens": 38449,
+    "total_tokens": 108986
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "job": "vocab-train-script-293",
+  "entry": "train.n",
+  "word": "train",
+  "gloss_vi": "tàu hoả",
+  "cefr": "A1",
+  "homograph": true,
+  "siblings": [
+    "Từ \"train\" còn nghĩa khác: đào tạo [v, train.v]. Video này KHÔNG dạy nghĩa đó.",
+    "Từ \"train\" còn nghĩa khác: tập luyện [v, train.v.sport]. Video này KHÔNG dạy nghĩa đó."
+  ],
+  "brief": "/home/hongphuoc6104/Desktop/pipelineFlow/sys/vocab/briefs/vocab-train-script-293.json",
+  "next": "python3 pilot.py new vocab-train-script-293 --brief /home/hongphuoc6104/Desktop/pipelineFlow/sys/vocab/briefs/vocab-train-script-293.json",
+  "pilot": {
+    "job": "vocab-train-script-293",
+    "mode": "review",
+    "complete": false,
+    "stages": [
+      {
+        "stage": "content",
+        "label": "Kịch bản",
+        "state": "pending",
+        "revision": null,
+        "review": null
+      },
+      {
+        "stage": "media",
+        "label": "Cảnh, hình ảnh và âm thanh",
+        "state": "pending",
+        "revision": null,
+        "review": null
+      },
+      {
+        "stage": "video",
+        "label": "Video hoàn chỉnh",
+        "state": "pending",
+        "revision": null,
+        "review": null
+      }
+    ]
+  }
+}

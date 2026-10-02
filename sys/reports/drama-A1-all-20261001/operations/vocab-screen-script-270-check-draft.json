@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 28,
+            "seconds": 8.98,
+            "min": 6.73,
+            "max": 11.22
+          },
+          {
+            "scene_id": "SC02",
+            "units": 36,
+            "seconds": 10.9,
+            "min": 8.18,
+            "max": 13.62
+          },
+          {
+            "scene_id": "SC03",
+            "units": 35,
+            "seconds": 10.92,
+            "min": 8.19,
+            "max": 13.65
+          },
+          {
+            "scene_id": "SC04",
+            "units": 13,
+            "seconds": 8.06,
+            "min": 6.05,
+            "max": 10.08
+          },
+          {
+            "scene_id": "SC05",
+            "units": 31,
+            "seconds": 9.81,
+            "min": 7.36,
+            "max": 12.26
+          }
+        ],
+        "min": 36.51,
+        "max": 60.83,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "19118",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Ông tìm gương mặt mình trong ảnh gia đình trên màn hình; cháu chờ ông tự nhận ra thay vì chỉ vị trí ngay. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

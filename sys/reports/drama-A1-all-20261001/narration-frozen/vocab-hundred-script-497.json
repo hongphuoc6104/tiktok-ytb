@@ -1,0 +1,107 @@
+{
+  "characters": [
+    {
+      "appearance_en": "Minimalist 2D stickman, round white head outlined in dark navy, two solid black oval eyes, minimal stick limbs.",
+      "id": "CH01",
+      "name_vi": "Minh",
+      "outfit_en": "Single pale-blue #8CCFE8 short-sleeve torso."
+    },
+    {
+      "appearance_en": "Minimal ink stick figure with a round white head, dark-navy outline, two solid black oval eyes, and minimal stick limbs.",
+      "id": "CH02",
+      "name_vi": "Nam",
+      "outfit_en": "Single plain amber-yellow short-sleeve torso."
+    }
+  ],
+  "job": "vocab-hundred-script-497",
+  "learner_outcome_vi": "Sử dụng chính xác số từ hundred để biểu thị số lượng hàng trăm và nói đúng mẫu câu tiếng Anh trong việc kiểm kê.",
+  "opening_function_vi": "Chiếc hộp đựng vé mở toang nắp.",
+  "plot_vi": "Chiếc hộp đựng vé mở toang nắp. Chúng tôi phải phát đủ vé cho gian hàng buổi sáng. Tôi bảo Nam:  Nam đưa thêm một cọc để hai đứa trực hai bên bàn. \"We have two hundred tickets.\" Chúng mình có hai trăm chiếc vé. Tôi đặt hai cọc một trăm cạnh nhau, không để bạn nhận hết phần phát.  Nam giữ một cọc, tôi giữ cọc kia. Tôi xếp khay gần phía mình rồi mở cửa gian hàng. Số vé còn đủ hay không, hai đứa sẽ cùng kiểm trong buổi trực.",
+  "scenes": [
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Chiếc hộp đựng vé mở toang nắp. Chúng tôi phải phát đủ vé cho gian hàng buổi sáng. Tôi bảo Nam: \"I need a hundred tickets.\" Tôi cần một trăm chiếc vé.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Open with personal need and an early usable English model.",
+      "scene_id": "SC01",
+      "title_vi": "Điều vừa xảy ra",
+      "visual_en": "At a school fair booth, an open cardboard box holds several neatly banded paper ticket bundles. The yellow-shirt friend counts while the pale-blue mascot holds up a distribution tray."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "custom_visible_text": [
+        {
+          "object": "ticket bundle label",
+          "placement": "printed on bundle label sticker",
+          "text": "100"
+        }
+      ],
+      "narration": "Nam lật xấp giấy đã buộc sẵn dây thun, đưa tôi một cọc dày. Trên nhãn giấy dán ngoài có ghi rõ con số một trăm. Tôi cẩn thận xếp vé vào khay nhỏ.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Clarify the selected sense and resistance in the same human story.",
+      "scene_id": "SC02",
+      "title_vi": "Lời cần nói",
+      "visual_en": "The friend hands over one thick paper pack secured with a rubber band, clearly marked with a printed '100' sticker. The mascot places it into the tray."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "custom_visible_text": [
+        {
+          "text": "100",
+          "placement": "label on each bundle",
+          "object": "both ticket bundles"
+        }
+      ],
+      "narration": "Nam đưa thêm một cọc để hai đứa trực hai bên bàn. \"We have two hundred tickets.\" Chúng mình có hai trăm chiếc vé. Tôi đặt hai cọc một trăm cạnh nhau, không để bạn nhận hết phần phát.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Use a decision or visible action to change the story and support target meaning.",
+      "scene_id": "SC03",
+      "title_vi": "Thử làm cùng nhau",
+      "visual_en": "Same fair counter: Nam places second100ticket bundle beside first; both exactly labelled100. No crowd."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "Gian hàng chuẩn bị mở cửa, tôi kiểm tra lại tổng số vé của cả hai người. Bạn nói giúp tôi câu chúng ta có hai trăm chiếc vé bằng tiếng Anh nhé.",
+      "practice_pause_seconds": 4,
+      "purpose_en": "Ask viewer for a supported complete target sentence and wait at scene end.",
+      "scene_id": "SC04",
+      "stem": "We have two ___ tickets.",
+      "title_vi": "Câu bạn giúp nói",
+      "visual_en": "Booth setup view: the mascot gestures toward the pair of ticket bundles and looks forward, leaving the upper area open for the prompt stem."
+    },
+    {
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "narration": "\"We have two hundred tickets.\" Nam giữ một cọc, tôi giữ cọc kia. Tôi xếp khay gần phía mình rồi mở cửa gian hàng. Số vé còn đủ hay không, hai đứa sẽ cùng kiểm trong buổi trực.",
+      "practice_pause_seconds": 0,
+      "purpose_en": "Give correct full retrieval response then modest visible payoff.",
+      "scene_id": "SC05",
+      "title_vi": "Chuyện đi tiếp",
+      "visual_en": "Same counter: mascot and Nam each take one100ticketbundle and set empty individual distribution trays on own sides. No named recipients or perfect-outcome claim.",
+      "custom_visible_text": [
+        {
+          "text": "100",
+          "placement": "label on each bundle",
+          "object": "both ticket bundles"
+        }
+      ]
+    }
+  ],
+  "title": "Số vé hội chợ",
+  "editorial_review": "Reviewed and rewritten by an authorized writing agent; narration frozen before anchors.",
+  "visual_review_ready": true
+}

@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 35,
+            "seconds": 10.77,
+            "min": 8.08,
+            "max": 13.47
+          },
+          {
+            "scene_id": "SC02",
+            "units": 32,
+            "seconds": 9.79,
+            "min": 7.34,
+            "max": 12.24
+          },
+          {
+            "scene_id": "SC03",
+            "units": 41,
+            "seconds": 12.74,
+            "min": 9.55,
+            "max": 15.92
+          },
+          {
+            "scene_id": "SC04",
+            "units": 40,
+            "seconds": 16.01,
+            "min": 12.01,
+            "max": 20.01
+          },
+          {
+            "scene_id": "SC05",
+            "units": 40,
+            "seconds": 12.46,
+            "min": 9.35,
+            "max": 15.58
+          }
+        ],
+        "min": 46.33,
+        "max": 77.22,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "21331",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi và Duy chuyển kênh kịp thời để cùng đón xem chương trình thiên văn mà cả hai đã chờ đợi suốt tuần. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,511 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 3,
+  "brief_hash": "adcc9b7d59ba21d2a5638a468e28a668603e51d4af57465fbd18be18c6d64cef",
+  "topic": "Học từ vựng tiếng Anh foot — bàn chân qua câu chuyện “Chiếc giày dành cho bàn chân”",
+  "duration": {
+    "min_seconds": 75,
+    "max_seconds": 85
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng tình huống cụ thể dẫn tới foot; payoff giải quyết tình huống ấy.",
+    "Chỉ dạy nghĩa “bàn chân” của foot; hình và lời giải thích làm rõ hành động, bộ phận hoặc quan hệ, gỡ điểm dễ nhầm khi cần.",
+    "Hai câu ví dụ dùng foot chính xác, nối trong cùng câu chuyện hoặc một đối chiếu có mục đích.",
+    "Một lượt nhớ lại hoặc dùng foot, có khoảng yên lặng thật và phản hồi; giữ đáp án sau lượt trả lời."
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso, two minimal stick arms and two stick legs. Subtle expressive eyebrows, small worry lines, sweat drops and changing mouth curves are acceptable. No realistic muscles, detailed fingers, added hair, realistic nose or ears, duplicate torso or anime eyes.",
+      "outfit": "Exactly one pale-blue short-sleeve T-shirt (#8CCFE8). Keep this shirt throughout; simple trousers or shorts can change for the story. No stacked shirts."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chân dài, giày chỉ ôm phần cuối",
+      "purpose": "Distinguish foot from the whole leg.",
+      "action": "Mascot sits on bench with one shoe held beside a flat diagram highlighting only foot below ankle.",
+      "setting": "Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Chiếc giày không ôm cả chân từ hông xuống. Nó ôm bàn chân, tiếng Anh là foot. Trong bài này, mình nhìn phần nằm dưới mắt cá, nơi đặt lên mặt đất và đi vào chiếc giày. Trên hình, mắt cá là mốc dễ nhìn. Bàn chân nằm bên dưới mốc ấy, còn phần chân dài ở trên không được tô cùng màu. Chiếc giày cũng ôm vùng bàn chân.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "foot",
+          "meaning": "bàn chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot sits on bench with one shoe held beside a flat diagram highlighting only foot below ankle. Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot sits on bench with one shoe held beside a flat diagram highlighting only foot below ankle.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "foot",
+              "placement": "Upper third, close to the semantic referent, clear of face and captions.",
+              "object": "Flat teaching text."
+            }
+          ]
+        },
+        {
+          "id": "SC01_I2",
+          "description": "Use flat diagrams of one foot below the ankle, then two feet resting on the floor in a seated pose. Keep the long leg region muted. A shoe fits the foot, never the whole leg. Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Use flat diagrams of one foot below the ankle, then two feet resting on the floor in a seated pose. Keep the long leg region muted. A shoe fits the foot, never the whole leg.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "foot",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Chiếc giày không ôm cả chân từ",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC01_B2",
+          "image_id": "SC01_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Trên hình, mắt cá là mốc dễ",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of foot and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chỉ một bàn chân",
+      "purpose": "Model singular foot clearly.",
+      "action": "Mascot points to one highlighted foot on separate teaching diagram, no label answer yet.",
+      "setting": "Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nói: \"This is my foot.\" Đây là bàn chân tôi. Một bàn chân là a foot. Nếu nhìn cả hai bàn chân thì cách nói thay đổi; từ này có dạng số nhiều riêng, không chỉ thêm s. Từ foot đổi thành feet khi nói nhiều bàn chân. Đừng gắn s theo thói quen của những từ khác. Hình một bàn chân và hai bàn chân đặt cạnh nhau giúp nhớ cặp này.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "foot",
+          "meaning": "bàn chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Mascot points to one highlighted foot on separate teaching diagram, no label answer yet. Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot points to one highlighted foot on separate teaching diagram, no label answer yet.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        },
+        {
+          "id": "SC02_I2",
+          "description": "Use flat diagrams of one foot below the ankle, then two feet resting on the floor in a seated pose. Keep the long leg region muted. A shoe fits the foot, never the whole leg. Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Use flat diagrams of one foot below the ankle, then two feet resting on the floor in a seated pose. Keep the long leg region muted. A shoe fits the foot, never the whole leg.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "foot",
+              "placement": "Upper third, above the referent; readable on phone, clear of face and subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nói: \"This is my foot.\" Đây",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        },
+        {
+          "id": "SC02_B2",
+          "image_id": "SC02_I2",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Từ foot đổi thành feet khi nói",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of foot and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Hai bàn chân đổi dạng",
+      "purpose": "Model feet in a practical seated instruction.",
+      "action": "Mascot seated with both simple feet resting on floor, separate diagram displays two feet.",
+      "setting": "Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Bạn nghe: \"Put your feet on the floor.\" Đặt hai bàn chân xuống sàn. Feet là số nhiều của foot. Câu này nhắc bạn ngồi với bàn chân đặt xuống, không nói đến việc đặt cả chân dài lên mặt sàn.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "foot",
+          "meaning": "bàn chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Mascot seated with both simple feet resting on floor, separate diagram displays two feet. Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot seated with both simple feet resting on floor, separate diagram displays two feet.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn nghe: \"Put your feet on the",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Explain this concrete action or relationship conversationally; give the English model a clear natural pause.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of foot and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Một hay nhiều?",
+      "purpose": "Prompt irregular plural choice in the modeled instruction.",
+      "action": "Mascot seated above a two-foot diagram, incomplete floor instruction at upper third.",
+      "setting": "Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "Câu \"Put your... on the floor\" nói cả hai bàn chân. Bạn chọn foot hay feet? Hãy đọc lại câu với đáp án của mình.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "foot",
+          "meaning": "bàn chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Mascot seated above a two-foot diagram, incomplete floor instruction at upper third. Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot seated above a two-foot diagram, incomplete floor instruction at upper third.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": [
+            {
+              "text": "foot / feet",
+              "placement": "Upper third: two equally emphasized choices; neither marked correct.",
+              "object": "Practice options."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Hold the retrieval cue through the quiet response interval.",
+          "anchor": {
+            "vi": {
+              "quote": "Câu \"Put your... on the floor\" nói",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Ask the retrieval question calmly, then leave the complete quiet hold; the answer belongs to the next scene.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of foot and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 5
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Giày đã đúng đôi",
+      "purpose": "Confirm and resolve the shoe-location question.",
+      "action": "Mascot wears a matching pair of simple shoes while diagram shows one foot beside two feet.",
+      "setting": "Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes.",
+      "camera": "Eye-level medium shot with a single semantic focus; separate flat close-up diagrams for anatomy and family links; portrait phone readability. Keep frame stable through the learner response.",
+      "narration": "\"Put your feet on the floor.\" Ở đây dùng feet. Một bàn chân là foot, nhiều bàn chân là feet. Đôi giày đã vào đúng chỗ, còn bạn phân biệt được bàn chân với cả chân dài ở phía trên.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "foot",
+          "meaning": "bàn chân"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot wears a matching pair of simple shoes while diagram shows one foot beside two feet. Mascot with shoes beside separate flat foot-and-leg diagram, no detailed mascot anatomy changes. Attach the canonical mascot Character reference. Keep each declared person distinct and only show those specified for this frame. All diagrams are separate flat educational objects; never alter mascot anatomy. Reserve bottom 22% for subtitles and outer 10% margins. No unlisted labels, numbers, logos or text.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot wears a matching pair of simple shoes while diagram shows one foot beside two feet.",
+          "reason": "Make the meaning or relevant contrast visible at this line.",
+          "visible_text": []
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Connect this line to its concrete referent or semantic contrast.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Put your feet on the floor.\" Ở",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Confirm the response and resolve the initial situation.",
+          "pronunciation_notes": "Read the English model as a complete sentence. Check the actual pronunciation of foot and any plural ending on the WAV later; spelling including I stays unchanged. This direction is not a verified voice control.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Distinguish foot from the whole leg.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "Continue the same situation: Model singular foot clearly."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Model singular foot clearly.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Continue the same situation: Model feet in a practical seated instruction."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Model feet in a practical seated instruction.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Continue the same situation: Prompt irregular plural choice in the modeled instruction."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Prompt irregular plural choice in the modeled instruction.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Continue the same situation: Confirm and resolve the shoe-location question."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Confirm and resolve the shoe-location question.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "After the learner response, confirm the correct answer and resolve the opening goal."
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Chiếc giày không ôm cả chân từ hông xuống. Nó ôm bàn chân, tiếng Anh là foot. Trong bài này, mình nhìn phần nằm dưới mắt cá, nơi đặt lên mặt đất và đi vào chiếc giày. Trên hình, mắt cá là mốc dễ nhìn. Bàn chân nằm bên dưới mốc ấy, còn phần chân dài ở trên không được tô cùng màu. Chiếc giày cũng ôm vùng bàn chân."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Chiếc giày không ôm cả chân từ hông xuống. Nó ôm bàn chân, tiếng Anh là foot. Trong bài này, mình nhìn phần nằm dưới mắt cá, nơi đặt lên mặt đất và đi vào chiếc giày. Trên hình, mắt cá là mốc dễ nhìn. Bàn chân nằm bên dưới mốc ấy, còn phần chân dài ở trên không được tô cùng màu. Chiếc giày cũng ôm vùng bàn chân."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my foot.\" Đây là bàn chân tôi. Một bàn chân là a foot. Nếu nhìn cả hai bàn chân thì cách nói thay đổi; từ này có dạng số nhiều riêng, không chỉ thêm s. Từ foot đổi thành feet khi nói nhiều bàn chân. Đừng gắn s theo thói quen của những từ khác. Hình một bàn chân và hai bàn chân đặt cạnh nhau giúp nhớ cặp này."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn nói: \"This is my foot.\" Đây là bàn chân tôi. Một bàn chân là a foot. Nếu nhìn cả hai bàn chân thì cách nói thay đổi; từ này có dạng số nhiều riêng, không chỉ thêm s. Từ foot đổi thành feet khi nói nhiều bàn chân. Đừng gắn s theo thói quen của những từ khác. Hình một bàn chân và hai bàn chân đặt cạnh nhau giúp nhớ cặp này."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Bạn nghe: \"Put your feet on the floor.\" Đặt hai bàn chân xuống sàn. Feet là số nhiều của foot. Câu này nhắc bạn ngồi với bàn chân đặt xuống, không nói đến việc đặt cả chân dài lên mặt sàn."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Câu \"Put your... on the floor\" nói cả hai bàn chân. Bạn chọn foot hay feet? Hãy đọc lại câu với đáp án của mình."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Put your feet on the floor.\" Ở đây dùng feet. Một bàn chân là foot, nhiều bàn chân là feet. Đôi giày đã vào đúng chỗ, còn bạn phân biệt được bàn chân với cả chân dài ở phía trên."
+    }
+  ],
+  "claims": [],
+  "revision_response": [
+    {
+      "request_id": "13985",
+      "status": "addressed",
+      "explanation": "Đã cập nhật nghĩa chọn, thời lượng, lời dẫn và hình làm rõ điểm dễ nhầm; giữ hai câu ví dụ, lượt nhớ lại có phản hồi. Tạo lại coverage và anchor sau khi chốt lời; giữ mascot và các gate.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ],
+  "open_questions": []
+}

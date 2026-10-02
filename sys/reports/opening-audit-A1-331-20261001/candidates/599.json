@@ -1,0 +1,467 @@
+{
+  "schema_version": "3.0",
+  "brief_revision": 2,
+  "brief_hash": "a59cca225a194dcda54dc825509368c030a965bd06d4e589d29e3068bdf9156d",
+  "topic": "Học từ vựng tiếng Anh SURE (tính từ: chắc chắn) qua câu chuyện và ngữ cảnh thực tế",
+  "duration": {
+    "min_seconds": 45,
+    "max_seconds": 65
+  },
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines",
+  "required_points": [
+    "Mở bằng một tình huống đời thường dẫn thẳng tới từ SURE",
+    "Làm rõ nghĩa lõi \"chắc chắn\" (tính từ) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần",
+    "2 câu ví dụ dùng SURE, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa",
+    "Một lượt người xem dùng hoặc nhớ lại SURE, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình"
+  ],
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "Người que áo xanh biển nhạt",
+      "appearance": "Canonical mascot: round white head with dark navy outline, two solid black oval eyes, exactly one torso and minimal stick limbs. Small expressive eyebrows, sweat, mouth changes and limb curvature are allowed. No doubled torso, realistic muscles or large anime eye whites. Use canonical reference assets/characters/channel-mascot/reference-v1.png.",
+      "outfit": "Exactly one pale-blue (#8CCFE8) short-sleeve T-shirt, unchanged throughout; minimal stick limbs."
+    },
+    {
+      "id": "CH02",
+      "name": "Người đồng hành chính",
+      "appearance": "Adult principal companion in minimal ink style; maintain the same adult identity and role within this story. Keep minimal flat ink appearance and ordinary proportions, no realistic muscular bodies.",
+      "outfit": "Single plain mustard-yellow top; only specifically needed role accessories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "Chắc đúng thẻ trước khi bước ra cửa — Nhịp 1",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "action": "Mascot holds one of two nearly matching meeting cards, companion compares against fictional source plan before departure.",
+      "setting": "Bàn kiểm thẻ hẹn hư cấu.",
+      "camera": "Begin directly on the described revealing prop or consequential action with the mascot visible. Use one dominant referent, contextual close or medium shot as needed. No introductory card. Keep existing subtitle safe area and readable target label; actual opening timing requires WAV and video verification.",
+      "narration": "Hai bản gần giống, bạn chắc chọn đúng? Sure nghĩa là chắc chắn. \"I have checked this part in our story.\" Hai người chuẩn bị rời bàn, còn một lần đối chiếu thông tin của cuộc hẹn.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sure",
+          "meaning": "chắc chắn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC01_I1",
+          "description": "Mascot holds one of two nearly matching meeting cards, companion compares against fictional source plan before departure. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot holds one of two nearly matching meeting cards, companion compares against fictional source plan before departure.",
+          "reason": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "visible_text": [
+            {
+              "text": "sure",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC01_B1",
+          "image_id": "SC01_I1",
+          "purpose": "Make the first-frame problem or contrast intelligible immediately, linked to the selected sense and later resolution.",
+          "anchor": {
+            "vi": {
+              "quote": "Hai bản gần giống, bạn chắc chọn đúng? Sure nghĩa là chắc chắn. \"I have checked this part in our story.\" Hai người chuẩn bị rời bàn, còn một lần đối chiếu thông tin của cuộc hẹn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC02",
+      "title": "Chắc đúng thẻ trước khi bước ra cửa — Nhịp 2",
+      "purpose": "Make the first model an action in the situation.",
+      "action": "Friend compares held card with matching fictional planner detail.",
+      "setting": "Bàn kiểm thẻ hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn hỏi: \"Are you sure?\" Bạn có chắc không? \"Let's look at the chosen plan.\" Người bạn đặt thẻ cạnh lịch, kiểm phần địa điểm đã cùng chọn trước khi đáp.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sure",
+          "meaning": "chắc chắn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC02_I1",
+          "description": "Friend compares held card with matching fictional planner detail. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Friend compares held card with matching fictional planner detail.",
+          "reason": "Make the first model an action in the situation.",
+          "visible_text": [
+            {
+              "text": "Are you sure?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC02_B1",
+          "image_id": "SC02_I1",
+          "purpose": "Make the first model an action in the situation.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn hỏi: \"Are you sure?\" Bạn có chắc không? \"Let's look at the chosen plan.\" Người bạn đặt thẻ cạnh lịch, kiểm phần địa điểm đã cùng chọn trước khi đáp.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC03",
+      "title": "Chắc đúng thẻ trước khi bước ra cửa — Nhịp 3",
+      "purpose": "Advance the same story with the second model.",
+      "action": "Both confirm matching fictional card and planner, wrong version remains aside.",
+      "setting": "Bàn kiểm thẻ hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Người ấy nói: \"I'm sure this is the right card.\" Tôi chắc đây là thẻ đúng. \"It matches the plan we checked.\" Bạn nhìn phần được đối chiếu rồi cất đúng thẻ, không lấy câu chắc chắn thay cho việc xem thông tin.",
+      "requirements": [
+        "R3"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sure",
+          "meaning": "chắc chắn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC03_I1",
+          "description": "Both confirm matching fictional card and planner, wrong version remains aside. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Both confirm matching fictional card and planner, wrong version remains aside.",
+          "reason": "Advance the same story with the second model.",
+          "visible_text": [
+            {
+              "text": "I'm sure this is the right card.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC03_B1",
+          "image_id": "SC03_I1",
+          "purpose": "Advance the same story with the second model.",
+          "anchor": {
+            "vi": {
+              "quote": "Người ấy nói: \"I'm sure this is the right card.\" Tôi chắc đây là thẻ đúng. \"It matches the plan we checked.\" Bạn nhìn phần được đối chiếu rồi cất đúng thẻ, không lấy câu chắc chắn thay cho việc xem thông tin.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Address a Vietnamese beginner, make the immediate purpose clear and keep English phrases intelligible.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    },
+    {
+      "id": "SC04",
+      "title": "Chắc đúng thẻ trước khi bước ra cửa — Lượt thực hành",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "action": "Hold fictional choice and full question, no actual factual certainty claimed.",
+      "setting": "Bàn kiểm thẻ hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "Bạn muốn hỏi người bạn có chắc về lựa chọn theo vai. \"Ask for their confidence.\" Nói như lúc vẫn có thể kiểm lại: \"Are you sure?\"",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sure",
+          "meaning": "chắc chắn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC04_I1",
+          "description": "Hold fictional choice and full question, no actual factual certainty claimed. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Hold fictional choice and full question, no actual factual certainty claimed.",
+          "reason": "Invite a supported learner response and leave time before feedback.",
+          "visible_text": [
+            {
+              "text": "Ask for their confidence.",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            },
+            {
+              "text": "Are you sure?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC04_B1",
+          "image_id": "SC04_I1",
+          "purpose": "Invite a supported learner response and leave time before feedback.",
+          "anchor": {
+            "vi": {
+              "quote": "Bạn muốn hỏi người bạn có chắc về lựa chọn theo vai. \"Ask for their confidence.\" Nói như lúc vẫn có thể kiểm lại: \"Are you sure?\"",
+              "occurrence": 1
+            }
+          },
+          "effect": "hold",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Invite the response, then wait quietly at the scene end.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 4
+        }
+      }
+    },
+    {
+      "id": "SC05",
+      "title": "Chắc đúng thẻ trước khi bước ra cửa — Phản hồi và kết quả",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "action": "Mascot takes checked fictional card and bag while companion closes planner.",
+      "setting": "Bàn kiểm thẻ hẹn hư cấu.",
+      "camera": "Frame the word referent and one meaningful action; adjust shot scale to the object or relation. Lock view for based_on changes and hold during the learner response.",
+      "narration": "\"Are you sure?\" Bạn chắc chứ? \"The card has been compared with the plan.\" Hai người đã kiểm lại thông tin trong câu chuyện, rồi mới rời bàn với bản đã chọn.",
+      "requirements": [
+        "R4"
+      ],
+      "character_ids": [
+        "CH01",
+        "CH02"
+      ],
+      "source_ids": [],
+      "vocabulary": [
+        {
+          "word": "sure",
+          "meaning": "chắc chắn"
+        }
+      ],
+      "images": [
+        {
+          "id": "SC05_I1",
+          "description": "Mascot takes checked fictional card and bag while companion closes planner. Attach canonical Character reference for the mascot. Preserve the single pale-blue short-sleeve torso, round white navy-outlined head, solid black oval eyes and stick limbs. Keep all characters and props continuous within the story. Show only the people explicitly needed here. Outer 10% safe and bottom 22% clear for subtitles. Only visible_text may appear as writing; no incidental logos, numerals, dates, account data or watermarks.",
+          "character_ids": [
+            "CH01",
+            "CH02"
+          ],
+          "based_on": null,
+          "preserve": "",
+          "change": "Mascot takes checked fictional card and bag while companion closes planner.",
+          "reason": "Provide the correct response and resolve the opening need.",
+          "visible_text": [
+            {
+              "text": "Are you sure?",
+              "placement": "Upper third, readable at phone size, separate from faces and main referent; keep bottom 22% clear for subtitles.",
+              "object": "Flat teaching text."
+            }
+          ]
+        }
+      ],
+      "beats": [
+        {
+          "id": "SC05_B1",
+          "image_id": "SC05_I1",
+          "purpose": "Provide the correct response and resolve the opening need.",
+          "anchor": {
+            "vi": {
+              "quote": "\"Are you sure?\" Bạn chắc chứ? \"The card has been compared with the plan.\" Hai người đã kiểm lại thông tin trong câu chuyện, rồi mới rời bàn với bản đã chọn.",
+              "occurrence": 1
+            }
+          },
+          "effect": "cut",
+          "focus": {
+            "x": 0.5,
+            "y": 0.4
+          }
+        }
+      ],
+      "audio_direction": {
+        "vi": {
+          "intent": "Give the response and finish the story clearly.",
+          "pronunciation_notes": "Preserve English spelling, I and inflected forms. Check actual WAV for the target word, sentence stress, language switches and learner interval; text instructions do not prove voice quality.",
+          "learner_pause_seconds": 0
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "requirement_id": "R1",
+      "scene_id": "SC01",
+      "quote": "Hai bản gần giống, bạn chắc chọn đúng? Sure nghĩa là chắc chắn. \"I have checked this part in our story.\" Hai người chuẩn bị rời bàn, còn một lần đối chiếu thông tin của cuộc hẹn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC01",
+      "quote": "Hai bản gần giống, bạn chắc chọn đúng? Sure nghĩa là chắc chắn. \"I have checked this part in our story.\" Hai người chuẩn bị rời bàn, còn một lần đối chiếu thông tin của cuộc hẹn."
+    },
+    {
+      "requirement_id": "R2",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Are you sure?\" Bạn có chắc không? \"Let's look at the chosen plan.\" Người bạn đặt thẻ cạnh lịch, kiểm phần địa điểm đã cùng chọn trước khi đáp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC02",
+      "quote": "Bạn hỏi: \"Are you sure?\" Bạn có chắc không? \"Let's look at the chosen plan.\" Người bạn đặt thẻ cạnh lịch, kiểm phần địa điểm đã cùng chọn trước khi đáp."
+    },
+    {
+      "requirement_id": "R3",
+      "scene_id": "SC03",
+      "quote": "Người ấy nói: \"I'm sure this is the right card.\" Tôi chắc đây là thẻ đúng. \"It matches the plan we checked.\" Bạn nhìn phần được đối chiếu rồi cất đúng thẻ, không lấy câu chắc chắn thay cho việc xem thông tin."
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC04",
+      "quote": "Bạn muốn hỏi người bạn có chắc về lựa chọn theo vai. \"Ask for their confidence.\" Nói như lúc vẫn có thể kiểm lại: \"Are you sure?\""
+    },
+    {
+      "requirement_id": "R4",
+      "scene_id": "SC05",
+      "quote": "\"Are you sure?\" Bạn chắc chứ? \"The card has been compared with the plan.\" Hai người đã kiểm lại thông tin trong câu chuyện, rồi mới rời bàn với bản đã chọn."
+    }
+  ],
+  "outline": [
+    {
+      "scene_id": "SC01",
+      "purpose": "Open on the immediate visible need or surprising detail, then establish the selected meaning; do not start with an introductory title.",
+      "requirements": [
+        "R1",
+        "R2"
+      ],
+      "transition": "The opening makes this need explicit: Mascot holds one of two nearly matching meeting cards, companion compares against fictional source plan before departure. Continue with the existing connected model: Friend compares held card with matching fictional planner detail."
+    },
+    {
+      "scene_id": "SC02",
+      "purpose": "Make the first model an action in the situation.",
+      "requirements": [
+        "R2",
+        "R3"
+      ],
+      "transition": "Story continuity: Có hai thẻ → hỏi chắc → đối chiếu → xác nhận.. Next event: Both confirm matching fictional card and planner, wrong version remains aside."
+    },
+    {
+      "scene_id": "SC03",
+      "purpose": "Advance the same story with the second model.",
+      "requirements": [
+        "R3"
+      ],
+      "transition": "Story continuity: Có hai thẻ → hỏi chắc → đối chiếu → xác nhận.. Next event: Hold fictional choice and full question, no actual factual certainty claimed."
+    },
+    {
+      "scene_id": "SC04",
+      "purpose": "Invite a supported learner response and leave time before feedback.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có hai thẻ → hỏi chắc → đối chiếu → xác nhận.. Next event: Mascot takes checked fictional card and bag while companion closes planner."
+    },
+    {
+      "scene_id": "SC05",
+      "purpose": "Provide the correct response and resolve the opening need.",
+      "requirements": [
+        "R4"
+      ],
+      "transition": "Story continuity: Có hai thẻ → hỏi chắc → đối chiếu → xác nhận.. Next event: Hold the completed result after feedback."
+    }
+  ],
+  "claims": [],
+  "revision_response": [],
+  "open_questions": []
+}

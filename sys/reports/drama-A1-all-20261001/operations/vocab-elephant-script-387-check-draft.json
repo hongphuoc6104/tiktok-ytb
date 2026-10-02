@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "errors": [],
+  "semantic_review": "pending",
+  "timing": "estimated",
+  "duration_estimate": {
+    "languages": {
+      "vi": {
+        "scenes": [
+          {
+            "scene_id": "SC01",
+            "units": 41,
+            "seconds": 12.44,
+            "min": 9.33,
+            "max": 15.55
+          },
+          {
+            "scene_id": "SC02",
+            "units": 38,
+            "seconds": 11.61,
+            "min": 8.7,
+            "max": 14.51
+          },
+          {
+            "scene_id": "SC03",
+            "units": 35,
+            "seconds": 10.77,
+            "min": 8.08,
+            "max": 13.47
+          },
+          {
+            "scene_id": "SC04",
+            "units": 29,
+            "seconds": 12.81,
+            "min": 9.6,
+            "max": 16.01
+          },
+          {
+            "scene_id": "SC05",
+            "units": 39,
+            "seconds": 12.18,
+            "min": 9.14,
+            "max": 15.23
+          }
+        ],
+        "min": 44.85,
+        "max": 74.77,
+        "rate": {
+          "units_per_second": 3.6,
+          "uncertainty": 0.25,
+          "includes_pauses": false,
+          "source": "initial estimate; replace with measured voice rate"
+        }
+      }
+    },
+    "warnings": [],
+    "status": "estimated_not_measured"
+  },
+  "open_questions": [],
+  "revision_response": [
+    {
+      "request_id": "21032",
+      "status": "addressed",
+      "explanation": "Đã viết lại toàn bộ diễn biến: Tôi nặn tượng một con voi đất sét có chiếc vòi dài và được người chú thợ gốm giúp làm khung đỡ vững chắc. Mở cụ thể, hai mẫu có ngữ cảnh, lượt nói câu có khoảng chờ và đáp án. Không nói câu bỏ trống trong narration. Thời lượng/giữ chân chưa đo.",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    }
+  ]
+}
