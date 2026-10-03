@@ -1,0 +1,296 @@
+{
+  "generated_utc": "2026-10-03T13:20:29.090406+00:00",
+  "workspace": "/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow",
+  "mode": "read_only_completion_refresh",
+  "completion_claimed": false,
+  "goal_achieved": false,
+  "integration_performed": false,
+  "qa_generated_provider_requests": false,
+  "previous_audit_historical_summary": {
+    "run": 469,
+    "passed": 469,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "unittest_seconds": 310.997,
+    "source_files_hashed": 127,
+    "source_changes_during_run": []
+  },
+  "previous469_suite_current_hash_mismatches": [
+    "account_catalog.py",
+    "adapters.py",
+    "b2_bridge.py",
+    "colab_bridge/__main__.py",
+    "colab_bridge/accounts.py",
+    "colab_bridge/client.py",
+    "config.json",
+    "dashboard/data.py",
+    "dashboard/server.py",
+    "dashboard/static/app.js",
+    "dashboard/static/style.css",
+    "execution.py",
+    "experiments/b2_illustrator/browser-operations.mjs",
+    "experiments/b2_illustrator/session.mjs",
+    "flow_management.py",
+    "image_pipeline.py",
+    "pilot.py",
+    "profile_setup.py",
+    "remote_audio.py",
+    "scripts/bootstrap.py",
+    "session_store.py",
+    "tests/test_audio.py",
+    "tests/test_audio_english_spans.py",
+    "tests/test_channel_profile.py",
+    "tests/test_colab_tts.py",
+    "tests/test_colab_worker.py",
+    "tests/test_execution_v4.py",
+    "tests/test_remote_render.py"
+  ],
+  "current_suite": {
+    "log": "final-current-suite.log",
+    "owner": "root",
+    "handle": 46672,
+    "finished": false,
+    "final_verdict_claimed": false,
+    "known_progress": "E and skips visible; root owns diagnosis"
+  },
+  "requirements": [
+    {
+      "id": "R01",
+      "requirement": "Bốn điểm vào/Rules/bốn skill và links",
+      "state": "implemented_in_worktree",
+      "evidence": "English active definitions, loader bindings, docs/INDEX→flow-prompts; main AGENTS/INDEX still different"
+    },
+    {
+      "id": "R02",
+      "requirement": "Grant bền và nhóm tệp",
+      "state": "isolated_verified",
+      "evidence": "qa-engine15; permissions operations/history/auth; transport remains declared unverified"
+    },
+    {
+      "id": "R03",
+      "requirement": "Compatibility/migration/rollback/legacy",
+      "state": "isolated_verified",
+      "evidence": "execution.verify_compatibility/schema snapshots/migrate/rollback; no main live job migrated in this refresh"
+    },
+    {
+      "id": "R04",
+      "requirement": "Observe/owner/stop/resume/takeover",
+      "state": "isolated_verified",
+      "evidence": "PilotView read-only CLI; per-job lease; approve lease; per-request before_submit and pinned collect"
+    },
+    {
+      "id": "R05",
+      "requirement": "Auto không reviewer; review năm output",
+      "state": "isolated_verified_with_partial_live",
+      "evidence": "execution plan/checkpoints; modern registration isolated from reviewer; auto actual trial audio/images/render ran; fresh both-mode browser QA fixtures only"
+    },
+    {
+      "id": "R06",
+      "requirement": "Micro-plan/no-progress/no total repair cap",
+      "state": "implemented_and_isolated_verified",
+      "evidence": "micro_plan/result official; image repair v4 cap=None; real IM04 targeted reject now pending"
+    },
+    {
+      "id": "R07",
+      "requirement": "Web tám tab/artifact chung",
+      "state": "actual_browser_fixture_verified",
+      "evidence": "qa-remote-web browser HTTP+decoded fixtures; real live render report is separate from browser proof"
+    },
+    {
+      "id": "R08",
+      "requirement": "Flow counters/Colab hours/setup processing controls",
+      "state": "previous_gaps_resolved_in_source_and_qa",
+      "evidence": "qa-setup-runtime14; browser flow_ring_count0/flow_counter3/150/errors[]; app.js flow/colab/setup controls; previous C01/C02 outdated"
+    },
+    {
+      "id": "R09",
+      "requirement": "Clone/control dependencies/setup/return",
+      "state": "control_bootstrap_verified",
+      "evidence": "bootstrap-control-proof isolated install+shortsocket; profile setup tests; no copied cookies/auth; previous C03 outdated"
+    },
+    {
+      "id": "R10",
+      "requirement": "Auth/capability/budget/identity/account owner",
+      "state": "isolated_verified_plus_root_auth_evidence",
+      "evidence": "account_budget/session/assignment_probe; root verified15Google identities; account secrets excluded; no live quota guarantee"
+    },
+    {
+      "id": "R11",
+      "requirement": "Remote WAV/assembly/SRT/reference voice/rate",
+      "state": "actual_provider_technical_artifact",
+      "evidence": "audio6 48.96s reference-narrator.92 exactref; hash verified locally; quality_listened=false in saved report"
+    },
+    {
+      "id": "R12",
+      "requirement": "Remote timeline/props/render/encode English9:16",
+      "state": "actual_provider_technical_artifact_repair_pending",
+      "evidence": "render1 actual Colab/T4 MP449.024s1080x1920H264AAC, hash verified, runtime released; IM04 reject invalidates final image/video checkpoints"
+    },
+    {
+      "id": "R13",
+      "requirement": "B1+ one bank sense/2D/mascot/continuity",
+      "state": "contract_verified_visual_defect_open",
+      "evidence": "actual7Flowscene images exist; IM04 instructionparagraph exceeds allowedSunday; no blanket visual acceptance"
+    },
+    {
+      "id": "R14",
+      "requirement": "Voice/templates/duration user steering",
+      "state": "source_and_targeted_evidence",
+      "evidence": "reference-narrator.92; model-purpose registry pin; legacy prompt_templates bytes unchanged; v4 duration estimated unless explicit source-backed required contract"
+    },
+    {
+      "id": "R15",
+      "requirement": "Finite one-image-per-profile tests and recovery",
+      "state": "runtime_fixture_verified_live_incomplete",
+      "evidence": "flow-profile-trial6 controlled socket pass/no liveprovider; metadata plan not auth; no private trialstate store found here so whole pool completion unproven"
+    },
+    {
+      "id": "R16",
+      "requirement": "Maintenance/Git/issues/handoff/main integration",
+      "state": "isolated_verified_integration_pending",
+      "evidence": "qa-maintenance28; runtime no push/cleanup here; manifest176source candidates2conflicts17archivedskill removals; main untouched"
+    }
+  ],
+  "resolved_stale_gaps": [
+    "C01Flowhourring",
+    "C02websetupcontrols",
+    "C03clonecontroldependencies",
+    "old43.02saudioonly",
+    "oldnoMP4"
+  ],
+  "live_audio": {
+    "path": "runs/normalization-oversleep-english-9x16-001/revisions/audio/6/narration.wav",
+    "sha256": "b5c8b321471ed893bb3a508a33b78904a92dd3fdc1ca9c13c8eca0b1d0106f6f",
+    "duration": 48.96,
+    "voice": "reference-narrator",
+    "speed": 0.92,
+    "reference_sha256": "97d5aee4bc5bbb4a5951a180c04954f5f33b36e901f9a99084ec9f2ebb1817e9",
+    "session_released": true,
+    "quality_listened": false
+  },
+  "live_video": {
+    "path": "runs/normalization-oversleep-english-9x16-001/revisions/render/1/video.mp4",
+    "sha256": "6de70b13ba6353e5b0300ca69edbbab9a5be19f795e726f68abf472f3e36c24f",
+    "outputs": [
+      {
+        "aspect_ratio": "9:16",
+        "language": "en",
+        "subtitles": true,
+        "voice": "reference-narrator",
+        "speed": 0.92,
+        "file": "video.mp4",
+        "width": 1080,
+        "height": 1920,
+        "duration": 49.024,
+        "video_codec": "h264",
+        "audio_codec": "aac"
+      }
+    ],
+    "local_render_used": false,
+    "session_released": true,
+    "viewed_listened": false,
+    "current_checkpoint_valid": false
+  },
+  "current_trial": {
+    "job": "normalization-oversleep-english-9x16-001",
+    "mode": "auto",
+    "complete": false,
+    "checkpoints": [
+      {
+        "phase": "outline",
+        "state": "complete",
+        "revision": 2
+      },
+      {
+        "phase": "dialogue",
+        "state": "complete",
+        "revision": 3
+      },
+      {
+        "phase": "audio",
+        "state": "complete",
+        "revision": 2
+      },
+      {
+        "phase": "images",
+        "state": "pending",
+        "revision": null
+      },
+      {
+        "phase": "video",
+        "state": "pending",
+        "revision": null
+      }
+    ]
+  },
+  "remaining_gaps": [
+    {
+      "id": "B01",
+      "requirement": "Correct actual IM04 and replace remote MP4",
+      "state": "official_image_reject_pending",
+      "evidence": [
+        "sys/logs/issues/20261003-flow-im04-instruction-text.md",
+        "official pilot observe: images/video pending; audio/dialogue complete"
+      ],
+      "next": "Root generates only requested IM04 replacement, inspects exact allowed text, then rerenders with unchanged audio6."
+    },
+    {
+      "id": "B02",
+      "requirement": "Latest stable combined regression",
+      "state": "root_suite_running",
+      "evidence": [
+        "final-current-suite.log handle46672"
+      ],
+      "next": "Assess final failures/errors/skips and before/after hashes; fix actual failures then test affected path. Older469-pass snapshot is historical."
+    },
+    {
+      "id": "B03",
+      "requirement": "Finite per-profile actual Flow trial completion",
+      "state": "live_pool_completion_not_proven",
+      "evidence": [
+        "flow-profile-trial-tests.json live_provider=false",
+        "flow-profile-test-plan.json metadata-only"
+      ],
+      "next": "Keep one-image limit, exactprofile/project/ref and serial owner; unknown collect; login/quota/CAPTCHA stop, norotate. Report which profiles remain blocked/untried."
+    },
+    {
+      "id": "B04",
+      "requirement": "Real content/audio/video inspection and both-mode recovery on web",
+      "state": "partial_live_evidence",
+      "evidence": [
+        "narrator4 quality_listened=false",
+        "render5 viewed_listened=false",
+        "qa-remote-web browser fixture"
+      ],
+      "next": "Record actual listening/viewing separately; do not promote technical manifests or oldcomplete status into quality acceptance. Demonstrate same real job repair/stop/resume on web within scope."
+    },
+    {
+      "id": "B05",
+      "requirement": "Integrate tested upgrade into primary checkout",
+      "state": "not_performed",
+      "evidence": [
+        "integration-manifest.json2threewayconflicts",
+        "main still oldfourroots/skills/code"
+      ],
+      "next": "Use existing user-authorized upgrade scope; backup exactmainbytes; reconcileAGENTS/INDEX; copy exactsource allowlist including runtime/schema/control/tests/system requirements; preservestate/auth/useredits; run main read-only checks, separate legacy migration authorization."
+    }
+  ],
+  "manifest": "integration-manifest.json",
+  "integration_counts": {
+    "entries": 269,
+    "decisions": {
+      "candidate_add": 120,
+      "candidate_replace": 56,
+      "delete_active_old_skill_after_legacy_hash_verified": 17,
+      "three_way_review_required": 2,
+      "already_identical_preserve": 12,
+      "retain_worktree_evidence_not_source": 60,
+      "exclude": 2
+    },
+    "source_candidates": 176,
+    "conflicts": 2,
+    "old_skill_deletions": 17,
+    "evidence_not_source": 60
+  }
+}

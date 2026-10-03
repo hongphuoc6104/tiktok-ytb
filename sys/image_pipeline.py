@@ -215,7 +215,10 @@ def image_check(p, j, path, expected_hash=None, full=True):
     if expected_hash and digest(f) != expected_hash:
         raise Blocked('M2_HASH: image changed: ' + path)
     with Image.open(f) as im:
-        im.load()
+        from execution import is_job
+        modern = is_job(p, j)
+        if not modern:
+            im.load()
         if full:
             b = p.brief(j)[0] if p.brief(j) else None
             ratio = b.get('aspect_ratio', '9:16') if b else '9:16'
@@ -230,6 +233,8 @@ def image_check(p, j, path, expected_hash=None, full=True):
             else:
                 if abs(im.width / im.height - 9 / 16) > .04 or im.width < 360 or im.height < 640:
                     raise Blocked('M2_IMAGE: require 9:16 and at least 720x1280: ' + path)
+        if modern:
+            im.verify()  # Structural validation only; no desktop compositing/resizing.
     return path
 
 
@@ -242,10 +247,114 @@ def requested_prompt(p, j, target, prompt, notes, ratio, registration=False):
     mascot_target = (target == 'ref:CH01' or target.startswith('register:CH01:') or
                      bool(unit and 'CH01' in unit['character_ids']))
     if mascot_target:
-        prompt += ('\nPreserve the attached canonical character design. Express emotion through posture and gesture; '
-                   'do not add eyebrows, teeth, white cartoon eyes, extra clothing or a second torso.')
+        from execution import is_job
+        if is_job(p, j):
+            prompt += ('\nPreserve the attached canonical character core: exactly one stickman torso, '
+                       'light-blue #8CCFE8 short-sleeve shirt, round white head with dark navy outline, '
+                       'solid black oval eyes and minimal stick limbs. Keep the mascot small and visible. '
+                       'Subtle eyebrows, sweat, mouth expressions and small rounded hand/foot variations are allowed. '
+                       'Do not replace the core identity with anime eyes, realistic anatomy or doubled bodies.')
+        else:
+            # Historical v3 request identities must remain replayable.
+            prompt += ('\nPreserve the attached canonical character design. Express emotion through posture and gesture; '
+                       'do not add teeth, white cartoon eyes, extra clothing or a second torso.')
     revised = prompt + ('\nRequested corrections (keep the approved visible-text list unchanged): '+corrections if corrections else '') if c.get('schema_version')=='3.0' else prompt + ('\nRequested corrections: '+corrections if corrections else '')
     return revised if registration else image_prompt(revised,ratio)
+
+
+def _template_request(p, j, target, prompt, corrections, ratio, refs, registration, base_image, scene):
+    """Compile new pinned jobs from exact declared references/learner data.
+
+    Resolve the same verified artifact/media pair as the actual adapter. The
+    daemon still checks the Character/Base UI slots at each send boundary.
+    """
+    from flow_management import prompt_pin
+    pin = prompt_pin(p, j)
+    if pin is None:
+        return None
+    from flow_prompts import compile_pinned
+    from adapters import _flow_media_reference
+    canonical = p.root / 'assets/characters/channel-mascot/reference-v1.png'
+    if registration:
+        image = p.path(j, registration['path'])
+        if digest(image) != registration['sha256']:
+            raise Blocked('FLOW_REFERENCE_REQUIRED: character registration source hash changed')
+        if image.resolve() == canonical.resolve():
+            media = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
+        else:
+            _, media = _flow_media_reference(p, j, image=image)
+        purpose = 'character'
+    elif refs:
+        if len(refs) != 1:
+            raise Blocked('FLOW_REFERENCE_UNSUPPORTED: exactly one attached Character reference supported')
+        image_path, media = _flow_media_reference(p, j, name=refs[0]['name'])
+        image = Path(image_path)
+        journal = read(p.path(j, refs[0]['registration_journal']))
+        if journal.get('state') != 'downloaded' or journal.get('sha256') != digest(image):
+            raise Blocked('FLOW_REFERENCE_REQUIRED: registration journal artifact differs from attachment')
+        purpose = 'variation' if base_image else 'scene'
+    else:
+        if not canonical.is_file():
+            raise Blocked('FLOW_REFERENCE_REQUIRED: canonical Character reference missing')
+        image = canonical
+        media = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
+        declared_characters = {character['id'] for character in content(p, j)['characters']}
+        purpose = ('character' if target.removeprefix('ref:') in declared_characters else 'reference') if target.startswith('ref:') else ('variation' if base_image else 'scene')
+    # The generated character-reference purpose deliberately allows full-body
+    # inspection framing; final scene frames keep the canonical mascot small.
+    data = {'description': prompt, 'aspect_ratio': ratio,
+            'character_reference': {'media_id': media, 'sha256': digest(image)},
+            'allowed_text': scene.get('visible_text', []) if scene else []}
+    if scene:
+        original = next((image for parent in content(p, j)['scenes'] for image in parent.get('images', [])
+                         if image['id'] == scene.get('image_id', scene['id'])), None)
+        if original:
+            data['preserve'] = [original['preserve']] if original.get('preserve', '').strip() and base_image else []
+            data['change'] = [original['change']] if original.get('change', '').strip() else []
+    if corrections:
+        data.setdefault('change', []).append(corrections)
+    if base_image:
+        image_path = p.path(j, base_image['path'])
+        if digest(image_path) != base_image['sha256']:
+            raise Blocked('FLOW_BASE_REFERENCE_REQUIRED: base image bytes changed')
+        _, base_media = _flow_media_reference(p, j, image=image_path)
+        data['base_reference'] = {'media_id': base_media, 'sha256': base_image['sha256']}
+        if not data.get('preserve') or not data.get('change'):
+            raise Blocked('FLOW_VARIATION_INVALID: planned preserve/change required for attached Base scene')
+    result = compile_pinned(pin, purpose, data)
+    metadata = {key: value for key, value in result.items() if key != 'prompt'}
+    return result['prompt'], {**metadata, 'pin': pin, 'data': data}
+
+
+def _saved_template_prompt(p, j, identity):
+    """Quality checks recompile only the saved new pin, never adopt legacy."""
+    record = identity.get('prompt_template')
+    if record is None:
+        return requested_prompt(p, j, identity['target'], identity['prompt'], identity.get('corrections', ''),
+                                identity['ratio'], bool(identity.get('registration')))
+    from flow_management import prompt_pin
+    from flow_prompts import compile_pinned
+    if prompt_pin(p, j) != record.get('pin'):
+        raise Blocked('FLOW_TEMPLATE_PIN_CHANGED: request does not match its job pin')
+    scene = next((unit for unit in planned_units(p, j) if unit['id'] == identity['target']), None)
+    if scene and record['data'].get('allowed_text') != scene.get('visible_text', []):
+        raise Blocked('FLOW_VISIBLE_TEXT_CHANGED: saved template lettering differs from planned learner data')
+    if record['data'].get('description') != identity['prompt'] or record['data'].get('aspect_ratio') != identity['ratio']:
+        raise Blocked('FLOW_TEMPLATE_RECORD_CHANGED: visual description/ratio differs from request identity')
+    result = compile_pinned(record['pin'], record['purpose'], record['data'])
+    expected = {key: value for key, value in result.items() if key != 'prompt'}
+    if any(record.get(key) != value for key, value in expected.items()):
+        raise Blocked('FLOW_TEMPLATE_RECORD_CHANGED: saved compilation provenance differs')
+    return result['prompt']
+
+
+def _check_template_attachment(identity, proof):
+    record = identity.get('prompt_template')
+    if record is None:
+        return
+    character = record['data']['character_reference']
+    if proof.get('character_media_id') != character['media_id'] or proof.get('character_reference_sha256') != character['sha256']:
+        raise Blocked('FLOW_TEMPLATE_ATTACHMENT_MISMATCH: actual Character slot differs from compiled provenance')
 
 
 def _plan_request(p, j, target, prompt, refs, registration, base_image):
@@ -264,7 +373,8 @@ def _plan_request(p, j, target, prompt, refs, registration, base_image):
         linked = [register_existing(p, j, next(x for x in approved_refs if x['character_id'] == cid)) for cid in scene['character_ids']]
         if list(refs) != linked or prompt != scene['prompt']:
             raise Blocked('M2_REFERENCE_LINK: scene request must use approved prompt and registered characters')
-    cfg = read(p.root / 'config.json')
+    from flow_management import config as flow_config
+    cfg = flow_config(p, j)
     from scripts.image_repairs import active
     corrections = active(p, j, scene, target)
     ratio = scene.get('ratio') if scene and scene.get('ratio') else ('16:9' if p.brief(j)[0]['aspect_ratio']=='16:9' else '9:16')
@@ -273,7 +383,8 @@ def _plan_request(p, j, target, prompt, refs, registration, base_image):
             raise Blocked('M2_BASE_IMAGE: prior image required for variation')
     elif base_image:
         raise Blocked('M2_BASE_IMAGE: unexpected reference image')
-    actual_prompt = requested_prompt(p,j,target,prompt,corrections,ratio,bool(registration))
+    template = _template_request(p, j, target, prompt, corrections, ratio, refs, registration, base_image, scene)
+    actual_prompt = template[0] if template else requested_prompt(p,j,target,prompt,corrections,ratio,bool(registration))
     # Identity must track content (name/sha256), never the incidental copy path a
     # revision folder happens to use today: that path churns every produce() run
     # and must not force a real character re-registration.
@@ -281,7 +392,12 @@ def _plan_request(p, j, target, prompt, refs, registration, base_image):
     identity = {'target': target,
                 'prompt': prompt, 'actual_prompt': actual_prompt, 'model': cfg['flow_model'], 'ratio': ratio,
                 'references': list(refs), 'corrections': corrections, 'base_image': base_image,
-                'registration': identity_registration, 'config_hash': digest(p.root / 'config.json')}
+                'registration': identity_registration, 'config_hash': hashobj(cfg)}
+    if template is not None:
+        identity['prompt_template'] = template[1]
+    from execution import is_job
+    if not is_job(p, j):
+        identity['config_hash'] = digest(p.root / 'config.json')
     cache_identity = dict(identity)
     if base_image:
         cache_identity['base_image'] = {k: base_image[k] for k in ('target','sha256')}
@@ -309,6 +425,17 @@ def _unresolved_conflict(p, j, target):
         if same_target and old['state'] == 'generated':
             generated = old
     return generated
+
+
+def _before_generation(p, j):
+    from execution import is_job, before_submit
+    if is_job(p, j):
+        try:
+            before_submit(p, j)
+        except Exception as ex:
+            # This check is before the provider submission, not an inferred timeout.
+            ex.generation_submitted = False
+            raise
 
 
 def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
@@ -360,10 +487,15 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
               'args': args, 'journal': str(record.relative_to(p.job(j)))}
     if recovery_out:
         result['collection_out'] = recovery_out
+    if not collection_only:
+        _before_generation(p, j)
     write(record, result)
     p.event(j, 'images', 'flow_collection_resumed' if collection_only else 'flow_submitted', key)
     try:
-        r = adapters.gflow(p, *args)
+        if not collection_only:
+            _before_generation(p, j)
+        from execution import is_job
+        r = adapters.gflow(p, *args, **({'flow_job': j} if is_job(p, j) else {}))
         (folder / 'command.log').write_text(r.stdout + '\n' + r.stderr)
         if r.returncode:
             raise Blocked('Flow failed (login/CAPTCHA/limit or provider error); see command.log: ' + r.stderr[-500:])
@@ -379,12 +511,17 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
         if len(candidates) != 1:
             raise Blocked('Cannot identify exactly one downloaded result')
         proof = read(folder / 'ui-proof.json')
+        _check_template_attachment(identity, proof)
         if proof.get('passed') is not True or proof.get('characters') != [x['name'] for x in refs]:
             raise Blocked('Flow UI attachment/mode evidence missing')
         if base_image and proof.get('base_image') != str(p.path(j,base_image['path'])):
             raise Blocked('M2_BASE_IMAGE: UI attachment evidence missing')
-        if proof.get('mode') != ('character-register' if registration else 'image'):
+        from execution import is_job
+        expected_mode = 'image' if is_job(p,j) else ('character-register' if registration else 'image')
+        if proof.get('mode') != expected_mode:
             raise Blocked('Flow UI mode evidence differs')
+        if is_job(p,j) and proof.get('operation') != ('character-register' if registration else 'image'):
+            raise Blocked('Flow operation evidence differs from the requested purpose')
         if requires_ui_evidence(p):
             with Image.open(folder / 'before-submit.png') as im: im.verify()
         f = candidates[0]
@@ -397,6 +534,8 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
                 raise Blocked('Downloaded metadata does not match request')
         result.update(state='downloaded', path=str(f.relative_to(p.job(j))), sha256=digest(f))
         write(record, result)
+        if is_job(p, j):
+            __import__('flow_management').sync(p, j, folder, result)
         image_check(p, j, result['path'], result['sha256'], full=registration is None)
         p.event(j, 'images', 'flow_downloaded', key)
         return result
@@ -407,6 +546,9 @@ def request(p, j, target, prompt, refs=(), registration=None, base_image=None):
                 'not_submitted' if getattr(ex,'generation_submitted',None) is False else 'ambiguous')
             result.update(state=state, error=str(ex))
             write(record, result)
+        from execution import is_job
+        if is_job(p, j):
+            __import__('flow_management').sync(p, j, folder, result)
         raise Blocked('M2_FLOW: ' + str(ex)) from ex
 
 
@@ -429,7 +571,8 @@ def batch_submit(p, j, units, registrations):
     Known generated results use collection-only recovery through request().
     """
     import adapters
-    cfg = read(p.root / 'config.json')
+    from flow_management import config as flow_config
+    cfg = flow_config(p, j)
     plans = []
     for unit in units:
         if unit.get('based_on'):
@@ -444,6 +587,7 @@ def batch_submit(p, j, units, registrations):
                       'identity': identity, 'key': key, 'linked': linked})
     if not plans:
         return
+    _before_generation(p, j)
     evidence = preflight(p, j, 'image')  # one preflight for the whole batch
     model_arg = 'nano-banana-pro' if 'pro' in cfg['flow_model'].lower() else ('nano-banana-2' if '2' in cfg['flow_model'] else cfg['flow_model'])
     batch_id = hashobj([x['key'] for x in plans])[:16]
@@ -455,7 +599,7 @@ def batch_submit(p, j, units, registrations):
         folder.mkdir(parents=True, exist_ok=True)
         write(folder / 'preflight.json', evidence)
         if requires_ui_evidence(p): shutil.copy(p.path(j, evidence['screenshot']), folder / 'preflight.png')
-        jobs.append({'id': plan['key'][:16], 'type': 'image', 'project': cfg['flow_project'],
+        jobs.append({'id': plan['key'][:16], 'request_key': plan['key'], 'type': 'image', 'project': cfg['flow_project'],
                      'prompt': plan['actual_prompt'], 'model': model_arg, 'ratio': plan['ratio'],
                      'outputs': 1, 'character': [x['name'] for x in plan['linked']], 'out': str(batch_dir)})
         plan['folder'], plan['job_id'] = folder, plan['key'][:16]
@@ -470,7 +614,9 @@ def batch_submit(p, j, units, registrations):
               'state':'submitted','submitted_at':time.time(),'args':jobs_by_id[plan['job_id']][0],
               'journal':str((plan['folder']/'request.json').relative_to(p.job(j)))})
     try:
-        r = adapters.gflow(p, *args, timeout=max(960, 300 * len(jobs)))
+        _before_generation(p, j)
+        from execution import is_job
+        r = adapters.gflow(p, *args, timeout=max(960, 300 * len(jobs)), **({'flow_job': j} if is_job(p, j) else {}))
         (batch_dir / 'command.log').write_text(r.stdout + '\n' + r.stderr)
     except Exception as ex:
         (batch_dir / 'command.log').write_text('EXCEPTION: ' + str(ex))
@@ -490,12 +636,14 @@ def batch_submit(p, j, units, registrations):
         if entry['status'] == 'not_submitted':
             result.update(state='not_submitted',error=entry.get('error',''))
             write(record,result)
+            if __import__('execution').is_job(p, j): __import__('flow_management').sync(p, j, folder, result)
             continue
         if entry['status'] == 'failed':
             result.update(state='generated' if entry.get('collection_only') else 'ambiguous', error=entry.get('error', 'batch job failed'))
             if entry.get('collection_only'):
                 result['collection_out'] = str((batch_dir / plan['job_id']).relative_to(p.job(j)))
             write(record, result)
+            if __import__('execution').is_job(p, j): __import__('flow_management').sync(p, j, folder, result)
             p.event(j, 'images', 'flow_batch_ambiguous', key)
             continue
         try:
@@ -504,6 +652,7 @@ def batch_submit(p, j, units, registrations):
             if not ui_proof_path.is_file() or (requires_ui_evidence(p) and not before_submit_path.is_file()):
                 raise Blocked('Flow UI attachment/mode evidence missing')
             proof = read(ui_proof_path)
+            _check_template_attachment(identity, proof)
             expected_names = [x['name'] for x in plan['linked']]
             if proof.get('passed') is not True or proof.get('characters') != expected_names:
                 raise Blocked('Flow UI attachment/mode evidence missing')
@@ -529,11 +678,13 @@ def batch_submit(p, j, units, registrations):
             shutil.copy(f.with_suffix('.json'), dest.with_suffix('.json'))
             result.update(state='downloaded', path=str(dest.relative_to(p.job(j))), sha256=digest(dest))
             write(record, result)
+            if __import__('execution').is_job(p, j): __import__('flow_management').sync(p, j, folder, result)
             image_check(p, j, result['path'], result['sha256'], full=True)
             p.event(j, 'images', 'flow_batch_downloaded', key)
         except Exception as ex:
             result.update(state='ambiguous', error=str(ex))
             write(record, result)
+            if __import__('execution').is_job(p, j): __import__('flow_management').sync(p, j, folder, result)
             p.event(j, 'images', 'flow_batch_ambiguous', key)
 
 
@@ -548,8 +699,10 @@ def register(p, j, ref):
     if not confirmation.exists() and (p.job(j) / 'workflow.json').exists():
         import workflow
         mode = workflow.settings(p, j)['mode']
+        from execution import is_job
+        modern = is_job(p, j)
         report = None
-        if mode == 'auto':
+        if mode == 'auto' and not modern:
             from machine_review import review
             report = review(p, j, 'registration', [ref['path'], r['path']],
                             {'reference_hash': ref['sha256'], 'result_hash': r['sha256']})
@@ -557,9 +710,10 @@ def register(p, j, ref):
         # A pending comparison must never be described as a verified identity match.
         shot = p.path(j, r['journal']).parent / 'before-submit.png'
         write(confirmation, {'reference_hash': ref['sha256'], 'result_hash': r['sha256'],
-                            'name': ref['name'], 'matches_approved_reference': mode == 'auto',
+                            'name': ref['name'], 'matches_approved_reference': bool(report),
+                            'technical_registration': modern,
                             'pending_media_review': mode == 'review', 'observer': 'machine' if report else 'technical',
-                            'note': 'Machine identity review' if report else 'Compare at media gate',
+                            'note': 'Machine identity review' if report else ('Registration metadata verified; no quality decision' if modern else 'Compare at media gate'),
                             'report': report, 'screenshot': str(shot.relative_to(p.job(j))) if shot.exists() else None,
                             'screenshot_hash': digest(shot) if shot.exists() else None})
     if not confirmation.exists():
@@ -576,6 +730,10 @@ def register(p, j, ref):
 
 
 def registration_accepted(p, j, evidence):
+    from execution import is_job
+    if is_job(p, j) and evidence.get('observer') == 'technical' and (
+            evidence.get('technical_registration') or evidence.get('pending_media_review')):
+        return True
     if evidence.get('matches_approved_reference') is True:
         return True
     if evidence.get('pending_media_review') and (p.job(j) / 'workflow.json').exists():
@@ -685,16 +843,24 @@ def produce(p, j, out):
             items.append(item)
 
     entries = refs + items + proofs
-    sheet = Image.new('RGB', (540, max(1, (len(entries) + 2) // 3) * 350), '#eeeeee')
-    draw = ImageDraw.Draw(sheet)
-    for i, entry in enumerate(entries):
-        with Image.open(p.path(j, entry['path'])) as im:
-            im = im.convert('RGB');im.thumbnail((180, 320));sheet.paste(im, ((i % 3) * 180, (i // 3) * 350))
-        draw.text(((i % 3) * 180 + 5, (i // 3) * 350 + 325), entry['scene_id'], fill='black')
-    sheet.save(out / 'contact-sheet.jpg')
+    from execution import is_job
+    modern = is_job(p, j)
+    if modern:
+        write(out / 'gallery.json', {'references': refs, 'items': items, 'proofs': proofs,
+                                   'display': 'raw_artifacts_no_local_image_processing'})
+    else:
+        sheet = Image.new('RGB', (540, max(1, (len(entries) + 2) // 3) * 350), '#eeeeee')
+        draw = ImageDraw.Draw(sheet)
+        for i, entry in enumerate(entries):
+            with Image.open(p.path(j, entry['path'])) as im:
+                im = im.convert('RGB');im.thumbnail((180, 320));sheet.paste(im, ((i % 3) * 180, (i // 3) * 350))
+            draw.text(((i % 3) * 180 + 5, (i // 3) * 350 + 325), entry['scene_id'], fill='black')
+        sheet.save(out / 'contact-sheet.jpg')
     payload = {'schema_version': '2.0', 'checkpoint': s, 'content_hash': p.rows(j)['content']['hash'],
                'signature': signature(p, j, s), 'items': items, 'references': refs, 'proofs': proofs,
-               'contact_sheet': str((out / 'contact-sheet.jpg').relative_to(p.job(j)))}
+               'contact_sheet': None if modern else str((out / 'contact-sheet.jpg').relative_to(p.job(j)))}
+    if modern:
+        payload['gallery'] = str((out / 'gallery.json').relative_to(p.job(j)))
     return payload
 
 
@@ -734,14 +900,24 @@ def check(p, j, data):
             raise Blocked('M2_PROMPT: approved prompt or character links changed')
     if data['proofs']:
         raise Blocked('Separate proof images removed; review actual scene images')
-    files = [data['contact_sheet']]
-    image_check(p, j, data['contact_sheet'], full=False)
+    if data.get('gallery'):
+        from execution import is_job
+        if not is_job(p, j):
+            raise Blocked('M2_GALLERY: raw gallery is supported only by the modern execution contract')
+        gallery = read(p.path(j, data['gallery']))
+        if (gallery.get('references') != data['references'] or gallery.get('items') != data['items']
+                or gallery.get('proofs') != data['proofs']):
+            raise Blocked('M2_GALLERY: displayed artifacts differ from the versioned output')
+        files = [data['gallery']]
+    else:
+        files = [data['contact_sheet']]
+        image_check(p, j, data['contact_sheet'], full=False)
     for item in data['references'] + data['items'] + data['proofs']:
         files.append(image_check(p, j, item['path'], item['sha256']))
         req = read(p.path(j, item['request']))
         from prompt_templates import image_prompt
         changes = req['identity'].get('corrections', '\n'.join(x['note'] for x in req['identity'].get('edits',[])))
-        expected_prompt = requested_prompt(p,j,req['identity']['target'],item['prompt'],changes,req['identity']['ratio'])
+        expected_prompt = _saved_template_prompt(p, j, req['identity']) if req['identity'].get('prompt_template') else requested_prompt(p,j,req['identity']['target'],item['prompt'],changes,req['identity']['ratio'])
         if item['actual_prompt'] != expected_prompt:
             raise Blocked('M2_PROMPT: actual prompt differs from configured template')
         if (req['state'] != 'downloaded'
@@ -761,6 +937,7 @@ def check(p, j, data):
         if not (base / 'ui-proof.json').is_file():
             raise Blocked('M2_FILE: missing ' + str((base / 'ui-proof.json').relative_to(p.job(j))))
         ui = read(base / 'ui-proof.json')
+        _check_template_attachment(req['identity'], ui)
         base_image = req['identity'].get('base_image')
         if base_image:
             if digest(p.path(j,base_image['path'])) != base_image['sha256'] or ui.get('base_image') != str(p.path(j,base_image['path'])):
@@ -773,6 +950,8 @@ def check(p, j, data):
             if not original or ref != register_existing(p, j, original):
                 raise Blocked('M2_REFERENCE_LINK: registration evidence mismatch')
             reg = read(p.path(j, ref['registration_journal']))
+            if reg['identity'].get('prompt_template') and reg['identity']['actual_prompt'] != _saved_template_prompt(p, j, reg['identity']):
+                raise Blocked('FLOW_TEMPLATE_RECORD_CHANGED: registration prompt differs from pinned strategy')
             conf = read(p.path(j, ref['confirmation']))
             files.extend([ref['registration_journal'], reg['path'], ref['confirmation']])
             if conf.get('screenshot'): files.append(conf['screenshot'])

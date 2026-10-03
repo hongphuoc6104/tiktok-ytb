@@ -330,6 +330,7 @@ class AudioStageTests(unittest.TestCase):
   for name in ['schemas','.agents','renderer','tests','examples']:shutil.copytree(ROOT/name,self.root/name)
   for name in ['config.json','AGENTS.md','GEMINI.md','pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','adapters.py','tts_worker.py','package.json','package-lock.json','requirements.txt']:
    if (ROOT/name).exists():shutil.copy(ROOT/name,self.root/name)
+  cfg=read(self.root/'config.json');cfg['colab_tts']['enabled']=False;write(self.root/'config.json',cfg)
   self.p=Pilot(self.root);self.p.new('test')
   (self.root/'.venv-tts/bin').mkdir(parents=True);(self.root/'.venv-tts/bin/python').write_text('#fake')
   self.p.approve('test','control',self.p.rows('test')['control']['revision'],'TEST FIXTURE approval, not user consent')
@@ -403,6 +404,10 @@ class EnglishTrackTests(unittest.TestCase):
   for n in ['schemas','.agents','renderer','tests','examples']:shutil.copytree(ROOT/n,self.root/n)
   for n in ['pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','tts_worker.py','config.json','AGENTS.md','GEMINI.md','package.json','package-lock.json','requirements.txt']:
    if (ROOT/n).exists():shutil.copy(ROOT/n,self.root/n)
+  cfg=read(self.root/'config.json');cfg['colab_tts']['enabled']=False
+  # Historical local English contract remains Alba at 1.0; the new remote
+  # reference-narrator default is covered separately at its request boundary.
+  cfg.update(en_voice='alba',en_speed=1.);write(self.root/'config.json',cfg)
   (self.root/'scripts').mkdir(exist_ok=True);shutil.copy(ROOT/'scripts/en_worker.py',self.root/'scripts/en_worker.py')
   for v in ['.venv-tts','.venv-en']:
    (self.root/v/'bin').mkdir(parents=True);(self.root/v/'bin/python').write_text('#fake')

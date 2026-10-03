@@ -1,0 +1,27 @@
+{
+  "test": "fresh_clone_control_install",
+  "isolated": true,
+  "live_provider": false,
+  "runtime": {
+    "playwright": "1.58.2",
+    "import": {
+      "playwright": "1.58.2",
+      "connect_api": true,
+      "browser_started": false,
+      "provider_called": false
+    }
+  },
+  "repository_node_modules": false,
+  "local_renderer": false,
+  "browser_download": false,
+  "daemon": {
+    "status": "not_connected",
+    "reused": true,
+    "browser_started": false,
+    "isolated_public_cli_status": "not_connected",
+    "isolated_public_cli_reuse": true
+  },
+  "socket_length": 48,
+  "manifest_sha256": "9c3da7858927d1e97db40b1e91554177b58426982c497ee8c0bd72df736f15dc",
+  "installed_bytes": 13037483
+}

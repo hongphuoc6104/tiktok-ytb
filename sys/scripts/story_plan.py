@@ -2,6 +2,7 @@
 import copy
 import json
 import re
+from output_contract import languages
 
 
 def normalize_brief(brief):
@@ -71,7 +72,7 @@ def validate_plan(b, c):
             seen.add(im['id'])
         used = {x['image_id'] for x in s['beats']}
         if used != seen: fail('IMAGE_USAGE', s['id'], 'Mỗi ảnh phải được sử dụng, không tham chiếu ảnh ngoài cảnh')
-        for lang in ['vi'] + (['en'] if b['aspect_ratio'] in ('dual','16:9') else []):
+        for lang in languages(b):
             text = s.get('narration_en' if lang == 'en' else 'narration', '')
             positions = []
             for beat in s['beats']:
@@ -122,7 +123,7 @@ def text_prompt(prompt, allowed, style):
 
 def estimates(b, c):
     result = {'languages': {}, 'warnings': [], 'status': 'estimated_not_measured'}
-    for lang in ['vi'] + (['en'] if b['aspect_ratio'] in ('dual','16:9') else []):
+    for lang in languages(b):
         rate = b['planning']['speech_rates'][lang]; rows = []
         for sc in c['scenes']:
             text = sc['narration_en' if lang=='en' else 'narration']
@@ -213,7 +214,9 @@ def timeline(c, images, audio, language, ratio):
     by_id={(im.get('image_id',im['scene_id']),im.get('ratio',ratio)):im for im in images['items']}
     output=[]
     for sc in c['scenes']:
-        spans = [x for x in (audio['en']['scenes'] if language=='en' else audio['segments']) if x['scene_id']==sc['id']]
+        track = audio.get('tracks', {}).get(language)
+        track_segments = track['segments'] if track else (audio['segments'] if audio.get('language', 'vi') == language else audio['en']['scenes'])
+        spans = [x for x in track_segments if x['scene_id']==sc['id']]
         start=spans[0]['start'];end=spans[-1]['end']
         if c.get('schema_version')!='3.0':
             im=by_id[(sc['id'],ratio)];output.append({'id':sc['id'],'title':sc['title'],'image':im['path'],'start':start,'end':end});continue
@@ -222,7 +225,7 @@ def timeline(c, images, audio, language, ratio):
             offset=occurrence(text,bt['anchor'][language])
             # Use actual chunk bounds when available; interpolate within the chunk.
             at=start+offset/max(1,len(text))*(spans[-1].get('content_end',end)-start)
-            if language=='vi':
+            if all('text' in seg for seg in spans):
                 cursor=0
                 for seg in spans:
                     pos=text.find(seg['text'],cursor)
@@ -243,7 +246,7 @@ def timeline(c, images, audio, language, ratio):
 def calibrate_rates(c, audio, source):
     """Measured narration units per WAV second, including the actual voice pauses."""
     rates = {}
-    for lang, duration in [('vi',audio['duration'])] + ([('en',audio['en']['duration'])] if audio.get('en') else []):
+    for lang, duration in ([(lang, track['duration']) for lang,track in audio['tracks'].items()] if audio.get('tracks') else [('vi',audio['duration'])] + ([('en',audio['en']['duration'])] if audio.get('en') else [])):
         units = sum(len(sc['narration_en' if lang=='en' else 'narration'].split()) for sc in c['scenes'])
         rates[lang] = {'units_per_second':round(units/duration,4), 'uncertainty':.2,
                        'includes_pauses':True, 'source':source+'; measured WAV including pauses'}

@@ -1,0 +1,16 @@
+{
+  "modules": [
+    "tests.test_selected_voice",
+    "tests.test_channel_profile",
+    "tests.test_output_contract",
+    "tests.test_colab_tts",
+    "tests.test_colab_worker",
+    "tests.test_audio",
+    "tests.test_audio_english_spans"
+  ],
+  "returncode": 0,
+  "seconds": 40.34150761599449,
+  "live_provider": false,
+  "stdout": "{\"request_id\": \"bb6ef49804138e8b5367a5820c4bd0748fe1970446ffef68ae45734a253bfd09\", \"archive\": \"/tmp/tmpjkllqgve/remote/job/output.zip\", \"elapsed_seconds\": 0.04580980100581655}\n{\"request_id\": \"aa849af7143fc1bfaca28b18dd9b5f97f03577e3ee01374eb9a7bfcb6b028e39\", \"archive\": \"/tmp/tmpca9fd4qb/remote/job/output.zip\", \"elapsed_seconds\": 0.057213325999327935}\n{\"request_id\": \"a87162fb52b9d393e1d3587b4bd70b3a282777033534d527940985a0d3874404\", \"archive\": \"/tmp/tmp24w09l_w/runs/english/revisions/audio/1.zip\", \"elapsed_seconds\": 0.040416800999082625}\n{\"request_id\": \"5a4627257401e243394ca8ce5f018f2709763591a84042fb0dbb448a9637bc7c\", \"archive\": \"/tmp/tmptc3_28ev/runs/test/revisions/audio/1.zip\", \"elapsed_seconds\": 0.05893318799644476}\n{\"request_id\": \"5a4627257401e243394ca8ce5f018f2709763591a84042fb0dbb448a9637bc7c\", \"archive\": \"/tmp/tmpgy07hzke/remote/job/output.zip\", \"elapsed_seconds\": 0.057056191995798144}\n{\"request_id\": \"5a4627257401e243394ca8ce5f018f2709763591a84042fb0dbb448a9637bc7c\", \"archive\": \"/tmp/tmpgy07hzke/remote/job2/output.zip\", \"elapsed_seconds\": 0.011667714999930467}\n{\"request_id\": \"8888f540c207b4290d8c1f1fdfcfff79ae4608995763968afec748549e08ca0e\", \"archive\": \"/tmp/tmp_sd26dww/remote/selected-reference/output.zip\", \"elapsed_seconds\": 0.03684341799817048}\n",
+  "stderr": "/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow/sys/pilot.py:314: DeprecationWarning: 'audioop' is deprecated and slated for removal in Python 3.13\n  import wave, audioop\n----------------------------------------------------------------------\nRan 90 tests in 39.213s\n\nOK\n"
+}

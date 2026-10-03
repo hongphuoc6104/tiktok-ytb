@@ -5,13 +5,13 @@
   "fps": 30,
   "min_seconds": 180,
   "max_seconds": 450,
-  "scene_count": 6,
   "video_generation": false,
   "credit_budget": 0,
   "flow_batch": true,
   "flow_require_ui_evidence": false,
   "flow_queue_trial_enabled": true,
   "flow_model": "Nano Banana 2 Lite",
+  "flow_prompt_version": "1.0.0",
   "flow_profile": "video-pilot",
   "flow_project": "Video Pilot",
   "tts_package": "vieneu==3.8.1",
@@ -20,12 +20,12 @@
   "tts_device": "auto",
   "tts_gpu_dtype": "float32",
   "tts_batch_size": 6,
-  "tts_voice": "Adam bựa",
+  "tts_voice": "Minh Quân Pro",
   "tts_temperature": 0.65,
   "tts_top_p": 0.95,
   "tts_max_chars": 256,
   "tts_scene_synthesis": true,
-  "tts_speed": 1.08,
+  "tts_speed": 0.92,
   "en_temperature": 0.3,
   "en_device": "cpu",
   "tts_pause": {
@@ -39,7 +39,7 @@
   "renderer": "remotion",
   "concurrency": 4,
   "review": "three_stages",
-  "en_voice": "Adam bựa",
+  "en_voice": "reference-narrator",
   "en_quantize": true,
   "en_threads": 4,
   "en_seed": 42,
@@ -67,14 +67,14 @@
   ],
   "colab_tts": {
     "enabled": true,
-    "parallel_images": false,
+    "parallel_images": true,
     "session": "video-pilot-tts",
     "batch_size": 4,
     "num_step": 32,
     "timeout_seconds": 1800,
     "voices": {
-      "vi": "assets/voices/adam-bua-vi/profile.json",
-      "en": "assets/voices/adam-bua-en/profile.json"
+      "vi": "assets/voices/minh-quan-pro/profile.json",
+      "en": "assets/voices/reference-narrator/profile.json"
     },
     "models": {
       "vi": {
@@ -87,5 +87,7 @@
       }
     },
     "account": "auto"
-  }
+  },
+  "en_speed": 0.92,
+  "flow_profile_policy": "existing_only"
 }

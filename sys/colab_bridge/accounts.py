@@ -60,6 +60,20 @@ def command(binary,name,args):
     return [first[2:],str(Path(__file__).with_name('account_cli.py')),str(folder(name)),*args]
 
 
+def assignment_state(binary, name, session, timeout=45):
+    """Read-only exact-account server probe using the installed official runtime."""
+    argv=command(binary,name,())
+    helper=Path(__file__).with_name('assignment_probe.py')
+    try:
+        result=subprocess.run([argv[0],str(helper),str(folder(name)),session],capture_output=True,text=True,timeout=timeout)
+        if result.returncode:return {'verified':False,'reason':'helper_failed','error_type':'ProcessExit'}
+        data=json.loads(result.stdout)
+        if not isinstance(data,dict):raise ValueError('Invalid observation')
+        return data
+    except subprocess.TimeoutExpired:return {'verified':False,'reason':'network_unknown','error_type':'TimeoutExpired'}
+    except (OSError,ValueError):return {'verified':False,'reason':'helper_unavailable','error_type':'InvalidObservation'}
+
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('action',choices=['list','import-current','login','prefer','run','login-many']);p.add_argument('account',nargs='?',default='auto');p.add_argument('args',nargs=argparse.REMAINDER);a=p.parse_args()
     if a.action=='login-many':

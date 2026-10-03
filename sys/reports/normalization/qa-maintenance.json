@@ -1,0 +1,63 @@
+{
+  "timestamp_utc": "2026-10-03T10:01:40.309134+00:00",
+  "command": ".venv/bin/python -m unittest discover -s tests -p test_independent_maintenance_contracts.py -v",
+  "tests_run": 28,
+  "passed": 28,
+  "failures": [],
+  "errors": [],
+  "duration_seconds": 1.7656455039978027,
+  "scope": "Real maintenance CLI/API, locks, cleanup/archive/Git in disposable project/repositories/local bare remotes only. Help read-only; no project cleanup/archive/commit/push, live providers/GPU/OAuth. Synthetic fixture credentials only.",
+  "source_sha256_before": {
+    "maintenance.py": "e617589364012215e372450155dc2e9772eb1daf7edd0f38780fb167794c52c4",
+    "permissions.py": "1ee57eb6637d03d41d194c6fc0defd855c070e5e66ff14e4b3602e3506718b94",
+    "tests/test_independent_maintenance_contracts.py": "8daf1f4eab806ba44a5c3350e5794b446759c8ad0860327728b10fde751b3d7d",
+    "docs/maintenance.md": "fbf8155a62b5d9cedac34a18be9dd1f1a2cb5828957b2b67f1c821b573fe54be",
+    "docs/workflow.md": "09dd527b83fad5434ccfc3135485d77b3263790a05da13959eb34819ab505b92"
+  },
+  "source_sha256_after": {
+    "maintenance.py": "e617589364012215e372450155dc2e9772eb1daf7edd0f38780fb167794c52c4",
+    "permissions.py": "1ee57eb6637d03d41d194c6fc0defd855c070e5e66ff14e4b3602e3506718b94",
+    "tests/test_independent_maintenance_contracts.py": "8daf1f4eab806ba44a5c3350e5794b446759c8ad0860327728b10fde751b3d7d",
+    "docs/maintenance.md": "fbf8155a62b5d9cedac34a18be9dd1f1a2cb5828957b2b67f1c821b573fe54be",
+    "docs/workflow.md": "09dd527b83fad5434ccfc3135485d77b3263790a05da13959eb34819ab505b92"
+  },
+  "source_stable_during_run": true,
+  "output": "test_active_entrypoint_doc_and_skill_file_links_resolve (test_independent_maintenance_contracts.IndependentDocumentation.test_active_entrypoint_doc_and_skill_file_links_resolve) ... ok\ntest_advertised_cli_commands_exist_without_provider_calls (test_independent_maintenance_contracts.IndependentDocumentation.test_advertised_cli_commands_exist_without_provider_calls) ... ok\ntest_four_skills_and_new_direction_have_concrete_current_sources (test_independent_maintenance_contracts.IndependentDocumentation.test_four_skills_and_new_direction_have_concrete_current_sources) ... ok\ntest_commit_hook_cannot_include_other_user_files_in_allowlist_commit (test_independent_maintenance_contracts.IndependentGit.test_commit_hook_cannot_include_other_user_files_in_allowlist_commit) ... ok\ntest_failing_existing_hook_is_not_silently_bypassed (test_independent_maintenance_contracts.IndependentGit.test_failing_existing_hook_is_not_silently_bypassed) ... ok\ntest_ignored_binary_runtime_and_auth_paths_denied_even_broad_grant (test_independent_maintenance_contracts.IndependentGit.test_ignored_binary_runtime_and_auth_paths_denied_even_broad_grant) ... ok\ntest_known_nonfastforward_rejects_before_commit_without_force (test_independent_maintenance_contracts.IndependentGit.test_known_nonfastforward_rejects_before_commit_without_force) ... ok\ntest_normal_push_changes_exact_allowlist_preserving_other_user_edits (test_independent_maintenance_contracts.IndependentGit.test_normal_push_changes_exact_allowlist_preserving_other_user_edits) ... ok\ntest_outgoing_commit_message_secrets_are_not_pushed (test_independent_maintenance_contracts.IndependentGit.test_outgoing_commit_message_secrets_are_not_pushed) ... ok\ntest_preexisting_staging_and_out_of_scope_files_are_kept (test_independent_maintenance_contracts.IndependentGit.test_preexisting_staging_and_out_of_scope_files_are_kept) ... ok\ntest_push_followtags_config_cannot_transfer_ungranted_tag (test_independent_maintenance_contracts.IndependentGit.test_push_followtags_config_cannot_transfer_ungranted_tag) ... ok\ntest_remote_race_after_commit_keeps_local_checkpoint_and_remote_without_force (test_independent_maintenance_contracts.IndependentGit.test_remote_race_after_commit_keeps_local_checkpoint_and_remote_without_force) ... ok\ntest_review_hash_and_remote_identity_cannot_change (test_independent_maintenance_contracts.IndependentGit.test_review_hash_and_remote_identity_cannot_change) ... ok\ntest_symlink_and_secret_plaintext_are_never_checkpointed (test_independent_maintenance_contracts.IndependentGit.test_symlink_and_secret_plaintext_are_never_checkpointed) ... ok\ntest_unreviewed_outgoing_history_cannot_be_pushed_with_allowed_checkpoint (test_independent_maintenance_contracts.IndependentGit.test_unreviewed_outgoing_history_cannot_be_pushed_with_allowed_checkpoint) ... ok\ntest_archive_cannot_expand_job_scope_with_broad_path_allowlist (test_independent_maintenance_contracts.IndependentRetention.test_archive_cannot_expand_job_scope_with_broad_path_allowlist) ... ok\ntest_archive_does_not_copy_credential_files_under_broad_grant (test_independent_maintenance_contracts.IndependentRetention.test_archive_does_not_copy_credential_files_under_broad_grant) ... ok\ntest_archive_does_not_copy_owned_artifact_while_writer_has_lease (test_independent_maintenance_contracts.IndependentRetention.test_archive_does_not_copy_owned_artifact_while_writer_has_lease) ... ok\ntest_archive_external_scope_hash_and_source_preservation (test_independent_maintenance_contracts.IndependentRetention.test_archive_external_scope_hash_and_source_preservation) ... ok\ntest_auth_history_and_symlink_candidates_are_not_cleanup (test_independent_maintenance_contracts.IndependentRetention.test_auth_history_and_symlink_candidates_are_not_cleanup) ... ok\ntest_changed_proof_review_hash_and_revoked_grant_prevent_deletion (test_independent_maintenance_contracts.IndependentRetention.test_changed_proof_review_hash_and_revoked_grant_prevent_deletion) ... ok\ntest_cleanup_preserves_preexisting_but_not_named_pending_refs (test_independent_maintenance_contracts.IndependentRetention.test_cleanup_preserves_preexisting_but_not_named_pending_refs) ... ok\ntest_cli_exact_cleanup_keeps_sources_outputs_and_journal (test_independent_maintenance_contracts.IndependentRetention.test_cli_exact_cleanup_keeps_sources_outputs_and_journal) ... ok\ntest_cross_job_absolute_relative_and_basename_references_preserve_cache (test_independent_maintenance_contracts.IndependentRetention.test_cross_job_absolute_relative_and_basename_references_preserve_cache) ... ok\ntest_crossjob_pending_directory_reference_preserves_shared_cache_members (test_independent_maintenance_contracts.IndependentRetention.test_crossjob_pending_directory_reference_preserves_shared_cache_members) ... ok\ntest_owner_field_cannot_relabel_other_job_cache_and_skip_its_unknown_request (test_independent_maintenance_contracts.IndependentRetention.test_owner_field_cannot_relabel_other_job_cache_and_skip_its_unknown_request) ... ok\ntest_owner_unknown_journals_are_preserved_for_every_pending_state (test_independent_maintenance_contracts.IndependentRetention.test_owner_unknown_journals_are_preserved_for_every_pending_state) ... ok\ntest_shared_cache_crossjob_reference_and_hardlinks_survive (test_independent_maintenance_contracts.IndependentRetention.test_shared_cache_crossjob_reference_and_hardlinks_survive) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 1.765s\n\nOK\n",
+  "initial_result": {
+    "tests_run": 23,
+    "passed": 16,
+    "failed": 7,
+    "duration_seconds": 1.508
+  },
+  "followup_history": [
+    {
+      "finding": "QA-M08 directory cache reference",
+      "result": "failed",
+      "duration_seconds": 0.01
+    },
+    {
+      "tests_run": 26,
+      "passed": 25,
+      "failed": 1,
+      "finding": "QA-M09 silent hook bypass",
+      "duration_seconds": 1.83
+    },
+    {
+      "finding": "QA-M10 implicit push.followTags extra ref",
+      "result": "failed",
+      "duration_seconds": 0.153
+    }
+  ],
+  "findings": [
+    "QA-M01 forged cleanup owner",
+    "QA-M02 archive missing job scope",
+    "QA-M03 archive missing owner lease",
+    "QA-M04 unreviewed outgoing history",
+    "QA-M05 unquoted plaintext secret missed",
+    "QA-M06 hook staging other user files",
+    "QA-M07 archive env/private key credentials",
+    "QA-M08 directory cache dependency missed",
+    "QA-M09 silent required hook bypass",
+    "QA-M10 extra tag via followTags"
+  ]
+}

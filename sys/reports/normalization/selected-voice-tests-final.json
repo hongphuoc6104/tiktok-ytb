@@ -1,0 +1,16 @@
+{
+  "modules": [
+    "tests.test_selected_voice",
+    "tests.test_channel_profile",
+    "tests.test_output_contract",
+    "tests.test_colab_tts",
+    "tests.test_colab_worker",
+    "tests.test_audio",
+    "tests.test_audio_english_spans"
+  ],
+  "returncode": 1,
+  "seconds": 40.255073216998426,
+  "live_provider": false,
+  "stdout": "{\"request_id\": \"bb6ef49804138e8b5367a5820c4bd0748fe1970446ffef68ae45734a253bfd09\", \"archive\": \"/tmp/tmpsvoqhhtq/remote/job/output.zip\", \"elapsed_seconds\": 0.04576787399855675}\n{\"request_id\": \"aa849af7143fc1bfaca28b18dd9b5f97f03577e3ee01374eb9a7bfcb6b028e39\", \"archive\": \"/tmp/tmphp018g68/remote/job/output.zip\", \"elapsed_seconds\": 0.04368572199746268}\n{\"request_id\": \"a87162fb52b9d393e1d3587b4bd70b3a282777033534d527940985a0d3874404\", \"archive\": \"/tmp/tmpiazfrdhg/runs/english/revisions/audio/1.zip\", \"elapsed_seconds\": 0.0421129620008287}\n{\"request_id\": \"5a4627257401e243394ca8ce5f018f2709763591a84042fb0dbb448a9637bc7c\", \"archive\": \"/tmp/tmpq8rle3f_/runs/test/revisions/audio/1.zip\", \"elapsed_seconds\": 0.06035644900111947}\n{\"request_id\": \"5a4627257401e243394ca8ce5f018f2709763591a84042fb0dbb448a9637bc7c\", \"archive\": \"/tmp/tmphwzvb0s8/remote/job/output.zip\", \"elapsed_seconds\": 0.05912846399587579}\n{\"request_id\": \"5a4627257401e243394ca8ce5f018f2709763591a84042fb0dbb448a9637bc7c\", \"archive\": \"/tmp/tmphwzvb0s8/remote/job2/output.zip\", \"elapsed_seconds\": 0.011339325996232219}\n{\"request_id\": \"8888f540c207b4290d8c1f1fdfcfff79ae4608995763968afec748549e08ca0e\", \"archive\": \"/tmp/tmpwlfe_xmj/selected-reference-result.zip\", \"elapsed_seconds\": 0.0042141719968640245}\n",
+  "stderr": "/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow/sys/pilot.py:314: DeprecationWarning: 'audioop' is deprecated and slated for removal in Python 3.13\n  import wave, audioop\n======================================================================\nFAIL: test_selected_reference_default_reaches_remote_clone_prompt (tests.test_colab_worker.WorkerTests.test_selected_reference_default_reaches_remote_clone_prompt)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow/sys/tests/test_colab_worker.py\", line 76, in test_selected_reference_default_reaches_remote_clone_prompt\n    self.assertEqual([prompt['ref_text'] for prompt in self.prompts], [text])\nAssertionError: Lists differ: [] != ['A predator is an animal that hunts other animals for food.']\n\nSecond list contains 1 additional elements.\nFirst extra element 0:\n'A predator is an animal that hunts other animals for food.'\n\n- []\n+ ['A predator is an animal that hunts other animals for food.']\n\n----------------------------------------------------------------------\nRan 90 tests in 39.106s\n\nFAILED (failures=1)\n"
+}

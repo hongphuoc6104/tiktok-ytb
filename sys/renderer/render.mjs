@@ -17,67 +17,47 @@ const url = await bundle({
   publicDir: path.join(dir, 'public')
 });
 const browser = await openBrowser('chrome', {
-  browserExecutable: '/usr/bin/google-chrome',
+  browserExecutable: process.env.VP_CHROME_PATH || chromium.executablePath(),
   chromiumOptions: {
     args: ['--enable-gpu', '--ignore-gpu-blocklist', '--no-sandbox']
   }
 });
 
 try {
-  const isDual = props.aspect_ratio === 'dual';
-  const is16x9 = props.aspect_ratio === '16:9';
-  // A pure 16:9 output hides subtitles entirely (see outputPlans in
-  // outputs.mjs); checking Vietnamese cue geometry against a video that never
-  // burns that text in was a check of nothing. Only 9:16/dual carry
-  // burned-in subtitles, so only they get a real layout check.
-  const hasSubtitles = !is16x9;
-
-  let layoutResult;
-  if (!hasSubtitles) {
-    layoutResult = {
-      passed: true,
-      applies: false,
-      checked_cues: 0,
-      method: '16:9 output hides subtitles; no burned-in text to check',
-      failures: []
-    };
-  } else {
-    // Layout check using Playwright. Cues arrive pre-cut from Python
-    // (adapters.subtitle_cues) -- this just checks the geometry of each cue
-    // exactly as the renderer will show it, with no re-chunking here.
-    const checkWidth = 1080;
-    const checkHeight = 1920;
-    const pw = await chromium.launch({executablePath: '/usr/bin/google-chrome', headless: true});
-    const page = await pw.newPage({viewport: {width: checkWidth, height: checkHeight}});
-    let failures = [];
-
-    for (const cue of props.cues) {
-      await page.setContent('<div id="subtitle"></div>');
-      const style = captionStyle(checkWidth, checkHeight);
-      await page.locator('#subtitle').evaluate((e, {text, style}) => {
-        for (const [key, value] of Object.entries(style)) {
-          e.style[key] = typeof value === 'number' && !['fontWeight', 'lineHeight'].includes(key) ? `${value}px` : String(value);
+  const captionPlans = plans.filter(plan => !plan.props.hideSubtitles);
+  let failures = [];
+  let checked = 0;
+  if (captionPlans.length) {
+    const pw = await chromium.launch({executablePath: process.env.VP_CHROME_PATH || chromium.executablePath(), headless: true});
+    try {
+      for (const plan of captionPlans) {
+        const checkWidth = plan.props.width;
+        const checkHeight = plan.props.height;
+        const page = await pw.newPage({viewport: {width: checkWidth, height: checkHeight}});
+        for (const cue of plan.props.cues) {
+          checked++;
+          await page.setContent('<div id="subtitle"></div>');
+          const style = captionStyle(checkWidth, checkHeight);
+          await page.locator('#subtitle').evaluate((e, {text, style}) => {
+            for (const [key, value] of Object.entries(style)) {
+              e.style[key] = typeof value === 'number' && !['fontWeight', 'lineHeight'].includes(key) ? `${value}px` : String(value);
+            }
+            e.textContent = text;
+          }, {text: cue.text, style});
+          const bad = await page.evaluate(([w, h, maxHeight]) => {
+            const e = document.querySelector('#subtitle');
+            const r = e.getBoundingClientRect();
+            return r.left < 0 || r.right > w || r.top < 0 || r.bottom > h || r.height > maxHeight || e.scrollWidth > e.clientWidth
+              ? ['subtitle'] : [];
+          }, [checkWidth, checkHeight, captionMaxHeight(checkWidth, checkHeight)]);
+          if (bad.length) failures.push({file: plan.file, language: plan.props.language, text: cue.text, errors: bad});
         }
-        e.textContent = text;
-      }, {text: cue.text, style});
-      const bad = await page.evaluate(([w, h, maxHeight]) => {
-        const e = document.querySelector('#subtitle');
-        const r = e.getBoundingClientRect();
-        return r.left < 0 || r.right > w || r.top < 0 || r.bottom > h || r.height > maxHeight || e.scrollWidth > e.clientWidth
-          ? ['subtitle'] : [];
-      }, [checkWidth, checkHeight, captionMaxHeight(checkWidth, checkHeight)]);
-      if (bad.length) failures.push({text: cue.text, errors: bad});
-    }
-    await pw.close();
-
-    layoutResult = {
-      passed: !failures.length,
-      applies: true,
-      checked_cues: props.cues.length,
-      method: 'shared composition style; at most two lines; actual playback/readability still requires review',
-      failures
-    };
+        await page.close();
+      }
+    } finally { await pw.close(); }
   }
+  const layoutResult = {passed: !failures.length, applies: captionPlans.length > 0, checked_cues: checked,
+    method: 'actual requested language/aspect caption styles; two lines; no quality approval', failures};
 
   fs.writeFileSync(path.join(dir, 'layout.json'), JSON.stringify(layoutResult, null, 2));
 

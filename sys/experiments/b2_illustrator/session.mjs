@@ -1,12 +1,18 @@
 /** Persistent local session; fixed commands only, no arbitrary browser execution. */
 import fs from 'node:fs';
 import net from 'node:net';
+import os from 'node:os';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
 import {browserConfig,debugEndpoint,inspect,safeResults,toolUrl,verifyBrowser} from './controller.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));
-const socketPath=path.join(here,'results','controller','session.sock');
+export function sessionSocketPath(root=path.resolve(here,'../..')) {
+  const key=crypto.createHash('sha256').update(fs.realpathSync(root)).digest('hex').slice(0,16);
+  return path.join(os.tmpdir(),`video-pilot-${process.getuid()}`,`flow-${key}.sock`);
+}
+const socketPath=sessionSocketPath();
 
 export class Session {
   constructor(connect,verify=async()=>null){this.connect=connect;this.verify=verify;this.identity=null;this.browser=null;this.attempted=false;}
@@ -18,11 +24,16 @@ export class Session {
     try {this.identity=await this.verify(this.browser);} catch(e) {await this.stop();throw e;}
     return {status:'connected',reused:false,identity:this.identity};
   }
-  status(){return {status:this.browser?.isConnected()?'connected':this.attempted?'disconnected':'not_connected'};}
+  status(){return {status:this.browser?.isConnected()?'connected':this.attempted?'disconnected':'not_connected',identity:this.browser?.isConnected()?this.identity:null};}
   async stop(){if(this.browser) await this.browser.close();this.browser=null;this.identity=null;}
 }
 async function serve(){
   safeResults();
+  const runtime=path.dirname(socketPath);
+  fs.mkdirSync(runtime,{recursive:true,mode:0o700});
+  const owner=fs.lstatSync(runtime);
+  if(owner.isSymbolicLink()||owner.uid!==process.getuid())throw Error('UNSAFE_SESSION_RUNTIME_OWNER');
+  fs.chmodSync(runtime,0o700);
   if(fs.existsSync(socketPath)) throw Error('Session socket exists: use status; do not start a second session');
   const config={...JSON.parse(fs.readFileSync(path.join(here,'../../config.json'))),...JSON.parse(fs.readFileSync(path.join(here,'browser-profiles.json')))};
   const selected=browserConfig(config);
@@ -38,6 +49,7 @@ async function serve(){
       return bound.identity;
     }
     bound=await verifyBrowser(browser,config,true);
+    bound.identity={...bound.identity,toolUrl};
     if(bound.page.isClosed())throw Error('BOUND_TAB_CLOSED');
     return bound.identity;
   });

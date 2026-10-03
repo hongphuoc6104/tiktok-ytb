@@ -1,0 +1,20 @@
+{
+  "role": "independent_remote_web_qa",
+  "date": "2026-10-03",
+  "fixtures_only_for_providers": true,
+  "live_login": false,
+  "live_gpu_allocation": false,
+  "live_flow_generation": false,
+  "live_remote_render": false,
+  "runtime_edits_by_qa": false,
+  "independent_tests": {"run": 16, "passed": 16, "failed": 0, "seconds": 25.197},
+  "existing_focused_tests": {"run": 57, "passed": 57, "failed": 0, "seconds": 14.057},
+  "browser": {"actual_chromium": true, "actual_http_server": true, "actual_custom_root_cli_subprocess": true, "tabs": 8, "mode_revision_runs": ["auto:1", "auto:2", "review:2", "review:3"], "wav_metadata": true, "png_decode": true, "mp4_decode": true, "stale_decision_blocked": true},
+  "english_portrait_chain": {"language": "en", "aspect_ratio": "9:16", "voice": "alba", "speed": 0.87, "waveform_seconds": 1.25, "synthetic_model_gpu_encoder": true, "audio_schema": true, "correct_cues_timeline": true},
+  "bootstrap": {"actual_no_dependency_cli": true, "check_apply_resume": true, "install_not_run": true, "no_gpu_login_model_render_side_effects": true},
+  "findings_regression_passed": ["RW01", "RW02", "RW03", "RW04", "RW05", "RW06", "RW07", "RW08", "RW09"],
+  "quality_approval": false,
+  "production_readiness_claimed": false,
+  "report": "qa-remote-web.md",
+  "logs": ["qa-remote-web-independent.log", "qa-remote-web-targeted.log", "qa-remote-web-browser.log", "qa-remote-web-chain.log", "qa-remote-web-flow.log", "qa-remote-web-node-contract.log"]
+}

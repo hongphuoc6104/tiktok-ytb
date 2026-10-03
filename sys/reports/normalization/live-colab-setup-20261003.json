@@ -1,0 +1,74 @@
+{
+  "scope": "one account, one dedicated T4 session; setup only",
+  "account": "account-02",
+  "session": "vp-normalization-20261003",
+  "live_provider": true,
+  "audio_generation_sent": false,
+  "render_generation_sent": false,
+  "started_at": 1791022167.9490614,
+  "state": "remote_environment_ready",
+  "device": "T4",
+  "allocation_evidence": "/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow/sys/.state/colab-observations/allocated-1791022176871873088.json",
+  "identity_configured": true,
+  "provider_quota_verified": false,
+  "remote_environment": {
+    "device": "Tesla T4",
+    "torch": "2.11.0+cu130",
+    "omnivoice": "0.2.1",
+    "soundfile": "0.13.1",
+    "node": "/tools/node/bin/node",
+    "npm": "/tools/node/bin/npm",
+    "ffmpeg": "/usr/bin/ffmpeg",
+    "ffprobe": "/usr/bin/ffprobe"
+  },
+  "setup_finished_at": 1791022255.962855,
+  "model_loaded": false,
+  "voice_quality_verified": false,
+  "render_environment_ready": true,
+  "worker_imports": {
+    "worker_imports_ok": true,
+    "generate_parameters": [
+      "self",
+      "text",
+      "language",
+      "ref_text",
+      "ref_audio",
+      "voice_clone_prompt",
+      "instruct",
+      "duration",
+      "speed",
+      "generation_config",
+      "normalize_text",
+      "kwargs"
+    ],
+    "clone_parameters": [
+      "self",
+      "ref_audio",
+      "ref_text",
+      "preprocess_prompt"
+    ]
+  },
+  "last_checked_at": 1791022321.0606315,
+  "render_runtime": "/content/video-pilot-jobs/render-runtime-da5733fe49026d00",
+  "package_lock_sha256": "da5733fe49026d00fc0d67225e047da6acb6b598fd6ef7a8d04fa9462637d2df",
+  "package_sha256": "6a223ceda4f4dfcd0a5b940532a6bb6464b83d9a9d3aee4505b19b2fc552ba68",
+  "render_environment": {
+    "chrome_exists": true,
+    "chrome": "/root/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome",
+    "remotion": "4.0.507",
+    "playwright": "1.58.2"
+  },
+  "render_setup_finished_at": 1791022470.2205687,
+  "handoff_at": 1791022527.175585,
+  "session_retained": true,
+  "stop_owner": "root",
+  "chrome_launch_verified": false,
+  "render_execution_verified": false,
+  "budget_observation": {
+    "source": "shared internal project ledger",
+    "used_seconds": 359.2231900691986,
+    "held_seconds": 0,
+    "available_seconds": 17640.7768099308,
+    "provider_quota_verified": false
+  }
+}

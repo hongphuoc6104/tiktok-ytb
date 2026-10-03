@@ -36,6 +36,10 @@ class ProtocolTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.cfg = read(ROOT / 'config.json')
+        # This transport fixture retains the historical bilingual Alba 1.0
+        # contract. New channel defaults are exercised in test_selected_voice.
+        self.cfg.update(en_voice='alba', en_speed=1.)
+        self.cfg['colab_tts']['voices']['en'] = 'assets/voices/alba/profile.json'
         shutil.copytree(ROOT / 'assets/voices', self.root / 'assets/voices')
         self.scenes = [dict(scene_id='SC01', narration='Từ weather. I am happy.',
                            texts=['Từ weather.', 'I am happy.'],
@@ -105,9 +109,15 @@ class ProtocolTests(unittest.TestCase):
             with self.assertRaisesRegex(ColabError, 'TIMEOUT'):
                 client.synthesize(self.req, self.root / 'out', self.root / 'cache')
             calls.clear()
-            with self.assertRaises(ColabError):
-                client.synthesize(self.req, self.root / 'out2', self.root / 'cache')
+            with patch('colab_bridge.client.file_hash', return_value='a'*64):
+                with self.assertRaises(ColabError):
+                    client.synthesize(self.req, self.root / 'out2', self.root / 'cache')
             self.assertEqual([x[0][0] for x in calls], ['download'])
+            calls.clear()
+            changed = copy.deepcopy(self.req);changed['request_id'] = 'changed-content'
+            with self.assertRaisesRegex(ColabError,'PENDING_OTHER_REQUEST'):
+                client.synthesize(changed,self.root/'out3',self.root/'cache')
+            self.assertEqual(calls,[])
 
     def test_archive_traversal_rejected(self):
         with patch('colab_bridge.client.cli', return_value='/bin/true'):

@@ -122,11 +122,11 @@ class DirectionContractTests(unittest.TestCase):
     def test_vocabulary_references_explicitly_loaded_only_when_relevant(self):
         general = context(ROOT, 'outline', {'topic': 'Sửa xe', 'goal': 'Hiểu cách kiểm tra lốp'})
         vocab = context(ROOT, 'outline', {'topic': 'Học từ vựng get up'})
-        reference = (ROOT / '.agents/skills/vp-content/references/vocab-pedagogy.md').read_text()
+        reference = (ROOT / '.agents/skills/vp-production/references/vocabulary.md').read_text()
         self.assertIn(reference, vocab)
         self.assertNotIn(reference, general)
-        self.assertIn((ROOT / '.agents/skills/vp-script-director/SKILL.md').read_text(), general)
-        self.assertNotIn((ROOT / '.agents/skills/vp-audio-director/SKILL.md').read_text(), general)
+        self.assertIn((ROOT / '.agents/skills/vp-production/references/script.md').read_text(), general)
+        self.assertNotIn((ROOT / '.agents/skills/vp-production/references/audio.md').read_text(), general)
 
 
 class SynthesisOnlyTests(unittest.TestCase):

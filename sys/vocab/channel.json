@@ -1,35 +1,41 @@
 {
-  "version": 3,
-  "note": "Mặc định của kênh theo công thức Micro-Drama 4 hồi (15-20s), giọng Adam bựa, Foley SFX và Remotion Motion Engine.",
-  "video_type": "micro_drama",
+  "version": 4,
+  "id": "english-explanatory-2d",
+  "note": "English vocabulary Shorts; defaults apply only to new briefs. Choose scene/image counts after outline; no fixed comic framework.",
+  "video_type": "vocabulary_explainer",
   "aspect_ratio": "9:16",
-  "scene_count": 4,
+  "language": "en",
+  "voice": "reference-narrator",
+  "speed": 0.92,
+  "allowed_levels": [
+    "B1",
+    "B2",
+    "C1"
+  ],
+  "scene_count": null,
   "duration": {
-    "min_seconds": 15.0,
-    "max_seconds": 20.0
+    "min_seconds": 45.0,
+    "max_seconds": 90.0
   },
-  "language": "vi",
-  "voice": "Adam bựa",
-  "speed": 1.08,
-  "tone": "Hài hước, tếu táo đời thường, kịch tính ngắn (Micro-Drama Comic), kết thúc bằng cú twist meme",
-  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines and exaggerated cartoon expressions",
-  "audience": "Người xem Shorts / TikTok muốn giải trí nhanh và nhớ ngay 1 từ vựng tiếng Anh qua tình huống hài hước đời thường",
-  "prior_knowledge": "Tiếng Anh cơ bản, học từ vựng tự nhiên qua ngữ cảnh",
-  "pacing": "Nhanh, dồn dập, cuốn hút ngay giây đầu tiên; kết thúc bất ngờ lật kèo",
+  "duration_note": "Initial planning window, adjustable per job before narration. Not a measurement or a claim about the reference channel.",
+  "tone": "Clear, curious explanatory narration in accessible English; one question with a meaningful payoff.",
+  "style": "Hand-drawn explanatory 2D illustration, bold dark outlines, flat colors, bright uncluttered background, clear props and simple diagrams. Canonical mascot appears in 1–2 key frames for brand recognition.",
+  "audience": "English learners at B1 and above learning one vocabulary sense through clear situations and explanatory pictures.",
+  "prior_knowledge": "Basic English sentence comprehension; explain the chosen B1+ word using simpler words without teaching additional senses.",
+  "pacing": "Causal visual changes following spoken meaning; allow each actual sentence or diagram enough reading time. No fixed cut or image-count quota.",
   "avoid": [
-    "Mở bài kiểu giảng dạy trên lớp ('Hôm nay chúng ta cùng học từ...')",
-    "Dịch nghĩa sáo rỗng kiểu từ điển",
-    "Khung header badge giả lập UI trên đỉnh video",
-    "Ghép 2 giọng trong 1 video ngắn",
-    "Nhân vật quá phức tạp hoặc người thật cơ bắp vi phạm nhận diện CH01"
+    "Photorealistic or textured natural-history painting and dark cinematic lighting",
+    "Mandatory four-act comedy, six beats, meme twist, fixed repeat/image quotas or automatic Foley",
+    "Importing prehistoric topics as a required niche",
+    "Reading lesson headings as disconnected definitions/pronunciation/grammar items",
+    "Changing the selected sense, voice, mascot or requested duration silently"
   ],
   "domain_requirements": [
-    "Nhân vật chính CH01 dùng đúng mascot chuẩn assets/characters/channel-mascot/reference-v1.png (áo xanh biển nhạt #8CCFE8, đầu tròn trắng viền navy, tay chân que). Áp dụng quy tắc dung sai 80/20: chấp nhận biểu cảm cường điệu như rớt cằm shock, mắt cún con năn nỉ, mồ hôi văng tung tóe.",
-    "Cấu trúc Micro-Drama 4 hồi chuẩn: (1) 0-4s: Tình huống rắc rối đời thường của Mascot -> (2) 4-8s: Từ vựng tiếng Anh là chìa khóa gỡ rối -> (3) 8-13s: Luyện nói phản xạ ngắn kèm đếm nhịp 3-2-1 -> (4) 13-17s: Cú twist meme hài hước kết màn.",
-    "Giọng đọc solo duy nhất: Adam bựa (Vieneu GPU, tốc độ 1.05x-1.1x), tếu táo, nhập vai trực tiếp vào Mascot ở ngôi thứ nhất ('tui').",
-    "Tích hợp bộ 6 Foley SFX khớp nhịp hành động: click/pop (thao tác), whoosh (lia cảnh), ding (sáng từ vựng), tick (đếm nhịp), crunch (nhai bánh/twist).",
-    "Hiệu ứng Remotion Motion: Cú giật punch-in ở frame đầu, screen_shake khi có va chạm/shock, phụ đề 1-2 dòng chữ to rõ highlight từ khóa tiếng Anh màu vàng #FACC15, không dùng header badge.",
-    "Thời lượng xuất xưởng nghiêm ngặt trong khoảng 15.0 - 20.0 giây."
+    "Narration and learner-facing text are entirely English; explain meaning, usage and relevant grammar/pronunciation inside the same situation.",
+    "One central question or situation develops through cause, action and consequence and receives a payoff.",
+    "Mascot CH01 appears in 1–2 key frames (guiding or feature mode) with the canonical core identity and allowed 80/20 expression tolerance.",
+    "Use story shots, close action and diagrams where they prove meaning; preserve camera/background with Base reference for state changes.",
+    "Scene/image/beat counts are chosen for this specific script and saved before narration anchors; no universal scene count."
   ],
   "character": {
     "id": "channel-mascot",
@@ -42,9 +48,40 @@
   "text_style": {
     "font": "Inter, sans-serif",
     "color": "#172033",
-    "outline": "Nền sáng tương phản",
-    "size": "Lớn, dễ đọc trên màn hình điện thoại (tối đa 2 dòng ngắn)",
-    "placement": "Trung tâm phía dưới, không che mặt nhân vật, không dùng hộp badge"
+    "outline": "High contrast against a bright clear background",
+    "size": "Readable on a phone, at most two meaningful caption lines",
+    "placement": "Near the referent for teaching text; keep separate from captions and mascot"
   },
-  "example_count": 1
+  "example_count": null,
+  "learning_requirements": [
+    {
+      "id": "R1",
+      "text": "Open with a concrete situation or central question that makes the selected word useful."
+    },
+    {
+      "id": "R2",
+      "text": "Explain the selected meaning in accessible English and show the defining action or relationship."
+    },
+    {
+      "id": "R3",
+      "text": "Use correct linked example sentences; explain relevant grammar within the situation."
+    },
+    {
+      "id": "R4",
+      "text": "Provide a clear spoken model for pronunciation; practice only when useful to the job."
+    },
+    {
+      "id": "R5",
+      "text": "Return to and answer the opening question, giving an observable understanding or usage opportunity."
+    }
+  ],
+  "outputs": [
+    {
+      "aspect_ratio": "9:16",
+      "language": "en",
+      "subtitles": true,
+      "voice": "reference-narrator",
+      "speed": 0.92
+    }
+  ]
 }

@@ -209,8 +209,11 @@ def select(args, led, items):
         if unknown:
             raise Stop('Chủ đề không có: ' + ', '.join(sorted(unknown)))
         pool = [x for x in pool if wanted & set(x['topics'])]
-    if args.level:
-        wanted = set(args.level.split(','))
+    requested_level = args.level
+    if not requested_level and (ROOT / 'channel.json').is_file():
+        requested_level = ','.join(read_json(ROOT / 'channel.json').get('allowed_levels', [])) or None
+    if requested_level:
+        wanted = set(requested_level.split(','))
         if wanted - set(LEVELS):
             raise Stop('Mức CEFR không có: ' + ', '.join(sorted(wanted - set(LEVELS))))
         pool = [x for x in pool if x['cefr'] in wanted]
@@ -246,7 +249,7 @@ def sibling_notes(led, items, entry):
 
 def make_brief(entry, led, items, channel):
     example_count = channel.get('example_count', 2)
-    if type(example_count) is not int or not 1 <= example_count <= 4:
+    if example_count is not None and (type(example_count) is not int or not 1 <= example_count <= 4):
         raise Stop('example_count phải là số nguyên từ 1 đến 4')
     word = entry['word']
     display = word.upper()
@@ -262,11 +265,11 @@ def make_brief(entry, led, items, channel):
         'goal': f'Người xem hiểu đúng nghĩa "{gloss}" của từ {display}, nhớ lâu và biết đặt câu tự nhiên',
         'video_type': channel['video_type'],
         'duration': channel['duration'],
-        'scene_count': channel['scene_count'],
+        'scene_count': channel.get('scene_count'),
         'required_points': [
             {'id': 'R1', 'text': f'Mở bằng một tình huống đời thường dẫn thẳng tới từ {display}'},
             {'id': 'R2', 'text': f'Làm rõ nghĩa lõi "{gloss}" ({pos_vi}) bằng hành động/tình huống rõ ràng; chỉ đối chiếu từ dễ nhầm khi cần'},
-            {'id': 'R3', 'text': f'{example_count} câu ví dụ dùng {display}, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa'},
+            {'id': 'R3', 'text': f'{example_count if example_count is not None else "Các"} câu ví dụ dùng {display}, đọc rõ tiếng Anh và nối bằng diễn tiến hoặc đối chiếu có ý nghĩa'},
             {'id': 'R4', 'text': f'Một lượt người xem dùng hoặc nhớ lại {display}, có khoảng chờ và phản hồi, dẫn tự nhiên tới câu của riêng mình'},
         ],
         'language': channel['language'],
@@ -300,6 +303,21 @@ def make_brief(entry, led, items, channel):
                              for lang, rate in [('vi', 3.6), ('en', 2.5)]},
         },
     }
+    if channel.get('outputs'):
+        brief['outputs'] = json.loads(json.dumps(channel['outputs']))
+        brief['channel_profile'] = {'id': channel.get('id', 'vocabulary'), 'version': channel['version'],
+                                    'sha256': __import__('hashlib').sha256(json.dumps(channel, ensure_ascii=False, sort_keys=True).encode()).hexdigest()}
+        if channel.get('learning_requirements'):
+            brief['required_points'] = json.loads(json.dumps(channel['learning_requirements']))
+        brief['planning']['assumptions'] = [channel.get('duration_note', ''),
+            'Scene/image counts are chosen per outline, not inherited from a global template.',
+            'Speech timing is estimated until the real WAV is collected.']
+        brief['planning']['success_criteria'] = [
+            f'Explain and use the selected sense of {word} in an appropriate English sentence.',
+            'The question, action/diagram and payoff serve the same selected sense.',
+            'Learning and retention effects are not measured without real learners.']
+        brief['planning']['domain_requirements'].append(
+            'Use accessible English throughout. Internal bank gloss_vi is sense-selection data, not Vietnamese narration.')
     if entry['homograph']:
         brief['planning']['success_criteria'].append(
             f'Người xem không lẫn {display} với các nghĩa khác của chính từ này')
@@ -311,6 +329,12 @@ def channel_config(args):
     for key in ['style', 'tone', 'aspect_ratio']:
         if getattr(args, key, None):
             cfg[key] = getattr(args, key)
+    if getattr(args, 'scene_count', None) is not None:
+        if not 1 <= args.scene_count <= 100: raise Stop('scene_count phải từ 1 đến 100')
+        cfg['scene_count'] = args.scene_count
+    if cfg.get('outputs'):
+        aspects = ['9:16', '16:9'] if cfg['aspect_ratio'] == 'dual' else [cfg['aspect_ratio']]
+        cfg['outputs'] = [dict(aspect_ratio=a, language=cfg['language'], subtitles=True, voice=cfg['voice'], speed=cfg['speed']) for a in aspects]
     return cfg
 
 
@@ -456,8 +480,12 @@ def cmd_start(args):
     """draw + pilot new: một lệnh để bắt đầu video cho từ kế tiếp."""
     before = copy.deepcopy(ledger()['entries'])
     drawn = cmd_draw(args)
-    run = subprocess.run([sys.executable, 'pilot.py', 'new', args.job, '--brief', drawn['brief'],
-                          '--mode', args.mode], cwd=REPO, capture_output=True, text=True)
+    command = [sys.executable, 'pilot.py', 'new', args.job, '--brief', drawn['brief'], '--mode', args.mode]
+    for flag, key in [('--grant','grant'),('--source','source'),('--session','session'),('--engine','engine')]:
+        value = getattr(args, key, None)
+        if value is not None:
+            command.extend([flag, str(value)])
+    run = subprocess.run(command, cwd=REPO, capture_output=True, text=True)
     sys.stderr.write(run.stderr)
     if run.returncode != 0:
         led = ledger()
@@ -680,6 +708,11 @@ def main():
     ap.add_argument('--order', choices=['level', 'topic'], default='level')
     ap.add_argument('--out', help='đường dẫn brief cần ghi')
     ap.add_argument('--mode', choices=['review', 'auto'], default='review')
+    ap.add_argument('--grant', help='quyền production đã cấp, được giữ qua chat')
+    ap.add_argument('--source', help='nguồn yêu cầu thực khi ghi quyền lần đầu')
+    ap.add_argument('--session', help='phiên quản lý đã chọn tài khoản')
+    ap.add_argument('--engine', type=int, choices=[3,4], help='4 cho quy trình mới; 3 chỉ cho tương thích cũ')
+    ap.add_argument('--scene-count', dest='scene_count', type=int, help='số cảnh đã chọn cho job sau lập outline; không là mẫu kênh')
     ap.add_argument('--style');ap.add_argument('--tone');ap.add_argument('--aspect-ratio', dest='aspect_ratio')
     ap.add_argument('--entry', help='đánh dấu thủ công theo mã mục, cách nhau bằng dấu phẩy')
     ap.add_argument('--video', help='đường dẫn hoặc link video đã phát hành')

@@ -13,6 +13,9 @@ LABELS = {'content': 'Kịch bản', 'media': 'Cảnh, hình ảnh và âm thanh
 
 
 def settings(p, job):
+    from execution import is_job, settings as execution_settings
+    if is_job(p, job):
+        return execution_settings(p, job)
     path = p.job(job) / 'workflow.json'
     if not path.exists():
         raise Blocked('LEGACY_JOB: lịch sử chỉ đọc; tạo job mới với --brief và --mode review hoặc auto')
@@ -104,6 +107,10 @@ def gate(p, job, module):
     # Low-level helpers cannot bypass the public gates on a v3 job.
     if not (p.job(job) / 'workflow.json').exists():
         return
+    from execution import is_job
+    if is_job(p, job):
+        from execution import gate as execution_gate
+        return execution_gate(p, job, module)
     if module in ('images', 'audio', 'render') and not approved(p, job, 'content'):
         raise Blocked('Kịch bản chưa được duyệt theo chế độ của job')
     if module == 'render' and not approved(p, job, 'media'):
@@ -111,6 +118,9 @@ def gate(p, job, module):
 
 
 def status(p, job):
+    from execution import is_job, observe
+    if is_job(p, job):
+        return observe(p, job)
     cfg = settings(p, job)
     try:
         p.status(job)
@@ -133,6 +143,9 @@ def status(p, job):
 
 
 def next_step(p, job):
+    from execution import is_job, next_step as execution_next
+    if is_job(p, job):
+        return execution_next(p, job)
     state = status(p, job)
     if 'blocked' in state:
         return state
@@ -362,6 +375,11 @@ def prepare(p, job, stage):
 
 
 def approve(p, job, stage, revision, note, machine=False, retry_review=False):
+    from execution import is_job, approve as execution_approve
+    if is_job(p, job):
+        if machine:
+            raise Blocked('Engine v4 never calls a machine reviewer')
+        return execution_approve(p, job, stage, revision, note)
     p.refresh(job)
     cfg = settings(p, job)
     if machine != (cfg['mode'] == 'auto'):
@@ -402,8 +420,10 @@ def published_videos(p, job):
     """Read-only verification of current approvals and matching published copies."""
     from pilot import ROOT
     settings(p, job)
-    if not all(approved(p, job, stage) for stage in STAGES):
-        raise Blocked('Video publication requires all three current approvals')
+    from execution import is_job, accepted, CHECKPOINTS
+    modern = is_job(p, job)
+    if not (all(accepted(p, job, phase) for phase in CHECKPOINTS) if modern else all(approved(p, job, stage) for stage in STAGES)):
+        raise Blocked('Video publication requires all current output decisions')
     root = p.root.resolve()
     library = (root.parent if root == ROOT.resolve() and root.name == 'sys' else root) / 'video'
     folder = library / p.job(job).name
@@ -411,7 +431,8 @@ def published_videos(p, job):
         raise Blocked('Video library must not be a symbolic link')
     payload = p.payload(job, 'render')
     keys = [k for k in ('video_9x16', 'video_16x9') if payload.get(k)] or ['video']
-    revision = current(p, job, 'video')['revision']
+    from execution import current as execution_current
+    revision = (execution_current(p, job, 'video') if modern else current(p, job, 'video'))['revision']
     paths = []
     for key in keys:
         source = p.path(job, payload[key])
@@ -424,6 +445,16 @@ def published_videos(p, job):
 
 
 def publish_videos(p, job):
+    from execution import is_job, lease, require
+    if is_job(p, job):
+        require(p, job, 'execute')
+        if getattr(p, '_execution_job', None) != job:
+            with lease(p, job):
+                return _publish_videos(p, job)
+    return _publish_videos(p, job)
+
+
+def _publish_videos(p, job):
     """Copy only approved video deliverables into the visible video library.
 
     Sandboxes always export beneath their own root. The installed sys/ layout
@@ -432,8 +463,10 @@ def publish_videos(p, job):
     from pilot import ROOT
     p.refresh(job)
     settings(p, job)
-    if not all(approved(p, job, stage) for stage in STAGES):
-        raise Blocked('Video publication requires all three current approvals')
+    from execution import is_job, accepted, CHECKPOINTS
+    modern = is_job(p, job)
+    if not (all(accepted(p, job, phase) for phase in CHECKPOINTS) if modern else all(approved(p, job, stage) for stage in STAGES)):
+        raise Blocked('Video publication requires all current output decisions')
     root = p.root.resolve()
     library = (root.parent if root == ROOT.resolve() and root.name == 'sys' else root) / 'video'
     if library.is_symlink():
@@ -443,7 +476,8 @@ def publish_videos(p, job):
         raise Blocked('Video output folder must not be a symbolic link')
     payload = p.payload(job, 'render')
     keys = [key for key in ('video_9x16', 'video_16x9') if payload.get(key)] or ['video']
-    revision = current(p, job, 'video')['revision']
+    from execution import current as execution_current
+    revision = (execution_current(p, job, 'video') if modern else current(p, job, 'video'))['revision']
     plans = []
     for key in keys:
         source = p.path(job, payload[key])
@@ -507,7 +541,8 @@ def loop_guard(p, job, part=None, scenes=()):
     part='images' / 'audio' is the reject about to be recorded; None is a
     resume about to regenerate or re-review media.
     """
-    if settings(p, job)['mode'] != 'auto':
+    from execution import is_job
+    if is_job(p, job) or settings(p, job)['mode'] != 'auto':
         return
     from scripts.image_repairs import stop, repeat_failures
     halt = lambda reason, **detail: stop(p, job, LOOP_TARGET, reason + ' ' + STOP, detail, 'AUTO_LOOP_CAP_NEEDS_ATTENTION')
@@ -565,6 +600,11 @@ def retake_audio(p, job, note, scene=None):
 
 
 def reject(p, job, stage, revision, note, part=None, scene=None, character=None, image=None, ratio=None, repair_plan=None):
+    from execution import is_job, reject as execution_reject
+    if is_job(p, job):
+        if part is not None:
+            raise Blocked('Engine v4 uses explicit audio/images checkpoints')
+        return execution_reject(p, job, stage, revision, note, scene=scene, character=character, image=image, ratio=ratio, repair_plan=repair_plan)
     p.refresh(job)
     data = current(p, job, stage)
     if not data or data['revision'] != revision or not note.strip():
@@ -590,6 +630,11 @@ def reject(p, job, stage, revision, note, part=None, scene=None, character=None,
 
 
 def advance(p, job, target=None, retry_review=False):
+    from execution import is_job, advance as execution_advance
+    if is_job(p, job):
+        if retry_review:
+            raise Blocked('Engine v4 has no machine review retry')
+        return execution_advance(p, job, target)
     cfg = settings(p, job)
     for _ in range(3):
         step = next_step(p, job)
@@ -638,7 +683,7 @@ def batch(p, jobs):
             entry = {'job': job, 'needs_attention': True, 'error': str(ex)}
             result.append(entry)
             # These failures concern the shared provider, not just one script.
-            if any(word in str(ex).lower() for word in ('login', 'captcha', 'rate limit', 'preflight', 'agy_not_installed', 'agy_api_provider', 'colab_')):
+            if any(word in str(ex).lower() for word in ('login', 'captcha', 'rate limit', 'preflight', 'agy_not_installed', 'agy_api_provider', 'colab_', 'quota', '503', '429', 'capacity', 'bot', 'auth')):
                 entry['queue_paused'] = True
                 break
     path = p.root / '.state' / 'batch-results' / f'{time.time_ns()}.json'

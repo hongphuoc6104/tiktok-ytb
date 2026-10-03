@@ -1,0 +1,55 @@
+{
+  "stage": "maintenance-and-active-docs",
+  "tested_at": 1791020613.4052227,
+  "workspace": "/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow",
+  "maintenance_tests": {
+    "passed": 17,
+    "failed": 0,
+    "fixtures_only": true
+  },
+  "agy_adapter_regression": {
+    "passed": 9,
+    "failed": 0
+  },
+  "skills_validated": [
+    "vp-setup",
+    "vp-production",
+    "vp-development",
+    "vp-maintenance"
+  ],
+  "active_markdown_files_link_checked": 30,
+  "broken_links": 0,
+  "project_commit_push_cleanup": false,
+  "live_provider_calls": false,
+  "history_archives": [
+    {
+      "path": "sys/docs/legacy/colab-tts-before-normalization.md",
+      "sha256": "85f312254298efb22d747f741688b88142c06ed025eb3ec4d2601222388a96b5"
+    },
+    {
+      "path": "sys/docs/legacy/contracts-before-normalization.md",
+      "sha256": "8573c9f6710f72191a7d6217800db1ecfae276e1ceb7ddb2913352d636651463"
+    },
+    {
+      "path": "sys/docs/legacy/image-repair-loops-before-normalization.md",
+      "sha256": "82ef63e56683aa3709ddccad1d824df66e81b5b956258567a5401af391322d0a"
+    },
+    {
+      "path": "sys/docs/legacy/narration-length-guidance-before-normalization.md",
+      "sha256": "6c84689b7eb217b3ee684651c1ca8095f145724890608629d3f744a86d1dde23"
+    },
+    {
+      "path": "sys/docs/legacy/story-planning-before-normalization.md",
+      "sha256": "fec80d702d838380a06200d17e205eee4d4c805e733a74cbfd22850e8c0653b3"
+    },
+    {
+      "path": "sys/docs/legacy/vocabulary-before-normalization.md",
+      "sha256": "6553379ea5b5bf60a2c8e4aa820358996e4c9f0a9de602873c440119b272d20e"
+    }
+  ],
+  "remaining_integration": [
+    "Independent maintenance/Git forward test still required",
+    "Per-machine Flow URL/profile configuration handoff needs actual runtime/UI capability; documentation does not claim UI edits config",
+    "Real provider and full objective audit remain root-owned; fixtures are not product artifacts"
+  ]
+}

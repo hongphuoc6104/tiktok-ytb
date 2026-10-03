@@ -219,6 +219,25 @@
     "generation_report": {
       "type": "string",
       "minLength": 1
+    },
+    "language": {
+      "enum": [
+        "vi",
+        "en"
+      ]
+    },
+    "tracks": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "enum": [
+          "vi",
+          "en"
+        ]
+      },
+      "additionalProperties": {
+        "type": "object"
+      }
     }
   },
   "required": [

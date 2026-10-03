@@ -1,0 +1,19 @@
+{
+  "fixture": true,
+  "actual_browser": true,
+  "provider_calls": false,
+  "account_cards": {
+    "flow": "QA Flow · flow\n5.00 giờ\n\nAuth: not_tested · Capability: not_tested\n\nNgân sách nội bộ · đã dùng 0.00 giờ · dự phòng 1.00 giờ\n\nĐồng hồ chưa bắt đầu; chưa xác nhận T4.\n\nMở đúng profile browser đã chọn và đăng nhập Flow bằng thao tác của người dùng. Inventory chưa xác minh trạng thái đăng nhập.\n\nGắn danh tính Google\n{\n  \"configured\": true,\n  \"identity_configured\": true,\n  \"flow\": {\n    \"e9101dca84e143b2a649b458da61f54b\": {\n      \"slots\": 100,\n      \"requests\": {\n        \"generated\": {\n          \"slots\": 3,\n          \"state\": \"generated\",\n          \"at\": 1791022294.0357108,\n          \"budget_session\": \"e9101dca84e143b2a649b458da61f54b\",\n          \"evidence\": \"QA synthetic observed state\"\n        },\n        \"collected\": {\n          \"slots\": 2,\n          \"state\": \"collected\",\n          \"at\": 1791022294.0363324,\n          \"budget_session\": \"e9101dca84e143b2a649b458da61f54b\",\n          \"evidence\": \"QA synthetic observed state\"\n        },\n        \"unknown\": {\n          \"slots\": 95,\n          \"state\": \"unknown\",\n          \"at\": 1791022294.036962,\n          \"budget_session\": \"e9101dca84e143b2a649b458da61f54b\",\n          \"evidence\": \"QA synthetic observed state\"\n        }\n      }\n    }\n  },\n  \"blocks\": {}\n}",
+    "colab": "qa-colab · colab\n3.00 giờ\n\nAuth: not_tested · Capability: T4_allocated\n\nNgân sách nội bộ · đã dùng 2.00 giờ · dự phòng 1.00 giờ\n\nCửa sổ nội bộ tới 15:11:34 4/10/2026\n\nNgười dùng tự OAuth trong terminal riêng; không dán mã/token vào trang quản lý.\n\npython3 -m colab_bridge.accounts login qa-colab\nGắn danh tính GoogleKiểm auth chỉ đọc\n{\n  \"configured\": true,\n  \"identity_configured\": true,\n  \"flow\": {},\n  \"blocks\": {}\n}"
+  },
+  "buttons": [
+    "Lưu phiên",
+    "Gắn danh tính Google",
+    "Kiểm auth chỉ đọc",
+    "Gắn danh tính Google"
+  ],
+  "flow_shows_colab_hour_ring": true,
+  "flow_counts_visible_only_as_json": true,
+  "setup_controls_visible": false,
+  "page_errors": []
+}

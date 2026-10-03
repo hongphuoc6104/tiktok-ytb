@@ -1,0 +1,1963 @@
+{
+  "base_commit": "80e61cd7a93721f3aaa9c6797fae6458aeb8d01e",
+  "main_root": "/home/hongphuoc6104/Desktop/pipelineFlow",
+  "source_root": "/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow",
+  "private_runtime_and_reports_excluded": true,
+  "integration_performed": true,
+  "entries": [
+    {
+      "path": ".agents/rules/brand_tolerance.md",
+      "operation": "replace",
+      "base_sha256": "44d76bc2135746c64b20da758e9c8c59dca5b4fcabdd1222326d1aa43c5ea53e",
+      "main_sha256": "44d76bc2135746c64b20da758e9c8c59dca5b4fcabdd1222326d1aa43c5ea53e",
+      "proposed_sha256": "22b108983be37e7639f82a4d25c4498ccbf091c026a0b703cf553b8ff3b56750",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1513
+    },
+    {
+      "path": ".agents/rules/production.md",
+      "operation": "replace",
+      "base_sha256": "6915a4f7e91f5e8c3b7fd75ac6c076c1ea08468236cbc0e7e70ea5f00ce36e66",
+      "main_sha256": "6915a4f7e91f5e8c3b7fd75ac6c076c1ea08468236cbc0e7e70ea5f00ce36e66",
+      "proposed_sha256": "34c04464c6885d38f086e13a1bf8141c5d8a000fe67fc904b7026c883d1e22dd",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 306
+    },
+    {
+      "path": ".agents/skills/vp-audio-director/SKILL.md",
+      "operation": "delete",
+      "base_sha256": "b0aa12d36873ffc237768bc18409523f7fe6f9ea3f4fa16781f2981092568276",
+      "main_sha256": "b0aa12d36873ffc237768bc18409523f7fe6f9ea3f4fa16781f2981092568276",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-clean/SKILL.md",
+      "operation": "delete",
+      "base_sha256": "d4e8aae0e7336d236c8585df2ef9e8f40a8902c4c8f0d22c03070cdede126783",
+      "main_sha256": "d4e8aae0e7336d236c8585df2ef9e8f40a8902c4c8f0d22c03070cdede126783",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-content/SKILL.md",
+      "operation": "delete",
+      "base_sha256": "208d4b0b1e2fc3576e10093fb003778472ccd1f184aac0b945b6584a6c933415",
+      "main_sha256": "208d4b0b1e2fc3576e10093fb003778472ccd1f184aac0b945b6584a6c933415",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-content/references/ai-tells.md",
+      "operation": "delete",
+      "base_sha256": "ef38231682ccd8c1288105cc70e08dcecfb680fe04fe5698badfbfc2413addac",
+      "main_sha256": "ef38231682ccd8c1288105cc70e08dcecfb680fe04fe5698badfbfc2413addac",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-content/references/director-contract.md",
+      "operation": "delete",
+      "base_sha256": "f795c11f4855dfee8b4db9f7650978bcdb7993834547c9b1e9436940ef4b86a5",
+      "main_sha256": "f795c11f4855dfee8b4db9f7650978bcdb7993834547c9b1e9436940ef4b86a5",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-content/references/director-sources.md",
+      "operation": "delete",
+      "base_sha256": "0420c367f690c2e0d2df4c33b4bcc6d57cca892af89fa831b8487429ce17cf05",
+      "main_sha256": "0420c367f690c2e0d2df4c33b4bcc6d57cca892af89fa831b8487429ce17cf05",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-content/references/narration-style.md",
+      "operation": "delete",
+      "base_sha256": "33c522b81aa75a068b77cf0cd5787ef3f29300e51f1e81a9070fd6ce72767fda",
+      "main_sha256": "33c522b81aa75a068b77cf0cd5787ef3f29300e51f1e81a9070fd6ce72767fda",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-content/references/vocab-pedagogy.md",
+      "operation": "delete",
+      "base_sha256": "7711d1ad81b951eb792dd9bf0d0e51b0fa013af6c4d4592ff1ebff55e0708909",
+      "main_sha256": "7711d1ad81b951eb792dd9bf0d0e51b0fa013af6c4d4592ff1ebff55e0708909",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-edit-director/SKILL.md",
+      "operation": "delete",
+      "base_sha256": "845e1cc2b9ae935577b5f98a980b0c2b7b29578e7ca8192791e84313297100e5",
+      "main_sha256": "845e1cc2b9ae935577b5f98a980b0c2b7b29578e7ca8192791e84313297100e5",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-media/SKILL.md",
+      "operation": "delete",
+      "base_sha256": "cb2610f67ceee05fe3927959977fcd488926a982ad10f394e38c22151c626999",
+      "main_sha256": "cb2610f67ceee05fe3927959977fcd488926a982ad10f394e38c22151c626999",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-media/references/audio.md",
+      "operation": "delete",
+      "base_sha256": "be55f86272b31715fb2f5e752c4129e7412d7d7e9e783e0fc16f8c37df512986",
+      "main_sha256": "be55f86272b31715fb2f5e752c4129e7412d7d7e9e783e0fc16f8c37df512986",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-media/references/images.md",
+      "operation": "delete",
+      "base_sha256": "bebba5ffad9cf0c6b6c9548a1c35405112f0042b65aab87a1189f4697aee7995",
+      "main_sha256": "bebba5ffad9cf0c6b6c9548a1c35405112f0042b65aab87a1189f4697aee7995",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-script-director/SKILL.md",
+      "operation": "delete",
+      "base_sha256": "20fa73314fcab567dfdddc88f8487b10a50f2c135cb56c96ae70f193ef6ff3c2",
+      "main_sha256": "20fa73314fcab567dfdddc88f8487b10a50f2c135cb56c96ae70f193ef6ff3c2",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-video/SKILL.md",
+      "operation": "delete",
+      "base_sha256": "b95ec282517777fb477dc6223c9c3b68f7ad2b146f45cb0e38e78afae231c882",
+      "main_sha256": "b95ec282517777fb477dc6223c9c3b68f7ad2b146f45cb0e38e78afae231c882",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-video/references/social-publishing.md",
+      "operation": "delete",
+      "base_sha256": "957910903c38cfeee837da17c5031a8b3247e83592f869cea431b1f98cab178b",
+      "main_sha256": "957910903c38cfeee837da17c5031a8b3247e83592f869cea431b1f98cab178b",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-visual-director/SKILL.md",
+      "operation": "delete",
+      "base_sha256": "697e19ec4506beda9c0ad5538a082f0f01a6452aead5e99d442bac8f5c3a01ef",
+      "main_sha256": "697e19ec4506beda9c0ad5538a082f0f01a6452aead5e99d442bac8f5c3a01ef",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".agents/skills/vp-vocab/SKILL.md",
+      "operation": "delete",
+      "base_sha256": "ce5f9c234f7ba5f0b144c3cfea209e60692d3969240003d63d5ebb8b3d939b8d",
+      "main_sha256": "ce5f9c234f7ba5f0b144c3cfea209e60692d3969240003d63d5ebb8b3d939b8d",
+      "proposed_sha256": null,
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": null
+    },
+    {
+      "path": ".gitignore",
+      "operation": "replace",
+      "base_sha256": "189cf0dbfcb3d653379b982efc45f68b05eec4749d7f2c732607876b578c4fba",
+      "main_sha256": "189cf0dbfcb3d653379b982efc45f68b05eec4749d7f2c732607876b578c4fba",
+      "proposed_sha256": "2bfda788bb36021cad0e337c6fea92ac083a7ed84923340dc08a495b2369652c",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2556
+    },
+    {
+      "path": "AGENTS.md",
+      "operation": "replace",
+      "base_sha256": "2faaf0e2b86f62de44e28c8f30b21f99bc8e68bf0ab05980ed40f55836eef00e",
+      "main_sha256": "ca89d14adebaa8c620d8c5bb36196a52b8b07c65ee3d05e267846f957b22d1bc",
+      "proposed_sha256": "b97680be8c1bd390c2a9572c50ca267ecb50709e5674ffd9e450bb7f333cae72",
+      "main_changed_from_base": true,
+      "conflict": true,
+      "bytes": 4687
+    },
+    {
+      "path": "GEMINI.md",
+      "operation": "replace",
+      "base_sha256": "e35a191e8f499ea8e46a06a9938968fd00b027102780ccb06debf1df00c6dcc8",
+      "main_sha256": "e35a191e8f499ea8e46a06a9938968fd00b027102780ccb06debf1df00c6dcc8",
+      "proposed_sha256": "c4ae4fd0b6b781c842dbb3dd8233a694c518a3b3e4e38ce14846e0fe93684471",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 461
+    },
+    {
+      "path": "INDEX.md",
+      "operation": "replace",
+      "base_sha256": "2a7587916e34fcfd0b0fc4faf692cc852940bd51d58e0a75529d43a3c308455e",
+      "main_sha256": "95584e179ab986210e2c040a30e15625240c28b418226c27e08c6d8077c6f4d8",
+      "proposed_sha256": "c35fce88a0c3cb558775f81d867f9c0bb044b58fc190b11821b7bde17dfa8797",
+      "main_changed_from_base": true,
+      "conflict": true,
+      "bytes": 1987
+    },
+    {
+      "path": "README.md",
+      "operation": "replace",
+      "base_sha256": "0639a2ac360802432f5ab30d19003423775882c7bc86e379433b31887ae9bd96",
+      "main_sha256": "0639a2ac360802432f5ab30d19003423775882c7bc86e379433b31887ae9bd96",
+      "proposed_sha256": "98a576b81251d992c8300e8d3afda75d2e3ad45b24cfd1822cfdababa747007b",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2219
+    },
+    {
+      "path": "sys/adapters.py",
+      "operation": "replace",
+      "base_sha256": "4a6f4c0e2df51efe82914641dd22ffd89a0ee23b552de3e6a4025939b774ce4e",
+      "main_sha256": "4a6f4c0e2df51efe82914641dd22ffd89a0ee23b552de3e6a4025939b774ce4e",
+      "proposed_sha256": "73ee1b234f1b64b7f76c5f8ff2d7aa2521f9ae5ce43fb6b4b9df58580aae4df1",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 35434
+    },
+    {
+      "path": "sys/b2_bridge.py",
+      "operation": "replace",
+      "base_sha256": "df17e68872322e2271b5a6a67b192a29ec69a471901ddceba352e16f6596e8aa",
+      "main_sha256": "df17e68872322e2271b5a6a67b192a29ec69a471901ddceba352e16f6596e8aa",
+      "proposed_sha256": "b74fb03cf896b05067482becb4532a3fb7a568aee7e4306769426c0e690cae5b",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 10331
+    },
+    {
+      "path": "sys/colab_bridge/__main__.py",
+      "operation": "replace",
+      "base_sha256": "bbd821fd00aaf4a9d12c26e22f43515036d03ee908d484c9eec92117a5d20c9f",
+      "main_sha256": "bbd821fd00aaf4a9d12c26e22f43515036d03ee908d484c9eec92117a5d20c9f",
+      "proposed_sha256": "90e8a0038d8eff926ec0926b592a9b590c9935479da5b7d970c8b6ccd8e05c1c",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1822
+    },
+    {
+      "path": "sys/colab_bridge/accounts.py",
+      "operation": "replace",
+      "base_sha256": "4e998d0751456cfd3e89fe285928b62a9478d6c3a5558b58d74beb31daaf8c95",
+      "main_sha256": "4e998d0751456cfd3e89fe285928b62a9478d6c3a5558b58d74beb31daaf8c95",
+      "proposed_sha256": "21ccf91cd7c46ff113d17c59b1425082f1da9e387882379b1d3f4bdb3d9b50cf",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5151
+    },
+    {
+      "path": "sys/colab_bridge/client.py",
+      "operation": "replace",
+      "base_sha256": "9dc14a8e71435e3444888b574f89fc8fcf91266beff1515e1d314d386f277b87",
+      "main_sha256": "9dc14a8e71435e3444888b574f89fc8fcf91266beff1515e1d314d386f277b87",
+      "proposed_sha256": "ed3cbfc06dd992bda749cf9467b8afbe37180dd93859170bf49d885ff560dbca",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 33418
+    },
+    {
+      "path": "sys/colab_bridge/protocol.py",
+      "operation": "replace",
+      "base_sha256": "9dc8f9824186d8a1305ea00b02863f7031c5cbcc71552c8384d4eab56da9ea62",
+      "main_sha256": "9dc8f9824186d8a1305ea00b02863f7031c5cbcc71552c8384d4eab56da9ea62",
+      "proposed_sha256": "69b4a6f312b4f9e1363433d7e6ecb53b2ab4c12cfeda583b9583f85948f1c6ea",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 15048
+    },
+    {
+      "path": "sys/colab_bridge/worker.py",
+      "operation": "replace",
+      "base_sha256": "c867c18643256c2f492d2be3afa667b1c978475aca12bfb63edc40584da4191d",
+      "main_sha256": "c867c18643256c2f492d2be3afa667b1c978475aca12bfb63edc40584da4191d",
+      "proposed_sha256": "3a8fcabfd7048efe437ca576f0605f08d1caa625cd43850a3daf011e426e3b1b",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9280
+    },
+    {
+      "path": "sys/config.json",
+      "operation": "replace",
+      "base_sha256": "45a9a637160ee48129870d56008db134a0083d3ed394796628e11690b560f456",
+      "main_sha256": "45a9a637160ee48129870d56008db134a0083d3ed394796628e11690b560f456",
+      "proposed_sha256": "fb45c7d5f7de328336faf920a7ac4d7cd7baedbd25d34fe8c83332659692ffa7",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2610
+    },
+    {
+      "path": "sys/content_contract.py",
+      "operation": "replace",
+      "base_sha256": "d94d2952376f8e588791d6f8c125acc248aab821453836696542d8dcdab6e51f",
+      "main_sha256": "d94d2952376f8e588791d6f8c125acc248aab821453836696542d8dcdab6e51f",
+      "proposed_sha256": "887ff6c748bf35e903ce5f387a49d14434c3d9312682d2ab6785bbb0cf3bbc3a",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 6840
+    },
+    {
+      "path": "sys/docs/AGY-SETUP.md",
+      "operation": "replace",
+      "base_sha256": "7a1ceb02a1126b6d601855d7e104e9ec7b6abfef9133c039fa1712ed68e0bba9",
+      "main_sha256": "7a1ceb02a1126b6d601855d7e104e9ec7b6abfef9133c039fa1712ed68e0bba9",
+      "proposed_sha256": "a0e4686a849ab95b38e3bca7b196703f4e3847b78f067dca945461becb506456",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 463
+    },
+    {
+      "path": "sys/docs/colab-tts.md",
+      "operation": "replace",
+      "base_sha256": "85f312254298efb22d747f741688b88142c06ed025eb3ec4d2601222388a96b5",
+      "main_sha256": "85f312254298efb22d747f741688b88142c06ed025eb3ec4d2601222388a96b5",
+      "proposed_sha256": "d4fad0231bb88ac100db8f4c048f5904c7260935580c7efd1edbf42549498d0c",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3245
+    },
+    {
+      "path": "sys/docs/contracts.md",
+      "operation": "replace",
+      "base_sha256": "8573c9f6710f72191a7d6217800db1ecfae276e1ceb7ddb2913352d636651463",
+      "main_sha256": "8573c9f6710f72191a7d6217800db1ecfae276e1ceb7ddb2913352d636651463",
+      "proposed_sha256": "cc25802f5503629b596a66d2fe1090c7d51e0ec8bc76277938b612ff3e839985",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1498
+    },
+    {
+      "path": "sys/docs/director-system.md",
+      "operation": "replace",
+      "base_sha256": "8c0f5292d062260a4e1aa310f8544559130c833f5a7f37bb4bcbb1e08de086d2",
+      "main_sha256": "8c0f5292d062260a4e1aa310f8544559130c833f5a7f37bb4bcbb1e08de086d2",
+      "proposed_sha256": "d0252e025e4643bafbe6efef9089b996ad15805bd387cd9835afb256ddd9a8cf",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1168
+    },
+    {
+      "path": "sys/docs/image-repair-loops.md",
+      "operation": "replace",
+      "base_sha256": "82ef63e56683aa3709ddccad1d824df66e81b5b956258567a5401af391322d0a",
+      "main_sha256": "82ef63e56683aa3709ddccad1d824df66e81b5b956258567a5401af391322d0a",
+      "proposed_sha256": "b1218250f20e3ebef6abc3644343be04829c3cb694b31a8e1b9512182fc5247e",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1967
+    },
+    {
+      "path": "sys/docs/narration-length-guidance.md",
+      "operation": "replace",
+      "base_sha256": "6c84689b7eb217b3ee684651c1ca8095f145724890608629d3f744a86d1dde23",
+      "main_sha256": "6c84689b7eb217b3ee684651c1ca8095f145724890608629d3f744a86d1dde23",
+      "proposed_sha256": "2d3f42b96df78c13cb77e02c0fbfcc153aa925633e31502fb25afa644ce7abc0",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1683
+    },
+    {
+      "path": "sys/docs/story-planning.md",
+      "operation": "replace",
+      "base_sha256": "fec80d702d838380a06200d17e205eee4d4c805e733a74cbfd22850e8c0653b3",
+      "main_sha256": "fec80d702d838380a06200d17e205eee4d4c805e733a74cbfd22850e8c0653b3",
+      "proposed_sha256": "9471de42411abd5ff3a58760c4b61c22edc70b3c2bfcf501b1eca8099922e3ca",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2062
+    },
+    {
+      "path": "sys/docs/vocabulary.md",
+      "operation": "replace",
+      "base_sha256": "6553379ea5b5bf60a2c8e4aa820358996e4c9f0a9de602873c440119b272d20e",
+      "main_sha256": "6553379ea5b5bf60a2c8e4aa820358996e4c9f0a9de602873c440119b272d20e",
+      "proposed_sha256": "f3c53dc7cbe48e65979680c094ea8ec6fa62f0b8ec720aea5cfe6ceb7cf621e7",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2184
+    },
+    {
+      "path": "sys/docs/voice-attribution.md",
+      "operation": "replace",
+      "base_sha256": "63fcd89e65d1bf99f02cfa23a95e6a338430a0711c86be913fe5140eeadc72e6",
+      "main_sha256": "63fcd89e65d1bf99f02cfa23a95e6a338430a0711c86be913fe5140eeadc72e6",
+      "proposed_sha256": "7126044b66eac7714ffb2ac7d10898e4959c28c39c722b61597aedd3f5186881",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2242
+    },
+    {
+      "path": "sys/docs/workflow.md",
+      "operation": "replace",
+      "base_sha256": "180f4be6d74940980217ef392b7bd2f21ce50210318b92ae04c4f514cef88e8d",
+      "main_sha256": "180f4be6d74940980217ef392b7bd2f21ce50210318b92ae04c4f514cef88e8d",
+      "proposed_sha256": "d2ca3f6e76f9863d2b392d1de8b268705ab7a72109241c3faffe138da21baa69",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5287
+    },
+    {
+      "path": "sys/experiments/b2_illustrator/browser-operations.mjs",
+      "operation": "replace",
+      "base_sha256": "f99ea1c9bf123230e1e5a658e00f9fb96e5d3995270b78baddc763659e330055",
+      "main_sha256": "f99ea1c9bf123230e1e5a658e00f9fb96e5d3995270b78baddc763659e330055",
+      "proposed_sha256": "1e373ae11d4b0cc9272618952febfd5b85e53ac0e31d5bb7fb345376aed4abae",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 43512
+    },
+    {
+      "path": "sys/experiments/b2_illustrator/controller.mjs",
+      "operation": "replace",
+      "base_sha256": "2958e7202175ef2b75827d7cf197a48fe92cb14d4cbfff951e55b7f3fd2249b5",
+      "main_sha256": "2958e7202175ef2b75827d7cf197a48fe92cb14d4cbfff951e55b7f3fd2249b5",
+      "proposed_sha256": "6ab7e81064a4473c29e5e6725cec96e553e486d98342882de0b5ec607715abeb",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 11946
+    },
+    {
+      "path": "sys/experiments/b2_illustrator/queue-runner.mjs",
+      "operation": "replace",
+      "base_sha256": "12ecca5c5117564352a5e4c6be29d73ad10061d3cbe934842036b721b08c7f6d",
+      "main_sha256": "12ecca5c5117564352a5e4c6be29d73ad10061d3cbe934842036b721b08c7f6d",
+      "proposed_sha256": "750b2e62da34b77bd37773c08bd027b040fd838f652b04ca0a3829af094af84b",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9820
+    },
+    {
+      "path": "sys/experiments/b2_illustrator/session.mjs",
+      "operation": "replace",
+      "base_sha256": "b14708356d29e17867ef87a077a848d3ece64d16c57ccd54f983843d78fa67f6",
+      "main_sha256": "b14708356d29e17867ef87a077a848d3ece64d16c57ccd54f983843d78fa67f6",
+      "proposed_sha256": "033ba9cd8921e61dcf251de4a9bae463b378489cfbdcf2c4b1708f29e949bda5",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 6760
+    },
+    {
+      "path": "sys/image_pipeline.py",
+      "operation": "replace",
+      "base_sha256": "873b388510d1e4f15f3d8d154d2e3696af1bd6e3b612fad6d5cc7c9d316268e4",
+      "main_sha256": "873b388510d1e4f15f3d8d154d2e3696af1bd6e3b612fad6d5cc7c9d316268e4",
+      "proposed_sha256": "302b84da1bda891e7e826227e5c3361c2842fa35e458911369968f03eb4e301d",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 65666
+    },
+    {
+      "path": "sys/pilot.py",
+      "operation": "replace",
+      "base_sha256": "a6be8f9cc56e3d809dc0aebac09963b0aa8f3e202bc9b71632c7ad3bf3714446",
+      "main_sha256": "a6be8f9cc56e3d809dc0aebac09963b0aa8f3e202bc9b71632c7ad3bf3714446",
+      "proposed_sha256": "edf0ceb0677d19531f2a230832c3a2136e4561b39d7877fa206b3ecb4a18bc00",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 52241
+    },
+    {
+      "path": "sys/renderer/index.tsx",
+      "operation": "replace",
+      "base_sha256": "1ffadf331f2b3ef015f6d795669f7bf5272357079067851606dd7e70ed44a629",
+      "main_sha256": "1ffadf331f2b3ef015f6d795669f7bf5272357079067851606dd7e70ed44a629",
+      "proposed_sha256": "7c4a4f9085ce414547c5bde948f954b07ea0167fe1b1fcc0d0a9afc92206be5b",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 10301
+    },
+    {
+      "path": "sys/renderer/outputs.mjs",
+      "operation": "replace",
+      "base_sha256": "8d8904679d245fd3f22c3196a5522ffb8a6ee91d110b77b1ac40e14036ad2f76",
+      "main_sha256": "8d8904679d245fd3f22c3196a5522ffb8a6ee91d110b77b1ac40e14036ad2f76",
+      "proposed_sha256": "092292842460a96efab08e3b46d881fa003d5316ed7675423fd07a6fb42ede1f",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2389
+    },
+    {
+      "path": "sys/renderer/render.mjs",
+      "operation": "replace",
+      "base_sha256": "a01c9fe3ec0e0b39f73b3460043373da34b7e6ec1c666958eac9a2de3b6b0f64",
+      "main_sha256": "a01c9fe3ec0e0b39f73b3460043373da34b7e6ec1c666958eac9a2de3b6b0f64",
+      "proposed_sha256": "e0fb124132f00f03a9ca1044ee450ea3de80ea1094ff8d31d57fe84e77b89a06",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4206
+    },
+    {
+      "path": "sys/schemas/audio.json",
+      "operation": "replace",
+      "base_sha256": "8c5e9af5e8d42c69d55cc1c33736590eb846dafe20343172924d0623d967d7f5",
+      "main_sha256": "8c5e9af5e8d42c69d55cc1c33736590eb846dafe20343172924d0623d967d7f5",
+      "proposed_sha256": "c536a39ee0ee1a93e55fed36f9440198bd7d4ca2b52d58c6fe9e07fc12f91835",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5227
+    },
+    {
+      "path": "sys/schemas/brief-v3.json",
+      "operation": "replace",
+      "base_sha256": "8639f2ed9a85734706fcc93b2e9f413286016c0256e191d9ca2d41132a7f6ff9",
+      "main_sha256": "8639f2ed9a85734706fcc93b2e9f413286016c0256e191d9ca2d41132a7f6ff9",
+      "proposed_sha256": "befab304d0889064cb894f5aa839dbfc3374d79949f6323f656c97fa72994c19",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 7768
+    },
+    {
+      "path": "sys/schemas/content-v3.json",
+      "operation": "replace",
+      "base_sha256": "8ea1c842106e7f0bab712df920fe9573f46b9840e0c124e6f1500820cb8418c1",
+      "main_sha256": "8ea1c842106e7f0bab712df920fe9573f46b9840e0c124e6f1500820cb8418c1",
+      "proposed_sha256": "9e483d5afca73707600235c8494ee31b1ad6ce885db395feb9f1fe8539ec4029",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 14753
+    },
+    {
+      "path": "sys/schemas/images-v2.json",
+      "operation": "replace",
+      "base_sha256": "c116927195961c2c281aa57a4d0653f7ab0b3ad2f4ca487e726e7622dc0f4d86",
+      "main_sha256": "c116927195961c2c281aa57a4d0653f7ab0b3ad2f4ca487e726e7622dc0f4d86",
+      "proposed_sha256": "a09f4b6c7e61c12ea43da4365157483ea250ed6138a3e23d57f528bae6c77388",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 7899
+    },
+    {
+      "path": "sys/schemas/render.json",
+      "operation": "replace",
+      "base_sha256": "94906f08a034f50e1ae91d0e0a488f7c16fc4726c93df4eca8c25f642c1241b1",
+      "main_sha256": "94906f08a034f50e1ae91d0e0a488f7c16fc4726c93df4eca8c25f642c1241b1",
+      "proposed_sha256": "5ae338eafe32257367353caa91608eb19b1edf8506975db7645a1e09230cce5d",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 938
+    },
+    {
+      "path": "sys/scripts/agy_pipeline.py",
+      "operation": "replace",
+      "base_sha256": "b58d5fe8f988419b0b82d438218b6a79541a3c2248df011a65e874f179a057fa",
+      "main_sha256": "b58d5fe8f988419b0b82d438218b6a79541a3c2248df011a65e874f179a057fa",
+      "proposed_sha256": "c37b6824bc40e20f93f519150ac02c1566402509eb3f1b4e6e7f86d5adc12926",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9616
+    },
+    {
+      "path": "sys/scripts/director_context.py",
+      "operation": "replace",
+      "base_sha256": "90065abefd5cd8bd264f968516c791743f038c2718ed70253c72ef7e70f83460",
+      "main_sha256": "90065abefd5cd8bd264f968516c791743f038c2718ed70253c72ef7e70f83460",
+      "proposed_sha256": "281d181255109027e66061a6f5e46672fede073209b44f81a4d24f6e12cc1547",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 7031
+    },
+    {
+      "path": "sys/scripts/image_repairs.py",
+      "operation": "replace",
+      "base_sha256": "00d605d5a6dc5398b5b0167bca2170ddedee1585f2e1832bab86d9081323a729",
+      "main_sha256": "00d605d5a6dc5398b5b0167bca2170ddedee1585f2e1832bab86d9081323a729",
+      "proposed_sha256": "f0ef8570b4ccef9583e48cb17f24f916628b39b7121cc7df3a344debce15bb19",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 12029
+    },
+    {
+      "path": "sys/scripts/story_plan.py",
+      "operation": "replace",
+      "base_sha256": "9bdbefc6248199974c89648c0dbcdae0b5d9071f118ea02d5020cd076d2b0caa",
+      "main_sha256": "9bdbefc6248199974c89648c0dbcdae0b5d9071f118ea02d5020cd076d2b0caa",
+      "proposed_sha256": "bfad2acdcb9b3617ad6447e03d0894ca27857e0611ad9d0add6f10b42f0f1892",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 18199
+    },
+    {
+      "path": "sys/tests/test_agy_adapter.py",
+      "operation": "replace",
+      "base_sha256": "f22ab63e8b9f78f4b550417dd24d8a1025fdf3e027ad7283886f4f14e355c9d4",
+      "main_sha256": "f22ab63e8b9f78f4b550417dd24d8a1025fdf3e027ad7283886f4f14e355c9d4",
+      "proposed_sha256": "886ec206e41ed9487bf5bc8782389d82e34969cdf451db61df5a49ed027d8236",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5044
+    },
+    {
+      "path": "sys/tests/test_audio.py",
+      "operation": "replace",
+      "base_sha256": "bd52048b30d813fdd7609a6d08dc8c0b537065ef632a442a93f6035e7016fd63",
+      "main_sha256": "bd52048b30d813fdd7609a6d08dc8c0b537065ef632a442a93f6035e7016fd63",
+      "proposed_sha256": "31fc717ae1cec2349c78013b99e76629784587c49438363a8a91c24f64aaf270",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 29410
+    },
+    {
+      "path": "sys/tests/test_audio_english_spans.py",
+      "operation": "replace",
+      "base_sha256": "54a1cedb51bb0c818824325867191b59fb080ee4b79833bb99ba0fd29fa1d41a",
+      "main_sha256": "54a1cedb51bb0c818824325867191b59fb080ee4b79833bb99ba0fd29fa1d41a",
+      "proposed_sha256": "ac0b143948b7da0412560591a882540b4cadf0064632ddc63e153224d9316b23",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 12985
+    },
+    {
+      "path": "sys/tests/test_colab_tts.py",
+      "operation": "replace",
+      "base_sha256": "bd84fd51d5f9239b6ff32508c73dc70ae949f04e70f0aa63971c835b57b3bf22",
+      "main_sha256": "bd84fd51d5f9239b6ff32508c73dc70ae949f04e70f0aa63971c835b57b3bf22",
+      "proposed_sha256": "730fcf44c4d55d184d7fd77725d72e4e3320425637e232ed8c980aafd51faf84",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 10356
+    },
+    {
+      "path": "sys/tests/test_colab_worker.py",
+      "operation": "replace",
+      "base_sha256": "065cc1b66b27fe2759ead29c90d2b9405c740b976514b24b8791eacbeb619ed4",
+      "main_sha256": "065cc1b66b27fe2759ead29c90d2b9405c740b976514b24b8791eacbeb619ed4",
+      "proposed_sha256": "ae75b5f7eca9c71fd756b86f5fd0106f681b0f298f787ac7584ff96a8cb8ed66",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 12844
+    },
+    {
+      "path": "sys/tests/test_content_v2.py",
+      "operation": "replace",
+      "base_sha256": "8ecbc336d449b349cbcfc188f4fcecb50ba6b32c79f151759b386dca1503f746",
+      "main_sha256": "8ecbc336d449b349cbcfc188f4fcecb50ba6b32c79f151759b386dca1503f746",
+      "proposed_sha256": "d79d5053f04b06794a9ff1648fc5b2741c7081cdd8ed98aa2cb895aeb7fe3171",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 7414
+    },
+    {
+      "path": "sys/tests/test_direction.py",
+      "operation": "replace",
+      "base_sha256": "8da6952fd867adbdc6db65acf8cbfb95160d813eec10fd5b60c25746ce85dc51",
+      "main_sha256": "8da6952fd867adbdc6db65acf8cbfb95160d813eec10fd5b60c25746ce85dc51",
+      "proposed_sha256": "1ff80eed2fbaf6ae5cfa6acd6d6d9eb2441aa9b055bae56229efe2777a0ca11f",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 8420
+    },
+    {
+      "path": "sys/tests/test_integrity_guard.py",
+      "operation": "replace",
+      "base_sha256": "e5f1d93ce15a2e64ee025cca509c3e826dce6a1388ff2cf321eadeca8f9e70c5",
+      "main_sha256": "e5f1d93ce15a2e64ee025cca509c3e826dce6a1388ff2cf321eadeca8f9e70c5",
+      "proposed_sha256": "6d0dfe56434b74e6919fab61f8e50069057fe2256bfa56cc605ea290bd30ae53",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 14284
+    },
+    {
+      "path": "sys/tests/test_story_v3.py",
+      "operation": "replace",
+      "base_sha256": "2f6216ff7fe870f5618ea7558fd92c7880e7fa861b02bf6a07b0193c7ce62380",
+      "main_sha256": "2f6216ff7fe870f5618ea7558fd92c7880e7fa861b02bf6a07b0193c7ce62380",
+      "proposed_sha256": "ce529e8445b048e4dd1265ca94e7c42cf602a5ccac87e1ced57068dd143ea7c8",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 13887
+    },
+    {
+      "path": "sys/vocab/bank.jsonl",
+      "operation": "replace",
+      "base_sha256": "f6f5991ad1533579406336a8c870008dd50691274391da4d70bf7aa0241f74f6",
+      "main_sha256": "f6f5991ad1533579406336a8c870008dd50691274391da4d70bf7aa0241f74f6",
+      "proposed_sha256": "89c6adceb15a197e8cb7d5ca105143414b9273b5462dda3d8574af65a271587e",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1357293
+    },
+    {
+      "path": "sys/vocab/bank.py",
+      "operation": "replace",
+      "base_sha256": "7a742d03f15dd5f4532fb14adef4dcd4e2153d72113964d8234380b2d249eec2",
+      "main_sha256": "7a742d03f15dd5f4532fb14adef4dcd4e2153d72113964d8234380b2d249eec2",
+      "proposed_sha256": "3466503cc19e4c5765095fcf848c89529ce8e7f33a44a2f49b5027441d809c97",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 35483
+    },
+    {
+      "path": "sys/vocab/channel.json",
+      "operation": "replace",
+      "base_sha256": "d2db8e0e73e9e9e8ed0f39b287c6d46f22961676803d099752e66b0ac25af3dd",
+      "main_sha256": "d2db8e0e73e9e9e8ed0f39b287c6d46f22961676803d099752e66b0ac25af3dd",
+      "proposed_sha256": "4a6ef47c03143402460a49f8c1f7c90ecb5c41433cc242c7d85692c90c8d501a",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4161
+    },
+    {
+      "path": "sys/vocab/test_bank.py",
+      "operation": "replace",
+      "base_sha256": "a9603b1dba87a06cacd8434a85b78bad13a29c0f99c9b84f839e247f8313bff0",
+      "main_sha256": "a9603b1dba87a06cacd8434a85b78bad13a29c0f99c9b84f839e247f8313bff0",
+      "proposed_sha256": "76d9e2cedd04d8340796930932dd14f5c1697b1a5b07a6716c71eadce6349b25",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 16101
+    },
+    {
+      "path": "sys/workflow.py",
+      "operation": "replace",
+      "base_sha256": "7e9252234b2c94924f08b458550d683e0906eb2ee69682edaadd8deb1fee5676",
+      "main_sha256": "7e9252234b2c94924f08b458550d683e0906eb2ee69682edaadd8deb1fee5676",
+      "proposed_sha256": "4e68f1b85c719e32ebc6151e3c483ba1b168380d5aefe59a2b436ef2b1e6acc3",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 35018
+    },
+    {
+      "path": ".agents/rules/accounts.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "df362a4d784b1df72f0b2ada315495c079608598022b2cef1dde2ad231fb8870",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1437
+    },
+    {
+      "path": ".agents/rules/execution.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "81c4e93195a2bd68911056854210cf29889640141f0a514cbe810490d0a0ed38",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1369
+    },
+    {
+      "path": ".agents/rules/permissions.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "c5b14e1f3b2edfdeebc75e4c8e7e53f1c0c173a82d75af28486d3a71f2b14333",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2090
+    },
+    {
+      "path": ".agents/skills/vp-development/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "6a8fc120660187be2675b638e63c3937edf06af3c4fb94732f19232bbd5efa41",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1701
+    },
+    {
+      "path": ".agents/skills/vp-development/agents/openai.yaml",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "e60bb6f39ad71966448b145213f18c0c6eb497e49fc3845d6163c8bf021d821c",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 228
+    },
+    {
+      "path": ".agents/skills/vp-maintenance/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "b70092905c07abdd4e63b04191d57099660cae60940c906ff0dcd651bcbd1ded",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1581
+    },
+    {
+      "path": ".agents/skills/vp-maintenance/agents/openai.yaml",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "e859b1bebc57092b5c5cd2660320df6b77e2a6c40fb9d73a49fb075621fa3b26",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 222
+    },
+    {
+      "path": ".agents/skills/vp-production/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "ccd04333f7c19fbe6e06de8cd000922f4cdc65923acc689a271bef1ac2256688",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2106
+    },
+    {
+      "path": ".agents/skills/vp-production/agents/openai.yaml",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "7b40ba11ff5453f1591d9caf34e86ea4fd28ae8a1a880c7b59fd4a3bd4d5d057",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 225
+    },
+    {
+      "path": ".agents/skills/vp-production/references/ai-tells.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "afc94a38e08a3a97203ea3f1597637de3e2546ec76a5a63f09cdf3060a1c72e9",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1676
+    },
+    {
+      "path": ".agents/skills/vp-production/references/audio.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "1ba5a6eb2c952297b3af5aa53f853f71e7bf302d9a1da0836e66f209842aa2e2",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1219
+    },
+    {
+      "path": ".agents/skills/vp-production/references/editing.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "a454ddbdb9861d63e677da0f92337dc6352133e1af84848ff8ed3db196d88a87",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1056
+    },
+    {
+      "path": ".agents/skills/vp-production/references/narration-style.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "400c382255963d4ca3e42e908b3607944a6cd30211fec6cff4644d20f0fb35bf",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 982
+    },
+    {
+      "path": ".agents/skills/vp-production/references/recovery.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "4fbda9375655bac08b4dc3014cf64672a87a5394b0c028bca8cffe05d4a25a3d",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1059
+    },
+    {
+      "path": ".agents/skills/vp-production/references/script.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "5172bf1e74eca60fa7b8a3f6f30f0c0497d8b117a127b5ed80bddaa8d58e7e80",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1054
+    },
+    {
+      "path": ".agents/skills/vp-production/references/sources.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "f890bed3eae28ec136acb4702a024102aab3adfe1afd96048a38d922ff2919da",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2363
+    },
+    {
+      "path": ".agents/skills/vp-production/references/visuals.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "c2ef5ac2723f9f5282dbbdc6056f2e7a714bf0598b1de248a99d5a2668aea4c5",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1488
+    },
+    {
+      "path": ".agents/skills/vp-production/references/vocabulary.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "3c4fa102dfe416fb2cb3570d33e32df43688ab85437978a1e2e8a35d6de0147e",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 794
+    },
+    {
+      "path": ".agents/skills/vp-setup/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "b015137063f257ecbbd36c3e50fa6a23ae21a358409d46bc336a5e28ed1913d3",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1279
+    },
+    {
+      "path": ".agents/skills/vp-setup/agents/openai.yaml",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "2b0fbb774472df28ea3f571c1a29076357a1b076f05ad35a271f1db59a7fefeb",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 220
+    },
+    {
+      "path": "sys/account_budget.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "fbeeffd1e97407459ab2187f2e6dca0ba69180b56482cd2172debd671eba9df4",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 11896
+    },
+    {
+      "path": "sys/account_catalog.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "3e42149993fab0b4e34ff55d1843cf91c1726f0e2035e0b130ccfeaf8b01db20",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 15334
+    },
+    {
+      "path": "sys/assets/voices/reference-narrator/README.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "77d217ca48db4cf3a652c4276132b18a0df69832db570139e86162aba0f3ecdc",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1003
+    },
+    {
+      "path": "sys/audio_processing.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "2ab64ae8aad23001c0b53c1a93feb8924c11ed14645a9a7301de3b2385c90988",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3265
+    },
+    {
+      "path": "sys/colab_bridge/assignment_probe.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "9fc0a0aa92e2dfbe35aaf3ee8db723240e2b6c2f2f77f010eb6fbe4e5c1860c0",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3118
+    },
+    {
+      "path": "sys/colab_bridge/job_protocol.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "881a08203017196382f66a71dca9cb1474d59bc134f3bf3c2277718c43dbddd1",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 10210
+    },
+    {
+      "path": "sys/colab_bridge/job_worker.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "512adbba6fab8216d5bad54034d419074fb8acf52b637df2d503e3dded014eb8",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 8652
+    },
+    {
+      "path": "sys/control/import-check.mjs",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "bbcb595483bfaa99f37e48aa3a2dd3a8294732c3d15357974abc8758adde6982",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 458
+    },
+    {
+      "path": "sys/control/loader.mjs",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "f4d4c72ec634c8d4b837226471bf4a170188f83726052494d14371990e09d08a",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 892
+    },
+    {
+      "path": "sys/control/package-lock.json",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "9c3da7858927d1e97db40b1e91554177b58426982c497ee8c0bd72df736f15dc",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1657
+    },
+    {
+      "path": "sys/control/package.json",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "5744d2911231798fef96128fff436c6e1b23e18061b32e28b65a2d9b634d2f37",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 259
+    },
+    {
+      "path": "sys/dashboard/README.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "8efe891158035055f29aae4a26cea2c19b889bfc832e502de450e60d1266b735",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4697
+    },
+    {
+      "path": "sys/dashboard/__init__.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "c7048ed007d703b8bb3e72059cded8c04cd332765966cb37c6d906f3a0f2888f",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 49
+    },
+    {
+      "path": "sys/dashboard/colab_probe.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "e03abf23a0b7d98fdd98331e54c671e6013798089b6052faffd6ab17b0183e2d",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4528
+    },
+    {
+      "path": "sys/dashboard/data.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "ea99673ae3b55c29a62c3df25be0a3137153a0613051b711f8e4ddd2487d9b8f",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 25143
+    },
+    {
+      "path": "sys/dashboard/server.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "ca8e336b1c23ff31c5cbc233729f0a3e41d37cc799769a91e3f98b82cbf75fda",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 8371
+    },
+    {
+      "path": "sys/dashboard/setup_actions.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "a64021850ce3ac2b1fcd6d4a8b0505b16192285c6adfccea07ae580c36e31971",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 8437
+    },
+    {
+      "path": "sys/dashboard/static/app.js",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "30e14e27192eeb255f13f8574244b0b3861c0d53940df7334bbd3104c65b442d",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 19558
+    },
+    {
+      "path": "sys/dashboard/static/index.html",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "860ce5e8d1ea81898305898d8ea35e1a418b4b902886964cba8c9db5a0252adc",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 953
+    },
+    {
+      "path": "sys/dashboard/static/style.css",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "5aad0d694c377cd1588067fb1d68f7695a5ca6067b04ed8efe043f1822891a3a",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3076
+    },
+    {
+      "path": "sys/docs/INDEX.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "f9958935cc1ebb8df5e463a16a56f68799b8a31d3433acb9bce173514355f916",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2531
+    },
+    {
+      "path": "sys/docs/flow-prompts.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "d8608a69370fe7425c33ea0ac51dcc48e937ccf61f4a1ddd2fb4893548743f10",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9809
+    },
+    {
+      "path": "sys/docs/getting-started.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "853fa86e4507fe7e9009d837fcdbeb2e5e914dcab7a503b280ec0e8754eaf296",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 6108
+    },
+    {
+      "path": "sys/docs/legacy/AGY-SETUP.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "7a1ceb02a1126b6d601855d7e104e9ec7b6abfef9133c039fa1712ed68e0bba9",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 924
+    },
+    {
+      "path": "sys/docs/legacy/channel-micro-drama-v3.json",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "d2db8e0e73e9e9e8ed0f39b287c6d46f22961676803d099752e66b0ac25af3dd",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3515
+    },
+    {
+      "path": "sys/docs/legacy/colab-tts-before-normalization.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "85f312254298efb22d747f741688b88142c06ed025eb3ec4d2601222388a96b5",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 8325
+    },
+    {
+      "path": "sys/docs/legacy/contracts-before-normalization.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "8573c9f6710f72191a7d6217800db1ecfae276e1ceb7ddb2913352d636651463",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2744
+    },
+    {
+      "path": "sys/docs/legacy/director-system.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "8c0f5292d062260a4e1aa310f8544559130c833f5a7f37bb4bcbb1e08de086d2",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 6630
+    },
+    {
+      "path": "sys/docs/legacy/image-repair-loops-before-normalization.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "82ef63e56683aa3709ddccad1d824df66e81b5b956258567a5401af391322d0a",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 6608
+    },
+    {
+      "path": "sys/docs/legacy/narration-length-guidance-before-normalization.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "6c84689b7eb217b3ee684651c1ca8095f145724890608629d3f744a86d1dde23",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9697
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-audio-director/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "b0aa12d36873ffc237768bc18409523f7fe6f9ea3f4fa16781f2981092568276",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4419
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-clean/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "d4e8aae0e7336d236c8585df2ef9e8f40a8902c4c8f0d22c03070cdede126783",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5235
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-content/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "208d4b0b1e2fc3576e10093fb003778472ccd1f184aac0b945b6584a6c933415",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 7069
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-content/references/ai-tells.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "ef38231682ccd8c1288105cc70e08dcecfb680fe04fe5698badfbfc2413addac",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 10729
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-content/references/director-contract.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "f795c11f4855dfee8b4db9f7650978bcdb7993834547c9b1e9436940ef4b86a5",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2016
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-content/references/director-sources.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "0420c367f690c2e0d2df4c33b4bcc6d57cca892af89fa831b8487429ce17cf05",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2556
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-content/references/narration-style.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "33c522b81aa75a068b77cf0cd5787ef3f29300e51f1e81a9070fd6ce72767fda",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9066
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-content/references/vocab-pedagogy.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "7711d1ad81b951eb792dd9bf0d0e51b0fa013af6c4d4592ff1ebff55e0708909",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3914
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-edit-director/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "845e1cc2b9ae935577b5f98a980b0c2b7b29578e7ca8192791e84313297100e5",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2938
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-media/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "cb2610f67ceee05fe3927959977fcd488926a982ad10f394e38c22151c626999",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3539
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-media/references/audio.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "be55f86272b31715fb2f5e752c4129e7412d7d7e9e783e0fc16f8c37df512986",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2557
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-media/references/images.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "bebba5ffad9cf0c6b6c9548a1c35405112f0042b65aab87a1189f4697aee7995",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3931
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-script-director/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "20fa73314fcab567dfdddc88f8487b10a50f2c135cb56c96ae70f193ef6ff3c2",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5581
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-video/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "b95ec282517777fb477dc6223c9c3b68f7ad2b146f45cb0e38e78afae231c882",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2358
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-video/references/social-publishing.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "957910903c38cfeee837da17c5031a8b3247e83592f869cea431b1f98cab178b",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2965
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-visual-director/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "697e19ec4506beda9c0ad5538a082f0f01a6452aead5e99d442bac8f5c3a01ef",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4277
+    },
+    {
+      "path": "sys/docs/legacy/skills-v3/vp-vocab/SKILL.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "ce5f9c234f7ba5f0b144c3cfea209e60692d3969240003d63d5ebb8b3d939b8d",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3037
+    },
+    {
+      "path": "sys/docs/legacy/story-planning-before-normalization.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "fec80d702d838380a06200d17e205eee4d4c805e733a74cbfd22850e8c0653b3",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9419
+    },
+    {
+      "path": "sys/docs/legacy/vocabulary-before-normalization.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "6553379ea5b5bf60a2c8e4aa820358996e4c9f0a9de602873c440119b272d20e",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 10968
+    },
+    {
+      "path": "sys/docs/legacy/workflow.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "180f4be6d74940980217ef392b7bd2f21ce50210318b92ae04c4f514cef88e8d",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9640
+    },
+    {
+      "path": "sys/docs/maintenance.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "045670b864dece33a2ed9942a36fb58dd2248e2c544044a620cf2137c2439383",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4727
+    },
+    {
+      "path": "sys/docs/session-start.md",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "9832198882bdba5a71c3e7cf545123f9c7d7da2daf7a5304954a5c5f4b6944fc",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1636
+    },
+    {
+      "path": "sys/execution.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "7d4687ea318cdd54586b6a41cba484f54ae8eef8b4cf24f5b36baac559126c9c",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 41816
+    },
+    {
+      "path": "sys/flow_management.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "270937cb64858bf9211213684dc612f1d5f2c439ebf72424b4d3f3146e30be5b",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 10347
+    },
+    {
+      "path": "sys/flow_profile_trial.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "f62054f7a7f9923b5fbbf49a9865f5fa9e35794d4a1a48284fb155cfd7dc5224",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 18044
+    },
+    {
+      "path": "sys/flow_prompts/__init__.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "da05d9ccb44c678c69e3338af7fd4647b5f595646b51d01e712f3ec8ef9691ff",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 288
+    },
+    {
+      "path": "sys/flow_prompts/compiler.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "af974b7ddc4928ed6a94e7ff248655451213f05cd261426f273df218db166574",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 11359
+    },
+    {
+      "path": "sys/flow_prompts/versions/1.0.0/registry.json",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "13c6656ec627da3b05cb01ae87bfb348a5714f62d4e4d792a539854fe4ed4b23",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5312
+    },
+    {
+      "path": "sys/maintenance.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "e617589364012215e372450155dc2e9772eb1daf7edd0f38780fb167794c52c4",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 36069
+    },
+    {
+      "path": "sys/media_packaging.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "61c06db7fb4810ac5f2bb7d7c2405a3a31563031cec20a03950348359ef7e6f3",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5834
+    },
+    {
+      "path": "sys/output_contract.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "bfdef553df1ed2c866b708c9f487ea2b5d5a3d83bf5ecff728c1d2cf4c1bd029",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2620
+    },
+    {
+      "path": "sys/permissions.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "1ee57eb6637d03d41d194c6fc0defd855c070e5e66ff14e4b3602e3506718b94",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 7588
+    },
+    {
+      "path": "sys/profile_setup.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "b9213f370fb5501aa1c2e63ceffc8d534ed67a7b70ffdb698b1d5f941b1af3a2",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 19993
+    },
+    {
+      "path": "sys/remote_audio.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "f601f9119488505da04f07743ddd6bc33436c143b3d6c1ab988963f83facdfe5",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 7547
+    },
+    {
+      "path": "sys/requirements-dev.txt",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "a1e7687f1e9cc710cec8ba2e40ae994209fdfc5dabd533bc9d981608f4f8089a",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 65
+    },
+    {
+      "path": "sys/scripts/bootstrap.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "04c1935b6854de20d25547b290104da35da2f93a47713990bc9b9c7b4d562b21",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 28999
+    },
+    {
+      "path": "sys/scripts/login_colab_profiles.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "76d64b90b4a5be002cacc8036bfd825518ba324a85606f84f91b2b73bcae029b",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4812
+    },
+    {
+      "path": "sys/session_store.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "5d1d978fa57a6e721c984757e2a9a75affebd8100559829d2377e07a782f6321",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 6773
+    },
+    {
+      "path": "sys/tests/dashboard_browser.mjs",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "cb88055c79a5e8cfc07c3542efe61d71bb6a98b3a4ee833f2ba26b1a6476c6f6",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2282
+    },
+    {
+      "path": "sys/tests/test_account_management.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "e7147bbce54dfc8190de3089fd50e54147bec7d7b893d3ed17193d6ed887dcb2",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5489
+    },
+    {
+      "path": "sys/tests/test_account_probe.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "053bf13bdb4dbbc44660641376d974c2b749135c7cb4566102de52b6e6202155",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4792
+    },
+    {
+      "path": "sys/tests/test_bootstrap_control.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "d0c5eae23f474fe4adaf1b7c7e497752980caab70d4d5f151fa49175e0196800",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9621
+    },
+    {
+      "path": "sys/tests/test_bootstrap_recovery.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "2fe48880445aeb1425badb08ca3925972de254978fc54f8fbb8f78e12ef04ca0",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 8988
+    },
+    {
+      "path": "sys/tests/test_channel_profile.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "e5656ad8a48c1d9a29434aada98ca1ea16ab974ecdf3ca5b8d8cffad319dc74c",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2476
+    },
+    {
+      "path": "sys/tests/test_colab_reconcile.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "635de7ed24fd5e0f2e6a737f3eb5d5cc3e4755e6de957ac7d342bb3d64d21dad",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 9750
+    },
+    {
+      "path": "sys/tests/test_colab_runtime_binding.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "02eb8d75d7592034ba6be06438b45768028986745f1e27ceff3a2ea21fb529e7",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5060
+    },
+    {
+      "path": "sys/tests/test_dashboard.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "1ed485f24be5994ee32a185d1427ddcd6ac634781a45bfa189d103b66835b0ca",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 6264
+    },
+    {
+      "path": "sys/tests/test_dashboard_browser.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "b705bfa5a7bd881e8f612e4eb692c6f5f1566f52fd248127ebe6ecdf777f2aae",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2780
+    },
+    {
+      "path": "sys/tests/test_dashboard_engine.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "5c61099ac41fa43cba3408661f0a9bc8ccb9b2c407cf28299cb960857c592e4b",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2440
+    },
+    {
+      "path": "sys/tests/test_dashboard_products.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "9c0e08ce439e18e4274bf5da9db9965fb4afd07259c9f565f601279eda86ee2a",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4309
+    },
+    {
+      "path": "sys/tests/test_dashboard_setup.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "1c7b43661fd49b9cf61599c8d594ae5e6b89620058bfee6fa3438e8fb69a7c4d",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 13542
+    },
+    {
+      "path": "sys/tests/test_duration_planning.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "9747f16cf750af922f79b6bd4bc67074346d4b85e1896fa4f848b7ea9386c2ca",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 10934
+    },
+    {
+      "path": "sys/tests/test_execution_v4.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "fd136706306dfac5ce0728f8ea59df63b7be81b906be6e12e8a0e1c411ac1eea",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 17434
+    },
+    {
+      "path": "sys/tests/test_flow_profile_trial.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "0ecf18cacf39b5c7d99c18dfe0cb7e0239466b537f4dced62af3a8aa5af21306",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 8964
+    },
+    {
+      "path": "sys/tests/test_flow_prompt_integration.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "472985080615b410534bc19a7601cb610619fc9706888f893e3ed53a46caf97c",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 11183
+    },
+    {
+      "path": "sys/tests/test_flow_prompts.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "ce9d3c5df9df813c9f9c6264c782d4a4dd50fe63a7a6428b4d0ddfcdce1b96a8",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 7525
+    },
+    {
+      "path": "sys/tests/test_flow_reference_binding.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "6f35a5b3362239be15b54c06a323b780b49795c0ce4dc0889fe70226c1b977be",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2539
+    },
+    {
+      "path": "sys/tests/test_independent_engine_contracts.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "8d69da753ce563e8668991c8d0d68d30eb0be18ac92dcdb708e20b5080f7d7ad",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 20175
+    },
+    {
+      "path": "sys/tests/test_independent_maintenance_contracts.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "6bfad590b4b258936b1e57760ce1bf41b092445aee14311c4f8e798fcd535274",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 24628
+    },
+    {
+      "path": "sys/tests/test_independent_remote_web_contracts.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "877ca8c0d3303032fc595218b77eb104d37b9899f42f556c32ec9f5690b1dc1e",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 35877
+    },
+    {
+      "path": "sys/tests/test_independent_setup_browser.mjs",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "ec349873065e720b00dc4d5aaf15d985ed808f494d9826109619a26d0380ba1d",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 1944
+    },
+    {
+      "path": "sys/tests/test_independent_setup_runtime.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "b66f868a4694187d85bdf1c9fc439fff105297442a6242ac88002617dd5b6d72",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 19831
+    },
+    {
+      "path": "sys/tests/test_live_setup_edges.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "ceb1ec27794f1288fae00f089ad2b9444f7e0ba487ba6015d3c31d63ab0e4c1e",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 2308
+    },
+    {
+      "path": "sys/tests/test_maintenance.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "83e2a2901328e9d75ca11b6c67677618cd37a1610f8bd405796cc07a4b883a81",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 15179
+    },
+    {
+      "path": "sys/tests/test_modern_images.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "30f3768c10592a5695ee2c29ea70dc5c4aff0a509870769342ea67de1574d7b0",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 3795
+    },
+    {
+      "path": "sys/tests/test_output_contract.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "93969787e0871c9135ea2761d4aee0d0e80b90581d377adacf055de08f1009e4",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5290
+    },
+    {
+      "path": "sys/tests/test_permissions.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "b97ef48b0910ca58c99ffb96d70770c593a4e3a66c9895b2ac5389c53187f971",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 4399
+    },
+    {
+      "path": "sys/tests/test_profile_setup.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "0f964466566a95892dc6538a0fe44df6a52075ae15b8aaf5521897998f406c51",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 13810
+    },
+    {
+      "path": "sys/tests/test_remote_render.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "90f314379a26b7288c3a54634fd48041a91fb97c62b13efcbce1ce064348ee0a",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 20531
+    },
+    {
+      "path": "sys/tests/test_selected_voice.py",
+      "operation": "add",
+      "base_sha256": null,
+      "main_sha256": null,
+      "proposed_sha256": "ead2a785b50581bece9f3c3931304dc185a0d5d2188f3257c522fc798c7845a8",
+      "main_changed_from_base": false,
+      "conflict": false,
+      "bytes": 5039
+    }
+  ],
+  "integrated_at": 1791034575.5813494,
+  "backup_path": "/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow/sys/.state/integration-backups/1791034541194730506",
+  "user_root_edits_preserved_in_replacement": true,
+  "history_runtime_credentials_copied": false
+}

@@ -1,0 +1,44 @@
+{
+  "timestamp_utc": "2026-10-03T09:11:47.713163+00:00",
+  "command": ".venv/bin/python -m unittest discover -s tests -p test_independent_engine_contracts.py -v",
+  "tests_run": 15,
+  "passed": 15,
+  "failures": [],
+  "errors": [],
+  "duration_seconds": 12.632683038711548,
+  "scope": "Isolated temporary custom-project/sys roots. Actual CLI parser, grant/lease/decision/revision/SQLite operations; only providers and remote artifact checks mocked. No live accounts, GPU, generation, push, or quality claim.",
+  "source_sha256": {
+    "execution.py": "29d43acb63b14ca77b95a1cad377ff27ecc715cae626ffd1d62b626724e9450a",
+    "permissions.py": "1ee57eb6637d03d41d194c6fc0defd855c070e5e66ff14e4b3602e3506718b94",
+    "pilot.py": "9f560039f277b66358f776f5b98206ccc5096111bb1e1d58e17ba34ce5e393c1",
+    "workflow.py": "4e68f1b85c719e32ebc6151e3c483ba1b168380d5aefe59a2b436ef2b1e6acc3",
+    "tests/test_independent_engine_contracts.py": "8d69da753ce563e8668991c8d0d68d30eb0be18ac92dcdb708e20b5080f7d7ad"
+  },
+  "output": "test_actual_audio_retake_revisions_exceed_legacy_total_and_scene_caps (test_independent_engine_contracts.IndependentEngineContracts.test_actual_audio_retake_revisions_exceed_legacy_total_and_scene_caps) ... ok\ntest_authorized_legacy_migration_rollback_preserve_decisions_artifacts_requests (test_independent_engine_contracts.IndependentEngineContracts.test_authorized_legacy_migration_rollback_preserve_decisions_artifacts_requests) ... ok\ntest_auto_repairs_existing_video_keeps_job_voice_history_and_grant (test_independent_engine_contracts.IndependentEngineContracts.test_auto_repairs_existing_video_keeps_job_voice_history_and_grant) ... ok\ntest_cli_stop_during_owned_submit_then_resume_without_duplicate (test_independent_engine_contracts.IndependentEngineContracts.test_cli_stop_during_owned_submit_then_resume_without_duplicate) ... ok\ntest_crashed_owner_takeover_preserves_checkpoint_and_request_identity (test_independent_engine_contracts.IndependentEngineContracts.test_crashed_owner_takeover_preserves_checkpoint_and_request_identity) ... ok\ntest_guidance_change_allowed_but_incompatible_schema_requires_migration (test_independent_engine_contracts.IndependentEngineContracts.test_guidance_change_allowed_but_incompatible_schema_requires_migration) ... ok\ntest_no_total_repair_cap_and_identical_plan_stops_across_controller (test_independent_engine_contracts.IndependentEngineContracts.test_no_total_repair_cap_and_identical_plan_stops_across_controller) ... ok\ntest_observe_does_not_modify_files_even_when_runner_owns_job (test_independent_engine_contracts.IndependentEngineContracts.test_observe_does_not_modify_files_even_when_runner_owns_job) ... ok\ntest_parallel_api_micro_plans_cannot_duplicate_identical_recovery (test_independent_engine_contracts.IndependentEngineContracts.test_parallel_api_micro_plans_cannot_duplicate_identical_recovery) ... ok\ntest_production_grant_denies_all_protected_definitions_and_other_jobs (test_independent_engine_contracts.IndependentEngineContracts.test_production_grant_denies_all_protected_definitions_and_other_jobs) ... ok\ntest_real_cli_fresh_controller_reuses_scope_and_total_plan (test_independent_engine_contracts.IndependentEngineContracts.test_real_cli_fresh_controller_reuses_scope_and_total_plan) ... ok\ntest_removing_allowed_property_under_closed_schema_requires_migration (test_independent_engine_contracts.IndependentEngineContracts.test_removing_allowed_property_under_closed_schema_requires_migration) ... ok\ntest_review_waits_at_all_five_outputs_and_preserves_stale_decisions (test_independent_engine_contracts.IndependentEngineContracts.test_review_waits_at_all_five_outputs_and_preserves_stale_decisions) ... ok\ntest_two_concurrent_cli_decision_writers_save_exactly_one_decision (test_independent_engine_contracts.IndependentEngineContracts.test_two_concurrent_cli_decision_writers_save_exactly_one_decision) ... ok\ntest_wrong_management_session_does_not_leave_unresumable_partial_job (test_independent_engine_contracts.IndependentEngineContracts.test_wrong_management_session_does_not_leave_unresumable_partial_job) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 12.633s\n\nOK\n",
+  "initial_findings": [
+    "QA-E01 incompatible actual schema undetected",
+    "QA-E02 concurrent API identical micro-plan accepted twice",
+    "QA-E03 incorrect session left durable orphan job",
+    "QA-E04 removed property under closed schema incorrectly accepted"
+  ],
+  "prior_results": [
+    {
+      "tests_run": 14,
+      "passed": 11,
+      "failures": 3,
+      "duration_seconds": 10.001
+    },
+    {
+      "tests_run": 14,
+      "passed": 14,
+      "failures": 0,
+      "duration_seconds": 10.571
+    },
+    {
+      "targeted_test": "test_removing_allowed_property_under_closed_schema_requires_migration",
+      "passed": 0,
+      "failures": 1,
+      "duration_seconds": 0.121
+    }
+  ]
+}

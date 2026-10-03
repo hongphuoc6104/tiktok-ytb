@@ -1,90 +1,23 @@
-# TTS trên Colab T4, giữ giọng Minh Quân Pro và Alba
+# Colab audio and video processing
 
-Bản phát triển trên `codex/colab-tts`, xuất phát từ `video-vocabulary`. Tham khảo `feature/colab-offload` tại commit `4cf8896`; không nhập các thay đổi mascot, kênh tiền sử, kho từ hoặc renderer của nhánh đó.
+Engine 4 sends TTS/assembly/mastering/timeline/subtitles/props/render/encode to Colab. The machine packages source/metadata, manages sessions and collects results; Flow generates images. Remote errors do not trigger heavy local fallback. Voice/rate come from each brief and actual request, never unrelated defaults overriding a contract.
 
-## Phạm vi và trạng thái
+New English briefs use **reference-narrator at 0.92**, the exact user-selected 3.24-second clone sample; see its [profile](../assets/voices/reference-narrator/profile.json). Vietnamese Minh Quân Pro stays unchanged. Existing jobs retain their saved choices, including Alba. Default changes do not edit saved briefs/requests/WAV.
 
-Đã cài Google Colab CLI 0.7.4 trên máy. Tích hợp dùng CLI chính thức cho upload/exec/download, không mở HTTP public hoặc gọi API suy luận trả phí. Render vẫn theo đường hiện tại. Mã mới chưa được kích hoạt cho các job sản xuất: `colab_tts.enabled=false` cho đến khi nghe đối chiếu đạt yêu cầu. Không sửa baseline/integrity của job cũ.
+## Setup and lifecycle
 
-Mô hình thử mặc định là `kjanh/KhanhTTS-OmniVoice`, commit `20d056b8ea5d8d578b4cbaf1f703012fa3798a84`, qua `omnivoice==0.2.1`. Model card hiện ghi khoảng 1.500 giờ Việt/Anh; không dùng con số 8.400 giờ trong ghi chú nhánh cũ. Đây là ứng viên cần đo trên T4, chưa phải khẳng định tốt hơn VieNeu/Pocket.
+Before any Colab operation from a bridge checkout's `sys/`, run `python3 -m colab_bridge.accounts list`. Authentication/profiles stay in their local store, never copied into repo/Colab/frontend. The user completes OAuth/OTP/CAPTCHA. Token presence does not prove live auth; auth does not prove T4/units/capacity.
 
-Mẫu giọng tại `assets/voices/minh-quan-pro/` và `assets/voices/alba/` được trích từ WAV thực tế của giọng đang dùng; profile lưu nguyên văn, nguồn, checksum, tốc độ nguồn. Mẫu Alba ghép hai câu đầy đủ với 0,2 giây nghỉ. Chưa xác nhận độ giống giọng bằng nghe. Không dùng các giọng `van_vo` hoặc `vui_ve` của nhánh tham khảo.
+After setup/pool selection, use explicit account/session: `python3 -m colab_bridge start --account ACCOUNT --session SESSION`, then `setup` with the same choice. Start allocates a real VM only for assigned processing. Allocation timeout uses `reconcile`, never another start. `status` reads the service with required authentication; units=0 is not logout. Do not buy compute or fall back to CPU/local.
 
-## Tốc độ và cách xử lý
+Confirmed connected T4 records identity/session/timestamp in the ledger, counting idle and unconfirmed-release intervals. The 6h display/5h usable/1h reserve and 24h marker are internal budgets, not guaranteed Google quotas. Pools do not combine quota; rotation cannot evade restrictions.
 
-Giữ `tts_speed=0.92`, giọng Việt Minh Quân Pro và tiếng Anh Alba tốc độ 1.0. OmniVoice ước lượng thời lượng dựa trên mẫu tham chiếu; tham số gửi vào mô hình là tốc độ yêu cầu chia tốc độ mẫu nguồn để không làm chậm hai lần. Giữ hệ số không bảo đảm hai mô hình đọc cùng nhịp: bắt buộc đối chiếu thời lượng của cùng câu và nghe trước khi bật sản xuất. Không tự kéo giãn audio hoặc đổi cao độ.
+## Requests and results
 
-Gom các đoạn cùng giọng/lượt retake thành batch tối đa 4, FP16, 32 bước; kiểm tra GPU thật là T4. Không dùng BF16/torch.compile/FlashAttention bắt buộc. Hết VRAM chỉ giảm batch 4 → 2 → 1 rồi dừng. Không tự lùi CPU hoặc máy local. Mô hình và prompt được giữ trong kernel giữa các job của cùng phiên; kết quả có cache trên VM và bản thu về tại máy. Không hứa hệ số tăng tốc trước benchmark.
+The official workflow packages text/voice/rate/reference hashes/languages/output selection with validated source bundles. TTS returns real WAV/tracks/duration; render returns MP4/stills/layout/editorial/remote report with request-linked hashes. English9:16 requires English tracks/cues/timeline; aspect ratio does not imply language.
 
-Văn bản học, đại từ I, thứ tự cảnh và đoạn tiếng Anh được giữ nguyên. Đầu ra 48 kHz mono PCM16 để phù hợp adapter/mastering hiện có. Mỗi chunk giữ `content_duration`; khoảng nghỉ và lượt chờ luyện nói được thêm sau phần lời, tính trong thời lượng video. Phụ đề vẫn nội suy theo chunk, không gọi là word alignment.
+Submitted work retains account/session/request pins. `collect` retrieves old work without generation; unknown/ambiguous waits for reconciliation. Quota/bot/CAPTCHA/auth/503 blocks only dependent scope; network recovery is finite per episode. Collect important files and verify hashes/manifests before `stop --account ACCOUNT --session SESSION` on the completed owned runtime. Closing a browser tab does not release GPU.
 
-## Cài và đăng nhập
+Passing fixtures/protocol checks do not prove actual T4, pronunciation, voice similarity or video quality. Report real measurements and only actual viewing/listening. [Progress/evidence](implementation/normalization-progress.md) tracks trials; the [earlier Colab guide](legacy/colab-tts-before-normalization.md) preserves historical design/testing.
 
-Các lệnh sau chạy từ `sys/` của checkout mới.
-
-```bash
-uv tool install google-colab-cli==0.7.4
-colab --auth oauth2 sessions
-```
-
-Lần đầu mở liên kết Google và dán mã vào terminal. Không lưu mã/token trong dự án. `colab auth` là xác thực dịch vụ bên trong VM, không phải lệnh đăng nhập CLI.
-
-```bash
-python3 -m colab_bridge start
-python3 -m colab_bridge setup
-python3 -m colab_bridge status
-python3 scripts/colab_tts_benchmark.py prepare
-python3 scripts/colab_tts_benchmark.py run
-```
-
-`start` cấp phiên riêng `video-pilot-tts` với T4. Chỉ chạy một lần khi chưa có phiên này; không cấp lại khi trạng thái chưa rõ. Không tự mua compute units. `setup` cài mô hình/thư viện trên Colab, không cài mô hình nặng trên máy. Benchmark nằm trong `scratch/colab-tts-benchmark`, không đi vào `video/` hay được coi là job sản xuất. `comparison.json` ghi thời gian sinh, tỷ lệ thời lượng câu cũ/mới và khoảng yên lặng; phần nghe vẫn pending.
-
-Xong đợt phải thu kết quả về rồi giải phóng GPU:
-
-```bash
-python3 -m colab_bridge stop
-```
-
-## Audio và ảnh song song
-
-Với `colab_tts.enabled=true` và `parallel_images=true`, `run`/`resume` khởi chạy audio trên Colab và quy trình ảnh Flow tại máy bằng hai kết nối điều phối riêng. Mỗi bên vẫn qua kiểm tra kỹ thuật và gate content. Chỉ tạo review media sau khi cả hai hoàn tất và đã đo WAV. Dựng/phụ đề/nhịp cuối không dùng thời lượng ước lượng thay cho audio thật.
-
-Nếu một bên lỗi, phần đã hoàn thành được giữ và lần tiếp tục không sinh lại phần đó. Phần đang chạy được chờ thu kết quả, không hủy mù một lần gửi Flow. Lỗi Colab dùng chung (đăng nhập, timeout, GPU, phiên bận) dừng hàng đợi job. Flow vẫn giữ model, Character/Base references, nhật ký và flow-reconcile. Chi phí Flow vẫn là giả định của người dùng, chưa xác minh.
-
-Không bật trong config của checkout có job auto dang dở. Triển khai sau kiểm chứng theo quy trình integrity; agent không chạy adopt-code hoặc lift-cap. Không tạo job mới để né lỗi của job cũ.
-
-## Khôi phục timeout
-
-Sau khi đánh dấu gửi, `resume` chỉ thử tải `output.zip` của cùng request. Chưa có file thì báo lỗi và giữ trạng thái, không tự gửi lại. Có thể thu mẫu benchmark riêng:
-
-```bash
-python3 scripts/colab_tts_benchmark.py collect
-```
-
-Với một yêu cầu sản xuất đã có `request-colab.json`, công cụ `python3 -m colab_bridge collect --request ... --out ... --cache ...` phải dùng cùng thư mục cache job; không nhập đè revision đã lưu. Thao tác qua `resume` được ưu tiên vì tự tạo revision hợp lệ. Nếu VM đã mất, giữ nhật ký, báo người dùng quyết định phục hồi; không xóa trạng thái ambiguous để ép gửi lại.
-
-## Nguồn
-
-- [Google Colab CLI](https://github.com/googlecolab/google-colab-cli)
-- [OmniVoice: clone, batch và điều khiển tốc độ](https://github.com/k2-fsa/OmniVoice)
-- [KhanhTTS-OmniVoice model card](https://huggingface.co/kjanh/KhanhTTS-OmniVoice)
-
-## Kho tài khoản trên máy
-
-Kho dùng chung cho các agent: `~/.config/video-pilot/colab/accounts.json`; mỗi tài khoản nằm trong `profiles/account-NN/` với token, sessions và history riêng. Không đưa token vào Git. Thư mục 0700, file xác thực 0600. CLI gốc không bị sửa; bộ gọi chỉ đổi đường dẫn xác thực trong tiến trình riêng.
-
-```bash
-python3 -m colab_bridge.accounts list
-python3 -m colab_bridge.accounts login-many
-python3 -m colab_bridge.accounts prefer account-02
-python3 -m colab_bridge.accounts run account-02 sessions
-```
-
-`account: auto` chọn hồ sơ đã đăng nhập, đang bật, ưu tiên `preferred`; nếu hồ sơ ưu tiên không đủ điều kiện thì chọn hồ sơ hợp lệ tiếp theo trước khi gửi. Một request đã gửi lưu tài khoản và tên phiên; resume/collect bắt buộc quay lại đúng hồ sơ đó. Không tự xoay tài khoản sau lỗi hạn mức/503, lỗi đăng nhập hoặc kết quả gửi chưa rõ. Thêm tài khoản cần người dùng hoàn tất OAuth trong terminal, không gửi mã/token vào chat.
-
-Cập nhật kiểm chứng thực tế:
-- Đã chạy tạo video hoàn chỉnh `vocab-cat-colab-001` (bài học từ vựng CAT, 5 cảnh, 10 câu tiếng Việt và 6 mẫu phát âm tiếng Anh) trên Tesla T4 thật.
-- File âm thanh `narration.wav` (43.82 giây) được sinh trong 57.26 giây (RTF ~1.3), tích hợp khoảng lặng 3.0s luyện phát âm tại cảnh SC04.
-- Người dùng đã nghe kiểm tra trực tiếp và phê duyệt: giọng đọc Minh Quân Pro và Alba tự nhiên, rõ ràng, đạt chuẩn sản xuất (`listening_verified: true`).
-- Toàn bộ pipeline 3 chặng `content → media → video` chạy thông suốt ở chế độ `auto`, Remotion render MP4 1080x1920 đạt 100% PASS từ `machine_review`.
-- Đủ điều kiện kỹ thuật và chất lượng để sáp nhập (merge) nhánh `codex/colab-tts` vào nhánh chính `video-vocabulary`.
+Engine 4 uses measured WAV duration for downstream timeline/rendering; the brief range is an estimate, not a TTS stop condition. Keep narration, voice and rate when the measurement differs. Positive finite WAV/header/segment durations, manifest hashes and audio/video consistency remain mandatory; legacy v3 or an explicit source-backed required duration retains its contract.

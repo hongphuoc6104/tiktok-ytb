@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "elapsed_seconds": 0.2731849269985105,
+  "live_provider": false,
+  "transport": "default Trials.submit -> b2_bridge.generate_b2_image -> generate_b2_batch -> controlled final socket peer",
+  "pre_fix_reproduced_error": "Internal trial boundary precharge is forbidden",
+  "fix": "read-only preflight verifies connection; actual bridge before_submit verifies again and charges once",
+  "stdout": "",
+  "stderr": "test_default_bridge_preflight_does_not_charge_and_final_send_charges_once (tests.test_flow_profile_trial.FlowProfileTrialTests.test_default_bridge_preflight_does_not_charge_and_final_send_charges_once) ... ok\ntest_metadata_plan_does_not_promote_flow_auth (tests.test_flow_profile_trial.FlowProfileTrialTests.test_metadata_plan_does_not_promote_flow_auth) ... ok\ntest_preflight_profile_mismatch_never_charges_or_sends (tests.test_flow_profile_trial.FlowProfileTrialTests.test_preflight_profile_mismatch_never_charges_or_sends) ... ok\ntest_profile_changes_after_preflight_final_guard_rejects_without_charge (tests.test_flow_profile_trial.FlowProfileTrialTests.test_profile_changes_after_preflight_final_guard_rejects_without_charge) ... ok\ntest_provider_quota_stops_whole_trial_pool (tests.test_flow_profile_trial.FlowProfileTrialTests.test_provider_quota_stops_whole_trial_pool) ... ok\ntest_unknown_sent_outcome_is_kept_and_never_resubmitted (tests.test_flow_profile_trial.FlowProfileTrialTests.test_unknown_sent_outcome_is_kept_and_never_resubmitted) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.103s\n\nOK\n"
+}

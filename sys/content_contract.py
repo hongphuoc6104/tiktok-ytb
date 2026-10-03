@@ -26,6 +26,11 @@ def schema_errors(root,name,data):
 def validate_brief(root,b):
  errors=schema_errors(root,'brief-v3.json' if b.get('schema_version')=='3.0' else 'brief-v2.json',b)
  if errors: raise ContractError(errors)
+ from output_contract import outputs
+ try: outputs(b)
+ except ValueError as ex: errors.append(error('OUTPUT_CONTRACT','outputs',str(ex),'Sửa hợp đồng đầu ra.'))
+ if b.get('scene_count') is None and not b.get('outputs'):
+  errors.append(error('SCENE_PLAN_REQUIRED','scene_count','Job chưa có số cảnh và hợp đồng đầu ra mới.','Lập kế hoạch trước nội dung.'))
  if b['duration']['min_seconds']>b['duration']['max_seconds']:
   errors.append(error('DURATION','duration','Khoảng thời lượng đảo ngược','Sửa min/max.'))
  ids=[x['id'] for x in b['required_points']]
@@ -47,6 +52,8 @@ def validate_content(root,b,revision,bhash,p):
  req={x['id']:x['text'] for x in b['required_points']}
  if p['required_points']!=list(req.values()): fail('BRIEF_MISMATCH','required_points','Ý bắt buộc bị thay đổi')
  scenes={s['id']:s for s in p['scenes']}
+ if b.get('scene_count') is None:
+  raise ContractError([error('SCENE_PLAN_REQUIRED','scene_count','Chọn số cảnh từ outline trước khi chốt narration.','Cập nhật brief qua công cụ rồi nộp content.')])
  if [s['id'] for s in p['scenes']]!=[f'SC{i:02}' for i in range(1,b['scene_count']+1)]: fail('SCENES','scenes','Thiếu, trùng hoặc sai thứ tự mã cảnh')
  chars=[c['id'] for c in p['characters']]
  if len(chars)!=len(set(chars)): fail('CHARACTERS','characters','Trùng mã nhân vật')
@@ -55,7 +62,8 @@ def validate_content(root,b,revision,bhash,p):
   if set(s['character_ids'])-set(chars): fail('CHARACTER_REF',s['id'],'Nhân vật chưa khai báo')
   if set(s['source_ids'])-source_ids: fail('SOURCE_REF',s['id'],'Nguồn chưa khai báo')
   if set(s['requirements'])-set(req): fail('REQUIREMENT_REF',s['id'],'Mã ý không tồn tại')
- needs_en=b.get('aspect_ratio') in ('dual','16:9')
+ from output_contract import languages
+ needs_en='en' in languages(b)
  # quote_en is only defined on the content-v3 coverage schema; content-v2 has no field to satisfy this with.
  check_coverage_en=needs_en and p.get('schema_version')=='3.0'
  covered=set()
@@ -73,7 +81,7 @@ def validate_content(root,b,revision,bhash,p):
  if covered!=set(req): fail('COVERAGE','coverage','Chưa ánh xạ đủ ý bắt buộc')
  if needs_en:
   for s in p['scenes']:
-   if not s.get('narration_en'): fail('NARRATION_EN',s['id'],'Thiếu lời dẫn tiếng Anh','Bổ sung narration_en; bản 16:9 đọc tiếng Anh.')
+   if not s.get('narration_en'): fail('NARRATION_EN',s['id'],'Thiếu lời dẫn tiếng Anh','Bổ sung narration_en cho đầu ra tiếng Anh đã chọn.')
  if p.get('schema_version')!='3.0':
   total=sum(s['estimated_seconds'] for s in p['scenes'])
   if not b['duration']['min_seconds']<=total<=b['duration']['max_seconds']: fail('ESTIMATE','scenes','Tổng thời lượng dự kiến ngoài khoảng')

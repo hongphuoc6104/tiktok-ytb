@@ -26,6 +26,10 @@ class WorkerTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         shutil.copytree(ROOT / 'assets/voices', self.root / 'assets/voices')
         self.cfg = read(ROOT / 'config.json')
+        # Existing DSP/bilingual tests deliberately retain the saved Alba 1.0
+        # contract; the selected default gets its own clone-prompt test below.
+        self.cfg.update(en_voice='alba', en_speed=1.)
+        self.cfg['colab_tts']['voices']['en'] = 'assets/voices/alba/profile.json'
         self.cfg['colab_tts']['enabled'] = True
         write(self.root / 'config.json', self.cfg)
         self.generated = []
@@ -58,9 +62,29 @@ class WorkerTests(unittest.TestCase):
         en = dict(scene_id='SC01', narration_en='I enjoy nice weather.',tail=3.,retake=0)
         return build_request(self.root, self.cfg, [vi], [en])
 
+    def test_selected_reference_default_reaches_remote_clone_prompt(self):
+        cfg = read(ROOT / 'config.json')
+        text = 'A predator is an animal that hunts other animals for food.'
+        request = build_request(self.root, cfg,
+            [dict(scene_id='SC01', narration=text, texts=[text], gaps=[], tail=.2)], primary_language='en')
+        # Worker cache lives two levels above output; keep that shared-worker
+        # layout inside this fixture rather than accidentally using /tmp/cache.
+        out = self.root / 'remote/selected-reference/output'
+        self.run_worker(request, out)
+        validate_result(out, request)
+        self.assertEqual(read(out / 'tts-result.json')['voice'], 'reference-narrator')
+        self.assertEqual(request['profiles']['en']['sha256'],
+                         '97d5aee4bc5bbb4a5951a180c04954f5f33b36e901f9a99084ec9f2ebb1817e9')
+        self.assertEqual([prompt['ref_text'] for prompt in self.prompts], [text])
+        self.assertEqual([rate for batch in self.generated for rate in batch['speed']], [.92])
+
     def run_worker(self, req, out):
         remote = copy.deepcopy(req)
         for profile in remote['profiles'].values():profile['remote_wav'] = profile.pop('local_wav')
+        out.parent.mkdir(parents=True,exist_ok=True)
+        for support in remote.get('support_files', []):
+            source=Path(support.pop('local_path'));destination=out.parent/support['name']
+            shutil.copy2(source,destination);support['remote_path']=str(destination)
         path = out.parent / 'request.json';write(path, remote)
         with patch.dict(sys.modules, self.modules):worker.run(path, out)
 
@@ -115,6 +139,82 @@ class WorkerTests(unittest.TestCase):
         self.assertAlmostEqual(payload['segments'][-1]['end']-payload['segments'][-1]['content_end'],2)
         self.assertAlmostEqual(payload['en']['scenes'][0]['end']-payload['en']['scenes'][0]['content_end'],3)
         self.assertFalse((self.root/'.venv-tts').exists())
+
+    def copy_processing_sources(self):
+        for name in ('audio_processing.py','media_packaging.py'):
+            shutil.copy2(ROOT/name,self.root/name)
+        (self.root/'scripts').mkdir(exist_ok=True)
+        shutil.copy2(ROOT/'scripts/subtitles.py',self.root/'scripts/subtitles.py')
+
+    def test_english_only_request_needs_no_vietnamese_reference(self):
+        self.cfg['en_speed']=.92
+        shutil.rmtree(self.root/'assets/voices/minh-quan-pro')
+        request=build_request(self.root,self.cfg,[dict(scene_id='SC01',texts=['I watch a predator.'],gaps=[],tail=1.5,retake=0)],primary_language='en')
+        self.assertEqual(set(request['profiles']),{'en'})
+        self.assertEqual([(x['language'],x['speed']) for x in request['items']],[('en',.92)])
+        out=self.root/'remote/job/output';self.run_worker(request,out)
+        validate_result(out,request)
+        self.assertEqual(read(out/'tts-result.json')['voice'],'alba')
+        self.assertEqual(self.generated[0]['speed'],[.92])
+
+    def test_explicit_english_audio_is_assembled_remotely_without_local_master(self):
+        self.copy_processing_sources()
+        job=self.root/'runs/english';out=job/'revisions/audio/1';out.mkdir(parents=True)
+        content={'scenes':[{'id':'SC01','narration':'Do not use this unrelated track.',
+            'narration_en':'A predator hunts for food.','audio_direction':{'en':{'learner_pause_seconds':1.5}}}]}
+        brief={'aspect_ratio':'9:16','language':'en','duration':{'min_seconds':.1,'max_seconds':10.},'outputs':[{'aspect_ratio':'9:16','language':'en','subtitles':True,'voice':'alba','speed':.92}]}
+        p=SimpleNamespace(root=self.root,job=lambda j:job,payload=lambda j,m:content,brief=lambda j:(brief,1,'hash'))
+        seen=[]
+        def synth(client,request,destination,cache,**kwargs):
+            seen.append(request);self.run_worker(request,destination);validate_result(destination,request)
+        with (patch('adapters.retakes',return_value={}),patch('adapters.master',side_effect=AssertionError('Local mastering forbidden')),
+              patch('colab_bridge.client.cli',return_value='/bin/true'),patch('colab_bridge.client.Client.synthesize',synth)):
+            payload=adapters.audio(p,'english',out)
+        jsonschema.validate(payload,read(ROOT/'schemas/audio.json'))
+        self.assertEqual(payload['language'],'en')
+        self.assertEqual(set(payload['tracks']),{'en'})
+        self.assertEqual(payload['segments'][0]['text'],'A predator hunts for food.')
+        self.assertEqual(payload['voice'],'alba')
+        self.assertEqual(seen[0]['items'][0]['speed'],.92)
+        self.assertEqual(set(seen[0]['profiles']),{'en'})
+        self.assertTrue((job/payload['wav']).is_file())
+        self.assertIn('predator',(job/payload['srt']).read_text())
+        self.assertAlmostEqual(payload['segments'][0]['end']-payload['segments'][0]['content_end'],1.5)
+        write(out/'request-colab-effective.json',seen[0])
+        p.path=lambda j,name:job/name
+        from pilot import Pilot
+        from types import MethodType
+        p.duration_requirement=MethodType(Pilot.duration_requirement,p)
+        p.measured_wav_duration=MethodType(Pilot.measured_wav_duration,p)
+        with patch('pilot.probe',side_effect=AssertionError('No local processing during import')):
+            accepted=Pilot.remote_checks(p,'english','audio',payload)
+        self.assertIn(payload['generation_report'],accepted)
+        self.assertTrue(all(segment['path'] in accepted for track in payload['tracks'].values() for segment in track['segments']))
+        (job/payload['wav']).write_bytes(b'changed')
+        with self.assertRaisesRegex(ValueError,'changed'):
+            validate_result(out,seen[0])
+
+    def test_english_primary_vietnamese_secondary_independent_of_aspect(self):
+        self.copy_processing_sources()
+        req = build_request(self.root, self.cfg,
+            [dict(scene_id='SC01',texts=['I see a predator.'],gaps=[],tail=1.,retake=0)],
+            primary_language='en',assemble=True,
+            secondary_scenes=[{'scene_id':'SC01','language':'vi','text':'Tôi nhìn thấy thú săn mồi.','tail':2.,'retake':0}])
+        out = self.root/'remote/job/output';self.run_worker(req,out)
+        validate_result(out,req)
+        report = read(out/'audio-result.json')
+        self.assertEqual(report['language'],'en')
+        self.assertEqual(set(report['payload']['tracks']),{'en','vi'})
+        self.assertEqual(report['payload']['tracks']['vi']['voice'],'Minh Quân Pro')
+        self.assertEqual(report['payload']['tracks']['en']['language'],'en')
+        self.assertEqual(report['payload']['tracks']['vi']['segments'][0]['text'],'Tôi nhìn thấy thú săn mồi.')
+        self.assertAlmostEqual(report['payload']['tracks']['vi']['duration']-report['payload']['tracks']['vi']['segments'][0]['content_end'],2.)
+
+    def test_remote_worker_hash_mismatch_stops_before_loading_model(self):
+        req = self.request();req['worker_sha256']='0'*64
+        with self.assertRaisesRegex(RuntimeError,'checksum mismatch'):
+            self.run_worker(req,self.root/'remote/job/output')
+        self.assertFalse(self.loaded)
 
 
 if __name__=='__main__':unittest.main()

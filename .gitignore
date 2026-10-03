@@ -18,6 +18,8 @@ batches/
 /sys/batches/
 build_*/
 /sys/build_*/
+/sys/runs/
+sys/runs/
 /sys/reports/catch-*/
 *.bak
 *.bak_*
@@ -140,6 +142,12 @@ sys/flow_*.png
 sys/reports/audio_samples/
 sys/reports/audio_samples*/
 sys/reports/audio_batch*
+sys/reports/drama-*
+sys/reports/scripts-*
+sys/reports/opening-*
+sys/reports/vocab-learning-plan*
+sys/reports/*/tmp/
+sys/assets/voices/adam-bua*
 
 # --- 12. Agent Session Ephemeral Files ---
 .agents/sentinel*/
@@ -152,4 +160,4 @@ logs/
 
 # Per-machine Flow identity; never sync another machine profile.
 /sys/experiments/b2_illustrator/machine.local.json
-
+/sys/experiments/b2_illustrator/results/

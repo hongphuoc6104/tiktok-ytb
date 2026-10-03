@@ -85,7 +85,9 @@ def repeat_failures(p, job, n, after=0):
 
 def validate_plan(p, job, target, item, note, supplied):
     records = history(p, job, target)
-    if len(records) >= MAX_REPAIRS:
+    from execution import is_job
+    modern = is_job(p, job)
+    if not modern and len(records) >= MAX_REPAIRS:
         stop(p, job, target, 'Đã đạt giới hạn 6 lượt sửa ảnh; cần chẩn đoán, không tự tạo tiếp')
     current_hash = digest(p.path(job, item['path']))
     prior = records[-1]['plan'] if records else None
@@ -124,7 +126,7 @@ def validate_plan(p, job, target, item, note, supplied):
             raise Blocked('M2_REPAIR_PLAN: lỗi remaining/resolved phải có trong lượt trước')
         count = sum(any(i['id'] == issue['id'] and i['status'] != 'resolved' for i in r['plan']['issues'])
                     for r in records if r['plan'])
-        if issue['status'] != 'resolved' and count >= SAME_ISSUE_LIMIT:
+        if not modern and issue['status'] != 'resolved' and count >= SAME_ISSUE_LIMIT:
             if not strategy or strategy == (prior or {}).get('strategy', {}):
                 stop(p, job, target, 'Lỗi lặp hai lần: cần thay đổi tư thế/bố cục cụ thể; thêm câu cấm không đủ')
     if not prior_open <= seen:
@@ -136,8 +138,15 @@ def validate_plan(p, job, target, item, note, supplied):
     if prior:
         effective = lambda x: {'strategy': x['strategy'], 'instructions': sorted(set(
             i['instruction'].strip() for i in x['issues'] if i['status'] != 'resolved'))}
-        if effective(plan) == effective(prior):
+        if effective(plan) == effective(prior) and (not modern or current_hash == prior['current_sha256']):
             stop(p, job, target, 'Yêu cầu sửa không thay đổi; không gửi lại cùng cách làm')
+    if modern:
+        from execution import micro_plan
+        micro_plan(p, job, {'symptom': note, 'evidence': json.dumps(plan['issues'], ensure_ascii=False, sort_keys=True),
+            'error_class': 'visual', 'target': target, 'input_hash': current_hash,
+            'strategy': json.dumps({'strategy': strategy, 'instructions': [i['instruction'] for i in plan['issues'] if i['status'] != 'resolved']}, sort_keys=True, ensure_ascii=False),
+            'success_criteria': 'Resolve the listed issues in the actual image',
+            'rollback': item['path'], 'submit_state': 'not_submitted'})
     plan['artifact'] = {'path': item['path'], 'sha256': current_hash, 'request': item.get('request')}
     plan['progress'] = {'resolved': [i['id'] for i in plan['issues'] if i['status'] == 'resolved'],
                         'remaining': [i['id'] for i in plan['issues'] if i['status'] == 'remaining'],
@@ -168,7 +177,16 @@ def comparisons(p, job):
 
 
 def status(p, job, image=None, ratio=None):
-    p.validate(job,'images')
+    if getattr(p, '_read_only', False):
+        row = p.rows(job)['images']
+        if not row['envelope']:
+            raise Blocked('No current image output')
+        envelope = read(p.path(job, row['envelope']))
+        if p.snapshot_hash(job, envelope) != row['hash'] or envelope['input_versions'] != p.input_versions(job, 'images'):
+            raise Blocked('Image output is stale; inspect the preserved version')
+    else:
+        p.validate(job,'images')
+    from execution import is_job
     result=[]
     for item in p.payload(job,'images')['items']:
         image_id=item.get('image_id',item['scene_id'])
@@ -180,7 +198,7 @@ def status(p, job, image=None, ratio=None):
         result.append({'image':image_id,'ratio':item.get('ratio'),'target':target,
                        'current_path':str(p.path(job,item['path'])), 'current_sha256':digest(p.path(job,item['path'])),
                        'previous_sha256':prior['current_sha256'] if prior else None,
-                       'repairs_used':len(records),'repair_limit':MAX_REPAIRS,
+                       'repairs_used':len(records),'repair_limit':None if is_job(p, job) else MAX_REPAIRS,
                        'previous_plan':prior})
     if not result:
         raise Blocked('M2_REPAIR_SCOPE: không tìm thấy ảnh/tỷ lệ')

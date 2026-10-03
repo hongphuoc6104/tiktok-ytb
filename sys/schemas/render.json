@@ -35,6 +35,16 @@
     "editorial_report": {
       "type": "string",
       "minLength": 1
+    },
+    "remote_report": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "enum": [
+        "vi",
+        "en"
+      ]
     }
   },
   "required": [

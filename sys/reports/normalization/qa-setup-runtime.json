@@ -1,0 +1,62 @@
+{
+  "timestamp_utc": "2026-10-03T11:07:36.394572+00:00",
+  "command": ".venv/bin/python -m unittest discover -s tests -p test_independent_setup_runtime.py -v",
+  "tests_run": 14,
+  "passed": 14,
+  "failures": [],
+  "errors": [],
+  "duration_seconds": 4.573793888092041,
+  "source_stable_during_run": true,
+  "source_sha256_before": {
+    "dashboard/setup_actions.py": "a64021850ce3ac2b1fcd6d4a8b0505b16192285c6adfccea07ae580c36e31971",
+    "dashboard/data.py": "116900b628ac3b6e2205ca34372ffcaa4a8fc92299004671c72bae1ed014a4b7",
+    "dashboard/server.py": "35c297f9138539b7216a66df92f4b3e0d2030434417ac008c7a1fa61ff7fe2d3",
+    "dashboard/static/app.js": "864cf230ccaffae22059868df8448e06678b69f70958090636b837d26caf1bb7",
+    "account_catalog.py": "3e42149993fab0b4e34ff55d1843cf91c1726f0e2035e0b130ccfeaf8b01db20",
+    "account_budget.py": "fbeeffd1e97407459ab2187f2e6dca0ba69180b56482cd2172debd671eba9df4",
+    "session_store.py": "5d1d978fa57a6e721c984757e2a9a75affebd8100559829d2377e07a782f6321",
+    "b2_bridge.py": "b74fb03cf896b05067482becb4532a3fb7a568aee7e4306769426c0e690cae5b",
+    "experiments/b2_illustrator/session.mjs": "033ba9cd8921e61dcf251de4a9bae463b378489cfbdcf2c4b1708f29e949bda5",
+    "scripts/bootstrap.py": "628b1cc06177c08a7a96c20fe65b8ccb0db787c0e4fd22dbe8eed0a1894c94f9",
+    "colab_bridge/client.py": "7bd05f9945bdd61f9d1d5b840e20426752fefdd8cbe55c6eab5961533cc0b44f",
+    "remote_audio.py": "f601f9119488505da04f07743ddd6bc33436c143b3d6c1ab988963f83facdfe5",
+    "execution.py": "d2b231037389f13a44134f188887fc4437e9be55e9bb45e3569e5973f11a991b",
+    "docs/getting-started.md": "667e384cbb7a6711bf4211dac8802cef9c52344d0a1d4922367037d7bd649a27",
+    "tests/test_independent_setup_runtime.py": "b66f868a4694187d85bdf1c9fc439fff105297442a6242ac88002617dd5b6d72",
+    "tests/test_independent_setup_browser.mjs": "ec349873065e720b00dc4d5aaf15d985ed808f494d9826109619a26d0380ba1d"
+  },
+  "source_sha256_after": {
+    "dashboard/setup_actions.py": "a64021850ce3ac2b1fcd6d4a8b0505b16192285c6adfccea07ae580c36e31971",
+    "dashboard/data.py": "116900b628ac3b6e2205ca34372ffcaa4a8fc92299004671c72bae1ed014a4b7",
+    "dashboard/server.py": "35c297f9138539b7216a66df92f4b3e0d2030434417ac008c7a1fa61ff7fe2d3",
+    "dashboard/static/app.js": "864cf230ccaffae22059868df8448e06678b69f70958090636b837d26caf1bb7",
+    "account_catalog.py": "3e42149993fab0b4e34ff55d1843cf91c1726f0e2035e0b130ccfeaf8b01db20",
+    "account_budget.py": "fbeeffd1e97407459ab2187f2e6dca0ba69180b56482cd2172debd671eba9df4",
+    "session_store.py": "5d1d978fa57a6e721c984757e2a9a75affebd8100559829d2377e07a782f6321",
+    "b2_bridge.py": "b74fb03cf896b05067482becb4532a3fb7a568aee7e4306769426c0e690cae5b",
+    "experiments/b2_illustrator/session.mjs": "033ba9cd8921e61dcf251de4a9bae463b378489cfbdcf2c4b1708f29e949bda5",
+    "scripts/bootstrap.py": "628b1cc06177c08a7a96c20fe65b8ccb0db787c0e4fd22dbe8eed0a1894c94f9",
+    "colab_bridge/client.py": "7bd05f9945bdd61f9d1d5b840e20426752fefdd8cbe55c6eab5961533cc0b44f",
+    "remote_audio.py": "f601f9119488505da04f07743ddd6bc33436c143b3d6c1ab988963f83facdfe5",
+    "execution.py": "d2b231037389f13a44134f188887fc4437e9be55e9bb45e3569e5973f11a991b",
+    "docs/getting-started.md": "667e384cbb7a6711bf4211dac8802cef9c52344d0a1d4922367037d7bd649a27",
+    "tests/test_independent_setup_runtime.py": "b66f868a4694187d85bdf1c9fc439fff105297442a6242ac88002617dd5b6d72",
+    "tests/test_independent_setup_browser.mjs": "ec349873065e720b00dc4d5aaf15d985ed808f494d9826109619a26d0380ba1d"
+  },
+  "output": "test_actual_browser_flow_counts_colab_internal_ring_and_setup_fields (test_independent_setup_runtime.IndependentSetup.test_actual_browser_flow_counts_colab_internal_ring_and_setup_fields) ... ok\ntest_clean_clone_docs_explain_control_dependencies_and_explicit_daemon_setup (test_independent_setup_runtime.IndependentSetup.test_clean_clone_docs_explain_control_dependencies_and_explicit_daemon_setup) ... ok\ntest_collect_is_pinned_owner_collectonly_even_when_defaults_change (test_independent_setup_runtime.IndependentSetup.test_collect_is_pinned_owner_collectonly_even_when_defaults_change) ... ok\ntest_collect_output_symlink_escape_rejected_before_provider (test_independent_setup_runtime.IndependentSetup.test_collect_output_symlink_escape_rejected_before_provider) ... ok\ntest_flow_probe_does_not_connect_or_inspect_wrong_selected_profile (test_independent_setup_runtime.IndependentSetup.test_flow_probe_does_not_connect_or_inspect_wrong_selected_profile) ... ok\ntest_fresh_controller_account_lock_blocks_duplicate_alias (test_independent_setup_runtime.IndependentSetup.test_fresh_controller_account_lock_blocks_duplicate_alias) ... ok\ntest_http_grant_csrf_async_operation_and_duplicate_same_identity (test_independent_setup_runtime.IndependentSetup.test_http_grant_csrf_async_operation_and_duplicate_same_identity) ... ok\ntest_job_runtime_binding_and_pin_remain_frozen_across_global_changes (test_independent_setup_runtime.IndependentSetup.test_job_runtime_binding_and_pin_remain_frozen_across_global_changes) ... ok\ntest_matching_flow_probe_reads_exact_account_ui_only (test_independent_setup_runtime.IndependentSetup.test_matching_flow_probe_reads_exact_account_ui_only) ... ok\ntest_official_bootstrap_clean_control_start_creates_listener_without_connection (test_independent_setup_runtime.IndependentShortSocket.test_official_bootstrap_clean_control_start_creates_listener_without_connection) ... ok\ntest_official_node_short_socket_server_and_python_hash_correspond (test_independent_setup_runtime.IndependentShortSocket.test_official_node_short_socket_server_and_python_hash_correspond) ... ok\ntest_python_refuses_peer_uid_mismatch_on_real_socket (test_independent_setup_runtime.IndependentShortSocket.test_python_refuses_peer_uid_mismatch_on_real_socket) ... ok\ntest_python_refuses_symlink_socket_instead_of_following_it (test_independent_setup_runtime.IndependentShortSocket.test_python_refuses_symlink_socket_instead_of_following_it) ... ok\ntest_python_refuses_world_accessible_socket (test_independent_setup_runtime.IndependentShortSocket.test_python_refuses_world_accessible_socket) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 4.573s\n\nOK\n",
+  "scope": "Real isolated HTTP, headless browser, private UNIX sockets, official Node listener/bootstrap helper and local file/permission/lock operations. Setup provider callbacks and Flow account UI response mocked; mismatched peer UID injected into real socket credential getter. No live/root daemon/browser profile/account/provider/GPU/OAuth/server operations. Copied pinned package runtime proves official import/start, not network installation.",
+  "initial_findings": [
+    "Python symlink UNIX socket followed",
+    "World-accessible UNIX socket accepted",
+    "Peer UID mismatch not checked (injected credential response)",
+    "Unallocated Colab ring missing internal-budget label",
+    "Fresh clone docs omitted Node/Playwright/control-start"
+  ],
+  "bootstrap_transient_review": [
+    "control_start missing serve argument",
+    "control_status identity:null parsing"
+  ],
+  "browser_fixture": "reports/normalization/qa-setup-runtime-browser.json",
+  "browser_screenshot": "reports/normalization/qa-setup-runtime-browser.png",
+  "fixture_cleanup": "Socket peer-test accepted connection now closes even on BrokenPipe; official listener child handle retained and reaped."
+}

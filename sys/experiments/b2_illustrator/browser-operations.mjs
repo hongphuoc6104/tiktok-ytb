@@ -11,6 +11,30 @@ const canonicalMascotPath = path.resolve(here, '../../assets/characters/channel-
 const canonicalMascotMediaId = 'de94a39b-155f-4afe-acbb-d9d4b59ad532';
 
 export async function runOperation(command, bound) {
+  if(command==='tool-snapshot:account-inspect') {
+    const probe=await bound.page.context().newPage();
+    try {
+      await probe.goto(toolUrl.split('/tool/')[0],{waitUntil:'domcontentloaded',timeout:30000});
+      if(!probe.url().startsWith('https://flow.google.com/'))return {auth:'login_required',capability:'not_tested',source:'flow_signin_redirect'};
+      const button=probe.getByRole('button',{name:'Account details',exact:true});
+      await button.waitFor({state:'visible',timeout:15000});
+      if(await button.count()!==1)return {auth:'unknown',capability:'not_tested',source:'flow_account_details_unavailable'};
+      await button.click();
+      const snapshot=await probe.locator('body').ariaSnapshot();
+      const emails=[...new Set((snapshot.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g)||[]).map(x=>x.toLowerCase()))];
+      if(emails.length!==1)return {auth:'unknown',capability:'not_tested',source:'flow_account_details_identity_ambiguous'};
+      return {auth:'verified',capability:'not_tested',account_label:emails[0],
+              identity:'google:'+crypto.createHash('sha256').update(emails[0]).digest('hex'),
+              identity_source:'flow_account_details_ui',source:'flow_account_details_ui',
+              observedProfile:bound.identity.observedProfile,generationSubmitted:false};
+    } catch(error) {
+      const snapshot=await probe.locator('body').ariaSnapshot().catch(()=>'');
+      fs.writeFileSync(path.join(safeResults(),'account-inspect-unavailable.json'),JSON.stringify({
+        source:'flow_account_inspection_failed',summary:snapshot.split('\n').filter(line=>/button|Account|@|Sign in/i.test(line)).slice(0,40),
+        generationSubmitted:false},null,2));
+      return {auth:'unknown',capability:'not_tested',source:'flow_account_inspection_failed',generationSubmitted:false};
+    } finally {await probe.close().catch(()=>{});}
+  }
   if(command==='tool-snapshot:share-copy') {
     await bound.page.getByRole('button',{name:'Copy link',exact:true}).click();
     const link=await Promise.race([bound.page.evaluate(()=>navigator.clipboard.readText()),new Promise((_,reject)=>setTimeout(()=>reject(Error('CLIPBOARD_PERMISSION_PENDING')),3000))]);

@@ -1,0 +1,65 @@
+{
+  "job": "normalization-oversleep-english-9x16-001",
+  "account": "account-02",
+  "session": "vp-normalization-20261003-narrator4",
+  "scope": "one duration-repair WAV from143wordapproved narration",
+  "voice": "reference-narrator",
+  "reference_sha256": "97d5aee4bc5bbb4a5951a180c04954f5f33b36e901f9a99084ec9f2ebb1817e9",
+  "speed": 0.92,
+  "started_at": 1791032027.8360076,
+  "live_provider": true,
+  "new_allocation_attempts": 1,
+  "state": "audio_complete_runtime_released",
+  "device": "Tesla T4",
+  "allocated_at": 1791032035.925751,
+  "setup_finished_at": 1791032050.4479806,
+  "audio_command_started_at": 1791032050.8759468,
+  "request_contract_asserted_before_generation": true,
+  "request_source_id": "69b6f54869335adc4f1b1ab0c3092b8745967830d8f2067fa4b69fc6c3b8d40a",
+  "asserted_at": 1791032051.486097,
+  "audio_returncode": 0,
+  "audio_result": "{\n  \"job\": \"normalization-oversleep-english-9x16-001\",\n  \"version\": 4,\n  \"mode\": \"auto\",\n  \"grant_id\": \"grant-84f00e1650a345e894a045b1c55a947d\",\n  \"complete\": false,\n  \"control\": {\n    \"owner\": \"f6b4d47ecfeb4438ae1a2140e3b0787a\",\n    \"pid\": 154774,\n    \"heartbeat\": 1791032063.2044587,\n    \"updated_at\": 1791032063.20457,\n    \"stop_requested\": false\n  },\n  \"checkpoints\": [\n    {\n      \"phase\": \"outline\",\n      \"state\": \"complete\",\n      \"revision\": 2,\n      \"assets\": [\n        \"checkpoints/outline/2/outline.json\"\n      ],\n      \"review\": \"/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow/sys/runs/normalization-oversleep-english-9x16-001/checkpoints/outline/2/review.md\"\n    },\n    {\n      \"phase\": \"dialogue\",\n      \"state\": \"complete\",\n      \"revision\": 3,\n      \"assets\": [\n        \"revisions/content/4/content.json\",\n        \"revisions/content/4/review.md\",\n        \"revisions/content/4/checks.json\"\n      ],\n      \"review\": \"/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow/sys/runs/normalization-oversleep-english-9x16-001/checkpoints/dialogue/3/review.md\"\n    },\n    {\n      \"phase\": \"audio\",\n      \"state\": \"complete\",\n      \"revision\": 2,\n      \"assets\": [\n        \"revisions/audio/6/audio-result.json\",\n        \"revisions/audio/6/request-colab-effective.json\",\n        \"revisions/audio/6/tts-result.json\",\n        \"revisions/audio/6/segment-0000.wav\",\n        \"revisions/audio/6/segment-0001.wav\",\n        \"revisions/audio/6/segment-0002.wav\",\n        \"revisions/audio/6/segment-0003.wav\",\n        \"revisions/audio/6/segment-0004.wav\",\n        \"revisions/audio/6/segment-0005.wav\",\n        \"revisions/audio/6/narration.wav\",\n        \"revisions/audio/6/subtitles.srt\",\n        \"revisions/audio/6/en-SC01-assembled.wav\",\n        \"revisions/audio/6/en-SC02-assembled.wav\",\n        \"revisions/audio/6/en-SC03-assembled.wav\",\n        \"revisions/audio/6/en-SC04-assembled.wav\",\n        \"revisions/audio/6/en-SC05-assembled.wav\",\n        \"revisions/audio/6/en-SC06-assembled.wav\"\n      ],\n      \"review\": \"/home/hongphuoc6104/.codex/worktrees/normalize-video-workflow/pipelineFlow/sys/runs/normalization-oversleep-english-9x16-001/checkpoints/audio/2/review.md\"\n    },\n    {\n      \"phase\": \"images\",\n      \"state\": \"pending\",\n      \"revision\": null,\n      \"assets\": [],\n      \"review\": null\n    },\n    {\n      \"phase\": \"video\",\n      \"state\": \"pending\",\n      \"revision\": null,\n      \"assets\": [],\n      \"review\": null\n    }\n  ],\n  \"observed_at\": 1791032146.3798497,\n  \"needs_attention\": null,\n  \"action\": \"continue\",\n  \"phase\": \"audio\"\n}\n",
+  "audio_command_finished_at": 1791032146.4016576,
+  "duration_seconds": 48.96,
+  "duration_within_brief": true,
+  "audio_artifact_revision": 6,
+  "wav": "runs/normalization-oversleep-english-9x16-001/revisions/audio/6/narration.wav",
+  "srt": "runs/normalization-oversleep-english-9x16-001/revisions/audio/6/subtitles.srt",
+  "wav_sha256": "b5c8b321471ed893bb3a508a33b78904a92dd3fdc1ca9c13c8eca0b1d0106f6f",
+  "quality_listened": false,
+  "request_id": "c011d4a8972bfc9ba65a5a38a2a735945f80bd66472f52e49f6bf1ae1610d733",
+  "session_released": true,
+  "session_retained": false,
+  "released_at": 1791032149.2361245,
+  "audio_checkpoint_revision": 2,
+  "format": {
+    "frames": 2350080,
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 2,
+    "duration_seconds": 48.96
+  },
+  "worker_elapsed_seconds": 55.094478811000045,
+  "worker_elapsed_scope": "generation worker before assembly/archive",
+  "audio_command_wall_seconds": 95.52571082115173,
+  "reference_used": "97d5aee4bc5bbb4a5951a180c04954f5f33b36e901f9a99084ec9f2ebb1817e9",
+  "models": {
+    "vi": {
+      "id": "kjanh/KhanhTTS-OmniVoice",
+      "revision": "20d056b8ea5d8d578b4cbaf1f703012fa3798a84"
+    },
+    "en": {
+      "id": "kjanh/KhanhTTS-OmniVoice",
+      "revision": "20d056b8ea5d8d578b4cbaf1f703012fa3798a84"
+    }
+  },
+  "audio_manifest": "runs/normalization-oversleep-english-9x16-001/revisions/audio/6/audio-result.json",
+  "final_checked_at": 1791032179.6706138,
+  "budget_observation": {
+    "allocated_sessions": [],
+    "held_seconds": 0,
+    "used_seconds": 9238.415081262589,
+    "available_seconds": 8761.584918737411,
+    "provider_quota_verified": false
+  }
+}

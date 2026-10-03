@@ -1,0 +1,16 @@
+{
+  "base_commit": "80e61cd7",
+  "branch": "codex/normalize-video-workflow",
+  "tests_run": 295,
+  "failures": 5,
+  "errors": 16,
+  "seconds": 231.869,
+  "timing": "before implementation changes",
+  "findings": [
+    "remote enabled/Adam configuration conflicts with local-audio and Minh Quan/Alba fixtures",
+    "Colab parallel_images fixture does not override false default; BrokenBarrierError",
+    "missing scipy in core venv",
+    "hardcoded ROOT/.venv and node_modules absent in clean worktree"
+  ],
+  "not_live_generation": true
+}
