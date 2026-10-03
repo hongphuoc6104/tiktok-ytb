@@ -127,26 +127,31 @@ class IntegrityGuardTests(unittest.TestCase):
         archived = read(result['history'])['superseded_machine_reviews']
         self.assertEqual(['needs_attention'], [x['state'] for x in archived.values()])
 
-    def test_cli_integrity_diff_and_adopt_code(self):
+    def test_cli_integrity_diff_and_authorized_adopt_code_without_tty(self):
+        from permissions import Grants
         self.new()
         self.tamper()
+        grant=Grants(self.root).grant('development', source='TEST actual upgrade authorization', jobs=[self.job])
 
-        def cli(*argv, tty=True):
+        def cli(*argv, tty=False):
             out, err = io.StringIO(), io.StringIO()
-            with patch('sys.stdin.isatty', return_value=tty), patch.object(pilot, 'ROOT', self.root), patch.object(pilot, 'Pilot', lambda: Pilot(self.root)), \
+            with patch('sys.stdin.isatty', return_value=tty), patch.object(pilot, 'ROOT', self.root), patch.object(pilot, 'Pilot', lambda root=self.root: Pilot(root)), \
                     patch('sys.argv', ['pilot.py', *argv]), redirect_stdout(out), redirect_stderr(err):
                 pilot.main()
             return json.loads(out.getvalue()), err.getvalue()
         diff, _ = cli('integrity-diff', self.job)
         self.assertEqual(3, diff['changed'])
+        with self.assertRaisesRegex(Blocked, 'development --grant'):
+            cli('adopt-code', self.job, '--confirm', self.job, '--reason', 'TEST')
         with self.assertRaisesRegex(Blocked, '--confirm'):
-            cli('adopt-code', self.job, '--reason', 'TEST')
-        with self.assertRaisesRegex(Blocked, 'chạy trực tiếp trong terminal'):
-            cli('adopt-code', self.job, '--confirm', self.job, '--reason', 'TEST', tty=False)
-        result, warning = cli('adopt-code', self.job, '--confirm', self.job, '--reason', 'TEST human decision')
+            cli('adopt-code', self.job, '--grant', grant['id'], '--reason', 'TEST')
+        result, warning = cli('adopt-code', self.job, '--confirm', self.job, '--grant', grant['id'], '--reason', 'TEST authorized agent operation')
         self.assertTrue(result['adopted'])
-        self.assertIn('chỉ dành cho NGƯỜI DÙNG', warning)
-        self.assertIn('Agent không bao giờ tự chạy', warning)
+        history=read(result['history'])
+        self.assertEqual((history['actor'],history['granted_by'],history['authorization_source']),
+                         ('assistant','user','TEST actual upgrade authorization'))
+        self.assertEqual(history['grant_id'],grant['id'])
+        self.assertEqual(warning,'')
         self.assertEqual(0, cli('integrity-diff', self.job)[0]['changed'])
 
     def brief(self):

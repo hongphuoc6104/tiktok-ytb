@@ -58,19 +58,19 @@ class AgyAdapterTests(unittest.TestCase):
   with patch('scripts.agy_pipeline.invoke',side_effect=fake_invoke):generate(self.p,'agy')
   self.assertEqual(len(calls),1)
   prompt=calls[0]
-  humanizer_text=(self.root/'.agents/skills/vp-content/references/narration-style.md').read_text()
-  content_text=(self.root/'.agents/skills/vp-content/SKILL.md').read_text()
+  humanizer_text=(self.root/'.agents/skills/vp-production/references/narration-style.md').read_text()
+  content_text=(self.root/'.agents/skills/vp-production/SKILL.md').read_text()
   self.assertEqual(prompt.count(humanizer_text),1)
   self.assertIn(content_text,prompt)
  def test_narration_reference_has_no_rewrite_reply_format(self):
-  skill_path=self.root/'.agents/skills/vp-content/references/narration-style.md'
+  skill_path=self.root/'.agents/skills/vp-production/references/narration-style.md'
   self.assertTrue(skill_path.exists())
   text=skill_path.read_text()
-  self.assertIn('# Lời dẫn tự nhiên',text)
+  self.assertIn('Freeze narration',text)
   for banned in ['Định dạng trả lời','Bản viết lại','Đã sửa gì','Đã xóa hẳn','Cần bạn xác nhận']:
    self.assertNotIn(banned,text)
  def test_ai_tells_reference_exists_but_not_loaded_into_prompt(self):
-  ref_path=self.root/'.agents/skills/vp-content/references/ai-tells.md'
+  ref_path=self.root/'.agents/skills/vp-production/references/ai-tells.md'
   self.assertTrue(ref_path.exists())
   ref_text=ref_path.read_text()
   self.assertIn('oai_citation',ref_text)

@@ -1,0 +1,50 @@
+{
+  "version": 3,
+  "note": "Mặc định của kênh theo công thức Micro-Drama 4 hồi (15-20s), giọng Adam bựa, Foley SFX và Remotion Motion Engine.",
+  "video_type": "micro_drama",
+  "aspect_ratio": "9:16",
+  "scene_count": 4,
+  "duration": {
+    "min_seconds": 15.0,
+    "max_seconds": 20.0
+  },
+  "language": "vi",
+  "voice": "Adam bựa",
+  "speed": 1.08,
+  "tone": "Hài hước, tếu táo đời thường, kịch tính ngắn (Micro-Drama Comic), kết thúc bằng cú twist meme",
+  "style": "Minimalist ink stickman sketch on clean off-white background with clear expressive lines and exaggerated cartoon expressions",
+  "audience": "Người xem Shorts / TikTok muốn giải trí nhanh và nhớ ngay 1 từ vựng tiếng Anh qua tình huống hài hước đời thường",
+  "prior_knowledge": "Tiếng Anh cơ bản, học từ vựng tự nhiên qua ngữ cảnh",
+  "pacing": "Nhanh, dồn dập, cuốn hút ngay giây đầu tiên; kết thúc bất ngờ lật kèo",
+  "avoid": [
+    "Mở bài kiểu giảng dạy trên lớp ('Hôm nay chúng ta cùng học từ...')",
+    "Dịch nghĩa sáo rỗng kiểu từ điển",
+    "Khung header badge giả lập UI trên đỉnh video",
+    "Ghép 2 giọng trong 1 video ngắn",
+    "Nhân vật quá phức tạp hoặc người thật cơ bắp vi phạm nhận diện CH01"
+  ],
+  "domain_requirements": [
+    "Nhân vật chính CH01 dùng đúng mascot chuẩn assets/characters/channel-mascot/reference-v1.png (áo xanh biển nhạt #8CCFE8, đầu tròn trắng viền navy, tay chân que). Áp dụng quy tắc dung sai 80/20: chấp nhận biểu cảm cường điệu như rớt cằm shock, mắt cún con năn nỉ, mồ hôi văng tung tóe.",
+    "Cấu trúc Micro-Drama 4 hồi chuẩn: (1) 0-4s: Tình huống rắc rối đời thường của Mascot -> (2) 4-8s: Từ vựng tiếng Anh là chìa khóa gỡ rối -> (3) 8-13s: Luyện nói phản xạ ngắn kèm đếm nhịp 3-2-1 -> (4) 13-17s: Cú twist meme hài hước kết màn.",
+    "Giọng đọc solo duy nhất: Adam bựa (Vieneu GPU, tốc độ 1.05x-1.1x), tếu táo, nhập vai trực tiếp vào Mascot ở ngôi thứ nhất ('tui').",
+    "Tích hợp bộ 6 Foley SFX khớp nhịp hành động: click/pop (thao tác), whoosh (lia cảnh), ding (sáng từ vựng), tick (đếm nhịp), crunch (nhai bánh/twist).",
+    "Hiệu ứng Remotion Motion: Cú giật punch-in ở frame đầu, screen_shake khi có va chạm/shock, phụ đề 1-2 dòng chữ to rõ highlight từ khóa tiếng Anh màu vàng #FACC15, không dùng header badge.",
+    "Thời lượng xuất xưởng nghiêm ngặt trong khoảng 15.0 - 20.0 giây."
+  ],
+  "character": {
+    "id": "channel-mascot",
+    "name": "Người que áo xanh biển nhạt",
+    "reference_path": "assets/characters/channel-mascot/reference-v1.png",
+    "media_id": "de94a39b-155f-4afe-acbb-d9d4b59ad532",
+    "appearance": "Đầu tròn trắng viền xanh đen đậm, hai mắt oval đen, miệng cười tươi, tay chân người que tối giản",
+    "outfit": "Áo thun cộc tay màu xanh biển nhạt (#8CCFE8)"
+  },
+  "text_style": {
+    "font": "Inter, sans-serif",
+    "color": "#172033",
+    "outline": "Nền sáng tương phản",
+    "size": "Lớn, dễ đọc trên màn hình điện thoại (tối đa 2 dòng ngắn)",
+    "placement": "Trung tâm phía dưới, không che mặt nhân vật, không dùng hộp badge"
+  },
+  "example_count": 1
+}

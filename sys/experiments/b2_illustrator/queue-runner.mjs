@@ -18,16 +18,19 @@ function reference(file,mediaId) {
 }
 const cfg = fs.existsSync(path.resolve(here, '../../config.json')) ? JSON.parse(fs.readFileSync(path.resolve(here, '../../config.json'), 'utf8')) : {};
 const configuredModel = cfg.flow_model || 'Nano Banana 2';
-const modelLabel = configuredModel.startsWith('🍌') ? configuredModel : `🍌 ${configuredModel}`;
 
 export function prepareRequests(specs) {
  if(!Array.isArray(specs)||!specs.length||specs.length>4)throw Error('QUEUE_SIZE_1_TO_4_REQUIRED');
  if(new Set(specs.map(s=>s.testCase)).size!==specs.length)throw Error('DUPLICATE_REQUEST_ID');
  return specs.map(s=>{
   if(!/^[\w-]+$/.test(s.testCase)||!s.prompt||!['9:16','16:9'].includes(s.ratio))throw Error('INVALID_QUEUE_REQUEST');
+  if(s.managementContract===1 && (!s.model || !s.project || s.toolUrl!==toolUrl))throw Error('FROZEN_FLOW_CONTRACT_MISMATCH');
   const character=reference(s.characterRefPath,s.charMediaId),base=reference(s.baseRefPath,s.baseMediaId);
   if(!character)throw Error('CHARACTER_REFERENCE_REQUIRED');
-  return {spec:s,character,base,identity:{toolUrl,id:s.testCase,prompt:s.prompt,ratio:s.ratio,preserve:s.preserve||'',change:s.change||'',literalText:s.literalText||'',model:configuredModel,references:[character,base].filter(Boolean).map(({mediaId,sha256})=>({mediaId,sha256})),outDir:path.resolve(s.outDir)}};
+  const model=s.managementContract===1?s.model:configuredModel;
+  const identity={toolUrl,id:s.testCase,prompt:s.prompt,ratio:s.ratio,preserve:s.preserve||'',change:s.change||'',literalText:s.literalText||'',model,references:[character,base].filter(Boolean).map(({mediaId,sha256})=>({mediaId,sha256})),outDir:path.resolve(s.outDir)};
+  if(s.managementContract===1)identity.project=s.project;
+  return {spec:s,character,base,identity};
  });
 }
 export async function runQueue(specs,bound) {
@@ -88,11 +91,16 @@ async function executeQueue(specs,bound,requests) {
   await boxes.nth(0).fill(r.spec.prompt);await boxes.nth(1).fill('Match the attached canonical character and scene references.');
   await boxes.nth(2).fill(r.spec.preserve||'');await boxes.nth(3).fill(r.spec.change||'');await boxes.nth(4).fill(r.spec.literalText||'');
   await frame.getByRole('button',{name:r.spec.ratio,exact:true}).click();
+  const modelLabel=r.identity.model.startsWith('🍌')?r.identity.model:`🍌 ${r.identity.model}`;
   await frame.getByRole('combobox').nth(2).selectOption({label:modelLabel});
   const before=await state();
   await frame.getByRole('button',{name:'Initialize Generation',exact:true}).click();
   const after=await state(),added=after.queue.filter(i=>!before.queue?.some(p=>p.id===i.id));
   if(added.length!==1||added[0].config.topic!==r.spec.prompt||added[0].characterRefMediaId!==r.character.mediaId||added[0].baseImageMediaId!==(r.base?.mediaId||null)||added[0].config.aspectRatio!==r.spec.ratio)throw Error('QUEUE_REFERENCE_MAPPING_FAILED');
+  if(r.spec.managementContract===1) {
+   const selected=await frame.getByRole('combobox').nth(2).locator('option:checked').innerText();
+   if(selected!==modelLabel)throw Error('FROZEN_FLOW_MODEL_MISMATCH');
+  }
   ids.push(added[0].id);
  }
  await frame.getByRole('combobox').nth(3).selectOption({label:'4 Workers'});

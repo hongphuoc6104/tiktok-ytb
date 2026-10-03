@@ -110,8 +110,9 @@ desktop.ini
 *~
 
 # --- 9. Vocabulary Bank Scratch ---
-# Kho từ (sources/, bank.jsonl, ledger.json, briefs/) được theo dõi trong git;
-# chỉ hàng đợi tạm của pilot batch là không.
+# Track vocabulary sources and the bank; job reservations/briefs stay local.
+/sys/vocab/ledger.json
+/sys/vocab/briefs/
 vocab/queue.json
 vocab/.ledger.lock
 sys/vocab/queue.json
@@ -152,4 +153,15 @@ logs/
 
 # Per-machine Flow identity; never sync another machine profile.
 /sys/experiments/b2_illustrator/machine.local.json
+/sys/experiments/b2_illustrator/results/
 
+# Local verification outputs; retain only referenced written QA summaries.
+/sys/reports/normalization/*
+!/sys/reports/normalization/qa-maintenance.md
+!/sys/reports/normalization/maintenance.md
+/sys/reports/20261003-direction-governance/
+/sys/research/
+**/DevToolsActivePort
+**/SingletonLock
+**/SingletonCookie
+**/SingletonSocket

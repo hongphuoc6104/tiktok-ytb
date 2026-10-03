@@ -11,7 +11,10 @@ class ContentV2Tests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
   for n in ['schemas','.agents','renderer','tests','examples','scripts']:shutil.copytree(ROOT/n,self.root/n)
-  for n in ['pilot.py','workflow.py','machine_review.py','image_pipeline.py','prompt_templates.py','content_contract.py','adapters.py','config.json','AGENTS.md','GEMINI.md']:shutil.copy(ROOT/n,self.root/n)
+  # A fresh CLI process must receive its real runtime imports, as a clone does.
+  # In-process tests can otherwise hide missing imports through sys.path.
+  for source in ROOT.glob('*.py'):shutil.copy(source,self.root/source.name)
+  for n in ['config.json','AGENTS.md','GEMINI.md']:shutil.copy(ROOT/n,self.root/n)
   self.p=Pilot(self.root);self.b=read(ROOT/'examples/m1/brief.json');self.p.new('m1',self.b)
   self.p.approve('m1','control',1,'TEST ONLY control approval')
   self.d=self.draft('m1')
@@ -69,7 +72,7 @@ class ContentV2Tests(unittest.TestCase):
   from pilot import hashobj
   self.p.event('m1','control','workflow_created',hashobj(read(self.p.job('m1')/'workflow.json')))
   workflow.prepare(self.p,'m1','content')
-  out=subprocess.check_output([str(ROOT/'.venv/bin/python'),str(self.root/'pilot.py'),'resume','m1'],text=True)
+  out=subprocess.check_output([sys.executable,str(self.root/'pilot.py'),'resume','m1'],text=True)
   self.assertEqual(json.loads(out)['stage'],'content')
   self.assertEqual(json.loads(out)['action'],'review')
  def test_T12_images_before_approval(self):

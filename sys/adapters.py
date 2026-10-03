@@ -15,7 +15,30 @@ def copy_optional_flow_screenshot(source, destination, *, required):
 
 def rel(p,j,path):return str(Path(path).relative_to(p.job(j)))
 def config(p):return read(p.root/'config.json')
-def gflow(p,*args,timeout=960):
+
+def _flow_media_reference(p, job, *, name=None, image=None):
+ """Resolve a proven downloaded reference; never invent a provider media ID."""
+ candidates=[]
+ wanted=digest(Path(image)) if image else None
+ for record in (p.job(job)/'flow/attempts').glob('*/request.json'):
+  data=read(record)
+  if data.get('state')!='downloaded':continue
+  registration=data.get('identity',{}).get('registration') or {}
+  if name and registration.get('name')!=name:continue
+  path=p.path(job,data['path'])
+  if not path.is_file() or digest(path)!=data.get('sha256') or wanted and data['sha256']!=wanted:continue
+  sidecar=path.with_suffix('.json')
+  if not sidecar.is_file():continue
+  metadata=read(sidecar)
+  if metadata.get('source')!='google-flow-browser' or metadata.get('status')!='downloaded' or not metadata.get('forgeId'):continue
+  candidates.append((str(path),metadata['forgeId']))
+ if len(set(candidates))!=1:
+  ex=Blocked('FLOW_REFERENCE_REQUIRED: exact downloaded reference/media identity is missing or ambiguous')
+  ex.generation_submitted=False
+  raise ex
+ return candidates[0]
+
+def gflow(p,*args,timeout=960,flow_job=None):
  if args and args[0]=='video':raise Blocked('Video AI disabled')
  if args and args[:2]==('auth','login'):
   import b2_bridge
@@ -41,7 +64,7 @@ def gflow(p,*args,timeout=960):
   ratio = _get_arg('--ratio')
   if not ratio:
    try:
-    ratio = p.brief(j)[0].get('aspect_ratio', '16:9')
+    ratio = p.brief(flow_job)[0].get('aspect_ratio', '16:9')
     if ratio == 'dual': ratio = '9:16'
    except Exception:
     ratio = '16:9'
@@ -61,6 +84,18 @@ def gflow(p,*args,timeout=960):
   canonical_mascot = p.root / 'assets/characters/channel-mascot/reference-v1.png'
   char_ref_path = reg_img if is_reg else None
   char_media_id = None
+  modern = flow_job is not None and __import__('execution').is_job(p, flow_job)
+  frozen_flow = __import__('flow_management').config(p, flow_job) if modern else {}
+  if modern and char_ref_path and Path(char_ref_path).resolve() == canonical_mascot.resolve():
+   char_media_id = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
+  elif modern and is_reg:
+   _, char_media_id = _flow_media_reference(p, flow_job, image=char_ref_path)
+  elif modern and char_names:
+   if len(char_names)!=1:
+    ex=Blocked('FLOW_REFERENCE_UNSUPPORTED: this provider path supports one character reference; do not silently omit extra references')
+    ex.generation_submitted=False
+    raise ex
+   char_ref_path, char_media_id = _flow_media_reference(p, flow_job, name=char_names[0])
   if not char_ref_path:
    if canonical_mascot.exists():
     char_ref_path = str(canonical_mascot)
@@ -79,7 +114,7 @@ def gflow(p,*args,timeout=960):
       except Exception: pass
      if char_ref_path: break
 
-  if canonical_mascot.exists() and (is_reg or (not char_names and not base_img)):
+  if not modern and canonical_mascot.exists() and (is_reg or (not char_names and not base_img)):
    with Image.open(canonical_mascot) as ref_im:
     if ratio == '9:16':
      w, h = 768, 1365
@@ -110,6 +145,8 @@ def gflow(p,*args,timeout=960):
     test_case=job_id,
     timeout=timeout,
     collection_only='--collect-only' in args_list,
+    before_submit=(lambda connection: __import__('flow_management').before_send(p, flow_job, [Path(_get_arg('--evidence-out', str(out_folder.parent)))], connection)) if modern else None,
+    **({'model': frozen_flow['flow_model'], 'project': frozen_flow['flow_project'], 'tool_url': frozen_flow.get('flow_tool_url')} if modern else {}),
    )
    src_img = Path(b2_res['path'])
    # The queue journal owns this stable path; preserve it for replay.
@@ -117,10 +154,10 @@ def gflow(p,*args,timeout=960):
     raise Blocked('B-2 output must be in the requested download directory')
    dest_img = src_img
 
-  if not is_reg:
+  if not is_reg or modern:
    meta = {
     'jobId': job_id,
-    'type': 'image',
+    'type': 'character_reference' if is_reg else 'image',
     'prompt': prompt,
     'ratio': ratio,
     'characters': char_names,
@@ -136,11 +173,14 @@ def gflow(p,*args,timeout=960):
   proof_file = evidence_folder / 'ui-proof.json'
   proof = {
    'passed': True,
-   'mode': 'character-register' if is_reg else 'image',
+   'mode': 'image' if modern else 'character-register' if is_reg else 'image',
    'characters': char_names,
    'tool': 'b2-illustrator',
    'forgeId': b2_res.get('forge_id')
   }
+  if modern:
+   proof.update(operation='character-register' if is_reg else 'image',
+                character_media_id=char_media_id, character_reference_sha256=digest(Path(char_ref_path)))
   if base_img: proof['base_image'] = base_img
   proof_file.write_text(json.dumps(proof, indent=2), encoding='utf-8')
 
@@ -164,13 +204,28 @@ def gflow(p,*args,timeout=960):
    specs = [{'testCase': job['id'], 'prompt': job['prompt'], 'ratio': job.get('ratio', '9:16'),
              'outDir': str(batch_out / job['id']), 'characterRefPath': str(mascot),
              'charMediaId': 'de94a39b-155f-4afe-acbb-d9d4b59ad532'} for job in group]
+   modern = flow_job is not None and __import__('execution').is_job(p, flow_job)
+   if modern:
+    frozen_flow = __import__('flow_management').config(p, flow_job)
+    for spec, job in zip(specs, group):
+     names = job.get('character', [])
+     if len(names)!=1:
+      ex=Blocked('FLOW_REFERENCE_UNSUPPORTED: modern batch needs exactly one registered character reference')
+      ex.generation_submitted=False
+      raise ex
+     reference_path, reference_id = _flow_media_reference(p, flow_job, name=names[0])
+     spec.update(characterRefPath=reference_path,charMediaId=reference_id)
+     spec.update(model=frozen_flow['flow_model'], project=frozen_flow['flow_project'], toolUrl=frozen_flow.get('flow_tool_url'), managementContract=1)
    # Persist attempted membership BEFORE the external call. Ambiguous groups cannot fall through to serial retries.
    entries = run_jobs[offset:offset+4]
    for entry in entries: entry.update(status='failed',error='Submission pending; reconcile before retry')
    write(state_file, {'jobs': run_jobs})
    try:
-    results = b2_bridge.generate_b2_batch(specs, timeout=timeout)
-    for job, result, entry in zip(group, results, entries):
+    modern = flow_job is not None and __import__('execution').is_job(p, flow_job)
+    callback = (lambda connection: __import__('flow_management').before_send(p, flow_job,
+        [p.job(flow_job)/'flow/attempts'/job['request_key'] for job in group], connection)) if modern else None
+    results = b2_bridge.generate_b2_batch(specs, timeout=timeout, before_submit=callback)
+    for job, result, entry, spec in zip(group, results, entries, specs):
      src = Path(result['path'])
      dst = batch_out / (job['id'] + src.suffix)
      shutil.copy(src, dst)
@@ -180,8 +235,11 @@ def gflow(p,*args,timeout=960):
            'status':'downloaded', 'forgeId':result['media_id']})
      ev = batch_out / '.evidence' / job['id']; ev.mkdir(parents=True, exist_ok=True)
      if result.get('before_submit'): shutil.copy(result['before_submit'], ev / 'before-submit.png')
-     write(ev / 'ui-proof.json', {'passed':True, 'mode':'image', 'characters':chars,
-           'tool':'b2-illustrator', 'forgeId':result['media_id'], 'screenshot':result['screenshot']})
+     proof={'passed':True, 'mode':'image', 'characters':chars,
+            'tool':'b2-illustrator', 'forgeId':result['media_id'], 'screenshot':result['screenshot']}
+     if modern:proof.update(operation='image',character_media_id=spec['charMediaId'],
+                            character_reference_sha256=digest(Path(spec['characterRefPath'])))
+     write(ev / 'ui-proof.json', proof)
      entry.update(status='completed', artifacts=[str(dst)])
      entry.pop('error', None)
      write(state_file, {'jobs':run_jobs})
@@ -334,60 +392,13 @@ def gap_after(text,g):
  """
  return g.get('sentence',DEFAULT_PAUSE['sentence']) if text.rstrip()[-1:] in '.!?…' else g.get('minor',DEFAULT_PAUSE['minor'])
 
-def frames_of(path):
- with wave.open(str(path)) as wav:return wav.getnframes()
-
-def run_ffmpeg(cmd,log):
- """Run one ffmpeg step, appending its command and output to `log`.
-
- Distinguishes "ffmpeg is not installed" (FileNotFoundError from the OS,
- nothing to log) from "ffmpeg ran and exited non-zero" (logged for postmortem)
- so master()'s caller gets an accurate Blocked message either way.
- """
- try:r=subprocess.run(cmd,capture_output=True,text=True)
- except FileNotFoundError:raise Blocked('ffmpeg not found on PATH; install ffmpeg to master narration audio')
- with open(log,'a') as f:f.write('$ '+' '.join(cmd)+'\n'+r.stdout+r.stderr+'\n')
- return r
+from audio_processing import frames_of, run_ffmpeg, AudioProcessingError
 
 def master(src,dst,cfg):
- """EQ, then a static gain to target loudness with a true-peak limiter.
-
- loudnorm is used for ANALYSIS only: its dynamic mode pads and resamples to
- 192 kHz, which would break the +/-30 ms duration gates in pilot.checks.
- No compressor: a limiter only touches the few samples above the ceiling, so
- it reaches the loudness target without flattening the prosody we just gained.
- alimiter needs level=disabled or it auto-normalises straight back to 0 dBFS.
- Every filter here is sample-preserving; the frame count is asserted anyway.
-
- Every ffmpeg invocation is logged to <dst>.log next to tts.log/tts-en.log.
- Any ffmpeg failure or invalid intermediate file raises Blocked instead of
- silently leaving the un-mastered `src` in place -- a swallowed failure here
- would let an unmastered or clipped track pass every downstream gate, since
- pilot.checks only looks at duration and RMS, not loudness/EQ correctness.
- """
- log=dst.parent/(dst.stem+'.log')
- eq='equalizer=f=200:t=q:w=1:g=1.5,equalizer=f=7000:t=q:w=2:g=-2.5'
- r=run_ffmpeg(['ffmpeg','-y','-i',str(src),'-af',eq,'-ar','48000','-c:a','pcm_s16le',str(dst)],log)
- if r.returncode or not (dst.exists() and dst.stat().st_size>1000):
-  raise Blocked(f'Audio mastering (EQ) failed; see {log.name}')
- r=run_ffmpeg(['ffmpeg','-v','info','-i',str(dst),'-af','loudnorm=print_format=json','-f','null','-'],log)
- try:m=json.loads(r.stderr[r.stderr.rindex('{'):r.stderr.rindex('}')+1])
- except ValueError:
-  dst.unlink(missing_ok=True)
-  raise Blocked(f'Audio mastering (loudness analysis) failed; see {log.name}')
- peak=float(cfg.get('audio_peak_db',-1.5));gain=float(cfg.get('audio_lufs',-14.))-float(m['input_i'])
- final=dst.with_name('narration_lv.wav')
- r=run_ffmpeg(['ffmpeg','-y','-i',str(dst),'-af',f'volume={gain:.2f}dB,alimiter=limit={10**(peak/20):.4f}:level=disabled','-ar','48000','-c:a','pcm_s16le',str(final)],log)
- dst.unlink(missing_ok=True)
- if r.returncode:
-  final.unlink(missing_ok=True)
-  raise Blocked(f'Audio mastering (gain/limiter) failed; see {log.name}')
- if not (final.exists() and final.stat().st_size>1000):
-  raise Blocked(f'Audio mastering produced an invalid file; see {log.name}')
- if frames_of(final)!=frames_of(src):
-  final.unlink(missing_ok=True)
-  raise Blocked(f'Audio mastering changed frame count; refusing to replace source; see {log.name}')
- shutil.move(str(final),str(src))
+ # Local mastering is legacy-only; modern jobs receive prepared remote files.
+ from audio_processing import master as prepare
+ try: return prepare(src,dst,cfg)
+ except AudioProcessingError as ex: raise Blocked(str(ex)) from ex
 
 def retakes(p,j):
  """How many times each scene's delivery has been rejected.
@@ -524,6 +535,9 @@ def tts_python(root,cfg):
  return gpu if cfg.get('tts_device','auto')!='cpu' and gpu.exists() else root/'.venv-tts/bin/python'
 
 def audio(p,j,out):
+ if p.brief(j) and p.brief(j)[0].get('outputs'):
+  from remote_audio import produce
+  return produce(p,j,out)
  content=p.payload(j,'content');cfg=config(p);g=cfg.get('tts_pause',DEFAULT_PAUSE)
  from colab_bridge.client import enabled
  remote=enabled(cfg)
@@ -588,6 +602,9 @@ def audio(p,j,out):
  return payload
 
 def render(p,j,out):
+ if p.brief(j) and p.brief(j)[0].get('outputs'):
+  from remote_audio import render as render_remote
+  return render_remote(p,j,out)
  content=p.payload(j,'content');imgs=p.payload(j,'images');snd=p.payload(j,'audio')
  public=out/'public';public.mkdir(exist_ok=True);shutil.copy(p.path(j,snd['wav']),public/'narration.wav')
  en=snd.get('en')

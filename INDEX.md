@@ -1,109 +1,28 @@
-# Bắt đầu tại đây — Video Pilot
+# Start here — Video Pilot
 
-Dự án đã chuyển sang cấu trúc `sys/` + `video/` trên ba nhánh `master`, `video-nghien-cuu`, `video-vocabulary` ngày 22/09/2026. Agent quen cấu trúc cũ hãy đọc file này, rồi đọc [AGENTS.md](AGENTS.md) trước khi làm việc.
+Read [AGENTS.md](AGENTS.md), identify the task and authority, then select the route:
 
-Quy tắc ngôn ngữ: xem mục “Ngôn ngữ giao tiếp và prompt” trong [AGENTS.md](AGENTS.md). Kế hoạch, tiến độ và kết quả cho người dùng bằng tiếng Việt; prompt nội bộ mặc định bằng tiếng Anh, giữ nguyên dữ liệu nội dung.
+| Task | Guide | Skill |
+|---|---|---|
+| Download/clone or configure a machine | [Getting started](sys/docs/getting-started.md) | vp-setup |
+| New chat or continuing unfinished work | [Session handoff](sys/docs/session-start.md) | Skill for the ongoing task |
+| Create or repair a video | [Workflow](sys/docs/workflow.md) | vp-production |
+| Upgrade the system | [Implementation plan](sys/docs/plans/20261003-ke-hoach-chuan-hoa-quyen-mode-va-tai-lieu.md) | vp-development |
+| Cleanup/archive/Git synchronization | [Maintenance](sys/docs/maintenance.md) | vp-maintenance |
 
-## Lưu ý cập nhật Flow — 22/09/2026
+## Layout
 
-**Bản sửa tương thích PC:** đăng ký mascot không còn lấy `preflight.png` thay cho ảnh trước gửi. Screenshot thiếu không chặn khi `flow_require_ui_evidence=false`. Không khôi phục dòng `before_submit = preflight.png` khi merge. Xem [ghi chú cập nhật](sys/docs/flow-pc-compatibility-fix.md).
+- `sys/`: code, docs, schemas, configuration and operational data.
+- `sys/vocab/`: one sense per bank entry; [channel profile](sys/vocab/channel.json).
+- `sys/runs/<job>/`: content, versions, requests and artifacts.
+- `sys/.state/`: local state; `sys/.gflow/`: browser profiles, excluded from Git.
+- `sys/assets/`: mascot/voice references; `video/<job>/`: collected products.
+- `.agents/`: Rules and four skills; corresponding links in sys point to the root.
 
-## Bản đồ thư mục
+The root launcher is `python3 pilot.py`; operational examples use `sys/` as their working directory. Do not infer job/revision from MP4 filenames.
 
-| Vị trí từ gốc dự án | Nội dung |
-| --- | --- |
-| `video/<tên-video>/` | Các file MP4 dành cho người dùng; không đặt mã nguồn hoặc metadata ở đây |
-| `sys/` | Toàn bộ mã nguồn, cấu hình, phụ thuộc và dữ liệu vận hành |
-| `sys/docs/workflow.md` | Quy trình hiện hành: content → media → video |
-| `sys/docs/layout-migration.md` | Báo cáo chuyển đổi, kiểm tra và cách hoàn tác |
-| `sys/runs/<job>/` | Brief, bản nháp, revision, review, bằng chứng và cache của job |
-| `sys/exports/<job>/` | Hồ sơ xuất cũ; MP4 là liên kết tới thư viện video |
-| `sys/.state/` | SQLite và trạng thái; không chỉnh trực tiếp |
-| `sys/.gflow/` | Hồ sơ trình duyệt; giữ cookies và phiên đăng nhập |
-| `sys/assets/characters/channel-mascot/` | Ảnh và cấu hình nhân vật chuẩn |
-| `sys/scripts/`, `sys/renderer/` | Công cụ Python/Node và bộ dựng video |
-| `sys/tests/`, `sys/examples/`, `sys/schemas/` | Kiểm thử, ví dụ và hợp đồng dữ liệu |
-| `sys/experiments/b2_illustrator/` | B-2 vẫn đang được pipeline sử dụng; không phải thư mục rác |
-| `sys/reports/` | Báo cáo lịch sử, không phải quyết định duyệt hiện tại |
-| `sys/scratch/` | Dữ liệu tạm có thể chứa bằng chứng thật; không xóa hàng loạt |
-| `sys/.venv/`, `sys/.venv-tts/`, `sys/.venv-en/` | Môi trường điều phối, giọng Việt và giọng Anh |
-| `sys/node_modules/` | Phụ thuộc Node, Remotion và trình duyệt |
-| `sys/maintenance/layout-20260922/` | Bản sao mã trước chuyển đổi, checksum, ánh xạ và log; chỉ có local |
-| `.agents/`, `AGENTS.md`, `GEMINI.md` | Hướng dẫn agent tại gốc; các tên tương ứng trong sys là liên kết về đây |
-| `.git/`, `.claude/` | Git và worktree của công cụ; giữ nguyên vị trí |
-| `pilot.py` | Launcher ở gốc; mã điều phối thực ở `sys/pilot.py` |
+## Upgrade status
 
-## Đổi đường dẫn cũ sang mới
+Authority/modes/Colab and English portrait direction are being normalized; [progress and evidence](sys/docs/implementation/normalization-progress.md) identify verified capabilities. Do not use v3 auto for the new no-reviewer auto task. Existing jobs migrate only through compatibility-checked tools, never direct state/baseline edits.
 
-| Cũ | Mới |
-| --- | --- |
-| `docs/...`, `scripts/...`, `tests/...` | `sys/docs/...`, `sys/scripts/...`, `sys/tests/...` |
-| `assets/...`, `examples/...`, `schemas/...` | Thêm tiền tố `sys/` |
-| `runs/...`, `scratch/...`, `.state/...`, `.gflow/...` | Thêm tiền tố `sys/` |
-| `config.json`, `workflow.py`, `adapters.py`, các module khác | `sys/<tên-file>` |
-| `package.json`, lockfile và requirements | `sys/<tên-file>` |
-| `.venv*/bin/python`, `node_modules/...` | `sys/.venv*/bin/python`, `sys/node_modules/...` |
-| `exports/<job>/*.mp4` | Video tại `video/<job>/`; hồ sơ/liên kết cũ tại `sys/exports/<job>/` |
-
-Không sửa các đường dẫn tuyệt đối bên trong báo cáo lịch sử, revision hoặc bằng chứng đã lưu. Khi tra cứu thủ công, ánh xạ `<gốc-cũ>/runs/...` sang `<gốc>/sys/runs/...`. Không tạo lại hàng loạt thư mục cũ tại gốc để chữa lỗi đường dẫn.
-
-## Lệnh chạy
-
-Từ gốc dự án:
-
-```bash
-python3 pilot.py doctor
-python3 pilot.py status JOB
-python3 pilot.py next JOB
-python3 pilot.py run JOB
-python3 pilot.py resume JOB
-sys/.venv/bin/python -m unittest discover -s sys/tests -v
-npm --prefix sys ls --depth=0
-```
-
-`JOB` là mã job thực tế, không phải tên thư mục video tùy ý. `run`/`resume` tuân thủ gate, chỉ dùng khi nhiệm vụ sản xuất đã được yêu cầu.
-
-Hoặc vào thư mục hệ thống, rồi dùng các lệnh và đường dẫn tương đối trong skill/tài liệu vận hành:
-
-```bash
-cd sys
-python3 pilot.py doctor
-python3 scripts/clean_production.py --periodic --dry-run
-```
-
-Các đối số `--brief`, `--evidence`, `--queue` được tính từ thư mục đang chạy. Ví dụ từ gốc dùng `--brief sys/examples/story-v3/brief.json`; từ sys dùng `--brief examples/story-v3/brief.json`.
-
-## Các điểm agent cần nhớ
-
-1. Kiểm tra nhánh và thay đổi chưa commit trước khi làm việc. Ba nhánh dùng chung bố cục nhưng giữ mã và dữ liệu riêng. Ưu tiên worktree riêng; không ghi đè kho research/vocab hoặc dữ liệu local khi đổi nhánh.
-2. Đọc [quy trình](sys/docs/workflow.md) và skill phù hợp; trước sản xuất chạy status và next. Không suy ra quyết định duyệt từ file video có sẵn.
-3. Job lịch sử giữ nguyên integrity baseline; không sửa để tiếp tục chạy bằng mã mới. Nếu báo LEGACY_JOB, giữ lịch sử chỉ đọc và tạo job mới theo quy trình.
-4. Video mới được sao chép ra `video/<job>/` sau đủ ba quyết định duyệt hợp lệ; tên gồm revision và tỷ lệ. Nếu xuất bị gián đoạn sau duyệt, resume có thể thử lại việc xuất mà không ghi lại quyết định.
-5. Không xóa runs, reviews, bằng chứng, SQLite, phiên đăng nhập hoặc model chỉ để giảm dung lượng. Công cụ dọn scratch chỉ tự xóa thư mục tạm rỗng đã quá hạn; phần dọn cache trình duyệt và tỉa revision vẫn cần rà soát riêng trước khi chạy thật.
-6. Kiểm tra chuyển đổi trước đó: 164 tests Python đạt; 3 lỗi kiểm thử kết nối lại B-2 tồn tại từ trước. Không coi kết quả tests hoặc doctor là nghiệm thu Flow/media thật.
-
-Thư mục gốc chỉ dành cho `video/`, `sys/`, các ngoại lệ công cụ và file hướng dẫn/launcher. Lưu báo cáo kỹ thuật mới vào `sys/`, không để dữ liệu phát sinh rải ở gốc.
-
-## Dữ liệu riêng theo nhánh
-
-- `master`: nền hệ thống dùng chung.
-- `video-nghien-cuu`: kho `sys/research/`, cấu hình và kiểm tra nhịp hình nghiên cứu.
-- `video-vocabulary`: kho `sys/vocab/`, brief và cấu hình từ vựng.
-
-Video và môi trường chạy nằm local, không được đưa lên GitHub. Xem `sys/docs/branch-sync.md` để biết cách đồng bộ và khôi phục.
-
-## Tool Flow tạo ảnh đồng thời
-
-Đọc [hướng dẫn hàng đợi Flow](sys/docs/flow-queue-operations.md) trước khi cập nhật tool hoặc chạy ảnh. Tài liệu gồm link share, cấu hình máy riêng, cách khôi phục và trạng thái nghiệm thu; không bật sản xuất chỉ vì đã pull mã mới.
-
-## Skills trên nhánh từ vựng
-
-`vp-vocab` điều phối kho và CLI; `vp-content` viết nội dung; `vp-media` chạy audio trước images; `vp-video` dựng/duyệt/xuất; `vp-clean` kiểm kê và dọn scratch rỗng. Văn phong nằm trong references của vp-content và được adapter nạp vào lượt viết chi tiết. Xem sys/docs/vocab-redesign-plan.md.
-
-## Hệ thống đạo diễn
-
-Xem [hệ thống đạo diễn](sys/docs/director-system.md), [kế hoạch nâng cấp](sys/docs/director-upgrade-plan.md) và [khảo sát có bằng chứng](sys/reports/director-research-20260924/bao-cao.md). Bốn skill đạo diễn làm việc trong ba phần hiện có. Khi Python hệ thống thiếu phụ thuộc, dùng `sys/.venv/bin/python pilot.py ...` từ gốc hoặc `.venv/bin/python pilot.py ...` trong `sys/`.
-
-## Tích hợp âm thanh Colab T4
-
-Xem [hướng dẫn Colab TTS](sys/docs/colab-tts.md). Giữ mẫu giọng Minh Quân Pro/Alba, thử mô hình OmniVoice; ảnh có thể chạy song song khi bật chế độ Colab. Mặc định chưa bật trước khi đo và nghe mẫu thật.
+[Approved experimental UI](sys/docs/plans/20261003-chot-giao-dien-thu-nghiem.md), [active documentation index](sys/docs/INDEX.md). [Layout migration](sys/docs/layout-migration.md) and [branch synchronization](sys/docs/branch-sync.md) are historical records; their old measurements/tests are not current acceptance evidence.

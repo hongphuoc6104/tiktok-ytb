@@ -1,80 +1,26 @@
 # Video Pilot
 
-Bắt đầu tại [INDEX.md](INDEX.md): bản đồ thư mục mới và hướng dẫn cho agent quay lại dự án.
+Produce one-sense vocabulary lessons through narration and explanatory illustrations. The current channel targets English B1+ portrait Shorts: 9:16, bright backgrounds, bold outlines, flat colors and a small canonical mascot. One question/situation leads to a payoff; choose scene/image counts per video instead of a fixed comedy template.
 
-Pipeline chính: **kịch bản → âm thanh và hình ảnh → video hoàn chỉnh**.
-Hai chế độ: **review** (bạn duyệt ba mốc) và **auto** (máy đánh giá rồi chuyển bước).
-Hướng dẫn duy nhất cho quy trình: [docs/workflow.md](sys/docs/workflow.md). Rules: [AGENTS.md](AGENTS.md).
+New English briefs default to **reference-narrator at 0.92**, using the [user-selected sample](sys/assets/voices/reference-narrator/README.md). Vietnamese Minh Quân Pro and existing jobs retain their own saved voice contracts.
 
-```bash
-python3 pilot.py doctor
-python3 pilot.py new video-001 --brief sys/examples/story-v3/brief.json --mode review
-python3 pilot.py status video-001
-python3 pilot.py next video-001
-python3 pilot.py run video-001
-```
+## Getting started
 
-Không còn duyệt riêng control/images/audio hoặc ba cảnh đầu. run/resume tự tiến đến mốc theo mode. Auto không cần người dùng duyệt từng video, nhưng phải có kiểm tra thật; không đánh giá được thì báo cần xử lý. Hàng đợi dùng `pilot.py batch --queue queue.json`, danh sách job auto đã tạo.
+1. Read [INDEX](INDEX.md) to select the task.
+2. New machine: [getting-started](sys/docs/getting-started.md). New chat: [session-start](sys/docs/session-start.md).
+3. Open the lightweight local dashboard as described in getting-started; eight tabs share actual job/revision/event data.
+4. Production: [workflow](sys/docs/workflow.md); upgrades: vp-development; maintenance: [guide](sys/docs/maintenance.md) and vp-maintenance.
 
-## Kho từ vựng
+Authority is defined by [AGENTS](AGENTS.md) and .agents/rules. One task uses one active role; valid grants survive chat changes. User-facing chat and UI remain Vietnamese.
 
-Kênh học từ vựng lấy từ ra từ `vocab/`: mỗi video là một nghĩa của một từ, từ đã làm được
-đánh dấu để không lặp lại, từ nhiều nghĩa tách thành nhiều mục riêng. Đây là đường bắt
-buộc, không phải quy ước: `config.brief_policies` chặn brief từ vựng không sinh từ kho ngay
-trong `pilot.py new`. Hướng dẫn: [docs/vocabulary.md](sys/docs/vocabulary.md).
+## Architecture
 
-```bash
-cd sys
-python3 vocab/bank.py status
-python3 vocab/bank.py next --count 10 --topic food-drink
-python3 vocab/bank.py start vocab-010 --mode review
-python3 vocab/bank.py mark vocab-010 --note 'Đã xuất bản'
-python3 vocab/bank.py queue --count 5 --mode auto   # rồi pilot.py batch --queue vocab/queue.json
-python3 vocab/bank.py audit                        # job nào làm ngoài kho, job nào quên mark
-```
-- `master`: nền dùng chung; chỉ nhận cải tiến pipeline áp dụng cho nhiều kênh.
-- `video-nghien-cuu`: nội dung giải thích và hướng dẫn nghiên cứu.
-- `video-vocabulary`: bản lưu phát triển kênh học tiếng Anh/từ vựng.
+The machine keeps UI, authentication, plans, metadata, evidence and collected products. Colab performs audio/media/timeline/subtitle/render work; Google Flow generates images. Remote failures do not trigger heavy local fallback. No paid APIs or automatic compute purchases.
 
-Không merge ngược toàn bộ nội dung riêng của kênh vào master; chuyển riêng các
-commit cải tiến dùng chung. Xem [hướng dẫn từ vựng](sys/docs/vocabulary.md).
+Auto plans, executes and recovers through micro-plans without a reviewer. Review waits for the user after each main output. Both modes update real products on the dashboard.
 
-## Sắp xếp thư mục
+## Data and status
 
-- `video/<tên-video>/`: chỉ chứa file MP4 để xem và sử dụng. Video mới được sao chép ra đây sau khi duyệt video hợp lệ; các bản đã xuất từ trước được chuyển nguyên trạng, không suy ra đã được duyệt theo v3.
-- `sys/`: mã nguồn, cấu hình, tài liệu, môi trường Python/Node, dữ liệu job, hồ sơ trình duyệt và hồ sơ xuất cũ. `sys/exports/` giữ metadata và liên kết tới các video đã chuyển.
-- `.git/`, `.agents/`, `.claude/`: giữ ở gốc để Git, phát hiện skill/Rules và các worktree của trợ lý hoạt động.
-- `pilot.py`: điểm chạy tại gốc, chuyển vào bộ điều phối trong `sys/`.
+`sys/` contains the system/data; `video/<job>/` contains products. Vocabulary comes from sys/vocab, one sense per entry; repairs retain versions and dependency impact. Do not commit tokens, profiles, models, databases or runtime media.
 
-Lệnh vận hành ở trên chạy từ gốc. Các hướng dẫn kỹ thuật trong `sys/docs/` dùng đường dẫn tương đối với `sys/`; hãy `cd sys` trước khi chạy. Cài Node bằng `npm --prefix sys ci` nếu đang ở gốc.
-
-Các job cũ vẫn giữ baseline và lịch sử gốc; không sửa integrity để tiếp tục chạy sau thay đổi mã. Chi tiết chuyển đổi: [báo cáo sắp xếp](sys/docs/layout-migration.md).
-
-## Môi trường
-
-Chạy các lệnh cài môi trường sau khi `cd sys`.
-
-Python điều phối: `uv venv --python 3.12 .venv`, cài requirements.txt; Node: `npm ci`.
-Tiếng Việt: `.venv-tts` Python 3.10, tts-requirements.lock; VieNeu v3 Turbo ONNX FP32, Minh Quân Pro.
-Tiếng Việt trên GPU (tùy chọn): `.venv-tts-gpu` Python 3.10, tts-gpu-requirements.lock (torch 2.8.0 cu126, chạy được Pascal như Quadro P620). Có môi trường này thì `tts_device: auto` dùng GPU PyTorch FP32, gom `tts_batch_size` cảnh mỗi lượt; thiếu CUDA hoặc hết VRAM thì tự lùi về ONNX/CPU và ghi vào `fallbacks` của tts-result.json. Đo ngày 23/09/2026 (Phạm Tuyên, 98 giây giọng): P620 21,5 giây gồm nạp model, Xeon E3-1240 v3 ONNX 51 giây. Đặt `tts_device: cpu` để giữ ONNX.
-
-```bash
-uv venv --python 3.10 .venv-tts-gpu
-uv pip sync --python .venv-tts-gpu/bin/python --index-strategy unsafe-best-match tts-gpu-requirements.lock
-```
-
-Tiếng Anh: `.venv-en` Python 3.11; Pocket TTS Alba, CPU INT8 attention/FFN, decoder FP32, tốc độ gốc.
-
-```bash
-uv venv --python 3.11 .venv-en
-uv pip sync --python .venv-en/bin/python --index-strategy unsafe-best-match en-requirements.lock
-```
-
-Model tải lần đầu, lần sau dùng cache; không API trả phí. Alba cần ghi công theo [voice-attribution.md](sys/docs/voice-attribution.md).
-Máy đích Xeon E3-1241 v3 / 16 GB / P620 2 GB: chưa nghiệm thu hiệu năng thực tế. Render hiện cấu hình bốn tác vụ. Flow cho phép thử queue tối đa bốn ảnh độc lập qua flow_batch/flow_queue_trial_enabled; acceptance chưa đạt sản xuất. Không tạo video AI.
-
-## Kiểm chứng
-
-`sys/.venv/bin/python -m unittest discover -s sys/tests -v` kiểm tra logic bằng fixture cô lập; không phải nghiệm thu Flow/video thật.
-Auto dùng Antigravity đăng nhập tài khoản; chưa mặc định khẳng định công cụ hỗ trợ nghe/xem mọi loại media. Nếu thiếu hỗ trợ, job không được thông qua.
-Job cũ và báo cáo reports/ giữ làm lịch sử; không sửa integrity baseline để chạy job cũ theo mã mới.
+The upgrade remains in progress; see [verified progress](sys/docs/implementation/normalization-progress.md). Engine v3 and old reports describe historical compatibility, not acceptance of the new auto/English portrait path. Isolated tests do not replace actual Flow/T4/audio/video trials.

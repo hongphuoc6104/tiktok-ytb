@@ -34,6 +34,12 @@ def run(request_path, output_dir):
     raw.mkdir(exist_ok=True)
     waves, stats = {}, []
     worker_hash = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+    if req.get('worker_sha256') and req['worker_sha256'] != worker_hash:
+        raise RuntimeError('Remote TTS worker checksum mismatch')
+    for support in req.get('support_files', []):
+        path = Path(request_path).parent / support['name']
+        if Path(support['name']).name != support['name'] or path.is_symlink() or hashlib.sha256(path.read_bytes()).hexdigest() != support['sha256']:
+            raise RuntimeError('Remote processing source checksum mismatch')
     for lang in sorted(req['profiles']):
         spec = req['models'][lang]
         profile = req['profiles'][lang]
@@ -129,7 +135,7 @@ def run(request_path, output_dir):
         segments.append(dict(scene_id=part['scene_id'], text=part['text'], path=name, content_duration=duration))
     engine = dict(backend='colab-omnivoice', precision='float16', device=torch.cuda.get_device_name(0),
                   models=req['models'], batch_size=req['batch_size'], num_step=req['num_step'])
-    result = dict(request_id=req['request_id'], voice=req['profiles']['vi']['voice'], engine=engine,
+    result = dict(request_id=req['request_id'], voice=req['profiles'][req.get('primary_language','vi')]['voice'], engine=engine,
                   segments=segments, english_spans=spans, batches=stats,
                   voice_references={k: dict(voice=v['voice'], sha256=v['sha256'], source_speed=v['source_speed']) for k,v in req['profiles'].items()}, elapsed_seconds=time.monotonic() - start)
     (output / 'tts-result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
@@ -142,9 +148,22 @@ def run(request_path, output_dir):
                                take=dict(retake=sc['retake'], seed=req['seed'] + sc['retake'])))
         en = dict(request_id=req['request_id'], voice=req['profiles']['en']['voice'], engine='colab-omnivoice', scenes=scenes)
         (output / 'en-result.json').write_text(json.dumps(en, ensure_ascii=False, indent=2))
+    if req.get('secondary'):
+        extra = []
+        for n, part in enumerate(req['secondary']):
+            name = f'secondary-{n:04d}.wav'
+            duration = save(name, [waves[i] for i in part['items']], part['pause'])
+            extra.append(dict(scene_id=part['scene_id'], language=part['language'], text=part['text'], path=name, content_duration=duration))
+        (output / 'secondary-result.json').write_text(json.dumps({'request_id': req['request_id'], 'segments': extra}, ensure_ascii=False, indent=2))
+    if req.get('assemble'):
+        import importlib.util
+        module_path = Path(request_path).parent / 'media_packaging.py'
+        spec = importlib.util.spec_from_file_location('vp_media_packaging', module_path)
+        module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+        module.assemble(req, output, Path(request_path).parent)
     archive = output.with_suffix('.zip')
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
         for path in output.iterdir():
-            if path.suffix in ('.json', '.wav'):
+            if path.suffix in (('.json', '.wav', '.srt') if req.get('assemble') else ('.json', '.wav')):
                 z.write(path, path.name)
     print(json.dumps({'request_id': req['request_id'], 'archive': str(archive), 'elapsed_seconds': result['elapsed_seconds']}), flush=True)

@@ -1,13 +1,22 @@
 """Python bridge for B-2 Illustrator session communication over Unix domain socket."""
 import json
 import os
+import hashlib
+import tempfile
+import stat
+import struct
 import socket
 import time
 from pathlib import Path
 from pilot import Blocked, digest
 
 ROOT = Path(__file__).resolve().parent
-SOCKET_PATH = ROOT / "experiments/b2_illustrator/results/controller/session.sock"
+def session_socket_path(root=ROOT):
+    key = hashlib.sha256(str(Path(root).resolve()).encode()).hexdigest()[:16]
+    return Path(tempfile.gettempdir()) / ('video-pilot-' + str(os.getuid())) / ('flow-' + key + '.sock')
+
+
+SOCKET_PATH = session_socket_path()
 
 
 def get_socket_path() -> Path:
@@ -52,10 +61,24 @@ def send_raw_command(command: str, timeout: float = 120.0) -> dict:
             f"B-2 Illustrator session socket not found at {SOCKET_PATH}. "
             "Ensure b2-session service is running (e.g. systemctl --user start b2-session.service)."
         )
+    try:
+        parent = SOCKET_PATH.parent.lstat()
+        endpoint = SOCKET_PATH.lstat()
+        if (stat.S_ISLNK(parent.st_mode) or not stat.S_ISDIR(parent.st_mode)
+                or parent.st_uid != os.getuid() or stat.S_IMODE(parent.st_mode) != 0o700
+                or not stat.S_ISSOCK(endpoint.st_mode) or endpoint.st_uid != os.getuid()
+                or stat.S_IMODE(endpoint.st_mode) != 0o600):
+            raise _mark_not_submitted(Blocked('UNSAFE_FLOW_SOCKET: private owned directory and socket required'))
+    except OSError as error:
+        raise _mark_not_submitted(Blocked('UNSAFE_FLOW_SOCKET: endpoint ownership unavailable')) from error
     client = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
     client.settimeout(timeout)
     try:
         client.connect(str(SOCKET_PATH))
+        if hasattr(socket, 'SO_PEERCRED'):
+            _, peer_uid, _ = struct.unpack('3i', client.getsockopt(socket.SOL_SOCKET, socket.SO_PEERCRED, struct.calcsize('3i')))
+            if peer_uid != os.getuid():
+                raise _mark_not_submitted(Blocked('UNSAFE_FLOW_SOCKET: peer user differs from the runtime owner'))
         payload = (command.strip() + "\n").encode("utf-8")
         client.sendall(payload)
         
@@ -126,6 +149,10 @@ def generate_b2_image(
     test_case: str = "SCENE",
     timeout: float = 120.0,
     collection_only: bool = False,
+    before_submit=None,
+    model=None,
+    project=None,
+    tool_url=None,
 ) -> dict:
     """Generate image via B-2 Illustrator applet and harvest committed result."""
     try:
@@ -158,18 +185,20 @@ def generate_b2_image(
         "baseMediaId": base_media_id,
         "charMediaId": char_media_id,
     }
+    if model is not None:
+        spec.update(model=model, project=project, toolUrl=tool_url, managementContract=1)
 
     spec_file = target_dir / f".spec-{test_case}-{int(time.time() * 1000)}.json"
     spec_file.write_text(json.dumps(spec, indent=2), encoding="utf-8")
 
-    return generate_b2_batch([spec], timeout=timeout)[0]
+    return generate_b2_batch([spec], timeout=timeout, before_submit=before_submit)[0]
 
 
-def generate_b2_batch(specs: list[dict], timeout: float = 240.0) -> list[dict]:
+def generate_b2_batch(specs: list[dict], timeout: float = 240.0, before_submit=None) -> list[dict]:
     """Submit immutable groups through the persistent queue UI adapter."""
     try:
         require_queue_acceptance()
-        ensure_connected()
+        connection = ensure_connected()
         if not 1 <= len(specs) <= 4:
             raise Blocked("B-2 queue requires one to four independent requests")
         for spec in specs:
@@ -188,6 +217,8 @@ def generate_b2_batch(specs: list[dict], timeout: float = 240.0) -> list[dict]:
         import uuid
         manifest = folder / f"queue-{uuid.uuid4().hex}.json"
         manifest.write_text(json.dumps(specs, ensure_ascii=False, indent=2), encoding="utf-8")
+        if before_submit is not None:
+            before_submit(connection)
     except Blocked as exc:
         _mark_not_submitted(exc)
         raise

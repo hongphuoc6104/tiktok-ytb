@@ -11,7 +11,7 @@ import {
   useCurrentFrame
 } from 'remotion';
 
-function renderHighlightedText(text: string, targetWord?: string) {
+function renderHighlightedText(text: string, targetWord?: string, modern = false) {
   if (!text) return null;
   const cleanTarget = targetWord ? targetWord.toLowerCase().trim() : '';
 
@@ -20,7 +20,7 @@ function renderHighlightedText(text: string, targetWord?: string) {
   return parts.map((part, i) => {
     const cleanPart = part.toLowerCase().replace(/[^a-z0-9-]/g, '');
     const isTarget = cleanTarget && cleanPart === cleanTarget;
-    const isEnglishKeyword = /^[A-Z][a-zA-Z0-9-]*$/.test(part) && part.length > 1;
+    const isEnglishKeyword = !modern && /^[A-Z][a-zA-Z0-9-]*$/.test(part) && part.length > 1;
 
     if (isTarget || isEnglishKeyword) {
       return (
@@ -103,7 +103,7 @@ const Video: React.FC<any> = (p) => {
     translateX = (progress - 0.5) * 3;
   } else if (effect === 'slide_left') {
     translateX = (1 - transition) * 100;
-  } else {
+  } else if (!p.modern_style && effect !== 'hold') {
     // AUTO KEN BURNS (Chu kỳ chuyển động camera êm ái chống nhàm chán)
     const cycle = active % 4;
     if (cycle === 0) {
@@ -135,7 +135,7 @@ const Video: React.FC<any> = (p) => {
   const isVideoAsset = currentImageSrc && (currentImageSrc.endsWith('.mp4') || currentImageSrc.endsWith('.webm'));
 
   return (
-    <AbsoluteFill style={{background: '#090D16', fontFamily: 'Arial, sans-serif', color: 'white', width, height, overflow: 'hidden'}}>
+    <AbsoluteFill style={{background: p.modern_style ? '#F8FAFC' : '#090D16', fontFamily: 'Arial, sans-serif', color: 'white', width, height, overflow: 'hidden'}}>
       {/* Background layer transition */}
       {active > 0 && ['fade', 'slide_left'].includes(beat.effect) && transition < 1 && (
         <Img
@@ -173,7 +173,7 @@ const Video: React.FC<any> = (p) => {
 
       {/* 2D Comic Doodle Visual Accents */}
       {/* 1. Dấu chấm than giật mình (tùy chọn khi tranh chưa có sẵn biểu cảm) */}
-      {p.show_exclamation && scene.id === 'SC01' && relative >= 0.5 && relative <= 2.2 && (
+      {!p.modern_style && p.show_exclamation && scene.id === 'SC01' && relative >= 0.5 && relative <= 2.2 && (
         <div
           style={{
             position: 'absolute',
@@ -198,7 +198,7 @@ const Video: React.FC<any> = (p) => {
       )}
 
       {/* 2. Interactive Practice Indicator: Đếm nhịp luyện nói tự động đồng bộ theo Cue */}
-      {cue && (cue.practice || cue.text?.includes('Cùng nhắc lại nhé')) && (() => {
+      {!p.modern_style && cue && (cue.practice || cue.text?.includes('Cùng nhắc lại nhé')) && (() => {
         const pDur = cue.end - cue.start;
         const pRel = t - cue.start;
         const pProgress = Math.max(0, Math.min(1, pRel / pDur));
@@ -237,7 +237,7 @@ const Video: React.FC<any> = (p) => {
         const targetWord = p.target_word;
         return (
           <div data-check="subtitle" style={captionStyle(width, height) as React.CSSProperties}>
-            {renderHighlightedText(lineText, targetWord)}
+            {renderHighlightedText(lineText, targetWord, p.modern_style)}
           </div>
         );
       })()}

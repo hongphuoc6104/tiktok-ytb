@@ -1,9 +1,5 @@
-Đọc `INDEX.md` và `AGENTS.md` ở gốc trước khi làm việc. Hệ thống ở `sys/`, video ở `video/<tên-video>/`; các đường dẫn vận hành trong hướng dẫn tính từ `sys/`.
+# Video Pilot entry adapter
 
-Đọc AGENTS.md và sys/docs/workflow.md. Đây là quy trình v3 ba phần; không áp dụng quy trình duyệt từng module cũ. Mọi video trong dự án luôn dùng nhân vật đại diện kênh cố định (canonical mascot: Người que áo xanh biển nhạt #8CCFE8 tại sys/assets/characters/channel-mascot/reference-v1.png).
+Read [INDEX.md](INDEX.md) and [AGENTS.md](AGENTS.md) at the root. They are the shared sources for tasks, language and authority; do not maintain a duplicate rule set here.
 
-Ngôn ngữ: tuân thủ mục “Ngôn ngữ giao tiếp và prompt” trong AGENTS.md. Mọi kế hoạch (plan), tiến độ và kết quả hiển thị cho người dùng dùng tiếng Việt; chỉ dẫn/prompt nội bộ mặc định dùng tiếng Anh. Giữ nguyên ngôn ngữ dữ liệu, câu trích, chữ hiển thị và các trường máy đọc bắt buộc.
-
-Video từ vựng bắt đầu với vp-vocab; lần lượt đọc vp-content → vp-media → vp-video. vp-clean chỉ bảo trì dữ liệu tạm. Mark sau quyết định hợp lệ và xác minh video đã xuất.
-
-Đạo diễn: xem `sys/docs/director-system.md`; các skill đạo diễn hỗ trợ bên trong content/media/video, không thêm gate. Brief cũ giữ nguyên, kiểm tra hình/lời/âm thật trước quyết định.
+Select the skill for the current workflow. On return, read [session-start](sys/docs/session-start.md); for production, read [workflow](sys/docs/workflow.md) and the saved job contract. Documentation or an experimental UI is not proof that a capability works.

@@ -39,7 +39,7 @@ class BankTests(unittest.TestCase):
             {'id': 'money', 'vi': 'Tiền bạc', 'en': 'Money', 'angle': 'x'},
             {'id': 'nature', 'vi': 'Thiên nhiên', 'en': 'Nature', 'angle': 'y'}]})
         vb.write_json(self.tmp / 'channel.json', json.loads(
-            (Path(__file__).resolve().parent / 'channel.json').read_text(encoding='utf-8')))
+            (Path(__file__).resolve().parents[1] / 'docs/legacy/channel-micro-drama-v3.json').read_text(encoding='utf-8')))
 
     def tearDown(self):
         for p in self.patches:
@@ -251,7 +251,7 @@ class PolicyTests(unittest.TestCase):
         vb.write_json(self.tmp / 'topics.json', {'version': 1, 'topics': [
             {'id': 'money', 'vi': 'Tiền bạc', 'en': 'Money', 'angle': 'x'}]})
         vb.write_json(self.tmp / 'channel.json', json.loads(
-            (Path(__file__).resolve().parent / 'channel.json').read_text(encoding='utf-8')))
+            (Path(__file__).resolve().parents[1] / 'docs/legacy/channel-micro-drama-v3.json').read_text(encoding='utf-8')))
         (self.tmp / 'sources' / 'money.txt').write_text('pay|v|trả tiền|A1\n', encoding='utf-8')
         vb.build()
 
@@ -307,8 +307,13 @@ class RealBankTests(unittest.TestCase):
         if not (real / 'bank.jsonl').exists():
             self.skipTest('chưa build kho thật')
         before = (real / 'bank.jsonl').read_text(encoding='utf-8')
-        vb.build()
-        self.assertEqual(before, (real / 'bank.jsonl').read_text(encoding='utf-8'),
+        # Compile from real sources into a sandbox; a test must not rewrite the shipped bank.
+        with __import__('tempfile').TemporaryDirectory() as folder:
+            destination = Path(folder) / 'bank.jsonl'
+            with patch.object(vb, 'BANK', destination), patch.object(vb, 'REPO', Path(folder)):
+                vb.build()
+            rebuilt = destination.read_text(encoding='utf-8')
+        self.assertEqual(before, rebuilt,
                          'bank.jsonl lệch với sources; chạy python3 vocab/bank.py build')
 
     def test_shipped_bank_has_no_duplicate_senses(self):

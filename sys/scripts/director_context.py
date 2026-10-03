@@ -1,13 +1,13 @@
 """Load local craft instructions explicitly for tool-free generation/review."""
 from pathlib import Path
 
-ROLES = {
-    'outline': ('vp-script-director', 'vp-visual-director'),
-    'detail': ('vp-edit-director', 'vp-audio-director'),
-    'content': ('vp-script-director', 'vp-visual-director', 'vp-edit-director', 'vp-audio-director'),
-    'media': ('vp-visual-director', 'vp-audio-director', 'vp-edit-director'),
-    'video': ('vp-edit-director', 'vp-audio-director', 'vp-visual-director'),
-    'registration': ('vp-visual-director',),
+REFERENCES = {
+    'outline': ('script', 'visuals'),
+    'detail': ('narration-style', 'audio', 'editing'),
+    'content': ('script', 'visuals', 'audio', 'editing'),
+    'media': ('visuals', 'audio', 'editing'),
+    'video': ('editing', 'audio', 'visuals'),
+    'registration': ('visuals',),
 }
 
 
@@ -18,12 +18,12 @@ def vocabulary_brief(brief):
         x in text for x in ('từ vựng', 'tu vung', 'vocabulary', 'học từ ', 'word of the day'))
 
 
-def context(root, stage, brief):
+def context(root, stage, brief, include_entrypoint=True):
     base = Path(root) / '.agents/skills'
-    paths = [base / 'vp-content/references/director-contract.md']
-    paths += [base / name / 'SKILL.md' for name in ROLES[stage]]
+    paths = [base / 'vp-production/SKILL.md'] if include_entrypoint else []
+    paths += [base / 'vp-production/references' / (name + '.md') for name in REFERENCES[stage]]
     if stage in ('outline', 'content') and vocabulary_brief(brief):
-        paths.append(base / 'vp-content/references/vocab-pedagogy.md')
+        paths.append(base / 'vp-production/references/vocabulary.md')
     text = '\n\n'.join(f'Local craft guidance ({p.relative_to(base)}):\n{p.read_text()}' for p in paths)
     return text + '\n\n' + tolerance_guidance(root) if stage in TOLERANCE_STAGES else text
 

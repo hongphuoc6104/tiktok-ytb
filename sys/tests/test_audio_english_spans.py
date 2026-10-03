@@ -99,11 +99,14 @@ class AudioAdapterTests(unittest.TestCase):
                           {'id':'SC04','narration':SC04,'vocabulary':VOCAB,'audio_direction':{'vi':{'learner_pause_seconds':3.0}}},
                           {'id':'SC05','narration':'Rất tuyệt vời, hẹn gặp lại!'}]}
   self.cfg=dict(read(ROOT/'config.json'))
+  # This legacy Pocket-splicing fixture intentionally keeps Alba at 1.0.
+  self.cfg.update(en_voice='alba',en_speed=1.)
   self.calls=[]
  def tearDown(self):self.tmp.cleanup()
 
  def run_audio(self,**cfg):
-  p=FakeP(self.root,self.content,dict(self.cfg,**cfg));self.p=p
+  selected=dict(self.cfg,**cfg);selected['colab_tts']=dict(selected.get('colab_tts',{}),enabled=False)
+  p=FakeP(self.root,self.content,selected);self.p=p
   for sid,n in getattr(self,'retakes',{}).items():
    for _ in range(n):p.db.execute("INSERT INTO audio_edits(job,scene_id,note,at) VALUES('j',?,'TEST',0)",(sid,))
   real=subprocess.run
