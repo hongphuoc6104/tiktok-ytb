@@ -49,6 +49,34 @@ class StoryContractTests(unittest.TestCase):
     def test_forward_image_reference_rejected(self):
         b,c=fixture();add_variation(c);c['scenes'][0]['images'][0]['based_on']='IMAGE_EXTRA'
         with self.assertRaisesRegex(ContractError,'IMAGE_BASE'):self.check(b,c)
+    def test_cross_scene_based_on_accepted(self):
+        b,c=fixture()
+        base_id = c['scenes'][0]['images'][0]['id']
+        c['scenes'][1]['images'][0]['based_on'] = base_id
+        c['scenes'][1]['images'][0]['preserve'] = 'Giữ nguyên bối cảnh căn bếp'
+        self.check(b,c)
+    def test_cross_scene_forward_reference_rejected(self):
+        b,c=fixture()
+        future_id = c['scenes'][1]['images'][0]['id']
+        c['scenes'][0]['images'][0]['based_on'] = future_id
+        c['scenes'][0]['images'][0]['preserve'] = 'Giữ nguyên bối cảnh căn bếp'
+        with self.assertRaisesRegex(ContractError,'IMAGE_BASE'):self.check(b,c)
+    def test_self_reference_rejected(self):
+        b,c=fixture()
+        im = c['scenes'][0]['images'][0]
+        im['based_on'] = im['id']
+        im['preserve'] = 'Giữ nguyên'
+        with self.assertRaisesRegex(ContractError,'IMAGE_BASE'):self.check(b,c)
+    def test_all_supported_effects_accepted(self):
+        for eff in ['hold', 'cut', 'fade', 'slide_left', 'zoom_in', 'zoom_out', 'punch_in', 'pan_left', 'pan_right', 'shake']:
+            b, c = fixture()
+            c['scenes'][0]['beats'][0]['effect'] = eff
+            self.check(b, c)
+    def test_unsupported_effect_rejected(self):
+        b, c = fixture()
+        c['scenes'][0]['beats'][0]['effect'] = 'flip_3d'
+        with self.assertRaises(ContractError):
+            self.check(b, c)
     def test_unused_images_rejected(self):
         b,c=fixture();add_variation(c);c['scenes'][0]['beats']=c['scenes'][0]['beats'][:1]
         with self.assertRaisesRegex(ContractError,'IMAGE_USAGE'):self.check(b,c)
@@ -174,6 +202,44 @@ class StoryIntegrationTests(unittest.TestCase):
         self.assertEqual(before['SC02_I1'],after['SC02_I1'])
         item=next(x for x in self.p.payload(self.job,'images')['items'] if x['image_id']=='IMAGE_EXTRA')
         self.assertNotIn('CH01',item['actual_prompt']);self.assertNotIn('SC01',item['actual_prompt'])
+
+    def test_cross_scene_variations_reach_media_with_real_dependency_journal(self):
+        wf.new(self.p,self.job,read(ROOT/'examples/story-v3/brief.json'))
+        _,rev,h=self.p.brief(self.job);_,c=fixture()
+        base_id = c['scenes'][0]['images'][0]['id']
+        c['scenes'][1]['images'][0]['based_on'] = base_id
+        c['scenes'][1]['images'][0]['preserve'] = 'Giữ nguyên bối cảnh căn bếp'
+        c.update(brief_revision=rev,brief_hash=h)
+        write(self.p.job(self.job)/'draft/content.json',c);wf.advance(self.p,self.job,'content');self.approve('content')
+
+        from PIL import Image
+        import hashlib
+        from types import SimpleNamespace
+        def real_like_provider(p, *args, **kwargs):
+            self.provider(p, *args, **kwargs)
+            folder = Path(args[args.index('--out') + 1])
+            prompt = args[args.index('--prompt') + 1]
+            rgb = tuple(hashlib.sha256(prompt.encode()).digest()[:3])
+            Image.new('RGB', (720, 1280), rgb).save(folder / 'result.png')
+            if '--base-image' in args:
+                proof = read(folder.parent / 'ui-proof.json')
+                proof['base_image'] = args[args.index('--base-image') + 1]
+                write(folder.parent / 'ui-proof.json', proof)
+            return SimpleNamespace(returncode=0, stdout='REAL PIXELS', stderr='')
+
+        self.media(provider=real_like_provider)
+        data=self.p.payload(self.job,'images')
+        sc02_img=next(x for x in data['items'] if x['scene_id']=='SC02')
+        req=read(self.p.path(self.job,sc02_img['request']))
+        self.assertEqual(req['identity']['base_image']['target'],'SC01_I1_9x16')
+        self.assertIn('--base-image',req['args'])
+        before_sc02_req=sc02_img['request']
+        wf.reject(self.p,self.job,'media',1,'TEST fix SC01',scene='SC01')
+        self.media(provider=real_like_provider)
+        after_data=self.p.payload(self.job,'images')
+        after_sc02_img=next(x for x in after_data['items'] if x['scene_id']=='SC02')
+        self.assertNotEqual(before_sc02_req,after_sc02_img['request'])
+
     def test_rejected_content_unchanged_payload_blocked(self):
         self.new();wf.reject(self.p,self.job,'content',1,'TEST change narration')
         with self.assertRaisesRegex(Blocked,'REVISION_RESPONSE|UNCHANGED_DRAFT'):self.p.run(self.job,'content')

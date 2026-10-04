@@ -11,4 +11,4 @@ Survey date: 24/09/2026. Internal instructions were adapted for Video Pilot; ext
 - [Pixar in a Box](https://www.khanacademy.org/computing/pixar/storytelling): structure, character, visual language and feedback.
 - [YouTube Shorts deep dive](https://blog.youtube/creator-and-artist-stories/youtube-shorts-deep-dive/): creator views on openings, not an algorithmic guarantee.
 
-Canonical mascot, one sense, assigned tools, three data groups/five review outputs, preserved history and no paid API are project decisions, not rules imposed by these external sources.
+Visual cast style, one sense, assigned tools, three data groups/five review outputs, preserved history and no paid API are project decisions, not rules imposed by these external sources.

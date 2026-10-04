@@ -11,14 +11,14 @@ Ngày 03/10/2026. Trạng thái: **đang triển khai, chưa hoàn tất**.
 - Default English voice is now reference-narrator at 0.92. Ninety targeted voice/routing/legacy checks passed. Saved Alba jobs retain their references; no old audio was overwritten.
 - Real reference-narrator WAV exists at `runs/normalization-oversleep-english-9x16-001/revisions/audio/5/narration.wav`: 43.02 seconds, exact reference identity/hash. It is **not technically complete** because the saved trial window is 45–90 seconds. A same-sense narration repair is pending; do not silently shorten the brief window or change the requested speed.
 - Narrator3 timed-out preparation was reconciled before replay: remote request, worker and output were absent, so no generation had been sent. A single same-owner retry collected the WAV; the dedicated T4 was then released. Actual allocation disappearance is confirmed by authenticated provider assignment evidence, never inferred from a missing local session name.
-- Profile4 has a real downloaded Flow mascot reference. The subsequent registration was known not-submitted because the copied reference lacked its real media ID; the adapter now resolves provider IDs from verified downloaded journal/sidecar bytes, with targeted tests. Final story/action/diagram/continuity images and other-profile one-image tests are still incomplete.
+- Profile4 has a real downloaded Flow character reference. The subsequent registration was known not-submitted because the copied reference lacked its real media ID; the adapter now resolves provider IDs from verified downloaded journal/sidecar bytes, with targeted tests. Final story/action/diagram/continuity images and other-profile one-image tests are still incomplete.
 - Setup/UI runtime QA passed 14/14; per-model Flow compiler passed 10/10, but compiler-to-runtime pin integration is still in progress. The existing trial has downloaded legacy prompts and must not acquire a new template pin retroactively.
 - Remaining completion evidence: technically valid new-voice WAV, final Flow set and per-profile finite tests, real remote MP4, both-mode/recovery demonstration, final combined regression and safe integration into the main checkout. Goal remains active.
 
 ## Cập nhật 16:16 ngày 03/10 — thay thế các nhận định tiến độ cũ bên dưới
 
 - Đã triển khai engine v4, grant, checkpoint, mode/lease/migration; QA độc lập 15/15 đạt sau sửa bốn lỗi thực. Báo cáo `../../reports/normalization/qa-engine.md`.
-- Đã có dashboard 8 tab, setup, kho tài khoản/budget, đường xử lý audio/render remote và hồ sơ English9:16/2D/mascot. Các kiểm chứng hiện tại dùng fixture; chưa có Colab T4/Flow/video thật.
+- Đã có dashboard 8 tab, setup, kho tài khoản/budget, đường xử lý audio/render remote và hồ sơ English9:16/2D/character. Các kiểm chứng hiện tại dùng fixture; chưa có Colab T4/Flow/video thật.
 - Root vừa sửa cap Flow dùng chung các operation/alias, credential refreshable hết hạn không báo logout, phân loại 429/503 và chặn reserve ở cửa sổ mới tới khi kiểm dịch vụ thật. 17 kiểm tập trung đạt. Root sở hữu account_budget.py và dashboard/colab_probe.py ở đợt này.
 - Worker remote đang sửa kiểm props/track ngôn ngữ, rollover Client và manifest audio đủ file; QA remote sẽ chạy lại độc lập. Root còn nối budget/đúng profile vào ranh giới gửi Flow thật và đóng băng config Flow theo job.
 - Bảo trì/Git an toàn, audit mọi tài liệu/link và thử artifact thật còn thiếu. Chưa nhập thay đổi vào checkout chính, chưa commit/push và chưa đánh dấu goal complete.
@@ -63,7 +63,7 @@ Không tạo subagent khi chưa có yêu cầu phù hợp. Dùng skill-creator c
 - [ ] Web thật 8 tab, cùng dữ liệu/event/artifact với CLI, không lấy stdout hoặc mock làm evidence hiển thị.
 - [ ] Setup clone/chat mới và account selection không mang home/profile/model cũ; auth khác capability/budget, không lộ secret.
 - [ ] Xử lý nặng audio/media/timeline/subtitles/render trên Colab, Flow tạo ảnh; không fallback local âm thầm.
-- [ ] Profile English B1+ một nghĩa từ kho, 2D nền sáng viền đậm, mascot nhỏ mọi khung; giọng/rate theo brief, không hài/SFX/hình-count mặc định.
+- [ ] Profile English B1+ một nghĩa từ kho, 2D nền sáng viền đậm, hình vẽ 2D rõ ràng mọi khung; giọng/rate theo brief, không hài/SFX/hình-count mặc định.
 - [ ] English9:16 đúng narration/coverage/anchors/audio/cues/timeline/render, ngôn ngữ độc lập tỷ lệ.
 - [ ] Bảo trì chỉ xóa tái tạo được; Git allowlist/branch/secret check, không force-push hoặc tự tạo lịch chưa có tần suất.
 - [ ] Test meaningful từng hợp đồng và luồng cô lập; live proof từng bước chỉ khi phạm vi thực sự được phép/capability có.
@@ -108,4 +108,4 @@ This section supersedes earlier incomplete implementation snapshots without rewr
 
 ## Session closure implementation authorized
 
-User authorized remaining live tests and main integration. Actual IM04 replacement images5 collected; six other hashes unchanged, audio6 retained. Flow template1.0.0 actual Nano Banana Pro sample downloaded (live-flow-template-v1.json), brightflatstyle/no unwantedtext but mascot edge cropped, so composition acceptance pending. Colab render6 allocated/setup, official bind-session refresh performed; render pending. Current suite v2 running. Main integration exact195-path allowlist prepared; two root conflicts preserve user discipline and plan references. No goal completion claimed.
+User authorized remaining live tests and main integration. Actual IM04 replacement images5 collected; six other hashes unchanged, audio6 retained. Flow template1.0.0 actual Nano Banana Pro sample downloaded (live-flow-template-v1.json), brightflatstyle/no unwantedtext but character edge cropped, so composition acceptance pending. Colab render6 allocated/setup, official bind-session refresh performed; render pending. Current suite v2 running. Main integration exact195-path allowlist prepared; two root conflicts preserve user discipline and plan references. No goal completion claimed.

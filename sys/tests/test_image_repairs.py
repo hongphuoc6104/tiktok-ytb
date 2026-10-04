@@ -53,6 +53,57 @@ class RepairIntegrationTests(unittest.TestCase):
         # Fake provider always returns the same pixels; descendant key must stay stable.
         self.assertEqual(before['IMAGE_EXTRA']['request'],after['IMAGE_EXTRA']['request'])
 
+    def test_cross_scene_repair_invalidation(self):
+        from pathlib import Path
+        from PIL import Image
+        wf.new(self.p, self.job, read(story_tests.ROOT / 'examples/story-v3/brief.json'))
+        _, rev, h = self.p.brief(self.job)
+        _, c = story_tests.fixture()
+        # Make SC02_I1 based on SC01_I1 (cross-scene)
+        c['scenes'][1]['images'][0]['based_on'] = c['scenes'][0]['images'][0]['id']
+        c['scenes'][1]['images'][0]['preserve'] = 'Giữ nguyên phòng khách'
+        c.update(brief_revision=rev, brief_hash=h)
+        write(self.p.job(self.job) / 'draft/content.json', c)
+        wf.advance(self.p, self.job, 'content')
+        self.approve('content')
+        self.media()
+
+        before = self.items()
+
+        # 1. Unchanged base pixels: repair SC01_I1 without changing output bytes
+        self.reject(image='SC01_I1')
+        self.media()
+        after = self.items()
+        self.assertNotEqual(before['SC01_I1']['request'], after['SC01_I1']['request'])
+        self.assertEqual(before['SC02_I1']['request'], after['SC02_I1']['request'])
+
+        # 2. Changed base pixels: repair SC01_I1 with modified pixel color
+        item01 = after['SC01_I1']
+        h01 = repairs.history(self.p, self.job, 'SC01_I1_9x16')
+        plan01 = {
+            'current_sha256': digest(self.p.path(self.job, item01['path'])),
+            'previous_sha256': h01[-1]['plan']['current_sha256'] if h01 and h01[-1]['plan'] else None,
+            'strategy': {'pose': 'Adjust scene 1 angle'},
+            'issues': [{'id': 'visual', 'status': 'remaining', 'evidence': 'Color mismatch', 'instruction': 'Use warmer tone'}]
+        }
+        self.reject(image='SC01_I1', plan=plan01)
+        orig_provider = self.provider
+        def red_provider(p, *args, **kwargs):
+            res = orig_provider(p, *args, **kwargs)
+            folder = Path(args[args.index('--out') + 1])
+            if '--base-image' not in args:
+                Image.new('RGB', (720, 1280), 'red').save(folder / 'result.png')
+            return res
+
+        self.media(provider=red_provider)
+
+        after_red = self.items()
+        self.assertNotEqual(after['SC01_I1']['request'], after_red['SC01_I1']['request'])
+        # Because SC01's sha256 changed, SC02's cache key MUST change, triggering regeneration
+        self.assertNotEqual(after['SC02_I1']['request'], after_red['SC02_I1']['request'])
+        req02 = read(self.p.path(self.job, after_red['SC02_I1']['request']))
+        self.assertEqual(req02['identity']['base_image']['sha256'], digest(self.p.path(self.job, after_red['SC01_I1']['path'])))
+
     def test_duplicate_strategy_stops_without_new_edit_or_provider_call(self):
         self.start(); self.reject(plan=self.plan()); self.media()
         with self.assertRaisesRegex(Blocked,'không thay đổi'):

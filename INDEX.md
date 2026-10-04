@@ -16,7 +16,7 @@ Read [AGENTS.md](AGENTS.md), identify the task and authority, then select the ro
 - `sys/vocab/`: one sense per bank entry; [channel profile](sys/vocab/channel.json).
 - `sys/runs/<job>/`: content, versions, requests and artifacts.
 - `sys/.state/`: local state; `sys/.gflow/`: browser profiles, excluded from Git.
-- `sys/assets/`: mascot/voice references; `video/<job>/`: collected products.
+- `sys/assets/`: visual/voice references; `video/<job>/`: collected products.
 - `.agents/`: Rules and four skills; corresponding links in sys point to the root.
 
 The root launcher is `python3 pilot.py`; operational examples use `sys/` as their working directory. Do not infer job/revision from MP4 filenames.

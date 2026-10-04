@@ -279,7 +279,7 @@ def _template_request(p, j, target, prompt, corrections, ratio, refs, registrati
         image = p.path(j, registration['path'])
         if digest(image) != registration['sha256']:
             raise Blocked('FLOW_REFERENCE_REQUIRED: character registration source hash changed')
-        if image.resolve() == canonical.resolve():
+        if canonical.is_file() and image.resolve() == canonical.resolve():
             media = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
         else:
             _, media = _flow_media_reference(p, j, image=image)
@@ -294,23 +294,61 @@ def _template_request(p, j, target, prompt, corrections, ratio, refs, registrati
             raise Blocked('FLOW_REFERENCE_REQUIRED: registration journal artifact differs from attachment')
         purpose = 'variation' if base_image else 'scene'
     else:
-        if not canonical.is_file():
-            raise Blocked('FLOW_REFERENCE_REQUIRED: canonical Character reference missing')
-        image = canonical
-        media = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
+        from flow_prompts.compiler import CAST_VERSIONS
+        if pin['version'] in CAST_VERSIONS:
+            # Anonymous stick-figure cast: no character reference is attached.
+            image = media = None
+        else:
+            if not canonical.is_file():
+                raise Blocked('FLOW_REFERENCE_REQUIRED: canonical Character reference missing')
+            image = canonical
+            media = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
         declared_characters = {character['id'] for character in content(p, j)['characters']}
         purpose = ('character' if target.removeprefix('ref:') in declared_characters else 'reference') if target.startswith('ref:') else ('variation' if base_image else 'scene')
     # The generated character-reference purpose deliberately allows full-body
     # inspection framing; final scene frames keep the canonical mascot small.
-    data = {'description': prompt, 'aspect_ratio': ratio,
-            'character_reference': {'media_id': media, 'sha256': digest(image)},
-            'allowed_text': scene.get('visible_text', []) if scene else []}
+    desc = prompt
+    preserve_items, change_items = [], []
     if scene:
         original = next((image for parent in content(p, j)['scenes'] for image in parent.get('images', [])
                          if image['id'] == scene.get('image_id', scene['id'])), None)
         if original:
-            data['preserve'] = [original['preserve']] if original.get('preserve', '').strip() and base_image else []
-            data['change'] = [original['change']] if original.get('change', '').strip() else []
+            if original.get('description'):
+                desc = original['description']
+                if base_image:
+                    sentences = [s.strip() for s in desc.split('.') if s.strip()]
+                    action_sentences = []
+                    for s in sentences:
+                        s_low = s.lower()
+                        if any(w in s_low for w in ('exact same', 'background', 'outlines', 'lines', 'colors', 'caption', 'style', 'aesthetic')):
+                            continue
+                        action_sentences.append(s)
+                    desc_text = '. '.join(action_sentences)
+                    if len(desc_text) > 160:
+                        desc_text = desc_text[:160].rsplit(' ', 1)[0] + '.'
+                    elif desc_text and not desc_text.endswith('.'):
+                        desc_text += '.'
+                    desc = desc_text or desc
+                else:
+                    sentences = [s.strip() for s in desc.split('.') if s.strip()]
+                    if len(sentences) > 1 and any(w in sentences[-1].lower() for w in ('background', 'outlines', 'lines', 'colors', 'caption')):
+                        desc = '. '.join(sentences[:-1]) + '.'
+            preserve_raw = original.get('preserve', '').strip()
+            if preserve_raw and base_image:
+                preserve_text = preserve_raw if len(preserve_raw) <= 60 else 'Keep scene composition and character style identical.'
+                preserve_items = [preserve_text]
+            change_raw = original.get('change', '').strip()
+            if change_raw:
+                if base_image and len(change_raw) > 80:
+                    change_raw = change_raw[:80].rsplit(' ', 1)[0] + '.'
+                change_items = [change_raw]
+    data = {'description': desc, 'aspect_ratio': ratio,
+            'allowed_text': scene.get('visible_text', []) if scene else []}
+    if image is not None:
+        data['character_reference'] = {'media_id': media, 'sha256': digest(image)}
+    if scene:
+        data['preserve'] = preserve_items
+        data['change'] = change_items
     if corrections:
         data.setdefault('change', []).append(corrections)
     if base_image:
@@ -352,7 +390,11 @@ def _check_template_attachment(identity, proof):
     record = identity.get('prompt_template')
     if record is None:
         return
-    character = record['data']['character_reference']
+    character = record['data'].get('character_reference')
+    if character is None:
+        if proof.get('character_media_id'):
+            raise Blocked('FLOW_TEMPLATE_ATTACHMENT_MISMATCH: Character slot filled but none was compiled')
+        return
     if proof.get('character_media_id') != character['media_id'] or proof.get('character_reference_sha256') != character['sha256']:
         raise Blocked('FLOW_TEMPLATE_ATTACHMENT_MISMATCH: actual Character slot differs from compiled provenance')
 
@@ -390,7 +432,8 @@ def _plan_request(p, j, target, prompt, refs, registration, base_image):
     # and must not force a real character re-registration.
     identity_registration = {'name': registration['name'], 'sha256': registration['sha256']} if registration else None
     identity = {'target': target,
-                'prompt': prompt, 'actual_prompt': actual_prompt, 'model': cfg['flow_model'], 'ratio': ratio,
+                'prompt': template[1]['data']['description'] if template else prompt,
+                'actual_prompt': actual_prompt, 'model': cfg['flow_model'], 'ratio': ratio,
                 'references': list(refs), 'corrections': corrections, 'base_image': base_image,
                 'registration': identity_registration, 'config_hash': hashobj(cfg)}
     if template is not None:
@@ -689,7 +732,7 @@ def batch_submit(p, j, units, registrations):
 
 
 def reference_prompt(c, char):
-    return f"{c['style']}. Một nhân vật toàn thân, nền đơn giản, không chữ. {char['name']}. {char['appearance']}. Trang phục: {char['outfit']}."
+    return f"Một nhân vật toàn thân, nền đơn giản, không chữ. {char['name']}. {char['appearance']}. Trang phục: {char['outfit']}."
 
 
 def register(p, j, ref):
@@ -780,34 +823,26 @@ def produce(p, j, out):
                 _reraise_if_expired(ex, i, len(refs))
         scenes = planned_units(p,j)
         import concurrent.futures
+        import collections
+        import threading
         cfg = read(p.root / 'config.json')
         concurrency = cfg.get('concurrency', 3)
 
         completed = {}
-        def process_scene(scene):
-            linked = [registrations[x] for x in scene['character_ids']]
-            base = completed.get(scene.get('based_on'))
-            r = request(p, j, scene['id'], scene['prompt'], linked, **({'base_image':base} if base else {}))
-            completed[scene['id']] = {'target':scene['id'],'path':r['path'],'sha256':r['sha256']}
-            return (scene['id'], scene['prompt'], linked, r)
 
         # Flow's aspect-ratio/model/output toggles are one global UI setting;
         # flipping it per image is wasteful and unsafe under parallel workers.
-        # Finish every image of one ratio before starting the next. Scenes
-        # within a ratio still run in parallel; variations inside one scene
-        # stay sequential because based_on chains to the immediately preceding
-        # image of that same scene, and planned_units keeps the ratio suffix
-        # aligned so a chain never crosses ratios.
-        ratio_order, ratio_groups = [], {}
+        # Finish every image of one ratio before starting the next. Units
+        # within a ratio run in parallel subject to DAG dependencies (based_on)
+        # across scenes or within the same scene. planned_units keeps the ratio
+        # suffix aligned so a chain never crosses ratios.
+        ratio_order = []
+        units_by_ratio = collections.defaultdict(list)
         for unit in scenes:
             rk = unit.get('ratio')
-            if rk not in ratio_groups:
-                ratio_groups[rk] = {}
+            if rk not in units_by_ratio:
                 ratio_order.append(rk)
-            ratio_groups[rk].setdefault(unit.get('scene_id',unit['id']), []).append(unit)
-
-        def process_group(group):
-            return [(unit, process_scene(unit)) for unit in group]
+            units_by_ratio[rk].append(unit)
 
         # Optional bulk path (default off; see batch_submit's docstring). Pre-
         # populates journals for each ratio's independent images with a single
@@ -815,16 +850,71 @@ def produce(p, j, out):
         # and simply hits the cache for anything the batch already resolved.
         if cfg.get('flow_batch', False):
             for rk in ratio_order:
-                units_in_ratio = [u for group in ratio_groups[rk].values() for u in group]
-                batch_submit(p, j, units_in_ratio, registrations)
+                batch_submit(p, j, units_by_ratio[rk], registrations)
 
         outcomes = {}
         try:
             for rk in ratio_order:
+                ratio_units = units_by_ratio[rk]
+                unit_by_id = {u['id']: u for u in ratio_units}
+                dependents = collections.defaultdict(list)
+                in_degree = {}
+
+                for u in ratio_units:
+                    parent = u.get('based_on')
+                    if parent and parent not in completed and parent in unit_by_id:
+                        in_degree[u['id']] = 1
+                        dependents[parent].append(u)
+                    else:
+                        in_degree[u['id']] = 0
+
+                ready = [u for u in ratio_units if in_degree[u['id']] == 0]
+                remaining = len(ratio_units)
+                lock = threading.Lock()
+                condition = threading.Condition(lock)
+                first_exception = None
+
                 with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
-                    for results in executor.map(process_group, ratio_groups[rk].values()):
-                        for unit, outcome in results:
-                            outcomes[unit['id']] = outcome
+                    def submit_unit(u):
+                        executor.submit(worker, u)
+
+                    def worker(u):
+                        nonlocal first_exception
+                        try:
+                            with lock:
+                                if first_exception is not None:
+                                    return
+                                base = completed.get(u.get('based_on'))
+                            linked = [registrations[x] for x in u['character_ids']]
+                            r = request(p, j, u['id'], u['prompt'], linked, **({'base_image': base} if base else {}))
+                            with lock:
+                                completed[u['id']] = {'target': u['id'], 'path': r['path'], 'sha256': r['sha256']}
+                                outcomes[u['id']] = (u['id'], u['prompt'], linked, r)
+                                if first_exception is None:
+                                    for child in dependents.get(u['id'], []):
+                                        in_degree[child['id']] -= 1
+                                        if in_degree[child['id']] == 0:
+                                            submit_unit(child)
+                        except Exception as exc:
+                            with lock:
+                                if first_exception is None:
+                                    first_exception = exc
+                        finally:
+                            with condition:
+                                nonlocal remaining
+                                remaining -= 1
+                                condition.notify_all()
+
+                    with lock:
+                        for u in ready:
+                            submit_unit(u)
+
+                    with condition:
+                        while remaining > 0 and first_exception is None:
+                            condition.wait()
+
+                if first_exception is not None:
+                    raise first_exception
         except Blocked as ex:
             # Any request() already in flight when the window lapsed finishes
             # to a determinate state (downloaded/ambiguous) before this is
@@ -837,7 +927,7 @@ def produce(p, j, out):
         # regardless of the ratio-major order used to submit requests above.
         for unit in scenes:
             scene_id, prompt, linked, r = outcomes[unit['id']]
-            item = attach(p, j, r, scene_id, prompt, linked, out)
+            item = attach(p, j, r, scene_id, r['identity']['prompt'], linked, out)
             if c.get('schema_version') == '3.0':
                 item.update(scene_id=unit['scene_id'],image_id=unit['image_id'],ratio=unit['ratio'])
             items.append(item)
@@ -895,8 +985,8 @@ def check(p, j, data):
             prior = next((x for x in data['items'] if x.get('image_id','')+'_'+x.get('ratio','').replace(':','x')==scene['based_on']),None)
             if not prior or not req_base or req_base['target']!=scene['based_on'] or req_base['sha256']!=prior['sha256']:
                 raise Blocked('M2_BASE_IMAGE: wrong planned predecessor')
-        elif req_base: raise Blocked('M2_BASE_IMAGE: unexpected predecessor')
-        if item['prompt'] != scene['prompt'] or [x['character_id'] for x in item['references']] != scene['character_ids']:
+        expected_item_prompt = item_request['identity']['prompt'] if item_request['identity'].get('prompt_template') else scene['prompt']
+        if item['prompt'] != expected_item_prompt or [x['character_id'] for x in item['references']] != scene['character_ids']:
             raise Blocked('M2_PROMPT: approved prompt or character links changed')
     if data['proofs']:
         raise Blocked('Separate proof images removed; review actual scene images')

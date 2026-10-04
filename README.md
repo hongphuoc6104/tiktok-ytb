@@ -1,6 +1,6 @@
 # Video Pilot
 
-Produce one-sense vocabulary lessons through narration and explanatory illustrations. The current channel targets English B1+ portrait Shorts: 9:16, bright backgrounds, bold outlines, flat colors and a small canonical mascot. One question/situation leads to a payoff; choose scene/image counts per video instead of a fixed comedy template.
+Produce one-sense vocabulary lessons through narration and explanatory illustrations. The current channel targets English B1+ portrait Shorts: 9:16, bright backgrounds, bold outlines, flat colors and anonymous stick figures. One question/situation leads to a payoff; choose scene/image counts per video instead of a fixed comedy template.
 
 New English briefs default to **reference-narrator at 0.92**, using the [user-selected sample](sys/assets/voices/reference-narrator/README.md). Vietnamese Minh Quân Pro and existing jobs retain their own saved voice contracts.
 

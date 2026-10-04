@@ -34,7 +34,9 @@ class FlowProfileTrialTests(unittest.TestCase):
             (root/'Local State').write_text(json.dumps({'profile':{'info_cache':{'Profile 4':{'name':'Test'}}}}))
         self.source=next(x['id'] for x in inventory(self.root,self.home) if x['browser']=='Chrome')
         self.runtime=next(x['id'] for x in inventory(self.root,self.home) if x['browser']=='Chrome managed')
-        shutil.copytree(ROOT/'assets/characters/channel-mascot',self.root/'assets/characters/channel-mascot')
+        mascot_dir = self.root / 'assets/characters/channel-mascot'; mascot_dir.mkdir(parents=True, exist_ok=True)
+        from PIL import Image
+        Image.new('RGB', (30, 30), '#8CCFE8').save(mascot_dir / 'reference-v1.png')
         folder=self.root/'experiments/b2_illustrator';folder.mkdir(parents=True)
         (folder/'acceptance.json').write_text('{"production_ready":false}')
         (self.root/'config.json').write_text('{"flow_queue_trial_enabled":true,"flow_status_retries":0}')

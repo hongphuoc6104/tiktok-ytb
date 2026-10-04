@@ -4,7 +4,7 @@ Engine 4 has no total cap on progressing repairs. Do not repeat failed target/in
 
 From `sys/`: `pilot.py repair-status JOB --image IMAGE --ratio 9:16`; inspect the actual file before describing errors. Then `reject JOB images --revision N --image IMAGE --ratio 9:16 --repair-plan PATH --note TEXT`, with actual feedback, followed by `resume JOB`. `--scene` repairs the whole scene; use `--image` for one image. Preserve unaffected audio/images.
 
-Repair plans retain current_sha256, previous_sha256, strategy (pose/composition) and issues with id/status/evidence/instruction. First repair uses previous null/status new; later classify remaining/resolved/new without deleting open errors from history. All-resolved plans do not generate again. Hashes prove bytes, not correct meaning/pose. Mascot-tolerated expressions are not defects; see [brand rules](../../.agents/rules/brand_tolerance.md).
+Repair plans retain current_sha256, previous_sha256, strategy (pose/composition) and issues with id/status/evidence/instruction. First repair uses previous null/status new; later classify remaining/resolved/new without deleting open errors from history. All-resolved plans do not generate again. Hashes prove bytes, not correct meaning/pose. Brand-tolerated expressions are not defects; see [brand rules](../../.agents/rules/brand_tolerance.md).
 
 Issue micro-plans retain evidence/error_class/target/input_hash/strategy/success_criteria/rollback/submit_state and real outcome evidence. Auto has no machine reviewer or new quality gate; review waits for the actual image set/revision. Craft inspection may view images but cannot fabricate quality approval.
 

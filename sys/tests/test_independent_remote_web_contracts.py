@@ -234,7 +234,8 @@ class IndependentRemoteWebContracts(unittest.TestCase):
         import image_pipeline
         import b2_bridge
         from PIL import Image
-        for name in ('schemas','scripts','assets/characters/channel-mascot'):shutil.copytree(ROOT/name,self.root/name)
+        for name in ('schemas','scripts','assets/characters/channel-mascot'):
+            if (ROOT/name).exists(): shutil.copytree(ROOT/name,self.root/name)
         cfg=read(ROOT/'config.json');cfg['brief_policies']=[];cfg['flow_require_ui_evidence']=False
         cfg['flow_management_store']=str(self.root/'budgets');cfg['flow_tool_url']='https://flow.google.com/project/QA-FIXTURE/tool/QA-FIXTURE';write(self.root/'config.json',cfg)
         (self.root/'.gflow/Default').mkdir(parents=True)
@@ -396,7 +397,8 @@ class IndependentBrowserEngine(unittest.TestCase):
         from contextlib import ExitStack
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)
-            for name in ('schemas','scripts','assets/characters/channel-mascot'): shutil.copytree(ROOT/name,root/name)
+            for name in ('schemas','scripts','assets/characters/channel-mascot'):
+                if (ROOT/name).exists(): shutil.copytree(ROOT/name,root/name)
             cfg=read(ROOT/'config.json');cfg['brief_policies']=[];write(root/'config.json',cfg)
             p=Pilot(root)
             try:

@@ -33,7 +33,7 @@ class IndependentEngineContracts(unittest.TestCase):
         self.root.mkdir(parents=True)
         (self.project / 'pilot.py').write_text('# isolated launcher marker\n')
         for folder in ('schemas', 'examples', 'scripts', 'assets/characters/channel-mascot'):
-            shutil.copytree(ROOT / folder, self.root / folder)
+            if (ROOT / folder).exists(): shutil.copytree(ROOT / folder, self.root / folder)
         cfg = read(ROOT / 'config.json')
         cfg['brief_policies'] = []
         write(self.root / 'config.json', cfg)

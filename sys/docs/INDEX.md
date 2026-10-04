@@ -9,6 +9,7 @@ Root INDEX remains the entry point. Specifications do not prove that a service c
 | [vocabulary](vocabulary.md), [channel profile](../vocab/channel.json) | One bank sense, B1+ English9:16, job-bound style/voice/rate |
 | [story-planning](story-planning.md), [narration-length](narration-length-guidance.md), [director-system](director-system.md) | Craft/storyboard/anchors and vp-production references |
 | [colab-tts](colab-tts.md), [voice-attribution](voice-attribution.md), [image-repair-loops](image-repair-loops.md) | Remote heavy processing, voice provenance, request/session and progressing image repair |
+| [render-capabilities](render-capabilities.md) | Current Remotion engine effects, supported transitions, timeline vs prompt features |
 | [Flow model prompts](flow-prompts.md) | Versioned model/purpose instructions, exact learner text and reference provenance; new-job pinning with legacy request preservation |
 | [maintenance](maintenance.md) | Reproducibility manifests, verified archive, scoped Git history/branch/remote |
 | [AGY adapter](AGY-SETUP.md) | Compatibility entry point without duplicate Rules/reviewer |

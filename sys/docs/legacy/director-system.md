@@ -5,7 +5,7 @@ Các vai trò dưới đây làm việc bên trong **content → media → video
 | Vai trò | Lúc áp dụng | Quyết định cần đưa vào sản phẩm |
 |---|---|---|
 | vp-script-director | Outline, viết và sửa content | Mục tiêu học, hook/payoff, nguyên nhân–hành động–hậu quả, lời thoại và thực hành |
-| vp-visual-director | Content và media | Hành động chứng minh nghĩa, bố cục, nhận diện mascot, trạng thái liên tục |
+| vp-visual-director | Content và media | Hành động chứng minh nghĩa, bố cục, nhận diện hình ảnh, trạng thái liên tục |
 | vp-edit-director | Beats, media và bản video | Điểm cắt, thời gian đọc/đáp lại, phụ đề, nhịp phối hợp lời–hình |
 | vp-audio-director | Kế hoạch lời, WAV và MP4 | Ý đồ câu nói, phát âm, khoảng chờ, kiểm tra giọng và ưu tiên lời |
 
@@ -43,7 +43,7 @@ Cue giữ nguyên chữ, chọn ranh giới từ/cụm và chia tối đa hai d�
 
 `scripts/editorial_audit.py --props PATH` chỉ đọc props, trả lỗi/warning có mốc thời gian. Các ngưỡng thời gian đọc là gợi ý biên tập, không phải tiêu chuẩn mọi người học. Các mốc cue vẫn nội suy theo segment; muốn khẳng định đồng bộ phải nghe video thật.
 
-Khi render, lưu `editorial-audit.json` cạnh props. Đây là report kỹ thuật mới, không phải quyết định duyệt. Các lỗi timeline/dấu câu được chặn; warning mật độ chữ phải được xem trong bối cảnh. Khả năng đọc, phát âm, mascot và học tập vẫn cần ảnh/WAV/MP4 thật.
+Khi render, lưu `editorial-audit.json` cạnh props. Đây là report kỹ thuật mới, không phải quyết định duyệt. Các lỗi timeline/dấu câu được chặn; warning mật độ chữ phải được xem trong bối cảnh. Khả năng đọc, phát âm, hình ảnh và học tập vẫn cần ảnh/WAV/MP4 thật.
 
 ## Brief mới và lịch sử
 

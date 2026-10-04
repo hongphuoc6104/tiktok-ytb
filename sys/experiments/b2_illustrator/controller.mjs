@@ -8,7 +8,7 @@ import {AttemptStore} from './attempt-store.mjs';
 
 const here=path.dirname(fileURLToPath(import.meta.url));
 const root=path.resolve(here,'../..');
-const localFile=path.join(here,'machine.local.json');
+const localFile=process.env.VP_MACHINE_LOCAL||path.join(here,'machine.local.json');
 export const machineConfig=fs.existsSync(localFile)?JSON.parse(fs.readFileSync(localFile,'utf8')):{};
 const rootConfig=JSON.parse(fs.readFileSync(path.join(root,'config.json'),'utf8'));
 export const toolUrl=machineConfig.tool_url || rootConfig.flow_tool_url || 'https://flow.google.com/project/41d3d574-907c-4bb0-90a7-c98f85f5e22b/tool/2791e8ba-9ae0-4ca9-9368-b7efe600c53d';

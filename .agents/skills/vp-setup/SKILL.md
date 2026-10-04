@@ -1,14 +1,16 @@
 ---
 name: vp-setup
-description: Initialize or resume the Video Pilot environment; inspect setup/account capabilities without production or policy changes.
+description: First-time machine onboarding and environment bootstrap; install dependencies, configure accounts and run login scripts.
 ---
 
-# Setup and return
+# Setup and machine onboarding
 
-Use setup authority from AGENTS and permissions.md. Read sys/docs/getting-started.md for a new machine, session-start.md for returning chat. Identify checkout/preset and existing jobs before touching paths.
+Use setup authority from AGENTS and permissions.md for initial machine onboarding and environment bootstrap. Read sys/docs/getting-started.md for a new machine.
 
-Inventory only metadata and runtime tools first. Keep auth, profile, models and credentials in their configured stores. Report missing/configured/verified/not_tested/unsupported separately; token existence is not live login or T4 availability. User completes OAuth/OTP/CAPTCHA.
+Setup responsibilities:
+1. Environment bootstrap: install `uv`, configure `.venv`, install required project packages and verify operational tools.
+2. Initial account & credential onboarding: run interactive Colab CLI login scripts (`python3 -m colab_bridge.accounts login-many`), guide and configure Chrome browser profiles for Google Flow, and save account profiles to configured stores.
+3. System inventory & verification: report missing/configured/verified accounts and runtime tools; user completes OAuth/OTP/CAPTCHA during onboarding.
 
-Local holds management/control and important data. Prepare heavy dependencies on Colab for the chosen preset; never install local TTS/render as an implicit fallback. Do not allocate GPU to test login, start jobs after setup, or assume model/reference IDs portable between projects.
+Keep auth, profiles and credentials safely in their configured stores (`~/.config/video-pilot/`). Setup does not produce videos. Once dependencies and account stores are configured, routine execution and on-demand runtime management belong to production.
 
-Keep request account/session and owner on return. Do not reset counters, terminate another user's runtime, resend unknown work or ask again for a valid existing grant. Hand off exact next step/capability evidence in Vietnamese. Commands must exist and be supported in this checkout; see normalization-progress during transition.

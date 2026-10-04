@@ -45,6 +45,21 @@ export async function runOperation(command, bound) {
     await bound.page.getByRole('button',{name:'Share',exact:true}).click();
     return {snapshot:await bound.page.locator('body').ariaSnapshot()};
   }
+  if(command === 'tool-snapshot:state-inspect') {
+    const page=bound.page;let frame=await findToolFrame(page);
+    const state=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
+    return {state, generationSubmitted:false};
+  }
+  if(command === 'tool-snapshot:clear-queue') {
+    const page=bound.page;let frame=await findToolFrame(page);
+    await frame.evaluate(()=>{
+      localStorage.setItem('VP_LAB_STATE_V2', JSON.stringify({status:'IDLE', queue:[]}));
+    });
+    await page.reload({waitUntil:'domcontentloaded'});
+    frame=await findToolFrame(page);
+    const state=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
+    return {state, cleared:true, generationSubmitted:false};
+  }
   if(command.startsWith('tool-snapshot:queue:')) {
     const specs=JSON.parse(fs.readFileSync(command.slice('tool-snapshot:queue:'.length),'utf8'));
     const {runQueue}=await import('./queue-runner.mjs');
@@ -76,9 +91,9 @@ export async function runOperation(command, bound) {
     const existing=await frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
     if(existing.queue?.some(i=>!['COMPLETED','ACCEPTED'].includes(i.status))) throw Error('UNRESOLVED_QUEUE');
     const logFile=path.join(folder,`${batchName}-events.ndjson`);
-    const record=(event)=>{const fd=fs.openSync(logFile,'a',0o600);try{fs.writeSync(fd,JSON.stringify({at:Date.now(),...event})+'\n');fs.fsyncSync(fd);}finally{fs.closeSync(fd);}};
-    const ref={mediaId:canonicalMascotMediaId,base64:fs.readFileSync(canonicalMascotPath).toString('base64'),mimeType:'image/png',name:'canonical-mascot'};
-    await frame.evaluate(ref=>{
+    const ref = fs.existsSync(canonicalMascotPath) ? {mediaId:canonicalMascotMediaId,base64:fs.readFileSync(canonicalMascotPath).toString('base64'),mimeType:'image/png',name:'canonical-character'} : null;
+    if (ref) {
+      await frame.evaluate(ref=>{
       const el=document.getElementById('character-selector');
       let f=el[Object.keys(el).find(k=>k.startsWith('__reactFiber$'))];
       while(f && !(typeof f.type==='function' && f.type.name==='App'))f=f.return;
@@ -87,7 +102,8 @@ export async function runOperation(command, bound) {
       if(!h?.next?.next?.queue?.dispatch)throw Error('REFERENCE_HOOK_NOT_FOUND');
       h.next.queue.dispatch(null);h.next.next.queue.dispatch(ref);
     },ref);
-    await frame.getByRole('button',{name:'Clear Character',exact:true}).waitFor();
+      await frame.getByRole('button',{name:'Clear Character',exact:true}).waitFor();
+    }
     const boxes=frame.getByRole('textbox');
     await boxes.nth(1).fill('Clean minimalist stickman illustration, navy outlines, off-white background.');
     await boxes.nth(2).fill('Match canonical blue shirt #8CCFE8, white head, oval black eyes, coral tongue. One torso, no teeth or eyebrows.');

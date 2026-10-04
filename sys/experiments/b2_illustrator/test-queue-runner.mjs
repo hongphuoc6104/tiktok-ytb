@@ -20,6 +20,11 @@ test('ratio and character reference are required',()=>{
  assert.throws(()=>prepareRequests([{...request,ratio:'1:1'}]),/INVALID/);
  assert.throws(()=>prepareRequests([{...request,characterRefPath:null}]),/CHARACTER/);
 });
+test('cast mode accepts no Character; legacy still requires one',()=>{
+ const [r]=prepareRequests([{...request,characterRefPath:null,charMediaId:null,useCharacterRef:false}]);
+ assert.equal(r.character,null);assert.equal(r.identity.references.length,0);
+ assert.throws(()=>prepareRequests([{...request,characterRefPath:null,charMediaId:null}]),/CHARACTER/);
+});
 test('collection-only mode preserves generation identity',()=>{
  assert.deepEqual(prepareRequests([request])[0].identity,prepareRequests([{...request,collectionOnly:true}])[0].identity);
 });

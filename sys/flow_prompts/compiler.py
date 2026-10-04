@@ -5,8 +5,10 @@ import json
 from pathlib import Path
 import re
 
-CURRENT_VERSION = '1.0.0'
-SUPPORTED_VERSIONS = ('1.0.0', '1.0.1')
+CURRENT_VERSION = '1.1.0'
+SUPPORTED_VERSIONS = ('1.0.0', '1.0.1', '1.1.0')
+# 1.1.0+: anonymous stick-figure cast, optional Character/style reference, no recurring presenter.
+CAST_VERSIONS = ('1.1.0',)
 FIELDS = {'description', 'aspect_ratio', 'allowed_text', 'character_reference', 'base_reference',
           'preserve', 'change', 'composition', 'mascot_placement', 'caption_clearance'}
 PLACEMENTS = {'upper-left', 'upper-right', 'left-margin', 'right-margin', 'above-caption-left', 'above-caption-right'}
@@ -90,14 +92,18 @@ def _reference(value, field):
     return dict(value)
 
 
-def _data(data, purpose):
-    if not isinstance(data, dict) or set(data) - FIELDS:
+def _data(data, purpose, version='1.0.0'):
+    cast = version in CAST_VERSIONS
+    if not isinstance(data, dict) or set(data) - FIELDS or (cast and 'mascot_placement' in data):
         raise PromptError('FLOW_PROMPT_FIELDS_UNSUPPORTED: visual fields are allowlisted')
     description = _text(data.get('description'), 'description')
     ratio = data.get('aspect_ratio', '9:16')
     if ratio not in ('9:16', '16:9'):
         raise PromptError('FLOW_PROMPT_RATIO_UNSUPPORTED: explicit 9:16 or 16:9 required')
-    character = _reference(data.get('character_reference'), 'character_reference')
+    if cast and data.get('character_reference') is None:
+        character = None
+    else:
+        character = _reference(data.get('character_reference'), 'character_reference')
     base = _reference(data['base_reference'], 'base_reference') if data.get('base_reference') is not None else None
     preserve = _strings(data.get('preserve', []), 'preserve')
     change = _strings(data.get('change', []), 'change')
@@ -107,14 +113,15 @@ def _data(data, purpose):
         raise PromptError('FLOW_VARIATION_INVALID: declare both preserved composition and visible change')
     allowed = _allowed(data.get('allowed_text', []))
     placement = data.get('mascot_placement', 'above-caption-right')
-    if placement not in PLACEMENTS:
+    if not cast and placement not in PLACEMENTS:
         raise PromptError('FLOW_MASCOT_PLACEMENT_UNSUPPORTED: choose a supported attention margin')
     clearance = data.get('caption_clearance', {'edge': 'bottom', 'fraction': 0.18})
     if not isinstance(clearance, dict) or set(clearance) != {'edge', 'fraction'} or clearance['edge'] not in ('bottom', 'top') or type(clearance['fraction']) not in (int, float) or not 0.10 <= clearance['fraction'] <= 0.40:
         raise PromptError('FLOW_CAPTION_CLEARANCE_INVALID: edge top/bottom and fraction 0.10–0.40 required')
     normalized = {'description': description, 'aspect_ratio': ratio, 'allowed_text': allowed,
-                  'preserve': preserve, 'change': change, 'mascot_placement': placement,
-                  'caption_clearance': dict(clearance)}
+                  'preserve': preserve, 'change': change, 'caption_clearance': dict(clearance)}
+    if not cast:
+        normalized['mascot_placement'] = placement
     if 'composition' in data:
         normalized['composition'] = _text(data['composition'], 'composition')
     references = {'character': character, 'base': base}
@@ -131,10 +138,10 @@ def compile(model, purpose, data, version=CURRENT_VERSION):
     model_id = _model(model, spec)
     if not isinstance(purpose, str) or purpose not in spec['purposes']:
         raise PromptError('FLOW_PURPOSE_UNSUPPORTED: reference, character, scene or variation required')
-    visual, references = _data(data, purpose)
+    visual, references = _data(data, purpose, version)
     template_id = 'flow.' + model_id + '.' + purpose
     sections = ['Requested aspect ratio: ' + visual['aspect_ratio'] + '. Render the requested still image.',
-                spec['models'][model_id]['strategy'], spec['purposes'][purpose], spec['style'], spec['identity'],
+                spec['models'][model_id]['strategy'], spec['purposes'][purpose], spec['style'], spec['cast_rule'] if version in CAST_VERSIONS else spec['identity'],
                 spec['reference_rule'], spec['data_boundary'], spec['clearance_rule']]
     if references['base']:
         sections.append('A Base scene reference is declared and must be attached; use its camera and spatial relationships for the preservation instructions.')

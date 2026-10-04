@@ -24,8 +24,11 @@ from flow_prompts import compile_pinned
 class FlowPromptIntegrationTests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)
-  for name in ('schemas','scripts','assets/characters/channel-mascot'):shutil.copytree(ROOT/name,self.root/name)
-  self.cfg=read(ROOT/'config.json');self.cfg['brief_policies']=[];self.cfg['flow_require_ui_evidence']=False;self.cfg['flow_management_store']=str(self.root/'budgets');self.cfg['flow_tool_url']='https://flow.google.com/project/FIXTURE/tool/FIXTURE';write(self.root/'config.json',self.cfg)
+  for name in ('schemas','scripts'):shutil.copytree(ROOT/name,self.root/name)
+  mascot_dir = self.root / 'assets/characters/channel-mascot'; mascot_dir.mkdir(parents=True, exist_ok=True)
+  Image.new('RGB', (30, 30), '#8CCFE8').save(mascot_dir / 'reference-v1.png')
+  write(mascot_dir / 'character.json', {'name': 'channel-mascot', 'media_id': 'de94a39b-155f-4afe-acbb-d9d4b59ad532'})
+  self.cfg=read(ROOT/'config.json');self.cfg['brief_policies']=[];self.cfg['flow_require_ui_evidence']=False;self.cfg['flow_management_store']=str(self.root/'budgets');self.cfg['flow_tool_url']='https://flow.google.com/project/FIXTURE/tool/FIXTURE';self.cfg['flow_prompt_version']='1.0.0';write(self.root/'config.json',self.cfg)
   (self.root/'.gflow/Default').mkdir(parents=True)
   self.home=patch('pathlib.Path.home',return_value=self.root/'fake-home');self.home.start();self.addCleanup(self.home.stop)
   accounts=discover(system_root=self.root)['accounts'];self.account=next(item for item in accounts if item['service']=='flow');self.profile=(Path(self.account['metadata_root'])/self.account['profile']).resolve();self.session=Sessions(self.root).select([self.account['id']],{'flow':self.account['id']},known=accounts)
@@ -58,6 +61,11 @@ class FlowPromptIntegrationTests(unittest.TestCase):
   before=(self.p.path(self.job,result['journal'])).read_bytes()
   with self.transport(),ex.lease(self.p,self.job):again=image_pipeline.request(self.p,self.job,'ref:CH01','The canonical single mascot full-body reference on a bright plain background.')
   self.assertEqual(again['key'],result['key']);self.assertEqual(len(self.sent),1);self.assertEqual(self.p.path(self.job,result['journal']).read_bytes(),before)
+ def test_cast_version_sends_without_mascot_or_character_slot(self):
+  cfg=copy.deepcopy(self.cfg);cfg['flow_prompt_version']='1.1.0';write(self.root/'config.json',cfg);self.cli_new();pin=prompt_pin(self.p,self.job);self.assertEqual(pin['version'],'1.1.0')
+  with self.transport(),ex.lease(self.p,self.job):result=image_pipeline.request(self.p,self.job,'ref:CH01','Three anonymous stick figures in different costumes on a plain background.')
+  self.assertEqual(result['state'],'downloaded');self.assertEqual(len(self.sent),1);record=result['identity']['prompt_template'];self.assertNotIn('character_reference',record['data']);self.assertIsNone(record['provenance']['references']['character'])
+  sent=self.sent[0];self.assertFalse(sent.get('characterRefPath'));self.assertFalse(sent.get('charMediaId'));self.assertIs(sent.get('useCharacterRef'),False);self.assertNotIn('#8CCFE8',sent['prompt']);self.assertIn('No main character, presenter or recurring protagonist',sent['prompt'])
  def test_legacy_downloaded_request_does_not_inherit_template_or_resubmit(self):
   cfg=copy.deepcopy(self.cfg);cfg.pop('flow_prompt_version',None);write(self.root/'config.json',cfg);self.cli_new();self.assertIsNone(prompt_pin(self.p,self.job))
   with self.transport(),ex.lease(self.p,self.job):first=image_pipeline.request(self.p,self.job,'ref:CH01','TEST unchanged legacy generic reference')

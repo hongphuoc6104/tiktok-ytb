@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "id": "english-explanatory-2d",
   "note": "English vocabulary Shorts; defaults apply only to new briefs. Choose scene/image counts after outline; no fixed comic framework.",
   "video_type": "vocabulary_explainer",
@@ -19,7 +19,7 @@
   },
   "duration_note": "Initial planning window, adjustable per job before narration. Not a measurement or a claim about the reference channel.",
   "tone": "Clear, curious explanatory narration in accessible English; one question with a meaningful payoff.",
-  "style": "Hand-drawn explanatory 2D illustration, bold dark outlines, flat colors, bright uncluttered background, clear props and simple diagrams. Canonical mascot appears in 1–2 key frames for brand recognition.",
+  "style": "Hand-drawn 2D explainer illustration in a marker-pen look: thick black outlines, flat muted colors, full-bleed setting backgrounds, clear props and simple annotations (red circles/arrows). No main character, presenter or recurring protagonist: an anonymous stick-figure cast (round white heads, expressive simple faces, stick limbs) whose roles come from scene costume, hair and props.",
   "audience": "English learners at B1 and above learning one vocabulary sense through clear situations and explanatory pictures.",
   "prior_knowledge": "Basic English sentence comprehension; explain the chosen B1+ word using simpler words without teaching additional senses.",
   "pacing": "Causal visual changes following spoken meaning; allow each actual sentence or diagram enough reading time. No fixed cut or image-count quota.",
@@ -28,29 +28,22 @@
     "Mandatory four-act comedy, six beats, meme twist, fixed repeat/image quotas or automatic Foley",
     "Importing prehistoric topics as a required niche",
     "Reading lesson headings as disconnected definitions/pronunciation/grammar items",
-    "Changing the selected sense, voice, mascot or requested duration silently"
+    "Changing the selected sense, voice, character style or requested duration silently",
+    "Adding a recurring main character, presenter or narrator figure to scenes"
   ],
   "domain_requirements": [
     "Narration and learner-facing text are entirely English; explain meaning, usage and relevant grammar/pronunciation inside the same situation.",
     "One central question or situation develops through cause, action and consequence and receives a payoff.",
-    "Mascot CH01 appears in 1–2 key frames (guiding or feature mode) with the canonical core identity and allowed 80/20 expression tolerance.",
     "Use story shots, close action and diagrams where they prove meaning; preserve camera/background with Base reference for state changes.",
-    "Scene/image/beat counts are chosen for this specific script and saved before narration anchors; no universal scene count."
+    "Scene/image/beat counts are chosen for this specific script and saved before narration anchors; no universal scene count.",
+    "No recurring protagonist, presenter or host: each scene uses only the anonymous stick figures, animals or objects its action needs, identified by costume/props; keep a figure's costume consistent across Base-reference variations."
   ],
-  "character": {
-    "id": "channel-mascot",
-    "name": "Người que áo xanh biển nhạt",
-    "reference_path": "assets/characters/channel-mascot/reference-v1.png",
-    "media_id": "de94a39b-155f-4afe-acbb-d9d4b59ad532",
-    "appearance": "Đầu tròn trắng viền xanh đen đậm, hai mắt oval đen, miệng cười tươi, tay chân người que tối giản",
-    "outfit": "Áo thun cộc tay màu xanh biển nhạt (#8CCFE8)"
-  },
   "text_style": {
     "font": "Inter, sans-serif",
     "color": "#172033",
     "outline": "High contrast against a bright clear background",
     "size": "Readable on a phone, at most two meaningful caption lines",
-    "placement": "Near the referent for teaching text; keep separate from captions and mascot"
+    "placement": "Near the referent for teaching text; keep separate from captions"
   },
   "example_count": null,
   "learning_requirements": [
@@ -83,5 +76,10 @@
       "voice": "reference-narrator",
       "speed": 0.92
     }
-  ]
+  ],
+  "cast": {
+    "type": "anonymous_stick_figure_ensemble",
+    "reference_channel": "Ink Explainer (@Inkexplainer96), visual style only",
+    "prompt_version": "1.1.0"
+  }
 }

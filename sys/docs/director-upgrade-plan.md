@@ -21,7 +21,7 @@ Video mới phải được thiết kế như một bài học có câu chuyện
 
 ## Phạm vi thiết kế
 
-- Giữ ba phần công khai content → media → video, review/auto, ảnh mascot chuẩn và công cụ đang được cho phép.
+- Giữ ba phần công khai content → media → video, review/auto, ảnh nhân vật chuẩn và công cụ đang được cho phép.
 - Giữ mẫu cố định trong prompt_templates.py; bổ sung ngữ cảnh đạo diễn tại điểm adapter phù hợp.
 - Chỉ dẫn nội bộ mới dùng tiếng Anh; tài liệu và giao tiếp cho người dùng bằng tiếng Việt. Nội dung tiếng Anh hiển thị/đọc giữ đúng ngôn ngữ.
 - Thêm trường kế hoạch tùy chọn có kiểm tra, không làm mất khả năng đọc cấu trúc v3 cũ. Không sửa baseline để tiếp tục job cũ.

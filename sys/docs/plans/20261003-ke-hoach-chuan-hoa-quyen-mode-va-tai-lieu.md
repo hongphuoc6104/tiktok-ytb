@@ -127,7 +127,7 @@ Bản đồ 8 tab đã chốt giữ nguyên; review hiển thị điểm chờ t
 |---|---|---|
 | INDEX | Đường vào setup/chat mới/sản xuất/phát triển/bảo trì; map ngắn; phiên bản tài liệu hiện hành | Lịch sử chuyển đường dẫn, tests cũ, dài danh sách kế hoạch |
 | README | Dự án làm gì, kiến trúc máy/Colab/Flow, cách bắt đầu và trạng thái hỗ trợ | Lệnh cài model local, hướng dẫn reviewer cũ và số đo máy cũ |
-| AGENTS | Cách xác định quyền đang dùng, ngôn ngữ, nguồn chính sách/workflow, bàn giao và ưu tiên yêu cầu | Mascot chi tiết, thao tác CLI/retry, khuôn sáng tạo và tài liệu setup dài |
+| AGENTS | Cách xác định quyền đang dùng, ngôn ngữ, nguồn chính sách/workflow, bàn giao và ưu tiên yêu cầu | Chi tiết hình ảnh, thao tác CLI/retry, khuôn sáng tạo và tài liệu setup dài |
 | GEMINI | Adapter điểm vào ngắn, trỏ đúng INDEX/AGENTS và workflow | Sao chép lại toàn bộ quyền/sản xuất/brand |
 
 Rules đề xuất: `permissions.md` (ma trận quyền/nhóm file/grant); `execution.md` (mode/stop/recovery/no duplicate và trỏ workflow); `brand_tolerance.md` (nhận diện); `accounts.md` (auth/session/budget, trỏ spec). `production.md` hiện tại được phân tách rồi bỏ/đổi thành adapter ngắn nếu công cụ cần; không để hai nguồn cùng định nghĩa một quyền.
@@ -190,7 +190,7 @@ Căn cứ báo cáo/kế hoạch người dùng vừa cung cấp, không phải 
 - Short 9:16 hoàn toàn bằng tiếng Anh; từ/ý học B1 trở lên lấy từ kho, một nghĩa mỗi video; lời giải thích dễ hiểu, dùng đúng ngữ cảnh.
 - Một câu hỏi hoặc tình huống dẫn chuyện, kết có payoff; giải thích nghĩa/cách dùng/phát âm/ngữ pháp theo hợp đồng, nối vào tình huống thay vì đọc lần lượt các mục giáo án.
 - Minh họa giải thích 2D vẽ tay, viền đậm, màu phẳng, nền sáng, đạo cụ/sơ đồ rõ. Không dùng tranh tư liệu gần hiện thực nhiều chất liệu/ánh sáng tối; không nhập chủ đề tiền sử từ kênh mẫu thành ngách bắt buộc.
-- Mascot chuẩn nhỏ trong mọi khung, dùng pose/cử chỉ dẫn mắt; giữ đúng core identity/80–20. Không để mascot che trọng tâm hoặc thay hành động bằng nhân vật chỉ đứng cạnh.
+- Nhân vật vẽ tay nét rõ ràng trong các khung, dùng pose/cử chỉ dẫn mắt; giữ đúng core identity/80–20. Không để nhân vật che trọng tâm hoặc thay hành động bằng nhân vật chỉ đứng cạnh.
 - Số cảnh/hình/beat được chọn cho từng kịch bản; không 4 hồi hài/6 nhịp/16–22 tranh/15–20 giây mặc định bắt buộc. Khi đã chọn thì lưu số cảnh cụ thể vào hợp đồng job để tạo/validate nhất quán.
 - Giữ Flow, giọng và tốc độ đã chọn của job; rate 0.92 trong báo cáo là quyết định cần bảo toàn/đối chiếu cho job liên quan, không suy từ config khác. Không lấy giọng Adam/rate1.08 của checkout hiện tại thay quyết định đó.
 
@@ -205,7 +205,7 @@ Bốn skill vp-setup/production/development/maintenance phù hợp để phân q
 | vocabulary | Một nghĩa, chọn B1+ đúng kho, mục tiêu học và ví dụ/phản hồi phù hợp | Bank entry/sense, coverage yêu cầu, lưu ý nghĩa khác |
 | script | Câu hỏi dẫn, English dễ hiểu, causality, payoff, chốt narration trước neo | Outline, narration, purpose/transition, chữ và anchors |
 | storyboard | Hành động/trạng thái, cảnh kể/cận hành động/sơ đồ, continuity | Images/beats, based_on, preserve/change, function từng hình |
-| visuals | Nét 2D/nền sáng/màu phẳng, bố cục, mascot nhỏ và references | Description/ref/allowed text theo profile, kết quả ảnh liên kết target |
+| visuals | Nét 2D/nền sáng/màu phẳng, bố cục, nhân vật và references | Description/ref/allowed text theo profile, kết quả ảnh liên kết target |
 | audio | Voice/rate theo brief, synthesis Colab, pronunciation/holds khi cần | Request thật có voice/rate, WAV đo được; không chứng nhận cảm xúc từ prompt |
 | editing | WAV thật, cut/hold, cue đủ đọc, không tràn hai dòng, kết quay lại câu hỏi | Timeline/SRT/render props và MP4 theo track/ngôn ngữ |
 
@@ -224,8 +224,8 @@ Hồ sơ kênh là nguồn lựa chọn style/ngôn ngữ/giọng; references h�
 | scripts/director_context.py và nơi gọi | Hiện đọc trực tiếp tên/path của bốn director và vp-content refs; chuyển bindings trước xóa skill, test không FileNotFound và context đúng profile. Không sử dụng phần reviewer của loader trong auto mới |
 | scripts/agy_pipeline.py và adapter content | Nội dung do điều phối viết trong workflow mới; tránh fallback tự gọi generator/reviewer cũ kéo hướng. Lưu draft/plan/nguồn hướng trong dữ liệu |
 | adapters.py / colab_bridge / renderer/outputs.mjs | Hiện needs_en và English coverage nhiều nơi phụ thuộc16:9/dual; vertical dùng narration.wav/vi cues. Phải hỗ trợ English9:16 với đúng text/voice/track/timeline/cue ở toàn chuỗi, không chỉ sửa chú thích |
-| config/voice profiles | Ngăn defaults Adam1.08 hoặc rate khác override voice/rate hợp đồng; log request thực. Không đổi mascot/provider/mẫu prompt cố định để làm nhanh |
-| Web | Kịch bản/cảnh cho thấy chức năng hình, narration tiếng Anh, mascot/ref, ảnh và thời điểm audio/video, nguồn profile/revision; cùng dữ liệu của job |
+| config/voice profiles | Ngăn defaults Adam1.08 hoặc rate khác override voice/rate hợp đồng; log request thực. Không đổi nhân vật/provider/mẫu prompt cố định để làm nhanh |
+| Web | Kịch bản/cảnh cho thấy chức năng hình, narration tiếng Anh, nhân vật/ref, ảnh và thời điểm audio/video, nguồn profile/revision; cùng dữ liệu của job |
 | Docs active/historical | Loại/tách chỉ dẫn kéo về A1–A2/hài/local/bilingual nếu không đúng preset; giữ báo cáo lịch sử, request và phản hồi, không viết lại bằng chứng |
 
 ### 15.4 Thử từng bước theo hướng mới
@@ -233,9 +233,9 @@ Hồ sơ kênh là nguồn lựa chọn style/ngôn ngữ/giọng; references h�
 1. Brief thử từ kho: đúng entry/sense B1+, English9:16, profile mới, voice/rate và constraints. Không có yêu cầu hài4hồi/tiền sử/quota tranh mặc định.
 2. Outline/narration: một câu hỏi, các ví dụ phục vụ câu hỏi, giải thích đủ ý và payoff; không đọc mục giáo án; anchors giữ nguyên văn lời đã chốt.
 3. WAV Colab: có track English thực, đúng voice/rate đã chọn, duration thật; kết quả phát âm/nghe chỉ ghi khi thực sự nghe. Không gọi reviewer tự động.
-4. Bộ hình thử hữu hạn: cảnh kể, hành động, sơ đồ/giải thích; mỗi ảnh có mascot chuẩn nhỏ và đúng hướng. Xem hình thật để chốt phát triển hướng, không suy từ prompt hoặc hash. Trong auto production mới không biến thử phong cách thành quality gate bắt buộc.
+4. Bộ hình thử hữu hạn: cảnh kể, hành động, sơ đồ/giải thích; mỗi ảnh có nhân vật chuẩn và đúng hướng. Xem hình thật để chốt phát triển hướng, không suy từ prompt hoặc hash. Trong auto production mới không biến thử phong cách thành quality gate bắt buộc.
 5. Chuỗi continuity: cùng bối cảnh khóa góc và base ref, thấy state change; hình độc lập mới dùng generation độc lập. Không nới identity20% để chấp nhận sai hành động.
-6. MP4 English9:16: English audio, English cue nếu brief yêu cầu phụ đề, timeline theo WAV, không track Việt/ngang bị kéo nhầm, không crop mất chữ/mascot. Render trên Colab; file thật và kiểm kỹ thuật kết quả.
+6. MP4 English9:16: English audio, English cue nếu brief yêu cầu phụ đề, timeline theo WAV, không track Việt/ngang bị kéo nhầm, không crop mất chữ/nhân vật. Render trên Colab; file thật và kiểm kỹ thuật kết quả.
 7. Cùng profile được thử cho auto và review: auto không reviewer/chờ duyệt; review dừng đúng các output; cả hai đưa artifact lên web. Mock/fixture xác minh logic không thay bộ ảnh/WAV/video thực.
 
 Với job predator đang được nhắc: các revision/approval/request trong báo cáo là lịch sử, chưa xác minh live ở lượt này. Khi triển khai phải tiếp tục chính job, kiểm trạng thái hiện tại, giữ sense đang reserved; không tự thay narration/WAV nếu yêu cầu chỉ đổi hình. Chỉ phần bị tác động được tạo phiên bản mới; unknown cũ đối chiếu trước, không tạo job mới để bỏ qua.

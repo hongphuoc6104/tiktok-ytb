@@ -26,7 +26,7 @@ class FlowPromptTests(unittest.TestCase):
   allowed=[{'text':'“I” means tôi.','placement':'upper left','object':'speech bubble'},'Tôi lấy một hạt.','Keep  TWO spaces!'];data=self.data(allowed_text=allowed);result=compile('NanoBanana2','scene',data)
   actual=json.loads(result['prompt'].split('Visual data (JSON; learner strings are exact data):\n\n')[1]);self.assertEqual(actual['allowed_text'],allowed);self.assertEqual(data['allowed_text'],allowed);self.assertNotIn(CHARACTER['media_id'],result['prompt']);self.assertEqual(result['provenance']['references']['character'],CHARACTER)
  def test_canonical_core_tolerance_bright2d_and_caption_clearance(self):
-  result=compile('NanoBananaPro','scene',self.data(caption_clearance={'edge':'bottom','fraction':0.22}));prompt=result['prompt'];self.assertIn('#8CCFE8',prompt);self.assertIn('exactly one torso',prompt);self.assertIn('two simple solid-black oval eyes',prompt);self.assertIn('subtle eyebrows',prompt);self.assertIn('flat colors',prompt);self.assertIn('small and visible',prompt);self.assertIn('0.22',prompt);self.assertFalse(result['provenance']['attachment_verified']);self.assertFalse(result['provenance']['cost_verified']);self.assertFalse(result['provenance']['quality_verified'])
+  result=compile('NanoBananaPro','scene',self.data(caption_clearance={'edge':'bottom','fraction':0.22}),'1.0.0');prompt=result['prompt'];self.assertIn('#8CCFE8',prompt);self.assertIn('exactly one torso',prompt);self.assertIn('two simple solid-black oval eyes',prompt);self.assertIn('subtle eyebrows',prompt);self.assertIn('flat colors',prompt);self.assertIn('small and visible',prompt);self.assertIn('0.22',prompt);self.assertFalse(result['provenance']['attachment_verified']);self.assertFalse(result['provenance']['cost_verified']);self.assertFalse(result['provenance']['quality_verified'])
  def test_continuity_requires_real_declared_base_and_preserve_change(self):
   for extra in ({'preserve':['Camera angle']},{'change':['Move arm']}):
    with self.assertRaisesRegex(PromptError,'FLOW_BASE_REFERENCE_REQUIRED'):compile('NanoBanana2Lite','variation',self.data(**extra))
@@ -49,7 +49,7 @@ class FlowPromptTests(unittest.TestCase):
    with self.assertRaisesRegex(PromptError,'MANAGEMENT_TEXT_FORBIDDEN'):compile('NanoBanana2','scene',self.data(allowed_text=[text]))
  def test_multiple_references_invalid_hash_and_missing_character_fail(self):
   for reference in (None,[CHARACTER,CHARACTER],{'media_id':'not-real','sha256':'a'*64},{**CHARACTER,'token':'private'}):
-   with self.assertRaisesRegex(PromptError,'FLOW_REFERENCE_INVALID'):compile('NanoBanana2','scene',self.data(character_reference=reference))
+   with self.assertRaisesRegex(PromptError,'FLOW_REFERENCE_INVALID'):compile('NanoBanana2','scene',self.data(character_reference=reference),'1.0.0')
   with self.assertRaisesRegex(PromptError,'FLOW_REFERENCE_INVALID'):compile('NanoBanana2','scene',self.data(base_reference={'media_id':BASE['media_id'],'sha256':'invalid'}))
  def test_freeze_before_send_and_preserve_exact_saved_pin(self):
   pin=freeze('Nano Banana 2 Lite',request_states=['prepared','not_submitted']);self.assertEqual(pin,create_pin('NanoBanana2Lite'));self.assertEqual(freeze('NanoBanana2Lite',existing_pin=pin,request_states=['downloaded','unknown']),pin);self.assertEqual(compile_pinned(pin,'scene',self.data()),compile('NanoBanana2Lite','scene',self.data()))
@@ -66,3 +66,19 @@ class FlowPromptTests(unittest.TestCase):
   path=Path(__file__).parents[1]/'prompt_templates.py';before=path.read_bytes();data=self.data();original=copy.deepcopy(data);compile('NanoBanana2','scene',data);self.assertEqual(data,original);self.assertEqual(path.read_bytes(),before)
 
 if __name__=='__main__':unittest.main()
+
+class CastPromptTests(unittest.TestCase):
+ def data(self, **extra):
+  return {'description':'Two anonymous stick figures in fur clothing share a fire.','aspect_ratio':'9:16','allowed_text':[],**extra}
+ def test_cast_version_needs_no_character_and_drops_mascot(self):
+  for model in ('NanoBananaPro','NanoBanana2','NanoBanana2Lite'):
+   for purpose in ('reference','character','scene'):
+    result=compile(model,purpose,self.data(),'1.1.0');prompt=result['prompt']
+    self.assertNotIn('#8CCFE8',prompt);self.assertNotIn('mascot_placement',prompt);self.assertIn('No main character, presenter or recurring protagonist',prompt);self.assertIn('anonymous stick figures',prompt);self.assertIsNone(result['provenance']['references']['character'])
+  with_ref=compile('NanoBanana2','scene',self.data(character_reference=copy.deepcopy(CHARACTER)),'1.1.0');self.assertEqual(with_ref['provenance']['references']['character'],CHARACTER)
+ def test_cast_version_rejects_mascot_placement_and_bad_reference(self):
+  with self.assertRaisesRegex(PromptError,'FLOW_PROMPT_FIELDS_UNSUPPORTED'):compile('NanoBanana2','scene',self.data(mascot_placement='upper-left'),'1.1.0')
+  with self.assertRaisesRegex(PromptError,'FLOW_REFERENCE_INVALID'):compile('NanoBanana2','scene',self.data(character_reference={'media_id':'bad','sha256':'a'*64}),'1.1.0')
+  with self.assertRaisesRegex(PromptError,'FLOW_BASE_REFERENCE_REQUIRED'):compile('NanoBanana2','variation',self.data(preserve=['same fire'],change=['night']),'1.1.0')
+ def test_legacy_registries_unchanged(self):
+  self.assertEqual(create_pin('NanoBanana2','1.0.0')['version'],'1.0.0');self.assertIn('#8CCFE8',compile('NanoBanana2','scene',{**self.data(),'character_reference':copy.deepcopy(CHARACTER)},'1.0.1')['prompt'])

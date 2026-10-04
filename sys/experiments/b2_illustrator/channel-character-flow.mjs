@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const project='https://flow.google.com/project/7c815425-4625-4afb-ba84-4290d3fa9ea4';
-const folder=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../assets/characters/channel-mascot');
+const folder=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../assets/characters/cast-style-sheet');
 export async function runCharacterOperation(command,bound) {
  const page=bound?.page;if(!page || page.isClosed())throw Error('No existing bound page');
  if(command==='tool-snapshot:mascot-verify') {

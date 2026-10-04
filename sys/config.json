@@ -11,7 +11,7 @@
   "flow_require_ui_evidence": false,
   "flow_queue_trial_enabled": true,
   "flow_model": "Nano Banana 2 Lite",
-  "flow_prompt_version": "1.0.0",
+  "flow_prompt_version": "1.1.0",
   "flow_profile": "video-pilot",
   "flow_project": "Video Pilot",
   "tts_package": "vieneu==3.8.1",
@@ -45,14 +45,7 @@
   "en_seed": 42,
   "workflow_mode": "review",
   "render_concurrency": 4,
-  "canonical_character": {
-    "id": "channel-mascot",
-    "name": "Người que áo xanh biển nhạt",
-    "reference_path": "assets/characters/channel-mascot/reference-v1.png",
-    "media_id": "de94a39b-155f-4afe-acbb-d9d4b59ad532",
-    "appearance": "Đầu tròn trắng viền xanh đen đậm, hai mắt oval đen, miệng cười tươi, tay chân người que tối giản",
-    "outfit": "Áo thun cộc tay màu xanh biển nhạt"
-  },
+  "canonical_character": null,
   "auto_require_clean_code": true,
   "auto_max_media_rejections": 3,
   "auto_max_audio_retakes_per_scene": 2,
@@ -86,7 +79,8 @@
         "revision": "20d056b8ea5d8d578b4cbaf1f703012fa3798a84"
       }
     },
-    "account": "auto"
+    "account": "auto",
+    "render_estimate_seconds": 60
   },
   "en_speed": 0.92,
   "flow_profile_policy": "existing_only"

@@ -101,6 +101,8 @@ const Video: React.FC<any> = (p) => {
   } else if (effect === 'pan_right') {
     scale = 1.06;
     translateX = (progress - 0.5) * 3;
+  } else if (effect === 'shake') {
+    scale = 1.06; // Đệm phóng to 6% để triệt tiêu viền đen khi rung chấn màn hình (14px shake)
   } else if (effect === 'slide_left') {
     translateX = (1 - transition) * 100;
   } else if (!p.modern_style && effect !== 'hold') {

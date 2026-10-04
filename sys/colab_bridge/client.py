@@ -143,10 +143,18 @@ class Client:
         self._state(path, kind=kind, account=self.account, session=self.session, **values)
         return str(path.resolve())
 
-    def _ready(self):
+    def _ready(self, auto_start=True):
         budgets = self._budgets(); alias = self._alias()
         status = budgets.snapshot(alias)
         intervals = [item for item in status['allocated_sessions'] if item['session'] == self.session and item.get('device') == 'T4']
+        if not intervals and auto_start and self.cfg.get('auto_start', True):
+            if status['identity_configured'] and not status['uncertain'] and not status['blocks'].get('colab') and status['available_seconds'] > 0:
+                try:
+                    self.start()
+                    status = budgets.snapshot(alias)
+                    intervals = [item for item in status['allocated_sessions'] if item['session'] == self.session and item.get('device') == 'T4']
+                except Exception:
+                    pass
         if not status['identity_configured'] or not intervals or status['uncertain'] or status['blocks'].get('colab'):
             raise ColabError('COLAB_VERIFIED_SETUP_REQUIRED: confirmed identity and allocated T4 session required')
         if status['needs_service_recheck']:
@@ -196,6 +204,10 @@ class Client:
                 budgets.allocated(alias, self.session, device='T4', at=start, evidence=evidence)
                 budgets.service_rechecked(alias, self.session, device='T4', evidence=evidence)
                 self._state(journal, phase='allocated', account=self.account, session=self.session, evidence=evidence, allocation_started_at=start)
+                try:
+                    self.exec("import omnivoice, soundfile")
+                except Exception:
+                    self.setup()
             except Exception as ex:
                 evidence = self._observation('allocation-unknown', error=str(ex), allocation_started_at=start)
                 self._state(journal, phase='ambiguous', account=self.account, session=self.session, evidence=evidence, allocation_started_at=start)

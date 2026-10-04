@@ -11,7 +11,7 @@ import workflow as wf
 from scripts.director_context import context, tolerance_guidance, TOLERANCE_CHECKS
 import test_image_repairs as repair_tests
 
-RULE = (ROOT / '.agents/rules/brand_tolerance.md').read_text()
+RULE = (ROOT / '.agents/skills/vp-production/references/brand_tolerance.md').read_text()
 OK = 'TEST fixture only, not production.'
 
 

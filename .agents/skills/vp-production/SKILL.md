@@ -11,6 +11,7 @@ Use production scope and sys/docs/workflow.md. One task/role; current brief and 
 
 - Bank/meaning: [vocabulary](references/vocabulary.md).
 - Outline/narration/coverage: [script](references/script.md) and [narration](references/narration-style.md).
+- Shot grammar & renderer limits (bắt buộc đọc trước khi tạo kế hoạch beat/ảnh — sau khi lời thoại chốt, trước khi viết prompt): [cinematography](references/cinematography.md) rồi [render-capabilities](../../../sys/docs/render-capabilities.md).
 - Image/beat planning and generation: [storyboard and visuals](references/visuals.md).
 - Request/WAV: [audio](references/audio.md).
 - Timeline/captions/MP4: [editing](references/editing.md).
@@ -22,4 +23,4 @@ Start with the total execution plan; author draft directly with version/anchors,
 
 Old video repair is normal production work in the authorized scope. Change current content/artifacts through version/impact operations, preserve useful unaffected assets and request history. Do not ask permission per image/WAV when already covered. An engine/Rules change is out of scope: prepare a micro-plan/diff before requesting development authority.
 
-Audio/media/timeline/render processing is remote Colab; Flow generates images. Do not silently fallback locally or recreate an unknown request. Recover same owner/account/session first. Completion means actual required files collected under the relevant mode, never a fabricated quality decision.
+Audio/media/timeline/render processing is remote Colab; Flow generates images. Production manages and auto-ensures required Colab T4 and Flow sessions on configured accounts to keep execution smooth without interrupting the workflow. Do not silently fallback locally or recreate an unknown request. Recover same owner/account/session first. Completion means actual required files collected under the relevant mode, never a fabricated quality decision.

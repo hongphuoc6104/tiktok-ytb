@@ -2,7 +2,7 @@
 
 ## Thay đổi cần giữ khi cập nhật
 
-Bản PC 493cdd7 gán preflight.png vào before_submit của mascot. Khi cấu hình mới không tạo preflight.png, adapter sao chép file không tồn tại và chặn media. Bản sửa này bỏ phép gán đó: ảnh tài khoản/preflight không phải ảnh trước gửi của yêu cầu.
+Bản PC 493cdd7 gán preflight.png vào before_submit của nhân vật. Khi cấu hình mới không tạo preflight.png, adapter sao chép file không tồn tại và chặn media. Bản sửa này bỏ phép gán đó: ảnh tài khoản/preflight không phải ảnh trước gửi của yêu cầu.
 
 Hàm copy_optional_flow_screenshot chỉ sao chép nguồn có thật. Khi flow_require_ui_evidence=false, nguồn trống hoặc đã mất được bỏ qua; không tạo ảnh trắng, không báo đã chụp. Khi bật lại chế độ bắt buộc, thiếu nguồn thật vẫn dừng. Không dùng file before-submit cũ để giả đáp ứng yêu cầu mới. Nguồn trùng đích không sao chép lên chính nó.
 

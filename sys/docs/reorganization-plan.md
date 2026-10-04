@@ -49,7 +49,7 @@ pipelineFlow/
     architecture/            # Sơ đồ mã, phụ thuộc và vòng đời dữ liệu
   reports/                   # Lịch sử, có mục lục
   experiments/               # Chỉ phần thử nghiệm thật sự độc lập
-  assets/                    # Giữ nguyên mascot chuẩn và tài nguyên
+  assets/                    # Giữ nguyên nhân vật chuẩn và tài nguyên
   schemas/
   examples/
   tests/

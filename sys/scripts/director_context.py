@@ -41,7 +41,7 @@ CORE_DEFECTS = {
     'character_missing_or_replaced': 'required character absent or replaced by a different character or reference identity',
     'meaning_broken': 'the deviation makes the image contradict or fail to show its teaching meaning/action (explain how)',
 }
-TOLERANCE_FALLBACK = """80/20 brand tolerance policy (built-in summary; .agents/rules/brand_tolerance.md missing).
+TOLERANCE_FALLBACK = """80/20 brand tolerance policy (built-in summary; .agents/skills/vp-production/references/brand_tolerance.md missing).
 Core identity (80%, mandatory for CH01 mascot): exactly one stickman body; white round head with bold dark navy outline; simple solid black oval eyes; light-blue #8CCFE8 short-sleeve T-shirt; minimal navy stick arms and legs; flat minimal 2D style.
 Core violations (must fail): wrong shirt colour; two overlapping shirts/bodies or extra limbs; realistic/muscular human anatomy or realistic detailed fingers/toes; anime/pixar eyes with large whites or glossy pupils.
 Tolerated (20%, must never fail): expressive eyebrows, small forehead creases, sweat drops, any mouth shape, slightly rounded/white/mitten-like hands, rounded/flat/hollow-outline feet in motion, minor prop/furniture/background differences that keep the teaching meaning."""
@@ -49,7 +49,7 @@ Tolerated (20%, must never fail): expressive eyebrows, small forehead creases, s
 
 def tolerance_guidance(root):
     """Binding reviewer policy; the lead-owned rule file wins, the built-in summary is only a fallback."""
-    rule = Path(root) / '.agents/rules/brand_tolerance.md'
+    rule = Path(root) / '.agents/skills/vp-production/references/brand_tolerance.md'
     policy = f'Brand tolerance rule ({rule.name}):\n{rule.read_text()}' if rule.is_file() else TOLERANCE_FALLBACK
     categories = '; '.join(f'{k} = {v}' for k, v in CORE_DEFECTS.items())
     return (policy + '\n\nBinding review directive for ' + ', '.join(TOLERANCE_CHECKS) + ': these checks fail ONLY when '

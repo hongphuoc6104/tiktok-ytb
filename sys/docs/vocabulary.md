@@ -2,7 +2,7 @@
 
 `vocab/sources/*.txt` is the source; `bank.jsonl` compiles one sense per entry. `ledger.json` retains reserved/done/history; `channel.json` selects direction when generating a brief. Vocabulary code is system code; assigned word data is content. Only official tools update the ledger. Profile changes do not rewrite existing job contracts.
 
-The active profile targets English B1+, 9:16, bright explanatory 2D images and a small mascot; the brief freezes voice/rate. Default selection filters profile allowed_levels, then sorts by level/rank. Old A1–A2/bilingual plans are historical, not this channel's default. Level overrides require the actual assigned product choice.
+The active profile targets English B1+, 9:16, bright explanatory 2D images and anonymous stick figures; the brief freezes voice/rate. Default selection filters profile allowed_levels, then sorts by level/rank. Old A1–A2/bilingual plans are historical, not this channel's default. Level overrides require the actual assigned product choice.
 
 From `sys/`, use the management interpreter:
 

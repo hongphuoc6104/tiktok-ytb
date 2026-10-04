@@ -1,28 +1,10 @@
-# Nhân vật gốc của kênh
+# Dàn nhân vật và phong cách hình ảnh (Visual Cast)
 
-Mẫu chuẩn được người dùng chốt ngày 2026-09-21:
-[channel-mascot/reference-v1.png](channel-mascot/reference-v1.png).
-Thông tin, mã ảnh trên Flow và nhận diện cố định nằm trong
-[channel-mascot/character.json](channel-mascot/character.json).
+Theo định hướng hiện tại (Prompt Registry `1.1.0`, channel profile v5):
+- **Không có nhân vật chính cố định, không có người dẫn (presenter/host) lặp lại trong các cảnh.**
+- Toàn bộ nhân vật là **dàn người que vô danh (anonymous stick-figure cast)**: đầu tròn trắng viền đen dày, mắt chấm/oval biểu cảm, tay chân que, đúng 1 thân.
+- Vai trò của từng nhân vật phụ thuộc hoàn toàn vào ngữ cảnh bài học và kịch bản (trang phục, đạo cụ, tóc, màu da, độ tuổi được mô tả trong visual brief).
 
-Khi tạo nội dung cho kênh, dùng mẫu này làm nhân vật đại diện: đầu tròn trắng,
-mắt oval đen xanh, miệng cười, áo xanh biển nhạt, tay chân người que.
-Không tự thiết kế lại mẫu hoặc đổi màu áo. Không gán cứng chủ đề của video.
-Nhân vật phụ vẫn có thể khác mẫu này theo kịch bản.
-
-Khi tạo ảnh, phải đính kèm ảnh chuẩn vào Character reference; mô tả bằng chữ
-không thay thế ảnh tham chiếu. Nếu kế thừa một cảnh, gắn thêm ảnh cảnh trước vào
-Base Scene. Không dùng ảnh cảnh trước thay cho nhân vật chuẩn.
-
-## Trạng thái thực tế
-
-- Đã có ảnh chuẩn trong repository và đã được người dùng chốt.
-- Đã tải ảnh vào project Flow `7c815425-4625-4afb-ba84-4290d3fa9ea4`.
-- Media ID: `de94a39b-155f-4afe-acbb-d9d4b59ad532`.
-- Chưa hoàn thành đăng ký riêng trong mục Characters của Flow.
-- Pipeline đã tự động liên kết manifest này qua config.json, adapters.py, b2_bridge.py và B-2 Illustrator.
-- Bất cứ khi nào mở project lên ở bất kỳ máy nào, nhân vật chuẩn này luôn được tự động nạp làm tham chiếu nhân vật (CH01).
-- Đã kiểm chứng thực tế sinh ảnh thành công: nhân vật áo xanh biển nhạt (#8CCFE8) xuất hiện chuẩn xác và đồng nhất.
-
-Ảnh được tạo bằng image_gen tích hợp từ ảnh cảm hứng do người dùng cung cấp.
-Không tự chạy pipeline hay tạo thêm ảnh trong lượt chốt mẫu.
+## Tài nguyên phong cách hiện tại
+- Thư mục `cast-style-sheet/`: Chứa các bảng tham chiếu phong cách vẽ minh họa (Ink Explainer style, nét vẽ tay đen đậm phong cách bút lông/marker, mảng màu phẳng, nền tràn khung).
+- Nhân vật cũ CH01 đã được xóa bỏ hoàn toàn khỏi hệ thống theo chỉ đạo của người dùng.

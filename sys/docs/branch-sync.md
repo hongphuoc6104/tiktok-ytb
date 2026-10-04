@@ -1,6 +1,6 @@
 # Đồng bộ bố cục ba nhánh — 22/09/2026
 
-Giữ ba lịch sử nhánh riêng, không merge nội dung kênh vào master. Mỗi nhánh nhận cấu trúc sys/ và launcher, chỉ mục, xuất video sau duyệt và bảo vệ scratch giống nhau. File riêng được chuyển vào sys/ nguyên nội dung; cấu hình, mascot và kho dữ liệu riêng không bị thay bằng bản master.
+Giữ ba lịch sử nhánh riêng, không merge nội dung kênh vào master. Mỗi nhánh nhận cấu trúc sys/ và launcher, chỉ mục, xuất video sau duyệt và bảo vệ scratch giống nhau. File riêng được chuyển vào sys/ nguyên nội dung; cấu hình, nhân vật và kho dữ liệu riêng không bị thay bằng bản master.
 
 Mốc trước chuyển đổi:
 - master: 086161058c4f537fedd45cae8d452c5f3f1b342c

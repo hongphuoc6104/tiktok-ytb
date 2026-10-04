@@ -142,6 +142,28 @@ class ProtocolTests(unittest.TestCase):
             call.assert_not_called()
             self.assertEqual(file_hash(self.root / 'out/segment-0.wav'), file_hash(self.root / 'out2/segment-0.wav'))
 
+    def test_auto_start_invoked_when_session_not_allocated(self):
+        with patch('colab_bridge.client.cli', return_value='/bin/true'):
+            client = Client(self.root, self.cfg)
+        started = []
+        with patch.object(client, '_alias', return_value='colab:account-02'), \
+             patch.object(client, '_budgets') as mock_budgets, \
+             patch.object(client, 'start', side_effect=lambda: started.append(True)):
+            snapshot_empty = {
+                'identity_configured': True, 'uncertain': False,
+                'blocks': {}, 'available_seconds': 3600,
+                'allocated_sessions': [], 'needs_service_recheck': False
+            }
+            snapshot_allocated = {
+                'identity_configured': True, 'uncertain': False,
+                'blocks': {}, 'available_seconds': 3600,
+                'allocated_sessions': [{'session': client.session, 'device': 'T4'}],
+                'needs_service_recheck': False
+            }
+            mock_budgets.return_value.snapshot.side_effect = [snapshot_empty, snapshot_allocated]
+            client._ready()
+            self.assertEqual(len(started), 1)
+
 
 class ParallelTests(unittest.TestCase):
     def setUp(self):

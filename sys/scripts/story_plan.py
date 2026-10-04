@@ -52,15 +52,16 @@ def validate_plan(b, c):
     global_visible = c['style']+' '+json.dumps(b['planning']['text_style'],ensure_ascii=False)+' '+' '.join(x['appearance']+' '+x['outfit']+' '+x['name'] for x in c['characters'])
     if any(re.search(r'(?<!\w)'+re.escape(code)+r'(?!\w)', global_visible, re.I) for code in internal):
         fail('INTERNAL_LABEL','characters/style','Mã quản lý xuất hiện trong mô tả dùng tạo hình')
+    all_seen = set()
     for s, outline in zip(scenes, c['outline']):
         if outline['purpose'] != s['purpose'] or outline['requirements'] != s['requirements']:
             fail('OUTLINE', s['id'], 'Mục đích hoặc ý của cảnh khác dàn ý')
-        seen = set()
+        scene_images = set()
         for im in s['images']:
             if im['id'] in all_images: fail('IMAGE_ID', s['id'], 'Mã ảnh trùng')
             all_images.add(im['id'])
-            if im['based_on'] is not None and im['based_on'] not in seen:
-                fail('IMAGE_BASE', im['id'], 'Ảnh nền phải là ảnh trước đó trong cùng cảnh')
+            if im['based_on'] is not None and im['based_on'] not in all_seen:
+                fail('IMAGE_BASE', im['id'], 'Ảnh nền phải là ảnh trước đó trong cùng cảnh hoặc cảnh trước')
             if im['based_on'] and not im['preserve'].strip():
                 fail('IMAGE_BASE', im['id'], 'Thiếu nội dung cần giữ nguyên')
             if not set(im['character_ids']) <= set(s['character_ids']):
@@ -69,9 +70,10 @@ def validate_plan(b, c):
             visible += ' ' + ' '.join(x['text']+' '+x['placement']+' '+x['object'] for x in im['visible_text'])
             if any(re.search(r'(?<!\w)'+re.escape(code)+r'(?!\w)', visible, re.I) for code in internal):
                 fail('INTERNAL_LABEL', im['id'], 'Mã nội bộ không được đưa vào mô tả hình/chữ')
-            seen.add(im['id'])
+            scene_images.add(im['id'])
+            all_seen.add(im['id'])
         used = {x['image_id'] for x in s['beats']}
-        if used != seen: fail('IMAGE_USAGE', s['id'], 'Mỗi ảnh phải được sử dụng, không tham chiếu ảnh ngoài cảnh')
+        if used != scene_images: fail('IMAGE_USAGE', s['id'], 'Mỗi ảnh phải được sử dụng, không tham chiếu ảnh ngoài cảnh')
         for lang in languages(b):
             text = s.get('narration_en' if lang == 'en' else 'narration', '')
             positions = []

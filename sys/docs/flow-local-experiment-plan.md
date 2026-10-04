@@ -4,7 +4,7 @@
 
 Theo yêu cầu mới, ưu tiên thử và tối ưu tool Flow trên máy local, nhánh video-vocabulary. Chưa chạy phép đo đầu-cuối trên PC SATA trong đợt này. Không dùng số đo local để kết luận về PC. Giữ nguyên dữ liệu và thay đổi riêng trên PC.
 
-Từ mới: **borrow (mượn)**, mã borrow.v; kho local báo todo trước khi giữ chỗ. Job: vocab-borrow-local-001, chế độ review, 9:16, bốn cảnh, ba ví dụ và mascot CH01 chuẩn. Không tạo lại wake.
+Từ mới: **borrow (mượn)**, mã borrow.v; kho local báo todo trước khi giữ chỗ. Job: vocab-borrow-local-001, chế độ review, 9:16, bốn cảnh, ba ví dụ và nhân vật CH01 chuẩn. Không tạo lại wake.
 
 ## Thứ tự thực hiện
 
@@ -40,7 +40,7 @@ Ngân sách thử nghiệm được người dùng cấp riêng: tối đa 1.000
 
 1. Sửa bản Flow 2.1.0 bị mất control và sai cơ chế lưu trạng thái; sao lưu nguồn từng revision. Không chạy bản lỗi.
 2. Tách output native (SDK hiện trả một ảnh/call) và concurrency 1–4; không gọi bốn request là native x4.
-3. Mỗi nhóm dùng bốn prompt độc lập cố định, mascot CH01, 9:16. Đo concurrency 1/2/3/4; dừng tăng nếu lỗi hoặc throughput giảm.
+3. Mỗi nhóm dùng bốn prompt độc lập cố định, nhân vật CH01, 9:16. Đo concurrency 1/2/3/4; dừng tăng nếu lỗi hoặc throughput giảm.
 4. Lặp baseline/best ba lần; tải từng ảnh, đối chiếu mediaId/request, chữ và tham chiếu. Báo thời gian/ảnh đạt và số dư; chỉ đổi mặc định khi cải thiện >=15% và không tăng lỗi. Tăng tốc 4 lần là mục tiêu, không phải cam kết.
 5. Thử lỗi bằng mô phỏng không tốn credit; timeout sau submit không resubmit. Chỉ đồng bộ ba nhánh sau nghiệm thu.
 

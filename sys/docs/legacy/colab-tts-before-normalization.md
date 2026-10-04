@@ -1,6 +1,6 @@
 # TTS trên Colab T4, giữ giọng Minh Quân Pro và Alba
 
-Bản phát triển trên `codex/colab-tts`, xuất phát từ `video-vocabulary`. Tham khảo `feature/colab-offload` tại commit `4cf8896`; không nhập các thay đổi mascot, kênh tiền sử, kho từ hoặc renderer của nhánh đó.
+Bản phát triển trên `codex/colab-tts`, xuất phát từ `video-vocabulary`. Tham khảo `feature/colab-offload` tại commit `4cf8896`; không nhập các thay đổi nhân vật, kênh tiền sử, kho từ hoặc renderer của nhánh đó.
 
 ## Phạm vi và trạng thái
 

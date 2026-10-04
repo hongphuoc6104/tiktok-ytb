@@ -424,6 +424,134 @@ class ImagesV2Tests(unittest.TestCase):
             if unit['based_on']:
                 self.assertEqual(request['identity']['base_image']['target'], unit['based_on'])
 
+    def test_pipeline_submits_cross_scene_based_on_in_order(self):
+        import image_pipeline as ip
+        from unittest.mock import patch
+        from types import SimpleNamespace
+        units = [
+            {'id': 'SC01_I1_9x16', 'scene_id': 'SC01', 'ratio': '9:16', 'based_on': None,
+             'prompt': 'SC01 image 1 kitchen', 'character_ids': [], 'visible_text': []},
+            {'id': 'SC02_I1_9x16', 'scene_id': 'SC02', 'ratio': '9:16', 'based_on': 'SC01_I1_9x16',
+             'prompt': 'SC02 image 1 kitchen again', 'character_ids': [], 'visible_text': []},
+            {'id': 'SC03_I1_9x16', 'scene_id': 'SC03', 'ratio': '9:16', 'based_on': None,
+             'prompt': 'SC03 image 1 garden', 'character_ids': [], 'visible_text': []},
+        ]
+        synthetic_content = {'schema_version': '2.0', 'characters': [], 'scenes': [{'id': 'SC01'}, {'id': 'SC02'}, {'id': 'SC03'}]}
+        real_brief, real_rev, real_hash = self.p.brief(self.j)
+        single_brief = (dict(real_brief, aspect_ratio='9:16', scene_count=3), real_rev, real_hash)
+
+        def cross_provider(p, *args, **kw):
+            self.calls.append(args)
+            folder = Path(args[args.index('--out') + 1])
+            ratio = args[args.index('--ratio') + 1]
+            size = (720, 1280)
+            import hashlib
+            rgb = tuple(hashlib.sha256(' '.join(args).encode()).digest()[:3])
+            Image.new('RGB', size, rgb).save(folder / 'result.png')
+            write(folder / 'result.json', {'jobId': args[args.index('--id') + 1], 'type': 'image',
+                  'prompt': args[args.index('--prompt') + 1], 'ratio': ratio, 'characters': [],
+                  'source': 'google-flow-browser', 'status': 'downloaded'})
+            proof = {'passed': True, 'mode': 'image', 'characters': []}
+            if '--base-image' in args:
+                proof['base_image'] = args[args.index('--base-image') + 1]
+            write(folder.parent / 'ui-proof.json', proof)
+            Image.new('RGB', (30, 30)).save(folder.parent / 'before-submit.png')
+            return SimpleNamespace(returncode=0, stdout='TEST PROVIDER', stderr='')
+
+        with patch('image_pipeline.content', return_value=synthetic_content), \
+             patch('image_pipeline.planned_units', return_value=units), \
+             patch.object(self.p, 'brief', return_value=single_brief), \
+             patch('adapters.gflow', side_effect=cross_provider):
+            self.p.run(self.j, 'images')  # references stage
+            self.approve('references')
+            out_dir = self.p.job(self.j) / 'cross-scene-out'; out_dir.mkdir()
+            payload = ip.produce(self.p, self.j, out_dir)
+
+        prompts_seen = [a[a.index('--prompt') + 1] for a in self.calls]
+        idx_sc01 = next(i for i, p in enumerate(prompts_seen) if 'SC01 image 1' in p)
+        idx_sc02 = next(i for i, p in enumerate(prompts_seen) if 'SC02 image 1' in p)
+        self.assertLess(idx_sc01, idx_sc02, 'Cross-scene parent SC01 must submit before child SC02')
+
+        sc02_call = next(a for a in self.calls if 'SC02 image 1' in a[a.index('--prompt') + 1])
+        self.assertIn('--base-image', sc02_call)
+
+        sc02_item = next(x for x in payload['items'] if x['scene_id'] == 'SC02_I1_9x16')
+        req = read(self.p.path(self.j, sc02_item['request']))
+        self.assertEqual(req['identity']['base_image']['target'], 'SC01_I1_9x16')
+
+    def test_pipeline_submits_deep_and_branching_cross_scene_dag(self):
+        import image_pipeline as ip
+        from unittest.mock import patch
+        from types import SimpleNamespace
+        units = [
+            {'id': 'SC01_I1_9x16', 'scene_id': 'SC01', 'ratio': '9:16', 'based_on': None,
+             'prompt': 'SC01 kitchen root', 'character_ids': [], 'visible_text': []},
+            {'id': 'SC02_I1_9x16', 'scene_id': 'SC02', 'ratio': '9:16', 'based_on': 'SC01_I1_9x16',
+             'prompt': 'SC02 kitchen counter', 'character_ids': [], 'visible_text': []},
+            {'id': 'SC03_I1_9x16', 'scene_id': 'SC03', 'ratio': '9:16', 'based_on': 'SC02_I1_9x16',
+             'prompt': 'SC03 kitchen stove detail', 'character_ids': [], 'visible_text': []},
+            {'id': 'SC04_I1_9x16', 'scene_id': 'SC04', 'ratio': '9:16', 'based_on': 'SC01_I1_9x16',
+             'prompt': 'SC04 kitchen fridge branch', 'character_ids': [], 'visible_text': []},
+            {'id': 'SC05_I1_9x16', 'scene_id': 'SC05', 'ratio': '9:16', 'based_on': None,
+             'prompt': 'SC05 garden independent', 'character_ids': [], 'visible_text': []},
+        ]
+        synthetic_content = {'schema_version': '2.0', 'characters': [], 'scenes': [{'id': f'SC0{i}'} for i in range(1, 6)]}
+        real_brief, real_rev, real_hash = self.p.brief(self.j)
+        single_brief = (dict(real_brief, aspect_ratio='9:16', scene_count=5), real_rev, real_hash)
+
+        def dag_provider(p, *args, **kw):
+            self.calls.append(args)
+            folder = Path(args[args.index('--out') + 1])
+            ratio = args[args.index('--ratio') + 1]
+            size = (720, 1280)
+            import hashlib
+            rgb = tuple(hashlib.sha256(' '.join(args).encode()).digest()[:3])
+            Image.new('RGB', size, rgb).save(folder / 'result.png')
+            write(folder / 'result.json', {'jobId': args[args.index('--id') + 1], 'type': 'image',
+                  'prompt': args[args.index('--prompt') + 1], 'ratio': ratio, 'characters': [],
+                  'source': 'google-flow-browser', 'status': 'downloaded'})
+            proof = {'passed': True, 'mode': 'image', 'characters': []}
+            if '--base-image' in args:
+                proof['base_image'] = args[args.index('--base-image') + 1]
+            write(folder.parent / 'ui-proof.json', proof)
+            Image.new('RGB', (30, 30)).save(folder.parent / 'before-submit.png')
+            return SimpleNamespace(returncode=0, stdout='TEST PROVIDER', stderr='')
+
+        with patch('image_pipeline.content', return_value=synthetic_content), \
+             patch('image_pipeline.planned_units', return_value=units), \
+             patch.object(self.p, 'brief', return_value=single_brief), \
+             patch('adapters.gflow', side_effect=dag_provider):
+            self.p.run(self.j, 'images')  # references stage
+            self.approve('references')
+            out_dir = self.p.job(self.j) / 'dag-cross-out'; out_dir.mkdir()
+            payload = ip.produce(self.p, self.j, out_dir)
+
+        prompts_seen = [a[a.index('--prompt') + 1] for a in self.calls]
+        idx_sc01 = next(i for i, p in enumerate(prompts_seen) if 'SC01 kitchen root' in p)
+        idx_sc02 = next(i for i, p in enumerate(prompts_seen) if 'SC02 kitchen counter' in p)
+        idx_sc03 = next(i for i, p in enumerate(prompts_seen) if 'SC03 kitchen stove detail' in p)
+        idx_sc04 = next(i for i, p in enumerate(prompts_seen) if 'SC04 kitchen fridge branch' in p)
+
+        # Ordering constraints:
+        self.assertLess(idx_sc01, idx_sc02, 'SC01 root must submit before SC02 child')
+        self.assertLess(idx_sc01, idx_sc04, 'SC01 root must submit before SC04 branch child')
+        self.assertLess(idx_sc02, idx_sc03, 'SC02 child must submit before SC03 grandchild')
+
+        # Base image references:
+        sc02_call = next(a for a in self.calls if 'SC02 kitchen counter' in a[a.index('--prompt') + 1])
+        sc03_call = next(a for a in self.calls if 'SC03 kitchen stove detail' in a[a.index('--prompt') + 1])
+        sc04_call = next(a for a in self.calls if 'SC04 kitchen fridge branch' in a[a.index('--prompt') + 1])
+        sc05_call = next(a for a in self.calls if 'SC05 garden independent' in a[a.index('--prompt') + 1])
+
+        self.assertIn('--base-image', sc02_call)
+        self.assertIn('--base-image', sc03_call)
+        self.assertIn('--base-image', sc04_call)
+        self.assertNotIn('--base-image', sc05_call)
+
+        sc03_item = next(x for x in payload['items'] if x['scene_id'] == 'SC03_I1_9x16')
+        req03 = read(self.p.path(self.j, sc03_item['request']))
+        self.assertEqual(req03['identity']['base_image']['target'], 'SC02_I1_9x16')
+
     def test_user_policy_allows_preflight_without_screenshot(self):
         import image_pipeline
         from unittest.mock import patch
@@ -526,6 +654,85 @@ class ImagesV2Tests(unittest.TestCase):
             self.assertTrue((self.p.job(self.j) / record['path']).is_file())
         # SC02's failure left no downloaded artifact behind for it to steal.
         self.assertNotIn('path', sc02)
+
+    def test_flow_batch_excludes_cross_scene_variations(self):
+        from pilot import read as real_read
+        import image_pipeline as ip
+        from types import SimpleNamespace
+        units = [
+            {'id': 'SC01_I1_9x16', 'scene_id': 'SC01', 'ratio': '9:16', 'based_on': None,
+             'prompt': 'SC01 independent 1', 'character_ids': [], 'visible_text': []},
+            {'id': 'SC02_I1_9x16', 'scene_id': 'SC02', 'ratio': '9:16', 'based_on': 'SC01_I1_9x16',
+             'prompt': 'SC02 cross variation', 'character_ids': [], 'visible_text': []},
+            {'id': 'SC03_I1_9x16', 'scene_id': 'SC03', 'ratio': '9:16', 'based_on': None,
+             'prompt': 'SC03 independent 2', 'character_ids': [], 'visible_text': []},
+        ]
+        synthetic_content = {'schema_version': '2.0', 'characters': [],
+                             'scenes': [{'id': 'SC01'}, {'id': 'SC02'}, {'id': 'SC03'}]}
+        real_brief, real_rev, real_hash = self.p.brief(self.j)
+        single_brief = (dict(real_brief, aspect_ratio='9:16', scene_count=3), real_rev, real_hash)
+
+        def read_with_batch(path):
+            d = real_read(path)
+            if isinstance(d, dict) and str(path).endswith('config.json') and 'flow_model' in d:
+                d = dict(d, flow_batch=True)
+            return d
+
+        batch_jobs = []
+        single_calls = []
+        def batch_router(p, *args, **kw):
+            if args[0] == 'batch':
+                jobs = read(args[1])['jobs']
+                batch_jobs.extend(jobs)
+                out_dir = Path(args[args.index('--out') + 1])
+                records = []
+                for job in jobs:
+                    evidence_dir = out_dir / '.evidence' / job['id']; evidence_dir.mkdir(parents=True, exist_ok=True)
+                    write(evidence_dir / 'ui-proof.json', {'passed': True, 'mode': 'image', 'characters': []})
+                    Image.new('RGB', (30, 30)).save(evidence_dir / 'before-submit.png')
+                    asset = out_dir / (job['id'] + '-1.png')
+                    Image.new('RGB', (720, 1280)).save(asset)
+                    write(asset.with_suffix('.json'), {'jobId': job['id'], 'type': 'image', 'prompt': job['prompt'],
+                          'ratio': job['ratio'], 'characters': [], 'source': 'google-flow-browser', 'status': 'downloaded'})
+                    records.append({'id': job['id'], 'type': 'image', 'status': 'completed', 'artifacts': [str(asset)]})
+                write(out_dir / 'gflow-run.json', {'source': 'google-flow-browser', 'jobs': records})
+                return SimpleNamespace(returncode=0, stdout='BATCH DONE', stderr='')
+            else:
+                single_calls.append(args)
+                folder = Path(args[args.index('--out') + 1])
+                ratio = args[args.index('--ratio') + 1]
+                Image.new('RGB', (720, 1280), 'green').save(folder / 'result.png')
+                write(folder / 'result.json', {'jobId': args[args.index('--id') + 1], 'type': 'image',
+                      'prompt': args[args.index('--prompt') + 1], 'ratio': ratio, 'characters': [],
+                      'source': 'google-flow-browser', 'status': 'downloaded'})
+                proof = {'passed': True, 'mode': 'image', 'characters': []}
+                if '--base-image' in args:
+                    proof['base_image'] = args[args.index('--base-image') + 1]
+                write(folder.parent / 'ui-proof.json', proof)
+                Image.new('RGB', (30, 30)).save(folder.parent / 'before-submit.png')
+                return SimpleNamespace(returncode=0, stdout='SINGLE DONE', stderr='')
+
+        with patch('image_pipeline.content', return_value=synthetic_content), \
+             patch('image_pipeline.planned_units', return_value=units), \
+             patch.object(self.p, 'brief', return_value=single_brief), \
+             patch('image_pipeline.read', side_effect=read_with_batch), \
+             patch('adapters.gflow', side_effect=batch_router):
+            self.p.run(self.j, 'images')  # references stage
+            self.approve('references')
+            out_dir = self.p.job(self.j) / 'batch-cross-out'; out_dir.mkdir()
+            payload = ip.produce(self.p, self.j, out_dir)
+
+        # Batch must only contain independent units (SC01 and SC03)
+        batch_prompts = [j['prompt'] for j in batch_jobs]
+        self.assertEqual(len(batch_jobs), 2, 'Only independent units go into batch')
+        self.assertTrue(any('SC01' in p for p in batch_prompts))
+        self.assertTrue(any('SC03' in p for p in batch_prompts))
+        self.assertFalse(any('SC02' in p for p in batch_prompts), 'Cross-scene variation must be excluded from batch')
+
+        # SC02 must be called individually through single-image path with --base-image
+        self.assertEqual(len(single_calls), 1)
+        self.assertIn('--base-image', single_calls[0])
+        self.assertIn('SC02', single_calls[0][single_calls[0].index('--prompt') + 1])
 
     def test_wrapper_rejects_video_without_browser(self):
         # Assert the policy code, not the prose: the allowed-command list grows

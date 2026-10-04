@@ -9,7 +9,7 @@ The machine holds UI, grants, accounts, plans, metadata and collected products. 
 5. Inventory browser profiles and Colab accounts in the account tab; the user completes OAuth/login. Before Colab operations run `python3 -m colab_bridge.accounts list`, never printing tokens. Token/profile presence means configured; live auth, Flow capability and T4 are separate checks.
 6. Select pool/defaults or explicit accounts and preset `remote-t4`. A pool does not combine quotas. Existing requests retain account ownership when defaults change.
 7. Flow requires an actual profile on this machine, the correct browser/profile and a per-machine tool/project URL. URL/profile/model must match the saved session configuration; do not reuse another machine's private URL/home path/IDs. `bootstrap.py check` separately reports Node, Playwright dependency, listener/socket and auth; dependency readiness does not prove login. Setup verifies connection only; image generation requires the assigned production/service-test scope.
-8. Verify mascot/voice reference sources and hashes. Report missing assets instead of replacing standards. Allocate T4 only for authorized processing, never an auth probe. Collect important results before releasing an owned runtime.
+8. Verify image/voice reference sources and hashes. Report missing assets instead of replacing standards. Allocate T4 only for authorized processing, never an auth probe. Collect important results before releasing an owned runtime.
 
 Handoff distinguishes present/configured/verified/missing/not_tested/unsupported for each capability, pool/session, valid authority and next action. Bootstrap/fixtures do not prove live Flow/T4/WAV/MP4; see [progress](implementation/normalization-progress.md).
 

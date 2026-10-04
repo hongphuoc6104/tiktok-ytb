@@ -9,7 +9,7 @@ import {chromium} from 'playwright';
 import {browserConfig,debugEndpoint,inspect,safeResults,toolUrl,verifyBrowser} from './controller.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));
 export function sessionSocketPath(root=path.resolve(here,'../..')) {
-  const key=crypto.createHash('sha256').update(fs.realpathSync(root)).digest('hex').slice(0,16);
+  const key=crypto.createHash('sha256').update(fs.realpathSync(root)+(process.env.VP_SESSION_KEY||'')).digest('hex').slice(0,16);
   return path.join(os.tmpdir(),`video-pilot-${process.getuid()}`,`flow-${key}.sock`);
 }
 const socketPath=sessionSocketPath();

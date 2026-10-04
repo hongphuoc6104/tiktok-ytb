@@ -12,19 +12,19 @@ from pilot import Blocked, digest
 
 ROOT = Path(__file__).resolve().parent
 def session_socket_path(root=ROOT):
-    key = hashlib.sha256(str(Path(root).resolve()).encode()).hexdigest()[:16]
+    suffix = os.environ.get("VP_SESSION_KEY", "")
+    key = hashlib.sha256((str(Path(root).resolve()) + suffix).encode()).hexdigest()[:16]
     return Path(tempfile.gettempdir()) / ('video-pilot-' + str(os.getuid())) / ('flow-' + key + '.sock')
 
 
-SOCKET_PATH = session_socket_path()
-
-
 def get_socket_path() -> Path:
-    return SOCKET_PATH
+    return session_socket_path()
+
 
 
 def is_session_available() -> bool:
-    if not SOCKET_PATH.exists():
+    sock_path = get_socket_path()
+    if not sock_path.exists():
         return False
     try:
         res = query_status()
@@ -56,14 +56,15 @@ def _mark_not_submitted(exc: Blocked) -> Blocked:
 
 
 def send_raw_command(command: str, timeout: float = 120.0) -> dict:
-    if not SOCKET_PATH.exists():
+    sock_path = get_socket_path()
+    if not sock_path.exists():
         raise Blocked(
-            f"B-2 Illustrator session socket not found at {SOCKET_PATH}. "
+            f"B-2 Illustrator session socket not found at {sock_path}. "
             "Ensure b2-session service is running (e.g. systemctl --user start b2-session.service)."
         )
     try:
-        parent = SOCKET_PATH.parent.lstat()
-        endpoint = SOCKET_PATH.lstat()
+        parent = sock_path.parent.lstat()
+        endpoint = sock_path.lstat()
         if (stat.S_ISLNK(parent.st_mode) or not stat.S_ISDIR(parent.st_mode)
                 or parent.st_uid != os.getuid() or stat.S_IMODE(parent.st_mode) != 0o700
                 or not stat.S_ISSOCK(endpoint.st_mode) or endpoint.st_uid != os.getuid()
@@ -74,7 +75,7 @@ def send_raw_command(command: str, timeout: float = 120.0) -> dict:
     client = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
     client.settimeout(timeout)
     try:
-        client.connect(str(SOCKET_PATH))
+        client.connect(str(sock_path))
         if hasattr(socket, 'SO_PEERCRED'):
             _, peer_uid, _ = struct.unpack('3i', client.getsockopt(socket.SOL_SOCKET, socket.SO_PEERCRED, struct.calcsize('3i')))
             if peer_uid != os.getuid():
@@ -153,6 +154,7 @@ def generate_b2_image(
     model=None,
     project=None,
     tool_url=None,
+    use_character_ref: bool = True,
 ) -> dict:
     """Generate image via B-2 Illustrator applet and harvest committed result."""
     try:
@@ -163,7 +165,7 @@ def generate_b2_image(
         raise
 
     canonical_mascot = (ROOT / "assets/characters/channel-mascot/reference-v1.png").resolve()
-    if char_ref_path is None and canonical_mascot.exists():
+    if use_character_ref and char_ref_path is None and canonical_mascot.exists():
         char_ref_path = canonical_mascot
         char_media_id = char_media_id or "de94a39b-155f-4afe-acbb-d9d4b59ad532"
 
@@ -185,6 +187,9 @@ def generate_b2_image(
         "baseMediaId": base_media_id,
         "charMediaId": char_media_id,
     }
+    if not use_character_ref and char_ref_path is None:
+        # Cast-style prompt versions: leave the Character slot empty.
+        spec["useCharacterRef"] = False
     if model is not None:
         spec.update(model=model, project=project, toolUrl=tool_url, managementContract=1)
 

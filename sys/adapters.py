@@ -16,6 +16,43 @@ def copy_optional_flow_screenshot(source, destination, *, required):
 def rel(p,j,path):return str(Path(path).relative_to(p.job(j)))
 def config(p):return read(p.root/'config.json')
 
+def _cast_job(p, job):
+ """True when the job's frozen prompt pin uses the no-mascot cast style."""
+ if job is None:
+  return False
+ from flow_management import prompt_pin
+ from flow_prompts.compiler import CAST_VERSIONS
+ pin = prompt_pin(p, job)
+ return bool(pin and pin['version'] in CAST_VERSIONS)
+
+
+def _canonical_mascot_media_id(p, flow_job):
+ if flow_job:
+  try:
+   current_account = None
+   try:
+    from execution import settings
+    current_account = settings(p, flow_job).get('management_session', {}).get('runtime_bindings', {}).get('flow', {}).get('account')
+   except Exception:
+    pass
+   for record in (p.job(flow_job)/'flow/attempts').glob('*/request.json'):
+    owner_file = record.parent / 'owner.json'
+    if current_account and owner_file.is_file():
+     owner = read(owner_file)
+     if owner.get('account') and owner['account'] != current_account:
+      continue
+    data = read(record)
+    if data.get('state') == 'downloaded' and data.get('identity',{}).get('registration'):
+     sidecar = p.path(flow_job, data['path']).with_suffix('.json')
+     if sidecar.is_file():
+      forge_id = read(sidecar).get('forgeId')
+      if forge_id:
+       return forge_id
+  except Exception:
+   pass
+ return 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
+
+
 def _flow_media_reference(p, job, *, name=None, image=None):
  """Resolve a proven downloaded reference; never invent a provider media ID."""
  candidates=[]
@@ -31,12 +68,24 @@ def _flow_media_reference(p, job, *, name=None, image=None):
   if not sidecar.is_file():continue
   metadata=read(sidecar)
   if metadata.get('source')!='google-flow-browser' or metadata.get('status')!='downloaded' or not metadata.get('forgeId'):continue
-  candidates.append((str(path),metadata['forgeId']))
- if len(set(candidates))!=1:
+  owner_file = record.parent / 'owner.json'
+  owner_account = read(owner_file).get('account') if owner_file.is_file() else None
+  candidates.append((str(path),metadata['forgeId'], owner_account))
+ unique_refs = list({(c[0], c[1]) for c in candidates})
+ if len(unique_refs) > 1:
+  try:
+   from execution import settings
+   current_account = settings(p, job).get('management_session', {}).get('runtime_bindings', {}).get('flow', {}).get('account')
+   filtered = list({(c[0], c[1]) for c in candidates if c[2] == current_account})
+   if len(filtered) == 1:
+    return filtered[0]
+  except Exception:
+   pass
+ if len(unique_refs) != 1:
   ex=Blocked('FLOW_REFERENCE_REQUIRED: exact downloaded reference/media identity is missing or ambiguous')
   ex.generation_submitted=False
   raise ex
- return candidates[0]
+ return unique_refs[0]
 
 def gflow(p,*args,timeout=960,flow_job=None):
  if args and args[0]=='video':raise Blocked('Video AI disabled')
@@ -86,8 +135,9 @@ def gflow(p,*args,timeout=960,flow_job=None):
   char_media_id = None
   modern = flow_job is not None and __import__('execution').is_job(p, flow_job)
   frozen_flow = __import__('flow_management').config(p, flow_job) if modern else {}
-  if modern and char_ref_path and Path(char_ref_path).resolve() == canonical_mascot.resolve():
-   char_media_id = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
+  cast = modern and _cast_job(p, flow_job)
+  if modern and char_ref_path and canonical_mascot.is_file() and Path(char_ref_path).resolve() == canonical_mascot.resolve():
+   char_media_id = _canonical_mascot_media_id(p, flow_job)
   elif modern and is_reg:
    _, char_media_id = _flow_media_reference(p, flow_job, image=char_ref_path)
   elif modern and char_names:
@@ -96,10 +146,10 @@ def gflow(p,*args,timeout=960,flow_job=None):
     ex.generation_submitted=False
     raise ex
    char_ref_path, char_media_id = _flow_media_reference(p, flow_job, name=char_names[0])
-  if not char_ref_path:
+  if not char_ref_path and not cast:
    if canonical_mascot.exists():
     char_ref_path = str(canonical_mascot)
-    char_media_id = 'de94a39b-155f-4afe-acbb-d9d4b59ad532'
+    char_media_id = _canonical_mascot_media_id(p, flow_job)
    elif char_names:
     for name in char_names:
      key_prefix = name.rsplit('-', 1)[-1]
@@ -141,6 +191,7 @@ def gflow(p,*args,timeout=960,flow_job=None):
     base_media_id=(read(Path(base_img).with_suffix(".json")).get("forgeId") if base_img and Path(base_img).with_suffix(".json").is_file() else None),
     char_ref_path=char_ref_path,
     char_media_id=char_media_id,
+    use_character_ref=not (cast and not char_ref_path),
     out_dir=out_folder,
     test_case=job_id,
     timeout=timeout,
@@ -179,8 +230,17 @@ def gflow(p,*args,timeout=960,flow_job=None):
    'forgeId': b2_res.get('forge_id')
   }
   if modern:
+   char_media = char_media_id
+   try:
+    req_file = evidence_folder / 'request.json'
+    if req_file.is_file():
+     c_ref = read(req_file).get('identity', {}).get('prompt_template', {}).get('data', {}).get('character_reference')
+     if c_ref and c_ref.get('media_id'):
+      char_media = c_ref['media_id']
+   except Exception:
+    pass
    proof.update(operation='character-register' if is_reg else 'image',
-                character_media_id=char_media_id, character_reference_sha256=digest(Path(char_ref_path)))
+                character_media_id=char_media, character_reference_sha256=digest(Path(char_ref_path)) if char_ref_path else None)
   if base_img: proof['base_image'] = base_img
   proof_file.write_text(json.dumps(proof, indent=2), encoding='utf-8')
 
@@ -198,23 +258,34 @@ def gflow(p,*args,timeout=960,flow_job=None):
   jobs = data.get('jobs', [])
   run_jobs = [{'id':job['id'],'status':'not_submitted','error':'Chưa đến lượt gửi'} for job in jobs]
   state_file = batch_out / 'gflow-run.json'
+  write(state_file, {'jobs': run_jobs})
   mascot = p.root / 'assets/characters/channel-mascot/reference-v1.png'
   for offset in range(0, len(jobs), 4):
    group = jobs[offset:offset+4]
    specs = [{'testCase': job['id'], 'prompt': job['prompt'], 'ratio': job.get('ratio', '9:16'),
-             'outDir': str(batch_out / job['id']), 'characterRefPath': str(mascot),
-             'charMediaId': 'de94a39b-155f-4afe-acbb-d9d4b59ad532'} for job in group]
+             'outDir': str(batch_out / job['id']), 'characterRefPath': str(mascot) if mascot.is_file() else None,
+             'charMediaId': _canonical_mascot_media_id(p, flow_job) if mascot.is_file() else None} for job in group]
    modern = flow_job is not None and __import__('execution').is_job(p, flow_job)
    if modern:
     frozen_flow = __import__('flow_management').config(p, flow_job)
+    cast = _cast_job(p, flow_job)
     for spec, job in zip(specs, group):
      names = job.get('character', [])
-     if len(names)!=1:
+     if names:
+      if len(names)!=1:
+       ex=Blocked('FLOW_REFERENCE_UNSUPPORTED: modern batch needs exactly one registered character reference')
+       ex.generation_submitted=False
+       raise ex
+      reference_path, reference_id = _flow_media_reference(p, flow_job, name=names[0])
+      spec.update(characterRefPath=reference_path,charMediaId=reference_id)
+     elif cast:
+      spec.update(characterRefPath=None,charMediaId=None,useCharacterRef=False)
+     elif mascot.exists():
+      spec.update(characterRefPath=str(mascot),charMediaId=_canonical_mascot_media_id(p, flow_job))
+     else:
       ex=Blocked('FLOW_REFERENCE_UNSUPPORTED: modern batch needs exactly one registered character reference')
       ex.generation_submitted=False
       raise ex
-     reference_path, reference_id = _flow_media_reference(p, flow_job, name=names[0])
-     spec.update(characterRefPath=reference_path,charMediaId=reference_id)
      spec.update(model=frozen_flow['flow_model'], project=frozen_flow['flow_project'], toolUrl=frozen_flow.get('flow_tool_url'), managementContract=1)
    # Persist attempted membership BEFORE the external call. Ambiguous groups cannot fall through to serial retries.
    entries = run_jobs[offset:offset+4]
@@ -237,8 +308,18 @@ def gflow(p,*args,timeout=960,flow_job=None):
      if result.get('before_submit'): shutil.copy(result['before_submit'], ev / 'before-submit.png')
      proof={'passed':True, 'mode':'image', 'characters':chars,
             'tool':'b2-illustrator', 'forgeId':result['media_id'], 'screenshot':result['screenshot']}
-     if modern:proof.update(operation='image',character_media_id=spec['charMediaId'],
-                            character_reference_sha256=digest(Path(spec['characterRefPath'])))
+     if modern:
+      char_media = spec['charMediaId']
+      try:
+       req_file = p.job(flow_job) / 'flow/attempts' / job['request_key'] / 'request.json'
+       if req_file.is_file():
+        c_ref = read(req_file).get('identity', {}).get('prompt_template', {}).get('data', {}).get('character_reference')
+        if c_ref and c_ref.get('media_id'):
+         char_media = c_ref['media_id']
+      except Exception:
+       pass
+      proof.update(operation='image',character_media_id=char_media,
+                   character_reference_sha256=digest(Path(spec['characterRefPath'])) if spec.get('characterRefPath') else None)
      write(ev / 'ui-proof.json', proof)
      entry.update(status='completed', artifacts=[str(dst)])
      entry.pop('error', None)

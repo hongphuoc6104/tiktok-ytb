@@ -18,7 +18,7 @@ Số dư ban đầu 1.050; chưa thấy giảm sau 7 ảnh thử. Chưa kiểm c
 
 ## Chất lượng và giới hạn
 
-Hai ảnh nhóm 2 đúng bối cảnh và có mascot áo xanh, đã xem trực tiếp. Nhóm 4 trả đúng bốn mediaId khác nhau, đúng các vật sách/ô/bút/bình tưới. Cảnh ô REQ-JACTC lệch phong cách mặt/nét mascot; cảnh bút REQ-DQGGT thiếu miệng cười có lưỡi san hô. Chưa tính bốn ảnh là bốn ảnh đạt. Chưa đổi mặc định concurrency=1.
+Hai ảnh nhóm 2 đúng bối cảnh và có nhân vật áo xanh, đã xem trực tiếp. Nhóm 4 trả đúng bốn mediaId khác nhau, đúng các vật sách/ô/bút/bình tưới. Cảnh ô REQ-JACTC lệch phong cách nét vẽ nhân vật; cảnh bút REQ-DQGGT thiếu miệng cười có lưỡi san hô. Chưa tính bốn ảnh là bốn ảnh đạt. Chưa đổi mặc định concurrency=1.
 
 Đã sửa source trên Flow qua Tool Builder và rà soát từng bản. Bản đầu có lỗi mất controls, ghi mediaId trễ, xử lý UNKNOWN sai. Bản hiện tại đã khôi phục controls, lưu intent trước call, lưu mediaId trước decode và dừng khi lỗi sau submit. Vẫn chưa nghiệm thu migration/reload, phụ thuộc based_on, mức3, thời gian download và lỗi giả lập. Không bật flow_batch hoặc đồng bộ production lúc này.
 
@@ -30,7 +30,7 @@ Hai ảnh nhóm 2 đúng bối cảnh và có mascot áo xanh, đã xem trực t
 
 ## Tiếp theo
 
-Khôi phục mức3 và kiểm tra persistence/reload, sửa prompt mascot rồi chạy so sánh cùng bộ bốn prompt ở mức1 và4 ba lượt. Tính thời gian/ảnh đạt và chi phí; chỉ sau nghiệm thu mới đồng bộ mã chung ba nhánh và tiếp tục pipeline review borrow.
+Khôi phục mức3 và kiểm tra persistence/reload, sửa prompt nhân vật rồi chạy so sánh cùng bộ bốn prompt ở mức1 và4 ba lượt. Tính thời gian/ảnh đạt và chi phí; chỉ sau nghiệm thu mới đồng bộ mã chung ba nhánh và tiếp tục pipeline review borrow.
 
 ## Nghiệm thu thực tế bổ sung — không đạt điều kiện tích hợp
 
@@ -51,10 +51,10 @@ Còn phải làm: dùng AttemptStore phía máy local làm nguồn trạng thái
 
 Bốn yêu cầu độc lập hoàn tất trong **30,307 giây**, khoảng 7,577 giây/ảnh trả về. Tất cả JPEG 768×1376, bốn mediaId riêng và kiểm tra kỹ thuật đạt. Số dư hiển thị trước/sau đều 1.050. Bằng chứng: vocab-4-v2-intent.json, vocab-4-v2-events.ndjson (fsync từng sự kiện), vocab-4-v2-result.json trong results/controller; credit ở maintenance/flow-performance-20260922/batch-v2-credit-before.json và batch-v2-credit-after.json.
 
-Đã xem từng ảnh: miệng cười/lưỡi san hô mascot xuất hiện trên cả bốn ảnh; không lẫn vật giữa prompt. REQ-9JA8I (sách) và REQ-0K5HV (bình tưới) cắt người phụ ở mép khung, không đạt yêu cầu mới toàn bộ hai người trong khung; REQ-XZKV9 (bút) chỉ có nửa người trên bàn, chưa đạt yêu cầu toàn thân. REQ-9CGSH (ô) đạt kiểm tra sơ bộ về bố cục và mascot. Không tuyên bố 4/4 chất lượng đạt.
+Đã xem từng ảnh: miệng cười/lưỡi san hô xuất hiện trên cả bốn ảnh; không lẫn vật giữa prompt. REQ-9JA8I (sách) và REQ-0K5HV (bình tưới) cắt người phụ ở mép khung, không đạt yêu cầu mới toàn bộ hai người trong khung; REQ-XZKV9 (bút) chỉ có nửa người trên bàn, chưa đạt yêu cầu toàn thân. REQ-9CGSH (ô) đạt kiểm tra sơ bộ về bố cục và nhân vật. Không tuyên bố 4/4 chất lượng đạt.
 
 Nhật ký local chặn chạy lại cùng batch, giữ submitting trước Start Queue, lưu mediaId và raw output khi polling quan sát được. Nếu queue biến mất thì dừng unknown. Đây là bảo vệ bổ sung, chưa thay cho nghiệm thu crash/reload end-to-end và chưa có tính nguyên tử với Flow. Chưa tích hợp sản xuất, chưa đổi mặc định.
 
 ## Đợt vocab-4-v3
 
-Chạy 4 yêu cầu đồng thời ở mức cao nhất UI hiện có, Nano Banana Pro: đủ bốn ảnh trong 29,239 giây (7,310 giây/ảnh trả về). Timestamp submit chênh nhau 0,4 ms trong tool, xác nhận dispatch đồng thời chứ không chạy tuần tự. Đã lưu 4 JPEG và mediaId riêng, nhật ký local vocab-4-v3-events.ndjson. Đã xem cả bốn: mascot có miệng/lưỡi đúng hơn; cảnh bút vẫn cắt người phụ, cảnh ô chưa thể hiện rõ hành động nhận ô. Không tính toàn bộ ảnh đạt nội dung. Không khẳng định đây là tốc độ cao nhất có thể của dịch vụ, chỉ là concurrency cao nhất hiện cấu hình (4).
+Chạy 4 yêu cầu đồng thời ở mức cao nhất UI hiện có, Nano Banana Pro: đủ bốn ảnh trong 29,239 giây (7,310 giây/ảnh trả về). Timestamp submit chênh nhau 0,4 ms trong tool, xác nhận dispatch đồng thời chứ không chạy tuần tự. Đã lưu 4 JPEG và mediaId riêng, nhật ký local vocab-4-v3-events.ndjson. Đã xem cả bốn: nhân vật có miệng/lưỡi đúng hơn; cảnh bút vẫn cắt người phụ, cảnh ô chưa thể hiện rõ hành động nhận ô. Không tính toàn bộ ảnh đạt nội dung. Không khẳng định đây là tốc độ cao nhất có thể của dịch vụ, chỉ là concurrency cao nhất hiện cấu hình (4).

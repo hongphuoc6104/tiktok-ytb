@@ -23,7 +23,7 @@
 ## 4. Audio, Subtitles & Timing
 - **Timing:** Drive timeline cuts using measured WAV audio length; do not rely on character-count estimates. Anchor interpolation is not word alignment.
 - **Subtitles:** At most 2 readable lines with safe margins for portrait mobile view (9:16).
-- **Effects:** Use only supported camera/transition effects (`cut`, `fade`, `zoom_in`, `zoom_out`, `slide_left`); do not force arbitrary shake or zoom.
+- **Effects:** Use only supported camera/transition effects (`cut`, `hold`, `fade`, `slide_left`, `zoom_in`, `zoom_out`, `punch_in`, `pan_left`, `pan_right`, `shake`) according to `render-capabilities.md`.
 
 ## 5. Execution Commands
 - **Submit outline/dialogue:**
