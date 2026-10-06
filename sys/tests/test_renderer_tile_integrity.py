@@ -10,6 +10,7 @@ SYSTEM = ROOT
 class RendererTileIntegrityTests(unittest.TestCase):
     def test_render_mjs_headless_configuration(self):
         content = (SYSTEM / 'renderer/render.mjs').read_text()
+        self.assertIn("wrapChromeExecutable", content)
         self.assertIn("process.env.DISABLE_FROM_SURFACE = 'true'", content)
         self.assertIn("--enable-gpu", content)
         self.assertIn("--run-all-compositor-stages-before-draw", content)
@@ -19,6 +20,9 @@ class RendererTileIntegrityTests(unittest.TestCase):
     def test_job_worker_env_disable_from_surface(self):
         content = (SYSTEM / 'colab_bridge/job_worker.py').read_text()
         self.assertIn("DISABLE_FROM_SURFACE='true'", content)
+        self.assertIn("chrome-wrapper.sh", content)
+        self.assertIn("--run-all-compositor-stages-before-draw", content)
+        self.assertIn("--disable-gpu-rasterization", content)
 
     def test_subtitles_z_index_and_caption_style(self):
         captions_js = (SYSTEM / 'renderer/captions.mjs').read_text()

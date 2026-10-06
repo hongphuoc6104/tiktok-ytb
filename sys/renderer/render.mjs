@@ -3,7 +3,7 @@ import {openBrowser, selectComposition, renderMedia, renderStill} from '@remotio
 import {chromium} from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
-import {cpus} from 'node:os';
+import os, {cpus} from 'node:os';
 import {fileURLToPath} from 'node:url';
 import {outputPlans, renderConcurrency} from './outputs.mjs';
 import {captionStyle, captionMaxHeight} from './captions.mjs';
@@ -30,7 +30,36 @@ function resolveChromePath() {
   }
   return chromium.executablePath();
 }
-const chromePath = resolveChromePath();
+
+function wrapChromeExecutable(rawPath) {
+  if (rawPath.endsWith('-wrapper.sh')) return rawPath;
+  const wrapperDir = path.join(os.tmpdir(), 'vp-chrome');
+  fs.mkdirSync(wrapperDir, {recursive: true});
+  const wrapper = path.join(wrapperDir, `chrome-wrapper-${process.pid}.sh`);
+  const content = `#!/usr/bin/env bash
+exec "${rawPath}" \\
+  --no-sandbox \\
+  --disable-dev-shm-usage \\
+  --run-all-compositor-stages-before-draw \\
+  --disable-gpu-rasterization \\
+  --enable-gpu \\
+  --ignore-gpu-blocklist \\
+  "$@"
+`;
+  fs.writeFileSync(wrapper, content, {mode: 0o755});
+  return wrapper;
+}
+
+const rawChromePath = resolveChromePath();
+const chromePath = wrapChromeExecutable(rawChromePath);
+
+process.on('exit', () => {
+  try {
+    if (fs.existsSync(chromePath) && chromePath.includes('chrome-wrapper-')) {
+      fs.unlinkSync(chromePath);
+    }
+  } catch {}
+});
 
 process.env.DISABLE_FROM_SURFACE = 'true';
 

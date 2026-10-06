@@ -34,6 +34,8 @@ This is phrase/segment synchronization, not automatic beat detection from wavefo
 
 The explicit output contract assigns one language to each aspect-ratio slot. When a project needs two full-language versions at the same aspect ratio, plan separate language-specific outputs/jobs; do not duplicate an aspect slot or silently replace the channel voice. A single mixed-language narration is a distinct authoring choice and should use only the project's supported language-span synthesis path.
 
+For one Vietnamese-led vocabulary clip with English model lines, the brief can select the `vi` output and the `Adam` profile. Keep the Vietnamese explanation in `narration`; wrap each intended English line in quotes so `english_parts` routes it through the configured English profile (in this project, `reference-narrator`, the user-selected clone). A `narration_en` counterpart is not automatically voiced in that single `vi` output. Before remote synthesis, build the request locally and verify it resolves both language profiles and their hashes; after synthesis, verify the actual WAV and timings before rendering.
+
 ## Prove the self-test
 
 A skill has not been self-tested by schema validation alone. For a requested demonstration, use one original subject, complete the job through the normal Auto or Review workflow selected for that job, and inspect the actual current artifacts:

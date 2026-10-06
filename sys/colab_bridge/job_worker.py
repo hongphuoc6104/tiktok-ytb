@@ -129,7 +129,19 @@ def run(bundle_path, output_dir, expected_id, expected_worker):
     chrome = subprocess.check_output(['node', '--input-type=module', '-e', "import {chromium} from 'playwright'; console.log(chromium.executablePath())"], cwd=runtime, text=True).strip()
     if not Path(chrome).is_file():
         subprocess.run(['npx', '--no-install', 'playwright', 'install', '--with-deps', 'chromium'], cwd=runtime, check=True, timeout=900)
-    env = dict(os.environ, VP_CHROME_PATH=chrome, DISABLE_FROM_SURFACE='true')
+    wrapper = runtime / 'chrome-wrapper.sh'
+    wrapper.write_text(f"""#!/usr/bin/env bash
+exec "{chrome}" \\
+  --no-sandbox \\
+  --disable-dev-shm-usage \\
+  --run-all-compositor-stages-before-draw \\
+  --disable-gpu-rasterization \\
+  --enable-gpu \\
+  --ignore-gpu-blocklist \\
+  "$@"
+""")
+    wrapper.chmod(0o755)
+    env = dict(os.environ, VP_CHROME_PATH=str(wrapper), DISABLE_FROM_SURFACE='true')
     started = time.monotonic()
     subprocess.run(['node', str(runtime / 'renderer/render.mjs'), str(output.resolve())], cwd=runtime, env=env, check=True, timeout=3600)
     deliveries = []
