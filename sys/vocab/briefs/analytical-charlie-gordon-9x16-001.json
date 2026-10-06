@@ -1,0 +1,99 @@
+{
+  "schema_version": "3.0",
+  "topic": "The Tragedy of Charlie Gordon: Flowers for Algernon",
+  "audience": "English learners at B1 and above; analytical storytelling with synchronized visual beats and layered motion.",
+  "goal": "Explain the tragic psychological paradox of Flowers for Algernon: why intelligence alone cannot buy human belonging.",
+  "video_type": "analytical_storytelling",
+  "duration": {
+    "min_seconds": 35,
+    "max_seconds": 65
+  },
+  "scene_count": null,
+  "required_points": [
+    {
+      "id": "R1",
+      "text": "Charlie seeks intelligence because he believes it is the bridge to human acceptance."
+    },
+    {
+      "id": "R2",
+      "text": "The surgery rapidly transforms his intellect, turning him into a genius."
+    },
+    {
+      "id": "R3",
+      "text": "Awareness brings painful realization: his friends were mocking him, not laughing with him."
+    },
+    {
+      "id": "R4",
+      "text": "The tragic paradox reveals that higher intellect built an invisible wall of isolation."
+    },
+    {
+      "id": "R5",
+      "text": "Brilliance can explain the world, but without emotional warmth, it only magnifies loneliness."
+    }
+  ],
+  "language": "en",
+  "tone": "Thoughtful, poignant explanatory storytelling with clear causal reasoning and sharp emotional payoff.",
+  "style": "Hand-drawn 2D explainer illustration in a marker-pen look: thick black outlines, flat muted colors, full-bleed setting backgrounds, clear props and simple annotations (red circles/arrows). No main character, presenter or recurring protagonist: an anonymous stick-figure cast (round white heads, expressive simple faces, stick limbs) whose roles come from scene costume, hair and props.",
+  "aspect_ratio": "9:16",
+  "facts_required": false,
+  "sources": [],
+  "planning": {
+    "success_criteria": [
+      "Viewer understands Charlie's root motivation, the rapid causal chain, the cruel awakening, and the tragic paradox.",
+      "Visual beats and layered motion precisely synchronize with key spoken words."
+    ],
+    "avoid": [
+      "Superficial plot recap without causal depth",
+      "Unsynchronized generic slideshow presentation",
+      "Photorealism, dark cinematic grading, or decorative text"
+    ],
+    "prior_knowledge": "B1 English comprehension; narrative causality explains all thematic shifts.",
+    "pacing": "Causal visual changes following spoken meaning; allow each actual sentence or diagram enough reading time. No fixed cut or image-count quota.",
+    "domain_requirements": [
+      "Narration and learner-facing text are entirely English; explain meaning and narrative causality inside the same situation.",
+      "One central question or situation develops through cause, action and consequence and receives a payoff.",
+      "Use story shots, close action and diagrams where they prove meaning; preserve camera/background with Base reference for state changes.",
+      "Scene/image/beat counts are chosen for this specific script and saved before narration anchors; no universal scene count.",
+      "No recurring protagonist, presenter or host: each scene uses only the anonymous stick figures, animals or objects its action needs, identified by costume/props; keep a figure's costume consistent across Base-reference variations."
+    ],
+    "assumptions": [
+      "Duration is a planning estimate; use actual collected narration.",
+      "Scene count determined by the 5 causal beats."
+    ],
+    "text_style": {
+      "font": "Inter, sans-serif",
+      "color": "#172033",
+      "outline": "High contrast against a bright clear background",
+      "size": "Readable on a phone, at most two meaningful caption lines",
+      "placement": "Near the referent for teaching text; keep separate from captions"
+    },
+    "speech_rates": {
+      "vi": {
+        "units_per_second": 3.6,
+        "uncertainty": 0.25,
+        "includes_pauses": false,
+        "source": "initial estimate; replace with measured voice rate"
+      },
+      "en": {
+        "units_per_second": 2.5,
+        "uncertainty": 0.25,
+        "includes_pauses": false,
+        "source": "initial estimate; replace with measured voice rate"
+      }
+    }
+  },
+  "outputs": [
+    {
+      "aspect_ratio": "9:16",
+      "language": "en",
+      "subtitles": true,
+      "voice": "reference-narrator",
+      "speed": 0.92
+    }
+  ],
+  "channel_profile": {
+    "id": "english-explanatory-2d",
+    "version": 5,
+    "sha256": "d2dc76bfc45b01153a8b3a1a25d89a958170b9d83537cb69d1c88de7cfc2293b"
+  }
+}

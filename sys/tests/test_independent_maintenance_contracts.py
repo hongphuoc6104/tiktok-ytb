@@ -184,7 +184,7 @@ class IndependentDocumentation(unittest.TestCase):
     def test_four_skills_and_new_direction_have_concrete_current_sources(self):
         skills=ROOT.parent/'.agents/skills'
         actual=sorted(p.parent.name for p in skills.glob('*/SKILL.md'))
-        self.assertEqual(actual,['vp-development','vp-maintenance','vp-production','vp-setup'])
+        self.assertEqual(actual,['vp-development','vp-layered-motion','vp-maintenance','vp-production','vp-setup'])
         channel=json.loads((ROOT/'vocab/channel.json').read_text())
         self.assertEqual(channel['language'],'en');self.assertEqual(channel['aspect_ratio'],'9:16')
         self.assertEqual(channel['allowed_levels'],['B1','B2','C1']);self.assertIsNone(channel['scene_count'])

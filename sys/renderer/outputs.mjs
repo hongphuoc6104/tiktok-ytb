@@ -1,4 +1,10 @@
 /** One source of truth for language, timeline and output dimensions. */
+export function renderConcurrency(requested, cores) {
+  const available = Number.isInteger(cores) && cores > 0 ? cores : 1;
+  const wanted = Number.isInteger(requested) && requested > 0 ? requested : 4;
+  return Math.min(wanted, available);
+}
+
 export function outputPlans(props, hasEnglish) {
   const ratio = props.aspect_ratio || '9:16';
   if (!['9:16', '16:9', 'dual'].includes(ratio)) throw Error('Unsupported output aspect ratio');

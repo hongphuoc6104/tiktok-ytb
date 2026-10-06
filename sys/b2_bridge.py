@@ -17,8 +17,11 @@ def session_socket_path(root=ROOT):
     return Path(tempfile.gettempdir()) / ('video-pilot-' + str(os.getuid())) / ('flow-' + key + '.sock')
 
 
+SOCKET_PATH = session_socket_path()
+
+
 def get_socket_path() -> Path:
-    return session_socket_path()
+    return SOCKET_PATH
 
 
 

@@ -307,40 +307,39 @@ def _template_request(p, j, target, prompt, corrections, ratio, refs, registrati
         purpose = ('character' if target.removeprefix('ref:') in declared_characters else 'reference') if target.startswith('ref:') else ('variation' if base_image else 'scene')
     # The generated character-reference purpose deliberately allows full-body
     # inspection framing; final scene frames keep the canonical mascot small.
+    layer_kind = (scene or {}).get('kind', 'scene')
+    if layer_kind in ('background', 'sticker'):
+        # Layered cut-out assets: independent single-purpose images, never Base variations.
+        if base_image or refs or registration:
+            raise Blocked('FLOW_LAYER_INVALID: layered assets take no Base/Character reference')
+        purpose = 'layer_' + layer_kind
     desc = prompt
     preserve_items, change_items = [], []
+    if scene and layer_kind in ('background', 'sticker'):
+        original = next((image for parent in content(p, j)['scenes'] for image in parent.get('images', [])
+                         if image['id'] == scene.get('image_id', scene['id'])), None)
+        desc = original['description'] if original and original.get('description') else desc
+        if corrections:
+            desc = desc + ' Correction: ' + corrections
+        data = {'description': desc, 'aspect_ratio': ratio, 'allowed_text': scene.get('visible_text', [])}
+        if layer_kind == 'background':
+            data['caption_clearance'] = {'edge': 'bottom', 'fraction': 0.18}
+        result = compile_pinned(pin, purpose, data)
+        metadata = {key: value for key, value in result.items() if key != 'prompt'}
+        return result['prompt'], {**metadata, 'pin': pin, 'data': data}
     if scene:
         original = next((image for parent in content(p, j)['scenes'] for image in parent.get('images', [])
                          if image['id'] == scene.get('image_id', scene['id'])), None)
         if original:
             if original.get('description'):
                 desc = original['description']
-                if base_image:
-                    sentences = [s.strip() for s in desc.split('.') if s.strip()]
-                    action_sentences = []
-                    for s in sentences:
-                        s_low = s.lower()
-                        if any(w in s_low for w in ('exact same', 'background', 'outlines', 'lines', 'colors', 'caption', 'style', 'aesthetic')):
-                            continue
-                        action_sentences.append(s)
-                    desc_text = '. '.join(action_sentences)
-                    if len(desc_text) > 160:
-                        desc_text = desc_text[:160].rsplit(' ', 1)[0] + '.'
-                    elif desc_text and not desc_text.endswith('.'):
-                        desc_text += '.'
-                    desc = desc_text or desc
-                else:
-                    sentences = [s.strip() for s in desc.split('.') if s.strip()]
-                    if len(sentences) > 1 and any(w in sentences[-1].lower() for w in ('background', 'outlines', 'lines', 'colors', 'caption')):
-                        desc = '. '.join(sentences[:-1]) + '.'
+                # Scene changes and continuity can occur late in the authored
+                # description. Keep the exact visual data, including its setting.
             preserve_raw = original.get('preserve', '').strip()
             if preserve_raw and base_image:
-                preserve_text = preserve_raw if len(preserve_raw) <= 60 else 'Keep scene composition and character style identical.'
-                preserve_items = [preserve_text]
+                preserve_items = [preserve_raw]
             change_raw = original.get('change', '').strip()
             if change_raw:
-                if base_image and len(change_raw) > 80:
-                    change_raw = change_raw[:80].rsplit(' ', 1)[0] + '.'
                 change_items = [change_raw]
     data = {'description': desc, 'aspect_ratio': ratio,
             'allowed_text': scene.get('visible_text', []) if scene else []}

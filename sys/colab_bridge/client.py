@@ -422,6 +422,62 @@ class Client:
         (out / 'tts.log').write_text('Colab result validated; request_id=' + req['request_id'] + '\n')
         return req['request_id']
 
+    def reconcile_render_failure(self, request, cache, source):
+        """Close only an exact, remotely proven failed render; never an unknown send.
+
+        The original owner, prior journal and remote failure evidence are retained.
+        This permits a corrected source request after a synchronous worker failure,
+        without manually changing request history or abandoning a live renderer.
+        """
+        if request.get('operation') != 'render' or not re.fullmatch(r'[a-f0-9]{64}', request.get('request_id', '')) or not source.strip():
+            raise ColabError('Exact render request and actual recovery source required')
+        cache = Path(cache); folder = cache / request['request_id']; state_path = folder / 'state.json'
+        if not state_path.is_file(): raise ColabError('COLAB_REQUEST_NOT_SUBMITTED')
+        with (cache / 'intent.lock').open('a') as intent, (folder / 'request.lock').open('a') as handle:
+            for lock in (intent, handle):
+                try: fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                except BlockingIOError as ex: raise ColabError('COLAB_REQUEST_BUSY') from ex
+            saved = json.loads(state_path.read_text())
+            if saved.get('phase') not in ('submitted', 'ambiguous') or saved.get('request_id') != request['request_id']:
+                raise ColabError('COLAB_FAILURE_RECONCILIATION_STATE')
+            remote = '/content/video-pilot-jobs/' + request['request_id']
+            if saved.get('remote') != remote: raise ColabError('COLAB_REQUEST_OWNER_MISMATCH')
+            self.account, self.session = saved.get('account'), saved['session']
+            if self.account:
+                from .accounts import folder as account_folder
+                account_folder(self.account)
+            locks = Path.home() / '.cache/video-pilot-colab'; locks.mkdir(parents=True, exist_ok=True)
+            with (locks / (stamp([self.account, self.session]) + '.lock')).open('a') as session_lock:
+                try: fcntl.flock(session_lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                except BlockingIOError as ex: raise ColabError('COLAB_SESSION_BUSY') from ex
+                self.ensure_authenticated()
+                code = ("import json, sys, subprocess\nfrom pathlib import Path\n"
+                        f"p=Path({remote!r})\n"
+                        "e=getattr(sys,'last_value',None)\n"
+                        "cmd=getattr(e,'cmd',[])\n"
+                        "exact=isinstance(e,subprocess.CalledProcessError) and isinstance(cmd,(list,tuple)) and len(cmd)==3 and str(cmd[1]).endswith('/renderer/render.mjs') and str(cmd[2])==str(p/'output')\n"
+                        "active=[]\n"
+                        "for q in Path('/proc').glob('[0-9]*/cmdline'):\n"
+                        " try:\n"
+                        "  args=q.read_bytes().replace(b'\\x00',b' ').decode(errors='replace')\n"
+                        "  if str(p) in args and ('renderer/render.mjs' in args or 'job_worker.py' in args): active.append(q.parent.name)\n"
+                        " except (OSError,PermissionError): pass\n"
+                        "print('VP_FAILED_RENDER='+json.dumps({'exact_failed_exit':exact,'returncode':getattr(e,'returncode',None),'archive_exists':(p/'output.zip').exists(),'mp4_exists':any((p/'output').glob('*.mp4')),'active_renderers':active,'error':str(e) if exact else None}))\n")
+                output = self.exec(code, timeout=45)
+                lines = [x for x in output.splitlines() if x.startswith('VP_FAILED_RENDER=')]
+                if len(lines) != 1: raise ColabError('COLAB_FAILURE_UNVERIFIED')
+                observed = json.loads(lines[0].split('=', 1)[1])
+                if (observed.get('exact_failed_exit') is not True or not isinstance(observed.get('returncode'), int)
+                        or observed['returncode'] == 0 or observed.get('archive_exists') is not False
+                        or observed.get('mp4_exists') is not False or observed.get('active_renderers') != []):
+                    raise ColabError('COLAB_FAILURE_UNVERIFIED: collect or preserve the original request')
+                evidence = folder / ('failed-render-' + str(time.time_ns()) + '.json')
+                self._state(evidence, previous_state=saved, observation=observed, source=source)
+                self._state(state_path, **dict(saved, phase='failed', failure_evidence=str(evidence), failure_source=source))
+                self._settle(request['request_id'])
+                return {'request_id': request['request_id'], 'phase': 'failed', 'account': self.account,
+                        'session': self.session, 'evidence': str(evidence), 'new_submission': False}
+
     def render(self, request, out, cache, collect_only=False, before_submit=None):
         """Generic remote work. Unknown execution is always collected on its pinned owner."""
         from .job_protocol import bundle, extract, validate_render_result

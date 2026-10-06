@@ -36,6 +36,8 @@ def build_render_request(root, brief, content, images, audio, resolve):
     names = ['output_contract.py', 'scripts/story_plan.py', 'scripts/subtitles.py',
              'renderer/render.mjs', 'renderer/index.tsx', 'renderer/outputs.mjs', 'renderer/captions.mjs',
              'package.json', 'package-lock.json']
+    if any(scene.get('layers') for scene in content.get('scenes', [])):
+        names.insert(3, 'tools/matte_sticker.py')  # layered jobs matte stickers remotely, never locally
     for name in names:
         path = root / name
         if not path.is_file() or path.is_symlink(): raise ValueError('Missing remote source: ' + name)
@@ -135,6 +137,19 @@ def validate_render_result(folder, request):
                         raise ValueError('Remote props first image mismatch')
                 elif got.get('image') != Path(images[(scene['id'], aspect)]['path']).name:
                     raise ValueError('Remote props scene image mismatch')
+                wanted_layers, got_layers = scene.get('layers', []), got.get('layers')
+                if wanted_layers:
+                    if (not isinstance(got_layers, list) or len(got_layers) != len(wanted_layers) + 1 or not got_layers[0].get('bg')
+                            or [x.get('id') for x in got_layers[1:]] != [x['id'] for x in wanted_layers]):
+                        raise ValueError('Remote props layer contract mismatch')
+                    for layer in got_layers:
+                        if not isinstance(layer.get('src'), str) or not layer['src'].endswith(('.png', '.jpg', '.jpeg', '.webp')):
+                            raise ValueError('Remote props layer asset mismatch')
+                        start = layer.get('start', 0)
+                        if isinstance(start, bool) or not isinstance(start, (int, float)) or not math.isfinite(start) or not 0 <= start < got['end'] - got['start']:
+                            raise ValueError('Remote props layer timing mismatch')
+                elif got_layers:
+                    raise ValueError('Remote props unexpected layers')
     deliveries = result.get('outputs', [])
     if len(plans) != len(deliveries): raise ValueError('Remote render missing requested outputs')
     for plan, got in zip(plans, deliveries):

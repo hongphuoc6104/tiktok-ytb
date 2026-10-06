@@ -6,9 +6,11 @@ from pathlib import Path
 import re
 
 CURRENT_VERSION = '1.1.0'
-SUPPORTED_VERSIONS = ('1.0.0', '1.0.1', '1.1.0')
+SUPPORTED_VERSIONS = ('1.0.0', '1.0.1', '1.1.0', '1.2.0')
 # 1.1.0+: anonymous stick-figure cast, optional Character/style reference, no recurring presenter.
-CAST_VERSIONS = ('1.1.0',)
+CAST_VERSIONS = ('1.1.0', '1.2.0')
+# 1.2.0+: adds layer_background / layer_sticker purposes for layered (cut-out) animation assets.
+LAYER_PURPOSES = ('layer_background', 'layer_sticker')
 FIELDS = {'description', 'aspect_ratio', 'allowed_text', 'character_reference', 'base_reference',
           'preserve', 'change', 'composition', 'mascot_placement', 'caption_clearance'}
 PLACEMENTS = {'upper-left', 'upper-right', 'left-margin', 'right-margin', 'above-caption-left', 'above-caption-right'}
@@ -138,11 +140,15 @@ def compile(model, purpose, data, version=CURRENT_VERSION):
     model_id = _model(model, spec)
     if not isinstance(purpose, str) or purpose not in spec['purposes']:
         raise PromptError('FLOW_PURPOSE_UNSUPPORTED: reference, character, scene or variation required')
+    if purpose in LAYER_PURPOSES and 'layer_style' not in spec:
+        raise PromptError('FLOW_PURPOSE_UNSUPPORTED: layered purposes need registry 1.2.0+')
     visual, references = _data(data, purpose, version)
+    if purpose in LAYER_PURPOSES and (visual['preserve'] or visual['change'] or references['base']):
+        raise PromptError('FLOW_LAYER_INVALID: layered assets are independent; no Base reference, preserve or change')
     template_id = 'flow.' + model_id + '.' + purpose
     sections = ['Requested aspect ratio: ' + visual['aspect_ratio'] + '. Render the requested still image.',
-                spec['models'][model_id]['strategy'], spec['purposes'][purpose], spec['style'], spec['cast_rule'] if version in CAST_VERSIONS else spec['identity'],
-                spec['reference_rule'], spec['data_boundary'], spec['clearance_rule']]
+                spec['models'][model_id]['strategy'], spec['purposes'][purpose], spec['layer_style'][purpose] if purpose in LAYER_PURPOSES else spec['style'], spec['cast_rule'] if version in CAST_VERSIONS else spec['identity'],
+                spec['reference_rule'], spec['data_boundary']] + ([] if purpose in LAYER_PURPOSES else [spec['clearance_rule']])
     if references['base']:
         sections.append('A Base scene reference is declared and must be attached; use its camera and spatial relationships for the preservation instructions.')
     else:

@@ -14,16 +14,20 @@ Các hiệu ứng này đã được lập trình sẵn trong `sys/renderer/inde
 |---|---|---|---|
 | **Cắt gắt (`cut` / `hold`)** | Đã hỗ trợ | Chuyển thẳng sang ảnh mới tại mốc `at`. Nếu `hold`, camera đứng yên không kích hoạt chuyển động Ken Burns. | Thích hợp cho nhịp kể nhanh, giải thích logic, hoặc giữ nguyên biểu đồ số liệu. |
 | **Hòa tan (`fade` / Dissolve)** | Đã hỗ trợ | Lớp ảnh mới tăng dần độ mờ đục `opacity` từ 0 lên 1 trong tối đa 0.3s (hoặc nửa thời lượng beat), đè lên ảnh trước. | Phù hợp biến đổi thời gian, hồi tưởng hoặc làm mềm chuyển cảnh. |
-| **Trượt ngang (`slide_left`)** | Đã hỗ trợ | Dịch chuyển tọa độ `translateX` từ 100% về 0% trong tối đa 0.3s trong khi ảnh trước lót bên dưới. | Dùng khi lật trang, sang chủ đề mới hoặc chuyển phân đoạn. |
-| **Phóng to chậm (`zoom_in`)** | Đã hỗ trợ | Tăng dần tỷ lệ `scale` từ 1.0 lên 1.08 theo tiến trình thời gian beat. | Tập trung thị giác vào từ khóa hoặc chi tiết trọng tâm. |
-| **Thu nhỏ chậm (`zoom_out`)** | Đã hỗ trợ | Giảm dần tỷ lệ `scale` từ 1.08 về 1.0 theo tiến trình thời gian beat. | Hé lộ bối cảnh rộng hơn (thay thế cho Pull-out). |
-| **Zoom dồn giật (`punch_in`)** | Đã hỗ trợ | Phóng to giật 1.25x trong 0.35s đầu rồi dịu về 1.08x, kèm rung nhẹ 0.28s. | Nhấn mạnh khoảnh khắc ngạc nhiên, sốc, phát hiện bất ngờ. |
-| **Lia máy ngang (`pan_left` / `pan_right`)** | Đã hỗ trợ | Cố định `scale = 1.06`, dịch chuyển `translateX` qua lại biên độ 3%. | Khảo sát tranh phong cảnh hoặc quét qua nhiều việc nhà. |
-| **Auto Ken Burns** | Đã hỗ trợ | Khi `effect` không đặt và không phải `hold`: tự động luân chuyển chu kỳ 4 pha: (1) zoom in $\to$ (2) pan right $\to$ (3) zoom out $\to$ (4) pan left. | Đảm bảo video không bao giờ có khung hình chết (Never static frame). |
+| **Trượt ngang / Whip Pan (`slide_left`)** | Đã hỗ trợ | Dịch chuyển tọa độ `translateX` từ 100% về 0% có gia tốc mượt, kết hợp Dynamic Motion Blur (`blur(Xpx, 0px)`) theo vận tốc trượt trong tối đa 0.3s. | Lật trang, sang chủ đề mới, tạo cú lia máy chuyển cảnh điện ảnh. |
+| **Phóng to êm (`zoom_in`)** | Đã hỗ trợ | Tăng tỷ lệ `scale` từ 1.0 lên 1.08 theo đường cong gia tốc phi tuyến (Bezier Easing). | Tập trung thị giác vào từ khóa hoặc chi tiết trọng tâm một cách mượt mà. |
+| **Thu nhỏ êm (`zoom_out`)** | Đã hỗ trợ | Giảm tỷ lệ `scale` từ 1.08 về 1.0 theo đường cong gia tốc phi tuyến (Bezier Easing). | Hé lộ bối cảnh rộng hơn (Pull-out) êm ái, tự nhiên. |
+| **Zoom dồn giật (`punch_in`)** | Đã hỗ trợ | Phóng to giật 1.25x trong 0.35s đầu với Spring dynamic rồi dịu về 1.08x, kèm rung nhẹ. | Nhấn mạnh khoảnh khắc ngạc nhiên, sốc, phát hiện bất ngờ. |
+| **Lia máy ngang (`pan_left` / `pan_right`)** | Đã hỗ trợ | Cố định `scale = 1.06`, dịch chuyển `translateX` qua lại có gia tốc êm ái. | Khảo sát tranh phong cảnh hoặc quét qua nhiều việc nhà. |
+| **Auto Ken Burns** | Đã hỗ trợ | Khi `effect` không đặt và không phải `hold`: tự động luân chuyển chu kỳ 4 pha với đường cong Easing êm ái: (1) zoom in $\to$ (2) pan right $\to$ (3) zoom out $\to$ (4) pan left. | Đảm bảo video không bao giờ có khung hình chết (Never static frame). |
 | **Tâm điểm tiêu cự (`focus`)** | Đã hỗ trợ | Nhận tọa độ `focus: {x, y}` (từ 0 đến 1) để gán cho `transformOrigin: x% y%`. Mặc định tâm là `{x: 0.5, y: 0.42}` (chuẩn 9:16). | Hướng chuyển động zoom/pan nhắm chính xác vào mặt nhân vật hoặc vật thể trọng tâm. |
-| **Rung chấn màn hình (`shake`)** | Đã hỗ trợ | Dao động `translateX/Y` bằng hàm `sin/cos` với chu kỳ 55Hz và suy giảm dần sau 0.28s. | Thể hiện cú va chạm, giật mình, tiếng nổ hoặc tiếng gõ mạnh. |
+| **Rung chấn màn hình (`shake`)** | Đã hỗ trợ | Rung máy ngẫu nhiên theo thuật toán Perlin/Simplex noise mô phỏng tay cầm máy quay thật (Handheld Camera Shake) tắt dần trong 0.28s. | Thể hiện cú va chạm, giật mình, tiếng nổ hoặc gõ mạnh một cách tự nhiên. |
+| **Nét rung sống động (`line_boil`)** | **Đã hỗ trợ** | Bộ lọc nhiễu hữu cơ Procedural SVG Displacement Map (`<feTurbulence>` + `<feDisplacementMap>`) với 4 seed xoay vòng ở tần số 10 fps. Tự động kích hoạt qua `line_boil: true` hoặc `effect: 'line_boil'`. | Biến nét đen người que tĩnh thành hoạt họa sống động như *MinutePhysics*, người que "thở" tự nhiên, 0 chi phí AI. |
+| **Nét vẽ tự chạy (`draw_on`)** | **Đã hỗ trợ** | Mặt nạ chuyển tiếp mềm `maskImage: linear-gradient(135deg, ...)` quét chéo từ góc trên-trái xuống dưới-phải trong `draw_duration` (mặc định 1.3s), tích hợp icon bút chì `✏️` dẫn đường. Kích hoạt qua `draw_on: true` hoặc `effect: 'draw_on'`. | Mở đầu cảnh ấn tượng, nét vẽ phác họa trực tiếp theo câu thoại mở màn của người dẫn truyện. |
+| **Lớp phủ điện ảnh (Cinematic Overlays)** | Đã hỗ trợ | Lớp phủ Vignette tối 4 góc nhẹ nhàng và hạt Film Grain tinh tế trên toàn khung hình. | Hòa quyện nét vẽ 2D vào không gian thị giác, loại bỏ cảm giác ảnh thô. |
 | **Kinetic Keyword Typography** | Đã hỗ trợ | Tách từ trong phụ đề, tự động highlight từ vựng mục tiêu (`target_word`) hoặc từ in hoa tiếng Anh bằng màu vàng phát sáng `#FACC15` kèm đổ bóng viền đen. | Không cần vẽ thêm text tĩnh trong ảnh, phụ đề tự làm nổi bật từ khóa. |
 | **Interactive Practice Counter** | Đã hỗ trợ | Tự động đếm nhịp "3... 2... 1... 🎙️" dạng bóng thoại nổi khi cue có cờ `practice` hoặc chứa cụm "Cùng nhắc lại nhé". | Tương tác người học mà không cần dựng thủ công từng frame. |
+| **Hoạt hình phân lớp (`scene.layers`)** | **Đã hỗ trợ** | Kết xuất đa lớp động (1 Background + N Sticker độc lập). Tự động kích hoạt Spring dynamics (`pop`, `pop_wobble`, `bounce`, `drop`, `slide_left`, `spin_grow`), nét rung hữu cơ `line_boil`, hiệu ứng xoáy hút `suck`, chớp sáng `bg_flash` và rung giật `shakeAt`. | Biến cảnh tĩnh thành hoạt họa 2.5D sống động, người que và đạo cụ nảy tự nhiên theo mốc thời gian từng từ. Content khai báo qua `scenes[].layers` + `images[].kind` (schema content-v3), prompt registry 1.2.0, sticker được tách nền trên Colab bằng `tools/matte_sticker.py`. Hướng dẫn: skill `vp-layered-motion`. |
 
 ---
 
@@ -48,10 +52,8 @@ Các góc máy và cỡ cảnh được quyết định khi lập prompt tạo �
 
 ---
 
-## 4. Kỹ thuật chưa hỗ trợ hoặc chưa xác minh (Unsupported / Unverified)
+## 4. Kỹ thuật chưa hỗ trợ (Unsupported)
 
 | Kỹ thuật | Hiện trạng | Giải pháp thay thế khả dĩ hiện tại |
 |---|---|---|
-| **Whip pan (lia nhanh mờ)** | **Chưa hỗ trợ**. Renderer chưa có directional motion blur shader khi chuyển ảnh. | Dùng `slide_left` với thời lượng beat cực ngắn (0.2s) hoặc đưa đường nét chuyển động mờ (motion blur lines) vào chính prompt tạo ảnh của Flow. |
-| **Parallax (chuyển động đa lớp 3D)** | **Chưa hỗ trợ**. Trình render hiện tại nhận một ảnh bitmap phẳng 2D duy nhất cho mỗi beat, chưa hỗ trợ nạp nhiều layer PNG tách biệt (tiền cảnh, trung cảnh, hậu cảnh). | Vẽ bố cục có độ sâu thị giác (tiền cảnh to nét đậm, hậu cảnh mờ nhạt) trong ảnh 2D, kết hợp Auto Ken Burns để tạo cảm giác chuyển động. |
-| **Dynamic Zoom Ramp (đường cong gia tốc phi tuyến)** | **Chưa xác minh**. Hiện tại các chuyển động zoom sử dụng hàm tiến trình tuyến tính `progress` hoặc giảm dần dạng bậc một. | `punch_in` đang là hiệu ứng phi tuyến tính duy nhất có gia tốc mạnh ở đầu khung hình. |
+| **Parallax 3D không gian / Mesh biến dạng 3D** | **Chưa hỗ trợ**. Renderer hiện đã hỗ trợ hoạt hình phân lớp 2.5D qua `scene.layers`, nhưng chưa hỗ trợ mô phỏng camera 3D không gian thực hoặc biến dạng lưới 3D (Mesh warping). | Sử dụng hoạt hình phân lớp qua `scene.layers` (skill `vp-layered-motion`) hoặc vẽ bố cục phối cảnh 2D có chiều sâu. |

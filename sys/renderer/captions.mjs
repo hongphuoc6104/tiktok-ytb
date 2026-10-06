@@ -3,6 +3,7 @@ export function captionStyle(width = 1080, height = 1920) {
   const scale = width / (portrait ? 1080 : 1920);
   return {
     position: 'absolute',
+    zIndex: 30,
     bottom: Math.round((portrait ? 280 : 85) * scale),
     left: '50%',
     transform: 'translateX(-50%)',

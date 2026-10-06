@@ -7,12 +7,13 @@ from .client import Client, ColabError, issue
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('action', choices=['status', 'start', 'reconcile', 'setup', 'stop', 'synthesize', 'render', 'collect'])
+    parser.add_argument('action', choices=['status', 'start', 'reconcile', 'setup', 'stop', 'synthesize', 'render', 'collect', 'reconcile-render-failure'])
     parser.add_argument('--account')
     parser.add_argument('--session')
     parser.add_argument('--request', type=Path)
     parser.add_argument('--out', type=Path)
     parser.add_argument('--cache', type=Path)
+    parser.add_argument('--source', default='')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     cfg = json.loads((root / 'config.json').read_text())
@@ -26,6 +27,11 @@ def main():
         print(client.call('status', '-s', client.session))
     elif args.action in ('start', 'reconcile', 'setup', 'stop'):
         print(getattr(client, args.action)())
+    elif args.action == 'reconcile-render-failure':
+        if not args.request or not args.cache or not args.source.strip():
+            parser.error('--request, --cache and actual --source are required')
+        request = json.loads(args.request.read_text())
+        print(client.reconcile_render_failure(request, args.cache, args.source))
     else:
         if not all((args.request, args.out, args.cache)):
             parser.error('--request, --out and --cache are required')

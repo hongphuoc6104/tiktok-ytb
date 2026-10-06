@@ -74,32 +74,11 @@ async function executeQueue(specs,bound,requests) {
  const frame=await findToolFrame(page);
  await frame.evaluate(async () => {
   const { Flow } = await import('flow-sdk');
-  if (!Flow.generate._origImage) {
-   Flow.generate._origImage = Flow.generate.image;
-   Flow.generate.image = async function(opts) {
-    if (opts && typeof opts.prompt === 'string' && opts.prompt.includes('Visual data (JSON')) {
-     const jsonMatch = opts.prompt.match(/Visual data \(JSON[^:]*:\s*(\{[\s\S]*\})/);
-     if (jsonMatch) {
-      try {
-       const data = JSON.parse(jsonMatch[1]);
-       let cleanPrompt = `Subject: ${data.description}. Style: Bright hand-drawn 2D explanatory illustration: bold dark outlines, flat colors, white background. `;
-       if (data.allowed_text && data.allowed_text.length) {
-        cleanPrompt += `VISIBLE TEXT: "${data.allowed_text.map(t => t.text).join(', ')}". NO OTHER GLYPHS. `;
-       } else {
-        cleanPrompt += `FORBIDDEN: No text, letters, or extra written glyphs. Clean plain bottom 18% with no text. `;
-       }
-       opts.prompt = cleanPrompt;
-      } catch {}
-     }
-    }
-    return Flow.generate._origImage.call(this, opts);
-   };
-  }
-  const s = JSON.parse(localStorage.getItem('VP_LAB_STATE_V2') || '{}');
-  if (s.status === 'UNKNOWN' || s.queue?.some(i => !['COMPLETED', 'ACCEPTED'].includes(i.status))) {
-   s.queue = (s.queue || []).filter(i => ['COMPLETED', 'ACCEPTED'].includes(i.status));
-   s.status = 'IDLE';
-   localStorage.setItem('VP_LAB_STATE_V2', JSON.stringify(s));
+  // Undo the legacy lossy wrapper in an already connected applet. The
+  // compiled prompt carries authored scene, preservation and repair data.
+  if (Flow.generate._origImage) {
+   Flow.generate.image = Flow.generate._origImage;
+   delete Flow.generate._origImage;
   }
  });
  const state=()=>frame.evaluate(()=>JSON.parse(localStorage.getItem('VP_LAB_STATE_V2')||'{}'));
@@ -131,11 +110,11 @@ async function executeQueue(specs,bound,requests) {
   const boxes=frame.getByRole('textbox');
   await boxes.nth(0).fill(r.spec.prompt);await boxes.nth(1).fill(r.character?'Match the attached canonical character and scene references.':'');
   await boxes.nth(2).fill(r.spec.preserve||'');await boxes.nth(3).fill(r.spec.change||'');await boxes.nth(4).fill(r.spec.literalText||'');
-  await frame.getByRole('button',{name:r.spec.ratio,exact:true}).click();
+  await frame.getByRole('button',{name:r.spec.ratio,exact:true}).click({force:true});
   const modelLabel=r.identity.model.startsWith('🍌')?r.identity.model:`🍌 ${r.identity.model}`;
   await frame.getByRole('combobox').nth(2).selectOption({label:modelLabel});
   const before=await state();
-  await frame.getByRole('button',{name:'Initialize Generation',exact:true}).click();
+  await frame.getByRole('button',{name:'Initialize Generation',exact:true}).click({force:true});
   const after=await state(),added=after.queue.filter(i=>!before.queue?.some(p=>p.id===i.id));
   if(added.length!==1||added[0].config.topic!==r.spec.prompt||(added[0].characterRefMediaId||null)!==(r.character?.mediaId||null)||added[0].baseImageMediaId!==(r.base?.mediaId||null)||added[0].config.aspectRatio!==r.spec.ratio)throw Error('QUEUE_REFERENCE_MAPPING_FAILED');
   if(r.spec.managementContract===1) {
@@ -153,7 +132,7 @@ async function executeQueue(specs,bound,requests) {
 
  // Mark the entire group before Start. A crash anywhere makes retry conservative.
  for(let i=0;i<attempts.length;i++)store.beginSubmission(attempts[i],{queueId:ids[i],screenshot:shot});
- await frame.getByRole('button',{name:'Start Queue',exact:true}).click();
+ await frame.getByRole('button',{name:'Start Queue',exact:true}).click({force:true});
  const started=Date.now(),captured=new Set();
  while(Date.now()-started<180000) {
   const current=await state();

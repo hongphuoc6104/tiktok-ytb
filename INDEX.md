@@ -7,6 +7,7 @@ Read [AGENTS.md](AGENTS.md), identify the task and authority, then select the ro
 | Download/clone or configure a machine | [Getting started](sys/docs/getting-started.md) | vp-setup |
 | New chat or continuing unfinished work | [Session handoff](sys/docs/session-start.md) | Skill for the ongoing task |
 | Create or repair a video | [Workflow](sys/docs/workflow.md) | vp-production |
+| Analyze a reference channel and derive an original production playbook | [Reference-video analysis](.agents/skills/vp-channel-patterns/SKILL.md) | vp-channel-patterns |
 | Upgrade the system | [Implementation plan](sys/docs/plans/20261003-ke-hoach-chuan-hoa-quyen-mode-va-tai-lieu.md) | vp-development |
 | Cleanup/archive/Git synchronization | [Maintenance](sys/docs/maintenance.md) | vp-maintenance |
 
@@ -17,7 +18,7 @@ Read [AGENTS.md](AGENTS.md), identify the task and authority, then select the ro
 - `sys/runs/<job>/`: content, versions, requests and artifacts.
 - `sys/.state/`: local state; `sys/.gflow/`: browser profiles, excluded from Git.
 - `sys/assets/`: visual/voice references; `video/<job>/`: collected products.
-- `.agents/`: Rules and four skills; corresponding links in sys point to the root.
+- `.agents/`: Rules and discoverable skills; corresponding links in `sys/` point here.
 
 The root launcher is `python3 pilot.py`; operational examples use `sys/` as their working directory. Do not infer job/revision from MP4 filenames.
 

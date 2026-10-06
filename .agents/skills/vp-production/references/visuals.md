@@ -2,7 +2,7 @@
 
 ## Checklist lập beat & ảnh (bắt buộc trước khi tạo prompt)
 - Mỗi câu thoại được chia thành mấy beat, cỡ cảnh nào?
-- Mọi hiệu ứng chọn đều có trong [render-capabilities](../../../../sys/docs/render-capabilities.md), không dùng whip pan hay parallax.
+- Mọi hiệu ứng chọn đều có trong [render-capabilities](../../../../sys/docs/render-capabilities.md); video phân lớp (nền + sticker) theo skill [vp-layered-motion](../../vp-layered-motion/SKILL.md).
 - Phụ đề không che trọng tâm ảnh 9:16 (dành riêng 1/3 dưới cho phụ đề).
 - Prompt ảnh chỉ viết sau khi có kế hoạch beat.
 
@@ -17,3 +17,5 @@ No main character or recurring presenter inside scenes (prompt registry 1.1.0). 
 Character/style reference is optional and only guides drawing style. Use Base reference for shot/background continuity and based_on only when continuity is needed. Independent composition uses independent generation. No prompt/ref ID alone proves identity. Preserve exact allowed text and caption clearance; no forced yellow highlight/screen shake/comic effect. Historical character assets remain only for legacy 1.0.x/v3 jobs.
 
 Flow remains the image provider. Unknown submissions must reconcile/collect on their owning session, never resend under a renamed target. Report real image IDs/version and evidence; visual sampling during development is not a new auto quality gate.
+
+Layered scenes (`layers` declared): one `kind: background` plate without figures plus `kind: sticker` cut-outs on flat pure white; stickers are independent (no based_on) and motion comes from layers, not from new flat frames. Rules/presets: [vp-layered-motion](../../vp-layered-motion/SKILL.md).

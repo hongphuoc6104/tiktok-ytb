@@ -702,8 +702,32 @@ def render(p,j,out):
     shutil.copy(src,dest);copied[path]=dest.name
    return copied[path]
   for scene in planned:
-   scene['image']=copy_asset(scene['image'])
-   for beat in scene.get('images',[]):beat['src']=copy_asset(beat['src'])
+   has_layers=bool(scene.get('layers'))
+   if has_layers:
+    from tools.matte_sticker import process_background
+    def copy_bg(path):
+     if path not in copied:
+      src=p.path(j,path);dest=public/(str(len(copied))+'-'+src.name)
+      process_background(src,dest);copied[path]=dest.name
+     return copied[path]
+    scene['image']=copy_bg(scene['image'])
+    for beat in scene.get('images',[]):beat['src']=copy_bg(beat['src'])
+    for layer in scene.get('layers',[]):
+     if layer.get('bg') or layer.get('kind') == 'background':
+      layer['src']=copy_bg(layer['src'])
+     elif layer.get('kind') == 'sticker':
+      from tools.matte_sticker import process_image
+      def copy_sticker(path):
+       if path not in copied:
+        src=p.path(j,path);dest=public/(str(len(copied))+'-stk-'+src.stem+'.png')
+        process_image(src,dest,create_sticker=True,border=10);copied[path]=dest.name
+       return copied[path]
+      layer['src']=copy_sticker(layer['src'])
+     else:
+      layer['src']=copy_asset(layer['src'])
+   else:
+    scene['image']=copy_asset(scene['image'])
+    for beat in scene.get('images',[]):beat['src']=copy_asset(beat['src'])
   return planned
  scenes=render_scenes('en',ratio) if (ratio=='16:9' or (b and b.get('language')=='en')) else render_scenes('vi','9:16')
  props={'duration':snd['duration'],'scenes':scenes,'segments':snd['segments'],'cues':subtitle_cues(snd['segments']),'aspect_ratio':ratio,'render_concurrency':config(p).get('render_concurrency',4)}

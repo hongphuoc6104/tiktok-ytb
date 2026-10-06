@@ -131,6 +131,38 @@ class Budgets:
     def flow_submit(self, account, operation, request, slots, *, cap=100, evidence, budget_session=None):
         return self.flow_submit_many(account, operation, [(request, slots)], cap=cap, evidence=evidence, budget_session=budget_session)
 
+    def allow_flow_repair(self, account, budget_session, *, extra_slots, system_root, grant, job, source, evidence):
+        """Append a small, authorized repair allowance without resetting usage.
+
+        This is an internal project limit. Provider/service blocks remain hard
+        stops and all original request ownership and slot counts are retained.
+        """
+        from permissions import Grants
+        if (type(extra_slots) is not int or not 1 <= extra_slots <= 4 or not budget_session
+                or not isinstance(source, str) or not source.strip() or not evidence):
+            raise ValueError('Bounded repair slots, actual source and evidence required')
+        authority = Grants(system_root).require(grant, 'development', 'system', job=job,
+                                                path=Path(system_root).resolve() / 'account_budget.py')
+        with locked_json(self.path, self.read) as data:
+            state = self._account(data, account)
+            if state.get('blocks', {}).get('flow'):
+                raise ValueError('Provider/service blocked; repair allowance cannot bypass it')
+            limit = state.get('flow_limits', {}).get(budget_session)
+            if not isinstance(limit, int) or limit < 100 or limit + extra_slots > 200:
+                raise ValueError('Existing session limit and maximum 200 required')
+            state.setdefault('flow_repair_allowances', {})
+            if any(x.get('event') == 'flow_repair_allowance' and x.get('job') == job
+                   and x.get('budget_session') == budget_session and x.get('evidence') == evidence
+                   for x in data['events']):
+                raise ValueError('Identical repair evidence already has an allowance')
+            record = {'job': job, 'account': account, 'budget_session': budget_session,
+                      'previous_limit': limit, 'limit': limit + extra_slots, 'extra_slots': extra_slots,
+                      'source': source, 'evidence': evidence, 'grant': authority['id'], 'at': time.time()}
+            state['flow_repair_allowances'][budget_session] = record
+            state['flow_limits'][budget_session] = record['limit']
+            data['events'].append({'event': 'flow_repair_allowance', **record})
+        return record
+
     def flow_submit_many(self, account, operation, entries, *, cap=100, evidence, budget_session=None):
         budget_session = budget_session or 'legacy-shared-session'
         if (not isinstance(cap, int) or isinstance(cap, bool) or cap < 100 or cap > 200 or not entries or not evidence
@@ -148,6 +180,9 @@ class Budgets:
             now = time.time()
             limits = state.setdefault('flow_limits', {})
             limit_key = budget_session
+            allowance = state.get('flow_repair_allowances', {}).get(limit_key)
+            if allowance and allowance.get('limit') == limits.get(limit_key):
+                cap = max(cap, allowance['limit'])
             limits[limit_key] = min(limits.get(limit_key, cap), cap)
             used = sum(x['slots'] for items in state['flow'].values() for x in items.values()
                        if x.get('state') != 'not_submitted' and (x.get('budget_session', 'legacy-shared-session') == budget_session or x.get('state') in ('submitted', 'unknown', 'ambiguous')))

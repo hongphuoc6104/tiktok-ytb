@@ -52,7 +52,7 @@ def validate_plan(b, c):
     global_visible = c['style']+' '+json.dumps(b['planning']['text_style'],ensure_ascii=False)+' '+' '.join(x['appearance']+' '+x['outfit']+' '+x['name'] for x in c['characters'])
     if any(re.search(r'(?<!\w)'+re.escape(code)+r'(?!\w)', global_visible, re.I) for code in internal):
         fail('INTERNAL_LABEL','characters/style','Mã quản lý xuất hiện trong mô tả dùng tạo hình')
-    all_seen = set()
+    all_seen = set(); all_seen_sticker = set(); layer_used = set()
     for s, outline in zip(scenes, c['outline']):
         if outline['purpose'] != s['purpose'] or outline['requirements'] != s['requirements']:
             fail('OUTLINE', s['id'], 'Mục đích hoặc ý của cảnh khác dàn ý')
@@ -72,8 +72,15 @@ def validate_plan(b, c):
                 fail('INTERNAL_LABEL', im['id'], 'Mã nội bộ không được đưa vào mô tả hình/chữ')
             scene_images.add(im['id'])
             all_seen.add(im['id'])
+        kinds = {im['id']: im.get('kind', 'scene') for im in s['images']}
+        layers = s.get('layers', [])
+        if layers or any(k != 'scene' for k in kinds.values()):
+            _validate_layered_scene(s, kinds, layers, all_seen_sticker, languages(b), fail)
+        stickers = {i for i, k in kinds.items() if k == 'sticker'}
         used = {x['image_id'] for x in s['beats']}
-        if used != scene_images: fail('IMAGE_USAGE', s['id'], 'Mỗi ảnh phải được sử dụng, không tham chiếu ảnh ngoài cảnh')
+        if used != scene_images - stickers: fail('IMAGE_USAGE', s['id'], 'Mỗi ảnh phải được sử dụng, không tham chiếu ảnh ngoài cảnh (sticker chỉ dùng trong layers)')
+        all_seen_sticker |= stickers
+        layer_used |= {x['image_id'] for x in layers}
         for lang in languages(b):
             text = s.get('narration_en' if lang == 'en' else 'narration', '')
             positions = []
@@ -85,6 +92,7 @@ def validate_plan(b, c):
         for beat in s['beats']:
             if beat['id'] in all_beats: fail('BEAT_ID', s['id'], 'Mã nhịp trùng')
             all_beats.add(beat['id'])
+    if all_seen_sticker - layer_used: fail('LAYER_UNUSED', 'layers', 'Sticker không được dùng trong layers nào: ' + ', '.join(sorted(all_seen_sticker - layer_used)))
     source = {x['id']: x for x in b['sources']}
     scene_by_id = {x['id']: x for x in scenes}
     for claim in c['claims']:
@@ -101,6 +109,37 @@ def validate_plan(b, c):
     if errors: raise ContractError(errors)
 
 
+MAX_NEW_STICKERS_PER_SCENE = 4  # Flow quota safety; reuse earlier stickers instead of generating new ones.
+
+
+def _validate_layered_scene(scene, kinds, layers, known_stickers, langs, fail):
+    """Layered (cut-out) scene rules: one background, stickers only inside layers, anchored in narration."""
+    sid = scene['id']
+    backgrounds = [i for i, k in kinds.items() if k == 'background']
+    stickers = [i for i, k in kinds.items() if k == 'sticker']
+    if len(backgrounds) != 1: fail('LAYER_BACKGROUND', sid, 'Cảnh phân lớp cần đúng 1 ảnh kind=background')
+    if not layers: fail('LAYER_EMPTY', sid, 'Cảnh có ảnh background/sticker phải khai báo layers')
+    if len(stickers) > MAX_NEW_STICKERS_PER_SCENE: fail('LAYER_QUOTA', sid, 'Tối đa %d sticker mới mỗi cảnh; hãy tái dùng sticker cảnh trước' % MAX_NEW_STICKERS_PER_SCENE)
+    if any(k == 'scene' for k in kinds.values()): fail('LAYER_MIXED', sid, 'Cảnh phân lớp không trộn ảnh kind=scene')
+    for im in scene['images']:
+        if im.get('kind', 'scene') != 'scene' and im['based_on'] is not None: fail('LAYER_BASE', im['id'], 'Ảnh lớp là độc lập, không dùng based_on')
+    if len(scene['beats']) != 1: fail('LAYER_BEATS', sid, 'Cảnh phân lớp có đúng 1 nhịp cho ảnh nền; chuyển động nằm trong layers')
+    available = set(known_stickers) | set(stickers)
+    seen = set()
+    for layer in layers:
+        if layer['id'] in seen: fail('LAYER_ID', layer['id'], 'Mã layer trùng trong cảnh')
+        seen.add(layer['id'])
+        if layer['image_id'] not in available: fail('LAYER_IMAGE', layer['id'], 'Layer phải trỏ tới sticker của cảnh này hoặc cảnh trước')
+        for lang in langs:
+            text = scene.get('narration_en' if lang == 'en' else 'narration', '')
+            try:
+                start = occurrence(text, layer['anchor'][lang])
+                for key in ('exit_anchor', 'shake_anchor'):
+                    if key in layer and occurrence(text, layer[key][lang]) < start:
+                        fail('LAYER_ANCHOR', layer['id'], key + ' phải sau điểm xuất hiện')
+            except (ValueError, KeyError): fail('LAYER_ANCHOR', layer['id'], 'Thiếu/sai điểm neo layer ' + lang)
+
+
 def image_units(c):
     if c.get('schema_version') != '3.0': return c['scenes']
     chars = {x['id']: x for x in c['characters']}
@@ -113,7 +152,7 @@ def image_units(c):
                                 'Giữ nguyên: '+im['preserve'], 'Thay đổi: '+im['change']])
             units.append({'id': im['id'], 'scene_id': scene['id'], 'prompt': prompt,
                           'character_ids': im['character_ids'], 'based_on': im['based_on'],
-                          'visible_text': im['visible_text']})
+                          'visible_text': im['visible_text'], 'kind': im.get('kind', 'scene')})
     return units
 
 
@@ -240,9 +279,45 @@ def timeline(c, images, audio, language, ratio):
         beats[0]['at']=0
         if any(round(a['at']*30)>=round(z['at']*30) for a,z in zip(beats,beats[1:])):
             raise ValueError('Visual beats collide at 30 fps; revise content anchors')
-        output.append({'id':sc['id'],'title':sc['title'],'start':start,'end':end,'image':beats[0]['src'],'images':beats,
-                       'timing_method':'narration_anchor_interpolated; verify against audio at media review'})
+        scene_out={'id':sc['id'],'title':sc['title'],'start':start,'end':end,'image':beats[0]['src'],'images':beats,
+                   'timing_method':'narration_anchor_interpolated; verify against audio at media review'}
+        if sc.get('layers'):
+            scene_out['layers']=_layer_timeline(sc,by_id,ratio,text,language,spans,start,end,beats[0]['src'])
+        output.append(scene_out)
     return output
+
+
+def _anchor_at(text, anchor, spans, start, end):
+    """Seconds from scene start for an anchor; same chunk-bounded interpolation as visual beats."""
+    offset=occurrence(text,anchor)
+    at=start+offset/max(1,len(text))*(spans[-1].get('content_end',end)-start)
+    if all('text' in seg for seg in spans):
+        cursor=0
+        for seg in spans:
+            pos=text.find(seg['text'],cursor)
+            if pos<0: continue
+            if pos<=offset<pos+len(seg['text']):
+                at=seg['start']+(offset-pos)/max(1,len(seg['text']))*(seg.get('content_end',seg['end'])-seg['start']);break
+            cursor=pos+len(seg['text'])
+    return round(at-start,4)
+
+
+def _layer_timeline(sc, by_id, ratio, text, language, spans, start, end, background):
+    """Background plus timed stickers; start/exit/shake come from narration anchors, never fixed seconds."""
+    duration=round(end-start,4)
+    layers=[{'id':'bg_'+sc['id'],'src':background,'bg':True,'z':1,'start':0,'kind':'background'}]
+    for index,layer in enumerate(sc['layers']):
+        item=by_id[(layer['image_id'],ratio)]
+        at=_anchor_at(text,layer['anchor'][language],spans,start,end)
+        out={'id':layer['id'],'image_id':layer['image_id'],'src':item['path'],'kind':'sticker','z':layer.get('z',3+index),
+             'x':layer['x'],'y':layer['y'],'w':layer['w'],'start':min(at,max(0,duration-0.2)),'fx':layer['fx']}
+        if 'exit_anchor' in layer:
+            out['end']=min(duration,max(out['start']+0.3,_anchor_at(text,layer['exit_anchor'][language],spans,start,end)))
+            if layer.get('exit_fx','suck')!='none': out['exitFx']=layer.get('exit_fx','suck')
+        if 'shake_anchor' in layer:
+            out['shakeAt']=_anchor_at(text,layer['shake_anchor'][language],spans,start,end)
+        layers.append(out)
+    return layers
 
 
 def calibrate_rates(c, audio, source):

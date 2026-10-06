@@ -12,7 +12,7 @@ Use production scope and sys/docs/workflow.md. One task/role; current brief and 
 - Bank/meaning: [vocabulary](references/vocabulary.md).
 - Outline/narration/coverage: [script](references/script.md) and [narration](references/narration-style.md).
 - Shot grammar & renderer limits (bắt buộc đọc trước khi tạo kế hoạch beat/ảnh — sau khi lời thoại chốt, trước khi viết prompt): [cinematography](references/cinematography.md) rồi [render-capabilities](../../../sys/docs/render-capabilities.md).
-- Image/beat planning and generation: [storyboard and visuals](references/visuals.md).
+- Image/beat planning and generation: [storyboard and visuals](references/visuals.md) ; layered cut-out video (background + timed stickers): also follow the vp-layered-motion skill (../vp-layered-motion/SKILL.md).
 - Request/WAV: [audio](references/audio.md).
 - Timeline/captions/MP4: [editing](references/editing.md).
 - Errors: [recovery](references/recovery.md).

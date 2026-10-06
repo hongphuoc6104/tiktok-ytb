@@ -14,3 +14,5 @@ Implement observable behavior, not only wording. Test auto without reviewer, rev
 Use targeted tests after each meaningful change and a requirement-by-requirement completion audit. Do not claim live Flow/T4/media from fixtures or delete failing tests to simulate compliance. Real provider tests are finite and scoped; quotas/auth/unknown stop according to accounts.md. Log issues and demonstrated solutions.
 
 A valid grant allows the migration it explicitly covers; do not fake a human TTY or edit baseline/DB/journal by hand. Product/credential/cost changes outside scope still need an explicit decision. Hand off exact diff, evidence, remaining requirements and rollback in Vietnamese.
+
+Layered pipeline changes must keep `tests/test_layered_pipeline.py`, `test_matte_sticker.py`, flow prompt and remote render tests green, and be proven by a real E2E job (Flow stickers → Colab matte/render) before claiming support.

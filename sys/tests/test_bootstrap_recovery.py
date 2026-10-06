@@ -21,6 +21,8 @@ class BootstrapRecoveryTests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)/'sys';self.root.mkdir()
   self.path=session_socket_path(self.root);self.path.parent.mkdir(mode=0o700,parents=True,exist_ok=True)
+  try:os.chmod(self.path.parent,0o700)
+  except OSError:pass
   self.addCleanup(lambda:self.path.unlink(missing_ok=True))
   self.grant=Grants(self.root).grant('setup',source='TEST authorized daemon recovery',paths=['experiments/b2_illustrator/session.mjs'])['id']
   self.source='TEST actual recovery instruction'

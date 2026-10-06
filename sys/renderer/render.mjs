@@ -3,8 +3,9 @@ import {openBrowser, selectComposition, renderMedia, renderStill} from '@remotio
 import {chromium} from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
+import {cpus} from 'node:os';
 import {fileURLToPath} from 'node:url';
-import {outputPlans} from './outputs.mjs';
+import {outputPlans, renderConcurrency} from './outputs.mjs';
 import {captionStyle, captionMaxHeight} from './captions.mjs';
 
 const dir = path.resolve(process.argv[2]);
@@ -16,10 +17,34 @@ const url = await bundle({
   entryPoint: fileURLToPath(new URL('./index.tsx', import.meta.url)),
   publicDir: path.join(dir, 'public')
 });
+function resolveChromePath() {
+  if (process.env.VP_CHROME_PATH && fs.existsSync(process.env.VP_CHROME_PATH)) {
+    return process.env.VP_CHROME_PATH;
+  }
+  try {
+    const pwPath = chromium.executablePath();
+    if (fs.existsSync(pwPath)) return pwPath;
+  } catch {}
+  for (const p of ['/usr/bin/google-chrome', '/usr/bin/google-chrome-stable', '/usr/bin/chromium', '/usr/bin/chromium-browser']) {
+    if (fs.existsSync(p)) return p;
+  }
+  return chromium.executablePath();
+}
+const chromePath = resolveChromePath();
+
+process.env.DISABLE_FROM_SURFACE = 'true';
+
 const browser = await openBrowser('chrome', {
-  browserExecutable: process.env.VP_CHROME_PATH || chromium.executablePath(),
+  browserExecutable: chromePath,
   chromiumOptions: {
-    args: ['--enable-gpu', '--ignore-gpu-blocklist', '--no-sandbox']
+    args: [
+      '--no-sandbox',
+      '--disable-dev-shm-usage',
+      '--run-all-compositor-stages-before-draw',
+      '--disable-gpu-rasterization',
+      '--enable-gpu',
+      '--ignore-gpu-blocklist'
+    ]
   }
 });
 
@@ -28,7 +53,7 @@ try {
   let failures = [];
   let checked = 0;
   if (captionPlans.length) {
-    const pw = await chromium.launch({executablePath: process.env.VP_CHROME_PATH || chromium.executablePath(), headless: true});
+    const pw = await chromium.launch({executablePath: chromePath, headless: true});
     try {
       for (const plan of captionPlans) {
         const checkWidth = plan.props.width;
@@ -40,7 +65,7 @@ try {
           const style = captionStyle(checkWidth, checkHeight);
           await page.locator('#subtitle').evaluate((e, {text, style}) => {
             for (const [key, value] of Object.entries(style)) {
-              e.style[key] = typeof value === 'number' && !['fontWeight', 'lineHeight'].includes(key) ? `${value}px` : String(value);
+              e.style[key] = typeof value === 'number' && !['fontWeight', 'lineHeight', 'zIndex'].includes(key) ? `${value}px` : String(value);
             }
             e.textContent = text;
           }, {text: cue.text, style});
@@ -84,9 +109,22 @@ try {
 
   for (const plan of plans) {
     const composition = await selectComposition({serveUrl: url, id: 'Pilot', inputProps: plan.props, puppeteerInstance: browser});
-    await renderMedia({serveUrl: url, composition, inputProps: plan.props, puppeteerInstance: browser,
-      codec: 'h264', hardwareAcceleration: 'if-possible', audioCodec: 'aac',
-      concurrency: props.render_concurrency || 4, outputLocation: path.join(dir, plan.file)});
+    await renderMedia({
+      serveUrl: url,
+      composition,
+      inputProps: plan.props,
+      puppeteerInstance: browser,
+      codec: 'h264',
+      hardwareAcceleration: 'if-possible',
+      audioCodec: 'aac',
+      concurrency: renderConcurrency(props.render_concurrency, cpus().length),
+      outputLocation: path.join(dir, plan.file),
+      onProgress: ({renderedFrames}) => {
+        if (renderedFrames % 150 === 0) {
+          console.log(`Render progress: ${renderedFrames}/${composition.durationInFrames} frames`);
+        }
+      }
+    });
   }
   if (plans[0].file !== 'video.mp4') fs.copyFileSync(path.join(dir, plans[0].file), path.join(dir, 'video.mp4'));
 

@@ -62,7 +62,7 @@ export async function runOperation(command, bound) {
   }
   if(command.startsWith('tool-snapshot:queue:')) {
     const specs=JSON.parse(fs.readFileSync(command.slice('tool-snapshot:queue:'.length),'utf8'));
-    const {runQueue}=await import('./queue-runner.mjs');
+    const {runQueue}=await import('./queue-runner.mjs?revision='+Date.now());
     return runQueue(specs,bound);
   }
   if(command === 'tool-snapshot:acceptance-reload') {

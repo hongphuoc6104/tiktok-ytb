@@ -226,6 +226,13 @@
                     "additionalProperties": false
                   },
                   "minItems": 0
+                },
+                "kind": {
+                  "enum": [
+                    "scene",
+                    "background",
+                    "sticker"
+                  ]
                 }
               },
               "required": [
@@ -400,6 +407,197 @@
                   "learner_pause_seconds"
                 ]
               }
+            }
+          },
+          "layers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                },
+                "image_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                },
+                "anchor": {
+                  "type": "object",
+                  "properties": {
+                    "vi": {
+                      "type": "object",
+                      "properties": {
+                        "quote": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "occurrence": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "quote",
+                        "occurrence"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "en": {
+                      "type": "object",
+                      "properties": {
+                        "quote": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "occurrence": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "quote",
+                        "occurrence"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false,
+                  "minProperties": 1
+                },
+                "fx": {
+                  "enum": [
+                    "pop",
+                    "pop_wobble",
+                    "bounce",
+                    "drop",
+                    "slide_left",
+                    "spin_grow"
+                  ]
+                },
+                "x": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "y": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "w": {
+                  "type": "number",
+                  "minimum": 0.05,
+                  "maximum": 1
+                },
+                "z": {
+                  "type": "integer",
+                  "minimum": 2,
+                  "maximum": 9
+                },
+                "exit_anchor": {
+                  "type": "object",
+                  "properties": {
+                    "vi": {
+                      "type": "object",
+                      "properties": {
+                        "quote": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "occurrence": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "quote",
+                        "occurrence"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "en": {
+                      "type": "object",
+                      "properties": {
+                        "quote": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "occurrence": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "quote",
+                        "occurrence"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false,
+                  "minProperties": 1
+                },
+                "exit_fx": {
+                  "enum": [
+                    "suck",
+                    "none"
+                  ]
+                },
+                "shake_anchor": {
+                  "type": "object",
+                  "properties": {
+                    "vi": {
+                      "type": "object",
+                      "properties": {
+                        "quote": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "occurrence": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "quote",
+                        "occurrence"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "en": {
+                      "type": "object",
+                      "properties": {
+                        "quote": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "occurrence": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "quote",
+                        "occurrence"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false,
+                  "minProperties": 1
+                }
+              },
+              "required": [
+                "id",
+                "image_id",
+                "anchor",
+                "fx",
+                "x",
+                "y",
+                "w"
+              ],
+              "additionalProperties": false
             }
           }
         },

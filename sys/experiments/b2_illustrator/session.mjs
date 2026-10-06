@@ -107,8 +107,12 @@ async function serve(){
     });
   });
   server.on('close',()=>{if(fs.existsSync(socketPath))fs.unlinkSync(socketPath);});
-  server.on('error',e=>{console.error(e.message);process.exitCode=2;});
-  server.listen(socketPath,()=>{fs.chmodSync(socketPath,0o600);console.log('Persistent session ready; run session.mjs connect once.');});
+  const prevUmask = process.umask(0o177);
+  server.listen(socketPath, () => {
+    process.umask(prevUmask);
+    fs.chmodSync(socketPath, 0o600);
+    console.log('Persistent session ready; run session.mjs connect once.');
+  });
   for(const sig of ['SIGTERM','SIGINT'])process.on(sig,async()=>{await session.stop().catch(()=>{});server.close();});
 }
 async function client(command){

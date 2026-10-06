@@ -7,3 +7,5 @@ Specify intent and pronunciation risks as craft notes. Only learner_pause_second
 Use actual measured WAV duration, content boundary and pauses for timeline. Technical format/silence/provenance checks do not certify stress, accent or naturalness. When listening is unavailable, report that limit; do not invoke a mandatory reviewer in auto.
 
 No forced Foley/music, a universal solo persona or rate from the skill. SFX/mixing requires an implemented supported contract. Collect existing remote request on the same account/session before retrying; release dedicated VM after durable collection.
+
+Layer anchors are interpolated inside the real audio chunks; keep narration quotes exact so anchors resolve. Channel voice for English portrait: reference-narrator at .92 via OmniVoice on Colab; edge-tts is not a channel voice.

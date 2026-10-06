@@ -13,7 +13,7 @@ Root INDEX remains the entry point. Specifications do not prove that a service c
 | [Flow model prompts](flow-prompts.md) | Versioned model/purpose instructions, exact learner text and reference provenance; new-job pinning with legacy request preservation |
 | [maintenance](maintenance.md) | Reproducibility manifests, verified archive, scoped Git history/branch/remote |
 | [AGY adapter](AGY-SETUP.md) | Compatibility entry point without duplicate Rules/reviewer |
-| [Rules](../../.agents/rules/permissions.md), [four Skills](../../.agents/skills) | Authority/execution/accounts/brand; one skill per workflow |
+| [Rules](../../AGENTS.md), [four Skills](../../.agents/skills) | Authority/execution/accounts/brand; one skill per workflow |
 
 `legacy/` preserves pre-normalization guides, v3 skills and the old profile outside discovery. Legacy content cannot grant authority or change engine 4. `plans/` contains dated decisions/designs; reconcile current user instructions at execution time. A saved plan's earlier deployment status is historical, not current runtime capability.
 

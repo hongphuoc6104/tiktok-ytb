@@ -54,6 +54,8 @@ def run(bundle_path, output_dir, expected_id, expected_worker):
     public = output / 'public'; public.mkdir(exist_ok=True)
     tracks = {}
     audits = {}
+    matte = None
+    sticker_report = {}
     brief, audio = request['brief'], request['audio']
     for language in contract.languages(brief):
         track = audio['tracks'][language]
@@ -72,15 +74,51 @@ def run(bundle_path, output_dir, expected_id, expected_worker):
             if plan['language'] != language: continue
             scenes = story.timeline(request['content'], request['images'], audio, language, plan['aspect_ratio'])
             for scene in scenes:
+                has_layers = bool(scene.get('layers'))
                 for beat in scene.get('images', []):
-                    name = Path(beat['src']).name; shutil.copy2(inputs / beat['src'], public / name); beat['src'] = name
-                name = Path(scene['image']).name; shutil.copy2(inputs / scene['image'], public / name); scene['image'] = name
+                    name = Path(beat['src']).name
+                    if has_layers:
+                        matte = matte or load('vp_matte_sticker', 'tools/matte_sticker.py')
+                        matte.process_background(inputs / beat['src'], public / name)
+                    else:
+                        shutil.copy2(inputs / beat['src'], public / name)
+                    beat['src'] = name
+                name = Path(scene['image']).name
+                if has_layers:
+                    matte = matte or load('vp_matte_sticker', 'tools/matte_sticker.py')
+                    matte.process_background(inputs / scene['image'], public / name)
+                else:
+                    shutil.copy2(inputs / scene['image'], public / name)
+                scene['image'] = name
+                for layer in scene.get('layers', []):
+                    if layer.get('kind') == 'sticker':
+                        matte = matte or load('vp_matte_sticker', 'tools/matte_sticker.py')
+                        sticker = 'stk_' + hashlib.sha256(layer['src'].encode()).hexdigest()[:10] + '.png'
+                        if sticker not in sticker_report:
+                            matte.process_image(inputs / layer['src'], public / sticker, create_sticker=True, border=10)
+                            from PIL import Image
+                            with Image.open(public / sticker) as im:
+                                alpha = im.convert('RGBA').getchannel('A')
+                                transparent = sum(1 for v in alpha.getdata() if v < 8) / max(1, alpha.width * alpha.height)
+                                # Tight crop leaves little transparency; reject only a failed matte (whole sheet opaque or empty).
+                                if alpha.getbbox() is None or im.width < 40 or im.height < 40:
+                                    raise ValueError('STICKER_MATTE_FAILED: empty sticker ' + layer['id'])
+                                sticker_report[sticker] = {'source': layer['src'], 'width': im.width, 'height': im.height, 'transparent_fraction': round(transparent, 4)}
+                        layer['src'] = sticker
+                    elif layer.get('bg') or layer.get('kind') == 'background':
+                        matte = matte or load('vp_matte_sticker', 'tools/matte_sticker.py')
+                        name = Path(layer['src']).name
+                        matte.process_background(inputs / layer['src'], public / name)
+                        layer['src'] = name
+                    else:
+                        name = Path(layer['src']).name; shutil.copy2(inputs / layer['src'], public / name); layer['src'] = name
             by_aspect[plan['aspect_ratio']] = scenes
         tracks[language] = {'audioSrc': wav, 'duration': track['duration'], 'cues': cues, 'scenesByAspect': by_aspect}
     props = {'aspect_ratio': brief['aspect_ratio'], 'outputs': brief['outputs'], 'primary_language': contract.primary_language(brief),
-             'tracks': tracks, 'render_concurrency': 2, 'modern_style': True}
+             'tracks': tracks, 'render_concurrency': 4, 'modern_style': True}
     (output / 'editorial-audit.json').write_text(json.dumps({'tracks': audits, 'processing_location': 'colab', 'quality_approval': False}, ensure_ascii=False, indent=2))
     (output / 'props.json').write_text(json.dumps(props, ensure_ascii=False, indent=2))
+    if sticker_report: (output / 'layers-report.json').write_text(json.dumps({'stickers': sticker_report, 'matte': 'flood-fill from borders + white sticker halo (remote)'}, ensure_ascii=False, indent=2))
     # Remote dependencies are cached by the pinned source package lock.
     runtime = output.parent.parent / ('render-runtime-' + hashlib.sha256((source / 'package-lock.json').read_bytes()).hexdigest()[:16])
     runtime.mkdir(exist_ok=True)
@@ -91,7 +129,7 @@ def run(bundle_path, output_dir, expected_id, expected_worker):
     chrome = subprocess.check_output(['node', '--input-type=module', '-e', "import {chromium} from 'playwright'; console.log(chromium.executablePath())"], cwd=runtime, text=True).strip()
     if not Path(chrome).is_file():
         subprocess.run(['npx', '--no-install', 'playwright', 'install', '--with-deps', 'chromium'], cwd=runtime, check=True, timeout=900)
-    env = dict(os.environ, VP_CHROME_PATH=chrome)
+    env = dict(os.environ, VP_CHROME_PATH=chrome, DISABLE_FROM_SURFACE='true')
     started = time.monotonic()
     subprocess.run(['node', str(runtime / 'renderer/render.mjs'), str(output.resolve())], cwd=runtime, env=env, check=True, timeout=3600)
     deliveries = []
